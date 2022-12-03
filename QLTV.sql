@@ -1,0 +1,366 @@
+CREATE DATABASE QLTV
+go
+USE QLTV
+go
+CREATE TABLE NHOMNGUOIDUNG
+(
+	id int IDENTITY(1,1) not null ,
+	MaNhomNguoiDung AS CAST('NND' + right('000' + CAST(id as varchar(5)), 3) AS CHAR(6)) persisted primary key,
+	TenNhomNguoiDung varchar(max)
+);
+go
+insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Quan ly')
+insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Thu thu')
+go
+CREATE TABLE CHUCNANG
+(
+     id int not null IDENTITY(1,1),
+	 MaChucNang AS CAST('CN' + right('000' + CAST(id as varchar(3)), 3) as char(5))persisted primary key,
+     TenChucNang VARCHAR(MAX),
+     TenManHinh VARCHAR(MAX)
+)
+go
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLDG', 'Quan Ly Doc Gia')
+
+go
+CREATE TABLE PHANQUYEN
+(
+    MaNhomNguoiDung char(6) REFERENCES NHOMNGUOIDUNG on delete cascade,
+    MaChucNang char(5) REFERENCES CHUCNANG on delete cascade,
+    PRIMARY KEY (MaNhomNguoiDung, MaChucNang)
+)
+go
+INSERT INTO PHANQUYEN VALUES ('NND001', 'CN001')
+
+go
+CREATE TABLE NGUOIDUNG
+(
+	id INT IDENTITY not NULL,
+	MaNguoiDung  AS CAST('ND'+ RIGHT('000000' + CAST(id AS VARCHAR(4)), 4) AS CHAR(6)) PERSISTED PRIMARY KEY,
+    TenNguoiDung VARCHAR(MAX),
+    NgaySinh datetime,
+    ChucVu VARCHAR(MAX),
+    TenDangNhap VARCHAR(MAX) NOT NULL,
+    MatKhau VARCHAR(MAX) NOT NULL,
+    MaNhom CHAR(6) REFERENCES NHOMNGUOIDUNG(MaNhomNguoiDung) on delete cascade NOT NULL
+)
+go
+INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, MaNhom) VALUES ('Ngan Ngan', 'admin', '123', 'NND001')
+
+go
+CREATE TABLE THELOAI
+(
+	id int IDENTITY(1,1) not null,
+	MaTheLoai As Cast('TL' + right('000' + CAST(id as varchar(3)), 3) as char(5)) persisted primary key,  
+	TenTheLoai VARCHAR(MAX) 
+)
+go
+insert into THELOAI values('X')
+insert into THELOAI values('Y')
+
+go
+
+CREATE TABLE TUASACH
+(
+	id INT IDENTITY not NULL,
+	MaTuaSach  AS cast('TS'+ right('0000' + CAST(ID AS VARCHAR(10)), 4) as char(6)) PERSISTED PRIMARY KEY,
+	TenTuaSach VARCHAR(MAX),
+	MaTheLoai char(5) references THELOAI(MaTheLoai) on delete cascade
+)
+go
+insert into TUASACH values ('Tua sach 1', 'TL001')
+insert into TUASACH values ('Tua sach 2', 'TL002')
+go
+
+CREATE TABLE TACGIA
+(
+	id INT IDENTITY not NULL,
+	MATACGIA  AS CAST('TG'+ RIGHT('0000' + CAST(ID AS VARCHAR(10)), 4) AS CHAR(6))PERSISTED PRIMARY KEY,
+	TenTacGia VARCHAR(MAX)
+)
+go
+INSERT INTO TACGIA VALUES ('Nguyen Nhat Anh')
+go
+CREATE TABLE CT_TACGIA
+(
+	MaTacGia CHAR(6) references TACGIA(MaTacGia) on delete cascade,
+	MaTuaSach CHAR(6) references TUASACH(MaTuaSach) on delete cascade,
+	primary key (MaTacGia, MaTuaSach)
+)
+go
+INSERT INTO CT_TACGIA VALUES ('TG0001', 'TS0001')
+go
+
+CREATE TABLE LOAIDOCGIA
+(
+	id INT IDENTITY(1,1) not NULL,
+	MaLoaiDocGia  AS CAST('LDG'+ RIGHT('000' + CAST(ID AS VARCHAR(10)), 3) AS CHAR(6))PERSISTED PRIMARY KEY,
+	TenLoaiDocGia VARCHAR(MAX)
+)
+go
+INSERT INTO LOAIDOCGIA VALUES('Giang vien')
+INSERT INTO LOAIDOCGIA VALUES('Sinh vien UIT')
+INSERT INTO LOAIDOCGIA VALUES('Sinh vien khac')
+go
+CREATE TABLE DOCGIA
+(
+	ID int IDENTITY(1,1) NOT NULL,
+	MaDocGia  AS CAST('DG'+ RIGHT('0000' + CAST(ID AS VARCHAR(10)), 4) AS CHAR(6))PERSISTED PRIMARY KEY,
+	TenDocGia VARCHAR(MAX) NOT NULL,
+	NgaySinh datetime NOT NULL, 
+	DiaChi VARCHAR(MAX),
+	Email VARCHAR(MAX),
+	NgayLapThe Datetime NOT NULL, 
+	NgayHetHan Datetime NOT NULL, 
+	MaLoaiDocGia CHAR(6) references LOAIDOCGIA(MaLoaiDocGia) on delete cascade, 
+	TongNoHienTai int
+)
+go
+set dateformat dmy
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, MaLoaiDocGia) 
+VALUES ('Doc Gia A', '13/12/1989', '27/10/2022', '11/9/2023', 'LDG001')
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, MaLoaiDocGia) 
+VALUES ('Doc Gia B', '13/12/1989', '31/10/2022', '11/11/2023', 'LDG002')
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, MaLoaiDocGia) 
+VALUES ('Doc Gia C', '13/12/1989', '27/8/2022', '11/5/2023', 'LDG003')
+go
+CREATE TABLE SACH
+(
+	id int IDENTITY(1,1),
+	MaSach AS CAST('S'+ RIGHT('00000' + CAST(id AS VARCHAR(10)), 5) AS CHAR(6)) PERSISTED primary key,
+	MaTuaSach CHAR(6) references TUASACH(MaTuaSach) on delete cascade , 
+	SoLuong int NOT NULL, 
+	SoLuongConLai int NOT NULL, 
+	DonGia int, 
+	NamXB int, 
+	NhaXB VARCHAR(MAX)
+)
+go
+INSERT INTO SACH(MaTuaSach, SoLuong, SoLuongConLai, DonGia, NamXB, NhaXB)
+VALUES ('TS0001', 100, 25, 23000, 2015, 'NXB')
+INSERT INTO SACH(MaTuaSach, SoLuong, SoLuongConLai, DonGia, NamXB, NhaXB)
+VALUES ('TS0002', 50, 35, 35000, 2020, 'NXB KHAC')
+go
+CREATE TABLE PHIEUNHAPSACH
+(
+	SoPhieuNhap int IDENTITY(1,1) primary key,
+	TongTien int, 
+	NgayNhap Datetime
+)
+go
+CREATE TABLE CT_PHIEUNHAP
+(
+	SoPhieuNhap int references PHIEUNHAPSACH(SoPhieuNhap) on delete cascade,
+	MaSach CHAR(6) references SACH(MaSach) on delete cascade,
+	DonGia int, 
+	ThanhTien int, 
+	SoLuongNhap int, 
+	primary key (SoPhieuNhap,MaSach)
+)
+go 
+create table CUONSACH
+(
+	id int IDENTITY(1,1),
+	MaCuonSach AS CAST('CS'+ RIGHT('0000' + CAST(id AS VARCHAR(10)), 4) AS CHAR(6)) PERSISTED primary key,
+	MaSach CHAR(6) references SACH(MaSach) on delete cascade,
+	TinhTrang INT
+)
+go
+create table PHIEUMUONTRA
+(
+	SoPhieuMuonTra int IDENTITY(1,1) primary key,
+	MaDocGia CHAR(6) references DOCGIA(MaDocGia) on delete cascade,
+	MaCuonSach CHAR(6) references CUONSACH(MaCuonSach) on delete cascade,
+	NgayMuon Datetime, 
+	NgayTra Datetime, 
+	HanTra Datetime,
+	SoTienPhat int
+)
+go
+create table PHIEUTHU
+(
+	SoPhieuThu int IDENTITY(1,1) primary key,
+	MaDocGia CHAR(6) references DOCGIA(MaDocGia) on delete cascade,
+	SoTienThu int ,
+	NgayLap datetime
+)
+go
+create table BCLUOTMUONTHEOTHELOAI
+(
+	Thang int, 
+	Nam int, 
+	MaBaoCao AS CAST('BCLM' + RIGHT('0' + CAST(THANG AS CHAR(2)), 2) + CAST(NAM AS CHAR(4)) AS CHAR(10)) 
+				PERSISTED PRIMARY KEY,
+	TongSoLuotMuon int,
+)
+go
+create table CT_BCLUOTMUONTHEOTHELOAI
+(
+	MaBaoCao CHAR(10) references BCLUOTMUONTHEOTHELOAI(MaBaoCao) on delete cascade ,
+	MaTheLoai CHAR(5) references THELOAI(MATHELOAI) on delete cascade,
+	SoLuotMuon int, 
+	TiLe numeric(4,2),
+	primary key (MaBaoCao, MaTheLoai)
+)
+go
+create table BCSACHTRATRE
+(
+	Ngay datetime not null,
+	MaCuonSach CHAR(6) references CUONSACH(MaCuonSach) on delete cascade,
+	NgayMuon datetime,
+	SoNgayTre int
+	primary key(Ngay,MaCuonSach)
+)
+go
+create table THAMSO
+(
+	TuoiToiThieu int, 
+	TuoiToiDa int, 
+	ThoiHanThe int, 
+	KhoangCachXuatBan int , 
+	SoSachMuonToiDa int, 
+	SoNgayMuonToiDa int, 
+	DonGiaPhat int,
+	AD_QDKTTienThu int
+)
+go
+
+--SET DATEFORMAT DMY
+--go
+--ALTER TABLE DOCGIA 
+--ADD CHECK (NgayHetHan>=NgayLapThe)
+--ALTER TABLE PHIEUMUONTRA
+--ADD CHECK (HanTra>=NgayMuon and NgayTra >= NgayMuon and SoTienPhat >=0 )
+--ALTER TABLE BCLUOTMUONTHEOTHELOAI
+--ADD CHECK (Thang >= 1 and Thang <= 12 and Nam >=0)
+--insert into THAMSO values (18,55,6,8,5,4,1000,1)
+--insert into LOAIDOCGIA values ('X')
+--insert into LOAIDOCGIA values ('Y')
+--insert into THELOAI values ('A')
+--insert into THELOAI values ('B')
+--insert into THELOAI values ('C')
+--select * from THELOAI
+--SELECT *FROM loaidocgia
+--select * from thamso
+--go
+
+----CRUD--
+--CREATE PROC INS_DOCGIA
+--@TENDOCGIA VARCHAR(MAX),@NGAYSINH DATETIME, @DIACHI VARCHAR(MAX), @EMAIL VARCHAR(MAX), @NGAYLAPTHE DATETIME, @NGAYHETHAN DATETIME, @MALOAIDOCGIA INT
+--AS
+--INSERT INTO DOCGIA VALUES(@TENDOCGIA,@NGAYSINH,@DIACHI,@EMAIL,@NGAYLAPTHE,@NGAYHETHAN,@MALOAIDOCGIA,0)
+--GO
+
+--CREATE PROC INS_LOAIDOCGIA
+--@TENLOAIDOCGIA VARCHAR(MAX)
+--AS
+--INSERT INTO LOAIDOCGIA VALUES (@TENLOAIDOCGIA)
+--GO
+
+--CREATE PROC INS_THELOAI
+--@TENTHELOAI VARCHAR(MAX)
+--AS 
+--INSERT INTO THELOAI VALUES (@TENTHELOAI)
+--GO
+
+--CREATE PROC INS_PHIEUTHU
+--@MADOCGIA INT, @SOTIENTHU INT, @NGAYLAP DATETIME
+--AS
+--INSERT INTO PHIEUTHU VALUES (@MADOCGIA, @SOTIENTHU, @NGAYLAP)
+--GO 
+
+--CREATE PROC INS_TUASACH
+--@TENTUASACH VARCHAR(MAX), @MATHELOAI INT
+--AS
+--INSERT INTO TUASACH VALUES(@TENTUASACH,@MATHELOAI)
+--GO
+
+--CREATE PROC INS_SACH
+--@MATUASACH INT, @SOLUONG INT, @SOLUONGCONLAI INT, @DONGIA INT, @NAMXB INT, @NHAXB VARCHAR(MAX)
+--AS
+--INSERT INTO SACH VALUES(@MATUASACH, @SOLUONG, @SOLUONGCONLAI,@DONGIA,@NAMXB,@NHAXB)
+--GO
+
+--CREATE PROC INS_PHIEUNHAP
+--@TONGTIEN INT, @NGAYNHAP DATETIME
+--AS
+--INSERT INTO PHIEUNHAP VALUES(@TONGTIEN,@NGAYNHAP)
+--GO 
+
+--CREATE PROC INS_CTPHIEUNHAP
+--@SOPHIEUNHAP INT, @MASACH INT, @DONGIA INT, @THANHTIEN INT, @SOLUONGNHAP INT
+--AS 
+--INSERT INTO CT_PHIEUNHAP VALUES(@SOPHIEUNHAP,@MASACH,@DONGIA,@THANHTIEN,@SOLUONGNHAP)
+--GO
+
+--CREATE PROC INS_PHIEUTHU
+--@MADOCGIA INT, @SOTIENTHU INT, @MGAYLAP DATETIME
+--AS
+--INSERT INTO PHIEUTHU VALUES(@MADOCGIA,@SOTIENTHU,@NGAYLAP)
+--GO 
+
+--CREATE PROC INS_PHIEUMUONTRA
+--@MADOCGIA INT, @MACUONSACH INT, @NGAYMUON DATETIME, @NGAYTRA DATETIME, @HANTRA DATETIME, @SOTIENPHAT INT
+--AS
+--INSERT INTO PHIEUMUONTRA VALUES(@MADOCGIA,@MACUONSACH,@NGAYMUON,@NGAYTRA,@HANTRA,@SOTIENPHAT)
+--GO 
+
+--CREATE PROC INS_TACGIA
+--@TENTACGIA VARCHAR(MAX)
+--AS 
+--INSERT INTO TACGIA(@TENTACGIA)
+--GO 
+
+--CREATE PROC INS_CTTACGGIA
+--@MATUASACH INT, @MATACGIA INT
+--AS
+--INSERT INTO CT_TACGIA VALUES (@MATUASACH,@MATACGIA)
+--GO 
+
+--CREATE PROC INS_CHUCNANG
+--@TENCHUCNANG VARCHAR(MAX), @TENMANHINH VARCHAR(MAX)
+--AS 
+--INSERT INTO CHUCNANG VALUES (@TENCHUCNANG,@TENMANHINH)
+--GO
+
+--CREATE PROC INS_PHANQUYEN
+--@MANHOMNGUOIDUNG INT, @MACHUCNANG INT
+--AS
+--INSERT INTO PHANQUYEN VALUES(@MANHOMNGUOIDUNG, @MACHUCNANG)
+--GO 
+
+--CREATE PROC INS_NGUOIDUNG
+--@TENNGUOIDUNG VARCHAR(MAX), @NGAYSINH DATETIME, @CHUCVU VARCHAR(MAX),@TENDANGNHAP VARCHAR(MAX), @MATKHAU VARCHAR(MAX), @MANHOM INT
+--AS
+--INSERT INTO NGUOIDUNG VALUES(@TENNGUOIDUNG, @NGAYSINH, @CHUCVU, @TENDANGNHAP, @MATKHAU,@MANHOM)
+--GO
+
+--CREATE PROC INS_NHOMNGUOIDUNG
+--@TENNHOMNGUOIDUNG VARCHAR(MAX)
+--AS
+--INSERT INTO NHOMNGUOIDUNG VALUES (@TENNHOMNGUOIDUNG)
+--GO 
+
+--CREATE PROC UPD_THAMSO
+--@TUOITOITHIEU INT = NULL, @TUOITOIDA INT = NULL, @THOIHANTHE INT = NULL, @KHOANGCACHXUATBAN INT = NULL, @SOSACHMUONTOIDA INT = NULL, @SONGAYMUONTOIDA INT = NULL, @DONGIAPHAT INT = NULL, @AD_QDKTTIENTHU INT = NULL
+--AS
+--UPDATE THAMSO 
+--SET TUOITOITHIEU=isnull(@TUOITOITHIEU,TUOITOITHIEU),
+--TUOITOIDA=isnull(@TUOITOIDA,TUOITOIDA),
+--THOIHANTHE=ISNULL(@THOIHANTHE,THOIHANTHE),
+--KHOANGCACHXUATBAN=ISNULL(@KHOANGCACHXUATBAN,KHOANGCACHXUATBAN),
+--SOSACHMUONTOIDA=ISNULL(@SOSACHMUONTOIDA,SOSACHMUONTOIDA),
+--SONGAYMUONTOIDA=ISNULL(@SONGAYMUONTOIDA,SONGAYMUONTOIDA),
+--DONGIAPHAT= ISNULL(DONGIAPHAT,@DONGIAPHAT), 
+--AD_QDKTTIENTHU =ISNULL(AD_QDKTTIENTHU,@AD_QDKTTIENTHU )
+--GO
+
+---- TRIGGERS
+--CREATE TRIGGER INS_SACH ON SACH
+--FOR INSERT, UPDATE
+--AS
+--BEGIN
+--	DECLARE @MASACH CHAR(6)
+--	SELECT @MASACH = MASACH FROM inserted
+	
+--END
