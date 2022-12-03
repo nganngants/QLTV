@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4e79dad9c21842888148b62936f69274" Name="Diagram1">
+        <EntityTypeShape EntityType="QLTVModel.BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.BCSACHTRATRE" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.CHUCNANG" Width="1.5" PointX="9.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.CT_BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.CT_PHIEUNHAP" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.CUONSACH" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.DOCGIA" Width="1.5" PointX="10.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.LOAIDOCGIA" Width="1.5" PointX="8.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.NGUOIDUNG" Width="1.5" PointX="14.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.NHOMNGUOIDUNG" Width="1.5" PointX="12" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.PHIEUMUONTRA" Width="1.5" PointX="12.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.PHIEUNHAPSACH" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.PHIEUTHU" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.SACH" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.TACGIA" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.THELOAI" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.TUASACH" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="QLTVModel.FK__CT_BCLUOT__MaBao__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__BCSACHTRA__MaCuo__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CT_BCLUOT__MaThe__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CT_PHIEUN__MaSac__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CT_PHIEUN__SoPhi__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CUONSACH__MaSach__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__PHIEUMUON__MaCuo__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__DOCGIA__MaLoaiDo__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__PHIEUMUON__MaDoc__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__PHIEUTHU__MaDocG__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__NGUOIDUNG__MaNho__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__SACH__MaTuaSach__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__TUASACH__MaTheLo__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.CT_TACGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.PHANQUYEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
