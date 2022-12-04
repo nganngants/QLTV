@@ -23,10 +23,7 @@ namespace DAL
 
         public List<NGUOIDUNG> getAllNguoiDung()
         {
-            using (var db = new QLTVDb())
-            {
-                return db.NGUOIDUNGs.ToList();
-            }
+            return QLTVDb.Instance.NGUOIDUNGs.ToList();
         }
     }
 }
