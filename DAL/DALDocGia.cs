@@ -69,7 +69,7 @@ namespace DAL
         /// </summary>
         /// <param name="maDocGia"></param>
         /// <returns></returns>
-        public DOCGIA getDocGiaById (string maDocGia)
+        public DOCGIA GetDocGiaById (string maDocGia)
         {
             return QLTVDb.Instance.DOCGIAs.Find(maDocGia);
 
@@ -79,7 +79,7 @@ namespace DAL
         /// return a list of all DOCGIA objects
         /// </summary>
         /// <returns>List<DOCGIA></returns>
-        public List<DOCGIA> getAllDocGia()
+        public List<DOCGIA> GetAllDocGia()
         {
             return QLTVDb.Instance.DOCGIAs.ToList();
         }
@@ -92,7 +92,7 @@ namespace DAL
         /// <param name="email"></param>
         /// <param name="maLoaiDocGia"></param>
         /// <returns></returns>
-        public List<DOCGIA> findDocGia(string maDocGia, string tenDocGia, string email, string maLoaiDocGia)
+        public List<DOCGIA> FindDocGia(string maDocGia, string tenDocGia, string email, string maLoaiDocGia)
         {
             var res = QLTVDb.Instance.DOCGIAs.ToList();
             if (maDocGia != null) res = res.Where(d => d.MaDocGia == maDocGia).Select(d => d).ToList();
