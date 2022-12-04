@@ -52,6 +52,7 @@
     <Compile Include="DALLoaiDocGia.cs" />
     <Compile Include="DALNguoiDung.cs" />
     <Compile Include="DALTacGia.cs" />
+    <Compile Include="DALTheLoai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
