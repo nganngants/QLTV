@@ -141,5 +141,21 @@ namespace DAL
                 return false;
             }
         }
+
+        public bool DelDocGia (string maDocGia)
+        {
+            try
+            {
+                DOCGIA dg = QLTVDb.Instance.DOCGIAs.Find(maDocGia);
+                if (dg == null) return false;
+                QLTVDb.Instance.DOCGIAs.Remove(dg);
+                QLTVDb.Instance.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

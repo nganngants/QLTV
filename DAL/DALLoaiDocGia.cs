@@ -91,5 +91,21 @@ namespace DAL
                 return false;
             }
         }
+
+        public bool DelLoaiDocGia(string maLoaiDocGia)
+        {
+            try
+            {
+                LOAIDOCGIA ldg = QLTVDb.Instance.LOAIDOCGIAs.Find(maLoaiDocGia);
+                if (ldg == null) return false;
+                QLTVDb.Instance.LOAIDOCGIAs.Remove(ldg);
+                QLTVDb.Instance.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
