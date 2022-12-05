@@ -26,11 +26,23 @@ namespace DAL
             return QLTVDb.Instance.TUASACHes.ToList();
         }
 
+        /// <summary>
+        /// Get TUASACH by Id
+        /// </summary>
+        /// <param name="maTuaSach"></param>
+        /// <returns></returns>
         public TUASACH GetTuaSach(string maTuaSach)
         {
             return QLTVDb.Instance.TUASACHes.Find(maTuaSach);
         }
 
+        /// <summary>
+        /// Find TUASACHs by filter
+        /// </summary>
+        /// <param name="tenTuaSach"></param>
+        /// <param name="theloai"></param>
+        /// <param name="tacgias"></param>
+        /// <returns></returns>
         public List<TUASACH> FindTuaSach(string tenTuaSach, THELOAI theloai, List<TACGIA> tacgias)
         {
             List<TUASACH> res = QLTVDb.Instance.TUASACHes.ToList();
@@ -85,12 +97,23 @@ namespace DAL
             }
         }
 
+
+        /// <summary>
+        /// Deleting a TUASACH also delete all SACH belonging to it
+        /// </summary>
+        /// <param name="maTuaSach"></param>
+        /// <returns></returns>
         public bool DelTuaSach(string maTuaSach)
         {
             try
             {
                 TUASACH tuaSach = QLTVDb.Instance.TUASACHes.Find(maTuaSach);
                 if (tuaSach == null) return false;
+                List<SACH> dsSach = DALSach.Instance.FindSach(tuaSach, null, null);
+                foreach (var sach in dsSach)
+                {
+                    DALSach.Instance.DelSach(sach.MaSach);
+                }
                 QLTVDb.Instance.TUASACHes.Remove(tuaSach);
                 QLTVDb.Instance.SaveChanges();
                 return true;

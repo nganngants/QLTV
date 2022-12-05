@@ -26,11 +26,21 @@ namespace DAL
             return QLTVDb.Instance.THELOAIs.ToList();
         }
 
+        /// <summary>
+        /// get THELOAI by Id
+        /// </summary>
+        /// <param name="maTheLoai"></param>
+        /// <returns></returns>
         public THELOAI GetTheLoai(string maTheLoai)
         {
             return QLTVDb.Instance.THELOAIs.Find(maTheLoai);
         }
 
+        /// <summary>
+        /// Find THELOAI by filter
+        /// </summary>
+        /// <param name="tenTheLoai"></param>
+        /// <returns></returns>
         public List<THELOAI> FindTheLoai(string tenTheLoai)
         {
             return QLTVDb.Instance.THELOAIs.Where(t => t.TenTheLoai == tenTheLoai).Select(t => t).ToList();

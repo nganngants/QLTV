@@ -26,11 +26,21 @@ namespace DAL
             return QLTVDb.Instance.TACGIAs.ToList();
         }
 
+        /// <summary>
+        /// get TACGIA by Id
+        /// </summary>
+        /// <param name="maTacGia"></param>
+        /// <returns></returns>
         public TACGIA GetTacGia(string maTacGia)
         {
             return QLTVDb.Instance.TACGIAs.Find(maTacGia);
         }
 
+        /// <summary>
+        /// find TACGIA by filter 
+        /// </summary>
+        /// <param name="tenTacGia"></param>
+        /// <returns></returns>
         public List<TACGIA> FindTacGia(string tenTacGia)
         {
             return QLTVDb.Instance.TACGIAs.Where(t => t.TenTacGia == tenTacGia).Select(t => t).ToList();
