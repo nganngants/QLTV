@@ -24,13 +24,15 @@ namespace GUI
             txtUserpwd.Clear();
             txtUsername.Focus();
         }
-
         private void butLogin_Click(object sender, EventArgs e)
         {
-            string usrname = txtUsername.Text;
-            string usrpwd = txtUserpwd.Text;
-            if (BUSLogin.Instance.checkValidLogin(usrname, usrpwd))
+            string username = txtUsername.Text;
+            string userpwd = txtUserpwd.Text;
+            BUSLogin bLogin = new BUSLogin();
+            if (bLogin.checkValidLogin(username, userpwd))
             {
+                MessageBox.Show("Đăng nhập thành công!\nChào mừng " + username + "!",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 fMainForm f = new fMainForm();
                 this.Hide();
                 f.ShowDialog();
@@ -44,5 +46,9 @@ namespace GUI
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
