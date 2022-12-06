@@ -23,13 +23,17 @@ namespace BUS
         {
             return DALLoaiDocGia.Instance.GetAllLoaiDocgia();
         }
-        public bool DelLoaiDocGia(string id)
+        public string DelLoaiDocGia(string id)
         {
-            return (DALLoaiDocGia.Instance.DelLoaiDocGia(id)) ;
+            if (DALLoaiDocGia.Instance.DelLoaiDocGia(id))
+                return "";
+            return "Không thể xoá loại độc giá";
         }
-        public bool AddLoaiDocGia(string name)
+        public string AddLoaiDocGia(string name)
         {
-            return (DALLoaiDocGia.Instance.AddLoaiDocGia(name));
+            if (DALLoaiDocGia.Instance.AddLoaiDocGia(name))
+                return "";
+            return "Không thể thêm loại độc giả";
         }
     }
 }

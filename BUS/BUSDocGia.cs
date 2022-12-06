@@ -28,16 +28,16 @@ namespace BUS
         {
             return DALDocGia.Instance.GetDocGiaById(id);
         }
-        public bool DelDocGia(string id)
+        public string DelDocGia(string id)
         {
             DOCGIA dg = DALDocGia.Instance.GetDocGiaById(id);
-            foreach(PHIEUMUONTRA PhieuMuon in dg.PHIEUMUONTRAs)
+            foreach( PHIEUMUONTRA PhieuMuon in dg.PHIEUMUONTRAs)
             {
-                //
-                return false;
+                if(PhieuMuon.NgayTra==null)
+                return "Độc giả còn sách đang mượn";
             }
             DALDocGia.Instance.DelDocGia(id);
-            return true;
+            return "";
         }
     }
 }
