@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI.UserControls
 {
-    public partial class ucQLPhieuThu : UserControl
+    public partial class ucMuonTheoTheLoai : UserControl
     {
-        public ucQLPhieuThu()
+        public ucMuonTheoTheLoai()
         {
             InitializeComponent();
         }
-
     }
 }

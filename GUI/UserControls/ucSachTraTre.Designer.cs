@@ -2,7 +2,7 @@
 
 namespace GUI.UserControls
 {
-    partial class ucQLND
+    partial class ucSachTraTre
     {
         /// <summary> 
         /// Required designer variable.
@@ -40,18 +40,15 @@ namespace GUI.UserControls
             this.pageSua = new System.Windows.Forms.TabPage();
             this.pageXoa = new System.Windows.Forms.TabPage();
             this.pageTim = new System.Windows.Forms.TabPage();
-            this.tableNguoiDung = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.tableBCSachTraTre = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.MaNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ngay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoNgayTre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             this.dgTabControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableNguoiDung)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBCSachTraTre)).BeginInit();
             this.siticonePanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,14 +116,14 @@ namespace GUI.UserControls
             this.pageTim.Text = "Tìm kiếm";
             this.pageTim.UseVisualStyleBackColor = true;
             // 
-            // tableNguoiDung
-            // 
-            this.tableNguoiDung.AllowUserToAddRows = false;
-            this.tableNguoiDung.AllowUserToDeleteRows = false;
+            // tableBCSachTraTre
+            //  
+            this.tableBCSachTraTre.AllowUserToAddRows = false;
+            this.tableBCSachTraTre.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tableNguoiDung.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tableNguoiDung.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.tableNguoiDung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableBCSachTraTre.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tableBCSachTraTre.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.tableBCSachTraTre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
@@ -134,17 +131,14 @@ namespace GUI.UserControls
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableNguoiDung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tableNguoiDung.ColumnHeadersHeight = 50;
-            this.tableNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableNguoiDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNguoiDung,
-            this.TenNguoiDung,
-            this.NgaySinh,
-            this.ChucVu,
-            this.TenDangNhap,
-            this.MatKhau,
-            this.MaNhom});
+            this.tableBCSachTraTre.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tableBCSachTraTre.ColumnHeadersHeight = 50;
+            this.tableBCSachTraTre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tableBCSachTraTre.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Ngay,
+            this.MaCuonSach,
+            this.NgayMuon,
+            this.SoNgayTre});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -152,11 +146,11 @@ namespace GUI.UserControls
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableNguoiDung.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tableNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableNguoiDung.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableNguoiDung.Location = new System.Drawing.Point(0, 0);
-            this.tableNguoiDung.Name = "tableNguoiDung";
+            this.tableBCSachTraTre.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tableBCSachTraTre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableBCSachTraTre.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tableBCSachTraTre.Location = new System.Drawing.Point(0, 0);
+            this.tableBCSachTraTre.Name = "tableBCSachTraTre";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
@@ -164,96 +158,78 @@ namespace GUI.UserControls
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableNguoiDung.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tableNguoiDung.RowHeadersVisible = false;
-            this.tableNguoiDung.RowHeadersWidth = 53;
-            this.tableNguoiDung.RowTemplate.Height = 25;
-            this.tableNguoiDung.Size = new System.Drawing.Size(997, 410);
-            this.tableNguoiDung.TabIndex = 0;
-            this.tableNguoiDung.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableNguoiDung.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tableNguoiDung.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tableNguoiDung.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tableNguoiDung.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tableNguoiDung.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.tableNguoiDung.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableNguoiDung.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tableNguoiDung.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tableNguoiDung.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableNguoiDung.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tableNguoiDung.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableNguoiDung.ThemeStyle.HeaderStyle.Height = 50;
-            this.tableNguoiDung.ThemeStyle.ReadOnly = false;
-            this.tableNguoiDung.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableNguoiDung.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tableNguoiDung.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableNguoiDung.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tableNguoiDung.ThemeStyle.RowsStyle.Height = 25;
-            this.tableNguoiDung.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableNguoiDung.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tableBCSachTraTre.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.tableBCSachTraTre.RowHeadersVisible = false;
+            this.tableBCSachTraTre.RowHeadersWidth = 53;
+            this.tableBCSachTraTre.RowTemplate.Height = 25;
+            this.tableBCSachTraTre.Size = new System.Drawing.Size(997, 410);
+            this.tableBCSachTraTre.TabIndex = 0;
+            this.tableBCSachTraTre.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.tableBCSachTraTre.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.tableBCSachTraTre.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.tableBCSachTraTre.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.tableBCSachTraTre.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.tableBCSachTraTre.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.tableBCSachTraTre.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tableBCSachTraTre.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tableBCSachTraTre.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tableBCSachTraTre.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
+            this.tableBCSachTraTre.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tableBCSachTraTre.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tableBCSachTraTre.ThemeStyle.HeaderStyle.Height = 50;
+            this.tableBCSachTraTre.ThemeStyle.ReadOnly = false;
+            this.tableBCSachTraTre.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tableBCSachTraTre.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tableBCSachTraTre.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
+            this.tableBCSachTraTre.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tableBCSachTraTre.ThemeStyle.RowsStyle.Height = 25;
+            this.tableBCSachTraTre.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tableBCSachTraTre.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // siticonePanel2
             // 
-            this.siticonePanel2.Controls.Add(this.tableNguoiDung);
+            this.siticonePanel2.Controls.Add(this.tableBCSachTraTre);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel2.Location = new System.Drawing.Point(0, 186);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(997, 410);
             this.siticonePanel2.TabIndex = 3;
             // 
-            // MaNguoiDung
+            // Ngay
             // 
-            this.MaNguoiDung.HeaderText = "Mã Người Dùng";
-            this.MaNguoiDung.MinimumWidth = 7;
-            this.MaNguoiDung.Name = "MaNguoiDung";
+            this.Ngay.HeaderText = "Ngày";
+            this.Ngay.MinimumWidth = 7;
+            this.Ngay.Name = "Ngay";
             // 
-            // TenNguoiDung
+            // MaCuonSach
             // 
-            this.TenNguoiDung.HeaderText = "Tên Người Dùng";
-            this.TenNguoiDung.MinimumWidth = 7;
-            this.TenNguoiDung.Name = "TenNguoiDung";
+            this.MaCuonSach.HeaderText = "Mã Cuốn Sách";
+            this.MaCuonSach.MinimumWidth = 7;
+            this.MaCuonSach.Name = "MaCuonSach";
             // 
-            // NgaySinh
+            // NgayMuon
             // 
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.MinimumWidth = 7;
-            this.NgaySinh.Name = "NgaySinh";
+            this.NgayMuon.HeaderText = "Ngày Mượn";
+            this.NgayMuon.MinimumWidth = 7;
+            this.NgayMuon.Name = "NgayMuon";
             // 
-            // ChucVu
+            // SoNgayTre
             // 
-            this.ChucVu.HeaderText = "Chức Vụ";
-            this.ChucVu.MinimumWidth = 7;
-            this.ChucVu.Name = "ChucVu";
+            this.SoNgayTre.HeaderText = "Số Ngày Trễ";
+            this.SoNgayTre.MinimumWidth = 7;
+            this.SoNgayTre.Name = "SoNgayTre";
             // 
-            // TenDangNhap
-            // 
-            this.TenDangNhap.HeaderText = "Tên Đăng Nhập";
-            this.TenDangNhap.MinimumWidth = 7;
-            this.TenDangNhap.Name = "TenDangNhap";
-            // 
-            // MatKhau
-            // 
-            this.MatKhau.HeaderText = "Mật Khẩu";
-            this.MatKhau.MinimumWidth = 7;
-            this.MatKhau.Name = "MatKhau";
-            // 
-            // MaNhom
-            // 
-            this.MaNhom.HeaderText = "Mã Nhóm Người Dùng";
-            this.MaNhom.MinimumWidth = 7;
-            this.MaNhom.Name = "MaNhom";
-            // 
-            // ucBCTK
+            // ucSachTraTre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.siticonePanel2);
             this.Controls.Add(this.siticonePanel1);
-            this.Name = "ucBCTK";
+            this.Name = "ucSachTraTre";
             this.Size = new System.Drawing.Size(997, 596);
             this.siticonePanel1.ResumeLayout(false);
             this.dgTabControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableNguoiDung)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBCSachTraTre)).EndInit();
             this.siticonePanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -261,19 +237,16 @@ namespace GUI.UserControls
 
         #endregion
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView tableNguoiDung;
+        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView tableBCSachTraTre;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private TabControl dgTabControl;
         private TabPage pageThem;
         private TabPage pageSua;
         private TabPage pageXoa;
         private TabPage pageTim;
-        private DataGridViewTextBoxColumn MaNguoiDung;
-        private DataGridViewTextBoxColumn TenNguoiDung;
-        private DataGridViewTextBoxColumn NgaySinh;
-        private DataGridViewTextBoxColumn ChucVu;
-        private DataGridViewTextBoxColumn TenDangNhap;
-        private DataGridViewTextBoxColumn MatKhau;
-        private DataGridViewTextBoxColumn MaNhom;
+        private DataGridViewTextBoxColumn Ngay;
+        private DataGridViewTextBoxColumn MaCuonSach;
+        private DataGridViewTextBoxColumn NgayMuon;
+        private DataGridViewTextBoxColumn SoNgayTre;
     }
 }

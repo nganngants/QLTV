@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.UserControls
+namespace GUI
 {
-    public partial class ucQLPhieuThu : UserControl
+    public partial class fResetPassword : Form
     {
-        public ucQLPhieuThu()
+        public fResetPassword()
         {
             InitializeComponent();
         }
-
     }
 }

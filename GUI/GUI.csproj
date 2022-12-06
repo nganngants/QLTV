@@ -48,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -101,6 +102,12 @@
     <Compile Include="fMainForm.Designer.cs">
       <DependentUpon>fMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="fResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fResetPassword.Designer.cs">
+      <DependentUpon>fResetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,11 +140,23 @@
     <Compile Include="UserControls\ucDocGia.Designer.cs">
       <DependentUpon>ucDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucLoaiDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ucLoaiDG.Designer.cs">
       <DependentUpon>ucLoaiDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucMuonTheoTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucMuonTheoTheLoai.Designer.cs">
+      <DependentUpon>ucMuonTheoTheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucQLDG.cs">
       <SubType>UserControl</SubType>
@@ -175,6 +194,12 @@
     <Compile Include="UserControls\ucSach.Designer.cs">
       <DependentUpon>ucSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucSachTraTre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSachTraTre.Designer.cs">
+      <DependentUpon>ucSachTraTre.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucTuaSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +227,9 @@
     <EmbeddedResource Include="fMainForm.resx">
       <DependentUpon>fMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fResetPassword.resx">
+      <DependentUpon>fResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fSignUp.resx">
       <DependentUpon>fSignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,9 +241,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControls\ucBanAccess.resx">
       <DependentUpon>ucBanAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucBCTK.resx">
+      <DependentUpon>ucBCTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucCuonSach.resx">
       <DependentUpon>ucCuonSach.cs</DependentUpon>
@@ -223,17 +255,32 @@
     <EmbeddedResource Include="UserControls\ucDocGia.resx">
       <DependentUpon>ucDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucLoaiDG.resx">
       <DependentUpon>ucLoaiDG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucMuonTheoTheLoai.resx">
+      <DependentUpon>ucMuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLDG.resx">
       <DependentUpon>ucQLDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLPhieuMuon.resx">
+      <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLPhieuThu.resx">
+      <DependentUpon>ucQLPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLSach.resx">
       <DependentUpon>ucQLSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucSach.resx">
       <DependentUpon>ucSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucSachTraTre.resx">
+      <DependentUpon>ucSachTraTre.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -259,7 +306,9 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1200px-Search_Icon.svg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

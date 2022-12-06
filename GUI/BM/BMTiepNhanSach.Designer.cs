@@ -151,7 +151,7 @@ namespace GUI.BM
             this.siticoneTextBox2.Location = new System.Drawing.Point(716, 426);
             this.siticoneTextBox2.Name = "siticoneTextBox2";
             this.siticoneTextBox2.PasswordChar = '\0';
-            this.siticoneTextBox2.PlaceholderText = "";
+            this.siticoneTextBox2.PlaceholderText = "Vd 100.000 VND";
             this.siticoneTextBox2.SelectedText = "";
             this.siticoneTextBox2.Size = new System.Drawing.Size(241, 50);
             this.siticoneTextBox2.TabIndex = 76;
@@ -170,7 +170,7 @@ namespace GUI.BM
             this.siticoneTextBox1.Location = new System.Drawing.Point(367, 355);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
-            this.siticoneTextBox1.PlaceholderText = "";
+            this.siticoneTextBox1.PlaceholderText = "Vd 100.000 VND";
             this.siticoneTextBox1.SelectedText = "";
             this.siticoneTextBox1.Size = new System.Drawing.Size(241, 50);
             this.siticoneTextBox1.TabIndex = 75;

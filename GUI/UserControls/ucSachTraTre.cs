@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI.UserControls
 {
-    public partial class ucQLPhieuThu : UserControl
+    public partial class ucSachTraTre : UserControl
     {
-        public ucQLPhieuThu()
+        public ucSachTraTre()
         {
             InitializeComponent();
         }
-
     }
 }

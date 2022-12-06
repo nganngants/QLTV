@@ -143,7 +143,7 @@ namespace GUI.BM
             this.siticoneTextBox2.Location = new System.Drawing.Point(373, 337);
             this.siticoneTextBox2.Name = "siticoneTextBox2";
             this.siticoneTextBox2.PasswordChar = '\0';
-            this.siticoneTextBox2.PlaceholderText = "";
+            this.siticoneTextBox2.PlaceholderText = "abc@gmail.com";
             this.siticoneTextBox2.SelectedText = "";
             this.siticoneTextBox2.Size = new System.Drawing.Size(415, 51);
             this.siticoneTextBox2.TabIndex = 42;
