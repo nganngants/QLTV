@@ -51,6 +51,10 @@
     <Compile Include="BUSDocGia.cs" />
     <Compile Include="BUSLoaiDocGia.cs" />
     <Compile Include="BUSLogin.cs" />
+    <Compile Include="BUSSachcs.cs" />
+    <Compile Include="BUSTacGia.cs" />
+    <Compile Include="BUSTheLoai.cs" />
+    <Compile Include="BUSTuaSach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
