@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Siticone.Desktop.UI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=9683591576b7f0b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
@@ -45,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +60,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BM\BMChoMuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMChoMuonSach.Designer.cs">
+      <DependentUpon>BMChoMuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMLapTheDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMLapTheDocGia.Designer.cs">
+      <DependentUpon>BMLapTheDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMPhieuThuTienPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMPhieuThuTienPhat.Designer.cs">
+      <DependentUpon>BMPhieuThuTienPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMTiepNhanSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMTiepNhanSach.Designer.cs">
+      <DependentUpon>BMTiepNhanSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChangePassword.Designer.cs">
+      <DependentUpon>fChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,8 +102,137 @@
     <Compile Include="fMainForm.Designer.cs">
       <DependentUpon>fMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="fResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fResetPassword.Designer.cs">
+      <DependentUpon>fResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSignUp.Designer.cs">
+      <DependentUpon>fSignUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ucBanAccess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucBanAccess.Designer.cs">
+      <DependentUpon>ucBanAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucBCTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucBCTK.Designer.cs">
+      <DependentUpon>ucBCTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCuonSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCuonSach.Designer.cs">
+      <DependentUpon>ucCuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDocGia.Designer.cs">
+      <DependentUpon>ucDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucLoaiDG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucLoaiDG.Designer.cs">
+      <DependentUpon>ucLoaiDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucMuonTheoTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucMuonTheoTheLoai.Designer.cs">
+      <DependentUpon>ucMuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucQLDG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLDG.Designer.cs">
+      <DependentUpon>ucQLDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucQLND.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLND.Designer.cs">
+      <DependentUpon>ucQLND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucQLPhieuMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLPhieuMuon.Designer.cs">
+      <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucQLPhieuThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLPhieuThu.Designer.cs">
+      <DependentUpon>ucQLPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucQLSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLSach.Designer.cs">
+      <DependentUpon>ucQLSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSach.Designer.cs">
+      <DependentUpon>ucSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucSachTraTre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSachTraTre.Designer.cs">
+      <DependentUpon>ucSachTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTuaSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTuaSach.Designer.cs">
+      <DependentUpon>ucTuaSach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BM\BMChoMuonSach.resx">
+      <DependentUpon>BMChoMuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMLapTheDocGia.resx">
+      <DependentUpon>BMLapTheDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMPhieuThuTienPhat.resx">
+      <DependentUpon>BMPhieuThuTienPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMTiepNhanSach.resx">
+      <DependentUpon>BMTiepNhanSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChangePassword.resx">
+      <DependentUpon>fChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMainForm.resx">
+      <DependentUpon>fMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fResetPassword.resx">
+      <DependentUpon>fResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSignUp.resx">
+      <DependentUpon>fSignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,7 +241,47 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\ucBanAccess.resx">
+      <DependentUpon>ucBanAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucBCTK.resx">
+      <DependentUpon>ucBCTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCuonSach.resx">
+      <DependentUpon>ucCuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDocGia.resx">
+      <DependentUpon>ucDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucLoaiDG.resx">
+      <DependentUpon>ucLoaiDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucMuonTheoTheLoai.resx">
+      <DependentUpon>ucMuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLDG.resx">
+      <DependentUpon>ucQLDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLPhieuMuon.resx">
+      <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLPhieuThu.resx">
+      <DependentUpon>ucQLPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLSach.resx">
+      <DependentUpon>ucQLSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucSach.resx">
+      <DependentUpon>ucSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucSachTraTre.resx">
+      <DependentUpon>ucSachTraTre.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,5 +306,16 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Search_Icon.svg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>
