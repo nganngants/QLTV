@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Net;
+
 namespace BUS
 {
     internal class BUSTacGia
@@ -23,22 +25,25 @@ namespace BUS
         {
             return DALTacGia.Instance.GetAllTacGia();
         }
-        public TACGIA GetTacGia(string id)
+        public string AddTacGia(string name)
         {
-            return DALTacGia.Instance.GetTacGia(id);
+            if (DALTacGia.Instance.AddTacGia(name))
+                return "";
+            return "Khong the them tac gia";
         }
-        public bool DelTacGia(string id)
+        public string DelTacGia(string MaTacGia)
         {
-            return DALTacGia.Instance.DelTacGia(id);
+            if (DALTacGia.Instance.DelTacGia(MaTacGia))
+                return "";
+            return "Khong the xoa tac gia";
         }
-        public bool AddTacGia(string name)
+        public TACGIA GetTacGia(string MaTacGia)
         {
-            return DALTacGia.Instance.AddTacGia(name);
+            return DALTacGia.Instance.GetTacGia(MaTacGia);
         }
         public List<TACGIA> FindTacGia(string name)
         {
             return DALTacGia.Instance.FindTacGia(name);
         }
-        //public bool UpdTacGia(string name)
     }
 }
