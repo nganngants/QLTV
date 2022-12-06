@@ -31,7 +31,7 @@ namespace BUS
         public bool DelDocGia(string id)
         {
             DOCGIA dg = DALDocGia.Instance.GetDocGiaById(id);
-            foreach( PhieuMuon in dg.PHIEUMUONTRA)
+            foreach(PHIEUMUONTRA PhieuMuon in dg.PHIEUMUONTRAs)
             {
                 //
                 return false;
