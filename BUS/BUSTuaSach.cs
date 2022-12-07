@@ -1,50 +1,56 @@
-﻿using DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
 using DTO;
-using System.Diagnostics.Contracts;
-
 namespace BUS
 {
     internal class BUSTuaSach
     {
-        private static BUSLogin instance;
-        public static BUSLogin Instance
+        private static BUSTuaSach instance;
+        public static BUSTuaSach Instance
         {
             get
             {
-                if (instance == null) instance = new BUSLogin();
+                if (instance == null) instance = new BUSTuaSach();
                 return instance;
             }
             set => instance = value;
         }
         public List<TUASACH> GetAllTuaSach()
         {
-            return DALTuaSach.Instance.GetAllTuaSach(); 
+            return DALTuaSach.Instance.GetAllTuaSach();
         }
-        public TUASACH GetTuaSach(string id)
+        public TUASACH GetTuaSach(string MATUASACH)
         {
-            return DALTuaSach.Instance.GetTuaSach(id);
+            return DALTuaSach.Instance.GetTuaSach(MATUASACH);
         }
-        public bool AddTuaSach(string name, THELOAI theLoai, List<TACGIA> dsTacGia)
-        {
-            return DALTuaSach.Instance.AddTuaSach(name, theLoai, dsTacGia);
-        }
-        public List<TUASACH> FindTuaSach(string name,THELOAI theloai, List<TACGIA> tacgia)
+        public List<TUASACH> FindTuaSach(string name, THELOAI theloai, List<TACGIA> tacgia)
         {
             return DALTuaSach.Instance.FindTuaSach(name,theloai,tacgia);
         }
-        public bool DelTuaSach(string id)
+        public string AddTuaSach(string name, THELOAI theloai, List<TACGIA> tacgia)
         {
-
-            return DALTuaSach.Instance.DelTuaSach(id);
+            if (DALTuaSach.Instance.AddTuaSach(name, theloai, tacgia))
+                return "";
+            return "Không thể thêm tựa sách";
         }
-        public bool UpdTuaSach(string id,string name, THELOAI theloai, List<TACGIA> tacgia,List<SACH> sach)
+        public string DelTuaSach(string matuasach)
         {
-            return DALTuaSach.Instance.UpdTuaSach(id, name, theloai, tacgia,sach);
+            TUASACH ts = DALTuaSach.Instance.GetTuaSach(matuasach);
+            List<PHIEUMUONTRA> pmts = DALPhieuMuonTra.Instance.GetAllPHIEUMUONTRA();
+            foreach(SACH sach in ts.SACHes)
+            {
+                foreach(PHIEUMUONTRA pmt in pmts)
+                {
+                    CUONSACH cs = DALCuonSach.Instance.GetAllCuonSACH(sach);
+                }
+            }
+            if (DALTuaSach.Instance.DelTuaSach(matuasach))
+                return "";
+            return "Không thể xoá tựa sách.";
         }
     }
 }
