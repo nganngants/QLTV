@@ -25,7 +25,7 @@ namespace DAL
         /// get a list of all LOAIDOCGIA objects
         /// </summary>
         /// <returns> List <LOAIDOCGIA> </returns>
-        public List<LOAIDOCGIA> GetAllLoaiDocgia ()
+        public List<LOAIDOCGIA> GetAllLoaiDocGia ()
         {
             return QLTVDb.Instance.LOAIDOCGIAs.ToList();
         }
@@ -49,15 +49,23 @@ namespace DAL
                 return false;
             }
         }
-
+        /// <summary>
+        /// Get LOAIDOCGIA by input id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public LOAIDOCGIA GetLoaiDocGiaById (int id)
+        {
+            return QLTVDb.Instance.LOAIDOCGIAs.Find(id);
+        }
         /// <summary>
         /// return LOAIDOCGIA object match with the input maLoaiDocGia
         /// </summary>
         /// <param name="maLoaiDocGia"></param>
         /// <returns>LOAIDOCGIA</returns>
-        public LOAIDOCGIA GetLoaiDocGia (string maLoaiDocGia)
+        public LOAIDOCGIA GetLoaiDocGiaByMa (string maLoaiDocGia)
         {
-            return QLTVDb.Instance.LOAIDOCGIAs.Find(maLoaiDocGia);
+            return QLTVDb.Instance.LOAIDOCGIAs.Where(l => l.MaLoaiDocGia == maLoaiDocGia).FirstOrDefault();
         }
         
         /// <summary>
@@ -76,11 +84,11 @@ namespace DAL
         /// <param name="maLoaiDocGia"></param>
         /// <param name="tenLoaiDocGia"></param>
         /// <returns>true if successfully updated, false otherwise</returns>
-        public bool UpdLoaiDocGia (string maLoaiDocGia, string tenLoaiDocGia)
+        public bool UpdLoaiDocGia (int id, string tenLoaiDocGia)
         {
             try
             {
-                LOAIDOCGIA ldg = QLTVDb.Instance.LOAIDOCGIAs.Find(maLoaiDocGia);
+                LOAIDOCGIA ldg = GetLoaiDocGiaById(id);
                 if (ldg == null) return false;
                 if (tenLoaiDocGia != null) ldg.TenLoaiDocGia = tenLoaiDocGia;
                 QLTVDb.Instance.SaveChanges();
@@ -92,11 +100,11 @@ namespace DAL
             }
         }
 
-        public bool DelLoaiDocGia(string maLoaiDocGia)
+        public bool DelLoaiDocGia(int id)
         {
             try
             {
-                LOAIDOCGIA ldg = QLTVDb.Instance.LOAIDOCGIAs.Find(maLoaiDocGia);
+                LOAIDOCGIA ldg = GetLoaiDocGiaById(id);
                 if (ldg == null) return false;
                 QLTVDb.Instance.LOAIDOCGIAs.Remove(ldg);
                 QLTVDb.Instance.SaveChanges();

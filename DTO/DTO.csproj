@@ -117,6 +117,9 @@
     <Compile Include="TACGIA.cs">
       <DependentUpon>QLTVDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="THAMSO.cs">
+      <DependentUpon>QLTVDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="THELOAI.cs">
       <DependentUpon>QLTVDb.tt</DependentUpon>
     </Compile>
@@ -125,32 +128,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="QLTVDb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QLTVDb.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="QLTVDb.edmx.diagram">
       <DependentUpon>QLTVDb.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="QLTVDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QLTVDb.Context.cs</LastGenOutput>
       <DependentUpon>QLTVDb.edmx</DependentUpon>
+      <LastGenOutput>QLTVDb.Context.cs</LastGenOutput>
     </Content>
     <Content Include="QLTVDb.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QLTVDb.edmx</DependentUpon>
       <LastGenOutput>QLTVDb.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

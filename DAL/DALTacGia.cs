@@ -26,14 +26,19 @@ namespace DAL
             return QLTVDb.Instance.TACGIAs.ToList();
         }
 
+        public TACGIA GetTacGiaById (int id)
+        {
+            return QLTVDb.Instance.TACGIAs.Find(id);
+        }
+
         /// <summary>
-        /// get TACGIA by Id
+        /// get TACGIA by maTacGia
         /// </summary>
         /// <param name="maTacGia"></param>
         /// <returns></returns>
-        public TACGIA GetTacGia(string maTacGia)
+        public TACGIA GetTacGiaByMa(string maTacGia)
         {
-            return QLTVDb.Instance.TACGIAs.Find(maTacGia);
+            return QLTVDb.Instance.TACGIAs.Where(t => t.MATACGIA == maTacGia).FirstOrDefault();
         }
 
         /// <summary>
@@ -60,11 +65,11 @@ namespace DAL
             }
         }
 
-        public bool UpdTacGia(string maTacGia, string tenTacGia)
+        public bool UpdTacGia(int id, string tenTacGia)
         {
             try
             {
-                TACGIA tacgia = QLTVDb.Instance.TACGIAs.Find(maTacGia);
+                TACGIA tacgia = GetTacGiaById(id);
                 if (tacgia == null) return false;
                 tacgia.TenTacGia = tenTacGia;
                 QLTVDb.Instance.SaveChanges();
@@ -76,11 +81,11 @@ namespace DAL
             }
         }
 
-        public bool DelTacGia(string maTacGia)
+        public bool DelTacGia(int id)
         {
             try
             {
-                TACGIA tacgia = QLTVDb.Instance.TACGIAs.Find(maTacGia);
+                TACGIA tacgia = GetTacGiaById(id);
                 if (tacgia == null) return false;
                 QLTVDb.Instance.TACGIAs.Remove(tacgia);
                 return true;

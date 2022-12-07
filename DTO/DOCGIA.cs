@@ -29,7 +29,7 @@ namespace DTO
         public string Email { get; set; }
         public System.DateTime NgayLapThe { get; set; }
         public System.DateTime NgayHetHan { get; set; }
-        public string MaLoaiDocGia { get; set; }
+        public Nullable<int> idLoaiDocGia { get; set; }
         public Nullable<int> TongNoHienTai { get; set; }
     
         public virtual LOAIDOCGIA LOAIDOCGIA { get; set; }

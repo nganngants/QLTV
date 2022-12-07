@@ -1,6 +1,8 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,14 +28,18 @@ namespace DAL
             return QLTVDb.Instance.TUASACHes.ToList();
         }
 
+        public TUASACH GetTuaSachById (int id)
+        {
+            return QLTVDb.Instance.TUASACHes.Find(id);
+        }
         /// <summary>
-        /// Get TUASACH by Id
+        /// Get TUASACH by MaTuaSach
         /// </summary>
         /// <param name="maTuaSach"></param>
         /// <returns></returns>
-        public TUASACH GetTuaSach(string maTuaSach)
+        public TUASACH GetTuaSachByMa(string maTuaSach)
         {
-            return QLTVDb.Instance.TUASACHes.Find(maTuaSach);
+            return QLTVDb.Instance.TUASACHes.Where(t => t.MaTuaSach == maTuaSach).FirstOrDefault();
         }
 
         /// <summary>
@@ -58,41 +64,41 @@ namespace DAL
         {
             try
             {
-                TUASACH tuaSach = new TUASACH
-                {
-                    TenTuaSach = tenTuaSach,
-                    MaTheLoai = theLoai.MaTheLoai,
-                    THELOAI = theLoai,
-                    TACGIAs = dsTacGia
-                };
+                TUASACH tuaSach = new TUASACH();
+                tuaSach.TenTuaSach = tenTuaSach;
+                tuaSach.idTheLoai = theLoai.id;
+                tuaSach.TACGIAs = dsTacGia;
                 QLTVDb.Instance.TUASACHes.Add(tuaSach);
                 QLTVDb.Instance.SaveChanges();
+
                 return true;
             }
             catch
             {
+                
                 return false;
             }
         }
 
-        public bool UpdTuaSach(string maTuaSach, string tenTuaSach, THELOAI theLoai, List<TACGIA> dsTacGia)
+        public bool UpdTuaSach(int idTuaSach, string tenTuaSach, THELOAI theLoai, List<TACGIA> dsTacGia)
         {
             try
             {
-                TUASACH tuaSach = QLTVDb.Instance.TUASACHes.Find(maTuaSach);
+                TUASACH tuaSach = QLTVDb.Instance.TUASACHes.Find(idTuaSach);
                 if (tuaSach == null) return false;
                 if (tenTuaSach != null) tuaSach.TenTuaSach = tenTuaSach;
                 if (theLoai != null)
                 {
-                    tuaSach.MaTheLoai = theLoai.MaTheLoai;
+                    tuaSach.idTheLoai = theLoai.id;
                     tuaSach.THELOAI = theLoai;
                 }
                 if (dsTacGia != null) tuaSach.TACGIAs = dsTacGia;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.ToString());
                 return false;
             }
         }
@@ -103,17 +109,17 @@ namespace DAL
         /// </summary>
         /// <param name="maTuaSach"></param>
         /// <returns></returns>
-        public bool DelTuaSach(string maTuaSach)
+        public bool DelTuaSach(int id)
         {
             try
             {
-                TUASACH tuaSach = QLTVDb.Instance.TUASACHes.Find(maTuaSach);
+                TUASACH tuaSach = GetTuaSachById(id);
                 if (tuaSach == null) return false;
-                List<SACH> dsSach = DALSach.Instance.FindSach(tuaSach, null, null);
-                foreach (var sach in dsSach)
-                {
-                    DALSach.Instance.DelSach(sach.MaSach);
-                }
+                //List<SACH> dsSach = DALSach.Instance.FindSach(tuaSach, null, null);
+                //foreach (var sach in dsSach)
+                //{
+                //    DALSach.Instance.DelSach(sach.MaSach);
+                //}
                 QLTVDb.Instance.TUASACHes.Remove(tuaSach);
                 QLTVDb.Instance.SaveChanges();
                 return true;

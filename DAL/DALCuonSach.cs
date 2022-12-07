@@ -28,11 +28,21 @@ namespace DAL
         /// <summary>
         /// Get CUONSACH by Id
         /// </summary>
+        /// <param name="idCuonSach"></param>
+        /// <returns></returns>
+        public CUONSACH GetCuonSachById (int idCuonSach)
+        {
+            return QLTVDb.Instance.CUONSACHes.Find(idCuonSach);
+        }
+
+        /// <summary>
+        /// Get CUONSACH by Ma
+        /// </summary>
         /// <param name="maCuonSach"></param>
         /// <returns></returns>
-        public CUONSACH GetCuonSach (string maCuonSach)
+        public CUONSACH GetCuonSachByMa(string maCuonSach)
         {
-            return QLTVDb.Instance.CUONSACHes.Find(maCuonSach);
+            return QLTVDb.Instance.CUONSACHes.Where(c => c.MaCuonSach == maCuonSach).FirstOrDefault();
         }
 
         /// <summary>
@@ -55,7 +65,7 @@ namespace DAL
             {
                 CUONSACH cuonsach = new CUONSACH
                 {
-                    MaSach = sach.MaSach,
+                    idSach = sach.id,
                     SACH = sach,
                     TinhTrang = tinhTrang
                 };
@@ -63,17 +73,18 @@ namespace DAL
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.ToString());
                 return false;
             }
         }
 
-        public bool UpdCuonSach(string maCuonSach, int? tinhTrang)
+        public bool UpdCuonSach(int idCuonSach, int? tinhTrang)
         {
             try
             {
-                CUONSACH cuonsach = GetCuonSach(maCuonSach);
+                CUONSACH cuonsach = GetCuonSachById(idCuonSach);
                 if (cuonsach == null) return false;
                 if (tinhTrang != null) cuonsach.TinhTrang = tinhTrang;
                 QLTVDb.Instance.SaveChanges();
@@ -84,11 +95,11 @@ namespace DAL
                 return false;
             }
         }
-        public bool DelCuonSach(string maCuonSach)
+        public bool DelCuonSach(int idCuonSach)
         {
             try
             {
-                var cuonSach = GetCuonSach(maCuonSach);
+                var cuonSach = GetCuonSachById(idCuonSach);
                 if (cuonSach == null) return false;
                 QLTVDb.Instance.CUONSACHes.Remove(cuonSach);
                 QLTVDb.Instance.SaveChanges();

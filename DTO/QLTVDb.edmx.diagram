@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4e79dad9c21842888148b62936f69274" Name="Diagram1">
-        <EntityTypeShape EntityType="QLTVModel.BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+      <Diagram DiagramId="dcd8e974237147098f6929ce9ea0b2d9" Name="Diagram1">
+        <EntityTypeShape EntityType="QLTVModel.BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVModel.BCSACHTRATRE" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVModel.CHUCNANG" Width="1.5" PointX="9.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVModel.CT_BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
@@ -20,21 +20,22 @@
         <EntityTypeShape EntityType="QLTVModel.PHIEUTHU" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVModel.SACH" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVModel.TACGIA" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.THAMSO" Width="1.5" PointX="2.75" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVModel.THELOAI" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVModel.TUASACH" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <AssociationConnector Association="QLTVModel.FK__CT_BCLUOT__MaBao__5CD6CB2B" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__BCSACHTRA__MaCuo__60A75C0F" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__CT_BCLUOT__MaThe__5DCAEF64" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__CT_PHIEUN__MaSac__4E88ABD4" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__CT_PHIEUN__SoPhi__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__CUONSACH__MaSach__5165187F" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__PHIEUMUON__MaCuo__5535A963" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__DOCGIA__MaLoaiDo__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__PHIEUMUON__MaDoc__5441852A" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__PHIEUTHU__MaDocG__5812160E" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__NGUOIDUNG__MaNho__2C3393D0" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__SACH__MaTuaSach__48CFD27E" ManuallyRouted="false" />
-        <AssociationConnector Association="QLTVModel.FK__TUASACH__MaTheLo__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CT_BCLUOT__idBao__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__BCSACHTRA__idCuo__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CT_BCLUOT__idThe__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CT_PHIEUN__idSac__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CT_PHIEUN__SoPhi__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__CUONSACH__idSach__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__PHIEUMUON__idCuo__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__DOCGIA__idLoaiDo__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__PHIEUMUON__idDoc__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__PHIEUTHU__idDocG__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__NGUOIDUNG__idNho__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__SACH__idTuaSach__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__TUASACH__idTheLo__30F848ED" ManuallyRouted="false" />
         <AssociationConnector Association="QLTVModel.CT_TACGIA" ManuallyRouted="false" />
         <AssociationConnector Association="QLTVModel.PHANQUYEN" ManuallyRouted="false" />
       </Diagram>

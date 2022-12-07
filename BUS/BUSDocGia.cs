@@ -25,18 +25,18 @@ namespace BUS
             return DALDocGia.Instance.GetAllDocGia();
         }
         public DOCGIA GetDocGia(string id)
-        {
-            return DALDocGia.Instance.GetDocGiaById(id);
+        { 
+            return DALDocGia.Instance.GetDocGiaByMa(id);
         }
         public string DelDocGia(string id)
         {
-            DOCGIA dg = DALDocGia.Instance.GetDocGiaById(id);
+            DOCGIA dg = DALDocGia.Instance.GetDocGiaByMa(id);
             foreach( PHIEUMUONTRA PhieuMuon in dg.PHIEUMUONTRAs)
             {
                 if(PhieuMuon.NgayTra==null)
                 return "Độc giả còn sách đang mượn";
             }
-            DALDocGia.Instance.DelDocGia(id);
+            DALDocGia.Instance.DelDocGia(dg.ID);
             return "";
         }
     }

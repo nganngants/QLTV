@@ -25,14 +25,18 @@ namespace DAL
             return QLTVDb.Instance.SACHes.ToList();
         }
 
+        public SACH GetSachById (int id)
+        {
+            return QLTVDb.Instance.SACHes.Find(id);
+        }
         /// <summary>
-        /// Get SACH by Id
+        /// Get SACH by maSach
         /// </summary>
         /// <param name="maSach"></param>
         /// <returns></returns>
-        public SACH GetSach (string maSach)
+        public SACH GetSachByMa (string maSach)
         {
-            return QLTVDb.Instance.SACHes.Find(maSach);
+            return QLTVDb.Instance.SACHes.Where(s => s.MaSach == maSach).FirstOrDefault();
         }
         /// <summary>
         /// Find SACHs by filter
@@ -57,7 +61,7 @@ namespace DAL
                 SACH sach = new SACH
                 {
                     TUASACH = tuaSach,
-                    MaTuaSach = tuaSach.MaTuaSach,
+                    idTuaSach = tuaSach.id,
                     SoLuong = soLuong,
                     SoLuongConLai = soLuong,
                     NamXB = namXB,
@@ -72,17 +76,18 @@ namespace DAL
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.ToString());
                 return false;
             }
         }
 
-        public bool AddSachDaCo (string maSach, int soLuongThem)
+        public bool AddSachDaCo (int id, int soLuongThem)
         {
             try
             {
-                SACH sach = QLTVDb.Instance.SACHes.Find(maSach);
+                SACH sach = GetSachById(id);
                 if (sach == null) return false;
                 sach.SoLuong += soLuongThem;
                 sach.SoLuongConLai += soLuongThem;
@@ -106,11 +111,11 @@ namespace DAL
         /// <param name="namXB"></param>
         /// <param name="nhaXB"></param>
         /// <returns></returns>
-        public bool UpdSach(string maSach, int? namXB, string nhaXB)
+        public bool UpdSach(int id, int? namXB, string nhaXB)
         {
             try
             {
-                SACH sach = QLTVDb.Instance.SACHes.Find(maSach);
+                SACH sach = GetSachById(id);
                 if (sach == null) return false;
                 if (namXB != null) sach.NamXB = namXB;
                 if (nhaXB != null) sach.NhaXB = nhaXB;
@@ -129,11 +134,11 @@ namespace DAL
         /// <param name="soLuong"></param>
         /// <param name="soLuongConLai"></param>
         /// <returns></returns>
-        public bool UpdSLSach(string maSach, int soLuong, int soLuongConLai)
+        public bool UpdSLSach(int id, int soLuong, int soLuongConLai)
         {
             try
             {
-                SACH sach = QLTVDb.Instance.SACHes.Find(maSach);
+                SACH sach = GetSachById(id);
                 if (sach == null) return false;
                 sach.SoLuong = soLuong;
                 sach.SoLuongConLai = soLuongConLai;
@@ -151,17 +156,17 @@ namespace DAL
         /// </summary>
         /// <param name="maSach"></param>
         /// <returns></returns>
-        public bool DelSach(string maSach)
+        public bool DelSach(int id)
         {
             try
             {
-                SACH sach = GetSach(maSach);
+                SACH sach = GetSachById(id);
                 if (sach == null) return false;
-                List<CUONSACH> dsCuonSach = DALCuonSach.Instance.FindCuonSach(sach, null);
-                foreach (CUONSACH cuonSach in dsCuonSach)
-                {
-                    DALCuonSach.Instance.DelCuonSach(cuonSach.MaCuonSach);
-                }
+                //List<CUONSACH> dsCuonSach = DALCuonSach.Instance.FindCuonSach(sach, null);
+                //foreach (CUONSACH cuonSach in dsCuonSach)
+                //{
+                //    DALCuonSach.Instance.DelCuonSach(cuonSach.MaCuonSach);
+                //}
                 QLTVDb.Instance.SACHes.Remove(sach);
                 QLTVDb.Instance.SaveChanges();
                 return true;

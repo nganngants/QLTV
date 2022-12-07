@@ -21,11 +21,11 @@ namespace BUS
         }
         public List<LOAIDOCGIA> GetAllLoaiDocGia()
         {
-            return DALLoaiDocGia.Instance.GetAllLoaiDocgia();
+            return DALLoaiDocGia.Instance.GetAllLoaiDocGia();
         }
         public string DelLoaiDocGia(string id)
         {
-            if (DALLoaiDocGia.Instance.DelLoaiDocGia(id))
+            if (DALLoaiDocGia.Instance.DelLoaiDocGia(DALLoaiDocGia.Instance.GetLoaiDocGiaByMa(id).id))
                 return "";
             return "Không thể xoá loại độc giá";
         }

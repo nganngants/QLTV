@@ -15,7 +15,7 @@ namespace DTO
     public partial class CT_PHIEUNHAP
     {
         public int SoPhieuNhap { get; set; }
-        public string MaSach { get; set; }
+        public int idSach { get; set; }
         public Nullable<int> DonGia { get; set; }
         public Nullable<int> ThanhTien { get; set; }
         public Nullable<int> SoLuongNhap { get; set; }

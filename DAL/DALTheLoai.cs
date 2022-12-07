@@ -27,13 +27,23 @@ namespace DAL
         }
 
         /// <summary>
-        /// get THELOAI by Id
+        /// get THELOAI by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public THELOAI GetTheLoaiById (int id)
+        {
+            return QLTVDb.Instance.THELOAIs.Find(id);
+        }
+
+        /// <summary>
+        /// get THELOAI by MaTheLoai
         /// </summary>
         /// <param name="maTheLoai"></param>
         /// <returns></returns>
-        public THELOAI GetTheLoai(string maTheLoai)
+        public THELOAI GetTheLoaiByMa(string maTheLoai)
         {
-            return QLTVDb.Instance.THELOAIs.Find(maTheLoai);
+            return QLTVDb.Instance.THELOAIs.Where(t => t.MaTheLoai == maTheLoai).FirstOrDefault();
         }
 
         /// <summary>
@@ -55,17 +65,18 @@ namespace DAL
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.ToString());
                 return false;
             }
         }
 
-        public bool UpdTheLoai(string maTheLoai, string tenTheLoai)
+        public bool UpdTheLoai(int id, string tenTheLoai)
         {
             try
             {
-                var theloai = QLTVDb.Instance.THELOAIs.Find(maTheLoai);
+                var theloai = GetTheLoaiById(id);
                 if (theloai == null) return false;
                 theloai.TenTheLoai = tenTheLoai;
                 QLTVDb.Instance.SaveChanges();
@@ -77,11 +88,11 @@ namespace DAL
             }
         }
 
-        public bool DelTheLoai(string maTheLoai)
+        public bool DelTheLoai(int id)
         {
             try
             {
-                var theloai = QLTVDb.Instance.THELOAIs.Find(maTheLoai);
+                var theloai = GetTheLoaiById(id);
                 if (theloai == null) return false;
                 QLTVDb.Instance.THELOAIs.Remove(theloai);
                 QLTVDb.Instance.SaveChanges();
