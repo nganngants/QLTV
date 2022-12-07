@@ -1,11 +1,13 @@
+drop database QLTV
 CREATE DATABASE QLTV
 go
 USE QLTV
+use QLGV
 go
 CREATE TABLE NHOMNGUOIDUNG
 (
-	id int IDENTITY(1,1) not null ,
-	MaNhomNguoiDung AS CAST('NND' + right('000' + CAST(id as varchar(5)), 3) AS CHAR(6)) persisted primary key,
+	id int IDENTITY(1,1) primary key,
+	MaNhomNguoiDung AS CAST('NND' + right('000' + CAST(id as varchar(5)), 3) AS CHAR(6)) persisted ,
 	TenNhomNguoiDung varchar(max)
 );
 go
@@ -14,8 +16,8 @@ insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Thu thu')
 go
 CREATE TABLE CHUCNANG
 (
-     id int not null IDENTITY(1,1),
-	 MaChucNang AS CAST('CN' + right('000' + CAST(id as varchar(3)), 3) as char(5))persisted primary key,
+     id int  primary key IDENTITY(1,1),
+	 MaChucNang AS CAST('CN' + right('000' + CAST(id as varchar(3)), 3) as char(5))persisted,
      TenChucNang VARCHAR(MAX),
      TenManHinh VARCHAR(MAX)
 )
@@ -25,33 +27,33 @@ insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLDG', 'Quan Ly Doc Gia'
 go
 CREATE TABLE PHANQUYEN
 (
-    MaNhomNguoiDung char(6) REFERENCES NHOMNGUOIDUNG on delete cascade,
-    MaChucNang char(5) REFERENCES CHUCNANG on delete cascade,
-    PRIMARY KEY (MaNhomNguoiDung, MaChucNang)
+    idNhomNguoiDung INT FOREIGN KEY REFERENCES NHOMNGUOIDUNG on delete cascade,
+    idChucNang INT FOREIGN KEY REFERENCES CHUCNANG on delete cascade,
+    PRIMARY KEY (idNhomNguoiDung, idChucNang)
 )
 go
-INSERT INTO PHANQUYEN VALUES ('NND001', 'CN001')
+INSERT INTO PHANQUYEN VALUES (1, 1)
 
 go
 CREATE TABLE NGUOIDUNG
 (
-	id INT IDENTITY not NULL,
-	MaNguoiDung  AS CAST('ND'+ RIGHT('000000' + CAST(id AS VARCHAR(4)), 4) AS CHAR(6)) PERSISTED PRIMARY KEY,
+	id INT IDENTITY PRIMARY KEY,
+	MaNguoiDung  AS CAST('ND'+ RIGHT('000000' + CAST(id AS VARCHAR(4)), 4) AS CHAR(6)) PERSISTED,
     TenNguoiDung VARCHAR(MAX),
     NgaySinh datetime,
     ChucVu VARCHAR(MAX),
     TenDangNhap VARCHAR(MAX) NOT NULL,
     MatKhau VARCHAR(MAX) NOT NULL,
-    MaNhom CHAR(6) REFERENCES NHOMNGUOIDUNG(MaNhomNguoiDung) on delete cascade NOT NULL
+    idNhomNguoiDung INT REFERENCES NHOMNGUOIDUNG on delete cascade NOT NULL
 )
 go
-INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, MaNhom) VALUES ('Ngan Ngan', 'admin', '123', 'NND001')
+INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, idNhomNguoiDung) VALUES ('Ngan Ngan', 'admin', '123', 1)
 
 go
 CREATE TABLE THELOAI
 (
-	id int IDENTITY(1,1) not null,
-	MaTheLoai As Cast('TL' + right('000' + CAST(id as varchar(3)), 3) as char(5)) persisted primary key,  
+	id int IDENTITY(1,1)  primary key,
+	MaTheLoai As Cast('TL' + right('000' + CAST(id as varchar(3)), 3) as char(5)) persisted,  
 	TenTheLoai VARCHAR(MAX) 
 )
 go
@@ -62,20 +64,20 @@ go
 
 CREATE TABLE TUASACH
 (
-	id INT IDENTITY not NULL,
-	MaTuaSach  AS cast('TS'+ right('0000' + CAST(ID AS VARCHAR(10)), 4) as char(6)) PERSISTED PRIMARY KEY,
+	id INT IDENTITY  PRIMARY KEY,
+	MaTuaSach  AS cast('TS'+ right('0000' + CAST(ID AS VARCHAR(10)), 4) as char(6)) PERSISTED,
 	TenTuaSach VARCHAR(MAX),
-	MaTheLoai char(5) references THELOAI(MaTheLoai) on delete cascade
+	idTheLoai int references THELOAI on delete cascade
 )
 go
-insert into TUASACH values ('Tua sach 1', 'TL001')
-insert into TUASACH values ('Tua sach 2', 'TL002')
+insert into TUASACH values ('Tua sach 1', 1)
+insert into TUASACH values ('Tua sach 2', 2)
 go
 
 CREATE TABLE TACGIA
 (
-	id INT IDENTITY not NULL,
-	MATACGIA  AS CAST('TG'+ RIGHT('0000' + CAST(ID AS VARCHAR(10)), 4) AS CHAR(6))PERSISTED PRIMARY KEY,
+	id INT IDENTITY PRIMARY KEY,
+	MATACGIA  AS CAST('TG'+ RIGHT('0000' + CAST(ID AS VARCHAR(10)), 4) AS CHAR(6))PERSISTED,
 	TenTacGia VARCHAR(MAX)
 )
 go
@@ -83,18 +85,18 @@ INSERT INTO TACGIA VALUES ('Nguyen Nhat Anh')
 go
 CREATE TABLE CT_TACGIA
 (
-	MaTacGia CHAR(6) references TACGIA(MaTacGia) on delete cascade,
-	MaTuaSach CHAR(6) references TUASACH(MaTuaSach) on delete cascade,
-	primary key (MaTacGia, MaTuaSach)
+	idTacGia int references TACGIA  on delete cascade,
+	idTuaSach int references TUASACH on delete cascade,
+	primary key (idTacGia, idTuaSach)
 )
 go
-INSERT INTO CT_TACGIA VALUES ('TG0001', 'TS0001')
+INSERT INTO CT_TACGIA VALUES (1, 1)
 go
 
 CREATE TABLE LOAIDOCGIA
 (
-	id INT IDENTITY(1,1) not NULL,
-	MaLoaiDocGia  AS CAST('LDG'+ RIGHT('000' + CAST(ID AS VARCHAR(10)), 3) AS CHAR(6))PERSISTED PRIMARY KEY,
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	MaLoaiDocGia  AS CAST('LDG'+ RIGHT('000' + CAST(ID AS VARCHAR(10)), 3) AS CHAR(6))PERSISTED,
 	TenLoaiDocGia VARCHAR(MAX)
 )
 go
@@ -104,31 +106,31 @@ INSERT INTO LOAIDOCGIA VALUES('Sinh vien khac')
 go
 CREATE TABLE DOCGIA
 (
-	ID int IDENTITY(1,1) NOT NULL,
-	MaDocGia  AS CAST('DG'+ RIGHT('0000' + CAST(ID AS VARCHAR(10)), 4) AS CHAR(6))PERSISTED PRIMARY KEY,
+	ID int IDENTITY(1,1) PRIMARY KEY,
+	MaDocGia  AS CAST('DG'+ RIGHT('0000' + CAST(ID AS VARCHAR(10)), 4) AS CHAR(6))PERSISTED,
 	TenDocGia VARCHAR(MAX) NOT NULL,
 	NgaySinh datetime NOT NULL, 
 	DiaChi VARCHAR(MAX),
 	Email VARCHAR(MAX),
 	NgayLapThe Datetime NOT NULL, 
 	NgayHetHan Datetime NOT NULL, 
-	MaLoaiDocGia CHAR(6) references LOAIDOCGIA(MaLoaiDocGia) on delete cascade, 
+	idLoaiDocGia INT references LOAIDOCGIA on delete cascade, 
 	TongNoHienTai int
 )
 go
 set dateformat dmy
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, MaLoaiDocGia) 
-VALUES ('Doc Gia A', '13/12/1989', '27/10/2022', '11/9/2023', 'LDG001')
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, MaLoaiDocGia) 
-VALUES ('Doc Gia B', '13/12/1989', '31/10/2022', '11/11/2023', 'LDG002')
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, MaLoaiDocGia) 
-VALUES ('Doc Gia C', '13/12/1989', '27/8/2022', '11/5/2023', 'LDG003')
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, idLoaiDocGia) 
+VALUES ('Doc Gia A', '13/12/1989', '27/10/2022', '11/9/2023', 1)
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, idLoaiDocGia) 
+VALUES ('Doc Gia B', '13/12/1989', '31/10/2022', '11/11/2023', 2)
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, idLoaiDocGia) 
+VALUES ('Doc Gia C', '13/12/1989', '27/8/2022', '11/5/2023', 3)
 go
 CREATE TABLE SACH
 (
-	id int IDENTITY(1,1),
-	MaSach AS CAST('S'+ RIGHT('00000' + CAST(id AS VARCHAR(10)), 5) AS CHAR(6)) PERSISTED primary key,
-	MaTuaSach CHAR(6) references TUASACH(MaTuaSach) on delete cascade , 
+	id int IDENTITY(1,1) primary key,
+	MaSach AS CAST('S'+ RIGHT('00000' + CAST(id AS VARCHAR(10)), 5) AS CHAR(6)) PERSISTED,
+	idTuaSach int references TUASACH on delete cascade , 
 	SoLuong int NOT NULL, 
 	SoLuongConLai int NOT NULL, 
 	DonGia int, 
@@ -136,10 +138,10 @@ CREATE TABLE SACH
 	NhaXB VARCHAR(MAX)
 )
 go
-INSERT INTO SACH(MaTuaSach, SoLuong, SoLuongConLai, DonGia, NamXB, NhaXB)
-VALUES ('TS0001', 100, 25, 23000, 2015, 'NXB')
-INSERT INTO SACH(MaTuaSach, SoLuong, SoLuongConLai, DonGia, NamXB, NhaXB)
-VALUES ('TS0002', 50, 35, 35000, 2020, 'NXB KHAC')
+INSERT INTO SACH(idTuaSach, SoLuong, SoLuongConLai, DonGia, NamXB, NhaXB)
+VALUES (1, 100, 25, 23000, 2015, 'NXB')
+INSERT INTO SACH(idTuaSach, SoLuong, SoLuongConLai, DonGia, NamXB, NhaXB)
+VALUES (2, 50, 35, 35000, 2020, 'NXB KHAC')
 go
 CREATE TABLE PHIEUNHAPSACH
 (
@@ -151,26 +153,26 @@ go
 CREATE TABLE CT_PHIEUNHAP
 (
 	SoPhieuNhap int references PHIEUNHAPSACH(SoPhieuNhap) on delete cascade,
-	MaSach CHAR(6) references SACH(MaSach) on delete cascade,
+	idSach int references SACH on delete cascade,
 	DonGia int, 
 	ThanhTien int, 
 	SoLuongNhap int, 
-	primary key (SoPhieuNhap,MaSach)
+	primary key (SoPhieuNhap, idSach)
 )
 go 
 create table CUONSACH
 (
-	id int IDENTITY(1,1),
-	MaCuonSach AS CAST('CS'+ RIGHT('0000' + CAST(id AS VARCHAR(10)), 4) AS CHAR(6)) PERSISTED primary key,
-	MaSach CHAR(6) references SACH(MaSach) on delete cascade,
+	id int IDENTITY(1,1) primary key,
+	MaCuonSach AS CAST('CS'+ RIGHT('0000' + CAST(id AS VARCHAR(10)), 4) AS CHAR(6)) PERSISTED,
+	idSach int references SACH on delete cascade,
 	TinhTrang INT
 )
 go
 create table PHIEUMUONTRA
 (
 	SoPhieuMuonTra int IDENTITY(1,1) primary key,
-	MaDocGia CHAR(6) references DOCGIA(MaDocGia) on delete cascade,
-	MaCuonSach CHAR(6) references CUONSACH(MaCuonSach) on delete cascade,
+	idDocGia int references DOCGIA on delete cascade,
+	idCuonSach int references CUONSACH on delete cascade,
 	NgayMuon Datetime, 
 	NgayTra Datetime, 
 	HanTra Datetime,
@@ -180,38 +182,40 @@ go
 create table PHIEUTHU
 (
 	SoPhieuThu int IDENTITY(1,1) primary key,
-	MaDocGia CHAR(6) references DOCGIA(MaDocGia) on delete cascade,
+	idDocGia int references DOCGIA on delete cascade,
 	SoTienThu int ,
 	NgayLap datetime
 )
 go
 create table BCLUOTMUONTHEOTHELOAI
 (
+	id INT IDENTITY(1,1) PRIMARY KEY,
 	Thang int, 
 	Nam int, 
 	MaBaoCao AS CAST('BCLM' + RIGHT('0' + CAST(THANG AS CHAR(2)), 2) + CAST(NAM AS CHAR(4)) AS CHAR(10)) 
-				PERSISTED PRIMARY KEY,
-	TongSoLuotMuon int,
+				PERSISTED,
+	TongSoLuotMuon int
 )
 go
 create table CT_BCLUOTMUONTHEOTHELOAI
 (
-	MaBaoCao CHAR(10) references BCLUOTMUONTHEOTHELOAI(MaBaoCao) on delete cascade ,
-	MaTheLoai CHAR(5) references THELOAI(MATHELOAI) on delete cascade,
+	idBaoCao INT references BCLUOTMUONTHEOTHELOAI on delete cascade ,
+	idTheLoai int references THELOAI on delete cascade,
 	SoLuotMuon int, 
 	TiLe numeric(4,2),
-	primary key (MaBaoCao, MaTheLoai)
+	primary key (idBaoCao, idTheLoai)
 )
 go
 create table BCSACHTRATRE
 (
 	Ngay datetime not null,
-	MaCuonSach CHAR(6) references CUONSACH(MaCuonSach) on delete cascade,
+	idCuonSach int references CUONSACH on delete cascade,
 	NgayMuon datetime,
 	SoNgayTre int
-	primary key(Ngay,MaCuonSach)
+	primary key(Ngay, idCuonSach)
 )
 go
+drop table THAMSO
 create table THAMSO
 (
 	TuoiToiThieu int, 
