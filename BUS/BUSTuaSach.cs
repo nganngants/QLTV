@@ -40,12 +40,12 @@ namespace BUS
         public string DelTuaSach(string matuasach)
         {
             TUASACH ts = DALTuaSach.Instance.GetTuaSach(matuasach);
-            List<PHIEUMUONTRA> pmts = DALPhieuMuonTra.Instance.GetAllPHIEUMUONTRA();
             foreach(SACH sach in ts.SACHes)
             {
-                foreach(PHIEUMUONTRA pmt in pmts)
+                foreach(CUONSACH cs in sach.CUONSACHes)
                 {
-                    CUONSACH cs = DALCuonSach.Instance.GetAllCuonSACH(sach);
+                    if (cs.TinhTrang == 1)
+                        return "Tựa sách còn sách đang được mượn. Không thể xoá";
                 }
             }
             if (DALTuaSach.Instance.DelTuaSach(matuasach))
