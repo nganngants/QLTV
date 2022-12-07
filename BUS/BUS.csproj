@@ -51,13 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUSCuonSach.cs" />
     <Compile Include="BUSDocGia.cs" />
     <Compile Include="BUSLoaiDocGia.cs" />
     <Compile Include="BUSLogin.cs" />
-    <Compile Include="BUSSachcs.cs" />
+    <Compile Include="BUSPhieuMuonTra.cs" />
+    <Compile Include="BUSPhieuNhap.cs" />
+    <Compile Include="BUSSach.cs" />
     <Compile Include="BUSTacGia.cs" />
     <Compile Include="BUSTheLoai.cs" />
     <Compile Include="BUSTuaSach.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,7 +76,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="obj\Debug\BUS.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\BUS.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\BUS.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
