@@ -15,7 +15,7 @@ namespace DTO
     public partial class PHIEUTHU
     {
         public int SoPhieuThu { get; set; }
-        public string MaDocGia { get; set; }
+        public Nullable<int> idDocGia { get; set; }
         public Nullable<int> SoTienThu { get; set; }
         public Nullable<System.DateTime> NgayLap { get; set; }
     

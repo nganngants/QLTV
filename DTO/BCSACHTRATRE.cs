@@ -15,7 +15,7 @@ namespace DTO
     public partial class BCSACHTRATRE
     {
         public System.DateTime Ngay { get; set; }
-        public string MaCuonSach { get; set; }
+        public int idCuonSach { get; set; }
         public Nullable<System.DateTime> NgayMuon { get; set; }
         public Nullable<int> SoNgayTre { get; set; }
     

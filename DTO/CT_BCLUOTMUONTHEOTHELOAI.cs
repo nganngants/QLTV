@@ -14,8 +14,8 @@ namespace DTO
     
     public partial class CT_BCLUOTMUONTHEOTHELOAI
     {
-        public string MaBaoCao { get; set; }
-        public string MaTheLoai { get; set; }
+        public int idBaoCao { get; set; }
+        public int idTheLoai { get; set; }
         public Nullable<int> SoLuotMuon { get; set; }
         public Nullable<decimal> TiLe { get; set; }
     

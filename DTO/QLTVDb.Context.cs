@@ -15,6 +15,17 @@ namespace DTO
     
     public partial class QLTVDb : DbContext
     {
+        private static QLTVDb instance;
+        public static QLTVDb Instance 
+        { 
+            get
+            {
+                if (instance == null) instance = new QLTVDb();
+                return instance;
+            }
+            set => instance = value; 
+        }
+
         public QLTVDb()
             : base("name=QLTVDb")
         {
@@ -40,6 +51,7 @@ namespace DTO
         public virtual DbSet<PHIEUTHU> PHIEUTHUs { get; set; }
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
+        public virtual DbSet<THAMSO> THAMSOes { get; set; }
         public virtual DbSet<THELOAI> THELOAIs { get; set; }
         public virtual DbSet<TUASACH> TUASACHes { get; set; }
     }
