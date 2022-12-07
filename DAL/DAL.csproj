@@ -55,6 +55,7 @@
     <Compile Include="DALDocGia.cs" />
     <Compile Include="DALLoaiDocGia.cs" />
     <Compile Include="DALNguoiDung.cs" />
+    <Compile Include="DALPhieuMuonTra.cs" />
     <Compile Include="DALSach.cs" />
     <Compile Include="DALTacGia.cs" />
     <Compile Include="DALTheLoai.cs" />
