@@ -34,8 +34,8 @@ namespace GUI
             {
                 MessageBox.Show("Đăng nhập thành công!\nChào mừng " + username + "!",
                                 "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //fMainForm f = new fMainForm();
-                BmPhieuThuTienPhat f = new BmPhieuThuTienPhat();
+                fMainForm f = new fMainForm();
+                //BmPhieuThuTienPhat f = new BmPhieuThuTienPhat();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

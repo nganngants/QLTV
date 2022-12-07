@@ -51,7 +51,7 @@
             this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.siticoneControlBox1.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(1030, 0);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(1029, 0);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
             this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
             this.siticoneControlBox1.TabIndex = 2;
@@ -80,6 +80,10 @@
             this.siticonePanel1.Controls.Add(this.label1);
             this.siticonePanel1.Location = new System.Drawing.Point(245, 137);
             this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.ShadowDecoration.BorderRadius = 8;
+            this.siticonePanel1.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
+            this.siticonePanel1.ShadowDecoration.Enabled = true;
+            this.siticonePanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 8, 8);
             this.siticonePanel1.Size = new System.Drawing.Size(600, 500);
             this.siticonePanel1.TabIndex = 0;
             // 

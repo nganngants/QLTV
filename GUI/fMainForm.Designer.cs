@@ -32,11 +32,12 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMainForm));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.exitControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butLogOut = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
             this.pageHome = new System.Windows.Forms.TabPage();
             this.pageQLDG = new System.Windows.Forms.TabPage();
@@ -45,6 +46,7 @@ namespace GUI
             this.pageQLPT = new System.Windows.Forms.TabPage();
             this.pageBC = new System.Windows.Forms.TabPage();
             this.pageQLND = new System.Windows.Forms.TabPage();
+            this.iconList = new System.Windows.Forms.ImageList(this.components);
             this.topPanel.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
@@ -59,59 +61,57 @@ namespace GUI
             // exitControlBox
             // 
             this.exitControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitControlBox.BackColor = System.Drawing.Color.LightGray;
+            this.exitControlBox.BackColor = System.Drawing.Color.Transparent;
             this.exitControlBox.CustomClick = true;
-            this.exitControlBox.FillColor = System.Drawing.SystemColors.Control;
+            this.exitControlBox.FillColor = System.Drawing.Color.Transparent;
             this.exitControlBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.exitControlBox.IconColor = System.Drawing.Color.Gray;
-            this.exitControlBox.Location = new System.Drawing.Point(1179, 0);
+            this.exitControlBox.Location = new System.Drawing.Point(1175, 0);
             this.exitControlBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.exitControlBox.Name = "exitControlBox";
-            this.exitControlBox.Size = new System.Drawing.Size(56, 29);
+            this.exitControlBox.Size = new System.Drawing.Size(60, 60);
             this.exitControlBox.TabIndex = 0;
             this.exitControlBox.Click += new System.EventHandler(this.exitControlBox_Click);
             // 
             // siticoneControlBox1
             // 
             this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox1.BackColor = System.Drawing.Color.LightGray;
+            this.siticoneControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.siticoneControlBox1.FillColor = System.Drawing.SystemColors.Control;
+            this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.Gray;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(1127, 0);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(1111, 0);
             this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.Size = new System.Drawing.Size(56, 29);
+            this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
             this.siticoneControlBox1.TabIndex = 0;
             // 
             // topPanel
             // 
-            this.topPanel.Controls.Add(this.butLogOut);
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.topPanel.Controls.Add(this.label2);
             this.topPanel.Controls.Add(this.exitControlBox);
             this.topPanel.Controls.Add(this.siticoneControlBox1);
+            this.topPanel.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.topPanel.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1235, 154);
+            this.topPanel.Size = new System.Drawing.Size(1235, 74);
             this.topPanel.TabIndex = 1;
             // 
-            // butLogOut
+            // label2
             // 
-            this.butLogOut.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butLogOut.FillColor = System.Drawing.Color.LightGray;
-            this.butLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.216F);
-            this.butLogOut.ForeColor = System.Drawing.Color.Black;
-            this.butLogOut.Location = new System.Drawing.Point(1073, 61);
-            this.butLogOut.Name = "butLogOut";
-            this.butLogOut.Size = new System.Drawing.Size(150, 50);
-            this.butLogOut.TabIndex = 1;
-            this.butLogOut.Text = "Thoát";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label2.Location = new System.Drawing.Point(12, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(209, 48);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "UIT LIBRARY";
             // 
             // tabControl
             // 
@@ -124,108 +124,134 @@ namespace GUI
             this.tabControl.Controls.Add(this.pageBC);
             this.tabControl.Controls.Add(this.pageQLND);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tabControl.ItemSize = new System.Drawing.Size(200, 80);
-            this.tabControl.Location = new System.Drawing.Point(0, 154);
+            this.tabControl.Font = new System.Drawing.Font("UTM Helve", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.ImageList = this.iconList;
+            this.tabControl.ItemSize = new System.Drawing.Size(220, 70);
+            this.tabControl.Location = new System.Drawing.Point(0, 74);
             this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1235, 566);
+            this.tabControl.Size = new System.Drawing.Size(1235, 646);
             this.tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.DarkGray;
-            this.tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.tabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.tabControl.TabButtonHoverState.InnerColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.tabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.SlateBlue;
             this.tabControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
-            this.tabControl.TabButtonIdleState.FillColor = System.Drawing.SystemColors.ControlDark;
-            this.tabControl.TabButtonIdleState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.tabControl.TabButtonIdleState.ForeColor = System.Drawing.Color.White;
+            this.tabControl.TabButtonIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.tabControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.TabButtonIdleState.ForeColor = System.Drawing.Color.SlateBlue;
             this.tabControl.TabButtonIdleState.InnerColor = System.Drawing.Color.Silver;
+            this.tabControl.TabButtonImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tabControl.TabButtonImageOffset = new System.Drawing.Point(10, 0);
             this.tabControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.tabControl.TabButtonSelectedState.FillColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.tabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
-            this.tabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.Black;
-            this.tabControl.TabButtonSize = new System.Drawing.Size(200, 80);
+            this.tabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.Transparent;
+            this.tabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.tabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.DarkSlateBlue;
+            this.tabControl.TabButtonSize = new System.Drawing.Size(220, 70);
+            this.tabControl.TabButtonTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tabControl.TabButtonTextOffset = new System.Drawing.Point(10, 0);
             this.tabControl.TabIndex = 2;
-            this.tabControl.TabMenuBackColor = System.Drawing.Color.Transparent;
+            this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             // 
             // pageHome
             // 
-            this.pageHome.Location = new System.Drawing.Point(204, 4);
+            this.pageHome.ImageIndex = 0;
+            this.pageHome.Location = new System.Drawing.Point(224, 4);
             this.pageHome.Margin = new System.Windows.Forms.Padding(0);
             this.pageHome.Name = "pageHome";
             this.pageHome.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pageHome.Size = new System.Drawing.Size(1027, 558);
+            this.pageHome.Size = new System.Drawing.Size(1007, 638);
             this.pageHome.TabIndex = 0;
-            this.pageHome.Text = "Home";
+            this.pageHome.Text = "Tài khoản";
             this.pageHome.UseVisualStyleBackColor = true;
             this.pageHome.Click += new System.EventHandler(this.pageHome_Click);
             // 
             // pageQLDG
             // 
-            this.pageQLDG.Location = new System.Drawing.Point(204, 4);
+            this.pageQLDG.ImageIndex = 1;
+            this.pageQLDG.Location = new System.Drawing.Point(224, 4);
             this.pageQLDG.Margin = new System.Windows.Forms.Padding(0);
             this.pageQLDG.Name = "pageQLDG";
-            this.pageQLDG.Size = new System.Drawing.Size(1027, 558);
+            this.pageQLDG.Size = new System.Drawing.Size(1007, 638);
             this.pageQLDG.TabIndex = 1;
-            this.pageQLDG.Text = "Quản lý độc giả";
+            this.pageQLDG.Text = "Độc giả";
             this.pageQLDG.UseVisualStyleBackColor = true;
             // 
             // pageQLS
             // 
-            this.pageQLS.Location = new System.Drawing.Point(204, 4);
+            this.pageQLS.ImageIndex = 2;
+            this.pageQLS.Location = new System.Drawing.Point(224, 4);
             this.pageQLS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pageQLS.Name = "pageQLS";
             this.pageQLS.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pageQLS.Size = new System.Drawing.Size(1027, 558);
+            this.pageQLS.Size = new System.Drawing.Size(1007, 638);
             this.pageQLS.TabIndex = 2;
-            this.pageQLS.Text = "Quản lý sách";
+            this.pageQLS.Text = "Sách";
             this.pageQLS.UseVisualStyleBackColor = true;
             // 
             // pageQLMT
             // 
-            this.pageQLMT.Location = new System.Drawing.Point(204, 4);
+            this.pageQLMT.ImageIndex = 3;
+            this.pageQLMT.Location = new System.Drawing.Point(224, 4);
             this.pageQLMT.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pageQLMT.Name = "pageQLMT";
             this.pageQLMT.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pageQLMT.Size = new System.Drawing.Size(1027, 558);
+            this.pageQLMT.Size = new System.Drawing.Size(1007, 638);
             this.pageQLMT.TabIndex = 3;
-            this.pageQLMT.Text = "Quản lý phiếu mượn";
+            this.pageQLMT.Text = "Phiếu mượn trả";
             this.pageQLMT.UseVisualStyleBackColor = true;
             // 
             // pageQLPT
             // 
-            this.pageQLPT.Location = new System.Drawing.Point(204, 4);
+            this.pageQLPT.ImageIndex = 4;
+            this.pageQLPT.Location = new System.Drawing.Point(224, 4);
             this.pageQLPT.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pageQLPT.Name = "pageQLPT";
             this.pageQLPT.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pageQLPT.Size = new System.Drawing.Size(1027, 558);
+            this.pageQLPT.Size = new System.Drawing.Size(1007, 638);
             this.pageQLPT.TabIndex = 4;
-            this.pageQLPT.Text = "Quản lý phiếu thu";
+            this.pageQLPT.Text = "Phiếu thu";
             this.pageQLPT.UseVisualStyleBackColor = true;
             // 
             // pageBC
             // 
-            this.pageBC.Location = new System.Drawing.Point(204, 4);
+            this.pageBC.ImageIndex = 5;
+            this.pageBC.Location = new System.Drawing.Point(224, 4);
             this.pageBC.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pageBC.Name = "pageBC";
             this.pageBC.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pageBC.Size = new System.Drawing.Size(1027, 558);
+            this.pageBC.Size = new System.Drawing.Size(1007, 638);
             this.pageBC.TabIndex = 5;
             this.pageBC.Text = "Báo cáo thống kê";
             this.pageBC.UseVisualStyleBackColor = true;
             // 
             // pageQLND
             // 
-            this.pageQLND.Location = new System.Drawing.Point(204, 4);
+            this.pageQLND.ImageIndex = 6;
+            this.pageQLND.Location = new System.Drawing.Point(224, 4);
             this.pageQLND.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pageQLND.Name = "pageQLND";
             this.pageQLND.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pageQLND.Size = new System.Drawing.Size(1027, 558);
+            this.pageQLND.Size = new System.Drawing.Size(1007, 638);
             this.pageQLND.TabIndex = 6;
-            this.pageQLND.Text = "Quản lý người dùng";
+            this.pageQLND.Text = "Người dùng";
             this.pageQLND.UseVisualStyleBackColor = true;
+            // 
+            // iconList
+            // 
+            this.iconList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconList.ImageStream")));
+            this.iconList.TransparentColor = System.Drawing.Color.Transparent;
+            this.iconList.Images.SetKeyName(0, "info_icon.png");
+            this.iconList.Images.SetKeyName(1, "user_icon02.png");
+            this.iconList.Images.SetKeyName(2, "book_icon03.png");
+            this.iconList.Images.SetKeyName(3, "phieumuon_icon.png");
+            this.iconList.Images.SetKeyName(4, "phieuthu_icon.png");
+            this.iconList.Images.SetKeyName(5, "report_icon03.png");
+            this.iconList.Images.SetKeyName(6, "user_icon03.png");
+            this.iconList.Images.SetKeyName(7, "book_icon02.png");
+            this.iconList.Images.SetKeyName(8, "user_icon.png");
             // 
             // fMainForm
             // 
@@ -240,6 +266,7 @@ namespace GUI
             this.Text = "fAdmin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -261,6 +288,7 @@ namespace GUI
         private TabPage pageQLND;
         private static ucBanAccess ucBan;
         private static ucQLDG ucqldg;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butLogOut;
+        private Label label2;
+        private ImageList iconList;
     }
 }
