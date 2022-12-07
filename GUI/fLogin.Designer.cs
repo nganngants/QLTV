@@ -59,7 +59,7 @@
             this.siticoneControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.siticoneControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(691, -1);
+            this.siticoneControlBox2.Location = new System.Drawing.Point(680, -1);
             this.siticoneControlBox2.Name = "siticoneControlBox2";
             this.siticoneControlBox2.Size = new System.Drawing.Size(60, 60);
             this.siticoneControlBox2.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.butLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.butLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butLogin.Location = new System.Drawing.Point(225, 317);
+            this.butLogin.Location = new System.Drawing.Point(225, 397);
             this.butLogin.Name = "butLogin";
             this.butLogin.Size = new System.Drawing.Size(150, 50);
             this.butLogin.TabIndex = 2;
@@ -109,7 +109,7 @@
             this.txtUserpwd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtUserpwd.Location = new System.Drawing.Point(125, 228);
+            this.txtUserpwd.Location = new System.Drawing.Point(124, 259);
             this.txtUserpwd.Name = "txtUserpwd";
             this.txtUserpwd.PasswordChar = '●';
             this.txtUserpwd.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(153)))), ((int)(((byte)(243)))));
@@ -131,7 +131,7 @@
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtUsername.Location = new System.Drawing.Point(124, 143);
+            this.txtUsername.Location = new System.Drawing.Point(124, 168);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(153)))), ((int)(((byte)(243)))));
@@ -143,11 +143,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(74)))), ((int)(((byte)(182)))));
-            this.label1.Location = new System.Drawing.Point(223, 24);
+            this.label1.Location = new System.Drawing.Point(212, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 54);
+            this.label1.Size = new System.Drawing.Size(176, 69);
             this.label1.TabIndex = 3;
             this.label1.Text = "Login";
             this.label1.Click += new System.EventHandler(this.label1_Click);

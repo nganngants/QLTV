@@ -45,7 +45,6 @@ namespace GUI
             this.pageQLPT = new System.Windows.Forms.TabPage();
             this.pageBC = new System.Windows.Forms.TabPage();
             this.pageQLND = new System.Windows.Forms.TabPage();
-            this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.topPanel.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +87,6 @@ namespace GUI
             // 
             // topPanel
             // 
-            this.topPanel.Controls.Add(this.siticoneHtmlLabel1);
             this.topPanel.Controls.Add(this.butLogOut);
             this.topPanel.Controls.Add(this.exitControlBox);
             this.topPanel.Controls.Add(this.siticoneControlBox1);
@@ -101,12 +99,13 @@ namespace GUI
             // 
             // butLogOut
             // 
+            this.butLogOut.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.butLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butLogOut.FillColor = System.Drawing.Color.LightGray;
-            this.butLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.216F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.216F);
             this.butLogOut.ForeColor = System.Drawing.Color.Black;
             this.butLogOut.Location = new System.Drawing.Point(1073, 61);
             this.butLogOut.Name = "butLogOut";
@@ -228,16 +227,6 @@ namespace GUI
             this.pageQLND.Text = "Quản lý người dùng";
             this.pageQLND.UseVisualStyleBackColor = true;
             // 
-            // siticoneHtmlLabel1
-            // 
-            this.siticoneHtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Monotype Corsiva", 39.744F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(204, 46);
-            this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
-            this.siticoneHtmlLabel1.Size = new System.Drawing.Size(714, 86);
-            this.siticoneHtmlLabel1.TabIndex = 2;
-            this.siticoneHtmlLabel1.Text = "Wellcome + tên người dùng";
-            // 
             // fMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,7 +240,6 @@ namespace GUI
             this.Text = "fAdmin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -274,6 +262,5 @@ namespace GUI
         private static ucBanAccess ucBan;
         private static ucQLDG ucqldg;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butLogOut;
-        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
     }
 }
