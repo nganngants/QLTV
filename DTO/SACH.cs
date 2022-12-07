@@ -23,7 +23,7 @@ namespace DTO
     
         public int id { get; set; }
         public string MaSach { get; set; }
-        public string MaTuaSach { get; set; }
+        public Nullable<int> idTuaSach { get; set; }
         public int SoLuong { get; set; }
         public int SoLuongConLai { get; set; }
         public Nullable<int> DonGia { get; set; }

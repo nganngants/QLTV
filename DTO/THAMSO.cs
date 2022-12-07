@@ -12,17 +12,16 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class NGUOIDUNG
+    public partial class THAMSO
     {
         public int id { get; set; }
-        public string MaNguoiDung { get; set; }
-        public string TenNguoiDung { get; set; }
-        public Nullable<System.DateTime> NgaySinh { get; set; }
-        public string ChucVu { get; set; }
-        public string TenDangNhap { get; set; }
-        public string MatKhau { get; set; }
-        public int idNhomNguoiDung { get; set; }
-    
-        public virtual NHOMNGUOIDUNG NHOMNGUOIDUNG { get; set; }
+        public Nullable<int> TuoiToiThieu { get; set; }
+        public Nullable<int> TuoiToiDa { get; set; }
+        public Nullable<int> ThoiHanThe { get; set; }
+        public Nullable<int> KhoangCachXuatBan { get; set; }
+        public Nullable<int> SoSachMuonToiDa { get; set; }
+        public Nullable<int> SoNgayMuonToiDa { get; set; }
+        public Nullable<int> DonGiaPhat { get; set; }
+        public Nullable<int> AD_QDKTTienThu { get; set; }
     }
 }

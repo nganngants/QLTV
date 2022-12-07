@@ -24,7 +24,7 @@ namespace DTO
         public int id { get; set; }
         public string MaTuaSach { get; set; }
         public string TenTuaSach { get; set; }
-        public string MaTheLoai { get; set; }
+        public Nullable<int> idTheLoai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SACH> SACHes { get; set; }

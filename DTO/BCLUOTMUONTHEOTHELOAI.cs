@@ -20,6 +20,7 @@ namespace DTO
             this.CT_BCLUOTMUONTHEOTHELOAI = new HashSet<CT_BCLUOTMUONTHEOTHELOAI>();
         }
     
+        public int id { get; set; }
         public Nullable<int> Thang { get; set; }
         public Nullable<int> Nam { get; set; }
         public string MaBaoCao { get; set; }
