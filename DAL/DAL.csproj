@@ -58,6 +58,7 @@
     <Compile Include="DALNguoiDung.cs" />
     <Compile Include="DALPhieuMuonTra.cs" />
     <Compile Include="DALPhieuNhapSach.cs" />
+    <Compile Include="DALPhieuThu.cs" />
     <Compile Include="DALSach.cs" />
     <Compile Include="DALTacGia.cs" />
     <Compile Include="DALThamSo.cs" />
