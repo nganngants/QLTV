@@ -60,6 +60,7 @@
     <Compile Include="DALPhieuNhapSach.cs" />
     <Compile Include="DALSach.cs" />
     <Compile Include="DALTacGia.cs" />
+    <Compile Include="DALThamSo.cs" />
     <Compile Include="DALTheLoai.cs" />
     <Compile Include="DALTuaSach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
