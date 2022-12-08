@@ -69,5 +69,15 @@ namespace GUI.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Welcome_Svg_Welcome_Sign_Graphics_5026886_1_580x415 {
+            get {
+                object obj = ResourceManager.GetObject("Welcome-Svg-Welcome-Sign-Graphics-5026886-1-580x415", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
