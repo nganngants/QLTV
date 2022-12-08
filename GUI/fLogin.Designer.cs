@@ -89,6 +89,8 @@
             // 
             // siticoneSeparator1
             // 
+            this.siticoneSeparator1.FillColor = System.Drawing.Color.SlateBlue;
+            this.siticoneSeparator1.FillThickness = 2;
             this.siticoneSeparator1.Location = new System.Drawing.Point(152, 153);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(297, 21);
