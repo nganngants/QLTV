@@ -29,15 +29,15 @@ namespace BUS
         {
             return DALTheLoai.Instance.FindTheLoai(name);
         }
-        public THELOAI GetTheLoai(string id)
+        public THELOAI GetTheLoai(int id)
         {   
-            return DALTheLoai.Instance.GetTheLoai(id);
+            return DALTheLoai.Instance.GetTheLoaiById(id);
         }
-        public bool DelTheLoai(string id)
+        public bool DelTheLoai(int id)
         {
             return DALTheLoai.Instance.DelTheLoai(id);
         }
-        public bool UpdTheLoai(string id,string name)
+        public bool UpdTheLoai(int id,string name)
         {
             return DALTheLoai.Instance.UpdTheLoai(id, name);
         }
