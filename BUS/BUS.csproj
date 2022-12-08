@@ -51,10 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUSCuonSach.cs" />
     <Compile Include="BUSDocGia.cs" />
     <Compile Include="BUSLoaiDocGia.cs" />
     <Compile Include="BUSLogin.cs" />
-    <Compile Include="BUSSachcs.cs" />
+    <Compile Include="BUSPhieuMuonTra.cs" />
+    <Compile Include="BUSPhieuNhap.cs" />
+    <Compile Include="BUSSach.cs" />
     <Compile Include="BUSTacGia.cs" />
     <Compile Include="BUSTheLoai.cs" />
     <Compile Include="BUSTuaSach.cs" />
