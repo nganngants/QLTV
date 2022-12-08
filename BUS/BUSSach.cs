@@ -46,7 +46,7 @@ namespace BUS
             {
                 if(cs.TinhTrang == 1)
                 {
-                    return "Không thể xoá sách vì đang có người mượn."
+                    return "Không thể xoá sách vì đang có người mượn.";
                 }
             }
             if (DALCuonSach.Instance.DelSach(id))

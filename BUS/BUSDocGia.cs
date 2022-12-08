@@ -24,13 +24,30 @@ namespace BUS
         {
             return DALDocGia.Instance.GetAllDocGia();
         }
-        public DOCGIA GetDocGia(string id)
-        { 
-            return DALDocGia.Instance.GetDocGiaByMa(id);
-        }
-        public string DelDocGia(string id)
+        public DOCGIA GetDocGia(string MaDocGia)
         {
-            DOCGIA dg = DALDocGia.Instance.GetDocGiaByMa(id);
+            DOCGIA dg;
+            try
+            {
+               dg =  DALDocGia.Instance.GetDocGiaByMa(MaDocGia);
+                return dg;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public string DelDocGia(string MaDocGia)
+        {
+            DOCGIA dg;
+            try
+            {
+            dg = DALDocGia.Instance.GetDocGiaByMa(MaDocGia);
+            }
+            catch
+            {
+                return "Mã độc giả không hợp lệ";
+            }
             foreach( PHIEUMUONTRA PhieuMuon in dg.PHIEUMUONTRAs)
             {
                 if(PhieuMuon.NgayTra==null)

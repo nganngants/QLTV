@@ -25,12 +25,30 @@ namespace BUS
         }
         public SACH GetSachOfCuonSach(string MaCuonSach)
         {
-            CUONSACH cs = DAlCuonSach.Instance.GetCuonSach(MaCuonSach);
-            return DALSach.Instance.GetSach(cs.MaSach);
+            CUONSACH cs;
+            try
+            {
+                cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            return DALSach.Instance.GetSachById((int)cs.idSach);
         }
         public string DelCuonSach(string MaCuonSach)
         {
-            if (DALCuonSach.Instance.DelCuonSach(MaCuonSach))
+            CUONSACH cs;
+            try
+            {
+                cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
+            }
+            catch
+            {
+                return "Mã cuốn sách không hợp lệ";
+            }
+            if (DALCuonSach.Instance.DelCuonSach(cs.id))
                 return "";
             return "Không thể xoá cuốn sách";
         }
