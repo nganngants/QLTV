@@ -69,6 +69,18 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BM\BMBCKSachTraTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMBCKSachTraTre.Designer.cs">
+      <DependentUpon>BMBCKSachTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMBCTKMuonTheoTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMBCTKMuonTheoTheLoai.Designer.cs">
+      <DependentUpon>BMBCTKMuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="BM\BMChoMuonSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     </Compile>
     <Compile Include="BM\BMTiepNhanSach.Designer.cs">
       <DependentUpon>BMTiepNhanSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMTraCuuSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMTraCuuSach.Designer.cs">
+      <DependentUpon>BMTraCuuSach.cs</DependentUpon>
     </Compile>
     <Compile Include="fChangePassword.cs">
       <SubType>Form</SubType>
@@ -232,6 +250,12 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMBCKSachTraTre.resx">
+      <DependentUpon>BMBCKSachTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMBCTKMuonTheoTheLoai.resx">
+      <DependentUpon>BMBCTKMuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BM\BMChoMuonSach.resx">
       <DependentUpon>BMChoMuonSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BM\BMTiepNhanSach.resx">
       <DependentUpon>BMTiepNhanSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMTraCuuSach.resx">
+      <DependentUpon>BMTraCuuSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
