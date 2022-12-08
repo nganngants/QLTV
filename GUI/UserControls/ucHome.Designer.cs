@@ -58,6 +58,7 @@
             // 
             // butSearch
             // 
+            this.butSearch.BackColor = System.Drawing.SystemColors.ControlLight;
             this.butSearch.BorderRadius = 25;
             this.butSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.butSearch.DefaultText = "";
