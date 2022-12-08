@@ -357,10 +357,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{94bba092-ee12-4c56-b907-b4e78c173cbc}</Project>
-      <Name>BUS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{5f41a1d4-be33-49b8-b6e1-1a2db6707a0d}</Project>
       <Name>DAL</Name>
