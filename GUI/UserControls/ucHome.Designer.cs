@@ -29,27 +29,40 @@
         private void InitializeComponent()
         {
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.siticoneCirclePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.butSearch = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.siticoneContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneContainerControl1
             // 
-            this.siticoneContainerControl1.Controls.Add(this.siticoneCirclePictureBox1);
             this.siticoneContainerControl1.Controls.Add(this.butSearch);
+            this.siticoneContainerControl1.Controls.Add(this.siticoneCirclePictureBox1);
+            this.siticoneContainerControl1.Controls.Add(this.siticonePictureBox1);
             this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
             this.siticoneContainerControl1.Size = new System.Drawing.Size(1027, 623);
             this.siticoneContainerControl1.TabIndex = 0;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
             // siticoneCirclePictureBox1
             // 
+            this.siticoneCirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneCirclePictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.siticoneCirclePictureBox1.ImageRotate = 0F;
-            this.siticoneCirclePictureBox1.Location = new System.Drawing.Point(937, 24);
+            this.siticoneCirclePictureBox1.Location = new System.Drawing.Point(917, 73);
             this.siticoneCirclePictureBox1.Name = "siticoneCirclePictureBox1";
             this.siticoneCirclePictureBox1.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.siticoneCirclePictureBox1.Size = new System.Drawing.Size(70, 70);
@@ -58,7 +71,10 @@
             // 
             // butSearch
             // 
-            this.butSearch.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.butSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.butSearch.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.butSearch.BorderRadius = 25;
             this.butSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.butSearch.DefaultText = "";
@@ -68,10 +84,11 @@
             this.butSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.butSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.butSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.096F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSearch.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.butSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.butSearch.IconRight = global::GUI.Properties.Resources._1200px_Search_Icon_svg;
             this.butSearch.IconRightSize = new System.Drawing.Size(40, 40);
-            this.butSearch.Location = new System.Drawing.Point(223, 34);
+            this.butSearch.Location = new System.Drawing.Point(238, 73);
             this.butSearch.Margin = new System.Windows.Forms.Padding(6);
             this.butSearch.Name = "butSearch";
             this.butSearch.PasswordChar = '\0';
@@ -81,11 +98,17 @@
             this.butSearch.TabIndex = 0;
             this.butSearch.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // directorySearcher1
+            // siticonePictureBox1
             // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.siticonePictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePictureBox1.Image = global::GUI.Properties.Resources.Welcome_Svg_Welcome_Sign_Graphics_5026886_1_580x415;
+            this.siticonePictureBox1.ImageRotate = 0F;
+            this.siticonePictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.siticonePictureBox1.Name = "siticonePictureBox1";
+            this.siticonePictureBox1.Size = new System.Drawing.Size(1027, 498);
+            this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.siticonePictureBox1.TabIndex = 2;
+            this.siticonePictureBox1.TabStop = false;
             // 
             // ucHome
             // 
@@ -96,6 +119,7 @@
             this.Size = new System.Drawing.Size(1027, 623);
             this.siticoneContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,5 +130,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox butSearch;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox siticoneCirclePictureBox1;
+        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
     }
 }
