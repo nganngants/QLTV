@@ -27,8 +27,17 @@ namespace BUS
         }
         public PHIEUNHAPSACH GetPhieuNhap(int MaPhieuNhap)
         {
+            PHIEUNHAPSACH pn;
+            try 
+            {
 
-            return DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
+             pn = DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
+            }
+            catch 
+            {
+                return null;
+            }
+            return pn;
         }
     }
 }
