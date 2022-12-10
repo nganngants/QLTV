@@ -42,11 +42,20 @@ namespace BUS
         }
         public TUASACH GetTuaSachOfSach(string MaSach)
         {
-            return DALTuaSach.Instance.GetTuaSach(MaSach);
+            TUASACH ts;
+            try
+            {
+             ts = DALTuaSach.Instance.GetTuaSachByMa(MaSach);
+            }
+            catch
+            {
+                return null;
+            }
+            return ts;
         }
         public string DelSach(string id)
         {
-            SACH sach = DALSach.Instance.GetSach(id);
+            SACH sach = DALSach.Instance.GetSachByMa(id);
             foreach(CUONSACH cs in sach.CUONSACHes)
             {
                 if(cs.TinhTrang == 1)
@@ -60,7 +69,7 @@ namespace BUS
         }
         public SACH GetSach(string id)
         {
-            return DALSach.Instance.GetSach(id);
+            return DALSach.Instance.GetSachByMa(id);
         }
     }
 }

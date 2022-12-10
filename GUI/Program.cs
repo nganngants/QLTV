@@ -1,5 +1,4 @@
-﻿using DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -18,8 +17,8 @@ namespace GUI
  
         static void testDB()
         {
-            if (DALTuaSach.Instance.DelTuaSach(1))
-                Console.WriteLine("Xoa thanh cong");
+           /* if (DALTuaSach.Instance.DelTuaSach(1))
+                Console.WriteLine("Xoa thanh cong");*/
         }
         static void Main()
         {
