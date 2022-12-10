@@ -3,7 +3,7 @@ using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core.Metadata.Edm;
-
+using DAL;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,8 +28,11 @@ namespace BUS
         }
         public PHIEUNHAPSACH GetPhieuNhap(int MaPhieuNhap)
         {
+            PHIEUNHAPSACH pn;
+            try 
+            {
 
-            return DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
+            return DALPhieuNhapSach.Instance.GetPhieuNhap(MaPhieuNhap);
         }
     }
 }

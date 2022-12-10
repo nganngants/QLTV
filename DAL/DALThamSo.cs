@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class DALThamSo
+    public class DALThamSo
     {
         private static DALThamSo instance;
 

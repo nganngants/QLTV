@@ -29,29 +29,24 @@ namespace BUS
             TUASACH ts;
             try
             {
-            ts = DALTuaSach.Instance.GetTuaSachByMa(MaTuaSach);
+                ts = DALTuaSach.Instance.GetTuaSachByMa(MaTuaSach);
             }
             catch
             {
-                return "Mã tựa sách không hợp lệ";
+                return "Tựa sách không hợp lệ";
             }
+
             if (DALSach.Instance.AddSachMoi(ts, SoLuong, DonGia, NamXb, NhaXB))
                 return "";
             return "Không thể thêm sách";
         }
+        public TUASACH GetTuaSachOfSach(string MaSach)
+        {
+            return DALTuaSach.Instance.GetTuaSach(MaSach);
+        }
         public string DelSach(string id)
         {
-            SACH sach;
-            try
-            {
-            sach = DALSach.Instance.GetSachByMa(id);
-            }
-            catch
-            {
-                return "Mã sách không hợp lệ";
-            }
-            if (sach == null)
-                return "Không tìm thấy sách";
+            SACH sach = DALSach.Instance.GetSach(id);
             foreach(CUONSACH cs in sach.CUONSACHes)
             {
                 if(cs.TinhTrang == 1)
@@ -65,7 +60,7 @@ namespace BUS
         }
         public SACH GetSach(string id)
         {
-            return DALSach.Instance.GetSachByMa(id);
+            return DALSach.Instance.GetSach(id);
         }
     }
 }

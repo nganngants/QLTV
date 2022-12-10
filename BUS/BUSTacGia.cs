@@ -31,15 +31,26 @@ namespace BUS
                 return "";
             return "Khong the them tac gia";
         }
-        public string DelTacGia(string MaTacGia)
+        public string DelTacGia(int id)
         {
-            if (DALTacGia.Instance.DelTacGia(GetTacGia(MaTacGia).id))
+            if (DALTacGia.Instance.DelTacGia(id))
                 return "";
             return "Khong the xoa tac gia";
         }
         public TACGIA GetTacGia(string MaTacGia)
         {
-            return DALTacGia.Instance.GetTacGiaByMa(MaTacGia);
+            TACGIA tg;
+            
+            try
+            {
+                tg = DALTacGia.Instance.GetTacGiaByMa(MaTacGia);
+            }
+            catch
+            {
+                return null;
+            }
+                return tg;
+                
         }
         public List<TACGIA> FindTacGia(string name)
         {
