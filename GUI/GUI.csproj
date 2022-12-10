@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GUI.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -60,6 +63,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMBCKSachTraTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMBCKSachTraTre.Designer.cs">
+      <DependentUpon>BMBCKSachTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMBCTKMuonTheoTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMBCTKMuonTheoTheLoai.Designer.cs">
+      <DependentUpon>BMBCTKMuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="BM\BMChoMuonSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +104,12 @@
     </Compile>
     <Compile Include="BM\BMTiepNhanSach.Designer.cs">
       <DependentUpon>BMTiepNhanSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMTraCuuSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMTraCuuSach.Designer.cs">
+      <DependentUpon>BMTraCuuSach.cs</DependentUpon>
     </Compile>
     <Compile Include="fChangePassword.cs">
       <SubType>Form</SubType>
@@ -114,6 +141,8 @@
     <Compile Include="fSignUp.Designer.cs">
       <DependentUpon>fSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\ucBanAccess.cs">
@@ -200,12 +229,33 @@
     <Compile Include="UserControls\ucSachTraTre.Designer.cs">
       <DependentUpon>ucSachTraTre.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucThayDoiQuiDinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucThayDoiQuiDinh.Designer.cs">
+      <DependentUpon>ucThayDoiQuiDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucThongTinTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>ucThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucTuaSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ucTuaSach.Designer.cs">
       <DependentUpon>ucTuaSach.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMBCKSachTraTre.resx">
+      <DependentUpon>BMBCKSachTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMBCTKMuonTheoTheLoai.resx">
+      <DependentUpon>BMBCTKMuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BM\BMChoMuonSach.resx">
       <DependentUpon>BMChoMuonSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BM\BMTiepNhanSach.resx">
       <DependentUpon>BMTiepNhanSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMTraCuuSach.resx">
+      <DependentUpon>BMTraCuuSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
@@ -282,6 +335,13 @@
     <EmbeddedResource Include="UserControls\ucSachTraTre.resx">
       <DependentUpon>ucSachTraTre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucThayDoiQuiDinh.resx">
+      <DependentUpon>ucThayDoiQuiDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucThongTinTaiKhoan.resx">
+      <DependentUpon>ucThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="obj\Release\GUI.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -297,9 +357,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{94bba092-ee12-4c56-b907-b4e78c173cbc}</Project>
-      <Name>BUS</Name>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{5f41a1d4-be33-49b8-b6e1-1a2db6707a0d}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{f34502ce-8ac7-4e0d-9c27-261f8847c2ce}</Project>
@@ -308,6 +368,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1200px-Search_Icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\book_icon.png" />
+    <Content Include="images\book_icon02.png" />
+    <Content Include="images\book_icon03.png" />
+    <Content Include="images\home_icon.png" />
+    <Content Include="images\info_icon.png" />
+    <Content Include="images\phieumuon_icon.png" />
+    <Content Include="images\phieuthu_icon.png" />
+    <Content Include="images\report_icon.png" />
+    <Content Include="images\report_icon02.png" />
+    <Content Include="images\report_icon03.png" />
+    <Content Include="images\report_icon04.png" />
+    <Content Include="images\user_icon.png" />
+    <Content Include="images\user_icon02.png" />
+    <Content Include="images\user_icon03.png" />
+    <None Include="Resources\Welcome-Svg-Welcome-Sign-Graphics-5026886-1-580x4151.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
