@@ -26,15 +26,15 @@ namespace BUS
             DateTime HanTra = NgayMuon.AddDays(thamso.ThoiHanMuonSach);
             CUONSACH cs = DAlCuonSach.Instance.GetCuonSach(MaCuonSach);
             if (cs.TinhTrang == 1) return "Cuốn sách đã được mượn!";
-            if (DALPhieuMuonTra.Instance.AddPhieuMuonTra(MaCuonSach, MaDocGia, NgayMuon, HanTra)
+            if (DALPhieuMuonTra.Instance.AddPhieuMuonTra(MaCuonSach, MaDocGia, NgayMuon, HanTra))
                 return "";
             return "Không thể thêm phiếu mượn.";
         }
         public string DelPhieuMuon(string MaPhieuMuon)
         {
             PHIEUMUONTRA pm = DAlPhieuMuonTra.Instance.GetPhieuMuonTra(MaPhieuMuon);
-            if(pm.NgayTra == null)
-                return "Không thể xoá phiếu mượn vì còn sách chưa trả."
+            if (pm.NgayTra == null)
+                return "Không thể xoá phiếu mượn vì còn sách chưa trả.";
             if (DALPhieuMuonTra.Instance.DelPhieuMuonTra(MaPhieuMuon))
                 return "";
             return "Không thể xoá phiếu mượn.";

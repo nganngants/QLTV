@@ -33,13 +33,13 @@ namespace BUS
         }
         public string DelTacGia(string MaTacGia)
         {
-            if (DALTacGia.Instance.DelTacGia(MaTacGia))
+            if (DALTacGia.Instance.DelTacGia(GetTacGia(MaTacGia).id))
                 return "";
             return "Khong the xoa tac gia";
         }
         public TACGIA GetTacGia(string MaTacGia)
         {
-            return DALTacGia.Instance.GetTacGia(MaTacGia);
+            return DALTacGia.Instance.GetTacGiaByMa(MaTacGia);
         }
         public List<TACGIA> FindTacGia(string name)
         {

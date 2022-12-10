@@ -20,37 +20,52 @@ namespace BUS
             }
             set => instance = value;
         }
-        public List<SACH> GetAllSach(string id)
+        public List<SACH> GetAllSach()
         {
-            return DALSach.Instance.GetAllSach(id);
+            return DALSach.Instance.GetAllSach();
         }
         public string AddSach(string MaTuaSach, int SoLuong, int DonGia, int NamXb, string NhaXB)
         {
-            if (DALSach.Instance.AddSach(MaTuaSach, SoLuong, DonGia, NamXb, NhaXB))
+            TUASACH ts;
+            try
+            {
+            ts = DALTuaSach.Instance.GetTuaSachByMa(MaTuaSach);
+            }
+            catch
+            {
+                return "Mã tựa sách không hợp lệ";
+            }
+            if (DALSach.Instance.AddSachMoi(ts, SoLuong, DonGia, NamXb, NhaXB))
                 return "";
             return "Không thể thêm sách";
         }
-        public TUASACH GetTuaSachOfSach(string MaSach)
-        {
-            return DALTuaSach.Instance.GetTuaSach(MaSach);
-        }
         public string DelSach(string id)
         {
-            SACH sach = DALSach.Instance.GetSach(id);
+            SACH sach;
+            try
+            {
+            sach = DALSach.Instance.GetSachByMa(id);
+            }
+            catch
+            {
+                return "Mã sách không hợp lệ";
+            }
+            if (sach == null)
+                return "Không tìm thấy sách";
             foreach(CUONSACH cs in sach.CUONSACHes)
             {
                 if(cs.TinhTrang == 1)
                 {
-                    return "Không thể xoá sách vì đang có người mượn."
+                    return "Không thể xoá sách vì đang có người mượn.";
                 }
             }
-            if (DALCuonSach.Instance.DelSach(id))
+            if (DALSach.Instance.DelSach(sach.id))
                 return "";
             return "Không thể xoá sách.";
         }
         public SACH GetSach(string id)
         {
-            return DALSach.Instance.GetSach(id);
+            return DALSach.Instance.GetSachByMa(id);
         }
     }
 }

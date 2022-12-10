@@ -1,3 +1,4 @@
+using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -21,14 +22,14 @@ namespace BUS
             }
             set => instance = value;
         }
-        public List<PHIEUNHAP> GetAllPhieuNhap()
+        public List<PHIEUNHAPSACH> GetAllPhieuNhap()
         {
-            return DALPhieuNhap.Instance.GetAllPhieuNhap();
+            return DALPhieuNhapSach.Instance.GetAllPhieuNhapSach();
         }
-        public PHIEUNHAPSACH GetPhieuNhap(string MaPhieuNhap)
+        public PHIEUNHAPSACH GetPhieuNhap(int MaPhieuNhap)
         {
 
-            return DALPhieuNhapSach.Instance.GetPhieuNhap(MaPhieuNhap);
+            return DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
         }
     }
 }
