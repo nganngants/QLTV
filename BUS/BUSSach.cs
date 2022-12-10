@@ -26,9 +26,10 @@ namespace BUS
         }
         public string AddSach(string MaTuaSach, int SoLuong, int DonGia, int NamXb, string NhaXB)
         {
+            TUASACH ts;
             try
             {
-                TUASACH ts = DALTuaSach.Instance.GetTuaSachByMa(MaTuaSach);
+                ts = DALTuaSach.Instance.GetTuaSachByMa(MaTuaSach);
             }
             catch
             {

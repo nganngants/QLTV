@@ -43,7 +43,7 @@ namespace BUS
             
             THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
             //System.TimeSpan duration = new System.TimeSpan(thamso.ThoiHanMuonSach, 0, 0, 0);
-            DateTime HanTra = NgayMuon.AddDays(thamso.SoNgayMuonToiDa);
+            DateTime HanTra = NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa);
             if (cs.TinhTrang == 1) return "Cuốn sách đã được mượn!";
             if (DALPhieuMuonTra.Instance.AddPhieuMuonTra(dg.ID, cs.id, NgayMuon, HanTra))
                 return "";
@@ -85,7 +85,9 @@ namespace BUS
                 return "Ngày trả không hợp lệ.";
             int SoNgayTraTre = ((TimeSpan)(NgayTra - pm.HanTra)).Days;
             THAMSO ts = DALThamSo.Instance.GetAllThamSo();
-            int TienPhat = (SoNgayTraTre * ts.DonGiaPhat)*(NgayTra > pm.HanTra);
+            int TienPhat =0;
+            if (NgayTra > pm.HanTra)
+            TienPhat = (SoNgayTraTre * (int)ts.DonGiaPhat);
             if (DALPhieuMuonTra.Instance.UpdPhieuMuonTra(MaPhieuMuon,pm.NgayMuon,pm.HanTra,DateTime.Now, TienPhat))
                 return "";
             return "Lỗi không thể cập nhật phiếu mượn.";

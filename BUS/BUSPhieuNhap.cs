@@ -2,7 +2,7 @@ using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core.Metadata.Edm;
-
+using DAL;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,14 +21,14 @@ namespace BUS
             }
             set => instance = value;
         }
-        public List<PHIEUNHAP> GetAllPhieuNhap()
+        public List<PHIEUNHAPSACH> GetAllPhieuNhap()
         {
-            return DALPhieuNhap.Instance.GetAllPhieuNhap();
+            return DALPhieuNhapSach.Instance.GetAllPhieuNhapSach();
         }
-        public PHIEUNHAPSACH GetPhieuNhap(string MaPhieuNhap)
+        public PHIEUNHAPSACH GetPhieuNhap(int MaPhieuNhap)
         {
 
-            return DALPhieuNhapSach.Instance.GetPhieuNhap(MaPhieuNhap);
+            return DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
         }
     }
 }
