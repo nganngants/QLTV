@@ -40,9 +40,10 @@ namespace BUS
             {
                 return "Thông tin độc giả không hợp lệ";
             }
-            THAMSO thamso = DALThamSo.instance.GetAllThamSo();
+            
+            THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
             //System.TimeSpan duration = new System.TimeSpan(thamso.ThoiHanMuonSach, 0, 0, 0);
-            DateTime HanTra = NgayMuon.AddDays(thamso.ThoiHanMuonSach);
+            DateTime HanTra = NgayMuon.AddDays(thamso.SoNgayMuonToiDa);
             if (cs.TinhTrang == 1) return "Cuốn sách đã được mượn!";
             if (DALPhieuMuonTra.Instance.AddPhieuMuonTra(dg.ID, cs.id, NgayMuon, HanTra))
                 return "";
