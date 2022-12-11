@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
+using System.Windows.Markup;
+
 namespace BUS
 {
     internal class BUSCuonSach
@@ -26,25 +28,15 @@ namespace BUS
         public SACH GetSachOfCuonSach(string MaCuonSach)
         {
             CUONSACH cs;
-            try
-            {
-                cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
-            }
-            catch
-            {
-                return null;
-                throw;
-            }
+            cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
+           
             return DALSach.Instance.GetSachById((int)cs.idSach);
         }
         public string DelCuonSach(string MaCuonSach)
         {
             CUONSACH cs;
-            try
-            {
-                cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
-            }
-            catch
+            cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
+            if(cs==null)
             {
                 return "Mã cuốn sách không hợp lệ";
             }

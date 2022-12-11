@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
@@ -25,15 +26,9 @@ namespace BUS
         }
         public TUASACH GetTuaSach(string MATUASACH)
         {
-            try
-            {
-                return DALTuaSach.Instance.GetTuaSachByMa(MATUASACH);
-            }
-            catch
-            {
-                return null;
-                throw;
-            }
+
+            TUASACH ts = DALTuaSach.Instance.GetTuaSachByMa(MATUASACH);
+            return ts;
         }
         public List<TUASACH> FindTuaSach(string name, THELOAI theloai, List<TACGIA> tacgia)
         {
@@ -48,11 +43,9 @@ namespace BUS
         public string DelTuaSach(string matuasach)
         {
             TUASACH ts;
-            try
-            {
             ts = DALTuaSach.Instance.GetTuaSachByMa(matuasach);
-            }
-            catch
+
+            if(ts == null)
             {
                 return "Mã tựa sách không hợp lệ";
             }
