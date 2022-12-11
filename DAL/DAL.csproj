@@ -51,8 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALBCLuotMuonTheoTheLoai.cs" />
+    <Compile Include="DALBCSachTraTre.cs" />
     <Compile Include="DALChucNang.cs" />
     <Compile Include="DALCTPhieuNhap.cs" />
+    <Compile Include="DALCT_BCLuotMuonTheoTheLoai.cs" />
     <Compile Include="DALCuonSach.cs" />
     <Compile Include="DALDocGia.cs" />
     <Compile Include="DALLoaiDocGia.cs" />
