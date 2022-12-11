@@ -72,6 +72,7 @@ namespace GUI.UserControls
             this.butCuonsach.Size = new System.Drawing.Size(180, 56);
             this.butCuonsach.TabIndex = 2;
             this.butCuonsach.Text = "Cuốn sách";
+            this.butCuonsach.Click += new System.EventHandler(this.butCuonsach_Click_1);
             // 
             // siticoneContainerControl1
             // 
@@ -158,8 +159,8 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl container;
         private static ucSach ucsach;
         private static ucTuaSach uctuasach;
-        private static ucTuaSach uccuonsach;
-        private SiticoneButton butCuonsach;
+        private static ucCuonSach uccuonsach;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butCuonsach;
         //public SiticoneContainerControl Container1 { get => container; set => container = value; }
     }
 }

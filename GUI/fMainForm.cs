@@ -31,10 +31,35 @@ namespace GUI
             this.pageHome.Controls.Add(ucBan);
             */
 
+            uchome = new UserControls.ucHome();
+            uchome.Dock = DockStyle.Fill;
+            this.pageHome.Controls.Add(uchome);
+
             // tao UC QLDG moi va add no vao page QLDG
             ucqldg = new UserControls.ucQLDG();
             ucqldg.Dock = DockStyle.Fill;
             this.pageQLDG.Controls.Add(ucqldg);
+
+            ucqlsach = new UserControls.ucQLSach();
+            ucqlsach.Dock = DockStyle.Fill;
+            this.pageQLS.Controls.Add(ucqlsach);
+
+            ucphieumuontra = new UserControls.ucQLPhieuMuon();
+            ucphieumuontra.Dock = DockStyle.Fill;
+            this.pageQLMT.Controls.Add(ucphieumuontra);
+
+            ucphieuthu = new UserControls.ucQLPhieuThu();
+            ucphieuthu.Dock = DockStyle.Fill;
+            this.pageQLPT.Controls.Add(ucphieuthu);
+
+            ucbaocao = new UserControls.ucBCTK();
+            ucbaocao.Dock = DockStyle.Fill;
+            this.pageBC.Controls.Add(ucbaocao);
+
+            ucnguoidung = new UserControls.ucQLND();
+            ucnguoidung.Dock = DockStyle.Fill;
+            this.pageQLND.Controls.Add(ucnguoidung);
+
         }
         /// <summary>
         /// viet lai event nhan nut thoat
