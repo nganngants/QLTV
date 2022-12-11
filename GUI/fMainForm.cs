@@ -31,9 +31,9 @@ namespace GUI
             this.pageHome.Controls.Add(ucBan);
             */
 
-            uchome = new UserControls.ucHome();
-            uchome.Dock = DockStyle.Fill;
-            this.pageHome.Controls.Add(uchome);
+            uctaikhoan = new UserControls.ucThongTinTaiKhoan();
+            uctaikhoan.Dock = DockStyle.Fill;
+            this.pageHome.Controls.Add(uctaikhoan);
 
             // tao UC QLDG moi va add no vao page QLDG
             ucqldg = new UserControls.ucQLDG();

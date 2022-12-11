@@ -496,6 +496,9 @@
     <EmbeddedResource Include="UserControls\ucThongTinTaiKhoan.resx">
       <DependentUpon>ucThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTuaSach.resx">
+      <DependentUpon>ucTuaSach.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
