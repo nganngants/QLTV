@@ -38,7 +38,10 @@ namespace DAL
         /// <returns></returns>
         public TACGIA GetTacGiaByMa(string maTacGia)
         {
-            return QLTVDb.Instance.TACGIAs.Where(t => t.MATACGIA == maTacGia).FirstOrDefault();
+            var res = QLTVDb.Instance.TACGIAs.Where(t => t.MATACGIA == maTacGia);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
         }
 
         /// <summary>

@@ -78,7 +78,10 @@ namespace DAL
 
         public DOCGIA GetDocGiaByMa (string maDocGia)
         {
-            return QLTVDb.Instance.DOCGIAs.Where(d => d.MaDocGia == maDocGia).FirstOrDefault();
+            var res = QLTVDb.Instance.DOCGIAs.Where(d => d.MaDocGia == maDocGia);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
         }
         /// <summary>
         /// return a list of all DOCGIA objects

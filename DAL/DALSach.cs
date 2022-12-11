@@ -36,7 +36,10 @@ namespace DAL
         /// <returns></returns>
         public SACH GetSachByMa (string maSach)
         {
-            return QLTVDb.Instance.SACHes.Where(s => s.MaSach == maSach).FirstOrDefault();
+            var res = QLTVDb.Instance.SACHes.Where(s => s.MaSach == maSach);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
         }
         /// <summary>
         /// Find SACHs by filter
