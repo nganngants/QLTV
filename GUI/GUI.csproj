@@ -63,12 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm.Designer.cs">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="BM\BMBCKSachTraTre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,21 +123,129 @@
     <Compile Include="fMainForm.Designer.cs">
       <DependentUpon>fMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="fResetPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fResetPassword.Designer.cs">
-      <DependentUpon>fResetPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fSignUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fSignUp.Designer.cs">
-      <DependentUpon>fSignUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tab\tabSuaCuonSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaCuonSach.Designer.cs">
+      <DependentUpon>tabSuaCuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaDocGia.Designer.cs">
+      <DependentUpon>tabSuaDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaLoaiDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaLoaiDocGia.Designer.cs">
+      <DependentUpon>tabSuaLoaiDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaMuonTheoTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaMuonTheoTheLoai.Designer.cs">
+      <DependentUpon>tabSuaMuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaNguoiDung.Designer.cs">
+      <DependentUpon>tabSuaNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaPhieuMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaPhieuMuon.Designer.cs">
+      <DependentUpon>tabSuaPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaPhieuThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaPhieuThu.Designer.cs">
+      <DependentUpon>tabSuaPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaSach.Designer.cs">
+      <DependentUpon>tabSuaSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaSachTraTre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaSachTraTre.Designer.cs">
+      <DependentUpon>tabSuaSachTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabSuaTuaSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabSuaTuaSach.Designer.cs">
+      <DependentUpon>tabSuaTuaSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemCuonSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemCuonSach.Designer.cs">
+      <DependentUpon>tabThemCuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemDocGia.Designer.cs">
+      <DependentUpon>tabThemDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemLoaiDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemLoaiDocGia.Designer.cs">
+      <DependentUpon>tabThemLoaiDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemMuonTheoTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemMuonTheoTheLoai.Designer.cs">
+      <DependentUpon>tabThemMuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemNguoiDung.Designer.cs">
+      <DependentUpon>tabThemNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemPhieuMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemPhieuMuon.Designer.cs">
+      <DependentUpon>tabThemPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemPhieuThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemPhieuThu.Designer.cs">
+      <DependentUpon>tabThemPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemSach.Designer.cs">
+      <DependentUpon>tabThemSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemSachSuaTre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemSachSuaTre.Designer.cs">
+      <DependentUpon>tabThemSachSuaTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\tabThemTuaSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\tabThemTuaSach.Designer.cs">
+      <DependentUpon>tabThemTuaSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucBanAccess.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -246,9 +348,6 @@
     <Compile Include="UserControls\ucTuaSach.Designer.cs">
       <DependentUpon>ucTuaSach.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaseForm.resx">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BM\BMBCKSachTraTre.resx">
       <DependentUpon>BMBCKSachTraTre.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,12 +378,6 @@
     <EmbeddedResource Include="fMainForm.resx">
       <DependentUpon>fMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fResetPassword.resx">
-      <DependentUpon>fResetPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fSignUp.resx">
-      <DependentUpon>fSignUp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -295,6 +388,66 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tab\tabSuaCuonSach.resx">
+      <DependentUpon>tabSuaCuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaDocGia.resx">
+      <DependentUpon>tabSuaDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaLoaiDocGia.resx">
+      <DependentUpon>tabSuaLoaiDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaMuonTheoTheLoai.resx">
+      <DependentUpon>tabSuaMuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaNguoiDung.resx">
+      <DependentUpon>tabSuaNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaPhieuMuon.resx">
+      <DependentUpon>tabSuaPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaPhieuThu.resx">
+      <DependentUpon>tabSuaPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaSach.resx">
+      <DependentUpon>tabSuaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaSachTraTre.resx">
+      <DependentUpon>tabSuaSachTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabSuaTuaSach.resx">
+      <DependentUpon>tabSuaTuaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemCuonSach.resx">
+      <DependentUpon>tabThemCuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemDocGia.resx">
+      <DependentUpon>tabThemDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemLoaiDocGia.resx">
+      <DependentUpon>tabThemLoaiDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemMuonTheoTheLoai.resx">
+      <DependentUpon>tabThemMuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemNguoiDung.resx">
+      <DependentUpon>tabThemNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemPhieuMuon.resx">
+      <DependentUpon>tabThemPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemPhieuThu.resx">
+      <DependentUpon>tabThemPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemSach.resx">
+      <DependentUpon>tabThemSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemSachSuaTre.resx">
+      <DependentUpon>tabThemSachSuaTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\tabThemTuaSach.resx">
+      <DependentUpon>tabThemTuaSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucBanAccess.resx">
       <DependentUpon>ucBanAccess.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLDG.resx">
       <DependentUpon>ucQLDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLND.resx">
+      <DependentUpon>ucQLND.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLPhieuMuon.resx">
       <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
@@ -385,11 +541,15 @@
     <Content Include="Resources\tải xuống %281%29.png" />
     <Content Include="Resources\tải xuống %283%29.png" />
     <Content Include="Resources\Welcome-Svg-Welcome-Sign-Graphics-5026886-1-580x415.jpg" />
+    <None Include="Resources\Welcome-Svg-Welcome-Sign-Graphics-5026886-1-580x4152.jpg" />
     <None Include="Resources\Welcome-Svg-Welcome-Sign-Graphics-5026886-1-580x4151.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

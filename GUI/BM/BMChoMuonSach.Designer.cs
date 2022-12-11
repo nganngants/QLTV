@@ -59,6 +59,7 @@ namespace GUI.BM
             this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -202,7 +203,7 @@ namespace GUI.BM
             this.siticoneDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.siticoneDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.siticoneDateTimePicker1.Name = "siticoneDateTimePicker1";
-            this.siticoneDateTimePicker1.Size = new System.Drawing.Size(230, 50);
+            this.siticoneDateTimePicker1.Size = new System.Drawing.Size(260, 50);
             this.siticoneDateTimePicker1.TabIndex = 92;
             this.siticoneDateTimePicker1.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
             // 
@@ -356,7 +357,7 @@ namespace GUI.BM
             this.siticoneDateTimePicker3.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.siticoneDateTimePicker3.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.siticoneDateTimePicker3.Name = "siticoneDateTimePicker3";
-            this.siticoneDateTimePicker3.Size = new System.Drawing.Size(230, 50);
+            this.siticoneDateTimePicker3.Size = new System.Drawing.Size(260, 50);
             this.siticoneDateTimePicker3.TabIndex = 81;
             this.siticoneDateTimePicker3.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
             // 
@@ -371,7 +372,7 @@ namespace GUI.BM
             this.siticoneDateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.siticoneDateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.siticoneDateTimePicker2.Name = "siticoneDateTimePicker2";
-            this.siticoneDateTimePicker2.Size = new System.Drawing.Size(230, 50);
+            this.siticoneDateTimePicker2.Size = new System.Drawing.Size(260, 50);
             this.siticoneDateTimePicker2.TabIndex = 80;
             this.siticoneDateTimePicker2.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
             // 
@@ -526,5 +527,6 @@ namespace GUI.BM
         private Label label10;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

@@ -19,7 +19,7 @@ namespace GUI.UserControls
             InitializeComponent();
             InitializeContainer();
 
-            //Khi vua vao page QLDG thi hien tab "Sach" truoc
+            //Khi vua vao page QLDSach thi hien tab "Sach" truoc
             butSach.Checked = true;
         }
 
@@ -70,12 +70,10 @@ namespace GUI.UserControls
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void butCuonSach_Click(object sender, EventArgs e)
+        private void butCuonsach_Click_1(object sender, EventArgs e)
         {
-            // tim UC Tua sach va dem no len hien thi
             Control[] con = container.Controls.Find("cuonsach", false);
             con[0].BringToFront();
         }
-
     }
 }

@@ -42,6 +42,7 @@
             this.SoLuongConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -220,5 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongConLai;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

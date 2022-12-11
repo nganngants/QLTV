@@ -44,6 +44,7 @@ namespace GUI.UserControls
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             this.dgTabControl.SuspendLayout();
@@ -136,6 +137,7 @@ namespace GUI.UserControls
             this.tableCuonSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCuonSach,
             this.MaSach,
+            this.TenTuaSach,
             this.TinhTrang});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -205,6 +207,12 @@ namespace GUI.UserControls
             this.MaSach.MinimumWidth = 7;
             this.MaSach.Name = "MaSach";
             // 
+            // TenTuaSach
+            // 
+            this.TenTuaSach.HeaderText = "Tên Tựa Sách";
+            this.TenTuaSach.MinimumWidth = 7;
+            this.TenTuaSach.Name = "TenTuaSach";
+            // 
             // TinhTrang
             // 
             this.TinhTrang.HeaderText = "Tình trạng";
@@ -238,6 +246,7 @@ namespace GUI.UserControls
         private TabPage pageTim;
         private DataGridViewTextBoxColumn MaCuonSach;
         private DataGridViewTextBoxColumn MaSach;
+        private DataGridViewTextBoxColumn TenTuaSach;
         private DataGridViewTextBoxColumn TinhTrang;
     }
 }

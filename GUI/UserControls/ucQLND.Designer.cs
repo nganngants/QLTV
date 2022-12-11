@@ -48,7 +48,7 @@ namespace GUI.UserControls
             this.ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNhomNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             this.dgTabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableNguoiDung)).BeginInit();
@@ -144,7 +144,7 @@ namespace GUI.UserControls
             this.ChucVu,
             this.TenDangNhap,
             this.MatKhau,
-            this.MaNhom});
+            this.TenNhomNguoiDung});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -237,19 +237,19 @@ namespace GUI.UserControls
             this.MatKhau.MinimumWidth = 7;
             this.MatKhau.Name = "MatKhau";
             // 
-            // MaNhom
+            // TenNhomNguoiDung
             // 
-            this.MaNhom.HeaderText = "Mã Nhóm Người Dùng";
-            this.MaNhom.MinimumWidth = 7;
-            this.MaNhom.Name = "MaNhom";
+            this.TenNhomNguoiDung.HeaderText = "Nhóm Người Dùng";
+            this.TenNhomNguoiDung.MinimumWidth = 7;
+            this.TenNhomNguoiDung.Name = "TenNhomNguoiDung";
             // 
-            // ucBCTK
+            // ucQLND
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.siticonePanel2);
             this.Controls.Add(this.siticonePanel1);
-            this.Name = "ucBCTK";
+            this.Name = "ucQLND";
             this.Size = new System.Drawing.Size(997, 596);
             this.siticonePanel1.ResumeLayout(false);
             this.dgTabControl.ResumeLayout(false);
@@ -274,6 +274,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn ChucVu;
         private DataGridViewTextBoxColumn TenDangNhap;
         private DataGridViewTextBoxColumn MatKhau;
-        private DataGridViewTextBoxColumn MaNhom;
+        private DataGridViewTextBoxColumn TenNhomNguoiDung;
     }
 }

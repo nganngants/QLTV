@@ -53,12 +53,15 @@ namespace GUI.BM
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Controls.Add(this.label10);
             this.siticonePanel1.Controls.Add(this.siticoneComboBox1);
             this.siticonePanel1.Controls.Add(this.siticoneDateTimePicker3);
             this.siticonePanel1.Controls.Add(this.siticoneDateTimePicker2);
@@ -384,6 +387,18 @@ namespace GUI.BM
             this.butLogin.TabIndex = 4;
             this.butLogin.Text = "Lưu";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.Control;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 17.856F);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(427, 68);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(129, 42);
+            this.label10.TabIndex = 46;
+            this.label10.Text = "DG1234";
+            // 
             // BMLapTheDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -431,5 +446,7 @@ namespace GUI.BM
         private Siticone.Desktop.UI.WinForms.SiticoneCheckBox CheckNu;
         private Siticone.Desktop.UI.WinForms.SiticoneCheckBox CheckNam;
         private Label label2;
+        private Label label10;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

@@ -54,6 +54,7 @@ namespace GUI.BM
             this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).BeginInit();
@@ -448,5 +449,6 @@ namespace GUI.BM
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown siticoneNumericUpDown2;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
