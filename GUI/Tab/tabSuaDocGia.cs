@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI
+namespace GUI.Tab
 {
-    public partial class fResetPassword : Form
+    public partial class tabSuaDocGia : UserControl
     {
-        public fResetPassword()
+        public tabSuaDocGia()
         {
             InitializeComponent();
         }

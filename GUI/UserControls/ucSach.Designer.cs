@@ -215,7 +215,7 @@ namespace GUI.UserControls
             // 
             // SoLuong
             // 
-            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.HeaderText = "Tổng số lượng";
             this.SoLuong.MinimumWidth = 7;
             this.SoLuong.Name = "SoLuong";
             // 

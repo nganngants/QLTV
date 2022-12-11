@@ -35,10 +35,12 @@ namespace GUI.UserControls
             // 
             // UIText
             // 
-            this.UIText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.UIText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UIText.AutoSize = true;
-            this.UIText.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UIText.Location = new System.Drawing.Point(197, 410);
+            this.UIText.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F);
+            this.UIText.Location = new System.Drawing.Point(113, 267);
             this.UIText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UIText.Name = "UIText";
             this.UIText.Size = new System.Drawing.Size(743, 37);
@@ -47,13 +49,13 @@ namespace GUI.UserControls
             // 
             // ucBanAccess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.UIText);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ucBanAccess";
-            this.Size = new System.Drawing.Size(1121, 856);
+            this.Size = new System.Drawing.Size(996, 652);
             this.ResumeLayout(false);
             this.PerformLayout();
 

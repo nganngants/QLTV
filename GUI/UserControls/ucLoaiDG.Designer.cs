@@ -30,10 +30,10 @@ namespace GUI.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.dgTabControl = new System.Windows.Forms.TabControl();
             this.pageThem = new System.Windows.Forms.TabPage();
@@ -86,30 +86,30 @@ namespace GUI.UserControls
             // 
             // pageSua
             // 
-            this.pageSua.Location = new System.Drawing.Point(4, 29);
+            this.pageSua.Location = new System.Drawing.Point(4, 34);
             this.pageSua.Name = "pageSua";
             this.pageSua.Padding = new System.Windows.Forms.Padding(3);
-            this.pageSua.Size = new System.Drawing.Size(989, 153);
+            this.pageSua.Size = new System.Drawing.Size(989, 148);
             this.pageSua.TabIndex = 1;
             this.pageSua.Text = "Sửa";
             this.pageSua.UseVisualStyleBackColor = true;
             // 
             // pageXoa
             // 
-            this.pageXoa.Location = new System.Drawing.Point(4, 29);
+            this.pageXoa.Location = new System.Drawing.Point(4, 34);
             this.pageXoa.Name = "pageXoa";
             this.pageXoa.Padding = new System.Windows.Forms.Padding(3);
-            this.pageXoa.Size = new System.Drawing.Size(989, 153);
+            this.pageXoa.Size = new System.Drawing.Size(989, 148);
             this.pageXoa.TabIndex = 2;
             this.pageXoa.Text = "Xóa";
             this.pageXoa.UseVisualStyleBackColor = true;
             // 
             // pageTim
             // 
-            this.pageTim.Location = new System.Drawing.Point(4, 29);
+            this.pageTim.Location = new System.Drawing.Point(4, 34);
             this.pageTim.Name = "pageTim";
             this.pageTim.Padding = new System.Windows.Forms.Padding(3);
-            this.pageTim.Size = new System.Drawing.Size(989, 153);
+            this.pageTim.Size = new System.Drawing.Size(989, 148);
             this.pageTim.TabIndex = 3;
             this.pageTim.Text = "Tìm kiếm";
             this.pageTim.UseVisualStyleBackColor = true;
@@ -118,44 +118,43 @@ namespace GUI.UserControls
             // 
             this.tableLoaiDocGia.AllowUserToAddRows = false;
             this.tableLoaiDocGia.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.tableLoaiDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.tableLoaiDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tableLoaiDocGia.BackgroundColor = System.Drawing.SystemColors.Control;
             this.tableLoaiDocGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableLoaiDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableLoaiDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tableLoaiDocGia.ColumnHeadersHeight = 50;
             this.tableLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tableLoaiDocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLoaiDocGia,
             this.TenLoaiDocGia});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableLoaiDocGia.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableLoaiDocGia.DefaultCellStyle = dataGridViewCellStyle3;
             this.tableLoaiDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLoaiDocGia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tableLoaiDocGia.Location = new System.Drawing.Point(0, 0);
             this.tableLoaiDocGia.Name = "tableLoaiDocGia";
-            this.tableLoaiDocGia.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableLoaiDocGia.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableLoaiDocGia.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.tableLoaiDocGia.RowHeadersVisible = false;
             this.tableLoaiDocGia.RowHeadersWidth = 53;
             this.tableLoaiDocGia.RowTemplate.Height = 25;
@@ -174,7 +173,7 @@ namespace GUI.UserControls
             this.tableLoaiDocGia.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tableLoaiDocGia.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tableLoaiDocGia.ThemeStyle.HeaderStyle.Height = 50;
-            this.tableLoaiDocGia.ThemeStyle.ReadOnly = true;
+            this.tableLoaiDocGia.ThemeStyle.ReadOnly = false;
             this.tableLoaiDocGia.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tableLoaiDocGia.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tableLoaiDocGia.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
@@ -188,14 +187,12 @@ namespace GUI.UserControls
             this.MaLoaiDocGia.HeaderText = "Mã Loại Độc Giả";
             this.MaLoaiDocGia.MinimumWidth = 7;
             this.MaLoaiDocGia.Name = "MaLoaiDocGia";
-            this.MaLoaiDocGia.ReadOnly = true;
             // 
             // TenLoaiDocGia
             // 
             this.TenLoaiDocGia.HeaderText = "Tên Loại Độc Giả";
             this.TenLoaiDocGia.MinimumWidth = 7;
             this.TenLoaiDocGia.Name = "TenLoaiDocGia";
-            this.TenLoaiDocGia.ReadOnly = true;
             // 
             // siticonePanel2
             // 
