@@ -65,7 +65,10 @@ namespace DAL
         /// <returns>LOAIDOCGIA</returns>
         public LOAIDOCGIA GetLoaiDocGiaByMa (string maLoaiDocGia)
         {
-            return QLTVDb.Instance.LOAIDOCGIAs.Where(l => l.MaLoaiDocGia == maLoaiDocGia).FirstOrDefault();
+            var res = QLTVDb.Instance.LOAIDOCGIAs.Where(l => l.MaLoaiDocGia == maLoaiDocGia);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
         }
         
         /// <summary>

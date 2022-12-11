@@ -42,7 +42,10 @@ namespace DAL
         /// <returns></returns>
         public CUONSACH GetCuonSachByMa(string maCuonSach)
         {
-            return QLTVDb.Instance.CUONSACHes.Where(c => c.MaCuonSach == maCuonSach).FirstOrDefault();
+            var res = QLTVDb.Instance.CUONSACHes.Where(c => c.MaCuonSach == maCuonSach);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
         }
 
         /// <summary>

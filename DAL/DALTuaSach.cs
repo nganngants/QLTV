@@ -39,7 +39,10 @@ namespace DAL
         /// <returns></returns>
         public TUASACH GetTuaSachByMa(string maTuaSach)
         {
-            return QLTVDb.Instance.TUASACHes.Where(t => t.MaTuaSach == maTuaSach).FirstOrDefault();
+            var res = QLTVDb.Instance.TUASACHes.Where(t => t.MaTuaSach == maTuaSach);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
         }
 
         /// <summary>

@@ -32,6 +32,12 @@ namespace DAL
             return QLTVDb.Instance.PHIEUNHAPSACHes.Find(id);
         }
 
+        public PHIEUNHAPSACH GetPhieuByNgayNhap (DateTime ngayNhap)
+        {
+            var res = QLTVDb.Instance.PHIEUNHAPSACHes.Where(p => p.NgayNhap == ngayNhap);
+            return (res.Any() ? res.First() : null);
+        }
+
         public List<PHIEUNHAPSACH> FindPhieuByNgayNhap(int? ngay, int? thang, int? nam)
         {
             List<PHIEUNHAPSACH> res = GetAllPhieuNhapSach();
@@ -61,6 +67,8 @@ namespace DAL
                 return false;
             }
         }
+
+
 
         public bool UpdPhieuNhap(int id, DateTime? ngayNhap, int? tongTien)
         {

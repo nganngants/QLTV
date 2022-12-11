@@ -43,7 +43,10 @@ namespace DAL
         /// <returns></returns>
         public THELOAI GetTheLoaiByMa(string maTheLoai)
         {
-            return QLTVDb.Instance.THELOAIs.Where(t => t.MaTheLoai == maTheLoai).FirstOrDefault();
+            var res = QLTVDb.Instance.THELOAIs.Where(t => t.MaTheLoai == maTheLoai);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
         }
 
         /// <summary>
