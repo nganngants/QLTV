@@ -1,8 +1,8 @@
-drop database QLTV
+-- Note: u have to drop QLTV database first before running entire script
 CREATE DATABASE QLTV
 go
 USE QLTV
-use QLGV
+--use QLGV
 go
 CREATE TABLE NHOMNGUOIDUNG
 (
@@ -215,7 +215,7 @@ create table BCSACHTRATRE
 	primary key(Ngay, idCuonSach)
 )
 go
-drop table THAMSO
+
 create table THAMSO
 (
 	TuoiToiThieu int, 
