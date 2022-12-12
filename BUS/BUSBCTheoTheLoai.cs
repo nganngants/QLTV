@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Markup;
 
 namespace BUS
 {
@@ -41,7 +42,17 @@ namespace BUS
             }    
             return "KHông thể lập báo cáo";
         }
-
+        public string DelBC(string Mabc)
+        {
+            BCLUOTMUONTHEOTHELOAI bc = DALBCLuotMuonTheoTheLoai.Instance.GetBaoCaoByMa(Mabc);
+            if(bc == null )
+            {
+                return "Mã báo cáo không hợp lệ";
+            }
+            if (DALBCLuotMuonTheoTheLoai.Instance.DelBaoCao(bc.id))
+                return "";
+            return "Lỗi khi xoá báo cáo ";
+        }
         
     }
 }
