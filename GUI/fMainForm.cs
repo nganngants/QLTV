@@ -31,38 +31,35 @@ namespace GUI
             this.pageHome.Controls.Add(ucBan);
             */
 
+            uctaikhoan = new UserControls.ucThongTinTaiKhoan();
+            uctaikhoan.Dock = DockStyle.Fill;
+            this.pageHome.Controls.Add(uctaikhoan);
+
             // tao UC QLDG moi va add no vao page QLDG
             ucqldg = new UserControls.ucQLDG();
             ucqldg.Dock = DockStyle.Fill;
             this.pageQLDG.Controls.Add(ucqldg);
 
-            ucQlSach = new ucQLSach();
-            ucQlSach.Dock = DockStyle.Fill;
-            this.pageQLS.Controls.Add(ucQlSach);
+            ucqlsach = new UserControls.ucQLSach();
+            ucqlsach.Dock = DockStyle.Fill;
+            this.pageQLS.Controls.Add(ucqlsach);
 
-            ucQlnd = new ucQLND();
-            ucQlnd.Dock = DockStyle.Fill;
-            this.pageQLND.Controls.Add(ucQlnd); 
+            ucphieumuontra = new UserControls.ucQLPhieuMuon();
+            ucphieumuontra.Dock = DockStyle.Fill;
+            this.pageQLMT.Controls.Add(ucphieumuontra);
 
-            ucQlPhieuMuon = new ucQLPhieuMuon();
-            ucQlPhieuMuon.Dock = DockStyle.Fill;
-            this.pageQLMT.Controls.Add(ucQlPhieuMuon);
+            ucphieuthu = new UserControls.ucQLPhieuThu();
+            ucphieuthu.Dock = DockStyle.Fill;
+            this.pageQLPT.Controls.Add(ucphieuthu);
 
-            ucQlPhieuThu = new ucQLPhieuThu();
-            ucQlPhieuThu.Dock = DockStyle.Fill;
-            this.pageQLPT.Controls.Add(ucQlPhieuThu);
+            ucbaocao = new UserControls.ucBCTK();
+            ucbaocao.Dock = DockStyle.Fill;
+            this.pageBC.Controls.Add(ucbaocao);
 
-            ucThayDoiQD = new ucThayDoiQuiDinh();
-            ucThayDoiQD.Dock = DockStyle.Fill;
-            this.pageTDQD.Controls.Add(ucThayDoiQD );
+            ucnguoidung = new UserControls.ucQLND();
+            ucnguoidung.Dock = DockStyle.Fill;
+            this.pageQLND.Controls.Add(ucnguoidung);
 
-            ucThongTinTk = new ucThongTinTaiKhoan();
-            ucThongTinTk.Dock= DockStyle.Fill;
-            this.pageAccount.Controls.Add(ucThongTinTk);
-
-            ucQlnd = new ucQLND();
-            ucQlnd.Dock = DockStyle.Fill;
-            this.pageQLND.Controls.Add(ucQlnd);
         }
         /// <summary>
         /// viet lai event nhan nut thoat

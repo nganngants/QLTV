@@ -44,6 +44,7 @@ namespace GUI.UserControls
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.Ngay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoNgayTre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
@@ -117,7 +118,7 @@ namespace GUI.UserControls
             this.pageTim.UseVisualStyleBackColor = true;
             // 
             // tableBCSachTraTre
-            //  
+            // 
             this.tableBCSachTraTre.AllowUserToAddRows = false;
             this.tableBCSachTraTre.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -137,6 +138,7 @@ namespace GUI.UserControls
             this.tableBCSachTraTre.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Ngay,
             this.MaCuonSach,
+            this.TenCuonSach,
             this.NgayMuon,
             this.SoNgayTre});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -207,6 +209,12 @@ namespace GUI.UserControls
             this.MaCuonSach.MinimumWidth = 7;
             this.MaCuonSach.Name = "MaCuonSach";
             // 
+            // TenCuonSach
+            // 
+            this.TenCuonSach.HeaderText = "Tên Cuốn Sách";
+            this.TenCuonSach.MinimumWidth = 7;
+            this.TenCuonSach.Name = "TenCuonSach";
+            // 
             // NgayMuon
             // 
             this.NgayMuon.HeaderText = "Ngày Mượn";
@@ -246,6 +254,7 @@ namespace GUI.UserControls
         private TabPage pageTim;
         private DataGridViewTextBoxColumn Ngay;
         private DataGridViewTextBoxColumn MaCuonSach;
+        private DataGridViewTextBoxColumn TenCuonSach;
         private DataGridViewTextBoxColumn NgayMuon;
         private DataGridViewTextBoxColumn SoNgayTre;
     }

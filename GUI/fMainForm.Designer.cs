@@ -110,7 +110,7 @@ namespace GUI
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(12, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 48);
+            this.label2.Size = new System.Drawing.Size(221, 51);
             this.label2.TabIndex = 4;
             this.label2.Text = "UIT LIBRARY";
             // 
@@ -126,9 +126,9 @@ namespace GUI
             this.tabControl.Controls.Add(this.pageQLND);
             this.tabControl.Controls.Add(this.pageTDQD);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Font = new System.Drawing.Font("UTM Helve", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.ImageList = this.iconList;
-            this.tabControl.ItemSize = new System.Drawing.Size(250, 80);
+            this.tabControl.ItemSize = new System.Drawing.Size(270, 80);
             this.tabControl.Location = new System.Drawing.Point(0, 74);
             this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.Name = "tabControl";
@@ -159,16 +159,16 @@ namespace GUI
             // 
             // pageAccount
             // 
-            this.pageAccount.ImageIndex = 0;
-            this.pageAccount.Location = new System.Drawing.Point(254, 4);
-            this.pageAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.pageAccount.Name = "pageAccount";
-            this.pageAccount.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageAccount.Size = new System.Drawing.Size(977, 725);
-            this.pageAccount.TabIndex = 0;
-            this.pageAccount.Text = "Tài khoản";
-            this.pageAccount.UseVisualStyleBackColor = true;
-            this.pageAccount.Click += new System.EventHandler(this.pageHome_Click);
+            this.pageHome.ImageIndex = 0;
+            this.pageHome.Location = new System.Drawing.Point(274, 4);
+            this.pageHome.Margin = new System.Windows.Forms.Padding(0);
+            this.pageHome.Name = "pageHome";
+            this.pageHome.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pageHome.Size = new System.Drawing.Size(957, 725);
+            this.pageHome.TabIndex = 0;
+            this.pageHome.Text = "Tài khoản";
+            this.pageHome.UseVisualStyleBackColor = true;
+            this.pageHome.Click += new System.EventHandler(this.pageHome_Click);
             // 
             // pageQLDG
             // 
@@ -176,7 +176,7 @@ namespace GUI
             this.pageQLDG.Location = new System.Drawing.Point(254, 4);
             this.pageQLDG.Margin = new System.Windows.Forms.Padding(0);
             this.pageQLDG.Name = "pageQLDG";
-            this.pageQLDG.Size = new System.Drawing.Size(977, 725);
+            this.pageQLDG.Size = new System.Drawing.Size(957, 725);
             this.pageQLDG.TabIndex = 1;
             this.pageQLDG.Text = "Độc giả";
             this.pageQLDG.UseVisualStyleBackColor = true;
@@ -184,11 +184,11 @@ namespace GUI
             // pageQLS
             // 
             this.pageQLS.ImageIndex = 2;
-            this.pageQLS.Location = new System.Drawing.Point(254, 4);
+            this.pageQLS.Location = new System.Drawing.Point(274, 4);
             this.pageQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLS.Name = "pageQLS";
             this.pageQLS.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLS.Size = new System.Drawing.Size(977, 725);
+            this.pageQLS.Size = new System.Drawing.Size(957, 726);
             this.pageQLS.TabIndex = 2;
             this.pageQLS.Text = "Sách";
             this.pageQLS.UseVisualStyleBackColor = true;
@@ -196,11 +196,11 @@ namespace GUI
             // pageQLMT
             // 
             this.pageQLMT.ImageIndex = 3;
-            this.pageQLMT.Location = new System.Drawing.Point(254, 4);
+            this.pageQLMT.Location = new System.Drawing.Point(274, 4);
             this.pageQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLMT.Name = "pageQLMT";
             this.pageQLMT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLMT.Size = new System.Drawing.Size(977, 725);
+            this.pageQLMT.Size = new System.Drawing.Size(957, 726);
             this.pageQLMT.TabIndex = 3;
             this.pageQLMT.Text = "Phiếu mượn trả";
             this.pageQLMT.UseVisualStyleBackColor = true;
@@ -208,11 +208,11 @@ namespace GUI
             // pageQLPT
             // 
             this.pageQLPT.ImageIndex = 4;
-            this.pageQLPT.Location = new System.Drawing.Point(254, 4);
+            this.pageQLPT.Location = new System.Drawing.Point(274, 4);
             this.pageQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLPT.Name = "pageQLPT";
             this.pageQLPT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLPT.Size = new System.Drawing.Size(977, 725);
+            this.pageQLPT.Size = new System.Drawing.Size(957, 726);
             this.pageQLPT.TabIndex = 4;
             this.pageQLPT.Text = "Phiếu thu";
             this.pageQLPT.UseVisualStyleBackColor = true;
@@ -220,11 +220,11 @@ namespace GUI
             // pageBC
             // 
             this.pageBC.ImageIndex = 5;
-            this.pageBC.Location = new System.Drawing.Point(254, 4);
+            this.pageBC.Location = new System.Drawing.Point(274, 4);
             this.pageBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageBC.Name = "pageBC";
             this.pageBC.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageBC.Size = new System.Drawing.Size(977, 725);
+            this.pageBC.Size = new System.Drawing.Size(957, 726);
             this.pageBC.TabIndex = 5;
             this.pageBC.Text = "Báo cáo thống kê";
             this.pageBC.UseVisualStyleBackColor = true;
@@ -232,11 +232,11 @@ namespace GUI
             // pageQLND
             // 
             this.pageQLND.ImageIndex = 6;
-            this.pageQLND.Location = new System.Drawing.Point(254, 4);
+            this.pageQLND.Location = new System.Drawing.Point(274, 4);
             this.pageQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLND.Name = "pageQLND";
             this.pageQLND.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLND.Size = new System.Drawing.Size(977, 725);
+            this.pageQLND.Size = new System.Drawing.Size(957, 726);
             this.pageQLND.TabIndex = 6;
             this.pageQLND.Text = "Người dùng";
             this.pageQLND.UseVisualStyleBackColor = true;
@@ -301,15 +301,13 @@ namespace GUI
         private TabPage pageQLND;
         private static ucBanAccess ucBan;
         private static ucQLDG ucqldg;
-        private static ucQLSach ucQlSach;
-        private static ucBCTK ucBctk;
-        private static ucQLND ucQlnd;
-        private static ucMuonTheoTheLoai ucMuonTheoTL;
-        private static ucQLPhieuMuon ucQlPhieuMuon;
-        private static ucQLPhieuThu ucQlPhieuThu;
-        private static ucThayDoiQuiDinh ucThayDoiQD;
-        private static ucThongTinTaiKhoan ucThongTinTk;
-
+        private static ucQLSach ucqlsach;
+        private static ucHome uchome;
+        private static ucQLPhieuMuon ucphieumuontra;
+        private static ucQLPhieuThu ucphieuthu;
+        private static ucBCTK ucbaocao;
+        private static ucQLND ucnguoidung;
+        private static ucThongTinTaiKhoan uctaikhoan;
         private Label label2;
         private ImageList iconList;
         private TabPage pageTDQD;

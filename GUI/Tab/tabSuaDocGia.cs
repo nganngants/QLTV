@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI
+namespace GUI.Tab
 {
-    public partial class fSignUp : Form
+    public partial class tabSuaDocGia : UserControl
     {
-        public fSignUp()
+        public tabSuaDocGia()
         {
             InitializeComponent();
         }

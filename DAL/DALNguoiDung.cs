@@ -130,5 +130,10 @@ namespace DAL
                 return false;
             }
         }
+
+        public List<NGUOIDUNG> getAllNguoiDung()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
