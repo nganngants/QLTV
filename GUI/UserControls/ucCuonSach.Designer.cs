@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using GUI.Tab;
+using System.Windows.Forms;
 
 namespace GUI.UserControls
 {
@@ -37,17 +38,26 @@ namespace GUI.UserControls
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.dgTabControl = new System.Windows.Forms.TabControl();
             this.pageThem = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.siticoneNumericUpDown2 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pageSua = new System.Windows.Forms.TabPage();
             this.pageXoa = new System.Windows.Forms.TabPage();
             this.pageTim = new System.Windows.Forms.TabPage();
             this.tableCuonSach = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel1.SuspendLayout();
             this.dgTabControl.SuspendLayout();
+            this.pageThem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableCuonSach)).BeginInit();
             this.siticonePanel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +67,7 @@ namespace GUI.UserControls
             this.siticonePanel1.Controls.Add(this.dgTabControl);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(997, 186);
             this.siticonePanel1.TabIndex = 2;
@@ -71,6 +82,7 @@ namespace GUI.UserControls
             this.dgTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.dgTabControl.ItemSize = new System.Drawing.Size(60, 30);
             this.dgTabControl.Location = new System.Drawing.Point(0, 0);
+            this.dgTabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgTabControl.Name = "dgTabControl";
             this.dgTabControl.SelectedIndex = 0;
             this.dgTabControl.Size = new System.Drawing.Size(997, 186);
@@ -78,19 +90,123 @@ namespace GUI.UserControls
             // 
             // pageThem
             // 
+            this.pageThem.Controls.Add(this.label15);
+            this.pageThem.Controls.Add(this.siticoneNumericUpDown2);
+            this.pageThem.Controls.Add(this.label4);
+            this.pageThem.Controls.Add(this.txtUsername);
+            this.pageThem.Controls.Add(this.label5);
+            this.pageThem.Controls.Add(this.label3);
+            this.pageThem.Controls.Add(this.label2);
             this.pageThem.Location = new System.Drawing.Point(4, 34);
+            this.pageThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageThem.Name = "pageThem";
-            this.pageThem.Padding = new System.Windows.Forms.Padding(3);
+            this.pageThem.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageThem.Size = new System.Drawing.Size(989, 148);
             this.pageThem.TabIndex = 0;
             this.pageThem.Text = "Thêm";
             this.pageThem.UseVisualStyleBackColor = true;
             // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.216F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(548, 90);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(411, 20);
+            this.label15.TabIndex = 116;
+            this.label15.Text = "*Tình trạng sách: (1) Đã được mượn, (0) Chưa được mượn";
+            // 
+            // siticoneNumericUpDown2
+            // 
+            this.siticoneNumericUpDown2.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneNumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneNumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneNumericUpDown2.Location = new System.Drawing.Point(736, 27);
+            this.siticoneNumericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneNumericUpDown2.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.siticoneNumericUpDown2.Name = "siticoneNumericUpDown2";
+            this.siticoneNumericUpDown2.Size = new System.Drawing.Size(100, 50);
+            this.siticoneNumericUpDown2.TabIndex = 115;
+            this.siticoneNumericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 17.856F);
+            this.label4.Location = new System.Drawing.Point(545, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(167, 42);
+            this.label4.TabIndex = 114;
+            this.label4.Text = "Tình trạng:";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtUsername.Location = new System.Drawing.Point(149, 82);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.Size = new System.Drawing.Size(288, 50);
+            this.txtUsername.TabIndex = 60;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 17.856F);
+            this.label5.Location = new System.Drawing.Point(5, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 42);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Mã sách:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 17.856F);
+            this.label3.Location = new System.Drawing.Point(227, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 42);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "CS1234";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 17.856F);
+            this.label2.Location = new System.Drawing.Point(5, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(214, 42);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Mã cuốn sách:";
+            // 
             // pageSua
             // 
             this.pageSua.Location = new System.Drawing.Point(4, 34);
+            this.pageSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageSua.Name = "pageSua";
-            this.pageSua.Padding = new System.Windows.Forms.Padding(3);
+            this.pageSua.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageSua.Size = new System.Drawing.Size(989, 148);
             this.pageSua.TabIndex = 1;
             this.pageSua.Text = "Sửa";
@@ -99,8 +215,9 @@ namespace GUI.UserControls
             // pageXoa
             // 
             this.pageXoa.Location = new System.Drawing.Point(4, 34);
+            this.pageXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageXoa.Name = "pageXoa";
-            this.pageXoa.Padding = new System.Windows.Forms.Padding(3);
+            this.pageXoa.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageXoa.Size = new System.Drawing.Size(989, 148);
             this.pageXoa.TabIndex = 2;
             this.pageXoa.Text = "Xóa";
@@ -109,8 +226,9 @@ namespace GUI.UserControls
             // pageTim
             // 
             this.pageTim.Location = new System.Drawing.Point(4, 34);
+            this.pageTim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageTim.Name = "pageTim";
-            this.pageTim.Padding = new System.Windows.Forms.Padding(3);
+            this.pageTim.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageTim.Size = new System.Drawing.Size(989, 148);
             this.pageTim.TabIndex = 3;
             this.pageTim.Text = "Tìm kiếm";
@@ -150,6 +268,7 @@ namespace GUI.UserControls
             this.tableCuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableCuonSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tableCuonSach.Location = new System.Drawing.Point(0, 0);
+            this.tableCuonSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableCuonSach.Name = "tableCuonSach";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -186,15 +305,6 @@ namespace GUI.UserControls
             this.tableCuonSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tableCuonSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // siticonePanel2
-            // 
-            this.siticonePanel2.Controls.Add(this.tableCuonSach);
-            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel2.Location = new System.Drawing.Point(0, 186);
-            this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(997, 410);
-            this.siticonePanel2.TabIndex = 3;
-            // 
             // MaCuonSach
             // 
             this.MaCuonSach.HeaderText = "Mã Cuốn Sách";
@@ -219,16 +329,30 @@ namespace GUI.UserControls
             this.TinhTrang.MinimumWidth = 7;
             this.TinhTrang.Name = "TinhTrang";
             // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.Controls.Add(this.tableCuonSach);
+            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel2.Location = new System.Drawing.Point(0, 186);
+            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.Size = new System.Drawing.Size(997, 410);
+            this.siticonePanel2.TabIndex = 3;
+            // 
             // ucCuonSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.siticonePanel2);
             this.Controls.Add(this.siticonePanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucCuonSach";
             this.Size = new System.Drawing.Size(997, 596);
             this.siticonePanel1.ResumeLayout(false);
             this.dgTabControl.ResumeLayout(false);
+            this.pageThem.ResumeLayout(false);
+            this.pageThem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableCuonSach)).EndInit();
             this.siticonePanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -244,9 +368,17 @@ namespace GUI.UserControls
         private TabPage pageSua;
         private TabPage pageXoa;
         private TabPage pageTim;
+        private static tabThemCuonSach tabthemcuonsach;
         private DataGridViewTextBoxColumn MaCuonSach;
         private DataGridViewTextBoxColumn MaSach;
         private DataGridViewTextBoxColumn TenTuaSach;
         private DataGridViewTextBoxColumn TinhTrang;
+        private Label label3;
+        private Label label2;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUsername;
+        private Label label5;
+        private Label label15;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown siticoneNumericUpDown2;
+        private Label label4;
     }
 }

@@ -499,6 +499,27 @@
             this.parentPanel.Size = new System.Drawing.Size(742, 646);
             this.parentPanel.TabIndex = 3;
             // 
+            // siticonePanel1
+            // 
+            this.siticonePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticonePanel1.Controls.Add(this.label1);
+            this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
+            this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.Size = new System.Drawing.Size(957, 100);
+            this.siticonePanel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
+            this.label1.Location = new System.Drawing.Point(131, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(755, 95);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "Thông tin tài khoản";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ucThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
