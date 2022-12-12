@@ -538,7 +538,6 @@
         }
 
         #endregion
-<<<<<<< HEAD
         private System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutTen;
@@ -558,18 +557,10 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
         private System.Windows.Forms.Label label3;
-=======
 
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
->>>>>>> c160ad6858fecd34a3954d5bb2913f786436c127
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-<<<<<<< HEAD
         private Siticone.Desktop.UI.WinForms.SiticoneButton butChangePass;
         private Siticone.Desktop.UI.WinForms.SiticonePanel feat04;
         private Siticone.Desktop.UI.WinForms.SiticonePanel feat03;
@@ -580,16 +571,6 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel7;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
-=======
-        private System.Windows.Forms.Label label3;
-        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker siticoneDateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private Siticone.Desktop.UI.WinForms.SiticoneCheckBox CheckNu;
-        private Siticone.Desktop.UI.WinForms.SiticoneCheckBox CheckNam;
-        private System.Windows.Forms.Label label9;
-        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
-        private System.Windows.Forms.Label label1;
->>>>>>> c160ad6858fecd34a3954d5bb2913f786436c127
+
     }
 }
