@@ -51,14 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUSBCSachTraTre.cs" />
+    <Compile Include="BUSBCTheoTheLoai.cs" />
+    <Compile Include="BUSCT_PhieuNhap.cs" />
     <Compile Include="BUSCuonSach.cs" />
     <Compile Include="BUSDocGia.cs" />
     <Compile Include="BUSLoaiDocGia.cs" />
     <Compile Include="BUSLogin.cs" />
+    <Compile Include="BUSNguoiDung.cs" />
     <Compile Include="BUSPhieuMuonTra.cs" />
     <Compile Include="BUSPhieuNhap.cs" />
+    <Compile Include="BUSPhieuThu.cs" />
     <Compile Include="BUSSach.cs" />
     <Compile Include="BUSTacGia.cs" />
+    <Compile Include="BUSThamSo.cs" />
     <Compile Include="BUSTheLoai.cs" />
     <Compile Include="BUSTuaSach.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
