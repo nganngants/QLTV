@@ -69,6 +69,7 @@
             this.siticonePanel4.SuspendLayout();
             this.siticonePanel3.SuspendLayout();
             this.featPanel.SuspendLayout();
+            this.siticonePanel1.SuspendLayout();
             this.feat02.SuspendLayout();
             this.feat01.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -162,7 +163,6 @@
             this.infoPanel.Controls.Add(this.siticonePanel4);
             this.infoPanel.Controls.Add(this.siticonePanel3);
             this.infoPanel.Controls.Add(this.siticoneSeparator1);
-            this.infoPanel.Controls.Add(this.label1);
             this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.infoPanel.Location = new System.Drawing.Point(18, 18);
             this.infoPanel.Margin = new System.Windows.Forms.Padding(10, 10, 12, 10);
@@ -196,7 +196,7 @@
             this.siticonePanel6.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel6.Location = new System.Drawing.Point(8, 141);
+            this.siticonePanel6.Location = new System.Drawing.Point(8, 105);
             this.siticonePanel6.Margin = new System.Windows.Forms.Padding(3, 1, 3, 3);
             this.siticonePanel6.Name = "siticonePanel6";
             this.siticonePanel6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -221,7 +221,7 @@
             this.siticonePanel5.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel5.Location = new System.Drawing.Point(8, 112);
+            this.siticonePanel5.Location = new System.Drawing.Point(8, 76);
             this.siticonePanel5.Margin = new System.Windows.Forms.Padding(3, 1, 3, 3);
             this.siticonePanel5.Name = "siticonePanel5";
             this.siticonePanel5.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -246,7 +246,7 @@
             this.siticonePanel4.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel4.Location = new System.Drawing.Point(8, 83);
+            this.siticonePanel4.Location = new System.Drawing.Point(8, 47);
             this.siticonePanel4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 3);
             this.siticonePanel4.Name = "siticonePanel4";
             this.siticonePanel4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -271,7 +271,7 @@
             this.siticonePanel3.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel3.Location = new System.Drawing.Point(8, 54);
+            this.siticonePanel3.Location = new System.Drawing.Point(8, 18);
             this.siticonePanel3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 3);
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -294,22 +294,23 @@
             // 
             this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneSeparator1.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator1.Location = new System.Drawing.Point(8, 44);
+            this.siticoneSeparator1.Location = new System.Drawing.Point(8, 8);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(319, 10);
             this.siticoneSeparator1.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(8, 8);
+            this.label1.Location = new System.Drawing.Point(131, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Chi tiết người dùng";
+            this.label1.Size = new System.Drawing.Size(578, 73);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "Thông tin tài khoản";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // featPanel
             // 
@@ -338,7 +339,7 @@
             this.siticonePanel7.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel7.Location = new System.Drawing.Point(8, 228);
+            this.siticonePanel7.Location = new System.Drawing.Point(8, 199);
             this.siticonePanel7.Name = "siticonePanel7";
             this.siticonePanel7.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.siticonePanel7.Size = new System.Drawing.Size(319, 29);
@@ -349,7 +350,7 @@
             this.siticonePanel2.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel2.Location = new System.Drawing.Point(8, 199);
+            this.siticonePanel2.Location = new System.Drawing.Point(8, 170);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.siticonePanel2.Size = new System.Drawing.Size(319, 29);
@@ -357,14 +358,15 @@
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticonePanel1.Controls.Add(this.label1);
             this.siticonePanel1.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel1.Location = new System.Drawing.Point(8, 170);
+            this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.siticonePanel1.Size = new System.Drawing.Size(319, 29);
-            this.siticonePanel1.TabIndex = 10;
+            this.siticonePanel1.Size = new System.Drawing.Size(957, 100);
+            this.siticonePanel1.TabIndex = 2;
             // 
             // feat04
             // 
@@ -499,27 +501,6 @@
             this.parentPanel.Size = new System.Drawing.Size(742, 646);
             this.parentPanel.TabIndex = 3;
             // 
-            // siticonePanel1
-            // 
-            this.siticonePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticonePanel1.Controls.Add(this.label1);
-            this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
-            this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(957, 100);
-            this.siticonePanel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
-            this.label1.Location = new System.Drawing.Point(131, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(755, 95);
-            this.label1.TabIndex = 98;
-            this.label1.Text = "Thông tin tài khoản";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ucThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,7 +514,6 @@
             this.BotPanel.ResumeLayout(false);
             this.botTableLayout.ResumeLayout(false);
             this.infoPanel.ResumeLayout(false);
-            this.infoPanel.PerformLayout();
             this.siticonePanel6.ResumeLayout(false);
             this.siticonePanel6.PerformLayout();
             this.siticonePanel5.ResumeLayout(false);
@@ -544,6 +524,8 @@
             this.siticonePanel3.PerformLayout();
             this.featPanel.ResumeLayout(false);
             this.featPanel.PerformLayout();
+            this.siticonePanel1.ResumeLayout(false);
+            this.siticonePanel1.PerformLayout();
             this.feat02.ResumeLayout(false);
             this.feat02.PerformLayout();
             this.feat01.ResumeLayout(false);
@@ -556,6 +538,7 @@
         }
 
         #endregion
+<<<<<<< HEAD
         private System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutTen;
@@ -575,9 +558,18 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
         private System.Windows.Forms.Label label3;
+=======
+
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+>>>>>>> c160ad6858fecd34a3954d5bb2913f786436c127
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+<<<<<<< HEAD
         private Siticone.Desktop.UI.WinForms.SiticoneButton butChangePass;
         private Siticone.Desktop.UI.WinForms.SiticonePanel feat04;
         private Siticone.Desktop.UI.WinForms.SiticonePanel feat03;
@@ -588,5 +580,16 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel7;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
+=======
+        private System.Windows.Forms.Label label3;
+        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker siticoneDateTimePicker1;
+        private System.Windows.Forms.Label label2;
+        private Siticone.Desktop.UI.WinForms.SiticoneCheckBox CheckNu;
+        private Siticone.Desktop.UI.WinForms.SiticoneCheckBox CheckNam;
+        private System.Windows.Forms.Label label9;
+        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
+        private System.Windows.Forms.Label label1;
+>>>>>>> c160ad6858fecd34a3954d5bb2913f786436c127
     }
 }
