@@ -36,5 +36,10 @@ namespace BUS
             }
             return false;
         }
+        public void LogOut()
+        {
+            usr = null;
+
+        }
     }
 }
