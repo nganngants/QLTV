@@ -16,5 +16,13 @@ namespace GUI.UserControls
         {
             InitializeComponent();
         }
+
+        private void butChangePass_Click(object sender, EventArgs e)
+        {
+            var f = new fChangePassword();
+            f.Show();
+        }
+
+
     }
 }

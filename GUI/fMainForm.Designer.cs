@@ -46,8 +46,8 @@ namespace GUI
             this.pageQLPT = new System.Windows.Forms.TabPage();
             this.pageBC = new System.Windows.Forms.TabPage();
             this.pageQLND = new System.Windows.Forms.TabPage();
-            this.iconList = new System.Windows.Forms.ImageList(this.components);
             this.pageTDQD = new System.Windows.Forms.TabPage();
+            this.iconList = new System.Windows.Forms.ImageList(this.components);
             this.topPanel.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +90,7 @@ namespace GUI
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.topPanel.Controls.Add(this.label2);
             this.topPanel.Controls.Add(this.exitControlBox);
             this.topPanel.Controls.Add(this.siticoneControlBox1);
@@ -110,7 +110,7 @@ namespace GUI
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(12, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 51);
+            this.label2.Size = new System.Drawing.Size(209, 48);
             this.label2.TabIndex = 4;
             this.label2.Text = "UIT LIBRARY";
             // 
@@ -128,14 +128,14 @@ namespace GUI
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.ImageList = this.iconList;
-            this.tabControl.ItemSize = new System.Drawing.Size(270, 80);
+            this.tabControl.ItemSize = new System.Drawing.Size(250, 80);
             this.tabControl.Location = new System.Drawing.Point(0, 74);
             this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1235, 733);
             this.tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.SlateBlue;
             this.tabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.SlateBlue;
@@ -147,7 +147,7 @@ namespace GUI
             this.tabControl.TabButtonImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tabControl.TabButtonImageOffset = new System.Drawing.Point(10, 0);
             this.tabControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.tabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.tabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.tabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.tabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.DarkSlateBlue;
@@ -155,20 +155,19 @@ namespace GUI
             this.tabControl.TabButtonTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tabControl.TabButtonTextOffset = new System.Drawing.Point(10, 0);
             this.tabControl.TabIndex = 2;
-            this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             // 
             // pageAccount
             // 
-            this.pageHome.ImageIndex = 0;
-            this.pageHome.Location = new System.Drawing.Point(274, 4);
-            this.pageHome.Margin = new System.Windows.Forms.Padding(0);
-            this.pageHome.Name = "pageHome";
-            this.pageHome.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageHome.Size = new System.Drawing.Size(957, 725);
-            this.pageHome.TabIndex = 0;
-            this.pageHome.Text = "Tài khoản";
-            this.pageHome.UseVisualStyleBackColor = true;
-            this.pageHome.Click += new System.EventHandler(this.pageHome_Click);
+            this.pageAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.pageAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pageAccount.ImageIndex = 0;
+            this.pageAccount.Location = new System.Drawing.Point(254, 4);
+            this.pageAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.pageAccount.Name = "pageAccount";
+            this.pageAccount.Size = new System.Drawing.Size(977, 725);
+            this.pageAccount.TabIndex = 0;
+            this.pageAccount.Text = "Tài khoản";
             // 
             // pageQLDG
             // 
@@ -176,7 +175,7 @@ namespace GUI
             this.pageQLDG.Location = new System.Drawing.Point(254, 4);
             this.pageQLDG.Margin = new System.Windows.Forms.Padding(0);
             this.pageQLDG.Name = "pageQLDG";
-            this.pageQLDG.Size = new System.Drawing.Size(957, 725);
+            this.pageQLDG.Size = new System.Drawing.Size(977, 725);
             this.pageQLDG.TabIndex = 1;
             this.pageQLDG.Text = "Độc giả";
             this.pageQLDG.UseVisualStyleBackColor = true;
@@ -184,11 +183,11 @@ namespace GUI
             // pageQLS
             // 
             this.pageQLS.ImageIndex = 2;
-            this.pageQLS.Location = new System.Drawing.Point(274, 4);
+            this.pageQLS.Location = new System.Drawing.Point(254, 4);
             this.pageQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLS.Name = "pageQLS";
             this.pageQLS.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLS.Size = new System.Drawing.Size(957, 726);
+            this.pageQLS.Size = new System.Drawing.Size(977, 725);
             this.pageQLS.TabIndex = 2;
             this.pageQLS.Text = "Sách";
             this.pageQLS.UseVisualStyleBackColor = true;
@@ -196,11 +195,11 @@ namespace GUI
             // pageQLMT
             // 
             this.pageQLMT.ImageIndex = 3;
-            this.pageQLMT.Location = new System.Drawing.Point(274, 4);
+            this.pageQLMT.Location = new System.Drawing.Point(254, 4);
             this.pageQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLMT.Name = "pageQLMT";
             this.pageQLMT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLMT.Size = new System.Drawing.Size(957, 726);
+            this.pageQLMT.Size = new System.Drawing.Size(977, 725);
             this.pageQLMT.TabIndex = 3;
             this.pageQLMT.Text = "Phiếu mượn trả";
             this.pageQLMT.UseVisualStyleBackColor = true;
@@ -208,11 +207,11 @@ namespace GUI
             // pageQLPT
             // 
             this.pageQLPT.ImageIndex = 4;
-            this.pageQLPT.Location = new System.Drawing.Point(274, 4);
+            this.pageQLPT.Location = new System.Drawing.Point(254, 4);
             this.pageQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLPT.Name = "pageQLPT";
             this.pageQLPT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLPT.Size = new System.Drawing.Size(957, 726);
+            this.pageQLPT.Size = new System.Drawing.Size(977, 725);
             this.pageQLPT.TabIndex = 4;
             this.pageQLPT.Text = "Phiếu thu";
             this.pageQLPT.UseVisualStyleBackColor = true;
@@ -220,11 +219,11 @@ namespace GUI
             // pageBC
             // 
             this.pageBC.ImageIndex = 5;
-            this.pageBC.Location = new System.Drawing.Point(274, 4);
+            this.pageBC.Location = new System.Drawing.Point(254, 4);
             this.pageBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageBC.Name = "pageBC";
             this.pageBC.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageBC.Size = new System.Drawing.Size(957, 726);
+            this.pageBC.Size = new System.Drawing.Size(977, 725);
             this.pageBC.TabIndex = 5;
             this.pageBC.Text = "Báo cáo thống kê";
             this.pageBC.UseVisualStyleBackColor = true;
@@ -232,14 +231,26 @@ namespace GUI
             // pageQLND
             // 
             this.pageQLND.ImageIndex = 6;
-            this.pageQLND.Location = new System.Drawing.Point(274, 4);
+            this.pageQLND.Location = new System.Drawing.Point(254, 4);
             this.pageQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLND.Name = "pageQLND";
             this.pageQLND.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLND.Size = new System.Drawing.Size(957, 726);
+            this.pageQLND.Size = new System.Drawing.Size(977, 725);
             this.pageQLND.TabIndex = 6;
             this.pageQLND.Text = "Người dùng";
             this.pageQLND.UseVisualStyleBackColor = true;
+            // 
+            // pageTDQD
+            // 
+            this.pageTDQD.ImageIndex = 8;
+            this.pageTDQD.Location = new System.Drawing.Point(254, 4);
+            this.pageTDQD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pageTDQD.Name = "pageTDQD";
+            this.pageTDQD.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pageTDQD.Size = new System.Drawing.Size(977, 725);
+            this.pageTDQD.TabIndex = 7;
+            this.pageTDQD.Text = "Thay đổi quy định";
+            this.pageTDQD.UseVisualStyleBackColor = true;
             // 
             // iconList
             // 
@@ -254,17 +265,6 @@ namespace GUI
             this.iconList.Images.SetKeyName(6, "user_icon03.png");
             this.iconList.Images.SetKeyName(7, "book_icon02.png");
             this.iconList.Images.SetKeyName(8, "user_icon.png");
-            // 
-            // pageTDQD
-            // 
-            this.pageTDQD.ImageIndex = 8;
-            this.pageTDQD.Location = new System.Drawing.Point(254, 4);
-            this.pageTDQD.Name = "pageTDQD";
-            this.pageTDQD.Padding = new System.Windows.Forms.Padding(3);
-            this.pageTDQD.Size = new System.Drawing.Size(977, 725);
-            this.pageTDQD.TabIndex = 7;
-            this.pageTDQD.Text = "Thay đổi quy định";
-            this.pageTDQD.UseVisualStyleBackColor = true;
             // 
             // fMainForm
             // 
@@ -291,7 +291,6 @@ namespace GUI
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox exitControlBox;
         private Siticone.Desktop.UI.WinForms.SiticoneTabControl tabControl;
-        private TabPage pageAccount;
         private TabPage pageQLDG;
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
         private TabPage pageQLS;
@@ -311,5 +310,6 @@ namespace GUI
         private Label label2;
         private ImageList iconList;
         private TabPage pageTDQD;
+        private TabPage pageAccount;
     }
 }

@@ -33,7 +33,7 @@ namespace GUI
 
             uctaikhoan = new UserControls.ucThongTinTaiKhoan();
             uctaikhoan.Dock = DockStyle.Fill;
-            this.pageHome.Controls.Add(uctaikhoan);
+            this.pageAccount.Controls.Add(uctaikhoan);
 
             // tao UC QLDG moi va add no vao page QLDG
             ucqldg = new UserControls.ucQLDG();
@@ -74,9 +74,5 @@ namespace GUI
             if (res == DialogResult.Yes) this.Close();
         }
 
-        private void pageHome_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
