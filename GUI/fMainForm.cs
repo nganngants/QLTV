@@ -60,6 +60,10 @@ namespace GUI
             ucnguoidung.Dock = DockStyle.Fill;
             this.pageQLND.Controls.Add(ucnguoidung);
 
+            ucquidinh = new UserControls.ucThayDoiQuiDinh();
+            ucquidinh.Dock = DockStyle.Fill;
+            this.pageTDQD.Controls.Add(ucquidinh);
+
         }
         /// <summary>
         /// viet lai event nhan nut thoat

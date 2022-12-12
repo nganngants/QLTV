@@ -307,6 +307,7 @@ namespace GUI
         private static ucBCTK ucbaocao;
         private static ucQLND ucnguoidung;
         private static ucThongTinTaiKhoan uctaikhoan;
+        private static ucThayDoiQuiDinh ucquidinh;
         private Label label2;
         private ImageList iconList;
         private TabPage pageTDQD;
