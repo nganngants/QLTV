@@ -24,19 +24,13 @@ namespace BUS
             CUONSACH cs;
             DOCGIA dg;
             if (NgayMuon > DateTime.Now) return "Ngày mượn không hợp lệ.";
-            try
-            {
-                 cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
-            }
-            catch
+            cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
+            if(cs ==null)
             {
                 return "Thông tin sách không hợp lệ";
             }
-            try
-            {
-                dg = DALDocGia.Instance.GetDocGiaByMa(MaDocGia);
-            }
-            catch
+            dg = DALDocGia.Instance.GetDocGiaByMa(MaDocGia);
+            if(dg == null)
             {
                 return "Thông tin độc giả không hợp lệ";
             }
@@ -52,11 +46,9 @@ namespace BUS
         public string DelPhieuMuon(int id)
         { 
             PHIEUMUONTRA pm;
-            try
-            {
+            
                 pm = DALPhieuMuonTra.Instance.GetPhieuMuonTraById(id);
-            }
-            catch
+            if(pm==null)
             {
                 return "Số phiếu mượn không hợp lệ";
             }
@@ -69,11 +61,8 @@ namespace BUS
         public string UpdPhieuMuonTra(int MaPhieuMuon,DateTime NgayTra) 
         {
             PHIEUMUONTRA pm;
-            try
-            {
             pm = DALPhieuMuonTra.Instance.GetPhieuMuonTraById(MaPhieuMuon);
-            }
-            catch
+            if(pm==null)
             {
                 return "Số phiếu mượn không hợp lệ";
             }

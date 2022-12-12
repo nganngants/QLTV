@@ -33,6 +33,8 @@ namespace BUS
         }
         public string DelTacGia(int id)
         {
+            TACGIA tg = DALTacGia.Instance.GetTacGiaById(id);
+            if (tg == null) return "Mã tác giả không hợp lệ ";
             if (DALTacGia.Instance.DelTacGia(id))
                 return "";
             return "Khong the xoa tac gia";
@@ -40,16 +42,8 @@ namespace BUS
         public TACGIA GetTacGia(string MaTacGia)
         {
             TACGIA tg;
-            
-            try
-            {
-                tg = DALTacGia.Instance.GetTacGiaByMa(MaTacGia);
-            }
-            catch
-            {
-                return null;
-            }
-                return tg;
+            tg = DALTacGia.Instance.GetTacGiaByMa(MaTacGia);
+            return tg;
                 
         }
         public List<TACGIA> FindTacGia(string name)

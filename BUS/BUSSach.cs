@@ -27,11 +27,8 @@ namespace BUS
         public string AddSach(string MaTuaSach, int SoLuong, int DonGia, int NamXb, string NhaXB)
         {
             TUASACH ts;
-            try
-            {
-                ts = DALTuaSach.Instance.GetTuaSachByMa(MaTuaSach);
-            }
-            catch
+            ts = DALTuaSach.Instance.GetTuaSachByMa(MaTuaSach);
+            if(ts == null)
             {
                 return "Tựa sách không hợp lệ";
             }
@@ -43,11 +40,8 @@ namespace BUS
         public TUASACH GetTuaSachOfSach(string MaSach)
         {
             TUASACH ts;
-            try
-            {
-             ts = DALTuaSach.Instance.GetTuaSachByMa(MaSach);
-            }
-            catch
+            ts = DALTuaSach.Instance.GetTuaSachByMa(MaSach);
+            if(ts == null)
             {
                 return null;
             }

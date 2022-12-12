@@ -11,6 +11,7 @@ namespace BUS
 {
     public class BUSLogin
     {
+        public static NGUOIDUNG usr{ get; set; }
         private static BUSLogin instance;
         public static BUSLogin Instance
         {
@@ -23,13 +24,22 @@ namespace BUS
         }
         public bool checkValidLogin(string usrname, string usrpwd)
         {
-            List<NGUOIDUNG> found = DALNguoiDung.Instance.getAllNguoiDung();
+            List<NGUOIDUNG> found = DALNguoiDung.Instance.GetAllNguoiDung();
             foreach (var user in found)
             {
                 if (user.TenDangNhap == usrname)
-                    return user.MatKhau == usrpwd;
+                    if(user.MatKhau == usrpwd)
+                    {
+                        usr = user;
+                        return true;
+                    }
             }
             return false;
+        }
+        public void LogOut()
+        {
+            usr = null;
+
         }
     }
 }

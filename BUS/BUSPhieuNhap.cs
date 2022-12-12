@@ -1,4 +1,4 @@
-using DAL;
+﻿using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -28,15 +28,38 @@ namespace BUS
         public PHIEUNHAPSACH GetPhieuNhap(int MaPhieuNhap)
         {
             PHIEUNHAPSACH pn;
-            try
-            {
-                pn = DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
-            }
-            catch
-            {
-                return null;
-            }
+            pn = DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
             return pn;
+        }
+        public int AddPhieuNhap(DateTime NgayNhap)
+        {
+            //DateTime NgayNhap = new DateTime(Nam, Thang, Ngay);
+            if(DateTime.Now < NgayNhap) { return -1; };
+            if (DALPhieuNhapSach.Instance.AddPhieuNhap(NgayNhap))
+            {
+                PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap);
+                return pn.SoPhieuNhap;
+            }    
+            return -1;
+        }
+        public string DelPhieuNhap(int id)
+        {
+            PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuById(id);
+            if (pn == null)
+                return "Số phiểu nhập không hợp lệ";
+            if(DALPhieuNhapSach.Instance.DelPhieuNhap(id))
+                return "";
+            return "Không thể xoá phiếu nhập";
+        }
+        public string UpdatePhieuNhap(int id,DateTime NgayNhap)
+        {
+            PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuById(id);
+            if (pn == null)
+                return "Số phiểu nhập không hợp lệ";
+            if (DALPhieuNhapSach.Instance.UpdPhieuNhap(id, NgayNhap, null))
+                return "";
+            return "Không thể cập nhật phiếu nhập";
+
         }
     }
 }
