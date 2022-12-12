@@ -11,7 +11,7 @@ namespace BUS
 {
     public class BUSLogin
     {
-        private static NGUOIDUNG usr{ get; set; }
+        public static NGUOIDUNG usr{ get; set; }
         private static BUSLogin instance;
         public static BUSLogin Instance
         {
