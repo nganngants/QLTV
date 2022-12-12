@@ -35,6 +35,34 @@ namespace GUI
             ucqldg = new UserControls.ucQLDG();
             ucqldg.Dock = DockStyle.Fill;
             this.pageQLDG.Controls.Add(ucqldg);
+
+            ucQlSach = new ucQLSach();
+            ucQlSach.Dock = DockStyle.Fill;
+            this.pageQLS.Controls.Add(ucQlSach);
+
+            ucQlnd = new ucQLND();
+            ucQlnd.Dock = DockStyle.Fill;
+            this.pageQLND.Controls.Add(ucQlnd); 
+
+            ucQlPhieuMuon = new ucQLPhieuMuon();
+            ucQlPhieuMuon.Dock = DockStyle.Fill;
+            this.pageQLMT.Controls.Add(ucQlPhieuMuon);
+
+            ucQlPhieuThu = new ucQLPhieuThu();
+            ucQlPhieuThu.Dock = DockStyle.Fill;
+            this.pageQLPT.Controls.Add(ucQlPhieuThu);
+
+            ucThayDoiQD = new ucThayDoiQuiDinh();
+            ucThayDoiQD.Dock = DockStyle.Fill;
+            this.pageTDQD.Controls.Add(ucThayDoiQD );
+
+            ucThongTinTk = new ucThongTinTaiKhoan();
+            ucThongTinTk.Dock= DockStyle.Fill;
+            this.pageAccount.Controls.Add(ucThongTinTk);
+
+            ucQlnd = new ucQLND();
+            ucQlnd.Dock = DockStyle.Fill;
+            this.pageQLND.Controls.Add(ucQlnd);
         }
         /// <summary>
         /// viet lai event nhan nut thoat

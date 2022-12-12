@@ -17,9 +17,9 @@ namespace GUI.UserControls
             InitializeComponent();
         }
 
-        public static implicit operator ucTuaSach(ucCuonSach v)
-        {
-            throw new NotImplementedException();
-        }
+        //public static implicit operator ucTuaSach(ucCuonSach v)
+        //{
+        //    //throw new NotImplementedException();
+        //}
     }
 }

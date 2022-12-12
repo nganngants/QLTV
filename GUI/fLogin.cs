@@ -38,6 +38,7 @@ namespace GUI
                 //BmPhieuThuTienPhat f = new BmPhieuThuTienPhat();
                 this.Hide();
                 f.ShowDialog();
+                this.resetTextboxs();
                 this.Show();
             }
             else
@@ -48,9 +49,5 @@ namespace GUI
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -103,7 +103,7 @@
             this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.216F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneHtmlLabel1.Location = new System.Drawing.Point(105, 219);
             this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
-            this.siticoneHtmlLabel1.Size = new System.Drawing.Size(158, 22);
+            this.siticoneHtmlLabel1.Size = new System.Drawing.Size(146, 20);
             this.siticoneHtmlLabel1.TabIndex = 13;
             this.siticoneHtmlLabel1.Text = "Please enter the code";
             // 
@@ -202,12 +202,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
-            this.label1.Location = new System.Drawing.Point(180, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(110, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 95);
+            this.label1.Size = new System.Drawing.Size(381, 69);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Login";
+            this.label1.Text = "Đổi mật khẩu";
             // 
             // fResetPassword
             // 

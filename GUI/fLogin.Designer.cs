@@ -131,7 +131,7 @@
             this.txtUserpwd.Location = new System.Drawing.Point(152, 269);
             this.txtUserpwd.Name = "txtUserpwd";
             this.txtUserpwd.PasswordChar = '●';
-            this.txtUserpwd.PlaceholderForeColor = System.Drawing.Color.SlateBlue;
+            this.txtUserpwd.PlaceholderForeColor = System.Drawing.Color.LightSteelBlue;
             this.txtUserpwd.PlaceholderText = "password";
             this.txtUserpwd.SelectedText = "";
             this.txtUserpwd.Size = new System.Drawing.Size(297, 50);
@@ -157,7 +157,7 @@
             this.txtUsername.Location = new System.Drawing.Point(152, 213);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderForeColor = System.Drawing.Color.SlateBlue;
+            this.txtUsername.PlaceholderForeColor = System.Drawing.Color.LightSteelBlue;
             this.txtUsername.PlaceholderText = "username";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(297, 50);
@@ -174,7 +174,6 @@
             this.label1.Size = new System.Drawing.Size(176, 69);
             this.label1.TabIndex = 3;
             this.label1.Text = "Login";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // siticoneBorderlessForm1
             // 

@@ -158,7 +158,7 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl container;
         private static ucSach ucsach;
         private static ucTuaSach uctuasach;
-        private static ucTuaSach uccuonsach;
+        private static ucCuonSach uccuonsach;
         private SiticoneButton butCuonsach;
         //public SiticoneContainerControl Container1 { get => container; set => container = value; }
     }
