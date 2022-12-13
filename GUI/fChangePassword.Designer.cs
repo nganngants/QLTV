@@ -70,7 +70,7 @@
             this.label3.ForeColor = System.Drawing.Color.SlateBlue;
             this.label3.Location = new System.Drawing.Point(128, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 22);
+            this.label3.Size = new System.Drawing.Size(189, 24);
             this.label3.TabIndex = 13;
             this.label3.Text = "Nhập mật khẩu hiện tại";
             // 
@@ -82,7 +82,7 @@
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(128, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 22);
+            this.label2.Size = new System.Drawing.Size(258, 24);
             this.label2.TabIndex = 12;
             this.label2.Text = "Nhập và xác nhận mật khẩu mới";
             // 
@@ -177,7 +177,7 @@
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(110, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 80);
+            this.label1.Size = new System.Drawing.Size(400, 84);
             this.label1.TabIndex = 4;
             this.label1.Text = "Đổi mật khẩu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 710);
             this.Controls.Add(this.siticoneControlBox2);
             this.Controls.Add(this.siticoneControlBox1);

@@ -33,67 +33,71 @@
             this.BotPanel = new System.Windows.Forms.Panel();
             this.botTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.infoPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneImageCheckBox1 = new Siticone.Desktop.UI.WinForms.SiticoneImageCheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.siticoneNumericUpDown3 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneNumericUpDown2 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneNumericUpDown1 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.featPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butChangePass = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneComboBox1 = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.feat04 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.siticoneTextBox3 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.feat03 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.siticoneNumericUpDown6 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             this.feat02 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.siticoneNumericUpDown5 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.labFeat02 = new System.Windows.Forms.Label();
             this.feat01 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.siticoneNumericUpDown4 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.labFeat01 = new System.Windows.Forms.Label();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tableLayoutTen = new System.Windows.Forms.TableLayoutPanel();
             this.labelName = new System.Windows.Forms.Label();
-            this.siticoneNumericUpDown1 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.siticoneNumericUpDown2 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.siticoneNumericUpDown3 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.siticoneNumericUpDown4 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.siticoneNumericUpDown5 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.siticoneNumericUpDown6 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.siticoneTextBox3 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneImageCheckBox1 = new Siticone.Desktop.UI.WinForms.SiticoneImageCheckBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.parentPanel.SuspendLayout();
             this.BotPanel.SuspendLayout();
             this.botTableLayout.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.siticonePanel6.SuspendLayout();
             this.siticonePanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown3)).BeginInit();
             this.siticonePanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown2)).BeginInit();
             this.siticonePanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).BeginInit();
             this.featPanel.SuspendLayout();
+            this.siticonePanel2.SuspendLayout();
             this.feat04.SuspendLayout();
             this.feat03.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown6)).BeginInit();
             this.feat02.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown5)).BeginInit();
             this.feat01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown4)).BeginInit();
             this.topPanel.SuspendLayout();
             this.tableLayoutTen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown6)).BeginInit();
             this.SuspendLayout();
             // 
             // parentPanel
@@ -157,6 +161,25 @@
             this.infoPanel.Size = new System.Drawing.Size(446, 534);
             this.infoPanel.TabIndex = 0;
             // 
+            // butSave
+            // 
+            this.butSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butSave.BorderRadius = 5;
+            this.butSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butSave.FillColor = System.Drawing.Color.SlateBlue;
+            this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSave.ForeColor = System.Drawing.Color.White;
+            this.butSave.Image = global::GUI.Properties.Resources._69539;
+            this.butSave.Location = new System.Drawing.Point(11, 486);
+            this.butSave.Margin = new System.Windows.Forms.Padding(4);
+            this.butSave.Name = "butSave";
+            this.butSave.Size = new System.Drawing.Size(108, 38);
+            this.butSave.TabIndex = 6;
+            this.butSave.Text = "Lưu thay đổi";
+            // 
             // siticonePanel6
             // 
             this.siticonePanel6.Controls.Add(this.siticoneImageCheckBox1);
@@ -170,6 +193,18 @@
             this.siticonePanel6.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.siticonePanel6.Size = new System.Drawing.Size(424, 37);
             this.siticonePanel6.TabIndex = 5;
+            // 
+            // siticoneImageCheckBox1
+            // 
+            this.siticoneImageCheckBox1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.siticoneImageCheckBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneImageCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageCheckBox1.Image")));
+            this.siticoneImageCheckBox1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.siticoneImageCheckBox1.ImageRotate = 0F;
+            this.siticoneImageCheckBox1.Location = new System.Drawing.Point(235, 12);
+            this.siticoneImageCheckBox1.Name = "siticoneImageCheckBox1";
+            this.siticoneImageCheckBox1.Size = new System.Drawing.Size(25, 25);
+            this.siticoneImageCheckBox1.TabIndex = 2;
             // 
             // label6
             // 
@@ -199,6 +234,42 @@
             this.siticonePanel5.Size = new System.Drawing.Size(424, 36);
             this.siticonePanel5.TabIndex = 4;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label9.Location = new System.Drawing.Point(226, 12);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 33);
+            this.label9.TabIndex = 77;
+            this.label9.Text = "(tháng)";
+            // 
+            // siticoneNumericUpDown3
+            // 
+            this.siticoneNumericUpDown3.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneNumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneNumericUpDown3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneNumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneNumericUpDown3.Location = new System.Drawing.Point(156, 12);
+            this.siticoneNumericUpDown3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneNumericUpDown3.Maximum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.siticoneNumericUpDown3.Name = "siticoneNumericUpDown3";
+            this.siticoneNumericUpDown3.Size = new System.Drawing.Size(70, 24);
+            this.siticoneNumericUpDown3.TabIndex = 76;
+            this.siticoneNumericUpDown3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.siticoneNumericUpDown3.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -226,6 +297,34 @@
             this.siticonePanel4.Size = new System.Drawing.Size(424, 36);
             this.siticonePanel4.TabIndex = 3;
             // 
+            // siticoneNumericUpDown2
+            // 
+            this.siticoneNumericUpDown2.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneNumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneNumericUpDown2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneNumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneNumericUpDown2.Location = new System.Drawing.Point(166, 12);
+            this.siticoneNumericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneNumericUpDown2.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.siticoneNumericUpDown2.Minimum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.siticoneNumericUpDown2.Name = "siticoneNumericUpDown2";
+            this.siticoneNumericUpDown2.Size = new System.Drawing.Size(70, 24);
+            this.siticoneNumericUpDown2.TabIndex = 75;
+            this.siticoneNumericUpDown2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.siticoneNumericUpDown2.Value = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -252,6 +351,29 @@
             this.siticonePanel3.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.siticonePanel3.Size = new System.Drawing.Size(424, 36);
             this.siticonePanel3.TabIndex = 2;
+            // 
+            // siticoneNumericUpDown1
+            // 
+            this.siticoneNumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneNumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneNumericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneNumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneNumericUpDown1.Location = new System.Drawing.Point(136, 12);
+            this.siticoneNumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneNumericUpDown1.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.siticoneNumericUpDown1.Name = "siticoneNumericUpDown1";
+            this.siticoneNumericUpDown1.Size = new System.Drawing.Size(70, 24);
+            this.siticoneNumericUpDown1.TabIndex = 74;
+            this.siticoneNumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.siticoneNumericUpDown1.Value = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
@@ -324,6 +446,9 @@
             // 
             // siticonePanel2
             // 
+            this.siticonePanel2.Controls.Add(this.butChangePass);
+            this.siticonePanel2.Controls.Add(this.siticoneComboBox1);
+            this.siticonePanel2.Controls.Add(this.label14);
             this.siticonePanel2.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -333,6 +458,56 @@
             this.siticonePanel2.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.siticonePanel2.Size = new System.Drawing.Size(425, 36);
             this.siticonePanel2.TabIndex = 11;
+            // 
+            // butChangePass
+            // 
+            this.butChangePass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.butChangePass.BorderRadius = 5;
+            this.butChangePass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butChangePass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butChangePass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butChangePass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butChangePass.FillColor = System.Drawing.Color.SlateBlue;
+            this.butChangePass.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butChangePass.ForeColor = System.Drawing.Color.White;
+            this.butChangePass.Image = global::GUI.Properties.Resources.white_key_icon;
+            this.butChangePass.Location = new System.Drawing.Point(317, 0);
+            this.butChangePass.Margin = new System.Windows.Forms.Padding(4);
+            this.butChangePass.Name = "butChangePass";
+            this.butChangePass.Size = new System.Drawing.Size(108, 38);
+            this.butChangePass.TabIndex = 89;
+            this.butChangePass.Text = "Thay đổi";
+            this.butChangePass.Click += new System.EventHandler(this.butChangePass_Click);
+            // 
+            // siticoneComboBox1
+            // 
+            this.siticoneComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneComboBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.siticoneComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.siticoneComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneComboBox1.Font = new System.Drawing.Font("Segoe UI", 17.856F);
+            this.siticoneComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.siticoneComboBox1.ItemHeight = 30;
+            this.siticoneComboBox1.Location = new System.Drawing.Point(220, 15);
+            this.siticoneComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneComboBox1.Name = "siticoneComboBox1";
+            this.siticoneComboBox1.Size = new System.Drawing.Size(123, 36);
+            this.siticoneComboBox1.TabIndex = 87;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label14.Location = new System.Drawing.Point(0, 15);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(220, 33);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Danh sách thể loại:";
             // 
             // feat04
             // 
@@ -349,6 +524,52 @@
             this.feat04.Size = new System.Drawing.Size(425, 36);
             this.feat04.TabIndex = 9;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label12.Location = new System.Drawing.Point(311, 15);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 33);
+            this.label12.TabIndex = 86;
+            this.label12.Text = "(VNĐ)";
+            // 
+            // siticoneTextBox3
+            // 
+            this.siticoneTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneTextBox3.DefaultText = "";
+            this.siticoneTextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.siticoneTextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.siticoneTextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneTextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.siticoneTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneTextBox3.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.siticoneTextBox3.Location = new System.Drawing.Point(161, 15);
+            this.siticoneTextBox3.Name = "siticoneTextBox3";
+            this.siticoneTextBox3.PasswordChar = '\0';
+            this.siticoneTextBox3.PlaceholderText = "1000";
+            this.siticoneTextBox3.SelectedText = "";
+            this.siticoneTextBox3.Size = new System.Drawing.Size(150, 21);
+            this.siticoneTextBox3.TabIndex = 85;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label8.Location = new System.Drawing.Point(0, 15);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(161, 33);
+            this.label8.TabIndex = 77;
+            this.label8.Text = "Đơn giá phạt:";
+            // 
             // feat03
             // 
             this.feat03.Controls.Add(this.label11);
@@ -364,6 +585,55 @@
             this.feat03.Size = new System.Drawing.Size(425, 36);
             this.feat03.TabIndex = 8;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label11.Location = new System.Drawing.Point(317, 15);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 33);
+            this.label11.TabIndex = 79;
+            this.label11.Text = "(ngày)";
+            // 
+            // siticoneNumericUpDown6
+            // 
+            this.siticoneNumericUpDown6.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneNumericUpDown6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneNumericUpDown6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneNumericUpDown6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneNumericUpDown6.Location = new System.Drawing.Point(247, 15);
+            this.siticoneNumericUpDown6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneNumericUpDown6.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.siticoneNumericUpDown6.Name = "siticoneNumericUpDown6";
+            this.siticoneNumericUpDown6.Size = new System.Drawing.Size(70, 21);
+            this.siticoneNumericUpDown6.TabIndex = 78;
+            this.siticoneNumericUpDown6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.siticoneNumericUpDown6.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label7.Location = new System.Drawing.Point(0, 15);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(247, 33);
+            this.label7.TabIndex = 77;
+            this.label7.Text = "Số ngày mượn tối đa:";
+            // 
             // feat02
             // 
             this.feat02.Controls.Add(this.label10);
@@ -378,6 +648,42 @@
             this.feat02.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.feat02.Size = new System.Drawing.Size(425, 36);
             this.feat02.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label10.Location = new System.Drawing.Point(313, 15);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 33);
+            this.label10.TabIndex = 78;
+            this.label10.Text = "(quyển)";
+            // 
+            // siticoneNumericUpDown5
+            // 
+            this.siticoneNumericUpDown5.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneNumericUpDown5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneNumericUpDown5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneNumericUpDown5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneNumericUpDown5.Location = new System.Drawing.Point(243, 15);
+            this.siticoneNumericUpDown5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneNumericUpDown5.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.siticoneNumericUpDown5.Name = "siticoneNumericUpDown5";
+            this.siticoneNumericUpDown5.Size = new System.Drawing.Size(70, 21);
+            this.siticoneNumericUpDown5.TabIndex = 76;
+            this.siticoneNumericUpDown5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.siticoneNumericUpDown5.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // labFeat02
             // 
@@ -406,6 +712,42 @@
             this.feat01.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.feat01.Size = new System.Drawing.Size(425, 36);
             this.feat01.TabIndex = 6;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label13.Location = new System.Drawing.Point(384, 15);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 33);
+            this.label13.TabIndex = 78;
+            this.label13.Text = "(năm)";
+            // 
+            // siticoneNumericUpDown4
+            // 
+            this.siticoneNumericUpDown4.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneNumericUpDown4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneNumericUpDown4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneNumericUpDown4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneNumericUpDown4.Location = new System.Drawing.Point(314, 15);
+            this.siticoneNumericUpDown4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneNumericUpDown4.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.siticoneNumericUpDown4.Name = "siticoneNumericUpDown4";
+            this.siticoneNumericUpDown4.Size = new System.Drawing.Size(70, 21);
+            this.siticoneNumericUpDown4.TabIndex = 75;
+            this.siticoneNumericUpDown4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.siticoneNumericUpDown4.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             // 
             // labFeat01
             // 
@@ -490,291 +832,6 @@
             this.labelName.TabIndex = 1;
             this.labelName.Text = "Thay đổi quy định";
             // 
-            // siticoneNumericUpDown1
-            // 
-            this.siticoneNumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneNumericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneNumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown1.Location = new System.Drawing.Point(136, 12);
-            this.siticoneNumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneNumericUpDown1.Minimum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.siticoneNumericUpDown1.Name = "siticoneNumericUpDown1";
-            this.siticoneNumericUpDown1.Size = new System.Drawing.Size(70, 24);
-            this.siticoneNumericUpDown1.TabIndex = 74;
-            this.siticoneNumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneNumericUpDown1.Value = new decimal(new int[] {
-            55,
-            0,
-            0,
-            0});
-            // 
-            // siticoneNumericUpDown2
-            // 
-            this.siticoneNumericUpDown2.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneNumericUpDown2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneNumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown2.Location = new System.Drawing.Point(166, 12);
-            this.siticoneNumericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneNumericUpDown2.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.siticoneNumericUpDown2.Minimum = new decimal(new int[] {
-            16,
-            0,
-            0,
-            0});
-            this.siticoneNumericUpDown2.Name = "siticoneNumericUpDown2";
-            this.siticoneNumericUpDown2.Size = new System.Drawing.Size(70, 24);
-            this.siticoneNumericUpDown2.TabIndex = 75;
-            this.siticoneNumericUpDown2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneNumericUpDown2.Value = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
-            // 
-            // siticoneNumericUpDown3
-            // 
-            this.siticoneNumericUpDown3.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneNumericUpDown3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneNumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown3.Location = new System.Drawing.Point(156, 12);
-            this.siticoneNumericUpDown3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneNumericUpDown3.Maximum = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
-            this.siticoneNumericUpDown3.Name = "siticoneNumericUpDown3";
-            this.siticoneNumericUpDown3.Size = new System.Drawing.Size(70, 24);
-            this.siticoneNumericUpDown3.TabIndex = 76;
-            this.siticoneNumericUpDown3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneNumericUpDown3.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            // 
-            // siticoneNumericUpDown4
-            // 
-            this.siticoneNumericUpDown4.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneNumericUpDown4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneNumericUpDown4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown4.Location = new System.Drawing.Point(314, 15);
-            this.siticoneNumericUpDown4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneNumericUpDown4.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.siticoneNumericUpDown4.Name = "siticoneNumericUpDown4";
-            this.siticoneNumericUpDown4.Size = new System.Drawing.Size(70, 21);
-            this.siticoneNumericUpDown4.TabIndex = 75;
-            this.siticoneNumericUpDown4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneNumericUpDown4.Value = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            // 
-            // siticoneNumericUpDown5
-            // 
-            this.siticoneNumericUpDown5.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneNumericUpDown5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneNumericUpDown5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown5.Location = new System.Drawing.Point(243, 15);
-            this.siticoneNumericUpDown5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneNumericUpDown5.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.siticoneNumericUpDown5.Name = "siticoneNumericUpDown5";
-            this.siticoneNumericUpDown5.Size = new System.Drawing.Size(70, 21);
-            this.siticoneNumericUpDown5.TabIndex = 76;
-            this.siticoneNumericUpDown5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneNumericUpDown5.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // siticoneNumericUpDown6
-            // 
-            this.siticoneNumericUpDown6.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneNumericUpDown6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneNumericUpDown6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown6.Location = new System.Drawing.Point(247, 15);
-            this.siticoneNumericUpDown6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneNumericUpDown6.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.siticoneNumericUpDown6.Name = "siticoneNumericUpDown6";
-            this.siticoneNumericUpDown6.Size = new System.Drawing.Size(70, 21);
-            this.siticoneNumericUpDown6.TabIndex = 78;
-            this.siticoneNumericUpDown6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneNumericUpDown6.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.Location = new System.Drawing.Point(0, 15);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(247, 33);
-            this.label7.TabIndex = 77;
-            this.label7.Text = "Số ngày mượn tối đa:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label8.Location = new System.Drawing.Point(0, 15);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 33);
-            this.label8.TabIndex = 77;
-            this.label8.Text = "Đơn giá phạt:";
-            // 
-            // siticoneTextBox3
-            // 
-            this.siticoneTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox3.DefaultText = "";
-            this.siticoneTextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneTextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.siticoneTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox3.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox3.Location = new System.Drawing.Point(161, 15);
-            this.siticoneTextBox3.Name = "siticoneTextBox3";
-            this.siticoneTextBox3.PasswordChar = '\0';
-            this.siticoneTextBox3.PlaceholderText = "1000";
-            this.siticoneTextBox3.SelectedText = "";
-            this.siticoneTextBox3.Size = new System.Drawing.Size(150, 21);
-            this.siticoneTextBox3.TabIndex = 85;
-            // 
-            // butSave
-            // 
-            this.butSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butSave.BorderRadius = 5;
-            this.butSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butSave.FillColor = System.Drawing.Color.SlateBlue;
-            this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butSave.ForeColor = System.Drawing.Color.White;
-            this.butSave.Image = global::GUI.Properties.Resources._69539;
-            this.butSave.Location = new System.Drawing.Point(11, 486);
-            this.butSave.Margin = new System.Windows.Forms.Padding(4);
-            this.butSave.Name = "butSave";
-            this.butSave.Size = new System.Drawing.Size(108, 38);
-            this.butSave.TabIndex = 6;
-            this.butSave.Text = "Lưu thay đổi";
-            // 
-            // siticoneImageCheckBox1
-            // 
-            this.siticoneImageCheckBox1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.siticoneImageCheckBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneImageCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageCheckBox1.Image")));
-            this.siticoneImageCheckBox1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.siticoneImageCheckBox1.ImageRotate = 0F;
-            this.siticoneImageCheckBox1.Location = new System.Drawing.Point(235, 12);
-            this.siticoneImageCheckBox1.Name = "siticoneImageCheckBox1";
-            this.siticoneImageCheckBox1.Size = new System.Drawing.Size(25, 25);
-            this.siticoneImageCheckBox1.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label9.Location = new System.Drawing.Point(226, 12);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 33);
-            this.label9.TabIndex = 77;
-            this.label9.Text = "(tháng)";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label10.Location = new System.Drawing.Point(313, 15);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 33);
-            this.label10.TabIndex = 78;
-            this.label10.Text = "(quyển)";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label11.Location = new System.Drawing.Point(317, 15);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 33);
-            this.label11.TabIndex = 79;
-            this.label11.Text = "(ngày)";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label12.Location = new System.Drawing.Point(311, 15);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 33);
-            this.label12.TabIndex = 86;
-            this.label12.Text = "(VNĐ)";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label13.Location = new System.Drawing.Point(384, 15);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 33);
-            this.label13.TabIndex = 78;
-            this.label13.Text = "(năm)";
-            // 
             // ucThayDoiQuiDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -791,29 +848,31 @@
             this.siticonePanel6.PerformLayout();
             this.siticonePanel5.ResumeLayout(false);
             this.siticonePanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown3)).EndInit();
             this.siticonePanel4.ResumeLayout(false);
             this.siticonePanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown2)).EndInit();
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).EndInit();
             this.featPanel.ResumeLayout(false);
             this.featPanel.PerformLayout();
+            this.siticonePanel2.ResumeLayout(false);
+            this.siticonePanel2.PerformLayout();
             this.feat04.ResumeLayout(false);
             this.feat04.PerformLayout();
             this.feat03.ResumeLayout(false);
             this.feat03.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown6)).EndInit();
             this.feat02.ResumeLayout(false);
             this.feat02.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown5)).EndInit();
             this.feat01.ResumeLayout(false);
             this.feat01.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown4)).EndInit();
             this.topPanel.ResumeLayout(false);
             this.tableLayoutTen.ResumeLayout(false);
             this.tableLayoutTen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -864,5 +923,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private Siticone.Desktop.UI.WinForms.SiticoneComboBox siticoneComboBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butChangePass;
     }
 }

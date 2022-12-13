@@ -1,5 +1,4 @@
-﻿using GUI.BM;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI.UserControls
 {
-    public partial class ucThayDoiQuiDinh : UserControl
+    public partial class ucThayDoiTheLoai : UserControl
     {
-        public ucThayDoiQuiDinh()
+        public ucThayDoiTheLoai()
         {
             InitializeComponent();
-        }
-
-        private void butChangePass_Click(object sender, EventArgs e)
-        {
-            var f = new BMThayDoiTheLoai();
-            f.Show();
         }
     }
 }
