@@ -8,7 +8,7 @@ using DTO;
 
 namespace BUS
 {
-    internal class BUSDocGia
+     public class BUSDocGia
     {
         private static BUSDocGia instance;
         public static BUSDocGia Instance

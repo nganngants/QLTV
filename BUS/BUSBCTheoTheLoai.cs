@@ -9,7 +9,7 @@ using System.Windows.Markup;
 
 namespace BUS
 {
-    internal class BUSBCTheoTheLoai
+     public class BUSBCTheoTheLoai
     {
         private static BUSBCTheoTheLoai instance;
         public static BUSBCTheoTheLoai Instance

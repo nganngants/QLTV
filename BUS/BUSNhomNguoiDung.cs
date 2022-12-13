@@ -7,7 +7,7 @@ using DAL;
 using DTO;
 namespace BUS
 {
-    internal class BUSNhomNguoiDung
+     public class BUSNhomNguoiDung
     {
         public static BUSNhomNguoiDung instance;
         public static BUSNhomNguoiDung Instance

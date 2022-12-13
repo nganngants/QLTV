@@ -9,7 +9,7 @@ using System.Diagnostics.Contracts;
 
 namespace BUS
 {
-    internal class BUSTheLoai
+     public class BUSTheLoai
     {
         private static BUSTheLoai instance;
         public static BUSTheLoai Instance

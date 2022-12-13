@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    internal class BUSPhieuNhap
+     public class BUSPhieuNhap
     {
         private static BUSPhieuNhap instance;
         public static BUSPhieuNhap Instance

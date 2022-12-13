@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DAL;
 namespace BUS
 {
-    internal class BUSPhieuMuonTra
+     public class BUSPhieuMuonTra
     {
         private static BUSPhieuMuonTra instance;
         public static BUSPhieuMuonTra Instance

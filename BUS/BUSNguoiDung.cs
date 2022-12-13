@@ -9,7 +9,7 @@ using System.Net;
 
 namespace BUS
 {
-    internal class BUSNguoiDung
+     public class BUSNguoiDung
     {
         public static BUSNguoiDung instance;
         public static BUSNguoiDung Instance

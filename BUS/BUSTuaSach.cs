@@ -8,7 +8,7 @@ using DAL;
 using DTO;
 namespace BUS
 {
-    internal class BUSTuaSach
+     public class BUSTuaSach
     {
         private static BUSTuaSach instance;
         public static BUSTuaSach Instance

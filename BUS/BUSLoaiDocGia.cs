@@ -7,7 +7,7 @@ using DAL;
 using DTO;
 namespace BUS
 {
-    internal class BUSLoaiDocGia
+     public class BUSLoaiDocGia
     {
         private static BUSLoaiDocGia instance;
         public static BUSLoaiDocGia Instance

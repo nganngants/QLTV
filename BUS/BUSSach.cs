@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    internal class BUSSach
+     public class BUSSach
     {
         private static BUSSach instance;
         public static BUSSach Instance
