@@ -9,7 +9,7 @@ using System.Windows.Markup;
 
 namespace BUS
 {
-    internal class BUSCuonSach
+     public class BUSCuonSach
     {
         private static BUSCuonSach instance;
         public static BUSCuonSach Instance

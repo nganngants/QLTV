@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    internal class BUSCT_PhieuNhap
+     public class BUSCT_PhieuNhap
     {
         private static BUSPhieuNhap instance;
         public static BUSPhieuNhap Instance

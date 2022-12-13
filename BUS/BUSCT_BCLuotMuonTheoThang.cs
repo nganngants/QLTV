@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    internal class BUSCT_BCLuotMuonTheoThang
+     public class BUSCT_BCLuotMuonTheoThang
     {
         private static BUSCT_BCLuotMuonTheoThang instance;
         public static BUSCT_BCLuotMuonTheoThang Instance

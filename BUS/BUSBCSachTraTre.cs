@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    internal class BUSBCSachTraTre
+     public class BUSBCSachTraTre
     {
         private static BUSBCSachTraTre instance;
         public static BUSBCSachTraTre Instance
