@@ -69,7 +69,7 @@ namespace GUI.UserControls
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(997, 186);
+            this.siticonePanel1.Size = new System.Drawing.Size(997, 255);
             this.siticonePanel1.TabIndex = 2;
             // 
             // dgTabControl
@@ -85,7 +85,7 @@ namespace GUI.UserControls
             this.dgTabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgTabControl.Name = "dgTabControl";
             this.dgTabControl.SelectedIndex = 0;
-            this.dgTabControl.Size = new System.Drawing.Size(997, 186);
+            this.dgTabControl.Size = new System.Drawing.Size(997, 255);
             this.dgTabControl.TabIndex = 0;
             // 
             // pageThem
@@ -101,7 +101,7 @@ namespace GUI.UserControls
             this.pageThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageThem.Name = "pageThem";
             this.pageThem.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pageThem.Size = new System.Drawing.Size(989, 148);
+            this.pageThem.Size = new System.Drawing.Size(989, 217);
             this.pageThem.TabIndex = 0;
             this.pageThem.Text = "Thêm";
             this.pageThem.UseVisualStyleBackColor = true;
@@ -281,7 +281,7 @@ namespace GUI.UserControls
             this.tableCuonSach.RowHeadersVisible = false;
             this.tableCuonSach.RowHeadersWidth = 53;
             this.tableCuonSach.RowTemplate.Height = 25;
-            this.tableCuonSach.Size = new System.Drawing.Size(997, 410);
+            this.tableCuonSach.Size = new System.Drawing.Size(997, 341);
             this.tableCuonSach.TabIndex = 0;
             this.tableCuonSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tableCuonSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -333,10 +333,10 @@ namespace GUI.UserControls
             // 
             this.siticonePanel2.Controls.Add(this.tableCuonSach);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel2.Location = new System.Drawing.Point(0, 186);
+            this.siticonePanel2.Location = new System.Drawing.Point(0, 255);
             this.siticonePanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(997, 410);
+            this.siticonePanel2.Size = new System.Drawing.Size(997, 341);
             this.siticonePanel2.TabIndex = 3;
             // 
             // ucCuonSach

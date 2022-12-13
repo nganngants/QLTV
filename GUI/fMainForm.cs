@@ -31,6 +31,12 @@ namespace GUI
             this.pageHome.Controls.Add(ucBan);
             */
 
+            ////test the loai
+
+            //uctheloai = new UserControls.ucThayDoiTheLoai();
+            //uctheloai.Dock = DockStyle.Fill;
+            //this.pageAccount.Controls.Add(uctheloai);
+
             uctaikhoan = new UserControls.ucThongTinTaiKhoan();
             uctaikhoan.Dock = DockStyle.Fill;
             this.pageAccount.Controls.Add(uctaikhoan);

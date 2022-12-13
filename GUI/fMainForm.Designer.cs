@@ -312,5 +312,8 @@ namespace GUI
         private ImageList iconList;
         private TabPage pageTDQD;
         private TabPage pageAccount;
+
+        // test the loai
+        //private static ucThayDoiTheLoai uctheloai;
     }
 }
