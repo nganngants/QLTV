@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -40,9 +40,17 @@
             this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneDataGridView1 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.MaNhomNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNhomNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.featPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel10 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.siticonePanel9 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneComboBox1 = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneButton3 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -59,14 +67,6 @@
             this.siticoneTextBox2 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel8 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.MaNhomNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNhomNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.siticonePanel9 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.siticonePanel10 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.siticoneComboBox1 = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticonePanel1.SuspendLayout();
             this.botTableLayout.SuspendLayout();
             this.infoPanel.SuspendLayout();
@@ -74,13 +74,13 @@
             this.siticonePanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             this.featPanel.SuspendLayout();
+            this.siticonePanel10.SuspendLayout();
+            this.siticonePanel9.SuspendLayout();
             this.siticonePanel6.SuspendLayout();
             this.feat02.SuspendLayout();
             this.feat01.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             this.siticonePanel5.SuspendLayout();
-            this.siticonePanel9.SuspendLayout();
-            this.siticonePanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticoneControlBox1
@@ -193,31 +193,31 @@
             // 
             // siticoneDataGridView1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.siticoneDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.siticoneDataGridView1.ColumnHeadersHeight = 30;
             this.siticoneDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNhomNguoiDung,
             this.TenNhomNguoiDung,
             this.ChucNang});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.siticoneDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.Location = new System.Drawing.Point(0, 12);
@@ -248,6 +248,24 @@
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // MaNhomNguoiDung
+            // 
+            this.MaNhomNguoiDung.HeaderText = "Mã nhóm người dùng";
+            this.MaNhomNguoiDung.MinimumWidth = 7;
+            this.MaNhomNguoiDung.Name = "MaNhomNguoiDung";
+            // 
+            // TenNhomNguoiDung
+            // 
+            this.TenNhomNguoiDung.HeaderText = "Tên nhóm người dùng";
+            this.TenNhomNguoiDung.MinimumWidth = 7;
+            this.TenNhomNguoiDung.Name = "TenNhomNguoiDung";
+            // 
+            // ChucNang
+            // 
+            this.ChucNang.HeaderText = "Chức năng";
+            this.ChucNang.MinimumWidth = 7;
+            this.ChucNang.Name = "ChucNang";
             // 
             // siticoneSeparator1
             // 
@@ -291,6 +309,76 @@
             this.featPanel.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.featPanel.Size = new System.Drawing.Size(460, 506);
             this.featPanel.TabIndex = 0;
+            // 
+            // siticonePanel10
+            // 
+            this.siticonePanel10.Controls.Add(this.label3);
+            this.siticonePanel10.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.siticonePanel10.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.siticonePanel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel10.Location = new System.Drawing.Point(11, 251);
+            this.siticonePanel10.Margin = new System.Windows.Forms.Padding(4);
+            this.siticonePanel10.Name = "siticonePanel10";
+            this.siticonePanel10.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.siticonePanel10.Size = new System.Drawing.Size(438, 52);
+            this.siticonePanel10.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label3.Location = new System.Drawing.Point(0, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 33);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tên chức năng:";
+            // 
+            // siticonePanel9
+            // 
+            this.siticonePanel9.Controls.Add(this.siticoneComboBox1);
+            this.siticonePanel9.Controls.Add(this.label2);
+            this.siticonePanel9.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.siticonePanel9.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.siticonePanel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel9.Location = new System.Drawing.Point(11, 199);
+            this.siticonePanel9.Margin = new System.Windows.Forms.Padding(4);
+            this.siticonePanel9.Name = "siticonePanel9";
+            this.siticonePanel9.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.siticonePanel9.Size = new System.Drawing.Size(438, 52);
+            this.siticonePanel9.TabIndex = 19;
+            // 
+            // siticoneComboBox1
+            // 
+            this.siticoneComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneComboBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.siticoneComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.siticoneComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneComboBox1.Font = new System.Drawing.Font("Segoe UI", 17.856F);
+            this.siticoneComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.siticoneComboBox1.ItemHeight = 30;
+            this.siticoneComboBox1.Location = new System.Drawing.Point(175, 15);
+            this.siticoneComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneComboBox1.Name = "siticoneComboBox1";
+            this.siticoneComboBox1.Size = new System.Drawing.Size(218, 36);
+            this.siticoneComboBox1.TabIndex = 135;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label2.Location = new System.Drawing.Point(0, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 33);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mã chức năng:";
             // 
             // siticonePanel6
             // 
@@ -517,94 +605,6 @@
             this.siticonePanel8.Size = new System.Drawing.Size(75, 77);
             this.siticonePanel8.TabIndex = 0;
             // 
-            // MaNhomNguoiDung
-            // 
-            this.MaNhomNguoiDung.HeaderText = "Mã nhóm người dùng";
-            this.MaNhomNguoiDung.MinimumWidth = 7;
-            this.MaNhomNguoiDung.Name = "MaNhomNguoiDung";
-            // 
-            // TenNhomNguoiDung
-            // 
-            this.TenNhomNguoiDung.HeaderText = "Tên nhóm người dùng";
-            this.TenNhomNguoiDung.MinimumWidth = 7;
-            this.TenNhomNguoiDung.Name = "TenNhomNguoiDung";
-            // 
-            // ChucNang
-            // 
-            this.ChucNang.HeaderText = "Chức năng";
-            this.ChucNang.MinimumWidth = 7;
-            this.ChucNang.Name = "ChucNang";
-            // 
-            // siticonePanel9
-            // 
-            this.siticonePanel9.Controls.Add(this.siticoneComboBox1);
-            this.siticonePanel9.Controls.Add(this.label2);
-            this.siticonePanel9.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.siticonePanel9.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.siticonePanel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel9.Location = new System.Drawing.Point(11, 199);
-            this.siticonePanel9.Margin = new System.Windows.Forms.Padding(4);
-            this.siticonePanel9.Name = "siticonePanel9";
-            this.siticonePanel9.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.siticonePanel9.Size = new System.Drawing.Size(438, 52);
-            this.siticonePanel9.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(0, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 33);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mã chức năng:";
-            // 
-            // siticonePanel10
-            // 
-            this.siticonePanel10.Controls.Add(this.label3);
-            this.siticonePanel10.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.siticonePanel10.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.siticonePanel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel10.Location = new System.Drawing.Point(11, 251);
-            this.siticonePanel10.Margin = new System.Windows.Forms.Padding(4);
-            this.siticonePanel10.Name = "siticonePanel10";
-            this.siticonePanel10.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.siticonePanel10.Size = new System.Drawing.Size(438, 52);
-            this.siticonePanel10.TabIndex = 20;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(0, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 33);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tên chức năng:";
-            // 
-            // siticoneComboBox1
-            // 
-            this.siticoneComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneComboBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.siticoneComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.siticoneComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneComboBox1.Font = new System.Drawing.Font("Segoe UI", 17.856F);
-            this.siticoneComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.siticoneComboBox1.ItemHeight = 30;
-            this.siticoneComboBox1.Location = new System.Drawing.Point(175, 15);
-            this.siticoneComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneComboBox1.Name = "siticoneComboBox1";
-            this.siticoneComboBox1.Size = new System.Drawing.Size(218, 36);
-            this.siticoneComboBox1.TabIndex = 135;
-            // 
             // BMThayDoiNhomNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -625,6 +625,10 @@
             this.siticonePanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
             this.featPanel.ResumeLayout(false);
+            this.siticonePanel10.ResumeLayout(false);
+            this.siticonePanel10.PerformLayout();
+            this.siticonePanel9.ResumeLayout(false);
+            this.siticonePanel9.PerformLayout();
             this.siticonePanel6.ResumeLayout(false);
             this.feat02.ResumeLayout(false);
             this.feat02.PerformLayout();
@@ -632,10 +636,6 @@
             this.feat01.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel5.ResumeLayout(false);
-            this.siticonePanel9.ResumeLayout(false);
-            this.siticonePanel9.PerformLayout();
-            this.siticonePanel10.ResumeLayout(false);
-            this.siticonePanel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -30,10 +30,10 @@ namespace GUI.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.dgTabControl = new System.Windows.Forms.TabControl();
             this.pageThem = new System.Windows.Forms.TabPage();
@@ -45,6 +45,7 @@ namespace GUI.UserControls
             this.TenTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             this.dgTabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableTuaSach)).BeginInit();
@@ -119,44 +120,45 @@ namespace GUI.UserControls
             // 
             this.tableTuaSach.AllowUserToAddRows = false;
             this.tableTuaSach.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.tableTuaSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.tableTuaSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tableTuaSach.BackgroundColor = System.Drawing.SystemColors.Control;
             this.tableTuaSach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableTuaSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableTuaSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tableTuaSach.ColumnHeadersHeight = 50;
             this.tableTuaSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tableTuaSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaTuaSach,
             this.TenTuaSach,
-            this.MaTheLoai});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableTuaSach.DefaultCellStyle = dataGridViewCellStyle7;
+            this.MaTheLoai,
+            this.TacGia});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableTuaSach.DefaultCellStyle = dataGridViewCellStyle3;
             this.tableTuaSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableTuaSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tableTuaSach.Location = new System.Drawing.Point(0, 0);
             this.tableTuaSach.Name = "tableTuaSach";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableTuaSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableTuaSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.tableTuaSach.RowHeadersVisible = false;
             this.tableTuaSach.RowHeadersWidth = 53;
             this.tableTuaSach.RowTemplate.Height = 25;
@@ -211,6 +213,12 @@ namespace GUI.UserControls
             this.siticonePanel2.Size = new System.Drawing.Size(997, 410);
             this.siticonePanel2.TabIndex = 3;
             // 
+            // TacGia
+            // 
+            this.TacGia.HeaderText = "Tác giả";
+            this.TacGia.MinimumWidth = 7;
+            this.TacGia.Name = "TacGia";
+            // 
             // ucTuaSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,5 +247,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn MaTuaSach;
         private DataGridViewTextBoxColumn TenTuaSach;
         private DataGridViewTextBoxColumn MaTheLoai;
+        private DataGridViewTextBoxColumn TacGia;
     }
 }

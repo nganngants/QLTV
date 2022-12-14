@@ -93,6 +93,24 @@
     <Compile Include="BM\BMPhieuThuTienPhat.Designer.cs">
       <DependentUpon>BMPhieuThuTienPhat.cs</DependentUpon>
     </Compile>
+    <Compile Include="BM\BMQLCuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMQLCuonSach.Designer.cs">
+      <DependentUpon>BMQLCuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMQLNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMQLNguoiDung.Designer.cs">
+      <DependentUpon>BMQLNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BM\BMQLTuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMQLTuaSach.Designer.cs">
+      <DependentUpon>BMQLTuaSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="BM\BMThayDoiNhomNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,12 +300,6 @@
     <Compile Include="UserControls\ucDocGia.Designer.cs">
       <DependentUpon>ucDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucHome.Designer.cs">
-      <DependentUpon>ucHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ucLoaiDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -374,6 +386,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BM\BMPhieuThuTienPhat.resx">
       <DependentUpon>BMPhieuThuTienPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMQLCuonSach.resx">
+      <DependentUpon>BMQLCuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMQLNguoiDung.resx">
+      <DependentUpon>BMQLNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMQLTuaSach.resx">
+      <DependentUpon>BMQLTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BM\BMThayDoiNhomNguoiDung.resx">
       <DependentUpon>BMThayDoiNhomNguoiDung.cs</DependentUpon>
@@ -477,9 +498,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucDocGia.resx">
       <DependentUpon>ucDocGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucHome.resx">
-      <DependentUpon>ucHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucLoaiDG.resx">
       <DependentUpon>ucLoaiDG.cs</DependentUpon>
