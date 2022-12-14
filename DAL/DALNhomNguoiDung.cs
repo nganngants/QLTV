@@ -73,6 +73,45 @@ namespace DAL
             }
         }
 
+        public bool AddChucNangForNhom (int id, List<CHUCNANG> dsChucNang)
+        {
+            try
+            {
+                var nhom = GetNhomNguoiDungById(id);
+                if (nhom == null) return false;
+                foreach (var cn in dsChucNang)
+                {
+                    if (!nhom.CHUCNANGs.Contains(cn)) nhom.CHUCNANGs.Add(cn);
+                }
+                QLTVDb.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
+
+        public bool DelChucNangForNhom (int id, List<CHUCNANG> dsChucNang)
+        {
+            try
+            {
+                var nhom = GetNhomNguoiDungById(id);
+                if (nhom == null) return false;
+                foreach (var cn in dsChucNang)
+                {
+                    if (!nhom.CHUCNANGs.Contains(cn)) nhom.CHUCNANGs.Remove(cn);
+                }
+                QLTVDb.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
         public bool DelNhomNguoiDung (int id)
         {
             try

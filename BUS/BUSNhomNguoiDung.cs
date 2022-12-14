@@ -44,8 +44,45 @@ namespace BUS
             if (nnd == null)
             { return "Mã nhóm người dùng không đúng"; }
             if (DALNhomNguoiDung.Instance.UpdNhomNguoiDung(nnd.id, name))
-                return "Không thể cập nhật nhóm người dùng";
-            return "";
+                return "";
+            return "Không thể cập nhật nhóm người dùng";
+        }
+
+        public string AddChucNangForNhom(string maNhomNguoiDung, List<String> dsChucNang)
+        {
+            List<CHUCNANG> ds = new List<CHUCNANG>();
+            foreach(var ma in dsChucNang)
+            {
+                var cn = DALChucNang.Instance.GetChucNangByMa(ma);
+                if (cn == null) return "Danh sách các mã chức năng không hợp lệ.";
+                ds.Add(cn);
+            }
+            // REMEMBER TO ADD LOGIC HERE
+
+            var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
+            if (nnd == null) return "Mã nhóm người dùng không đúng.";
+            if (DALNhomNguoiDung.Instance.AddChucNangForNhom(nnd.id, ds))
+                return "";
+            return "Không thể thêm chức năng cho nhóm người dùng.";
+
+        }
+
+        public string DelChucNangForNhom (string maNhomNguoiDung, List <String> dsChucNang)
+        {
+            List<CHUCNANG> ds = new List<CHUCNANG>();
+            foreach (var ma in dsChucNang)
+            {
+                var cn = DALChucNang.Instance.GetChucNangByMa(ma);
+                if (cn == null) return "Danh sách các mã chức năng không hợp lệ.";
+                ds.Add(cn);
+            }
+            // REMEMBER TO ADD LOGIC HERE
+
+            var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
+            if (nnd == null) return "Mã nhóm người dùng không đúng.";
+            if (DALNhomNguoiDung.Instance.DelChucNangForNhom(nnd.id, ds))
+                return "";
+            return "Không thể thêm chức năng cho nhóm người dùng.";
         }
     }
 }
