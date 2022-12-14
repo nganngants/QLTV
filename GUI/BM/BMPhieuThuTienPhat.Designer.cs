@@ -45,10 +45,10 @@ namespace GUI.BM
             this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneDateTimePicker3 = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.siticoneTextBox3 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticonePanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +108,7 @@ namespace GUI.BM
             // siticonePanel1
             // 
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.siticonePanel1.Controls.Add(this.siticoneTextBox3);
             this.siticonePanel1.Controls.Add(this.label4);
             this.siticonePanel1.Controls.Add(this.siticoneTextBox2);
             this.siticonePanel1.Controls.Add(this.butLogin);
@@ -119,7 +120,6 @@ namespace GUI.BM
             this.siticonePanel1.Controls.Add(this.siticoneTextBox1);
             this.siticonePanel1.Controls.Add(this.siticoneDateTimePicker3);
             this.siticonePanel1.Controls.Add(this.label12);
-            this.siticonePanel1.Controls.Add(this.txtUsername);
             this.siticonePanel1.Controls.Add(this.label2);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
@@ -276,27 +276,6 @@ namespace GUI.BM
             this.label12.TabIndex = 78;
             this.label12.Text = "Ngày lập:";
             // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(166)))), ((int)(((byte)(223)))));
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtUsername.FocusedState.FillColor = System.Drawing.Color.LightSkyBlue;
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtUsername.Location = new System.Drawing.Point(215, 135);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "";
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(368, 51);
-            this.txtUsername.TabIndex = 57;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -319,6 +298,25 @@ namespace GUI.BM
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 68);
             this.panel1.TabIndex = 73;
+            // 
+            // siticoneTextBox3
+            // 
+            this.siticoneTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneTextBox3.DefaultText = "";
+            this.siticoneTextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.siticoneTextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.siticoneTextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.siticoneTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneTextBox3.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.siticoneTextBox3.Location = new System.Drawing.Point(215, 132);
+            this.siticoneTextBox3.Name = "siticoneTextBox3";
+            this.siticoneTextBox3.PasswordChar = '\0';
+            this.siticoneTextBox3.PlaceholderText = "";
+            this.siticoneTextBox3.SelectedText = "";
+            this.siticoneTextBox3.Size = new System.Drawing.Size(368, 51);
+            this.siticoneTextBox3.TabIndex = 101;
             // 
             // BmPhieuThuTienPhat
             // 
@@ -354,12 +352,12 @@ namespace GUI.BM
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker siticoneDateTimePicker3;
         private Label label12;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUsername;
         private Label label2;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox2;
         private Label label3;
         private Label label4;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private Panel panel1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox3;
     }
 }

@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.UserControls
+namespace GUI.BM
 {
-    public partial class ucHome : UserControl
+    public partial class BMQLNguoiDung : Form
     {
-        public ucHome()
+        public BMQLNguoiDung()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
