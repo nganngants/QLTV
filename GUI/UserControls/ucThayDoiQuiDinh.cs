@@ -23,5 +23,11 @@ namespace GUI.UserControls
             var f = new BMThayDoiTheLoai();
             f.Show();
         }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            var f = new BMThayDoiNhomNguoiDung();
+            f.Show();
+        }
     }
 }

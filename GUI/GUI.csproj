@@ -93,6 +93,12 @@
     <Compile Include="BM\BMPhieuThuTienPhat.Designer.cs">
       <DependentUpon>BMPhieuThuTienPhat.cs</DependentUpon>
     </Compile>
+    <Compile Include="BM\BMThayDoiNhomNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM\BMThayDoiNhomNguoiDung.Designer.cs">
+      <DependentUpon>BMThayDoiNhomNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="BM\BMThayDoiTheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BM\BMPhieuThuTienPhat.resx">
       <DependentUpon>BMPhieuThuTienPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM\BMThayDoiNhomNguoiDung.resx">
+      <DependentUpon>BMThayDoiNhomNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BM\BMThayDoiTheLoai.resx">
       <DependentUpon>BMThayDoiTheLoai.cs</DependentUpon>
