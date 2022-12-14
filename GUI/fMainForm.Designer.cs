@@ -110,7 +110,7 @@ namespace GUI
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(12, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 48);
+            this.label2.Size = new System.Drawing.Size(221, 51);
             this.label2.TabIndex = 4;
             this.label2.Text = "UIT LIBRARY";
             // 
@@ -171,6 +171,7 @@ namespace GUI
             // 
             // pageQLDG
             // 
+            this.pageQLDG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.pageQLDG.ImageIndex = 1;
             this.pageQLDG.Location = new System.Drawing.Point(254, 4);
             this.pageQLDG.Margin = new System.Windows.Forms.Padding(0);
@@ -178,10 +179,10 @@ namespace GUI
             this.pageQLDG.Size = new System.Drawing.Size(977, 725);
             this.pageQLDG.TabIndex = 1;
             this.pageQLDG.Text = "Độc giả";
-            this.pageQLDG.UseVisualStyleBackColor = true;
             // 
             // pageQLS
             // 
+            this.pageQLS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.pageQLS.ImageIndex = 2;
             this.pageQLS.Location = new System.Drawing.Point(254, 4);
             this.pageQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -190,10 +191,10 @@ namespace GUI
             this.pageQLS.Size = new System.Drawing.Size(977, 725);
             this.pageQLS.TabIndex = 2;
             this.pageQLS.Text = "Sách";
-            this.pageQLS.UseVisualStyleBackColor = true;
             // 
             // pageQLMT
             // 
+            this.pageQLMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.pageQLMT.ImageIndex = 3;
             this.pageQLMT.Location = new System.Drawing.Point(254, 4);
             this.pageQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -202,10 +203,10 @@ namespace GUI
             this.pageQLMT.Size = new System.Drawing.Size(977, 725);
             this.pageQLMT.TabIndex = 3;
             this.pageQLMT.Text = "Phiếu mượn trả";
-            this.pageQLMT.UseVisualStyleBackColor = true;
             // 
             // pageQLPT
             // 
+            this.pageQLPT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.pageQLPT.ImageIndex = 4;
             this.pageQLPT.Location = new System.Drawing.Point(254, 4);
             this.pageQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -214,10 +215,10 @@ namespace GUI
             this.pageQLPT.Size = new System.Drawing.Size(977, 725);
             this.pageQLPT.TabIndex = 4;
             this.pageQLPT.Text = "Phiếu thu";
-            this.pageQLPT.UseVisualStyleBackColor = true;
             // 
             // pageBC
             // 
+            this.pageBC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.pageBC.ImageIndex = 5;
             this.pageBC.Location = new System.Drawing.Point(254, 4);
             this.pageBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -226,10 +227,10 @@ namespace GUI
             this.pageBC.Size = new System.Drawing.Size(977, 725);
             this.pageBC.TabIndex = 5;
             this.pageBC.Text = "Báo cáo thống kê";
-            this.pageBC.UseVisualStyleBackColor = true;
             // 
             // pageQLND
             // 
+            this.pageQLND.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.pageQLND.ImageIndex = 6;
             this.pageQLND.Location = new System.Drawing.Point(254, 4);
             this.pageQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -238,10 +239,10 @@ namespace GUI
             this.pageQLND.Size = new System.Drawing.Size(977, 725);
             this.pageQLND.TabIndex = 6;
             this.pageQLND.Text = "Người dùng";
-            this.pageQLND.UseVisualStyleBackColor = true;
             // 
             // pageTDQD
             // 
+            this.pageTDQD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.pageTDQD.ImageIndex = 8;
             this.pageTDQD.Location = new System.Drawing.Point(254, 4);
             this.pageTDQD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -250,7 +251,6 @@ namespace GUI
             this.pageTDQD.Size = new System.Drawing.Size(977, 725);
             this.pageTDQD.TabIndex = 7;
             this.pageTDQD.Text = "Thay đổi quy định";
-            this.pageTDQD.UseVisualStyleBackColor = true;
             // 
             // iconList
             // 
@@ -313,7 +313,5 @@ namespace GUI
         private TabPage pageTDQD;
         private TabPage pageAccount;
 
-        // test uc mới
-        private static ucQLPhieuMuonTra uctheloai;
     }
 }

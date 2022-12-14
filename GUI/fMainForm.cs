@@ -31,15 +31,9 @@ namespace GUI
             this.pageHome.Controls.Add(ucBan);
             */
 
-            ////test uc mới
-
-            uctheloai = new UserControls.ucQLPhieuMuonTra();
-            uctheloai.Dock = DockStyle.Fill;
-            this.pageAccount.Controls.Add(uctheloai);
-
-            //uctaikhoan = new UserControls.ucThongTinTaiKhoan();
-            //uctaikhoan.Dock = DockStyle.Fill;
-            //this.pageAccount.Controls.Add(uctaikhoan);
+            uctaikhoan = new UserControls.ucThongTinTaiKhoan();
+            uctaikhoan.Dock = DockStyle.Fill;
+            this.pageAccount.Controls.Add(uctaikhoan);
 
             // tao UC QLDG moi va add no vao page QLDG
             ucqldg = new UserControls.ucQLDG();

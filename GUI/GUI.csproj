@@ -312,12 +312,6 @@
     <Compile Include="UserControls\ucQLPhieuMuon.Designer.cs">
       <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucQLPhieuMuonTra.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucQLPhieuMuonTra.Designer.cs">
-      <DependentUpon>ucQLPhieuMuonTra.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ucQLPhieuThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -347,12 +341,6 @@
     </Compile>
     <Compile Include="UserControls\ucThayDoiQuiDinh.Designer.cs">
       <DependentUpon>ucThayDoiQuiDinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\ucThayDoiTheLoai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucThayDoiTheLoai.Designer.cs">
-      <DependentUpon>ucThayDoiTheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucThongTinTaiKhoan.cs">
       <SubType>UserControl</SubType>
@@ -499,9 +487,6 @@
     <EmbeddedResource Include="UserControls\ucQLPhieuMuon.resx">
       <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucQLPhieuMuonTra.resx">
-      <DependentUpon>ucQLPhieuMuonTra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLPhieuThu.resx">
       <DependentUpon>ucQLPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,9 +501,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThayDoiQuiDinh.resx">
       <DependentUpon>ucThayDoiQuiDinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucThayDoiTheLoai.resx">
-      <DependentUpon>ucThayDoiTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThongTinTaiKhoan.resx">
       <DependentUpon>ucThongTinTaiKhoan.cs</DependentUpon>

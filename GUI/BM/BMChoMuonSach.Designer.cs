@@ -31,13 +31,9 @@ namespace GUI.BM
         private void InitializeComponent()
         {
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
-            this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.siticoneTextBox6 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -60,6 +56,10 @@ namespace GUI.BM
             this.label12 = new System.Windows.Forms.Label();
             this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,57 +100,6 @@ namespace GUI.BM
             this.siticonePanel1.Size = new System.Drawing.Size(1000, 680);
             this.siticonePanel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
-            this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(169, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(690, 95);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Phiếu mượn sách";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // butLogin
-            // 
-            this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butLogin.FillColor = System.Drawing.Color.SlateBlue;
-            this.butLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.butLogin.ForeColor = System.Drawing.Color.White;
-            this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butLogin.Location = new System.Drawing.Point(424, 614);
-            this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(150, 50);
-            this.butLogin.TabIndex = 65;
-            this.butLogin.Text = "Lưu";
-            // 
-            // siticoneControlBox2
-            // 
-            this.siticoneControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox2.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.siticoneControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.siticoneControlBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(1077, -1);
-            this.siticoneControlBox2.Name = "siticoneControlBox2";
-            this.siticoneControlBox2.Size = new System.Drawing.Size(60, 60);
-            this.siticoneControlBox2.TabIndex = 66;
-            // 
-            // siticoneControlBox1
-            // 
-            this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox1.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(1143, -1);
-            this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
-            this.siticoneControlBox1.TabIndex = 67;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -172,6 +121,22 @@ namespace GUI.BM
             this.label14.Size = new System.Drawing.Size(210, 42);
             this.label14.TabIndex = 148;
             this.label14.Text = "Tên cuốn sách";
+            // 
+            // butLogin
+            // 
+            this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butLogin.FillColor = System.Drawing.Color.SlateBlue;
+            this.butLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.butLogin.ForeColor = System.Drawing.Color.White;
+            this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.butLogin.Location = new System.Drawing.Point(424, 614);
+            this.butLogin.Name = "butLogin";
+            this.butLogin.Size = new System.Drawing.Size(150, 50);
+            this.butLogin.TabIndex = 65;
+            this.butLogin.Text = "Lưu";
             // 
             // label13
             // 
@@ -277,8 +242,9 @@ namespace GUI.BM
             // siticoneDateTimePicker1
             // 
             this.siticoneDateTimePicker1.Checked = true;
-            this.siticoneDateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(243)))));
+            this.siticoneDateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneDateTimePicker1.ForeColor = System.Drawing.Color.SlateBlue;
             this.siticoneDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.siticoneDateTimePicker1.Location = new System.Drawing.Point(199, 531);
             this.siticoneDateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -398,8 +364,9 @@ namespace GUI.BM
             // siticoneDateTimePicker3
             // 
             this.siticoneDateTimePicker3.Checked = true;
-            this.siticoneDateTimePicker3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(243)))));
+            this.siticoneDateTimePicker3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneDateTimePicker3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneDateTimePicker3.ForeColor = System.Drawing.Color.SlateBlue;
             this.siticoneDateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.siticoneDateTimePicker3.Location = new System.Drawing.Point(229, 150);
             this.siticoneDateTimePicker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -413,8 +380,9 @@ namespace GUI.BM
             // siticoneDateTimePicker2
             // 
             this.siticoneDateTimePicker2.Checked = true;
-            this.siticoneDateTimePicker2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(243)))));
+            this.siticoneDateTimePicker2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneDateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneDateTimePicker2.ForeColor = System.Drawing.Color.SlateBlue;
             this.siticoneDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.siticoneDateTimePicker2.Location = new System.Drawing.Point(711, 150);
             this.siticoneDateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -476,6 +444,41 @@ namespace GUI.BM
             this.label2.Size = new System.Drawing.Size(177, 42);
             this.label2.TabIndex = 126;
             this.label2.Text = "Mã độc giả:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
+            this.label1.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label1.Location = new System.Drawing.Point(169, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(690, 95);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Phiếu mượn sách";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // siticoneControlBox2
+            // 
+            this.siticoneControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneControlBox2.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.siticoneControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.siticoneControlBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.siticoneControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.siticoneControlBox2.Location = new System.Drawing.Point(1077, -1);
+            this.siticoneControlBox2.Name = "siticoneControlBox2";
+            this.siticoneControlBox2.Size = new System.Drawing.Size(60, 60);
+            this.siticoneControlBox2.TabIndex = 66;
+            // 
+            // siticoneControlBox1
+            // 
+            this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.siticoneControlBox1.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.siticoneControlBox1.Location = new System.Drawing.Point(1143, -1);
+            this.siticoneControlBox1.Name = "siticoneControlBox1";
+            this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
+            this.siticoneControlBox1.TabIndex = 67;
             // 
             // BMChoMuonSach
             // 

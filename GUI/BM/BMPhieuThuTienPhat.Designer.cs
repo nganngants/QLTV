@@ -250,7 +250,7 @@ namespace GUI.BM
             // 
             // siticoneDateTimePicker3
             // 
-            this.siticoneDateTimePicker3.BackColor = System.Drawing.Color.White;
+            this.siticoneDateTimePicker3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneDateTimePicker3.Checked = true;
             this.siticoneDateTimePicker3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneDateTimePicker3.Font = new System.Drawing.Font("Segoe UI", 9F);
