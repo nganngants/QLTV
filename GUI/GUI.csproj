@@ -536,6 +536,9 @@
       <DependentUpon>ucTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.PHIEUTHU.datasource" />
+    <None Include="Properties\DataSources\DTO.SACH.datasource" />
+    <None Include="Properties\DataSources\DTO.TUASACH.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
