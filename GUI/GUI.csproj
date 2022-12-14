@@ -312,6 +312,12 @@
     <Compile Include="UserControls\ucQLPhieuMuon.Designer.cs">
       <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucQLPhieuMuonTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLPhieuMuonTra.Designer.cs">
+      <DependentUpon>ucQLPhieuMuonTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucQLPhieuThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -493,6 +499,9 @@
     <EmbeddedResource Include="UserControls\ucQLPhieuMuon.resx">
       <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLPhieuMuonTra.resx">
+      <DependentUpon>ucQLPhieuMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLPhieuThu.resx">
       <DependentUpon>ucQLPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -563,6 +572,7 @@
     <Content Include="images\user_icon03.png" />
     <None Include="images\white_key_icon.png" />
     <None Include="Resources\69539.png" />
+    <None Include="Resources\9926512.png" />
     <Content Include="Resources\tải xuống %281%29.png" />
     <Content Include="Resources\tải xuống %283%29.png" />
     <Content Include="Resources\Welcome-Svg-Welcome-Sign-Graphics-5026886-1-580x415.jpg" />

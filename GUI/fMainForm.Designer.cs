@@ -313,7 +313,7 @@ namespace GUI
         private TabPage pageTDQD;
         private TabPage pageAccount;
 
-        // test the loai
-        //private static ucThayDoiTheLoai uctheloai;
+        // test uc mới
+        private static ucQLPhieuMuonTra uctheloai;
     }
 }

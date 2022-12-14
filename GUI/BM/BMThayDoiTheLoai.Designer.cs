@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
-            this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.botTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.infoPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -61,6 +59,8 @@
             this.siticoneTextBox2 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel8 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1.SuspendLayout();
             this.botTableLayout.SuspendLayout();
             this.infoPanel.SuspendLayout();
@@ -83,29 +83,6 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(1000, 550);
             this.siticonePanel1.TabIndex = 0;
-            // 
-            // siticoneControlBox1
-            // 
-            this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox1.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(1139, 2);
-            this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
-            this.siticoneControlBox1.TabIndex = 4;
-            // 
-            // siticoneControlBox2
-            // 
-            this.siticoneControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox2.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.siticoneControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.siticoneControlBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(1075, 2);
-            this.siticoneControlBox2.Name = "siticoneControlBox2";
-            this.siticoneControlBox2.Size = new System.Drawing.Size(60, 60);
-            this.siticoneControlBox2.TabIndex = 3;
             // 
             // botTableLayout
             // 
@@ -187,6 +164,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.siticoneDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,7 +200,7 @@
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.siticoneDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.siticoneDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -517,11 +495,34 @@
             this.siticonePanel8.Size = new System.Drawing.Size(75, 77);
             this.siticonePanel8.TabIndex = 0;
             // 
+            // siticoneControlBox1
+            // 
+            this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.siticoneControlBox1.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.siticoneControlBox1.Location = new System.Drawing.Point(1139, 2);
+            this.siticoneControlBox1.Name = "siticoneControlBox1";
+            this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
+            this.siticoneControlBox1.TabIndex = 4;
+            // 
+            // siticoneControlBox2
+            // 
+            this.siticoneControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneControlBox2.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.siticoneControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.siticoneControlBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.siticoneControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.siticoneControlBox2.Location = new System.Drawing.Point(1075, 2);
+            this.siticoneControlBox2.Name = "siticoneControlBox2";
+            this.siticoneControlBox2.Size = new System.Drawing.Size(60, 60);
+            this.siticoneControlBox2.TabIndex = 3;
+            // 
             // BMThayDoiTheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1200, 750);
             this.Controls.Add(this.siticoneControlBox1);
             this.Controls.Add(this.siticoneControlBox2);
