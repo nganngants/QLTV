@@ -31,13 +31,12 @@ namespace GUI.UserControls
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTuaSach));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel14 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel15 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.featPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneButton9 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.feat04 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,11 +67,6 @@ namespace GUI.UserControls
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel12 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.TablePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.tableTuaSach = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.MaTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.botTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.infoPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -80,9 +74,6 @@ namespace GUI.UserControls
             this.siticoneComboBox1 = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticoneImageCheckBox3 = new Siticone.Desktop.UI.WinForms.SiticoneImageCheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneButton9 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.featPanel.SuspendLayout();
             this.feat04.SuspendLayout();
             this.feat03.SuspendLayout();
@@ -93,8 +84,6 @@ namespace GUI.UserControls
             this.siticonePanel13.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             this.siticonePanel12.SuspendLayout();
-            this.TablePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableTuaSach)).BeginInit();
             this.TopPanel.SuspendLayout();
             this.botTableLayout.SuspendLayout();
             this.infoPanel.SuspendLayout();
@@ -138,6 +127,60 @@ namespace GUI.UserControls
             this.featPanel.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.featPanel.Size = new System.Drawing.Size(459, 259);
             this.featPanel.TabIndex = 0;
+            // 
+            // siticoneButton9
+            // 
+            this.siticoneButton9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.siticoneButton9.BorderRadius = 5;
+            this.siticoneButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton9.FillColor = System.Drawing.Color.SlateBlue;
+            this.siticoneButton9.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton9.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton9.Location = new System.Drawing.Point(101, 211);
+            this.siticoneButton9.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneButton9.Name = "siticoneButton9";
+            this.siticoneButton9.Size = new System.Drawing.Size(108, 38);
+            this.siticoneButton9.TabIndex = 18;
+            this.siticoneButton9.Text = "Chi tiết";
+            // 
+            // siticoneButton2
+            // 
+            this.siticoneButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.siticoneButton2.BorderRadius = 5;
+            this.siticoneButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton2.FillColor = System.Drawing.Color.SlateBlue;
+            this.siticoneButton2.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton2.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton2.Location = new System.Drawing.Point(217, 211);
+            this.siticoneButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneButton2.Name = "siticoneButton2";
+            this.siticoneButton2.Size = new System.Drawing.Size(108, 38);
+            this.siticoneButton2.TabIndex = 14;
+            this.siticoneButton2.Text = "Thêm";
+            // 
+            // siticoneButton1
+            // 
+            this.siticoneButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.siticoneButton1.BorderRadius = 5;
+            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton1.FillColor = System.Drawing.Color.SlateBlue;
+            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton1.Location = new System.Drawing.Point(333, 211);
+            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneButton1.Name = "siticoneButton1";
+            this.siticoneButton1.Size = new System.Drawing.Size(108, 38);
+            this.siticoneButton1.TabIndex = 13;
+            this.siticoneButton1.Text = "Xóa";
             // 
             // feat04
             // 
@@ -563,7 +606,6 @@ namespace GUI.UserControls
             this.TablePanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
             this.TablePanel.BorderRadius = 5;
             this.TablePanel.BorderThickness = 2;
-            this.TablePanel.Controls.Add(this.tableTuaSach);
             this.TablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TablePanel.Location = new System.Drawing.Point(0, 303);
             this.TablePanel.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
@@ -571,100 +613,6 @@ namespace GUI.UserControls
             this.TablePanel.Padding = new System.Windows.Forms.Padding(5);
             this.TablePanel.Size = new System.Drawing.Size(997, 293);
             this.TablePanel.TabIndex = 5;
-            // 
-            // tableTuaSach
-            // 
-            this.tableTuaSach.AllowUserToAddRows = false;
-            this.tableTuaSach.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.tableTuaSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.tableTuaSach.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.tableTuaSach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableTuaSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.tableTuaSach.ColumnHeadersHeight = 50;
-            this.tableTuaSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableTuaSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaTuaSach,
-            this.TenTuaSach,
-            this.TheLoai,
-            this.TacGia});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableTuaSach.DefaultCellStyle = dataGridViewCellStyle7;
-            this.tableTuaSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableTuaSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableTuaSach.Location = new System.Drawing.Point(5, 5);
-            this.tableTuaSach.Name = "tableTuaSach";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableTuaSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.tableTuaSach.RowHeadersVisible = false;
-            this.tableTuaSach.RowHeadersWidth = 53;
-            this.tableTuaSach.RowTemplate.Height = 25;
-            this.tableTuaSach.Size = new System.Drawing.Size(987, 283);
-            this.tableTuaSach.TabIndex = 2;
-            this.tableTuaSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableTuaSach.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tableTuaSach.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tableTuaSach.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tableTuaSach.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tableTuaSach.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.tableTuaSach.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableTuaSach.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tableTuaSach.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tableTuaSach.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableTuaSach.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tableTuaSach.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableTuaSach.ThemeStyle.HeaderStyle.Height = 50;
-            this.tableTuaSach.ThemeStyle.ReadOnly = false;
-            this.tableTuaSach.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableTuaSach.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tableTuaSach.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableTuaSach.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tableTuaSach.ThemeStyle.RowsStyle.Height = 25;
-            this.tableTuaSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableTuaSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // MaTuaSach
-            // 
-            this.MaTuaSach.HeaderText = "Mã Tựa Sách";
-            this.MaTuaSach.MinimumWidth = 7;
-            this.MaTuaSach.Name = "MaTuaSach";
-            // 
-            // TenTuaSach
-            // 
-            this.TenTuaSach.HeaderText = "Tên Tựa Sách";
-            this.TenTuaSach.MinimumWidth = 7;
-            this.TenTuaSach.Name = "TenTuaSach";
-            // 
-            // TheLoai
-            // 
-            this.TheLoai.HeaderText = "Thể loại";
-            this.TheLoai.MinimumWidth = 7;
-            this.TheLoai.Name = "TheLoai";
-            // 
-            // TacGia
-            // 
-            this.TacGia.HeaderText = "Tác giả";
-            this.TacGia.MinimumWidth = 7;
-            this.TacGia.Name = "TacGia";
             // 
             // TopPanel
             // 
@@ -769,60 +717,6 @@ namespace GUI.UserControls
             this.label1.TabIndex = 1;
             this.label1.Text = "Tác giả:";
             // 
-            // siticoneButton1
-            // 
-            this.siticoneButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.siticoneButton1.BorderRadius = 5;
-            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton1.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(333, 211);
-            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(108, 38);
-            this.siticoneButton1.TabIndex = 13;
-            this.siticoneButton1.Text = "Xóa";
-            // 
-            // siticoneButton2
-            // 
-            this.siticoneButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.siticoneButton2.BorderRadius = 5;
-            this.siticoneButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton2.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton2.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneButton2.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton2.Location = new System.Drawing.Point(217, 211);
-            this.siticoneButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.siticoneButton2.Name = "siticoneButton2";
-            this.siticoneButton2.Size = new System.Drawing.Size(108, 38);
-            this.siticoneButton2.TabIndex = 14;
-            this.siticoneButton2.Text = "Thêm";
-            // 
-            // siticoneButton9
-            // 
-            this.siticoneButton9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.siticoneButton9.BorderRadius = 5;
-            this.siticoneButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton9.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton9.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneButton9.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton9.Location = new System.Drawing.Point(101, 211);
-            this.siticoneButton9.Margin = new System.Windows.Forms.Padding(4);
-            this.siticoneButton9.Name = "siticoneButton9";
-            this.siticoneButton9.Size = new System.Drawing.Size(108, 38);
-            this.siticoneButton9.TabIndex = 18;
-            this.siticoneButton9.Text = "Chi tiết";
-            // 
             // ucTuaSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -847,8 +741,6 @@ namespace GUI.UserControls
             this.siticonePanel13.ResumeLayout(false);
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel12.ResumeLayout(false);
-            this.TablePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableTuaSach)).EndInit();
             this.TopPanel.ResumeLayout(false);
             this.botTableLayout.ResumeLayout(false);
             this.infoPanel.ResumeLayout(false);
@@ -896,11 +788,6 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox siticoneComboBox4;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox siticoneComboBox3;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView tableTuaSach;
-        private DataGridViewTextBoxColumn MaTuaSach;
-        private DataGridViewTextBoxColumn TenTuaSach;
-        private DataGridViewTextBoxColumn TheLoai;
-        private DataGridViewTextBoxColumn TacGia;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox siticoneComboBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneImageCheckBox siticoneImageCheckBox3;
