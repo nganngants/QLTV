@@ -36,12 +36,25 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.botTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.infoPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel10 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.tableLoaiDocGia = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.MaLoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siticonePanel9 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.PanelSpace = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
+            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.featPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneButton3 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.feat02 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labFeat02 = new System.Windows.Forms.Label();
             this.feat01 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.labFeat01 = new System.Windows.Forms.Label();
@@ -52,33 +65,20 @@ namespace GUI.UserControls
             this.siticoneTextBox2 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel8 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.infoPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
-            this.PanelSpace = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticonePanel9 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticonePanel10 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.tableLoaiDocGia = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.MaLoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TopPanel.SuspendLayout();
             this.botTableLayout.SuspendLayout();
+            this.infoPanel.SuspendLayout();
+            this.siticonePanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableLoaiDocGia)).BeginInit();
+            this.siticonePanel9.SuspendLayout();
+            this.siticonePanel4.SuspendLayout();
             this.featPanel.SuspendLayout();
             this.siticonePanel6.SuspendLayout();
             this.feat02.SuspendLayout();
+            this.siticonePanel2.SuspendLayout();
             this.feat01.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel5.SuspendLayout();
-            this.siticonePanel2.SuspendLayout();
-            this.infoPanel.SuspendLayout();
-            this.siticonePanel4.SuspendLayout();
-            this.siticonePanel9.SuspendLayout();
-            this.siticonePanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableLoaiDocGia)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -107,6 +107,181 @@ namespace GUI.UserControls
             this.botTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.botTableLayout.Size = new System.Drawing.Size(997, 596);
             this.botTableLayout.TabIndex = 15;
+            // 
+            // infoPanel
+            // 
+            this.infoPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.infoPanel.BorderRadius = 5;
+            this.infoPanel.BorderThickness = 2;
+            this.infoPanel.Controls.Add(this.siticonePanel10);
+            this.infoPanel.Controls.Add(this.siticonePanel9);
+            this.infoPanel.Controls.Add(this.PanelSpace);
+            this.infoPanel.Controls.Add(this.siticoneSeparator1);
+            this.infoPanel.Controls.Add(this.siticonePanel4);
+            this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoPanel.Location = new System.Drawing.Point(24, 22);
+            this.infoPanel.Margin = new System.Windows.Forms.Padding(13, 12, 16, 12);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.infoPanel.Size = new System.Drawing.Size(458, 552);
+            this.infoPanel.TabIndex = 0;
+            // 
+            // siticonePanel10
+            // 
+            this.siticonePanel10.Controls.Add(this.tableLoaiDocGia);
+            this.siticonePanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel10.Location = new System.Drawing.Point(11, 94);
+            this.siticonePanel10.Name = "siticonePanel10";
+            this.siticonePanel10.Size = new System.Drawing.Size(436, 394);
+            this.siticonePanel10.TabIndex = 29;
+            // 
+            // tableLoaiDocGia
+            // 
+            this.tableLoaiDocGia.AllowUserToAddRows = false;
+            this.tableLoaiDocGia.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.tableLoaiDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tableLoaiDocGia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tableLoaiDocGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableLoaiDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tableLoaiDocGia.ColumnHeadersHeight = 50;
+            this.tableLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tableLoaiDocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaLoaiDocGia,
+            this.TenLoaiDocGia});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableLoaiDocGia.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tableLoaiDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLoaiDocGia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tableLoaiDocGia.Location = new System.Drawing.Point(0, 0);
+            this.tableLoaiDocGia.Name = "tableLoaiDocGia";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableLoaiDocGia.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.tableLoaiDocGia.RowHeadersVisible = false;
+            this.tableLoaiDocGia.RowHeadersWidth = 53;
+            this.tableLoaiDocGia.RowTemplate.Height = 25;
+            this.tableLoaiDocGia.Size = new System.Drawing.Size(436, 394);
+            this.tableLoaiDocGia.TabIndex = 29;
+            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.tableLoaiDocGia.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tableLoaiDocGia.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
+            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.Height = 50;
+            this.tableLoaiDocGia.ThemeStyle.ReadOnly = false;
+            this.tableLoaiDocGia.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tableLoaiDocGia.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tableLoaiDocGia.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
+            this.tableLoaiDocGia.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tableLoaiDocGia.ThemeStyle.RowsStyle.Height = 25;
+            this.tableLoaiDocGia.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tableLoaiDocGia.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // MaLoaiDocGia
+            // 
+            this.MaLoaiDocGia.HeaderText = "Mã Loại Độc Giả";
+            this.MaLoaiDocGia.MinimumWidth = 7;
+            this.MaLoaiDocGia.Name = "MaLoaiDocGia";
+            // 
+            // TenLoaiDocGia
+            // 
+            this.TenLoaiDocGia.HeaderText = "Tên Loại Độc Giả";
+            this.TenLoaiDocGia.MinimumWidth = 7;
+            this.TenLoaiDocGia.Name = "TenLoaiDocGia";
+            // 
+            // siticonePanel9
+            // 
+            this.siticonePanel9.Controls.Add(this.butSave);
+            this.siticonePanel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.siticonePanel9.Location = new System.Drawing.Point(11, 488);
+            this.siticonePanel9.Name = "siticonePanel9";
+            this.siticonePanel9.Size = new System.Drawing.Size(436, 54);
+            this.siticonePanel9.TabIndex = 28;
+            // 
+            // butSave
+            // 
+            this.butSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butSave.BorderRadius = 5;
+            this.butSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butSave.FillColor = System.Drawing.Color.SlateBlue;
+            this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSave.ForeColor = System.Drawing.Color.White;
+            this.butSave.Image = global::GUI.Properties.Resources._69539;
+            this.butSave.Location = new System.Drawing.Point(260, 4);
+            this.butSave.Margin = new System.Windows.Forms.Padding(4);
+            this.butSave.Name = "butSave";
+            this.butSave.Size = new System.Drawing.Size(159, 38);
+            this.butSave.TabIndex = 8;
+            this.butSave.Text = "Lưu thay đổi";
+            // 
+            // PanelSpace
+            // 
+            this.PanelSpace.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelSpace.Location = new System.Drawing.Point(11, 83);
+            this.PanelSpace.Name = "PanelSpace";
+            this.PanelSpace.Size = new System.Drawing.Size(436, 11);
+            this.PanelSpace.TabIndex = 17;
+            // 
+            // siticoneSeparator1
+            // 
+            this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticoneSeparator1.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 73);
+            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneSeparator1.Name = "siticoneSeparator1";
+            this.siticoneSeparator1.Size = new System.Drawing.Size(436, 10);
+            this.siticoneSeparator1.TabIndex = 16;
+            // 
+            // siticonePanel4
+            // 
+            this.siticonePanel4.Controls.Add(this.label1);
+            this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel4.Location = new System.Drawing.Point(11, 10);
+            this.siticonePanel4.Name = "siticonePanel4";
+            this.siticonePanel4.Size = new System.Drawing.Size(436, 63);
+            this.siticonePanel4.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 36.288F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(687, 84);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Danh sách loại độc giả";
             // 
             // featPanel
             // 
@@ -204,6 +379,35 @@ namespace GUI.UserControls
             this.feat02.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.feat02.Size = new System.Drawing.Size(437, 52);
             this.feat02.TabIndex = 17;
+            // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.Controls.Add(this.siticoneTextBox1);
+            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel2.Location = new System.Drawing.Point(190, 15);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.Size = new System.Drawing.Size(247, 33);
+            this.siticonePanel2.TabIndex = 1;
+            // 
+            // siticoneTextBox1
+            // 
+            this.siticoneTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneTextBox1.DefaultText = "";
+            this.siticoneTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.siticoneTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.siticoneTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.siticoneTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.siticoneTextBox1.Name = "siticoneTextBox1";
+            this.siticoneTextBox1.PasswordChar = '\0';
+            this.siticoneTextBox1.PlaceholderText = "";
+            this.siticoneTextBox1.SelectedText = "";
+            this.siticoneTextBox1.Size = new System.Drawing.Size(247, 33);
+            this.siticoneTextBox1.TabIndex = 87;
             // 
             // labFeat02
             // 
@@ -331,210 +535,6 @@ namespace GUI.UserControls
             this.siticonePanel8.Size = new System.Drawing.Size(75, 63);
             this.siticonePanel8.TabIndex = 0;
             // 
-            // siticonePanel2
-            // 
-            this.siticonePanel2.Controls.Add(this.siticoneTextBox1);
-            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel2.Location = new System.Drawing.Point(190, 15);
-            this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(247, 33);
-            this.siticonePanel2.TabIndex = 1;
-            // 
-            // siticoneTextBox1
-            // 
-            this.siticoneTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox1.DefaultText = "";
-            this.siticoneTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.siticoneTextBox1.Name = "siticoneTextBox1";
-            this.siticoneTextBox1.PasswordChar = '\0';
-            this.siticoneTextBox1.PlaceholderText = "";
-            this.siticoneTextBox1.SelectedText = "";
-            this.siticoneTextBox1.Size = new System.Drawing.Size(247, 33);
-            this.siticoneTextBox1.TabIndex = 87;
-            // 
-            // infoPanel
-            // 
-            this.infoPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.infoPanel.BorderRadius = 5;
-            this.infoPanel.BorderThickness = 2;
-            this.infoPanel.Controls.Add(this.siticonePanel10);
-            this.infoPanel.Controls.Add(this.siticonePanel9);
-            this.infoPanel.Controls.Add(this.PanelSpace);
-            this.infoPanel.Controls.Add(this.siticoneSeparator1);
-            this.infoPanel.Controls.Add(this.siticonePanel4);
-            this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoPanel.Location = new System.Drawing.Point(24, 22);
-            this.infoPanel.Margin = new System.Windows.Forms.Padding(13, 12, 16, 12);
-            this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.infoPanel.Size = new System.Drawing.Size(458, 552);
-            this.infoPanel.TabIndex = 0;
-            // 
-            // siticonePanel4
-            // 
-            this.siticonePanel4.Controls.Add(this.label1);
-            this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel4.Location = new System.Drawing.Point(11, 10);
-            this.siticonePanel4.Name = "siticonePanel4";
-            this.siticonePanel4.Size = new System.Drawing.Size(436, 63);
-            this.siticonePanel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 36.288F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(687, 84);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Danh sách loại độc giả";
-            // 
-            // siticoneSeparator1
-            // 
-            this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneSeparator1.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 73);
-            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
-            this.siticoneSeparator1.Name = "siticoneSeparator1";
-            this.siticoneSeparator1.Size = new System.Drawing.Size(436, 10);
-            this.siticoneSeparator1.TabIndex = 16;
-            // 
-            // PanelSpace
-            // 
-            this.PanelSpace.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSpace.Location = new System.Drawing.Point(11, 83);
-            this.PanelSpace.Name = "PanelSpace";
-            this.PanelSpace.Size = new System.Drawing.Size(436, 11);
-            this.PanelSpace.TabIndex = 17;
-            // 
-            // siticonePanel9
-            // 
-            this.siticonePanel9.Controls.Add(this.butSave);
-            this.siticonePanel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel9.Location = new System.Drawing.Point(11, 488);
-            this.siticonePanel9.Name = "siticonePanel9";
-            this.siticonePanel9.Size = new System.Drawing.Size(436, 54);
-            this.siticonePanel9.TabIndex = 28;
-            // 
-            // butSave
-            // 
-            this.butSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butSave.BorderRadius = 5;
-            this.butSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butSave.FillColor = System.Drawing.Color.SlateBlue;
-            this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butSave.ForeColor = System.Drawing.Color.White;
-            this.butSave.Image = global::GUI.Properties.Resources._69539;
-            this.butSave.Location = new System.Drawing.Point(260, 4);
-            this.butSave.Margin = new System.Windows.Forms.Padding(4);
-            this.butSave.Name = "butSave";
-            this.butSave.Size = new System.Drawing.Size(159, 38);
-            this.butSave.TabIndex = 8;
-            this.butSave.Text = "Lưu thay đổi";
-            // 
-            // siticonePanel10
-            // 
-            this.siticonePanel10.Controls.Add(this.tableLoaiDocGia);
-            this.siticonePanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel10.Location = new System.Drawing.Point(11, 94);
-            this.siticonePanel10.Name = "siticonePanel10";
-            this.siticonePanel10.Size = new System.Drawing.Size(436, 394);
-            this.siticonePanel10.TabIndex = 29;
-            // 
-            // tableLoaiDocGia
-            // 
-            this.tableLoaiDocGia.AllowUserToAddRows = false;
-            this.tableLoaiDocGia.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tableLoaiDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tableLoaiDocGia.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.tableLoaiDocGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableLoaiDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tableLoaiDocGia.ColumnHeadersHeight = 50;
-            this.tableLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableLoaiDocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaLoaiDocGia,
-            this.TenLoaiDocGia});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableLoaiDocGia.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tableLoaiDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLoaiDocGia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableLoaiDocGia.Location = new System.Drawing.Point(0, 0);
-            this.tableLoaiDocGia.Name = "tableLoaiDocGia";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableLoaiDocGia.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tableLoaiDocGia.RowHeadersVisible = false;
-            this.tableLoaiDocGia.RowHeadersWidth = 53;
-            this.tableLoaiDocGia.RowTemplate.Height = 25;
-            this.tableLoaiDocGia.Size = new System.Drawing.Size(436, 394);
-            this.tableLoaiDocGia.TabIndex = 29;
-            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tableLoaiDocGia.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tableLoaiDocGia.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.tableLoaiDocGia.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableLoaiDocGia.ThemeStyle.HeaderStyle.Height = 50;
-            this.tableLoaiDocGia.ThemeStyle.ReadOnly = false;
-            this.tableLoaiDocGia.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableLoaiDocGia.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tableLoaiDocGia.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableLoaiDocGia.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tableLoaiDocGia.ThemeStyle.RowsStyle.Height = 25;
-            this.tableLoaiDocGia.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableLoaiDocGia.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // MaLoaiDocGia
-            // 
-            this.MaLoaiDocGia.HeaderText = "Mã Loại Độc Giả";
-            this.MaLoaiDocGia.MinimumWidth = 7;
-            this.MaLoaiDocGia.Name = "MaLoaiDocGia";
-            // 
-            // TenLoaiDocGia
-            // 
-            this.TenLoaiDocGia.HeaderText = "Tên Loại Độc Giả";
-            this.TenLoaiDocGia.MinimumWidth = 7;
-            this.TenLoaiDocGia.Name = "TenLoaiDocGia";
-            // 
             // ucLoaiDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -544,21 +544,21 @@ namespace GUI.UserControls
             this.Size = new System.Drawing.Size(997, 596);
             this.TopPanel.ResumeLayout(false);
             this.botTableLayout.ResumeLayout(false);
+            this.infoPanel.ResumeLayout(false);
+            this.siticonePanel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tableLoaiDocGia)).EndInit();
+            this.siticonePanel9.ResumeLayout(false);
+            this.siticonePanel4.ResumeLayout(false);
+            this.siticonePanel4.PerformLayout();
             this.featPanel.ResumeLayout(false);
             this.siticonePanel6.ResumeLayout(false);
             this.feat02.ResumeLayout(false);
             this.feat02.PerformLayout();
+            this.siticonePanel2.ResumeLayout(false);
             this.feat01.ResumeLayout(false);
             this.feat01.PerformLayout();
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel5.ResumeLayout(false);
-            this.siticonePanel2.ResumeLayout(false);
-            this.infoPanel.ResumeLayout(false);
-            this.siticonePanel4.ResumeLayout(false);
-            this.siticonePanel4.PerformLayout();
-            this.siticonePanel9.ResumeLayout(false);
-            this.siticonePanel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableLoaiDocGia)).EndInit();
             this.ResumeLayout(false);
 
         }
