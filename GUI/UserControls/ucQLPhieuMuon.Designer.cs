@@ -30,6 +30,7 @@ namespace GUI.UserControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,21 +41,19 @@ namespace GUI.UserControls
             this.pageSua = new System.Windows.Forms.TabPage();
             this.pageXoa = new System.Windows.Forms.TabPage();
             this.pageTim = new System.Windows.Forms.TabPage();
-            this.tablePhieuMuonTra = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.SoPhieuMuonTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhieuMuonTraGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.pHIEUMUONTRABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.soPhieuMuonTraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayMuonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayTraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hanTraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soTienPhatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             this.dgTabControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePhieuMuonTra)).BeginInit();
             this.siticonePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonTraGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONTRABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -121,143 +120,142 @@ namespace GUI.UserControls
             this.pageTim.Text = "Tìm kiếm";
             this.pageTim.UseVisualStyleBackColor = true;
             // 
-            // tablePhieuMuonTra
-            // 
-            this.tablePhieuMuonTra.AllowUserToAddRows = false;
-            this.tablePhieuMuonTra.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tablePhieuMuonTra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tablePhieuMuonTra.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.tablePhieuMuonTra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablePhieuMuonTra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tablePhieuMuonTra.ColumnHeadersHeight = 50;
-            this.tablePhieuMuonTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tablePhieuMuonTra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SoPhieuMuonTra,
-            this.MaDocGia,
-            this.TenDocGia,
-            this.MaCuonSach,
-            this.TenCuonSach,
-            this.NgayMuon,
-            this.HanTra,
-            this.NgayTra,
-            this.SoTienPhat});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablePhieuMuonTra.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tablePhieuMuonTra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablePhieuMuonTra.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tablePhieuMuonTra.Location = new System.Drawing.Point(0, 0);
-            this.tablePhieuMuonTra.Name = "tablePhieuMuonTra";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablePhieuMuonTra.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tablePhieuMuonTra.RowHeadersVisible = false;
-            this.tablePhieuMuonTra.RowHeadersWidth = 53;
-            this.tablePhieuMuonTra.RowTemplate.Height = 25;
-            this.tablePhieuMuonTra.Size = new System.Drawing.Size(997, 410);
-            this.tablePhieuMuonTra.TabIndex = 0;
-            this.tablePhieuMuonTra.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tablePhieuMuonTra.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tablePhieuMuonTra.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tablePhieuMuonTra.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tablePhieuMuonTra.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tablePhieuMuonTra.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.tablePhieuMuonTra.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tablePhieuMuonTra.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tablePhieuMuonTra.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tablePhieuMuonTra.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tablePhieuMuonTra.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tablePhieuMuonTra.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tablePhieuMuonTra.ThemeStyle.HeaderStyle.Height = 50;
-            this.tablePhieuMuonTra.ThemeStyle.ReadOnly = false;
-            this.tablePhieuMuonTra.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tablePhieuMuonTra.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tablePhieuMuonTra.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tablePhieuMuonTra.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tablePhieuMuonTra.ThemeStyle.RowsStyle.Height = 25;
-            this.tablePhieuMuonTra.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tablePhieuMuonTra.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // siticonePanel2
             // 
-            this.siticonePanel2.Controls.Add(this.tablePhieuMuonTra);
+            this.siticonePanel2.Controls.Add(this.PhieuMuonTraGrid);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel2.Location = new System.Drawing.Point(0, 186);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(997, 410);
             this.siticonePanel2.TabIndex = 3;
             // 
-            // SoPhieuMuonTra
+            // PhieuMuonTraGrid
             // 
-            this.SoPhieuMuonTra.HeaderText = "Số Phiếu Mượn Trả";
-            this.SoPhieuMuonTra.MinimumWidth = 7;
-            this.SoPhieuMuonTra.Name = "SoPhieuMuonTra";
+            this.PhieuMuonTraGrid.AllowUserToAddRows = false;
+            this.PhieuMuonTraGrid.AllowUserToDeleteRows = false;
+            this.PhieuMuonTraGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PhieuMuonTraGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.PhieuMuonTraGrid.AutoGenerateColumns = false;
+            this.PhieuMuonTraGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PhieuMuonTraGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.PhieuMuonTraGrid.ColumnHeadersHeight = 35;
+            this.PhieuMuonTraGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.PhieuMuonTraGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.soPhieuMuonTraDataGridViewTextBoxColumn,
+            this.ngayMuonDataGridViewTextBoxColumn,
+            this.ngayTraDataGridViewTextBoxColumn,
+            this.hanTraDataGridViewTextBoxColumn,
+            this.soTienPhatDataGridViewTextBoxColumn});
+            this.PhieuMuonTraGrid.DataSource = this.pHIEUMUONTRABindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PhieuMuonTraGrid.DefaultCellStyle = dataGridViewCellStyle1;
+            this.PhieuMuonTraGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhieuMuonTraGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.PhieuMuonTraGrid.Location = new System.Drawing.Point(0, 0);
+            this.PhieuMuonTraGrid.Name = "PhieuMuonTraGrid";
+            this.PhieuMuonTraGrid.ReadOnly = true;
+            this.PhieuMuonTraGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PhieuMuonTraGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.PhieuMuonTraGrid.RowHeadersVisible = false;
+            this.PhieuMuonTraGrid.RowHeadersWidth = 51;
+            this.PhieuMuonTraGrid.RowTemplate.Height = 28;
+            this.PhieuMuonTraGrid.Size = new System.Drawing.Size(997, 410);
+            this.PhieuMuonTraGrid.TabIndex = 0;
+            this.PhieuMuonTraGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.PhieuMuonTraGrid.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhieuMuonTraGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.PhieuMuonTraGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.PhieuMuonTraGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PhieuMuonTraGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.PhieuMuonTraGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.PhieuMuonTraGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.PhieuMuonTraGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.PhieuMuonTraGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhieuMuonTraGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.PhieuMuonTraGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.PhieuMuonTraGrid.ThemeStyle.HeaderStyle.Height = 35;
+            this.PhieuMuonTraGrid.ThemeStyle.ReadOnly = true;
+            this.PhieuMuonTraGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.PhieuMuonTraGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.PhieuMuonTraGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhieuMuonTraGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PhieuMuonTraGrid.ThemeStyle.RowsStyle.Height = 28;
+            this.PhieuMuonTraGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.PhieuMuonTraGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // MaDocGia
+            // pHIEUMUONTRABindingSource
             // 
-            this.MaDocGia.HeaderText = "Mã Độc Giả";
-            this.MaDocGia.MinimumWidth = 7;
-            this.MaDocGia.Name = "MaDocGia";
+            this.pHIEUMUONTRABindingSource.DataSource = typeof(DTO.PHIEUMUONTRA);
             // 
-            // TenDocGia
+            // soPhieuMuonTraDataGridViewTextBoxColumn
             // 
-            this.TenDocGia.HeaderText = "Tên Độc Giả";
-            this.TenDocGia.MinimumWidth = 7;
-            this.TenDocGia.Name = "TenDocGia";
+            this.soPhieuMuonTraDataGridViewTextBoxColumn.DataPropertyName = "SoPhieuMuonTra";
+            this.soPhieuMuonTraDataGridViewTextBoxColumn.HeaderText = "Số phiếu";
+            this.soPhieuMuonTraDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.soPhieuMuonTraDataGridViewTextBoxColumn.Name = "soPhieuMuonTraDataGridViewTextBoxColumn";
+            this.soPhieuMuonTraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.soPhieuMuonTraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // MaCuonSach
+            // ngayMuonDataGridViewTextBoxColumn
             // 
-            this.MaCuonSach.HeaderText = "Mã Cuốn Sách";
-            this.MaCuonSach.MinimumWidth = 7;
-            this.MaCuonSach.Name = "MaCuonSach";
+            this.ngayMuonDataGridViewTextBoxColumn.DataPropertyName = "NgayMuon";
+            this.ngayMuonDataGridViewTextBoxColumn.HeaderText = "Ngày mượn";
+            this.ngayMuonDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ngayMuonDataGridViewTextBoxColumn.Name = "ngayMuonDataGridViewTextBoxColumn";
+            this.ngayMuonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ngayMuonDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // TenCuonSach
+            // ngayTraDataGridViewTextBoxColumn
             // 
-            this.TenCuonSach.HeaderText = "Tên Cuốn Sách";
-            this.TenCuonSach.MinimumWidth = 7;
-            this.TenCuonSach.Name = "TenCuonSach";
+            this.ngayTraDataGridViewTextBoxColumn.DataPropertyName = "NgayTra";
+            this.ngayTraDataGridViewTextBoxColumn.HeaderText = "Ngày trả";
+            this.ngayTraDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ngayTraDataGridViewTextBoxColumn.Name = "ngayTraDataGridViewTextBoxColumn";
+            this.ngayTraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ngayTraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // NgayMuon
+            // hanTraDataGridViewTextBoxColumn
             // 
-            this.NgayMuon.HeaderText = "Ngày Mượn";
-            this.NgayMuon.MinimumWidth = 7;
-            this.NgayMuon.Name = "NgayMuon";
+            this.hanTraDataGridViewTextBoxColumn.DataPropertyName = "HanTra";
+            this.hanTraDataGridViewTextBoxColumn.HeaderText = "Hạn trả";
+            this.hanTraDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hanTraDataGridViewTextBoxColumn.Name = "hanTraDataGridViewTextBoxColumn";
+            this.hanTraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hanTraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // HanTra
+            // soTienPhatDataGridViewTextBoxColumn
             // 
-            this.HanTra.HeaderText = "Hạn Trả";
-            this.HanTra.MinimumWidth = 7;
-            this.HanTra.Name = "HanTra";
-            // 
-            // NgayTra
-            // 
-            this.NgayTra.HeaderText = "Ngày Trả";
-            this.NgayTra.MinimumWidth = 7;
-            this.NgayTra.Name = "NgayTra";
-            // 
-            // SoTienPhat
-            // 
-            this.SoTienPhat.HeaderText = "Số Tiền Phạt";
-            this.SoTienPhat.MinimumWidth = 7;
-            this.SoTienPhat.Name = "SoTienPhat";
+            this.soTienPhatDataGridViewTextBoxColumn.DataPropertyName = "SoTienPhat";
+            this.soTienPhatDataGridViewTextBoxColumn.HeaderText = "Tiền phạt";
+            this.soTienPhatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.soTienPhatDataGridViewTextBoxColumn.Name = "soTienPhatDataGridViewTextBoxColumn";
+            this.soTienPhatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.soTienPhatDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ucQLPhieuMuon
             // 
@@ -269,29 +267,27 @@ namespace GUI.UserControls
             this.Size = new System.Drawing.Size(997, 596);
             this.siticonePanel1.ResumeLayout(false);
             this.dgTabControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tablePhieuMuonTra)).EndInit();
             this.siticonePanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonTraGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONTRABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView tablePhieuMuonTra;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private TabControl dgTabControl;
         private TabPage pageThem;
         private TabPage pageSua;
         private TabPage pageXoa;
         private TabPage pageTim;
-        private DataGridViewTextBoxColumn SoPhieuMuonTra;
-        private DataGridViewTextBoxColumn MaDocGia;
-        private DataGridViewTextBoxColumn TenDocGia;
-        private DataGridViewTextBoxColumn MaCuonSach;
-        private DataGridViewTextBoxColumn TenCuonSach;
-        private DataGridViewTextBoxColumn NgayMuon;
-        private DataGridViewTextBoxColumn HanTra;
-        private DataGridViewTextBoxColumn NgayTra;
-        private DataGridViewTextBoxColumn SoTienPhat;
+        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView PhieuMuonTraGrid;
+        private DataGridViewTextBoxColumn soPhieuMuonTraDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn ngayMuonDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn ngayTraDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn hanTraDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn soTienPhatDataGridViewTextBoxColumn;
+        private BindingSource pHIEUMUONTRABindingSource;
     }
 }

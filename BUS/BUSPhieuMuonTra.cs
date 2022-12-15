@@ -81,7 +81,7 @@ namespace BUS
                 return "";
             return "Lỗi không thể cập nhật phiếu mượn.";
         }
-        public List<PHIEUMUONTRA> GetPHIEUMUONTRA()
+        public List<PHIEUMUONTRA> GetAllPHIEUMUONTRA()
         {
             return DALPhieuMuonTra.Instance.GetAllPhieuMuonTra();
         }
