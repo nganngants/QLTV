@@ -25,12 +25,11 @@ namespace BUS
         {
             return DALCuonSach.Instance.GetAllCuonSach();
         }
-        public SACH GetSachOfCuonSach(string MaCuonSach)
+        public CUONSACH GetCuonSach(string MaCuonSach)
         {
-            CUONSACH cs;
-            cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
-           
-            return DALSach.Instance.GetSachById((int)cs.idSach);
+
+            CUONSACH cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
+            return cs;
         }
         public string DelCuonSach(string MaCuonSach)
         {

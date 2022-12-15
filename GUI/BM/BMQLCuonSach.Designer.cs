@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneNumericUpDown1 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TheLoaiLabel = new System.Windows.Forms.Label();
+            this.NamXBLabel = new System.Windows.Forms.Label();
+            this.TacGiaLabel = new System.Windows.Forms.Label();
+            this.NxbLabel = new System.Windows.Forms.Label();
+            this.TinhTrangLabel = new System.Windows.Forms.Label();
+            this.TenSachLabel = new System.Windows.Forms.Label();
+            this.MaSachLabel = new System.Windows.Forms.Label();
+            this.MaCuonSachLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -49,140 +48,120 @@
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticonePanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.siticonePanel1.BorderThickness = 2;
-            this.siticonePanel1.Controls.Add(this.siticoneNumericUpDown1);
-            this.siticonePanel1.Controls.Add(this.txtUsername);
-            this.siticonePanel1.Controls.Add(this.label6);
-            this.siticonePanel1.Controls.Add(this.butLogin);
-            this.siticonePanel1.Controls.Add(this.label5);
-            this.siticonePanel1.Controls.Add(this.label4);
-            this.siticonePanel1.Controls.Add(this.label3);
-            this.siticonePanel1.Controls.Add(this.label2);
+            this.siticonePanel1.Controls.Add(this.TheLoaiLabel);
+            this.siticonePanel1.Controls.Add(this.NamXBLabel);
+            this.siticonePanel1.Controls.Add(this.TacGiaLabel);
+            this.siticonePanel1.Controls.Add(this.NxbLabel);
+            this.siticonePanel1.Controls.Add(this.TinhTrangLabel);
+            this.siticonePanel1.Controls.Add(this.TenSachLabel);
+            this.siticonePanel1.Controls.Add(this.MaSachLabel);
+            this.siticonePanel1.Controls.Add(this.MaCuonSachLabel);
             this.siticonePanel1.Controls.Add(this.label1);
             this.siticonePanel1.Location = new System.Drawing.Point(100, 100);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(800, 520);
             this.siticonePanel1.TabIndex = 0;
+            this.siticonePanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.siticonePanel1_Paint);
             // 
-            // siticoneNumericUpDown1
+            // TheLoaiLabel
             // 
-            this.siticoneNumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneNumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown1.Location = new System.Drawing.Point(252, 358);
-            this.siticoneNumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneNumericUpDown1.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.siticoneNumericUpDown1.Name = "siticoneNumericUpDown1";
-            this.siticoneNumericUpDown1.Size = new System.Drawing.Size(100, 50);
-            this.siticoneNumericUpDown1.TabIndex = 74;
-            this.siticoneNumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneNumericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.TheLoaiLabel.AutoSize = true;
+            this.TheLoaiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TheLoaiLabel.ForeColor = System.Drawing.Color.SlateBlue;
+            this.TheLoaiLabel.Location = new System.Drawing.Point(141, 414);
+            this.TheLoaiLabel.Name = "TheLoaiLabel";
+            this.TheLoaiLabel.Size = new System.Drawing.Size(129, 36);
+            this.TheLoaiLabel.TabIndex = 81;
+            this.TheLoaiLabel.Text = "Thể loại:";
             // 
-            // txtUsername
+            // NamXBLabel
             // 
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtUsername.Location = new System.Drawing.Point(223, 229);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "";
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(258, 50);
-            this.txtUsername.TabIndex = 67;
+            this.NamXBLabel.AutoSize = true;
+            this.NamXBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NamXBLabel.ForeColor = System.Drawing.Color.SlateBlue;
+            this.NamXBLabel.Location = new System.Drawing.Point(141, 370);
+            this.NamXBLabel.Name = "NamXBLabel";
+            this.NamXBLabel.Size = new System.Drawing.Size(133, 36);
+            this.NamXBLabel.TabIndex = 80;
+            this.NamXBLabel.Text = "Năm XB:";
             // 
-            // label6
+            // TacGiaLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 17.856F);
-            this.label6.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label6.Location = new System.Drawing.Point(299, 164);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 42);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "CS1234";
+            this.TacGiaLabel.AutoSize = true;
+            this.TacGiaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TacGiaLabel.ForeColor = System.Drawing.Color.SlateBlue;
+            this.TacGiaLabel.Location = new System.Drawing.Point(141, 238);
+            this.TacGiaLabel.Name = "TacGiaLabel";
+            this.TacGiaLabel.Size = new System.Drawing.Size(120, 36);
+            this.TacGiaLabel.TabIndex = 79;
+            this.TacGiaLabel.Text = "Tác giả:";
             // 
-            // butLogin
+            // NxbLabel
             // 
-            this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butLogin.FillColor = System.Drawing.Color.SlateBlue;
-            this.butLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.butLogin.ForeColor = System.Drawing.Color.White;
-            this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butLogin.Location = new System.Drawing.Point(325, 450);
-            this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(150, 50);
-            this.butLogin.TabIndex = 65;
-            this.butLogin.Text = "Lưu";
+            this.NxbLabel.AutoSize = true;
+            this.NxbLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NxbLabel.ForeColor = System.Drawing.Color.SlateBlue;
+            this.NxbLabel.Location = new System.Drawing.Point(141, 282);
+            this.NxbLabel.Name = "NxbLabel";
+            this.NxbLabel.Size = new System.Drawing.Size(86, 36);
+            this.NxbLabel.TabIndex = 78;
+            this.NxbLabel.Text = "NXB:";
             // 
-            // label5
+            // TinhTrangLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 17.856F);
-            this.label5.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label5.Location = new System.Drawing.Point(79, 358);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 42);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "Tình trạng:";
+            this.TinhTrangLabel.AutoSize = true;
+            this.TinhTrangLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TinhTrangLabel.ForeColor = System.Drawing.Color.SlateBlue;
+            this.TinhTrangLabel.Location = new System.Drawing.Point(141, 326);
+            this.TinhTrangLabel.Name = "TinhTrangLabel";
+            this.TinhTrangLabel.Size = new System.Drawing.Size(158, 36);
+            this.TinhTrangLabel.TabIndex = 50;
+            this.TinhTrangLabel.Text = "Tình trạng:";
             // 
-            // label4
+            // TenSachLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 17.856F);
-            this.label4.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label4.Location = new System.Drawing.Point(79, 294);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 42);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Tên sách:";
+            this.TenSachLabel.AutoSize = true;
+            this.TenSachLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenSachLabel.ForeColor = System.Drawing.Color.SlateBlue;
+            this.TenSachLabel.Location = new System.Drawing.Point(141, 194);
+            this.TenSachLabel.Name = "TenSachLabel";
+            this.TenSachLabel.Size = new System.Drawing.Size(145, 36);
+            this.TenSachLabel.TabIndex = 49;
+            this.TenSachLabel.Text = "Tên sách:";
             // 
-            // label3
+            // MaSachLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 17.856F);
-            this.label3.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label3.Location = new System.Drawing.Point(79, 229);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 42);
-            this.label3.TabIndex = 48;
-            this.label3.Text = "Mã sách:";
+            this.MaSachLabel.AutoSize = true;
+            this.MaSachLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaSachLabel.ForeColor = System.Drawing.Color.SlateBlue;
+            this.MaSachLabel.Location = new System.Drawing.Point(141, 150);
+            this.MaSachLabel.Name = "MaSachLabel";
+            this.MaSachLabel.Size = new System.Drawing.Size(135, 36);
+            this.MaSachLabel.TabIndex = 48;
+            this.MaSachLabel.Text = "Mã sách:";
             // 
-            // label2
+            // MaCuonSachLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 17.856F);
-            this.label2.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label2.Location = new System.Drawing.Point(79, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 42);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Mã cuốn sách:";
+            this.MaCuonSachLabel.AutoSize = true;
+            this.MaCuonSachLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaCuonSachLabel.ForeColor = System.Drawing.Color.SlateBlue;
+            this.MaCuonSachLabel.Location = new System.Drawing.Point(141, 104);
+            this.MaCuonSachLabel.Name = "MaCuonSachLabel";
+            this.MaCuonSachLabel.Size = new System.Drawing.Size(209, 36);
+            this.MaCuonSachLabel.TabIndex = 47;
+            this.MaCuonSachLabel.Text = "Mã cuốn sách:";
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(4, 16);
+            this.label1.Location = new System.Drawing.Point(117, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(796, 95);
+            this.label1.Size = new System.Drawing.Size(566, 69);
             this.label1.TabIndex = 5;
             this.label1.Text = "Thông tin cuốn sách";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,7 +173,7 @@
             this.siticoneControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.siticoneControlBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.siticoneControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(891, -2);
+            this.siticoneControlBox2.Location = new System.Drawing.Point(886, -2);
             this.siticoneControlBox2.Name = "siticoneControlBox2";
             this.siticoneControlBox2.Size = new System.Drawing.Size(55, 45);
             this.siticoneControlBox2.TabIndex = 5;
@@ -205,7 +184,7 @@
             this.siticoneControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.siticoneControlBox1.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(942, -2);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(937, -2);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
             this.siticoneControlBox1.Size = new System.Drawing.Size(57, 45);
             this.siticoneControlBox1.TabIndex = 6;
@@ -215,16 +194,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1000, 720);
+            this.ClientSize = new System.Drawing.Size(995, 720);
             this.Controls.Add(this.siticoneControlBox2);
             this.Controls.Add(this.siticoneControlBox1);
             this.Controls.Add(this.siticonePanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BMQLCuonSach";
             this.Text = "BMQLCuonSach";
+            this.Load += new System.EventHandler(this.BMQLCuonSach_Load);
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,13 +214,13 @@
         private System.Windows.Forms.Label label1;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butLogin;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUsername;
-        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown siticoneNumericUpDown1;
+        private System.Windows.Forms.Label MaCuonSachLabel;
+        private System.Windows.Forms.Label TinhTrangLabel;
+        private System.Windows.Forms.Label NxbLabel;
+        private System.Windows.Forms.Label MaSachLabel;
+        private System.Windows.Forms.Label TenSachLabel;
+        private System.Windows.Forms.Label TheLoaiLabel;
+        private System.Windows.Forms.Label NamXBLabel;
+        private System.Windows.Forms.Label TacGiaLabel;
     }
 }
