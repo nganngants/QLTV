@@ -31,6 +31,7 @@ namespace GUI.UserControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -68,10 +69,11 @@ namespace GUI.UserControls
             this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.CuonSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUONSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maCuonSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel3.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
@@ -89,6 +91,7 @@ namespace GUI.UserControls
             this.siticonePanel12.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CuonSachGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -498,6 +501,7 @@ namespace GUI.UserControls
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.CuonSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.CuonSachGrid.AutoGenerateColumns = false;
             this.CuonSachGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.CuonSachGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -511,10 +515,11 @@ namespace GUI.UserControls
             this.CuonSachGrid.ColumnHeadersHeight = 35;
             this.CuonSachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.CuonSachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaCuonSach,
             this.MaSach,
             this.TenTuaSach,
-            this.TinhTrang});
+            this.maCuonSachDataGridViewTextBoxColumn,
+            this.tinhTrangDataGridViewTextBoxColumn});
+            this.CuonSachGrid.DataSource = this.cUONSACHBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -528,6 +533,7 @@ namespace GUI.UserControls
             this.CuonSachGrid.Location = new System.Drawing.Point(0, 0);
             this.CuonSachGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CuonSachGrid.Name = "CuonSachGrid";
+            this.CuonSachGrid.ReadOnly = true;
             this.CuonSachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -555,7 +561,7 @@ namespace GUI.UserControls
             this.CuonSachGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.CuonSachGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.CuonSachGrid.ThemeStyle.HeaderStyle.Height = 35;
-            this.CuonSachGrid.ThemeStyle.ReadOnly = false;
+            this.CuonSachGrid.ThemeStyle.ReadOnly = true;
             this.CuonSachGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.CuonSachGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.CuonSachGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -564,29 +570,41 @@ namespace GUI.UserControls
             this.CuonSachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.CuonSachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // MaCuonSach
+            // cUONSACHBindingSource
             // 
-            this.MaCuonSach.HeaderText = "Mã Cuốn Sách";
-            this.MaCuonSach.MinimumWidth = 7;
-            this.MaCuonSach.Name = "MaCuonSach";
+            this.cUONSACHBindingSource.DataSource = typeof(DTO.CUONSACH);
             // 
             // MaSach
             // 
             this.MaSach.HeaderText = "Mã Sách";
             this.MaSach.MinimumWidth = 7;
             this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
             // 
             // TenTuaSach
             // 
             this.TenTuaSach.HeaderText = "Tên Tựa Sách";
             this.TenTuaSach.MinimumWidth = 7;
             this.TenTuaSach.Name = "TenTuaSach";
+            this.TenTuaSach.ReadOnly = true;
             // 
-            // TinhTrang
+            // maCuonSachDataGridViewTextBoxColumn
             // 
-            this.TinhTrang.HeaderText = "Tình trạng";
-            this.TinhTrang.MinimumWidth = 7;
-            this.TinhTrang.Name = "TinhTrang";
+            this.maCuonSachDataGridViewTextBoxColumn.DataPropertyName = "MaCuonSach";
+            this.maCuonSachDataGridViewTextBoxColumn.HeaderText = "Mã cuốn sách";
+            this.maCuonSachDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maCuonSachDataGridViewTextBoxColumn.Name = "maCuonSachDataGridViewTextBoxColumn";
+            this.maCuonSachDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maCuonSachDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tinhTrangDataGridViewTextBoxColumn
+            // 
+            this.tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
+            this.tinhTrangDataGridViewTextBoxColumn.HeaderText = "Tình trạng";
+            this.tinhTrangDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
+            this.tinhTrangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tinhTrangDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ucCuonSach
             // 
@@ -618,6 +636,7 @@ namespace GUI.UserControls
             this.siticonePanel12.ResumeLayout(false);
             this.siticonePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CuonSachGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -655,10 +674,11 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox siticoneComboBox2;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView CuonSachGrid;
-        private DataGridViewTextBoxColumn MaCuonSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton siticoneCircleButton1;
         private DataGridViewTextBoxColumn MaSach;
         private DataGridViewTextBoxColumn TenTuaSach;
-        private DataGridViewTextBoxColumn TinhTrang;
-        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton siticoneCircleButton1;
+        private DataGridViewTextBoxColumn maCuonSachDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tinhTrangDataGridViewTextBoxColumn;
+        private BindingSource cUONSACHBindingSource;
     }
 }
