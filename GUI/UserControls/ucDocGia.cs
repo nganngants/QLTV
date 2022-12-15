@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.BM;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,16 @@ namespace GUI.UserControls
             InitializeComponent();
         }
 
+        private void siticoneButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void siticoneButton2_Click(object sender, EventArgs e)
+        {
+            var f = new BMLapTheDocGia();
+            f.Show();
+
+        }
     }
 }

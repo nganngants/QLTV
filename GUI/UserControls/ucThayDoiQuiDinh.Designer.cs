@@ -57,7 +57,6 @@
             this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butChangePass = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneComboBox1 = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.feat04 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label12 = new System.Windows.Forms.Label();
@@ -510,7 +509,6 @@
             // siticonePanel2
             // 
             this.siticonePanel2.Controls.Add(this.butChangePass);
-            this.siticonePanel2.Controls.Add(this.siticoneComboBox1);
             this.siticonePanel2.Controls.Add(this.label14);
             this.siticonePanel2.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -542,23 +540,6 @@
             this.butChangePass.Text = "Thay đổi";
             this.butChangePass.Click += new System.EventHandler(this.butChangePass_Click);
             // 
-            // siticoneComboBox1
-            // 
-            this.siticoneComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneComboBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.siticoneComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.siticoneComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneComboBox1.Font = new System.Drawing.Font("Segoe UI", 17.856F);
-            this.siticoneComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.siticoneComboBox1.ItemHeight = 30;
-            this.siticoneComboBox1.Location = new System.Drawing.Point(220, 15);
-            this.siticoneComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneComboBox1.Name = "siticoneComboBox1";
-            this.siticoneComboBox1.Size = new System.Drawing.Size(123, 36);
-            this.siticoneComboBox1.TabIndex = 87;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -568,9 +549,9 @@
             this.label14.Location = new System.Drawing.Point(0, 15);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(220, 33);
+            this.label14.Size = new System.Drawing.Size(215, 33);
             this.label14.TabIndex = 2;
-            this.label14.Text = "Danh sách thể loại:";
+            this.label14.Text = "Danh sách thể loại";
             // 
             // feat04
             // 
@@ -987,7 +968,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox siticoneComboBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butChangePass;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel8;
         private System.Windows.Forms.Label label16;

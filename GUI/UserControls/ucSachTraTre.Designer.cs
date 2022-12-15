@@ -31,10 +31,10 @@ namespace GUI.UserControls
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSachTraTre));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.feat01 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label7 = new System.Windows.Forms.Label();
             this.labFeat01 = new System.Windows.Forms.Label();
@@ -186,7 +186,7 @@ namespace GUI.UserControls
             this.pageTim.Location = new System.Drawing.Point(4, 34);
             this.pageTim.Name = "pageTim";
             this.pageTim.Padding = new System.Windows.Forms.Padding(3);
-            this.pageTim.Size = new System.Drawing.Size(989, 265);
+            this.pageTim.Size = new System.Drawing.Size(989, 248);
             this.pageTim.TabIndex = 3;
             this.pageTim.Text = "Tìm kiếm";
             // 
@@ -198,14 +198,14 @@ namespace GUI.UserControls
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.siticonePanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.siticonePanel7, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(983, 292);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(983, 242);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // siticonePanel2
@@ -224,7 +224,7 @@ namespace GUI.UserControls
             this.siticonePanel2.Margin = new System.Windows.Forms.Padding(13, 12, 16, 12);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.siticonePanel2.Size = new System.Drawing.Size(451, 248);
+            this.siticonePanel2.Size = new System.Drawing.Size(451, 198);
             this.siticonePanel2.TabIndex = 0;
             // 
             // siticonePanel9
@@ -296,7 +296,7 @@ namespace GUI.UserControls
             this.siticoneButton3.FillColor = System.Drawing.Color.SlateBlue;
             this.siticoneButton3.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton3.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton3.Location = new System.Drawing.Point(325, 200);
+            this.siticoneButton3.Location = new System.Drawing.Point(325, 150);
             this.siticoneButton3.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneButton3.Name = "siticoneButton3";
             this.siticoneButton3.Size = new System.Drawing.Size(108, 38);
@@ -332,7 +332,7 @@ namespace GUI.UserControls
             this.siticoneComboBox1.Location = new System.Drawing.Point(114, 12);
             this.siticoneComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneComboBox1.Name = "siticoneComboBox1";
-            this.siticoneComboBox1.Size = new System.Drawing.Size(287, 36);
+            this.siticoneComboBox1.Size = new System.Drawing.Size(200, 36);
             this.siticoneComboBox1.TabIndex = 79;
             // 
             // siticoneImageCheckBox2
@@ -388,7 +388,7 @@ namespace GUI.UserControls
             this.siticoneDateTimePicker3.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.siticoneDateTimePicker3.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.siticoneDateTimePicker3.Name = "siticoneDateTimePicker3";
-            this.siticoneDateTimePicker3.Size = new System.Drawing.Size(260, 24);
+            this.siticoneDateTimePicker3.Size = new System.Drawing.Size(200, 24);
             this.siticoneDateTimePicker3.TabIndex = 77;
             this.siticoneDateTimePicker3.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
             // 
@@ -455,7 +455,7 @@ namespace GUI.UserControls
             this.siticonePanel7.Margin = new System.Windows.Forms.Padding(16, 12, 13, 12);
             this.siticonePanel7.Name = "siticonePanel7";
             this.siticonePanel7.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.siticonePanel7.Size = new System.Drawing.Size(452, 248);
+            this.siticonePanel7.Size = new System.Drawing.Size(452, 198);
             this.siticonePanel7.TabIndex = 0;
             // 
             // siticoneButton5
@@ -469,7 +469,7 @@ namespace GUI.UserControls
             this.siticoneButton5.FillColor = System.Drawing.Color.SlateBlue;
             this.siticoneButton5.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton5.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton5.Location = new System.Drawing.Point(217, 198);
+            this.siticoneButton5.Location = new System.Drawing.Point(217, 148);
             this.siticoneButton5.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneButton5.Name = "siticoneButton5";
             this.siticoneButton5.Size = new System.Drawing.Size(108, 38);
@@ -487,7 +487,7 @@ namespace GUI.UserControls
             this.siticoneButton6.FillColor = System.Drawing.Color.SlateBlue;
             this.siticoneButton6.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton6.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton6.Location = new System.Drawing.Point(333, 198);
+            this.siticoneButton6.Location = new System.Drawing.Point(333, 148);
             this.siticoneButton6.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneButton6.Name = "siticoneButton6";
             this.siticoneButton6.Size = new System.Drawing.Size(108, 38);
@@ -612,7 +612,7 @@ namespace GUI.UserControls
             this.dgTabControl.Location = new System.Drawing.Point(0, 0);
             this.dgTabControl.Name = "dgTabControl";
             this.dgTabControl.SelectedIndex = 0;
-            this.dgTabControl.Size = new System.Drawing.Size(997, 303);
+            this.dgTabControl.Size = new System.Drawing.Size(997, 286);
             this.dgTabControl.TabIndex = 5;
             // 
             // pageThem
@@ -622,7 +622,7 @@ namespace GUI.UserControls
             this.pageThem.Location = new System.Drawing.Point(4, 34);
             this.pageThem.Name = "pageThem";
             this.pageThem.Padding = new System.Windows.Forms.Padding(3);
-            this.pageThem.Size = new System.Drawing.Size(989, 265);
+            this.pageThem.Size = new System.Drawing.Size(989, 248);
             this.pageThem.TabIndex = 0;
             this.pageThem.Text = "Chỉnh sửa báo cáo";
             // 
@@ -634,14 +634,14 @@ namespace GUI.UserControls
             this.botTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.botTableLayout.Controls.Add(this.infoPanel, 0, 0);
             this.botTableLayout.Controls.Add(this.featPanel, 1, 0);
-            this.botTableLayout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.botTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.botTableLayout.Location = new System.Drawing.Point(3, 3);
             this.botTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.botTableLayout.Name = "botTableLayout";
             this.botTableLayout.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.botTableLayout.RowCount = 1;
             this.botTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.botTableLayout.Size = new System.Drawing.Size(983, 292);
+            this.botTableLayout.Size = new System.Drawing.Size(983, 242);
             this.botTableLayout.TabIndex = 3;
             // 
             // infoPanel
@@ -658,7 +658,7 @@ namespace GUI.UserControls
             this.infoPanel.Margin = new System.Windows.Forms.Padding(13, 12, 16, 12);
             this.infoPanel.Name = "infoPanel";
             this.infoPanel.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.infoPanel.Size = new System.Drawing.Size(451, 248);
+            this.infoPanel.Size = new System.Drawing.Size(451, 198);
             this.infoPanel.TabIndex = 0;
             // 
             // butChangePass
@@ -672,7 +672,7 @@ namespace GUI.UserControls
             this.butChangePass.FillColor = System.Drawing.Color.SlateBlue;
             this.butChangePass.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butChangePass.ForeColor = System.Drawing.Color.White;
-            this.butChangePass.Location = new System.Drawing.Point(325, 200);
+            this.butChangePass.Location = new System.Drawing.Point(325, 150);
             this.butChangePass.Margin = new System.Windows.Forms.Padding(4);
             this.butChangePass.Name = "butChangePass";
             this.butChangePass.Size = new System.Drawing.Size(108, 38);
@@ -706,7 +706,7 @@ namespace GUI.UserControls
             this.siticoneDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.siticoneDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.siticoneDateTimePicker1.Name = "siticoneDateTimePicker1";
-            this.siticoneDateTimePicker1.Size = new System.Drawing.Size(260, 24);
+            this.siticoneDateTimePicker1.Size = new System.Drawing.Size(200, 24);
             this.siticoneDateTimePicker1.TabIndex = 41;
             this.siticoneDateTimePicker1.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
             // 
@@ -762,7 +762,7 @@ namespace GUI.UserControls
             this.featPanel.Margin = new System.Windows.Forms.Padding(16, 12, 13, 12);
             this.featPanel.Name = "featPanel";
             this.featPanel.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.featPanel.Size = new System.Drawing.Size(452, 248);
+            this.featPanel.Size = new System.Drawing.Size(452, 198);
             this.featPanel.TabIndex = 0;
             // 
             // siticoneButton2
@@ -776,7 +776,7 @@ namespace GUI.UserControls
             this.siticoneButton2.FillColor = System.Drawing.Color.SlateBlue;
             this.siticoneButton2.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton2.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton2.Location = new System.Drawing.Point(220, 200);
+            this.siticoneButton2.Location = new System.Drawing.Point(220, 150);
             this.siticoneButton2.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneButton2.Name = "siticoneButton2";
             this.siticoneButton2.Size = new System.Drawing.Size(108, 38);
@@ -794,7 +794,7 @@ namespace GUI.UserControls
             this.siticoneButton1.FillColor = System.Drawing.Color.SlateBlue;
             this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(336, 200);
+            this.siticoneButton1.Location = new System.Drawing.Point(336, 150);
             this.siticoneButton1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneButton1.Name = "siticoneButton1";
             this.siticoneButton1.Size = new System.Drawing.Size(108, 38);
@@ -828,7 +828,7 @@ namespace GUI.UserControls
             this.siticoneDateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.siticoneDateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.siticoneDateTimePicker2.Name = "siticoneDateTimePicker2";
-            this.siticoneDateTimePicker2.Size = new System.Drawing.Size(260, 21);
+            this.siticoneDateTimePicker2.Size = new System.Drawing.Size(200, 21);
             this.siticoneDateTimePicker2.TabIndex = 42;
             this.siticoneDateTimePicker2.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
             // 
@@ -850,29 +850,29 @@ namespace GUI.UserControls
             this.TablePanel.BorderThickness = 2;
             this.TablePanel.Controls.Add(this.tableBCSachTraTre);
             this.TablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TablePanel.Location = new System.Drawing.Point(0, 303);
+            this.TablePanel.Location = new System.Drawing.Point(0, 286);
             this.TablePanel.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.TablePanel.Name = "TablePanel";
             this.TablePanel.Padding = new System.Windows.Forms.Padding(5);
-            this.TablePanel.Size = new System.Drawing.Size(997, 293);
+            this.TablePanel.Size = new System.Drawing.Size(997, 310);
             this.TablePanel.TabIndex = 5;
             // 
             // tableBCSachTraTre
             // 
             this.tableBCSachTraTre.AllowUserToAddRows = false;
             this.tableBCSachTraTre.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tableBCSachTraTre.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.tableBCSachTraTre.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.tableBCSachTraTre.BackgroundColor = System.Drawing.SystemColors.Control;
             this.tableBCSachTraTre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableBCSachTraTre.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableBCSachTraTre.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.tableBCSachTraTre.ColumnHeadersHeight = 50;
             this.tableBCSachTraTre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tableBCSachTraTre.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -881,30 +881,30 @@ namespace GUI.UserControls
             this.TenCuonSach,
             this.NgayMuon,
             this.SoNgayTre});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableBCSachTraTre.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableBCSachTraTre.DefaultCellStyle = dataGridViewCellStyle11;
             this.tableBCSachTraTre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableBCSachTraTre.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tableBCSachTraTre.Location = new System.Drawing.Point(5, 5);
             this.tableBCSachTraTre.Name = "tableBCSachTraTre";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableBCSachTraTre.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableBCSachTraTre.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.tableBCSachTraTre.RowHeadersVisible = false;
             this.tableBCSachTraTre.RowHeadersWidth = 53;
             this.tableBCSachTraTre.RowTemplate.Height = 25;
-            this.tableBCSachTraTre.Size = new System.Drawing.Size(987, 283);
+            this.tableBCSachTraTre.Size = new System.Drawing.Size(987, 300);
             this.tableBCSachTraTre.TabIndex = 4;
             this.tableBCSachTraTre.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tableBCSachTraTre.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -964,7 +964,7 @@ namespace GUI.UserControls
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(997, 303);
+            this.TopPanel.Size = new System.Drawing.Size(997, 286);
             this.TopPanel.TabIndex = 4;
             // 
             // ucSachTraTre
