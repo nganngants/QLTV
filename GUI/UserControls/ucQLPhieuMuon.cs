@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.BM;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace GUI.UserControls
         public ucQLPhieuMuon()
         {
             InitializeComponent();
+        }
+
+        private void siticoneButton2_Click(object sender, EventArgs e)
+        {
+            var f = new BMChoMuonSach();
+            f.Show();
+
         }
     }
 }
