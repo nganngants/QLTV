@@ -38,7 +38,7 @@ namespace GUI.UserControls
                     Tg += tg.TenTacGia;
                 }
                 row.Cells["TacGia"].Value = Tg;
-                row.Cells["TheLoai"].Value = TuaSachList[i].THELOAI.TenTheLoai.ToString();
+                row.Cells["TheLoai"].Value = (TuaSachList[i].THELOAI!=null)?TuaSachList[i].THELOAI.TenTheLoai.ToString() : "Null";
                 i++;
             }
         }

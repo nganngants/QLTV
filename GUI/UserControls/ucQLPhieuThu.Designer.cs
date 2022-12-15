@@ -61,12 +61,12 @@ namespace GUI.UserControls
             this.siticoneButton4 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.PhieuThuGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.pHIEUTHUBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soTienThuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soPhieuThuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOCGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHIEUTHUBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel3.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
@@ -475,10 +475,6 @@ namespace GUI.UserControls
             this.PhieuThuGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuThuGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // pHIEUTHUBindingSource
-            // 
-            this.pHIEUTHUBindingSource.DataSource = typeof(DTO.PHIEUTHU);
-            // 
             // idDocGiaDataGridViewTextBoxColumn
             // 
             this.idDocGiaDataGridViewTextBoxColumn.DataPropertyName = "idDocGia";
@@ -522,6 +518,10 @@ namespace GUI.UserControls
             this.dOCGIADataGridViewTextBoxColumn.Name = "dOCGIADataGridViewTextBoxColumn";
             this.dOCGIADataGridViewTextBoxColumn.ReadOnly = true;
             this.dOCGIADataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pHIEUTHUBindingSource
+            // 
+            this.pHIEUTHUBindingSource.DataSource = typeof(DTO.PHIEUTHU);
             // 
             // ucQLPhieuThu
             // 
