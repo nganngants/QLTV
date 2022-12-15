@@ -39,6 +39,7 @@ namespace GUI.UserControls
             this.siticonePanel20 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.TablePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tableDocGia = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -257,6 +258,15 @@ namespace GUI.UserControls
             this.tableDocGia.ThemeStyle.RowsStyle.Height = 25;
             this.tableDocGia.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tableDocGia.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.Controls.Add(this.tableDocGia);
+            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel2.Location = new System.Drawing.Point(0, 186);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.Size = new System.Drawing.Size(997, 410);
+            this.siticonePanel2.TabIndex = 3;
             // 
             // MaDocGia
             // 

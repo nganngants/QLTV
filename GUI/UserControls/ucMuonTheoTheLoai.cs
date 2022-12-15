@@ -1,5 +1,4 @@
-﻿using GUI.BM;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,19 +15,6 @@ namespace GUI.UserControls
         public ucMuonTheoTheLoai()
         {
             InitializeComponent();
-        }
-
-        private void butChangePass_Click(object sender, EventArgs e)
-        {
-            var f = new BMBCTKMuonTheoTheLoai();
-            f.Show();
-        }
-
-        private void siticoneButton2_Click(object sender, EventArgs e)
-        {
-            var f = new BMBCTKMuonTheoTheLoai();
-            f.Show();
-
         }
     }
 }

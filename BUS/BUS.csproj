@@ -53,7 +53,6 @@
   <ItemGroup>
     <Compile Include="BUSBCSachTraTre.cs" />
     <Compile Include="BUSBCTheoTheLoai.cs" />
-    <Compile Include="BUSChucNang.cs" />
     <Compile Include="BUSCT_BCLuotMuonTheoThang.cs" />
     <Compile Include="BUSCT_PhieuNhap.cs" />
     <Compile Include="BUSCuonSach.cs" />
