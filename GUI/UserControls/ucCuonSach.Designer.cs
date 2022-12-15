@@ -67,7 +67,7 @@ namespace GUI.UserControls
             this.siticoneCircleButton1 = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.tableCuonSach = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.CuonSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,7 +88,7 @@ namespace GUI.UserControls
             this.siticonePanel7.SuspendLayout();
             this.siticonePanel12.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableCuonSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuonSachGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -166,7 +166,7 @@ namespace GUI.UserControls
             this.siticoneButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton3.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton3.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton3.ForeColor = System.Drawing.Color.White;
             this.siticoneButton3.Location = new System.Drawing.Point(132, 0);
             this.siticoneButton3.Margin = new System.Windows.Forms.Padding(4);
@@ -184,7 +184,7 @@ namespace GUI.UserControls
             this.siticoneButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton2.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton2.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton2.ForeColor = System.Drawing.Color.White;
             this.siticoneButton2.Location = new System.Drawing.Point(0, 0);
             this.siticoneButton2.Margin = new System.Windows.Forms.Padding(4);
@@ -219,7 +219,7 @@ namespace GUI.UserControls
             this.siticoneButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton4.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton4.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton4.ForeColor = System.Drawing.Color.White;
             this.siticoneButton4.Image = global::GUI.Properties.Resources._1200px_Search_Icon_svg;
             this.siticoneButton4.ImageSize = new System.Drawing.Size(30, 30);
@@ -238,10 +238,10 @@ namespace GUI.UserControls
             this.siticoneTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.siticoneTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F);
+            this.siticoneTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.siticoneTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.siticoneTextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.siticoneTextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
             this.siticoneTextBox1.PlaceholderText = "Tìm kiếm";
@@ -317,12 +317,12 @@ namespace GUI.UserControls
             // 
             this.labFeat01.AutoSize = true;
             this.labFeat01.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labFeat01.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFeat01.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labFeat01.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.labFeat01.Location = new System.Drawing.Point(0, 0);
             this.labFeat01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat01.Name = "labFeat01";
-            this.labFeat01.Size = new System.Drawing.Size(70, 33);
+            this.labFeat01.Size = new System.Drawing.Size(68, 29);
             this.labFeat01.TabIndex = 1;
             this.labFeat01.Text = "Filter";
             // 
@@ -342,7 +342,7 @@ namespace GUI.UserControls
             this.siticoneNumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.siticoneNumericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneNumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown1.Location = new System.Drawing.Point(132, 0);
+            this.siticoneNumericUpDown1.Location = new System.Drawing.Point(127, 0);
             this.siticoneNumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneNumericUpDown1.Maximum = new decimal(new int[] {
             1,
@@ -363,12 +363,12 @@ namespace GUI.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 33);
+            this.label2.Size = new System.Drawing.Size(127, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tình trạng:";
             // 
@@ -393,7 +393,7 @@ namespace GUI.UserControls
             this.siticoneComboBox2.Font = new System.Drawing.Font("Segoe UI", 17.856F);
             this.siticoneComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.siticoneComboBox2.ItemHeight = 30;
-            this.siticoneComboBox2.Location = new System.Drawing.Point(114, 0);
+            this.siticoneComboBox2.Location = new System.Drawing.Point(118, 0);
             this.siticoneComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneComboBox2.Name = "siticoneComboBox2";
             this.siticoneComboBox2.Size = new System.Drawing.Size(193, 36);
@@ -403,12 +403,12 @@ namespace GUI.UserControls
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 33);
+            this.label3.Size = new System.Drawing.Size(118, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên sách:";
             // 
@@ -434,11 +434,11 @@ namespace GUI.UserControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 36.288F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36.288F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(47, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(566, 84);
+            this.label1.Size = new System.Drawing.Size(552, 70);
             this.label1.TabIndex = 5;
             this.label1.Text = "Quản lý cuốn sách";
             // 
@@ -480,32 +480,37 @@ namespace GUI.UserControls
             // 
             // siticonePanel2
             // 
-            this.siticonePanel2.Controls.Add(this.tableCuonSach);
+            this.siticonePanel2.Controls.Add(this.CuonSachGrid);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel2.Location = new System.Drawing.Point(0, 192);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(997, 404);
             this.siticonePanel2.TabIndex = 3;
             // 
-            // tableCuonSach
+            // CuonSachGrid
             // 
-            this.tableCuonSach.AllowUserToAddRows = false;
-            this.tableCuonSach.AllowUserToDeleteRows = false;
+            this.CuonSachGrid.AllowUserToAddRows = false;
+            this.CuonSachGrid.AllowUserToDeleteRows = false;
+            this.CuonSachGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tableCuonSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tableCuonSach.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.tableCuonSach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.CuonSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.CuonSachGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.CuonSachGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableCuonSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tableCuonSach.ColumnHeadersHeight = 50;
-            this.tableCuonSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableCuonSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CuonSachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.CuonSachGrid.ColumnHeadersHeight = 35;
+            this.CuonSachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.CuonSachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCuonSach,
             this.MaSach,
             this.TenTuaSach,
@@ -517,46 +522,47 @@ namespace GUI.UserControls
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableCuonSach.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tableCuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableCuonSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableCuonSach.Location = new System.Drawing.Point(0, 0);
-            this.tableCuonSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableCuonSach.Name = "tableCuonSach";
+            this.CuonSachGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CuonSachGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CuonSachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.CuonSachGrid.Location = new System.Drawing.Point(0, 0);
+            this.CuonSachGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CuonSachGrid.Name = "CuonSachGrid";
+            this.CuonSachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableCuonSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tableCuonSach.RowHeadersVisible = false;
-            this.tableCuonSach.RowHeadersWidth = 53;
-            this.tableCuonSach.RowTemplate.Height = 25;
-            this.tableCuonSach.Size = new System.Drawing.Size(997, 404);
-            this.tableCuonSach.TabIndex = 1;
-            this.tableCuonSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableCuonSach.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tableCuonSach.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tableCuonSach.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tableCuonSach.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tableCuonSach.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.tableCuonSach.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableCuonSach.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tableCuonSach.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tableCuonSach.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableCuonSach.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tableCuonSach.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableCuonSach.ThemeStyle.HeaderStyle.Height = 50;
-            this.tableCuonSach.ThemeStyle.ReadOnly = false;
-            this.tableCuonSach.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableCuonSach.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tableCuonSach.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableCuonSach.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tableCuonSach.ThemeStyle.RowsStyle.Height = 25;
-            this.tableCuonSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableCuonSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.CuonSachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.CuonSachGrid.RowHeadersVisible = false;
+            this.CuonSachGrid.RowHeadersWidth = 53;
+            this.CuonSachGrid.RowTemplate.Height = 28;
+            this.CuonSachGrid.Size = new System.Drawing.Size(997, 404);
+            this.CuonSachGrid.TabIndex = 1;
+            this.CuonSachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.CuonSachGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.CuonSachGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.CuonSachGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.CuonSachGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.CuonSachGrid.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.CuonSachGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.CuonSachGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.CuonSachGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.CuonSachGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CuonSachGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.CuonSachGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.CuonSachGrid.ThemeStyle.HeaderStyle.Height = 35;
+            this.CuonSachGrid.ThemeStyle.ReadOnly = false;
+            this.CuonSachGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.CuonSachGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.CuonSachGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CuonSachGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.CuonSachGrid.ThemeStyle.RowsStyle.Height = 28;
+            this.CuonSachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.CuonSachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // MaCuonSach
             // 
@@ -611,7 +617,7 @@ namespace GUI.UserControls
             this.siticonePanel7.PerformLayout();
             this.siticonePanel12.ResumeLayout(false);
             this.siticonePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableCuonSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuonSachGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -648,7 +654,7 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown siticoneNumericUpDown1;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox siticoneComboBox2;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView tableCuonSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView CuonSachGrid;
         private DataGridViewTextBoxColumn MaCuonSach;
         private DataGridViewTextBoxColumn MaSach;
         private DataGridViewTextBoxColumn TenTuaSach;
