@@ -163,7 +163,7 @@ namespace GUI.UserControls
             this.siticoneButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton3.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton3.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton3.ForeColor = System.Drawing.Color.White;
             this.siticoneButton3.Location = new System.Drawing.Point(325, 150);
             this.siticoneButton3.Margin = new System.Windows.Forms.Padding(4);
@@ -180,7 +180,7 @@ namespace GUI.UserControls
             this.siticonePanel5.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel5.Location = new System.Drawing.Point(11, 106);
+            this.siticonePanel5.Location = new System.Drawing.Point(11, 97);
             this.siticonePanel5.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel5.Name = "siticonePanel5";
             this.siticonePanel5.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -198,7 +198,7 @@ namespace GUI.UserControls
             this.siticoneComboBox1.Font = new System.Drawing.Font("Segoe UI", 20.16F);
             this.siticoneComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.siticoneComboBox1.ItemHeight = 30;
-            this.siticoneComboBox1.Location = new System.Drawing.Point(111, 12);
+            this.siticoneComboBox1.Location = new System.Drawing.Point(104, 12);
             this.siticoneComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneComboBox1.Name = "siticoneComboBox1";
             this.siticoneComboBox1.Size = new System.Drawing.Size(200, 36);
@@ -220,12 +220,12 @@ namespace GUI.UserControls
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label9.Location = new System.Drawing.Point(0, 12);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 33);
+            this.label9.Size = new System.Drawing.Size(104, 29);
             this.label9.TabIndex = 1;
             this.label9.Text = "Chức vụ:";
             // 
@@ -237,7 +237,7 @@ namespace GUI.UserControls
             this.siticonePanel6.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel6.Location = new System.Drawing.Point(11, 70);
+            this.siticonePanel6.Location = new System.Drawing.Point(11, 61);
             this.siticonePanel6.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel6.Name = "siticonePanel6";
             this.siticonePanel6.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -255,7 +255,7 @@ namespace GUI.UserControls
             this.siticoneComboBox3.Font = new System.Drawing.Font("Segoe UI", 20.16F);
             this.siticoneComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.siticoneComboBox3.ItemHeight = 30;
-            this.siticoneComboBox3.Location = new System.Drawing.Point(222, 12);
+            this.siticoneComboBox3.Location = new System.Drawing.Point(210, 12);
             this.siticoneComboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneComboBox3.Name = "siticoneComboBox3";
             this.siticoneComboBox3.Size = new System.Drawing.Size(200, 36);
@@ -277,12 +277,12 @@ namespace GUI.UserControls
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label10.Location = new System.Drawing.Point(0, 12);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(222, 33);
+            this.label10.Size = new System.Drawing.Size(210, 29);
             this.label10.TabIndex = 0;
             this.label10.Text = "Nhóm người dùng:";
             // 
@@ -290,7 +290,7 @@ namespace GUI.UserControls
             // 
             this.siticoneSeparator3.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneSeparator3.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator3.Location = new System.Drawing.Point(11, 58);
+            this.siticoneSeparator3.Location = new System.Drawing.Point(11, 49);
             this.siticoneSeparator3.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator3.Name = "siticoneSeparator3";
             this.siticoneSeparator3.Size = new System.Drawing.Size(429, 12);
@@ -300,12 +300,12 @@ namespace GUI.UserControls
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.SlateBlue;
             this.label11.Location = new System.Drawing.Point(11, 10);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 48);
+            this.label11.Size = new System.Drawing.Size(75, 39);
             this.label11.TabIndex = 1;
             this.label11.Text = "Lọc";
             // 
@@ -354,7 +354,7 @@ namespace GUI.UserControls
             this.siticoneButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton5.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton5.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton5.ForeColor = System.Drawing.Color.White;
             this.siticoneButton5.Location = new System.Drawing.Point(217, 148);
             this.siticoneButton5.Margin = new System.Windows.Forms.Padding(4);
@@ -372,7 +372,7 @@ namespace GUI.UserControls
             this.siticoneButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton6.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton6.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton6.ForeColor = System.Drawing.Color.White;
             this.siticoneButton6.Location = new System.Drawing.Point(333, 148);
             this.siticoneButton6.Margin = new System.Windows.Forms.Padding(4);
@@ -390,7 +390,7 @@ namespace GUI.UserControls
             this.siticonePanel8.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel8.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel8.Location = new System.Drawing.Point(11, 70);
+            this.siticonePanel8.Location = new System.Drawing.Point(11, 61);
             this.siticonePanel8.Margin = new System.Windows.Forms.Padding(4);
             this.siticonePanel8.Name = "siticonePanel8";
             this.siticonePanel8.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -406,7 +406,7 @@ namespace GUI.UserControls
             this.siticoneButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton4.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneButton4.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton4.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton4.ForeColor = System.Drawing.Color.White;
             this.siticoneButton4.Image = global::GUI.Properties.Resources._1200px_Search_Icon_svg;
             this.siticoneButton4.ImageSize = new System.Drawing.Size(30, 30);
@@ -434,10 +434,10 @@ namespace GUI.UserControls
             this.siticoneTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.siticoneTextBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F);
+            this.siticoneTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.siticoneTextBox1.Location = new System.Drawing.Point(169, 15);
-            this.siticoneTextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.siticoneTextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
             this.siticoneTextBox1.PlaceholderText = "Tìm kiếm";
@@ -457,7 +457,7 @@ namespace GUI.UserControls
             // 
             this.siticoneSeparator4.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneSeparator4.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator4.Location = new System.Drawing.Point(11, 58);
+            this.siticoneSeparator4.Location = new System.Drawing.Point(11, 49);
             this.siticoneSeparator4.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator4.Name = "siticoneSeparator4";
             this.siticoneSeparator4.Size = new System.Drawing.Size(430, 12);
@@ -467,12 +467,12 @@ namespace GUI.UserControls
             // 
             this.label18.AutoSize = true;
             this.label18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.SlateBlue;
             this.label18.Location = new System.Drawing.Point(11, 10);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(169, 48);
+            this.label18.Size = new System.Drawing.Size(163, 39);
             this.label18.TabIndex = 0;
             this.label18.Text = "Tìm kiếm";
             // 
@@ -496,7 +496,7 @@ namespace GUI.UserControls
             this.siticoneButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton9.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton9.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton9.ForeColor = System.Drawing.Color.White;
             this.siticoneButton9.Location = new System.Drawing.Point(135, 0);
             this.siticoneButton9.Margin = new System.Windows.Forms.Padding(4);
@@ -514,7 +514,7 @@ namespace GUI.UserControls
             this.siticoneButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton2.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton2.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton2.ForeColor = System.Drawing.Color.White;
             this.siticoneButton2.Location = new System.Drawing.Point(251, 0);
             this.siticoneButton2.Margin = new System.Windows.Forms.Padding(4);
@@ -533,7 +533,7 @@ namespace GUI.UserControls
             this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton1.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
             this.siticoneButton1.Location = new System.Drawing.Point(367, 0);
             this.siticoneButton1.Margin = new System.Windows.Forms.Padding(4);
@@ -565,7 +565,7 @@ namespace GUI.UserControls
             this.siticoneTextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.siticoneTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneTextBox3.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox3.Location = new System.Drawing.Point(111, 15);
+            this.siticoneTextBox3.Location = new System.Drawing.Point(104, 15);
             this.siticoneTextBox3.Name = "siticoneTextBox3";
             this.siticoneTextBox3.PasswordChar = '\0';
             this.siticoneTextBox3.PlaceholderText = "";
@@ -577,12 +577,12 @@ namespace GUI.UserControls
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label14.Location = new System.Drawing.Point(0, 15);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 33);
+            this.label14.Size = new System.Drawing.Size(104, 29);
             this.label14.TabIndex = 0;
             this.label14.Text = "Chức vụ:";
             // 
@@ -605,12 +605,12 @@ namespace GUI.UserControls
             // 
             this.labFeat02.AutoSize = true;
             this.labFeat02.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labFeat02.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFeat02.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labFeat02.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.labFeat02.Location = new System.Drawing.Point(0, 15);
             this.labFeat02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat02.Name = "labFeat02";
-            this.labFeat02.Size = new System.Drawing.Size(180, 33);
+            this.labFeat02.Size = new System.Drawing.Size(181, 29);
             this.labFeat02.TabIndex = 0;
             this.labFeat02.Text = "Tên đăng nhập:";
             // 
@@ -640,7 +640,7 @@ namespace GUI.UserControls
             this.siticoneTextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.siticoneTextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneTextBox4.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox4.Location = new System.Drawing.Point(180, 15);
+            this.siticoneTextBox4.Location = new System.Drawing.Point(181, 15);
             this.siticoneTextBox4.Name = "siticoneTextBox4";
             this.siticoneTextBox4.PasswordChar = '\0';
             this.siticoneTextBox4.PlaceholderText = "";
@@ -652,12 +652,12 @@ namespace GUI.UserControls
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label15.Location = new System.Drawing.Point(0, 12);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(121, 33);
+            this.label15.Size = new System.Drawing.Size(115, 29);
             this.label15.TabIndex = 1;
             this.label15.Text = "Mật khẩu:";
             // 
@@ -687,7 +687,7 @@ namespace GUI.UserControls
             this.siticoneTextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.siticoneTextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneTextBox6.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox6.Location = new System.Drawing.Point(121, 12);
+            this.siticoneTextBox6.Location = new System.Drawing.Point(115, 12);
             this.siticoneTextBox6.Name = "siticoneTextBox6";
             this.siticoneTextBox6.PasswordChar = '\0';
             this.siticoneTextBox6.PlaceholderText = "";
@@ -699,7 +699,7 @@ namespace GUI.UserControls
             // 
             this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneSeparator1.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator1.Location = new System.Drawing.Point(0, 84);
+            this.siticoneSeparator1.Location = new System.Drawing.Point(0, 70);
             this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(485, 12);
@@ -737,12 +737,12 @@ namespace GUI.UserControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 36.288F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36.288F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(672, 84);
+            this.label1.Size = new System.Drawing.Size(622, 70);
             this.label1.TabIndex = 9;
             this.label1.Text = "Thông tin người dùng";
             // 
@@ -794,7 +794,7 @@ namespace GUI.UserControls
             this.siticoneDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneDateTimePicker1.ForeColor = System.Drawing.Color.SlateBlue;
             this.siticoneDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.siticoneDateTimePicker1.Location = new System.Drawing.Point(129, 15);
+            this.siticoneDateTimePicker1.Location = new System.Drawing.Point(125, 15);
             this.siticoneDateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.siticoneDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -807,12 +807,12 @@ namespace GUI.UserControls
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label4.Location = new System.Drawing.Point(0, 15);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 33);
+            this.label4.Size = new System.Drawing.Size(125, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Ngày sinh:";
             // 
@@ -842,7 +842,7 @@ namespace GUI.UserControls
             this.siticoneTextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.siticoneTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneTextBox2.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox2.Location = new System.Drawing.Point(192, 15);
+            this.siticoneTextBox2.Location = new System.Drawing.Point(188, 15);
             this.siticoneTextBox2.Name = "siticoneTextBox2";
             this.siticoneTextBox2.PasswordChar = '\0';
             this.siticoneTextBox2.PlaceholderText = "";
@@ -854,12 +854,12 @@ namespace GUI.UserControls
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label5.Location = new System.Drawing.Point(0, 15);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 33);
+            this.label5.Size = new System.Drawing.Size(188, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tên người dùng:";
             // 
@@ -888,7 +888,7 @@ namespace GUI.UserControls
             this.siticoneComboBox2.Font = new System.Drawing.Font("Segoe UI", 20.16F);
             this.siticoneComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.siticoneComboBox2.ItemHeight = 30;
-            this.siticoneComboBox2.Location = new System.Drawing.Point(222, 15);
+            this.siticoneComboBox2.Location = new System.Drawing.Point(210, 15);
             this.siticoneComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneComboBox2.Name = "siticoneComboBox2";
             this.siticoneComboBox2.Size = new System.Drawing.Size(182, 36);
@@ -898,12 +898,12 @@ namespace GUI.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label2.Location = new System.Drawing.Point(0, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 33);
+            this.label2.Size = new System.Drawing.Size(210, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nhóm người dùng:";
             // 
@@ -925,12 +925,12 @@ namespace GUI.UserControls
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.Location = new System.Drawing.Point(188, 15);
+            this.label7.Location = new System.Drawing.Point(178, 15);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 33);
+            this.label7.Size = new System.Drawing.Size(98, 29);
             this.label7.TabIndex = 1;
             this.label7.Text = "BC1234";
             // 
@@ -938,12 +938,12 @@ namespace GUI.UserControls
             // 
             this.labFeat01.AutoSize = true;
             this.labFeat01.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labFeat01.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFeat01.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labFeat01.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.labFeat01.Location = new System.Drawing.Point(0, 15);
             this.labFeat01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat01.Name = "labFeat01";
-            this.labFeat01.Size = new System.Drawing.Size(188, 33);
+            this.labFeat01.Size = new System.Drawing.Size(178, 29);
             this.labFeat01.TabIndex = 0;
             this.labFeat01.Text = "Mã người dùng:";
             // 
@@ -1080,14 +1080,14 @@ namespace GUI.UserControls
             this.tableNguoiDung.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tableNguoiDung.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tableNguoiDung.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tableNguoiDung.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
+            this.tableNguoiDung.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tableNguoiDung.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tableNguoiDung.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tableNguoiDung.ThemeStyle.HeaderStyle.Height = 50;
             this.tableNguoiDung.ThemeStyle.ReadOnly = false;
             this.tableNguoiDung.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tableNguoiDung.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tableNguoiDung.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
+            this.tableNguoiDung.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tableNguoiDung.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tableNguoiDung.ThemeStyle.RowsStyle.Height = 25;
             this.tableNguoiDung.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
