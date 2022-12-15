@@ -569,7 +569,6 @@
     <Content Include="images\home_icon.png" />
     <Content Include="images\info_icon.png" />
     <None Include="images\key_icon.png" />
-    <Content Include="images\key_icon02.png" />
     <Content Include="images\phieumuon_icon.png" />
     <Content Include="images\phieuthu_icon.png" />
     <Content Include="images\report_icon.png" />
@@ -583,8 +582,6 @@
     <None Include="images\white_key_icon.png" />
     <None Include="Resources\69539.png" />
     <None Include="Resources\9926512.png" />
-    <Content Include="Resources\992651.png" />
-    <Content Include="Resources\9926511.png" />
     <Content Include="Resources\tải xuống %281%29.png" />
     <Content Include="Resources\tải xuống %283%29.png" />
     <Content Include="Resources\Welcome-Svg-Welcome-Sign-Graphics-5026886-1-580x415.jpg" />

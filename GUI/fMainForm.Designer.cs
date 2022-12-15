@@ -301,6 +301,7 @@ namespace GUI
         private static ucBanAccess ucBan;
         private static ucQLDG ucqldg;
         private static ucQLSach ucqlsach;
+        private static ucHome uchome;
         private static ucQLPhieuMuon ucphieumuontra;
         private static ucQLPhieuThu ucphieuthu;
         private static ucBCTK ucbaocao;
