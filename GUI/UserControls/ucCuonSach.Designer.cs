@@ -1,5 +1,4 @@
-﻿using GUI.Tab;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace GUI.UserControls
 {
