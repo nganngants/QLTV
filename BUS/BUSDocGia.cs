@@ -46,22 +46,24 @@ namespace BUS
                     cnt++;
             return cnt;
         }
-        public string DelDocGia(string MaDocGia)
+        public string DelDocGia(int id)
         {
             DOCGIA dg;
             try
             {
-            dg = DALDocGia.Instance.GetDocGiaByMa(MaDocGia);
+            dg = DALDocGia.Instance.GetDocGiaById(id);
             }
             catch
             {
                 return "Mã độc giả không hợp lệ";
             }
+            if(dg.PHIEUMUONTRAs != null)
             foreach( PHIEUMUONTRA PhieuMuon in dg.PHIEUMUONTRAs)
             {
                 if(PhieuMuon.NgayTra==null)
-                return "Độc giả còn sách đang mượn";
+                return "Độc giả" + dg.MaDocGia + "còn sách đang mượn";
             }
+           
             DALDocGia.Instance.DelDocGia(dg.ID);
             return "";
         }

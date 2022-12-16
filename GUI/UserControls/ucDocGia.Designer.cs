@@ -37,7 +37,11 @@ namespace GUI.UserControls
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.DocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +52,7 @@ namespace GUI.UserControls
             this.ngayHetHanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoSachDangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongNoHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DocGiaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
@@ -131,7 +135,8 @@ namespace GUI.UserControls
             this.DocGiaGrid.ColumnHeadersHeight = 35;
             this.DocGiaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DocGiaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
+            this.isChosen,
+            this.ID,
             this.maDocGiaDataGridViewTextBoxColumn,
             this.tenDocGiaDataGridViewTextBoxColumn,
             this.ngaySinhDataGridViewTextBoxColumn,
@@ -148,7 +153,6 @@ namespace GUI.UserControls
             this.DocGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DocGiaGrid.Location = new System.Drawing.Point(0, 119);
             this.DocGiaGrid.Name = "DocGiaGrid";
-            this.DocGiaGrid.ReadOnly = true;
             this.DocGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DocGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DocGiaGrid.RowHeadersVisible = false;
@@ -169,7 +173,7 @@ namespace GUI.UserControls
             this.DocGiaGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DocGiaGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DocGiaGrid.ThemeStyle.HeaderStyle.Height = 35;
-            this.DocGiaGrid.ThemeStyle.ReadOnly = true;
+            this.DocGiaGrid.ThemeStyle.ReadOnly = false;
             this.DocGiaGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DocGiaGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DocGiaGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,14 +182,50 @@ namespace GUI.UserControls
             this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // iDDataGridViewTextBoxColumn
+            // dOCGIABindingSource
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
+            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.AskDia.Text = "Bạn có chắc chắn xoá?";
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.DataPropertyName = "isChosen";
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.isChosen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Width = 21;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "Column1";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Visible = false;
             // 
             // maDocGiaDataGridViewTextBoxColumn
             // 
@@ -272,9 +312,14 @@ namespace GUI.UserControls
             this.tongNoHienTaiDataGridViewTextBoxColumn.Name = "tongNoHienTaiDataGridViewTextBoxColumn";
             this.tongNoHienTaiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dOCGIABindingSource
+            // SuccDia
             // 
-            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.SuccDia.Text = null;
             // 
             // ucDocGia
             // 
@@ -298,7 +343,10 @@ namespace GUI.UserControls
         private BindingSource dOCGIABindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private DataGridViewCheckBoxColumn isChosen;
+        private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn maDocGiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tenDocGiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
@@ -309,5 +357,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn ngayHetHanDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn SoSachDangMuon;
         private DataGridViewTextBoxColumn tongNoHienTaiDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
     }
 }
