@@ -47,9 +47,9 @@ namespace BUS
             }
             return ts;
         }
-        public string DelSach(string id)
+        public string DelSach(int id)
         {
-            SACH sach = DALSach.Instance.GetSachByMa(id);
+            SACH sach = DALSach.Instance.GetSachById(id);
             foreach(CUONSACH cs in sach.CUONSACHes)
             {
                 if(cs.TinhTrang == 1)
@@ -57,7 +57,7 @@ namespace BUS
                     return "Không thể xoá sách vì đang có người mượn.";
                 }
             }
-            if (DALSach.Instance.DelSach(sach.id))
+            if (DALSach.Instance.DelSach(id))
                 return "";
             return "Không thể xoá sách.";
         }
