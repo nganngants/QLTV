@@ -65,8 +65,8 @@ namespace DAL
                 {
                     TUASACH = tuaSach,
                     idTuaSach = tuaSach.id,
-                    SoLuong = soLuong,
-                    SoLuongConLai = soLuong,
+                    SoLuong = 0,
+                    SoLuongConLai = 0,
                     NamXB = namXB,
                     DonGia = donGia,
                     NhaXB = nhaXB
@@ -92,8 +92,6 @@ namespace DAL
             {
                 SACH sach = GetSachById(id);
                 if (sach == null) return false;
-                sach.SoLuong += soLuongThem;
-                sach.SoLuongConLai += soLuongThem;
                 for (int i = 0; i < soLuongThem; ++i)
                 {
                     DALCuonSach.Instance.AddCuonSach(sach, 1);
@@ -130,29 +128,7 @@ namespace DAL
                 return false;
             }
         }
-        /// <summary>
-        /// change SACH quantity
-        /// </summary>
-        /// <param name="maSach"></param>
-        /// <param name="soLuong"></param>
-        /// <param name="soLuongConLai"></param>
-        /// <returns></returns>
-        public bool UpdSLSach(int id, int soLuong, int soLuongConLai)
-        {
-            try
-            {
-                SACH sach = GetSachById(id);
-                if (sach == null) return false;
-                sach.SoLuong = soLuong;
-                sach.SoLuongConLai = soLuongConLai;
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+        
 
         /// <summary>
         /// Deleting a SACH also delete all CUONSACHs belonging to it

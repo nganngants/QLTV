@@ -73,6 +73,8 @@ namespace DAL
                     TinhTrang = tinhTrang
                 };
                 QLTVDb.Instance.CUONSACHes.Add(cuonsach);
+                sach.SoLuongConLai++;
+                sach.SoLuong++;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
@@ -89,10 +91,18 @@ namespace DAL
             {
                 CUONSACH cuonsach = GetCuonSachById(idCuonSach);
                 if (cuonsach == null) return false;
-                if (tinhTrang != null) cuonsach.TinhTrang = tinhTrang;
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
+                SACH sach = cuonsach.SACH;
+
+                if (tinhTrang != null) if (tinhTrang == cuonsach.TinhTrang) return false;
+                    else
+                    {
+                        cuonsach.TinhTrang = tinhTrang;
+                        if (tinhTrang == 1) sach.SoLuongConLai++;
+                        else sach.SoLuongConLai--;
+                    }
+                        QLTVDb.Instance.SaveChanges();
+                        return true;
+                    }
             catch
             {
                 return false;
@@ -104,7 +114,10 @@ namespace DAL
             {
                 var cuonSach = GetCuonSachById(idCuonSach);
                 if (cuonSach == null) return false;
+                var sach = cuonSach.SACH;
                 QLTVDb.Instance.CUONSACHes.Remove(cuonSach);
+                sach.SoLuongConLai--;
+                sach.SoLuong--;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
