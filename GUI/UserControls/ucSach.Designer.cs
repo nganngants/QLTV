@@ -109,6 +109,7 @@ namespace GUI.UserControls
             this.butAddOld.TabIndex = 4;
             this.butAddOld.Text = "Nhập Sách Đã Có";
             this.butAddOld.TextOffset = new System.Drawing.Point(12, 0);
+            this.butAddOld.Click += new System.EventHandler(this.butAddOld_Click);
             // 
             // butAdd
             // 
@@ -336,7 +337,6 @@ namespace GUI.UserControls
         private BindingSource sACHBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
         private DataGridViewCheckBoxColumn isChosen;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn maSachDataGridViewTextBoxColumn;

@@ -39,7 +39,12 @@ namespace GUI.UserControls
             f.ShowDialog();
         }
 
-       
+        private void butAddOld_Click(object sender, EventArgs e)
+        {
+            var f = new fAddSachDaCo();
+            f.ShowDialog();
+        }
+
 
         private void siticoneButton1_Click(object sender, EventArgs e)
         {
