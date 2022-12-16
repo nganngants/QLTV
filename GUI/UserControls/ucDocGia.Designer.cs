@@ -49,7 +49,6 @@ namespace GUI.UserControls
             this.SoSachDangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongNoHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siticoneDataGridViewStyler1 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridViewStyler(this.components);
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DocGiaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
@@ -310,6 +309,5 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn ngayHetHanDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn SoSachDangMuon;
         private DataGridViewTextBoxColumn tongNoHienTaiDataGridViewTextBoxColumn;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridViewStyler siticoneDataGridViewStyler1;
     }
 }

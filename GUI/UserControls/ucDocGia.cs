@@ -58,6 +58,7 @@ namespace GUI.UserControls
         {
             var f = new fAddDocGia();
             f.ShowDialog();
+
         }
 
         private void butDel_Click(object sender, EventArgs e)
