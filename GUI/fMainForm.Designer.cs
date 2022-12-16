@@ -90,7 +90,7 @@ namespace GUI
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.topPanel.Controls.Add(this.label2);
             this.topPanel.Controls.Add(this.exitControlBox);
             this.topPanel.Controls.Add(this.siticoneControlBox1);
@@ -126,7 +126,7 @@ namespace GUI
             this.tabControl.Controls.Add(this.pageQLND);
             this.tabControl.Controls.Add(this.pageTDQD);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.ImageList = this.iconList;
             this.tabControl.ItemSize = new System.Drawing.Size(250, 80);
             this.tabControl.Location = new System.Drawing.Point(0, 74);
@@ -182,7 +182,7 @@ namespace GUI
             // 
             // pageQLS
             // 
-            this.pageQLS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.pageQLS.BackColor = System.Drawing.SystemColors.Control;
             this.pageQLS.ImageIndex = 2;
             this.pageQLS.Location = new System.Drawing.Point(254, 4);
             this.pageQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);

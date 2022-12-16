@@ -23,5 +23,10 @@ namespace GUI.UserControls
             var f = new BMTiepNhanSachMoi();
             f.Show();
         }
+
+        private void ucSach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
