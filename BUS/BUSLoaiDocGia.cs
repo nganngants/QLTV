@@ -23,9 +23,9 @@ namespace BUS
         {
             return DALLoaiDocGia.Instance.GetAllLoaiDocGia();
         }
-        public string DelLoaiDocGia(string id)
+        public string DelLoaiDocGia(int id)
         {
-            if (DALLoaiDocGia.Instance.DelLoaiDocGia(DALLoaiDocGia.Instance.GetLoaiDocGiaByMa(id).id))
+            if (DALLoaiDocGia.Instance.DelLoaiDocGia(id))
                 return "";
             return "Không thể xoá loại độc giá";
         }

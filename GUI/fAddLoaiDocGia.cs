@@ -27,13 +27,13 @@ namespace GUI
             {
                 SuccDia.Text = "Thêm loại độc giả thành công";
                 SuccDia.Show();
-                return;
+                
             }else
             {
                 ErrorDia.Text = mss;
                 ErrorDia.Show();
             }
-
+            this.Close();
 
         }
     }

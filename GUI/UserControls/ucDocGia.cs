@@ -84,6 +84,7 @@ namespace GUI.UserControls
             if(cnt!=0)
                 SuccDia.Show("Đã xoá thành công " + cnt + " độc giả");
             Binding();
+            
         }
     }
 }

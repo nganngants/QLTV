@@ -18,10 +18,14 @@ namespace GUI.UserControls
             InitializeComponent();
         }
         private List<LOAIDOCGIA> LoaiDocGiaList;
+        private void Binding()
+        {
+            LoaiDocGiaList = BUSLoaiDocGia.Instance.GetAllLoaiDocGia();
+            this.LoaiDocGiaGrid.DataSource = LoaiDocGiaList;
+        }
         private void ucLoaiDG_Load(object sender, EventArgs e)
         {
-            LoaiDocGiaList= BUSLoaiDocGia.Instance.GetAllLoaiDocGia(); 
-            this.LoaiDocGiaGrid.DataSource = LoaiDocGiaList;
+            Binding();
 
         }
 
@@ -29,6 +33,39 @@ namespace GUI.UserControls
         {
             var f = new fAddLoaiDocGia();
             f.ShowDialog();
+            Binding();
+        }
+
+        private void butDel_Click(object sender, EventArgs e)
+        {
+            
+            List<int> idDel = new List<int>();
+            foreach (DataGridViewRow row in LoaiDocGiaGrid.Rows)
+            {
+                Console.WriteLine(row.Cells["isChosen"].Value);
+                if (row.Cells["isChosen"].Value == "1")
+                {
+                    idDel.Add((int)row.Cells["id"].Value);
+                   
+                }
+            }
+            int cnt = 0;
+            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count+ " loại độc giả?") == DialogResult.No) return;
+            foreach (int id in idDel)
+            {
+            Retry:
+                string error = BUSLoaiDocGia.Instance.DelLoaiDocGia(id);
+                if (error != "")
+                {
+                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                        goto Retry;
+                    else continue;
+                }
+                else cnt++;
+            }
+            
+                SuccDia.Show("Đã xoá thành công " + cnt + " loại độc giả");
+            Binding();
         }
     }
 }
