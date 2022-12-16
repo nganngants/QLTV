@@ -147,6 +147,12 @@
     <Compile Include="fAddLoaiDocGia.Designer.cs">
       <DependentUpon>fAddLoaiDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fAddSachDaCo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddSachDaCo.Designer.cs">
+      <DependentUpon>fAddSachDaCo.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAddSachMoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAddLoaiDocGia.resx">
       <DependentUpon>fAddLoaiDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddSachDaCo.resx">
+      <DependentUpon>fAddSachDaCo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAddSachMoi.resx">
       <DependentUpon>fAddSachMoi.cs</DependentUpon>

@@ -34,5 +34,11 @@ namespace GUI.UserControls
             var f = new fAddSachMoi();
             f.ShowDialog();
         }
+
+        private void butAddOld_Click(object sender, EventArgs e)
+        {
+            var f = new fAddSachDaCo();
+            f.ShowDialog();
+        }
     }
 }
