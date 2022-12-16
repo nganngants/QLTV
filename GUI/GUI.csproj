@@ -147,6 +147,12 @@
     <Compile Include="fAddLoaiDocGia.Designer.cs">
       <DependentUpon>fAddLoaiDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fAddTuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddTuaSach.Designer.cs">
+      <DependentUpon>fAddTuaSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="fChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     <EmbeddedResource Include="fAddLoaiDocGia.resx">
       <DependentUpon>fAddLoaiDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fAddTuaSach.resx">
+      <DependentUpon>fAddTuaSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -401,10 +410,12 @@
       <DependentUpon>ucTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.CUONSACH.datasource" />
     <None Include="Properties\DataSources\DTO.DOCGIA.datasource" />
     <None Include="Properties\DataSources\DTO.LOAIDOCGIA.datasource" />
     <None Include="Properties\DataSources\DTO.PHIEUMUONTRA.datasource" />
     <None Include="Properties\DataSources\DTO.SACH.datasource" />
+    <None Include="Properties\DataSources\DTO.TUASACH.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

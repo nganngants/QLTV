@@ -36,6 +36,9 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.dataGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,17 +53,81 @@ namespace GUI.UserControls
             this.tUASACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siticoneCreditCardValidationTool1 = new Siticone.Desktop.UI.Winforms.SiticoneCreditCardValidationTool();
+            this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.butDel);
+            this.topPanel.Controls.Add(this.siticoneButton1);
+            this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(997, 120);
             this.topPanel.TabIndex = 0;
+            // 
+            // butDel
+            // 
+            this.butDel.BorderRadius = 6;
+            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDel.ForeColor = System.Drawing.Color.White;
+            this.butDel.Image = global::GUI.Properties.Resources.close_icon;
+            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butDel.Location = new System.Drawing.Point(331, 58);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(156, 42);
+            this.butDel.TabIndex = 3;
+            this.butDel.Text = "Xóa Sách";
+            this.butDel.TextOffset = new System.Drawing.Point(12, 0);
+            // 
+            // siticoneButton1
+            // 
+            this.siticoneButton1.BorderRadius = 6;
+            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton1.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton1.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.siticoneButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.siticoneButton1.ImageOffset = new System.Drawing.Point(2, 0);
+            this.siticoneButton1.Location = new System.Drawing.Point(169, 58);
+            this.siticoneButton1.Name = "siticoneButton1";
+            this.siticoneButton1.Size = new System.Drawing.Size(156, 42);
+            this.siticoneButton1.TabIndex = 4;
+            this.siticoneButton1.Text = "Nhập Sách Đã Có";
+            this.siticoneButton1.TextOffset = new System.Drawing.Point(12, 0);
+            // 
+            // butAdd
+            // 
+            this.butAdd.BorderRadius = 6;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(7, 58);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(156, 42);
+            this.butAdd.TabIndex = 4;
+            this.butAdd.Text = "Nhập Sách Mới";
+            this.butAdd.TextOffset = new System.Drawing.Point(12, 0);
             // 
             // dataGrid
             // 
@@ -227,6 +294,7 @@ namespace GUI.UserControls
             this.Name = "ucSach";
             this.Size = new System.Drawing.Size(997, 596);
             this.Load += new System.EventHandler(this.ucSach_Load);
+            this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -250,5 +318,8 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn cUONSACHesDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tUASACHDataGridViewTextBoxColumn;
         private BindingSource sACHBindingSource;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
     }
 }

@@ -17,9 +17,17 @@ namespace GUI.UserControls
             InitializeComponent();
         }
 
-        //public static implicit operator ucTuaSach(ucCuonSach v)
-        //{
-        //    //throw new NotImplementedException();
-        //}
+        private void ucTuaSach_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            var f = new fAddTuaSach();
+            f.ShowDialog();
+        }
+
+
     }
 }
