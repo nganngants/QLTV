@@ -42,9 +42,9 @@ namespace GUI.UserControls
             // siticoneGradientPanel1
             // 
             this.siticoneGradientPanel1.Controls.Add(this.butCuonsach);
+            this.siticoneGradientPanel1.Controls.Add(this.butSach);
             this.siticoneGradientPanel1.Controls.Add(this.siticoneContainerControl1);
             this.siticoneGradientPanel1.Controls.Add(this.butTuaSach);
-            this.siticoneGradientPanel1.Controls.Add(this.butSach);
             this.siticoneGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
@@ -98,7 +98,7 @@ namespace GUI.UserControls
             this.butTuaSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butTuaSach.ForeColor = System.Drawing.Color.DimGray;
             this.butTuaSach.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.butTuaSach.Location = new System.Drawing.Point(180, 0);
+            this.butTuaSach.Location = new System.Drawing.Point(0, 0);
             this.butTuaSach.Name = "butTuaSach";
             this.butTuaSach.Size = new System.Drawing.Size(180, 56);
             this.butTuaSach.TabIndex = 1;
@@ -119,10 +119,10 @@ namespace GUI.UserControls
             this.butSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butSach.Dock = System.Windows.Forms.DockStyle.Left;
             this.butSach.FillColor = System.Drawing.Color.Transparent;
-            this.butSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold);
             this.butSach.ForeColor = System.Drawing.Color.DimGray;
             this.butSach.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.butSach.Location = new System.Drawing.Point(0, 0);
+            this.butSach.Location = new System.Drawing.Point(180, 0);
             this.butSach.Name = "butSach";
             this.butSach.Size = new System.Drawing.Size(180, 56);
             this.butSach.TabIndex = 0;
