@@ -28,5 +28,11 @@ namespace GUI.UserControls
         {
 
         }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            var f = new fAddSachMoi();
+            f.ShowDialog();
+        }
     }
 }
