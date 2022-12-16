@@ -337,7 +337,6 @@ namespace GUI.UserControls
         private BindingSource sACHBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
         private DataGridViewCheckBoxColumn isChosen;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn maSachDataGridViewTextBoxColumn;
@@ -352,9 +351,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn cTPHIEUNHAPDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cUONSACHesDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tUASACHDataGridViewTextBoxColumn;
-        private BindingSource sACHBindingSource;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAddOld;
     }
 }
