@@ -35,10 +35,10 @@
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label1 = new System.Windows.Forms.Label();
             this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,21 +102,28 @@
             this.siticonePanel1.Size = new System.Drawing.Size(350, 350);
             this.siticonePanel1.TabIndex = 3;
             // 
-            // labelTitle
+            // butOK
             // 
-            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.butOK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
-            this.labelTitle.Location = new System.Drawing.Point(40, 46);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(271, 37);
-            this.labelTitle.TabIndex = 2;
-            this.labelTitle.Text = "SỬA LOẠI ĐỘC GIẢ";
+            this.butOK.BorderRadius = 2;
+            this.butOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butOK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butOK.FillColor = System.Drawing.Color.SlateBlue;
+            this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butOK.ForeColor = System.Drawing.Color.White;
+            this.butOK.Location = new System.Drawing.Point(119, 253);
+            this.butOK.Name = "butOK";
+            this.butOK.Size = new System.Drawing.Size(111, 51);
+            this.butOK.TabIndex = 6;
+            this.butOK.Text = "Lưu";
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
@@ -128,6 +135,8 @@
             // 
             // siticoneTextBox1
             // 
+            this.siticoneTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.siticoneTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.siticoneTextBox1.DefaultText = "";
             this.siticoneTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -145,21 +154,18 @@
             this.siticoneTextBox1.Size = new System.Drawing.Size(229, 36);
             this.siticoneTextBox1.TabIndex = 4;
             // 
-            // butOK
+            // labelTitle
             // 
-            this.butOK.BorderRadius = 2;
-            this.butOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butOK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butOK.FillColor = System.Drawing.Color.SlateBlue;
-            this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butOK.ForeColor = System.Drawing.Color.White;
-            this.butOK.Location = new System.Drawing.Point(119, 253);
-            this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(111, 51);
-            this.butOK.TabIndex = 6;
-            this.butOK.Text = "Lưu";
+            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
+            this.labelTitle.Location = new System.Drawing.Point(40, 46);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(271, 37);
+            this.labelTitle.TabIndex = 2;
+            this.labelTitle.Text = "SỬA LOẠI ĐỘC GIẢ";
             // 
             // fEditLoaiDG
             // 

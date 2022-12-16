@@ -106,11 +106,11 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label2.Location = new System.Drawing.Point(12, 12);
+            this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 48);
+            this.label2.Size = new System.Drawing.Size(230, 53);
             this.label2.TabIndex = 4;
             this.label2.Text = "UIT LIBRARY";
             // 
@@ -137,17 +137,17 @@ namespace GUI
             this.tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.tabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.tabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.SlateBlue;
             this.tabControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
             this.tabControl.TabButtonIdleState.FillColor = System.Drawing.Color.Transparent;
             this.tabControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl.TabButtonIdleState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.tabControl.TabButtonIdleState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.tabControl.TabButtonIdleState.InnerColor = System.Drawing.Color.Silver;
             this.tabControl.TabButtonImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tabControl.TabButtonImageOffset = new System.Drawing.Point(10, 0);
             this.tabControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.tabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.tabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.tabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.tabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.DarkSlateBlue;
@@ -155,13 +155,13 @@ namespace GUI
             this.tabControl.TabButtonTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tabControl.TabButtonTextOffset = new System.Drawing.Point(10, 0);
             this.tabControl.TabIndex = 2;
-            this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             // 
             // pageAccount
             // 
             this.pageAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.pageAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pageAccount.ImageIndex = 0;
+            this.pageAccount.ImageIndex = 6;
             this.pageAccount.Location = new System.Drawing.Point(254, 4);
             this.pageAccount.Margin = new System.Windows.Forms.Padding(0);
             this.pageAccount.Name = "pageAccount";
@@ -172,7 +172,7 @@ namespace GUI
             // pageQLDG
             // 
             this.pageQLDG.BackColor = System.Drawing.SystemColors.Control;
-            this.pageQLDG.ImageIndex = 1;
+            this.pageQLDG.ImageIndex = 0;
             this.pageQLDG.Location = new System.Drawing.Point(254, 4);
             this.pageQLDG.Margin = new System.Windows.Forms.Padding(0);
             this.pageQLDG.Name = "pageQLDG";
@@ -183,7 +183,7 @@ namespace GUI
             // pageQLS
             // 
             this.pageQLS.BackColor = System.Drawing.SystemColors.Control;
-            this.pageQLS.ImageIndex = 2;
+            this.pageQLS.ImageIndex = 5;
             this.pageQLS.Location = new System.Drawing.Point(254, 4);
             this.pageQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLS.Name = "pageQLS";
@@ -195,7 +195,7 @@ namespace GUI
             // pageQLMT
             // 
             this.pageQLMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageQLMT.ImageIndex = 3;
+            this.pageQLMT.ImageIndex = 2;
             this.pageQLMT.Location = new System.Drawing.Point(254, 4);
             this.pageQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLMT.Name = "pageQLMT";
@@ -207,7 +207,7 @@ namespace GUI
             // pageQLPT
             // 
             this.pageQLPT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageQLPT.ImageIndex = 4;
+            this.pageQLPT.ImageIndex = 3;
             this.pageQLPT.Location = new System.Drawing.Point(254, 4);
             this.pageQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLPT.Name = "pageQLPT";
@@ -219,7 +219,7 @@ namespace GUI
             // pageBC
             // 
             this.pageBC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageBC.ImageIndex = 5;
+            this.pageBC.ImageIndex = 4;
             this.pageBC.Location = new System.Drawing.Point(254, 4);
             this.pageBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageBC.Name = "pageBC";
@@ -231,7 +231,7 @@ namespace GUI
             // pageQLND
             // 
             this.pageQLND.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageQLND.ImageIndex = 6;
+            this.pageQLND.ImageIndex = 1;
             this.pageQLND.Location = new System.Drawing.Point(254, 4);
             this.pageQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pageQLND.Name = "pageQLND";
@@ -243,7 +243,7 @@ namespace GUI
             // pageTDQD
             // 
             this.pageTDQD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageTDQD.ImageIndex = 8;
+            this.pageTDQD.ImageIndex = 7;
             this.pageTDQD.Location = new System.Drawing.Point(254, 4);
             this.pageTDQD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageTDQD.Name = "pageTDQD";
@@ -256,15 +256,14 @@ namespace GUI
             // 
             this.iconList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconList.ImageStream")));
             this.iconList.TransparentColor = System.Drawing.Color.Transparent;
-            this.iconList.Images.SetKeyName(0, "info_icon.png");
-            this.iconList.Images.SetKeyName(1, "user_icon02.png");
-            this.iconList.Images.SetKeyName(2, "book_icon03.png");
-            this.iconList.Images.SetKeyName(3, "phieumuon_icon.png");
-            this.iconList.Images.SetKeyName(4, "phieuthu_icon.png");
-            this.iconList.Images.SetKeyName(5, "report_icon03.png");
-            this.iconList.Images.SetKeyName(6, "user_icon03.png");
-            this.iconList.Images.SetKeyName(7, "book_icon02.png");
-            this.iconList.Images.SetKeyName(8, "user_icon.png");
+            this.iconList.Images.SetKeyName(0, "docgia.png");
+            this.iconList.Images.SetKeyName(1, "nguoidung.png");
+            this.iconList.Images.SetKeyName(2, "phieumuontra.png");
+            this.iconList.Images.SetKeyName(3, "phieuthu.png");
+            this.iconList.Images.SetKeyName(4, "report_icon.png");
+            this.iconList.Images.SetKeyName(5, "sach.png");
+            this.iconList.Images.SetKeyName(6, "taikhoan.png");
+            this.iconList.Images.SetKeyName(7, "thaydoiquydinh.png");
             // 
             // fMainForm
             // 
