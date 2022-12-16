@@ -109,7 +109,7 @@ namespace GUI.UserControls
             this.butAddOld.TabIndex = 4;
             this.butAddOld.Text = "Nhập Sách Đã Có";
             this.butAddOld.TextOffset = new System.Drawing.Point(12, 0);
-            this.butAddOld.Click += new System.EventHandler(this.butAddOld_Click);
+            
             // 
             // butAdd
             // 
