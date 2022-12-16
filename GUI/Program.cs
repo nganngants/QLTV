@@ -21,7 +21,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fAddDocGia());
+            Application.Run(new fMainForm());
         }
     }
 }

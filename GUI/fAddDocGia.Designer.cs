@@ -51,7 +51,7 @@
             this.siticoneEmailValidatingTool1 = new Siticone.Desktop.UI.Winforms.SiticoneEmailValidatingTool();
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.dateNgayHetHan = new System.Windows.Forms.Label();
             this.labelEmailError = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -71,7 +71,7 @@
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(738, 54);
+            this.controlPanel.Size = new System.Drawing.Size(810, 54);
             this.controlPanel.TabIndex = 0;
             // 
             // closeControlBox
@@ -79,7 +79,7 @@
             this.closeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.closeControlBox.Location = new System.Drawing.Point(677, 0);
+            this.closeControlBox.Location = new System.Drawing.Point(749, 0);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(61, 54);
             this.closeControlBox.TabIndex = 0;
@@ -90,7 +90,7 @@
             this.miniControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.miniControlBox.Location = new System.Drawing.Point(615, 0);
+            this.miniControlBox.Location = new System.Drawing.Point(687, 0);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(60, 54);
             this.miniControlBox.TabIndex = 0;
@@ -104,8 +104,11 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.mainPanel.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.mainPanel.BorderRadius = 2;
+            this.mainPanel.BorderThickness = 1;
             this.mainPanel.Controls.Add(this.labelEmailError);
-            this.mainPanel.Controls.Add(this.label8);
+            this.mainPanel.Controls.Add(this.dateNgayHetHan);
             this.mainPanel.Controls.Add(this.label7);
             this.mainPanel.Controls.Add(this.butOK);
             this.mainPanel.Controls.Add(this.comboLoaiDG);
@@ -121,9 +124,13 @@
             this.mainPanel.Controls.Add(this.txtDiaChi);
             this.mainPanel.Controls.Add(this.txtHoTen);
             this.mainPanel.Controls.Add(this.labelTitle);
-            this.mainPanel.Location = new System.Drawing.Point(77, 109);
+            this.mainPanel.Location = new System.Drawing.Point(90, 109);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(585, 555);
+            this.mainPanel.ShadowDecoration.Color = System.Drawing.Color.MediumSlateBlue;
+            this.mainPanel.ShadowDecoration.CustomizableEdges.BottomLeft = false;
+            this.mainPanel.ShadowDecoration.CustomizableEdges.TopLeft = false;
+            this.mainPanel.ShadowDecoration.CustomizableEdges.TopRight = false;
+            this.mainPanel.Size = new System.Drawing.Size(630, 630);
             this.mainPanel.TabIndex = 1;
             // 
             // labelTitle
@@ -133,7 +140,7 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
-            this.labelTitle.Location = new System.Drawing.Point(96, 16);
+            this.labelTitle.Location = new System.Drawing.Point(119, 42);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(393, 53);
             this.labelTitle.TabIndex = 0;
@@ -141,8 +148,6 @@
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHoTen.DefaultText = "";
             this.txtHoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -152,12 +157,12 @@
             this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Location = new System.Drawing.Point(123, 107);
+            this.txtHoTen.Location = new System.Drawing.Point(134, 162);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
             this.txtHoTen.PlaceholderText = "";
             this.txtHoTen.SelectedText = "";
-            this.txtHoTen.Size = new System.Drawing.Size(343, 36);
+            this.txtHoTen.Size = new System.Drawing.Size(367, 36);
             this.txtHoTen.TabIndex = 1;
             // 
             // label1
@@ -165,7 +170,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(119, 82);
+            this.label1.Location = new System.Drawing.Point(130, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 22);
             this.label1.TabIndex = 2;
@@ -177,7 +182,7 @@
             this.dateNgaySinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.dateNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgaySinh.Location = new System.Drawing.Point(123, 179);
+            this.dateNgaySinh.Location = new System.Drawing.Point(134, 234);
             this.dateNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgaySinh.Name = "dateNgaySinh";
@@ -190,7 +195,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(119, 153);
+            this.label2.Location = new System.Drawing.Point(130, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 22);
             this.label2.TabIndex = 2;
@@ -206,9 +211,9 @@
             this.comboLoaiDG.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboLoaiDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboLoaiDG.ItemHeight = 30;
-            this.comboLoaiDG.Location = new System.Drawing.Point(307, 179);
+            this.comboLoaiDG.Location = new System.Drawing.Point(318, 234);
             this.comboLoaiDG.Name = "comboLoaiDG";
-            this.comboLoaiDG.Size = new System.Drawing.Size(159, 36);
+            this.comboLoaiDG.Size = new System.Drawing.Size(183, 36);
             this.comboLoaiDG.TabIndex = 4;
             // 
             // label3
@@ -216,7 +221,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(303, 154);
+            this.label3.Location = new System.Drawing.Point(314, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 22);
             this.label3.TabIndex = 2;
@@ -233,12 +238,12 @@
             this.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiaChi.Location = new System.Drawing.Point(123, 253);
+            this.txtDiaChi.Location = new System.Drawing.Point(134, 308);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(343, 36);
+            this.txtDiaChi.Size = new System.Drawing.Size(367, 36);
             this.txtDiaChi.TabIndex = 1;
             // 
             // label4
@@ -246,7 +251,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label4.Location = new System.Drawing.Point(119, 228);
+            this.label4.Location = new System.Drawing.Point(130, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 22);
             this.label4.TabIndex = 2;
@@ -263,12 +268,12 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(123, 325);
+            this.txtEmail.Location = new System.Drawing.Point(134, 380);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(343, 36);
+            this.txtEmail.Size = new System.Drawing.Size(367, 36);
             this.txtEmail.TabIndex = 1;
             // 
             // label5
@@ -276,7 +281,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label5.Location = new System.Drawing.Point(119, 300);
+            this.label5.Location = new System.Drawing.Point(130, 355);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 22);
             this.label5.TabIndex = 2;
@@ -287,7 +292,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label6.Location = new System.Drawing.Point(118, 388);
+            this.label6.Location = new System.Drawing.Point(129, 443);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 22);
             this.label6.TabIndex = 2;
@@ -299,11 +304,11 @@
             this.dateNgayLap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.dateNgayLap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayLap.Location = new System.Drawing.Point(122, 413);
+            this.dateNgayLap.Location = new System.Drawing.Point(133, 468);
             this.dateNgayLap.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dateNgayLap.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateNgayLap.Name = "dateNgayLap";
-            this.dateNgayLap.Size = new System.Drawing.Size(159, 36);
+            this.dateNgayLap.Size = new System.Drawing.Size(160, 36);
             this.dateNgayLap.TabIndex = 3;
             this.dateNgayLap.Value = new System.DateTime(2022, 12, 16, 11, 48, 50, 797);
             // 
@@ -322,7 +327,7 @@
             this.butOK.FillColor = System.Drawing.Color.SlateBlue;
             this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
-            this.butOK.Location = new System.Drawing.Point(241, 477);
+            this.butOK.Location = new System.Drawing.Point(253, 543);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(101, 45);
             this.butOK.TabIndex = 5;
@@ -334,27 +339,26 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.Location = new System.Drawing.Point(302, 388);
+            this.label7.Location = new System.Drawing.Point(336, 443);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 22);
             this.label7.TabIndex = 6;
             this.label7.Text = "Ngày Hết Hạn";
             // 
-            // label8
+            // dateNgayHetHan
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(303, 420);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 27);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "27/10/2003";
+            this.dateNgayHetHan.AutoSize = true;
+            this.dateNgayHetHan.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNgayHetHan.Location = new System.Drawing.Point(340, 471);
+            this.dateNgayHetHan.Name = "dateNgayHetHan";
+            this.dateNgayHetHan.Size = new System.Drawing.Size(112, 27);
+            this.dateNgayHetHan.TabIndex = 7;
+            this.dateNgayHetHan.Text = "27/10/2003";
             // 
             // labelEmailError
             // 
-            this.labelEmailError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEmailError.AutoSize = true;
-            this.labelEmailError.Location = new System.Drawing.Point(120, 364);
+            this.labelEmailError.Location = new System.Drawing.Point(134, 419);
             this.labelEmailError.Name = "labelEmailError";
             this.labelEmailError.Size = new System.Drawing.Size(103, 16);
             this.labelEmailError.TabIndex = 8;
@@ -365,7 +369,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(738, 719);
+            this.ClientSize = new System.Drawing.Size(810, 810);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -404,7 +408,7 @@
         private Siticone.Desktop.UI.Winforms.SiticoneEmailValidatingTool siticoneEmailValidatingTool1;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butOK;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label dateNgayHetHan;
         private System.Windows.Forms.Label labelEmailError;
     }
 }

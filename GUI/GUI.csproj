@@ -147,6 +147,12 @@
     <Compile Include="fChangePassword.Designer.cs">
       <DependentUpon>fChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditDocGia.Designer.cs">
+      <DependentUpon>fEditDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fEditDocGia.resx">
+      <DependentUpon>fEditDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fInfoDocGia.resx">
       <DependentUpon>fInfoDocGia.cs</DependentUpon>
