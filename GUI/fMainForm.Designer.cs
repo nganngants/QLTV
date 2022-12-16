@@ -110,7 +110,7 @@ namespace GUI
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(12, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 51);
+            this.label2.Size = new System.Drawing.Size(209, 48);
             this.label2.TabIndex = 4;
             this.label2.Text = "UIT LIBRARY";
             // 
@@ -171,7 +171,7 @@ namespace GUI
             // 
             // pageQLDG
             // 
-            this.pageQLDG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.pageQLDG.BackColor = System.Drawing.SystemColors.Control;
             this.pageQLDG.ImageIndex = 1;
             this.pageQLDG.Location = new System.Drawing.Point(254, 4);
             this.pageQLDG.Margin = new System.Windows.Forms.Padding(0);
