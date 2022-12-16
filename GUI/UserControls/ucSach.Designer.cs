@@ -351,9 +351,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn cTPHIEUNHAPDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cUONSACHesDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tUASACHDataGridViewTextBoxColumn;
-        private BindingSource sACHBindingSource;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAddOld;
     }
 }

@@ -39,10 +39,7 @@ namespace GUI.UserControls
             f.ShowDialog();
         }
 
-        private void butAdd_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void siticoneButton1_Click(object sender, EventArgs e)
         {
