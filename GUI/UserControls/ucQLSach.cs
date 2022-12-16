@@ -21,6 +21,7 @@ namespace GUI.UserControls
 
             //Khi vua vao page QLDSach thi hien tab "TuaSach" truoc
             butTuaSach.Checked = true;
+            butTuaSach_Click(this, EventArgs.Empty);
         }
 
         private void InitializeContainer()
