@@ -31,6 +31,7 @@ namespace BUS
         }
         public string AddLoaiDocGia(string name)
         {
+            if (name == "") return "Tên loại độc giả không hợp lệ";
             if (DALLoaiDocGia.Instance.AddLoaiDocGia(name))
                 return "";
             return "Không thể thêm loại độc giả";
