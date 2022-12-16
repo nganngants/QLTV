@@ -23,14 +23,15 @@ namespace BUS
         {
             return DALLoaiDocGia.Instance.GetAllLoaiDocGia();
         }
-        public string DelLoaiDocGia(string id)
+        public string DelLoaiDocGia(int id)
         {
-            if (DALLoaiDocGia.Instance.DelLoaiDocGia(DALLoaiDocGia.Instance.GetLoaiDocGiaByMa(id).id))
+            if (DALLoaiDocGia.Instance.DelLoaiDocGia(id))
                 return "";
             return "Không thể xoá loại độc giá";
         }
         public string AddLoaiDocGia(string name)
         {
+            if (name == "") return "Tên loại độc giả không hợp lệ";
             if (DALLoaiDocGia.Instance.AddLoaiDocGia(name))
                 return "";
             return "Không thể thêm loại độc giả";
