@@ -141,6 +141,12 @@
     <Compile Include="fAddDocGia.Designer.cs">
       <DependentUpon>fAddDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fAddLoaiDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddLoaiDocGia.Designer.cs">
+      <DependentUpon>fAddLoaiDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="fChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     </Compile>
     <Compile Include="fEditDocGia.Designer.cs">
       <DependentUpon>fEditDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fEditLoaiDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditLoaiDG.Designer.cs">
+      <DependentUpon>fEditLoaiDG.cs</DependentUpon>
     </Compile>
     <Compile Include="fInfoDocGia.cs">
       <SubType>Form</SubType>
@@ -309,11 +321,17 @@
     <EmbeddedResource Include="fAddDocGia.resx">
       <DependentUpon>fAddDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fAddLoaiDocGia.resx">
+      <DependentUpon>fAddLoaiDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fEditDocGia.resx">
       <DependentUpon>fEditDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fEditLoaiDG.resx">
+      <DependentUpon>fEditLoaiDG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fInfoDocGia.resx">
       <DependentUpon>fInfoDocGia.cs</DependentUpon>
@@ -384,6 +402,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DTO.DOCGIA.datasource" />
+    <None Include="Properties\DataSources\DTO.LOAIDOCGIA.datasource" />
     <None Include="Properties\DataSources\DTO.PHIEUMUONTRA.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

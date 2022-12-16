@@ -17,5 +17,15 @@ namespace GUI.UserControls
             InitializeComponent();
         }
 
+        private void ucLoaiDG_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            var f = new fAddLoaiDocGia();
+            f.ShowDialog();
+        }
     }
 }
