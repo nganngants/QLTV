@@ -31,7 +31,7 @@ namespace BUS
             pn = DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
             return pn;
         }
-        public int AddPhieuNhap(DateTime NgayNhap)
+        public int AddPhieuNhap( DateTime NgayNhap)
         {
             //DateTime NgayNhap = new DateTime(Nam, Thang, Ngay);
             if(DateTime.Now < NgayNhap) { return -1; };
@@ -46,7 +46,7 @@ namespace BUS
         {
             PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuById(id);
             if (pn == null)
-                return "Số phiểu nhập không hợp lệ";
+                return "Số phiếu nhập không hợp lệ";
             if(DALPhieuNhapSach.Instance.DelPhieuNhap(id))
                 return "";
             return "Không thể xoá phiếu nhập";

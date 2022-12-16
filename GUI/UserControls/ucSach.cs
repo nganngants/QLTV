@@ -21,7 +21,7 @@ namespace GUI.UserControls
         public void Binding()
         {
             SachList = BUSSach.Instance.GetAllSach();
-
+            this.SachGrid.DataSource = SachList;
         }
         private void ucSach_Load(object sender, EventArgs e)
         {
@@ -37,6 +37,7 @@ namespace GUI.UserControls
         {
             var f = new fAddSachMoi();
             f.ShowDialog();
+            Binding();
         }
 
         private void butAddOld_Click(object sender, EventArgs e)
@@ -63,6 +64,7 @@ namespace GUI.UserControls
 
                 }
             }
+            if(idDel.Count == 0) { return; }
             int cnt = 0;
             if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " sách?") == DialogResult.No) return;
             foreach (int id in idDel)
@@ -78,7 +80,7 @@ namespace GUI.UserControls
                 else cnt++;
             }
 
-            SuccDia.Show("Đã xoá thành công " + cnt + "sách");
+            SuccDia.Show("Đã xoá thành công " + cnt + " sách");
             Binding();
         }
     }
