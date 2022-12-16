@@ -67,7 +67,8 @@ namespace GUI.UserControls
                     idDel.Add((int)row.Cells["ID"].Value);
                 }
             }
-            if (AskDia.Show() == DialogResult.No) return;
+            if(idDel.Count == 0) { return; }
+            if (AskDia.Show("Bạn có chắc muốn xoá "+ idDel.Count + " độc giả?") == DialogResult.No) return;
             int cnt = 0;
             foreach (int id in idDel)
             {

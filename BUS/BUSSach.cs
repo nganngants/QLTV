@@ -24,15 +24,17 @@ namespace BUS
         {
             return DALSach.Instance.GetAllSach();
         }
-        public string AddSach(string MaTuaSach, int SoLuong, int DonGia, int NamXb, string NhaXB)
+        public string AddSach(int id, int SoLuong, int DonGia, int NamXb, string NhaXB)
         {
             TUASACH ts;
-            ts = DALTuaSach.Instance.GetTuaSachByMa(MaTuaSach);
+            ts = DALTuaSach.Instance.GetTuaSachById(id);
             if(ts == null)
             {
                 return "Tựa sách không hợp lệ";
             }
-
+            THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
+            if ((int)DateTime.Now.Year - NamXb > thamso.KhoangCachXuatBan)
+                return "Năm xuất bản không hợp lệ";
             if (DALSach.Instance.AddSachMoi(ts, SoLuong, DonGia, NamXb, NhaXB))
                 return "";
             return "Không thể thêm sách";
