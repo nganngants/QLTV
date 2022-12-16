@@ -37,6 +37,15 @@ namespace BUS
                 return null;
             }
         }
+        public int GetSoSachDangMuon(int id)
+        {
+            int cnt = 0;
+            DOCGIA dg = DALDocGia.Instance.GetDocGiaById(id);
+            foreach (PHIEUMUONTRA pmt in dg.PHIEUMUONTRAs)
+                if (pmt.NgayTra == null)
+                    cnt++;
+            return cnt;
+        }
         public string DelDocGia(string MaDocGia)
         {
             DOCGIA dg;

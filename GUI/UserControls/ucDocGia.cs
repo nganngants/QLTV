@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
+using DTO;
 namespace GUI.UserControls
 {
     public partial class ucDocGia : UserControl
@@ -34,9 +35,22 @@ namespace GUI.UserControls
         {
 
         }
-
+        private List<DOCGIA> DocGiaList;
+        private void Binding()
+        {
+            DocGiaList = BUSDocGia.Instance.GetAllDocGia();
+            this.DocGiaGrid.DataSource = DocGiaList;
+            int i = 0;
+            foreach(DataGridViewRow row in DocGiaGrid.Rows)
+            {
+                row.Cells["LoaiDocGia"].Value = DocGiaList[i].LOAIDOCGIA.TenLoaiDocGia;
+                row.Cells["SoSachDangMuon"].Value = BUSDocGia.Instance.GetSoSachDangMuon(DocGiaList[i].ID);
+                i++;
+            }
+        }
         private void ucDocGia_Load(object sender, EventArgs e)
         {
+            Binding();
 
         }
 
