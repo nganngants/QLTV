@@ -76,7 +76,7 @@ namespace GUI.UserControls
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAdd.Location = new System.Drawing.Point(3, 82);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(125, 22);
+            this.butAdd.Size = new System.Drawing.Size(112, 22);
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Phiếu";
             this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

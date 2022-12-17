@@ -174,7 +174,7 @@
             this.siticonePanel8.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel8.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel8.Location = new System.Drawing.Point(11, 274);
+            this.siticonePanel8.Location = new System.Drawing.Point(11, 270);
             this.siticonePanel8.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel8.Name = "siticonePanel8";
             this.siticonePanel8.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -210,7 +210,7 @@
             this.label16.Location = new System.Drawing.Point(0, 12);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(217, 33);
+            this.label16.Size = new System.Drawing.Size(206, 32);
             this.label16.TabIndex = 0;
             this.label16.Text = "Nhóm người dùng";
             // 
@@ -220,17 +220,17 @@
             this.label15.Dock = System.Windows.Forms.DockStyle.Top;
             this.label15.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label15.Location = new System.Drawing.Point(11, 226);
+            this.label15.Location = new System.Drawing.Point(11, 224);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(412, 48);
+            this.label15.Size = new System.Drawing.Size(389, 46);
             this.label15.TabIndex = 11;
             this.label15.Text = "Quy định về người dùng";
             // 
             // siticonePanel1
             // 
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel1.Location = new System.Drawing.Point(11, 215);
+            this.siticonePanel1.Location = new System.Drawing.Point(11, 213);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(424, 11);
             this.siticonePanel1.TabIndex = 9;
@@ -242,7 +242,7 @@
             this.siticonePanel6.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel6.Location = new System.Drawing.Point(11, 178);
+            this.siticonePanel6.Location = new System.Drawing.Point(11, 176);
             this.siticonePanel6.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel6.Name = "siticonePanel6";
             this.siticonePanel6.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -256,7 +256,7 @@
             this.siticoneImageCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageCheckBox1.Image")));
             this.siticoneImageCheckBox1.ImageOffset = new System.Drawing.Point(0, 0);
             this.siticoneImageCheckBox1.ImageRotate = 0F;
-            this.siticoneImageCheckBox1.Location = new System.Drawing.Point(235, 12);
+            this.siticoneImageCheckBox1.Location = new System.Drawing.Point(225, 12);
             this.siticoneImageCheckBox1.Name = "siticoneImageCheckBox1";
             this.siticoneImageCheckBox1.Size = new System.Drawing.Size(25, 25);
             this.siticoneImageCheckBox1.TabIndex = 2;
@@ -270,7 +270,7 @@
             this.label6.Location = new System.Drawing.Point(0, 12);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(235, 33);
+            this.label6.Size = new System.Drawing.Size(225, 32);
             this.label6.TabIndex = 1;
             this.label6.Text = "Tiền thu > Tiền phạt";
             // 
@@ -282,7 +282,7 @@
             this.siticonePanel5.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel5.Location = new System.Drawing.Point(11, 142);
+            this.siticonePanel5.Location = new System.Drawing.Point(11, 140);
             this.siticonePanel5.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel5.Name = "siticonePanel5";
             this.siticonePanel5.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -295,10 +295,10 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Left;
             this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label9.Location = new System.Drawing.Point(226, 12);
+            this.label9.Location = new System.Drawing.Point(219, 12);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 33);
+            this.label9.Size = new System.Drawing.Size(89, 32);
             this.label9.TabIndex = 77;
             this.label9.Text = "(tháng)";
             // 
@@ -308,7 +308,7 @@
             this.siticoneNumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.siticoneNumericUpDown3.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneNumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown3.Location = new System.Drawing.Point(156, 12);
+            this.siticoneNumericUpDown3.Location = new System.Drawing.Point(149, 12);
             this.siticoneNumericUpDown3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneNumericUpDown3.Maximum = new decimal(new int[] {
             18,
@@ -334,7 +334,7 @@
             this.label5.Location = new System.Drawing.Point(0, 12);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 33);
+            this.label5.Size = new System.Drawing.Size(149, 32);
             this.label5.TabIndex = 1;
             this.label5.Text = "Thời hạn thẻ:";
             // 
@@ -345,7 +345,7 @@
             this.siticonePanel4.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel4.Location = new System.Drawing.Point(11, 106);
+            this.siticonePanel4.Location = new System.Drawing.Point(11, 104);
             this.siticonePanel4.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel4.Name = "siticonePanel4";
             this.siticonePanel4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -358,7 +358,7 @@
             this.siticoneNumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.siticoneNumericUpDown2.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneNumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown2.Location = new System.Drawing.Point(166, 12);
+            this.siticoneNumericUpDown2.Location = new System.Drawing.Point(159, 12);
             this.siticoneNumericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneNumericUpDown2.Maximum = new decimal(new int[] {
             50,
@@ -389,7 +389,7 @@
             this.label4.Location = new System.Drawing.Point(0, 12);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 33);
+            this.label4.Size = new System.Drawing.Size(159, 32);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tuổi tối thiểu:";
             // 
@@ -400,7 +400,7 @@
             this.siticonePanel3.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel3.Location = new System.Drawing.Point(11, 70);
+            this.siticonePanel3.Location = new System.Drawing.Point(11, 68);
             this.siticonePanel3.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -413,7 +413,7 @@
             this.siticoneNumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.siticoneNumericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneNumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown1.Location = new System.Drawing.Point(136, 12);
+            this.siticoneNumericUpDown1.Location = new System.Drawing.Point(131, 12);
             this.siticoneNumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneNumericUpDown1.Minimum = new decimal(new int[] {
             20,
@@ -439,7 +439,7 @@
             this.label3.Location = new System.Drawing.Point(0, 12);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 33);
+            this.label3.Size = new System.Drawing.Size(131, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tuổi tối đa:";
             // 
@@ -447,7 +447,7 @@
             // 
             this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneSeparator1.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 58);
+            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 56);
             this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(424, 12);
@@ -462,7 +462,7 @@
             this.label1.Location = new System.Drawing.Point(11, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 48);
+            this.label1.Size = new System.Drawing.Size(323, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quy định về độc giả";
             // 
@@ -513,7 +513,7 @@
             this.siticonePanel2.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel2.Location = new System.Drawing.Point(11, 214);
+            this.siticonePanel2.Location = new System.Drawing.Point(11, 212);
             this.siticonePanel2.Margin = new System.Windows.Forms.Padding(4);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -549,7 +549,7 @@
             this.label14.Location = new System.Drawing.Point(0, 15);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(215, 33);
+            this.label14.Size = new System.Drawing.Size(208, 32);
             this.label14.TabIndex = 2;
             this.label14.Text = "Danh sách thể loại";
             // 
@@ -561,7 +561,7 @@
             this.feat04.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.feat04.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.feat04.Dock = System.Windows.Forms.DockStyle.Top;
-            this.feat04.Location = new System.Drawing.Point(11, 178);
+            this.feat04.Location = new System.Drawing.Point(11, 176);
             this.feat04.Margin = new System.Windows.Forms.Padding(4);
             this.feat04.Name = "feat04";
             this.feat04.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -574,10 +574,10 @@
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label12.Location = new System.Drawing.Point(311, 15);
+            this.label12.Location = new System.Drawing.Point(305, 15);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 33);
+            this.label12.Size = new System.Drawing.Size(78, 32);
             this.label12.TabIndex = 86;
             this.label12.Text = "(VNĐ)";
             // 
@@ -593,7 +593,7 @@
             this.siticoneTextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.siticoneTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneTextBox3.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox3.Location = new System.Drawing.Point(161, 15);
+            this.siticoneTextBox3.Location = new System.Drawing.Point(155, 15);
             this.siticoneTextBox3.Name = "siticoneTextBox3";
             this.siticoneTextBox3.PasswordChar = '\0';
             this.siticoneTextBox3.PlaceholderText = "1000";
@@ -610,7 +610,7 @@
             this.label8.Location = new System.Drawing.Point(0, 15);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 33);
+            this.label8.Size = new System.Drawing.Size(155, 32);
             this.label8.TabIndex = 77;
             this.label8.Text = "Đơn giá phạt:";
             // 
@@ -622,7 +622,7 @@
             this.feat03.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.feat03.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.feat03.Dock = System.Windows.Forms.DockStyle.Top;
-            this.feat03.Location = new System.Drawing.Point(11, 142);
+            this.feat03.Location = new System.Drawing.Point(11, 140);
             this.feat03.Margin = new System.Windows.Forms.Padding(4);
             this.feat03.Name = "feat03";
             this.feat03.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -635,10 +635,10 @@
             this.label11.Dock = System.Windows.Forms.DockStyle.Left;
             this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label11.Location = new System.Drawing.Point(317, 15);
+            this.label11.Location = new System.Drawing.Point(307, 15);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 33);
+            this.label11.Size = new System.Drawing.Size(79, 32);
             this.label11.TabIndex = 79;
             this.label11.Text = "(ngày)";
             // 
@@ -648,7 +648,7 @@
             this.siticoneNumericUpDown6.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.siticoneNumericUpDown6.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneNumericUpDown6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown6.Location = new System.Drawing.Point(247, 15);
+            this.siticoneNumericUpDown6.Location = new System.Drawing.Point(237, 15);
             this.siticoneNumericUpDown6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneNumericUpDown6.Maximum = new decimal(new int[] {
             10,
@@ -674,7 +674,7 @@
             this.label7.Location = new System.Drawing.Point(0, 15);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(247, 33);
+            this.label7.Size = new System.Drawing.Size(237, 32);
             this.label7.TabIndex = 77;
             this.label7.Text = "Số ngày mượn tối đa:";
             // 
@@ -686,7 +686,7 @@
             this.feat02.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.feat02.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.feat02.Dock = System.Windows.Forms.DockStyle.Top;
-            this.feat02.Location = new System.Drawing.Point(11, 106);
+            this.feat02.Location = new System.Drawing.Point(11, 104);
             this.feat02.Margin = new System.Windows.Forms.Padding(4);
             this.feat02.Name = "feat02";
             this.feat02.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -699,10 +699,10 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label10.Location = new System.Drawing.Point(313, 15);
+            this.label10.Location = new System.Drawing.Point(304, 15);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 33);
+            this.label10.Size = new System.Drawing.Size(93, 32);
             this.label10.TabIndex = 78;
             this.label10.Text = "(quyển)";
             // 
@@ -712,7 +712,7 @@
             this.siticoneNumericUpDown5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.siticoneNumericUpDown5.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneNumericUpDown5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown5.Location = new System.Drawing.Point(243, 15);
+            this.siticoneNumericUpDown5.Location = new System.Drawing.Point(234, 15);
             this.siticoneNumericUpDown5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneNumericUpDown5.Maximum = new decimal(new int[] {
             10,
@@ -738,7 +738,7 @@
             this.labFeat02.Location = new System.Drawing.Point(0, 15);
             this.labFeat02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat02.Name = "labFeat02";
-            this.labFeat02.Size = new System.Drawing.Size(243, 33);
+            this.labFeat02.Size = new System.Drawing.Size(234, 32);
             this.labFeat02.TabIndex = 0;
             this.labFeat02.Text = "Số sách mượn tối đa:";
             // 
@@ -750,7 +750,7 @@
             this.feat01.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.feat01.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.feat01.Dock = System.Windows.Forms.DockStyle.Top;
-            this.feat01.Location = new System.Drawing.Point(11, 70);
+            this.feat01.Location = new System.Drawing.Point(11, 68);
             this.feat01.Margin = new System.Windows.Forms.Padding(4);
             this.feat01.Name = "feat01";
             this.feat01.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -763,10 +763,10 @@
             this.label13.Dock = System.Windows.Forms.DockStyle.Left;
             this.label13.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label13.Location = new System.Drawing.Point(384, 15);
+            this.label13.Location = new System.Drawing.Point(371, 15);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 33);
+            this.label13.Size = new System.Drawing.Size(73, 32);
             this.label13.TabIndex = 78;
             this.label13.Text = "(năm)";
             // 
@@ -776,7 +776,7 @@
             this.siticoneNumericUpDown4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.siticoneNumericUpDown4.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneNumericUpDown4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneNumericUpDown4.Location = new System.Drawing.Point(314, 15);
+            this.siticoneNumericUpDown4.Location = new System.Drawing.Point(301, 15);
             this.siticoneNumericUpDown4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneNumericUpDown4.Maximum = new decimal(new int[] {
             10,
@@ -802,7 +802,7 @@
             this.labFeat01.Location = new System.Drawing.Point(0, 15);
             this.labFeat01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat01.Name = "labFeat01";
-            this.labFeat01.Size = new System.Drawing.Size(314, 33);
+            this.labFeat01.Size = new System.Drawing.Size(301, 32);
             this.labFeat01.TabIndex = 0;
             this.labFeat01.Text = "Khoảng cách năm xuất bản:";
             // 
@@ -810,7 +810,7 @@
             // 
             this.siticoneSeparator2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneSeparator2.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator2.Location = new System.Drawing.Point(11, 58);
+            this.siticoneSeparator2.Location = new System.Drawing.Point(11, 56);
             this.siticoneSeparator2.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator2.Name = "siticoneSeparator2";
             this.siticoneSeparator2.Size = new System.Drawing.Size(425, 12);
@@ -825,7 +825,7 @@
             this.label2.Location = new System.Drawing.Point(11, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(409, 48);
+            this.label2.Size = new System.Drawing.Size(387, 46);
             this.label2.TabIndex = 0;
             this.label2.Text = "Quy định mượn trả sách";
             // 

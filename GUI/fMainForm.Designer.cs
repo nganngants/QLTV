@@ -110,7 +110,7 @@ namespace GUI
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 53);
+            this.label2.Size = new System.Drawing.Size(226, 52);
             this.label2.TabIndex = 4;
             this.label2.Text = "UIT LIBRARY";
             // 
@@ -194,7 +194,7 @@ namespace GUI
             // 
             // pageQLMT
             // 
-            this.pageQLMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.pageQLMT.BackColor = System.Drawing.SystemColors.Control;
             this.pageQLMT.ImageIndex = 2;
             this.pageQLMT.Location = new System.Drawing.Point(254, 4);
             this.pageQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -206,7 +206,7 @@ namespace GUI
             // 
             // pageQLPT
             // 
-            this.pageQLPT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.pageQLPT.BackColor = System.Drawing.SystemColors.Control;
             this.pageQLPT.ImageIndex = 3;
             this.pageQLPT.Location = new System.Drawing.Point(254, 4);
             this.pageQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -218,7 +218,7 @@ namespace GUI
             // 
             // pageBC
             // 
-            this.pageBC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.pageBC.BackColor = System.Drawing.SystemColors.Control;
             this.pageBC.ImageIndex = 4;
             this.pageBC.Location = new System.Drawing.Point(254, 4);
             this.pageBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -230,7 +230,7 @@ namespace GUI
             // 
             // pageQLND
             // 
-            this.pageQLND.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.pageQLND.BackColor = System.Drawing.SystemColors.Control;
             this.pageQLND.ImageIndex = 1;
             this.pageQLND.Location = new System.Drawing.Point(254, 4);
             this.pageQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -242,7 +242,7 @@ namespace GUI
             // 
             // pageTDQD
             // 
-            this.pageTDQD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.pageTDQD.BackColor = System.Drawing.SystemColors.Control;
             this.pageTDQD.ImageIndex = 7;
             this.pageTDQD.Location = new System.Drawing.Point(254, 4);
             this.pageTDQD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

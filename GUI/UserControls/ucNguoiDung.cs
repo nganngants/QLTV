@@ -11,17 +11,16 @@ using System.Windows.Forms;
 
 namespace GUI.UserControls
 {
-    public partial class ucQLPhieuThu : UserControl
+    public partial class ucNguoiDung : UserControl
     {
-        public ucQLPhieuThu()
+        public ucNguoiDung()
         {
             InitializeComponent();
         }
 
-
         private void butAdd_Click(object sender, EventArgs e)
         {
-            var f = new fPhieuThu();
+            var f = new fAddNguoiDung();
             f.ShowDialog();
         }
     }

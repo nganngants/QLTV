@@ -32,6 +32,7 @@ namespace GUI.UserControls
             container.Controls.Add(new ucCuonSach() { Dock = DockStyle.Fill, Name = "cuonsach" });
             container.Controls.Add(new ucTacGia() { Dock = DockStyle.Fill, Name = "tacgia" });
             container.Controls.Add(new ucTheLoai() { Dock = DockStyle.Fill, Name = "theloai" });
+            container.Controls.Add(new ucPhieuNhap() { Dock = DockStyle.Fill, Name = "phieunhap" });
         }
 
         /// <summary>
@@ -78,6 +79,12 @@ namespace GUI.UserControls
         private void butTheLoai_Click(object sender, EventArgs e)
         {
             Control[] con = container.Controls.Find("theloai", false);
+            con[0].BringToFront();
+        }
+
+        private void butPhieuNhap_Click(object sender, EventArgs e)
+        {
+            Control[] con = container.Controls.Find("phieunhap", false);
             con[0].BringToFront();
         }
     }

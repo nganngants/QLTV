@@ -87,12 +87,6 @@
     <Compile Include="BM\BMQLCuonSach.Designer.cs">
       <DependentUpon>BMQLCuonSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="BM\BMQLNguoiDung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BM\BMQLNguoiDung.Designer.cs">
-      <DependentUpon>BMQLNguoiDung.cs</DependentUpon>
-    </Compile>
     <Compile Include="BM\BMQLTuaSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +128,12 @@
     </Compile>
     <Compile Include="fAddLoaiDocGia.Designer.cs">
       <DependentUpon>fAddLoaiDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAddNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddNguoiDung.designer.cs">
+      <DependentUpon>fAddNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="fAddSachDaCo.cs">
       <SubType>Form</SubType>
@@ -213,6 +213,12 @@
     <Compile Include="fPhieuThu.designer.cs">
       <DependentUpon>fPhieuThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="fViewPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fViewPhieuNhap.Designer.cs">
+      <DependentUpon>fViewPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -251,6 +257,24 @@
     </Compile>
     <Compile Include="UserControls\ucMuonTheoTheLoai.Designer.cs">
       <DependentUpon>ucMuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucNguoiDung.Designer.cs">
+      <DependentUpon>ucNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucNhomND.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucNhomND.Designer.cs">
+      <DependentUpon>ucNhomND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPhieuNhap.Designer.cs">
+      <DependentUpon>ucPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucQLDG.cs">
       <SubType>UserControl</SubType>
@@ -336,9 +360,6 @@
     <EmbeddedResource Include="BM\BMQLCuonSach.resx">
       <DependentUpon>BMQLCuonSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BM\BMQLNguoiDung.resx">
-      <DependentUpon>BMQLNguoiDung.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BM\BMQLTuaSach.resx">
       <DependentUpon>BMQLTuaSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAddLoaiDocGia.resx">
       <DependentUpon>fAddLoaiDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddNguoiDung.resx">
+      <DependentUpon>fAddNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAddSachDaCo.resx">
       <DependentUpon>fAddSachDaCo.cs</DependentUpon>
@@ -399,6 +423,9 @@
     <EmbeddedResource Include="fPhieuThu.resx">
       <DependentUpon>fPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fViewPhieuNhap.resx">
+      <DependentUpon>fViewPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -426,6 +453,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMuonTheoTheLoai.resx">
       <DependentUpon>ucMuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucNguoiDung.resx">
+      <DependentUpon>ucNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucNhomND.resx">
+      <DependentUpon>ucNhomND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucPhieuNhap.resx">
+      <DependentUpon>ucPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLDG.resx">
       <DependentUpon>ucQLDG.cs</DependentUpon>
@@ -464,10 +500,15 @@
       <DependentUpon>ucTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.CT_PHIEUNHAP.datasource" />
     <None Include="Properties\DataSources\DTO.CUONSACH.datasource" />
     <None Include="Properties\DataSources\DTO.DOCGIA.datasource" />
     <None Include="Properties\DataSources\DTO.LOAIDOCGIA.datasource" />
+    <None Include="Properties\DataSources\DTO.NGUOIDUNG.datasource" />
+    <None Include="Properties\DataSources\DTO.NHOMNGUOIDUNG.datasource" />
     <None Include="Properties\DataSources\DTO.PHIEUMUONTRA.datasource" />
+    <None Include="Properties\DataSources\DTO.PHIEUNHAPSACH.datasource" />
+    <None Include="Properties\DataSources\DTO.PHIEUTHU.datasource" />
     <None Include="Properties\DataSources\DTO.SACH.datasource" />
     <None Include="Properties\DataSources\DTO.TACGIA.datasource" />
     <None Include="Properties\DataSources\DTO.THELOAI.datasource" />

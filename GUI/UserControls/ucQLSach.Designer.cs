@@ -38,12 +38,14 @@ namespace GUI.UserControls
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.butTuaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.container = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.butPhieuNhap = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticoneGradientPanel1
             // 
             this.siticoneGradientPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.siticoneGradientPanel1.Controls.Add(this.butPhieuNhap);
             this.siticoneGradientPanel1.Controls.Add(this.butTheLoai);
             this.siticoneGradientPanel1.Controls.Add(this.butTacGia);
             this.siticoneGradientPanel1.Controls.Add(this.butCuonsach);
@@ -53,7 +55,7 @@ namespace GUI.UserControls
             this.siticoneGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
-            this.siticoneGradientPanel1.Size = new System.Drawing.Size(997, 50);
+            this.siticoneGradientPanel1.Size = new System.Drawing.Size(1121, 50);
             this.siticoneGradientPanel1.TabIndex = 0;
             // 
             // butTheLoai
@@ -73,10 +75,10 @@ namespace GUI.UserControls
             this.butTheLoai.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butTheLoai.ForeColor = System.Drawing.Color.DimGray;
             this.butTheLoai.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.butTheLoai.Location = new System.Drawing.Point(720, 0);
+            this.butTheLoai.Location = new System.Drawing.Point(676, 0);
             this.butTheLoai.Name = "butTheLoai";
             this.butTheLoai.PressedColor = System.Drawing.Color.Transparent;
-            this.butTheLoai.Size = new System.Drawing.Size(180, 50);
+            this.butTheLoai.Size = new System.Drawing.Size(169, 50);
             this.butTheLoai.TabIndex = 4;
             this.butTheLoai.Text = "Thể Loại";
             this.butTheLoai.Click += new System.EventHandler(this.butTheLoai_Click);
@@ -98,10 +100,10 @@ namespace GUI.UserControls
             this.butTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butTacGia.ForeColor = System.Drawing.Color.DimGray;
             this.butTacGia.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.butTacGia.Location = new System.Drawing.Point(540, 0);
+            this.butTacGia.Location = new System.Drawing.Point(507, 0);
             this.butTacGia.Name = "butTacGia";
             this.butTacGia.PressedColor = System.Drawing.Color.Transparent;
-            this.butTacGia.Size = new System.Drawing.Size(180, 50);
+            this.butTacGia.Size = new System.Drawing.Size(169, 50);
             this.butTacGia.TabIndex = 3;
             this.butTacGia.Text = "Tác Giả";
             this.butTacGia.Click += new System.EventHandler(this.butTacGia_Click);
@@ -123,10 +125,10 @@ namespace GUI.UserControls
             this.butCuonsach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butCuonsach.ForeColor = System.Drawing.Color.DimGray;
             this.butCuonsach.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.butCuonsach.Location = new System.Drawing.Point(360, 0);
+            this.butCuonsach.Location = new System.Drawing.Point(338, 0);
             this.butCuonsach.Name = "butCuonsach";
             this.butCuonsach.PressedColor = System.Drawing.Color.Transparent;
-            this.butCuonsach.Size = new System.Drawing.Size(180, 50);
+            this.butCuonsach.Size = new System.Drawing.Size(169, 50);
             this.butCuonsach.TabIndex = 2;
             this.butCuonsach.Text = "Cuốn sách";
             this.butCuonsach.Click += new System.EventHandler(this.butCuonsach_Click_1);
@@ -148,10 +150,10 @@ namespace GUI.UserControls
             this.butSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold);
             this.butSach.ForeColor = System.Drawing.Color.DimGray;
             this.butSach.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.butSach.Location = new System.Drawing.Point(180, 0);
+            this.butSach.Location = new System.Drawing.Point(169, 0);
             this.butSach.Name = "butSach";
             this.butSach.PressedColor = System.Drawing.Color.Transparent;
-            this.butSach.Size = new System.Drawing.Size(180, 50);
+            this.butSach.Size = new System.Drawing.Size(169, 50);
             this.butSach.TabIndex = 0;
             this.butSach.Text = "Sách";
             this.butSach.Click += new System.EventHandler(this.butSach_Click);
@@ -184,7 +186,7 @@ namespace GUI.UserControls
             this.butTuaSach.Location = new System.Drawing.Point(0, 0);
             this.butTuaSach.Name = "butTuaSach";
             this.butTuaSach.PressedColor = System.Drawing.Color.Transparent;
-            this.butTuaSach.Size = new System.Drawing.Size(180, 50);
+            this.butTuaSach.Size = new System.Drawing.Size(169, 50);
             this.butTuaSach.TabIndex = 1;
             this.butTuaSach.Text = "Tựa sách";
             this.butTuaSach.Click += new System.EventHandler(this.butTuaSach_Click);
@@ -194,9 +196,34 @@ namespace GUI.UserControls
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 50);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(997, 602);
+            this.container.Size = new System.Drawing.Size(1121, 643);
             this.container.TabIndex = 1;
             this.container.Text = "siticoneContainerControl2";
+            // 
+            // butPhieuNhap
+            // 
+            this.butPhieuNhap.BorderColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.butPhieuNhap.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
+            this.butPhieuNhap.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.butPhieuNhap.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.butPhieuNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butPhieuNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butPhieuNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butPhieuNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butPhieuNhap.Dock = System.Windows.Forms.DockStyle.Left;
+            this.butPhieuNhap.FillColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butPhieuNhap.ForeColor = System.Drawing.Color.DimGray;
+            this.butPhieuNhap.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.Location = new System.Drawing.Point(845, 0);
+            this.butPhieuNhap.Name = "butPhieuNhap";
+            this.butPhieuNhap.PressedColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.Size = new System.Drawing.Size(169, 50);
+            this.butPhieuNhap.TabIndex = 5;
+            this.butPhieuNhap.Text = "Phiếu Nhập Sách";
+            this.butPhieuNhap.Click += new System.EventHandler(this.butPhieuNhap_Click);
             // 
             // ucQLSach
             // 
@@ -205,7 +232,7 @@ namespace GUI.UserControls
             this.Controls.Add(this.container);
             this.Controls.Add(this.siticoneGradientPanel1);
             this.Name = "ucQLSach";
-            this.Size = new System.Drawing.Size(997, 652);
+            this.Size = new System.Drawing.Size(1121, 693);
             this.siticoneGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -221,6 +248,7 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneButton butCuonsach;
         private SiticoneButton butTheLoai;
         private SiticoneButton butTacGia;
+        private SiticoneButton butPhieuNhap;
         //public SiticoneContainerControl Container1 { get => container; set => container = value; }
     }
 }
