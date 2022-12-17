@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class fViewPhieuNhap : Form
+    public partial class fInfoPhieuNhap : Form
     {
-        public fViewPhieuNhap()
+        public fInfoPhieuNhap()
         {
             InitializeComponent();
         }

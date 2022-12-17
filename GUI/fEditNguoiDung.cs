@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class fInfoTuaSach : Form
+    public partial class fEditNguoiDung : Form
     {
-        private static int id;
-        public fInfoTuaSach(int _id)
+        public fEditNguoiDung(int id)
         {
             InitializeComponent();
-            id = _id;
-        }
-
-        private void butChange_Click(object sender, EventArgs e)
-        {
-            var f = new fEditTuaSach(id);
-            f.ShowDialog();
-
         }
     }
 }
