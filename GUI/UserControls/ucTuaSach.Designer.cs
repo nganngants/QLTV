@@ -40,6 +40,7 @@ namespace GUI.UserControls
             this.TuaSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.tUASACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maTuaSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenTuaSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,6 +129,7 @@ namespace GUI.UserControls
             this.TuaSachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TuaSachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChosen,
+            this.Edit,
             this.idDataGridViewTextBoxColumn,
             this.maTuaSachDataGridViewTextBoxColumn,
             this.tenTuaSachDataGridViewTextBoxColumn,
@@ -190,6 +192,13 @@ namespace GUI.UserControls
             this.isChosen.Name = "isChosen";
             this.isChosen.TrueValue = "1";
             this.isChosen.Width = 6;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -263,6 +272,7 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private DataGridViewCheckBoxColumn isChosen;
+        private DataGridViewImageColumn Edit;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn maTuaSachDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tenTuaSachDataGridViewTextBoxColumn;

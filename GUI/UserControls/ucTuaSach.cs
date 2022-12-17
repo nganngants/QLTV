@@ -24,12 +24,13 @@ namespace GUI.UserControls
             TuaSachList = BUSTuaSach.Instance.GetAllTuaSach();
             this.TuaSachGrid.DataSource = TuaSachList;
             int i = 0;
-            Image image = Image.FromFile("Resources/edit_icon.png");
-            
+            Image img = Properties.Resources.edit_icon;
+            img = (Image)(new Bitmap(img, new Size(20, 20)));
+
             // Icon myIcon = new Icon("F:\\QLTV\\GUI\\Resources\\edit_icon.png");
             foreach (DataGridViewRow row in TuaSachGrid.Rows)
             {
-                row.Cells["Edit"].Value = image;
+                row.Cells["Edit"].Value = img;
                 string tacgia = "";
                 int cnt = 0;
                 foreach (TACGIA tg in TuaSachList[i].TACGIAs)
