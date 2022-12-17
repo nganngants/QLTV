@@ -47,12 +47,12 @@
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.featPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneCirclePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.parentPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.tableLayoutTen.SuspendLayout();
             this.BotPanel.SuspendLayout();
             this.botTableLayout.SuspendLayout();
@@ -324,6 +324,22 @@
             this.featPanel.Size = new System.Drawing.Size(447, 534);
             this.featPanel.TabIndex = 0;
             // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.listView1.HideSelection = false;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(11, 68);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(425, 456);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
+            // 
             // siticoneSeparator2
             // 
             this.siticoneSeparator2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -388,22 +404,6 @@
             this.parentPanel.Padding = new System.Windows.Forms.Padding(5);
             this.parentPanel.Size = new System.Drawing.Size(989, 795);
             this.parentPanel.TabIndex = 3;
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(11, 68);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(425, 456);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
             // 
             // ucThongTinTaiKhoan
             // 

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class fViewPhieuNhap
+    partial class fInfoPhieuNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -39,20 +39,10 @@
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelMaTS = new System.Windows.Forms.Label();
-            this.labelTenTS = new System.Windows.Forms.Label();
-            this.labelTheLoai = new System.Windows.Forms.Label();
-            this.listViewTacGia = new System.Windows.Forms.ListView();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label6 = new System.Windows.Forms.Label();
             this.siticoneDataGridView1 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.cTPHIEUNHAPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.soPhieuNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,12 +50,20 @@
             this.soLuongNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHIEUNHAPSACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTPHIEUNHAPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tableInfo = new System.Windows.Forms.TableLayoutPanel();
+            this.labelTongTien = new System.Windows.Forms.Label();
+            this.labelNgayNhap = new System.Windows.Forms.Label();
+            this.labelSoPhieu = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
-            this.tableInfo.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPHIEUNHAPBindingSource)).BeginInit();
+            this.tableInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -136,129 +134,12 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "THÔNG TIN PHIẾU NHẬP";
             // 
-            // tableInfo
-            // 
-            this.tableInfo.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.tableInfo.ColumnCount = 2;
-            this.tableInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.48498F));
-            this.tableInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.51502F));
-            this.tableInfo.Controls.Add(this.label3, 0, 1);
-            this.tableInfo.Controls.Add(this.label4, 0, 2);
-            this.tableInfo.Controls.Add(this.label5, 0, 3);
-            this.tableInfo.Controls.Add(this.label2, 0, 0);
-            this.tableInfo.Controls.Add(this.labelMaTS, 1, 0);
-            this.tableInfo.Controls.Add(this.labelTenTS, 1, 1);
-            this.tableInfo.Controls.Add(this.labelTheLoai, 1, 2);
-            this.tableInfo.Controls.Add(this.listViewTacGia, 1, 3);
-            this.tableInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableInfo.Location = new System.Drawing.Point(0, 122);
-            this.tableInfo.Margin = new System.Windows.Forms.Padding(6);
-            this.tableInfo.Name = "tableInfo";
-            this.tableInfo.Padding = new System.Windows.Forms.Padding(25, 5, 25, 5);
-            this.tableInfo.RowCount = 4;
-            this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableInfo.Size = new System.Drawing.Size(794, 221);
-            this.tableInfo.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(30, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 27);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tên Tựa Sách";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label4.Location = new System.Drawing.Point(30, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 27);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Thể Loại";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label5.Location = new System.Drawing.Point(30, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 27);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Danh Sách Tác Giả";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(30, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 27);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mã Tựa Sách";
-            // 
-            // labelMaTS
-            // 
-            this.labelMaTS.AutoSize = true;
-            this.labelMaTS.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaTS.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelMaTS.Location = new System.Drawing.Point(323, 7);
-            this.labelMaTS.Name = "labelMaTS";
-            this.labelMaTS.Size = new System.Drawing.Size(21, 27);
-            this.labelMaTS.TabIndex = 0;
-            this.labelMaTS.Text = "x";
-            // 
-            // labelTenTS
-            // 
-            this.labelTenTS.AutoSize = true;
-            this.labelTenTS.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenTS.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelTenTS.Location = new System.Drawing.Point(323, 39);
-            this.labelTenTS.Name = "labelTenTS";
-            this.labelTenTS.Size = new System.Drawing.Size(20, 27);
-            this.labelTenTS.TabIndex = 0;
-            this.labelTenTS.Text = "z";
-            // 
-            // labelTheLoai
-            // 
-            this.labelTheLoai.AutoSize = true;
-            this.labelTheLoai.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheLoai.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelTheLoai.Location = new System.Drawing.Point(323, 71);
-            this.labelTheLoai.Name = "labelTheLoai";
-            this.labelTheLoai.Size = new System.Drawing.Size(21, 27);
-            this.labelTheLoai.TabIndex = 0;
-            this.labelTheLoai.Text = "x";
-            // 
-            // listViewTacGia
-            // 
-            this.listViewTacGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.listViewTacGia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewTacGia.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.listViewTacGia.HideSelection = false;
-            this.listViewTacGia.Location = new System.Drawing.Point(323, 106);
-            this.listViewTacGia.Name = "listViewTacGia";
-            this.listViewTacGia.Size = new System.Drawing.Size(441, 105);
-            this.listViewTacGia.TabIndex = 1;
-            this.listViewTacGia.UseCompatibleStateImageBehavior = false;
-            // 
             // siticonePanel2
             // 
             this.siticonePanel2.Controls.Add(this.siticoneSeparator2);
             this.siticonePanel2.Controls.Add(this.label6);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel2.Location = new System.Drawing.Point(0, 343);
+            this.siticonePanel2.Location = new System.Drawing.Point(0, 234);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(794, 68);
             this.siticonePanel2.TabIndex = 7;
@@ -296,7 +177,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.siticoneDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.siticoneDataGridView1.ColumnHeadersHeight = 18;
+            this.siticoneDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.soPhieuNhapDataGridViewTextBoxColumn,
             this.idSachDataGridViewTextBoxColumn,
@@ -316,12 +198,12 @@
             this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.siticoneDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.Location = new System.Drawing.Point(0, 411);
+            this.siticoneDataGridView1.Location = new System.Drawing.Point(0, 302);
             this.siticoneDataGridView1.Name = "siticoneDataGridView1";
             this.siticoneDataGridView1.RowHeadersVisible = false;
             this.siticoneDataGridView1.RowHeadersWidth = 51;
             this.siticoneDataGridView1.RowTemplate.Height = 24;
-            this.siticoneDataGridView1.Size = new System.Drawing.Size(794, 289);
+            this.siticoneDataGridView1.Size = new System.Drawing.Size(794, 398);
             this.siticoneDataGridView1.TabIndex = 8;
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -334,7 +216,7 @@
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Height = 18;
             this.siticoneDataGridView1.ThemeStyle.ReadOnly = false;
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -344,10 +226,6 @@
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // cTPHIEUNHAPBindingSource
-            // 
-            this.cTPHIEUNHAPBindingSource.DataSource = typeof(DTO.CT_PHIEUNHAP);
             // 
             // soPhieuNhapDataGridViewTextBoxColumn
             // 
@@ -398,6 +276,100 @@
             this.pHIEUNHAPSACHDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pHIEUNHAPSACHDataGridViewTextBoxColumn.Name = "pHIEUNHAPSACHDataGridViewTextBoxColumn";
             // 
+            // cTPHIEUNHAPBindingSource
+            // 
+            this.cTPHIEUNHAPBindingSource.DataSource = typeof(DTO.CT_PHIEUNHAP);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label2.Location = new System.Drawing.Point(30, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 27);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Số Phiếu Nhập";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label4.Location = new System.Drawing.Point(30, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 27);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tổng Tiền";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label3.Location = new System.Drawing.Point(30, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 27);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Ngày Nhập";
+            // 
+            // tableInfo
+            // 
+            this.tableInfo.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tableInfo.ColumnCount = 2;
+            this.tableInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.48498F));
+            this.tableInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.51502F));
+            this.tableInfo.Controls.Add(this.label3, 0, 1);
+            this.tableInfo.Controls.Add(this.label4, 0, 2);
+            this.tableInfo.Controls.Add(this.label2, 0, 0);
+            this.tableInfo.Controls.Add(this.labelSoPhieu, 1, 0);
+            this.tableInfo.Controls.Add(this.labelNgayNhap, 1, 1);
+            this.tableInfo.Controls.Add(this.labelTongTien, 1, 2);
+            this.tableInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableInfo.Location = new System.Drawing.Point(0, 122);
+            this.tableInfo.Margin = new System.Windows.Forms.Padding(6);
+            this.tableInfo.Name = "tableInfo";
+            this.tableInfo.Padding = new System.Windows.Forms.Padding(25, 5, 25, 5);
+            this.tableInfo.RowCount = 3;
+            this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableInfo.Size = new System.Drawing.Size(794, 112);
+            this.tableInfo.TabIndex = 6;
+            // 
+            // labelTongTien
+            // 
+            this.labelTongTien.AutoSize = true;
+            this.labelTongTien.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongTien.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelTongTien.Location = new System.Drawing.Point(323, 71);
+            this.labelTongTien.Name = "labelTongTien";
+            this.labelTongTien.Size = new System.Drawing.Size(21, 27);
+            this.labelTongTien.TabIndex = 0;
+            this.labelTongTien.Text = "x";
+            // 
+            // labelNgayNhap
+            // 
+            this.labelNgayNhap.AutoSize = true;
+            this.labelNgayNhap.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNgayNhap.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelNgayNhap.Location = new System.Drawing.Point(323, 39);
+            this.labelNgayNhap.Name = "labelNgayNhap";
+            this.labelNgayNhap.Size = new System.Drawing.Size(20, 27);
+            this.labelNgayNhap.TabIndex = 0;
+            this.labelNgayNhap.Text = "z";
+            // 
+            // labelSoPhieu
+            // 
+            this.labelSoPhieu.AutoSize = true;
+            this.labelSoPhieu.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSoPhieu.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelSoPhieu.Location = new System.Drawing.Point(323, 7);
+            this.labelSoPhieu.Name = "labelSoPhieu";
+            this.labelSoPhieu.Size = new System.Drawing.Size(21, 27);
+            this.labelSoPhieu.TabIndex = 0;
+            this.labelSoPhieu.Text = "x";
+            // 
             // fViewPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -416,12 +388,12 @@
             this.controlPanel.ResumeLayout(false);
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
-            this.tableInfo.ResumeLayout(false);
-            this.tableInfo.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPHIEUNHAPBindingSource)).EndInit();
+            this.tableInfo.ResumeLayout(false);
+            this.tableInfo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -435,15 +407,6 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableInfo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelMaTS;
-        private System.Windows.Forms.Label labelTenTS;
-        private System.Windows.Forms.Label labelTheLoai;
-        private System.Windows.Forms.ListView listViewTacGia;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView siticoneDataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn soPhieuNhapDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSachDataGridViewTextBoxColumn;
@@ -456,5 +419,12 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TableLayoutPanel tableInfo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelSoPhieu;
+        private System.Windows.Forms.Label labelNgayNhap;
+        private System.Windows.Forms.Label labelTongTien;
     }
 }

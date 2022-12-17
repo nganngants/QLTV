@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class fAddTuaSach
+    partial class fEditTuaSach
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenTuaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -64,8 +64,8 @@
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(839, 54);
-            this.controlPanel.TabIndex = 2;
+            this.controlPanel.Size = new System.Drawing.Size(837, 54);
+            this.controlPanel.TabIndex = 3;
             // 
             // miniControlBox
             // 
@@ -73,7 +73,7 @@
             this.miniControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.miniControlBox.Location = new System.Drawing.Point(716, 0);
+            this.miniControlBox.Location = new System.Drawing.Point(714, 0);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(60, 54);
             this.miniControlBox.TabIndex = 0;
@@ -83,7 +83,7 @@
             this.closeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.closeControlBox.Location = new System.Drawing.Point(778, 0);
+            this.closeControlBox.Location = new System.Drawing.Point(776, 0);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(61, 54);
             this.closeControlBox.TabIndex = 0;
@@ -104,13 +104,14 @@
             this.mainPanel.Controls.Add(this.comboTheLoai);
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.label2);
+            this.mainPanel.Controls.Add(this.label4);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.txtTenTuaSach);
             this.mainPanel.Controls.Add(this.labelTitle);
-            this.mainPanel.Location = new System.Drawing.Point(72, 97);
+            this.mainPanel.Location = new System.Drawing.Point(70, 114);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(690, 648);
-            this.mainPanel.TabIndex = 3;
+            this.mainPanel.Size = new System.Drawing.Size(689, 648);
+            this.mainPanel.TabIndex = 4;
             // 
             // addNewTacGia
             // 
@@ -140,9 +141,9 @@
             this.butOK.ForeColor = System.Drawing.Color.White;
             this.butOK.Location = new System.Drawing.Point(280, 532);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(131, 44);
+            this.butOK.Size = new System.Drawing.Size(130, 44);
             this.butOK.TabIndex = 10;
-            this.butOK.Text = "Thêm";
+            this.butOK.Text = "Lưu thay đổi";
             // 
             // butAddTacGia
             // 
@@ -159,7 +160,7 @@
             this.butAddTacGia.ForeColor = System.Drawing.Color.White;
             this.butAddTacGia.Location = new System.Drawing.Point(414, 432);
             this.butAddTacGia.Name = "butAddTacGia";
-            this.butAddTacGia.Size = new System.Drawing.Size(131, 44);
+            this.butAddTacGia.Size = new System.Drawing.Size(130, 44);
             this.butAddTacGia.TabIndex = 10;
             this.butAddTacGia.Text = "Thêm tác giả";
             // 
@@ -172,7 +173,7 @@
             this.listViewTacGia.HideSelection = false;
             this.listViewTacGia.Location = new System.Drawing.Point(146, 301);
             this.listViewTacGia.Name = "listViewTacGia";
-            this.listViewTacGia.Size = new System.Drawing.Size(399, 125);
+            this.listViewTacGia.Size = new System.Drawing.Size(398, 125);
             this.listViewTacGia.TabIndex = 9;
             this.listViewTacGia.UseCompatibleStateImageBehavior = false;
             this.listViewTacGia.View = System.Windows.Forms.View.List;
@@ -191,7 +192,7 @@
             this.comboTacGia.ItemHeight = 30;
             this.comboTacGia.Location = new System.Drawing.Point(146, 432);
             this.comboTacGia.Name = "comboTacGia";
-            this.comboTacGia.Size = new System.Drawing.Size(262, 36);
+            this.comboTacGia.Size = new System.Drawing.Size(261, 36);
             this.comboTacGia.TabIndex = 8;
             // 
             // comboTheLoai
@@ -208,7 +209,7 @@
             this.comboTheLoai.ItemHeight = 30;
             this.comboTheLoai.Location = new System.Drawing.Point(146, 223);
             this.comboTheLoai.Name = "comboTheLoai";
-            this.comboTheLoai.Size = new System.Drawing.Size(399, 36);
+            this.comboTheLoai.Size = new System.Drawing.Size(398, 36);
             this.comboTheLoai.TabIndex = 7;
             // 
             // label3
@@ -276,31 +277,37 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
-            this.labelTitle.Location = new System.Drawing.Point(184, 40);
+            this.labelTitle.Location = new System.Drawing.Point(104, 19);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(322, 49);
+            this.labelTitle.Size = new System.Drawing.Size(507, 49);
             this.labelTitle.TabIndex = 4;
-            this.labelTitle.Text = "THÊM TỰA SÁCH";
+            this.labelTitle.Text = "SỬA THÔNG TIN TỰA SÁCH";
             // 
-            // siticoneDragControl1
+            // label4
             // 
-            this.siticoneDragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.siticoneDragControl1.TargetControl = this.controlPanel;
-            this.siticoneDragControl1.UseTransparentDrag = true;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label4.Location = new System.Drawing.Point(180, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 27);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Mã Tựa Sách: ";
             // 
-            // fAddTuaSach
+            // fEditTuaSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(839, 800);
+            this.ClientSize = new System.Drawing.Size(837, 820);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "fAddTuaSach";
+            this.Name = "fEditTuaSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fAddTuaSach";
-            this.Load += new System.EventHandler(this.fAddTuaSach_Load);
+            this.Text = "fEditTuaSach";
             this.controlPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
@@ -311,21 +318,21 @@
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel mainPanel;
         private Siticone.Desktop.UI.WinForms.SiticonePanel controlPanel;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox miniControlBox;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox closeControlBox;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenTuaSach;
-        private System.Windows.Forms.Label labelTitle;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTheLoai;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel mainPanel;
+        private System.Windows.Forms.LinkLabel addNewTacGia;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butOK;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAddTacGia;
         private System.Windows.Forms.ListView listViewTacGia;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTacGia;
-        private System.Windows.Forms.LinkLabel addNewTacGia;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butOK;
-        private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTheLoai;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenTuaSach;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label label4;
     }
 }
