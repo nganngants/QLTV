@@ -18,11 +18,10 @@ namespace GUI.UserControls
             InitializeComponent();
         }
 
-        private void siticoneButton2_Click(object sender, EventArgs e)
+        private void butAdd_Click(object sender, EventArgs e)
         {
-            var f = new BMChoMuonSach();
-            f.Show();
-
+            var f = new fPhieuMuonSach();
+            f.ShowDialog();
         }
     }
 }

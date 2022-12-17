@@ -75,23 +75,11 @@
     <Compile Include="BM\BMBCTKMuonTheoTheLoai.Designer.cs">
       <DependentUpon>BMBCTKMuonTheoTheLoai.cs</DependentUpon>
     </Compile>
-    <Compile Include="BM\BMChoMuonSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BM\BMChoMuonSach.Designer.cs">
-      <DependentUpon>BMChoMuonSach.cs</DependentUpon>
-    </Compile>
     <Compile Include="BM\BMLapTheDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BM\BMLapTheDocGia.Designer.cs">
       <DependentUpon>BMLapTheDocGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BM\BMPhieuThuTienPhat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BM\BMPhieuThuTienPhat.Designer.cs">
-      <DependentUpon>BMPhieuThuTienPhat.cs</DependentUpon>
     </Compile>
     <Compile Include="BM\BMQLCuonSach.cs">
       <SubType>Form</SubType>
@@ -183,6 +171,12 @@
     <Compile Include="fEditLoaiDG.Designer.cs">
       <DependentUpon>fEditLoaiDG.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditPhieuMuon.Designer.cs">
+      <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +200,18 @@
     </Compile>
     <Compile Include="fMainForm.Designer.cs">
       <DependentUpon>fMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPhieuMuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPhieuMuonSach.Designer.cs">
+      <DependentUpon>fPhieuMuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPhieuThu.designer.cs">
+      <DependentUpon>fPhieuThu.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
@@ -324,14 +330,8 @@
     <EmbeddedResource Include="BM\BMBCTKMuonTheoTheLoai.resx">
       <DependentUpon>BMBCTKMuonTheoTheLoai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BM\BMChoMuonSach.resx">
-      <DependentUpon>BMChoMuonSach.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BM\BMLapTheDocGia.resx">
       <DependentUpon>BMLapTheDocGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BM\BMPhieuThuTienPhat.resx">
-      <DependentUpon>BMPhieuThuTienPhat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BM\BMQLCuonSach.resx">
       <DependentUpon>BMQLCuonSach.cs</DependentUpon>
@@ -378,6 +378,9 @@
     <EmbeddedResource Include="fEditLoaiDG.resx">
       <DependentUpon>fEditLoaiDG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fEditPhieuMuon.resx">
+      <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fInfoDocGia.resx">
       <DependentUpon>fInfoDocGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +392,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMainForm.resx">
       <DependentUpon>fMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPhieuMuonSach.resx">
+      <DependentUpon>fPhieuMuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPhieuThu.resx">
+      <DependentUpon>fPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
