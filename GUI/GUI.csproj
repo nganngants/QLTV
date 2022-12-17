@@ -545,6 +545,7 @@
     <Content Include="images\book_icon03.png" />
     <None Include="images\close_icon.png" />
     <Content Include="images\docgia.png" />
+    <Content Include="Resources\edit_icon.png" />
     <Content Include="images\home_icon.png" />
     <Content Include="images\info_icon.png" />
     <None Include="images\key_icon.png" />

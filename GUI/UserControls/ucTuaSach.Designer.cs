@@ -37,17 +37,17 @@ namespace GUI.UserControls
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneDataGridView1 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.TuaSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.tUASACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maTuaSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenTuaSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTheLoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sACHesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tHELOAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tACGIAsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tUASACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TuaSachGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUASACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,68 +104,92 @@ namespace GUI.UserControls
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
             this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
-            // siticoneDataGridView1
+            // TuaSachGrid
             // 
+            this.TuaSachGrid.AllowUserToAddRows = false;
+            this.TuaSachGrid.AllowUserToDeleteRows = false;
+            this.TuaSachGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.siticoneDataGridView1.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TuaSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.TuaSachGrid.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.siticoneDataGridView1.ColumnHeadersHeight = 18;
-            this.siticoneDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TuaSachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.TuaSachGrid.ColumnHeadersHeight = 35;
+            this.TuaSachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.TuaSachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.isChosen,
             this.idDataGridViewTextBoxColumn,
             this.maTuaSachDataGridViewTextBoxColumn,
             this.tenTuaSachDataGridViewTextBoxColumn,
-            this.idTheLoaiDataGridViewTextBoxColumn,
-            this.sACHesDataGridViewTextBoxColumn,
-            this.tHELOAIDataGridViewTextBoxColumn,
-            this.tACGIAsDataGridViewTextBoxColumn});
-            this.siticoneDataGridView1.DataSource = this.tUASACHBindingSource;
+            this.TheLoai,
+            this.TacGia,
+            this.idTheLoaiDataGridViewTextBoxColumn});
+            this.TuaSachGrid.DataSource = this.tUASACHBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.siticoneDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticoneDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.Location = new System.Drawing.Point(0, 120);
-            this.siticoneDataGridView1.Name = "siticoneDataGridView1";
-            this.siticoneDataGridView1.RowHeadersVisible = false;
-            this.siticoneDataGridView1.RowHeadersWidth = 51;
-            this.siticoneDataGridView1.RowTemplate.Height = 24;
-            this.siticoneDataGridView1.Size = new System.Drawing.Size(997, 476);
-            this.siticoneDataGridView1.TabIndex = 1;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.siticoneDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Height = 18;
-            this.siticoneDataGridView1.ThemeStyle.ReadOnly = false;
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TuaSachGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TuaSachGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TuaSachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.TuaSachGrid.Location = new System.Drawing.Point(0, 120);
+            this.TuaSachGrid.Name = "TuaSachGrid";
+            this.TuaSachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TuaSachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.TuaSachGrid.RowHeadersVisible = false;
+            this.TuaSachGrid.RowHeadersWidth = 51;
+            this.TuaSachGrid.RowTemplate.Height = 28;
+            this.TuaSachGrid.Size = new System.Drawing.Size(997, 476);
+            this.TuaSachGrid.TabIndex = 1;
+            this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.TuaSachGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.TuaSachGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.TuaSachGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.TuaSachGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TuaSachGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TuaSachGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.TuaSachGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.TuaSachGrid.ThemeStyle.HeaderStyle.Height = 35;
+            this.TuaSachGrid.ThemeStyle.ReadOnly = false;
+            this.TuaSachGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.TuaSachGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.TuaSachGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TuaSachGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TuaSachGrid.ThemeStyle.RowsStyle.Height = 28;
+            this.TuaSachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.TuaSachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // tUASACHBindingSource
+            // 
+            this.tUASACHBindingSource.DataSource = typeof(DTO.TUASACH);
+            // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Width = 6;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -173,20 +197,39 @@ namespace GUI.UserControls
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // maTuaSachDataGridViewTextBoxColumn
             // 
             this.maTuaSachDataGridViewTextBoxColumn.DataPropertyName = "MaTuaSach";
-            this.maTuaSachDataGridViewTextBoxColumn.HeaderText = "MaTuaSach";
+            this.maTuaSachDataGridViewTextBoxColumn.HeaderText = "Mã tựa sách";
             this.maTuaSachDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maTuaSachDataGridViewTextBoxColumn.Name = "maTuaSachDataGridViewTextBoxColumn";
+            this.maTuaSachDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maTuaSachDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // tenTuaSachDataGridViewTextBoxColumn
             // 
             this.tenTuaSachDataGridViewTextBoxColumn.DataPropertyName = "TenTuaSach";
-            this.tenTuaSachDataGridViewTextBoxColumn.HeaderText = "TenTuaSach";
+            this.tenTuaSachDataGridViewTextBoxColumn.HeaderText = "Tên tựa sách";
             this.tenTuaSachDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenTuaSachDataGridViewTextBoxColumn.Name = "tenTuaSachDataGridViewTextBoxColumn";
+            this.tenTuaSachDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenTuaSachDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TheLoai
+            // 
+            this.TheLoai.HeaderText = "Thể loại";
+            this.TheLoai.MinimumWidth = 6;
+            this.TheLoai.Name = "TheLoai";
+            this.TheLoai.ReadOnly = true;
+            // 
+            // TacGia
+            // 
+            this.TacGia.HeaderText = "Tác giả";
+            this.TacGia.MinimumWidth = 6;
+            this.TacGia.Name = "TacGia";
+            this.TacGia.ReadOnly = true;
             // 
             // idTheLoaiDataGridViewTextBoxColumn
             // 
@@ -194,43 +237,19 @@ namespace GUI.UserControls
             this.idTheLoaiDataGridViewTextBoxColumn.HeaderText = "idTheLoai";
             this.idTheLoaiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idTheLoaiDataGridViewTextBoxColumn.Name = "idTheLoaiDataGridViewTextBoxColumn";
-            // 
-            // sACHesDataGridViewTextBoxColumn
-            // 
-            this.sACHesDataGridViewTextBoxColumn.DataPropertyName = "SACHes";
-            this.sACHesDataGridViewTextBoxColumn.HeaderText = "SACHes";
-            this.sACHesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sACHesDataGridViewTextBoxColumn.Name = "sACHesDataGridViewTextBoxColumn";
-            // 
-            // tHELOAIDataGridViewTextBoxColumn
-            // 
-            this.tHELOAIDataGridViewTextBoxColumn.DataPropertyName = "THELOAI";
-            this.tHELOAIDataGridViewTextBoxColumn.HeaderText = "THELOAI";
-            this.tHELOAIDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tHELOAIDataGridViewTextBoxColumn.Name = "tHELOAIDataGridViewTextBoxColumn";
-            // 
-            // tACGIAsDataGridViewTextBoxColumn
-            // 
-            this.tACGIAsDataGridViewTextBoxColumn.DataPropertyName = "TACGIAs";
-            this.tACGIAsDataGridViewTextBoxColumn.HeaderText = "TACGIAs";
-            this.tACGIAsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tACGIAsDataGridViewTextBoxColumn.Name = "tACGIAsDataGridViewTextBoxColumn";
-            // 
-            // tUASACHBindingSource
-            // 
-            this.tUASACHBindingSource.DataSource = typeof(DTO.TUASACH);
+            this.idTheLoaiDataGridViewTextBoxColumn.Visible = false;
             // 
             // ucTuaSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.siticoneDataGridView1);
+            this.Controls.Add(this.TuaSachGrid);
             this.Controls.Add(this.topPanel);
             this.Name = "ucTuaSach";
             this.Size = new System.Drawing.Size(997, 596);
             this.Load += new System.EventHandler(this.ucTuaSach_Load);
             this.topPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TuaSachGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUASACHBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -239,16 +258,16 @@ namespace GUI.UserControls
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView siticoneDataGridView1;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn maTuaSachDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn tenTuaSachDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn idTheLoaiDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn sACHesDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn tHELOAIDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn tACGIAsDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView TuaSachGrid;
         private BindingSource tUASACHBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
+        private DataGridViewCheckBoxColumn isChosen;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn maTuaSachDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tenTuaSachDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn TheLoai;
+        private DataGridViewTextBoxColumn TacGia;
+        private DataGridViewTextBoxColumn idTheLoaiDataGridViewTextBoxColumn;
     }
 }

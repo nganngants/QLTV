@@ -16,13 +16,14 @@ namespace GUI
         public fAddSachMoi()
         {
             InitializeComponent();
+            
         }
 
         private void butOK_Click(object sender, EventArgs e)
         {
             List<TUASACH> TuaSachList = BUSTuaSach.Instance.GetAllTuaSach();
             comboTuaSach.DataSource = TuaSachList;
-            comboTuaSach.DisplayMember = "TenTuaSach"+"MaTuaSach";
+            comboTuaSach.DisplayMember = "MaTuaSach";
             comboTuaSach.ValueMember= "id";
             if(comboTuaSach.SelectedValue==null || txtNamXB.Text=="" || txtNhaXB.Text=="" || txtDonGia.Text=="" || txtSoLuongNhap.Text=="")
             {

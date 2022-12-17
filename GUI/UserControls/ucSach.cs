@@ -64,7 +64,7 @@ namespace GUI.UserControls
 
                 }
             }
-            if(idDel.Count == 0) { return; }
+            if(idDel.Count ==0) { return; }
             int cnt = 0;
             if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " sách?") == DialogResult.No) return;
             foreach (int id in idDel)
