@@ -21,6 +21,14 @@ namespace GUI
         {
         }
 
-        
+        private void addNewTacGia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void siticoneImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace GUI
 {
     public partial class fEditPhieuMuon : Form
     {
-        public fEditPhieuMuon()
+        public fEditPhieuMuon(int id)
         {
             InitializeComponent();
         }

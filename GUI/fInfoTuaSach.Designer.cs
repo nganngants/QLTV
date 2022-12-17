@@ -49,8 +49,7 @@
             this.labelTheLoai = new System.Windows.Forms.Label();
             this.listViewTacGia = new System.Windows.Forms.ListView();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
-            this.label6 = new System.Windows.Forms.Label();
+            this.butChange = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.dataGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,12 +63,16 @@
             this.cUONSACHesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tUASACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneSeparator3 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
+            this.label7 = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.tableInfo.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
+            this.siticonePanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -164,7 +167,8 @@
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableInfo.Size = new System.Drawing.Size(751, 221);
+            this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableInfo.Size = new System.Drawing.Size(751, 197);
             this.tableInfo.TabIndex = 5;
             // 
             // label3
@@ -253,39 +257,37 @@
             this.listViewTacGia.HideSelection = false;
             this.listViewTacGia.Location = new System.Drawing.Point(306, 106);
             this.listViewTacGia.Name = "listViewTacGia";
-            this.listViewTacGia.Size = new System.Drawing.Size(415, 105);
+            this.listViewTacGia.Size = new System.Drawing.Size(415, 81);
             this.listViewTacGia.TabIndex = 1;
             this.listViewTacGia.UseCompatibleStateImageBehavior = false;
             // 
             // siticonePanel2
             // 
-            this.siticonePanel2.Controls.Add(this.siticoneSeparator2);
-            this.siticonePanel2.Controls.Add(this.label6);
+            this.siticonePanel2.Controls.Add(this.butChange);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel2.Location = new System.Drawing.Point(0, 343);
+            this.siticonePanel2.Location = new System.Drawing.Point(0, 319);
             this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(751, 68);
+            this.siticonePanel2.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
+            this.siticonePanel2.Size = new System.Drawing.Size(751, 39);
             this.siticonePanel2.TabIndex = 6;
             // 
-            // siticoneSeparator2
+            // butChange
             // 
-            this.siticoneSeparator2.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneSeparator2.FillThickness = 2;
-            this.siticoneSeparator2.Location = new System.Drawing.Point(94, 52);
-            this.siticoneSeparator2.Name = "siticoneSeparator2";
-            this.siticoneSeparator2.Size = new System.Drawing.Size(563, 10);
-            this.siticoneSeparator2.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label6.Location = new System.Drawing.Point(227, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(336, 37);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "DANH SÁCH CÁC SÁCH";
+            this.butChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butChange.Dock = System.Windows.Forms.DockStyle.Right;
+            this.butChange.FillColor = System.Drawing.Color.SlateBlue;
+            this.butChange.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butChange.ForeColor = System.Drawing.Color.White;
+            this.butChange.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.butChange.Location = new System.Drawing.Point(538, 0);
+            this.butChange.Name = "butChange";
+            this.butChange.Size = new System.Drawing.Size(188, 39);
+            this.butChange.TabIndex = 5;
+            this.butChange.Text = "Sửa thông tin";
+            this.butChange.Click += new System.EventHandler(this.butChange_Click);
             // 
             // dataGrid
             // 
@@ -325,12 +327,12 @@
             this.dataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGrid.Location = new System.Drawing.Point(0, 411);
+            this.dataGrid.Location = new System.Drawing.Point(0, 426);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersVisible = false;
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(751, 276);
+            this.dataGrid.Size = new System.Drawing.Size(751, 261);
             this.dataGrid.TabIndex = 7;
             this.dataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -435,6 +437,36 @@
             // 
             this.sACHBindingSource.DataSource = typeof(DTO.SACH);
             // 
+            // siticonePanel3
+            // 
+            this.siticonePanel3.Controls.Add(this.siticoneSeparator3);
+            this.siticonePanel3.Controls.Add(this.label7);
+            this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel3.Location = new System.Drawing.Point(0, 358);
+            this.siticonePanel3.Name = "siticonePanel3";
+            this.siticonePanel3.Size = new System.Drawing.Size(751, 68);
+            this.siticonePanel3.TabIndex = 8;
+            // 
+            // siticoneSeparator3
+            // 
+            this.siticoneSeparator3.FillColor = System.Drawing.Color.SlateBlue;
+            this.siticoneSeparator3.FillThickness = 2;
+            this.siticoneSeparator3.Location = new System.Drawing.Point(94, 52);
+            this.siticoneSeparator3.Name = "siticoneSeparator3";
+            this.siticoneSeparator3.Size = new System.Drawing.Size(563, 10);
+            this.siticoneSeparator3.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label7.Location = new System.Drawing.Point(227, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(336, 37);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "DANH SÁCH CÁC SÁCH";
+            // 
             // fInfoTuaSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -442,6 +474,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(751, 692);
             this.Controls.Add(this.dataGrid);
+            this.Controls.Add(this.siticonePanel3);
             this.Controls.Add(this.siticonePanel2);
             this.Controls.Add(this.tableInfo);
             this.Controls.Add(this.siticonePanel1);
@@ -457,9 +490,10 @@
             this.tableInfo.ResumeLayout(false);
             this.tableInfo.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
-            this.siticonePanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
+            this.siticonePanel3.ResumeLayout(false);
+            this.siticonePanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -487,8 +521,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tUASACHDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource sACHBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
-        private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableInfo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -498,5 +530,9 @@
         private System.Windows.Forms.Label labelTenTS;
         private System.Windows.Forms.Label labelTheLoai;
         private System.Windows.Forms.ListView listViewTacGia;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
+        private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator3;
+        private System.Windows.Forms.Label label7;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butChange;
     }
 }

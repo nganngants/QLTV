@@ -171,17 +171,35 @@
     <Compile Include="fEditLoaiDG.Designer.cs">
       <DependentUpon>fEditLoaiDG.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditNguoiDung.Designer.cs">
+      <DependentUpon>fEditNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="fEditPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fEditPhieuMuon.Designer.cs">
       <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditTuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditTuaSach.Designer.cs">
+      <DependentUpon>fEditTuaSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fInfoDocGia.Designer.cs">
       <DependentUpon>fInfoDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInfoNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoNguoiDung.Designer.cs">
+      <DependentUpon>fInfoNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="fInfoTuaSach.cs">
       <SubType>Form</SubType>
@@ -213,11 +231,11 @@
     <Compile Include="fPhieuThu.designer.cs">
       <DependentUpon>fPhieuThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="fViewPhieuNhap.cs">
+    <Compile Include="fInfoPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fViewPhieuNhap.Designer.cs">
-      <DependentUpon>fViewPhieuNhap.cs</DependentUpon>
+    <Compile Include="fInfoPhieuNhap.Designer.cs">
+      <DependentUpon>fInfoPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
@@ -402,11 +420,20 @@
     <EmbeddedResource Include="fEditLoaiDG.resx">
       <DependentUpon>fEditLoaiDG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fEditNguoiDung.resx">
+      <DependentUpon>fEditNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fEditPhieuMuon.resx">
       <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fEditTuaSach.resx">
+      <DependentUpon>fEditTuaSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fInfoDocGia.resx">
       <DependentUpon>fInfoDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoNguoiDung.resx">
+      <DependentUpon>fInfoNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fInfoTuaSach.resx">
       <DependentUpon>fInfoTuaSach.cs</DependentUpon>
@@ -423,8 +450,8 @@
     <EmbeddedResource Include="fPhieuThu.resx">
       <DependentUpon>fPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fViewPhieuNhap.resx">
-      <DependentUpon>fViewPhieuNhap.cs</DependentUpon>
+    <EmbeddedResource Include="fInfoPhieuNhap.resx">
+      <DependentUpon>fInfoPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
