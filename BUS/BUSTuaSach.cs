@@ -40,10 +40,10 @@ namespace BUS
                 return "";
             return "Không thể thêm tựa sách";
         }
-        public string DelTuaSach(string matuasach)
+        public string DelTuaSach(int matuasach)
         {
             TUASACH ts;
-            ts = DALTuaSach.Instance.GetTuaSachByMa(matuasach);
+            ts = DALTuaSach.Instance.GetTuaSachById(matuasach);
 
             if(ts == null)
             {
