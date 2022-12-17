@@ -377,11 +377,15 @@
             // 
             // comboTuaSach
             // 
+            
+            this.comboTuaSach.AllowDrop = true;
             this.comboTuaSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboTuaSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboTuaSach.BackColor = System.Drawing.Color.Transparent;
             this.comboTuaSach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboTuaSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTuaSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboTuaSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboTuaSach.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboTuaSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboTuaSach.Font = new System.Drawing.Font("Segoe UI", 10F);
