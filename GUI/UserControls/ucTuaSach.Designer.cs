@@ -74,12 +74,13 @@ namespace GUI.UserControls
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(174, 58);
+            this.butDel.Location = new System.Drawing.Point(137, 76);
             this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(156, 42);
+            this.butDel.Size = new System.Drawing.Size(124, 24);
             this.butDel.TabIndex = 5;
             this.butDel.Text = "Xóa Tựa Sách";
-            this.butDel.TextOffset = new System.Drawing.Point(12, 0);
+            this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // butAdd
             // 
@@ -94,12 +95,13 @@ namespace GUI.UserControls
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(5, 58);
+            this.butAdd.Location = new System.Drawing.Point(5, 76);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(156, 42);
+            this.butAdd.Size = new System.Drawing.Size(126, 24);
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Tựa Sách";
-            this.butAdd.TextOffset = new System.Drawing.Point(12, 0);
+            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
             this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // siticoneDataGridView1

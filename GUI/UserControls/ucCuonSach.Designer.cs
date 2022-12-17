@@ -35,8 +35,8 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneDataGridView1 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.cUONSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maCuonSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,8 +44,7 @@ namespace GUI.UserControls
             this.bCSACHTRATREsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHIEUMUONTRAsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.cUONSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).BeginInit();
@@ -54,12 +53,34 @@ namespace GUI.UserControls
             // topPanel
             // 
             this.topPanel.Controls.Add(this.butDel);
-            this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(997, 120);
+            this.topPanel.Size = new System.Drawing.Size(748, 98);
             this.topPanel.TabIndex = 0;
+            // 
+            // butDel
+            // 
+            this.butDel.BorderRadius = 6;
+            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDel.ForeColor = System.Drawing.Color.White;
+            this.butDel.Image = global::GUI.Properties.Resources.close_icon;
+            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butDel.Location = new System.Drawing.Point(2, 63);
+            this.butDel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(101, 19);
+            this.butDel.TabIndex = 7;
+            this.butDel.Text = "Xóa Cuốn Sách";
+            this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // siticoneDataGridView1
             // 
@@ -74,7 +95,8 @@ namespace GUI.UserControls
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.siticoneDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.siticoneDataGridView1.ColumnHeadersHeight = 18;
+            this.siticoneDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.maCuonSachDataGridViewTextBoxColumn,
@@ -94,12 +116,13 @@ namespace GUI.UserControls
             this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.siticoneDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.Location = new System.Drawing.Point(0, 120);
+            this.siticoneDataGridView1.Location = new System.Drawing.Point(0, 98);
+            this.siticoneDataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneDataGridView1.Name = "siticoneDataGridView1";
             this.siticoneDataGridView1.RowHeadersVisible = false;
             this.siticoneDataGridView1.RowHeadersWidth = 51;
             this.siticoneDataGridView1.RowTemplate.Height = 24;
-            this.siticoneDataGridView1.Size = new System.Drawing.Size(997, 476);
+            this.siticoneDataGridView1.Size = new System.Drawing.Size(748, 386);
             this.siticoneDataGridView1.TabIndex = 1;
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -112,7 +135,7 @@ namespace GUI.UserControls
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Height = 18;
             this.siticoneDataGridView1.ThemeStyle.ReadOnly = false;
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -122,10 +145,6 @@ namespace GUI.UserControls
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // cUONSACHBindingSource
-            // 
-            this.cUONSACHBindingSource.DataSource = typeof(DTO.CUONSACH);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -176,55 +195,19 @@ namespace GUI.UserControls
             this.pHIEUMUONTRAsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pHIEUMUONTRAsDataGridViewTextBoxColumn.Name = "pHIEUMUONTRAsDataGridViewTextBoxColumn";
             // 
-            // butDel
+            // cUONSACHBindingSource
             // 
-            this.butDel.BorderRadius = 6;
-            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDel.ForeColor = System.Drawing.Color.White;
-            this.butDel.Image = global::GUI.Properties.Resources.close_icon;
-            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(173, 59);
-            this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(156, 42);
-            this.butDel.TabIndex = 7;
-            this.butDel.Text = "Xóa Cuốn Sách";
-            this.butDel.TextOffset = new System.Drawing.Point(12, 0);
-            // 
-            // butAdd
-            // 
-            this.butAdd.BorderRadius = 6;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
-            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(4, 59);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(156, 42);
-            this.butAdd.TabIndex = 8;
-            this.butAdd.Text = "Thêm Cuốn Sách";
-            this.butAdd.TextOffset = new System.Drawing.Point(12, 0);
+            this.cUONSACHBindingSource.DataSource = typeof(DTO.CUONSACH);
             // 
             // ucCuonSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.siticoneDataGridView1);
             this.Controls.Add(this.topPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucCuonSach";
-            this.Size = new System.Drawing.Size(997, 596);
+            this.Size = new System.Drawing.Size(748, 484);
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).EndInit();
@@ -245,6 +228,5 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn pHIEUMUONTRAsDataGridViewTextBoxColumn;
         private BindingSource cUONSACHBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
     }
 }

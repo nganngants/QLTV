@@ -31,21 +31,22 @@ namespace GUI.UserControls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.LoaiDocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.lOAIDOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOAIDOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.txtTenLoaiDG = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoaiDocGiaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).BeginInit();
@@ -53,13 +54,15 @@ namespace GUI.UserControls
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.txtTenLoaiDG);
             this.topPanel.Controls.Add(this.butDel);
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.topPanel.Size = new System.Drawing.Size(1017, 119);
+            this.topPanel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 16);
+            this.topPanel.Size = new System.Drawing.Size(763, 97);
             this.topPanel.TabIndex = 3;
             // 
             // butDel
@@ -75,12 +78,14 @@ namespace GUI.UserControls
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(174, 54);
+            this.butDel.Location = new System.Drawing.Point(2, 62);
+            this.butDel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(156, 42);
+            this.butDel.Size = new System.Drawing.Size(102, 17);
             this.butDel.TabIndex = 1;
             this.butDel.Text = "Xóa Loại Độc Giả";
-            this.butDel.TextOffset = new System.Drawing.Point(12, 0);
+            this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
             this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butAdd
@@ -96,12 +101,14 @@ namespace GUI.UserControls
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(5, 54);
+            this.butAdd.Location = new System.Drawing.Point(278, 62);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(156, 42);
+            this.butAdd.Size = new System.Drawing.Size(114, 17);
             this.butAdd.TabIndex = 2;
             this.butAdd.Text = "Thêm Loại Độc Giả";
-            this.butAdd.TextOffset = new System.Drawing.Point(12, 0);
+            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
             this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // LoaiDocGiaGrid
@@ -109,21 +116,21 @@ namespace GUI.UserControls
             this.LoaiDocGiaGrid.AllowUserToAddRows = false;
             this.LoaiDocGiaGrid.AllowUserToDeleteRows = false;
             this.LoaiDocGiaGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.LoaiDocGiaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.LoaiDocGiaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.LoaiDocGiaGrid.AutoGenerateColumns = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LoaiDocGiaGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Variable Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LoaiDocGiaGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.LoaiDocGiaGrid.ColumnHeadersHeight = 35;
             this.LoaiDocGiaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.LoaiDocGiaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -132,24 +139,25 @@ namespace GUI.UserControls
             this.maLoaiDocGiaDataGridViewTextBoxColumn,
             this.tenLoaiDocGiaDataGridViewTextBoxColumn});
             this.LoaiDocGiaGrid.DataSource = this.lOAIDOCGIABindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LoaiDocGiaGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LoaiDocGiaGrid.DefaultCellStyle = dataGridViewCellStyle9;
             this.LoaiDocGiaGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoaiDocGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.LoaiDocGiaGrid.Location = new System.Drawing.Point(0, 119);
+            this.LoaiDocGiaGrid.Location = new System.Drawing.Point(0, 97);
+            this.LoaiDocGiaGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoaiDocGiaGrid.Name = "LoaiDocGiaGrid";
             this.LoaiDocGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.LoaiDocGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.LoaiDocGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.LoaiDocGiaGrid.RowHeadersVisible = false;
             this.LoaiDocGiaGrid.RowHeadersWidth = 51;
             this.LoaiDocGiaGrid.RowTemplate.Height = 28;
-            this.LoaiDocGiaGrid.Size = new System.Drawing.Size(1017, 508);
+            this.LoaiDocGiaGrid.Size = new System.Drawing.Size(763, 412);
             this.LoaiDocGiaGrid.TabIndex = 4;
             this.LoaiDocGiaGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.LoaiDocGiaGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -172,37 +180,6 @@ namespace GUI.UserControls
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.Height = 28;
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // lOAIDOCGIABindingSource
-            // 
-            this.lOAIDOCGIABindingSource.DataSource = typeof(DTO.LOAIDOCGIA);
-            // 
-            // AskDia
-            // 
-            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
-            this.AskDia.Caption = null;
-            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
-            this.AskDia.Parent = null;
-            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.AskDia.Text = null;
-            // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.SuccDia.Text = null;
             // 
             // isChosen
             // 
@@ -243,14 +220,66 @@ namespace GUI.UserControls
             this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
             this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // lOAIDOCGIABindingSource
+            // 
+            this.lOAIDOCGIABindingSource.DataSource = typeof(DTO.LOAIDOCGIA);
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.AskDia.Text = null;
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.SuccDia.Text = null;
+            // 
+            // txtTenLoaiDG
+            // 
+            this.txtTenLoaiDG.BorderRadius = 4;
+            this.txtTenLoaiDG.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenLoaiDG.DefaultText = "";
+            this.txtTenLoaiDG.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenLoaiDG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenLoaiDG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenLoaiDG.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenLoaiDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenLoaiDG.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLoaiDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenLoaiDG.Location = new System.Drawing.Point(139, 61);
+            this.txtTenLoaiDG.Name = "txtTenLoaiDG";
+            this.txtTenLoaiDG.PasswordChar = '\0';
+            this.txtTenLoaiDG.PlaceholderText = "Tên Loại Độc Giả";
+            this.txtTenLoaiDG.SelectedText = "";
+            this.txtTenLoaiDG.Size = new System.Drawing.Size(134, 18);
+            this.txtTenLoaiDG.TabIndex = 11;
+            // 
             // ucLoaiDG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.LoaiDocGiaGrid);
             this.Controls.Add(this.topPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucLoaiDG";
-            this.Size = new System.Drawing.Size(1017, 627);
+            this.Size = new System.Drawing.Size(763, 509);
             this.Load += new System.EventHandler(this.ucLoaiDG_Load);
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LoaiDocGiaGrid)).EndInit();
@@ -273,5 +302,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn maLoaiDocGiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tenLoaiDocGiaDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenLoaiDG;
     }
 }

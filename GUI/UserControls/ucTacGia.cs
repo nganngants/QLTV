@@ -16,5 +16,10 @@ namespace GUI.UserControls
         {
             InitializeComponent();
         }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

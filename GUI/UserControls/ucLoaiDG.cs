@@ -31,8 +31,20 @@ namespace GUI.UserControls
 
         private void butAdd_Click(object sender, EventArgs e)
         {
-            var f = new fAddLoaiDocGia();
-            f.ShowDialog();
+            string ten = txtTenLoaiDG.Text;
+            if (ten == "") return;
+            string mss = BUSLoaiDocGia.Instance.AddLoaiDocGia(ten);
+            if (mss == "")
+            {
+                SuccDia.Text = "Thêm loại độc giả thành công";
+                SuccDia.Show();
+
+            }
+            else
+            {
+                ErrorDia.Text = mss;
+                ErrorDia.Show();
+            }
             Binding();
         }
 
