@@ -53,18 +53,18 @@ namespace DAL
         {
             return QLTVDb.Instance.TACGIAs.Where(t => t.TenTacGia == tenTacGia).Select(t => t).ToList();
         }
-        public bool AddTacGia (string tenTacGia)
+        public int AddTacGia (string tenTacGia)
         {
             try
             {
                 TACGIA tacGia = new TACGIA { TenTacGia = tenTacGia };
                 QLTVDb.Instance.TACGIAs.Add(tacGia);
                 QLTVDb.Instance.SaveChanges();
-                return true;
+                return tacGia.id;
             }
             catch
             {
-                return false;
+                return -1;
             }
         }
 

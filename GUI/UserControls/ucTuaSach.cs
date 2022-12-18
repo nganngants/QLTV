@@ -37,16 +37,17 @@ namespace GUI.UserControls
                 {
                     tacgia += tg.TenTacGia + ", ";
                     cnt++;
-                    if (cnt >= 2)
+                    /*if (cnt >= 2)
                     {
                         tacgia += "....";
                         break;
-                    }
+                    }*/
                 }
                 if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 1);
                 if (tacgia!="") tacgia = tacgia.Remove(tacgia.Length-1);
                 row.Cells["TacGia"].Value = tacgia;
                 row.Cells["TheLoai"].Value = (TuaSachList[i].THELOAI!=null)?TuaSachList[i].THELOAI.TenTheLoai : "";
+                i++;
             }
         }
         private void ucTuaSach_Load(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace GUI.UserControls
         {
             int idx = e.RowIndex;
             
-            if (e.ColumnIndex == 1) return ;
+            if (e.ColumnIndex == 0) return ;
             if(e.ColumnIndex == TuaSachGrid.Columns["Edit"].Index)
             {
                 var f = new fEditTuaSach((Convert.ToInt32(TuaSachGrid.Rows[idx].Cells["id"].Value)));

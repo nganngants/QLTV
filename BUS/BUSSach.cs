@@ -55,7 +55,7 @@ namespace BUS
             SACH sach = DALSach.Instance.GetSachById(id);
             foreach(CUONSACH cs in sach.CUONSACHes)
             {
-                if(cs.TinhTrang == 1)
+                if(cs.TinhTrang == 0)
                 {
                     return "Không thể xoá sách vì đang có người mượn.";
                 }
