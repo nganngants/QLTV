@@ -38,7 +38,6 @@
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAddTacGia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.listViewTacGia = new System.Windows.Forms.ListView();
-            this.comboTacGia = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.comboTheLoai = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.txtTenTuaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.comboTacGia = new System.Windows.Forms.ComboBox();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -96,11 +96,11 @@
             this.mainPanel.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.mainPanel.BorderRadius = 4;
             this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.comboTacGia);
             this.mainPanel.Controls.Add(this.addNewTacGia);
             this.mainPanel.Controls.Add(this.butOK);
             this.mainPanel.Controls.Add(this.butAddTacGia);
             this.mainPanel.Controls.Add(this.listViewTacGia);
-            this.mainPanel.Controls.Add(this.comboTacGia);
             this.mainPanel.Controls.Add(this.comboTheLoai);
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.label2);
@@ -176,23 +176,6 @@
             this.listViewTacGia.TabIndex = 9;
             this.listViewTacGia.UseCompatibleStateImageBehavior = false;
             this.listViewTacGia.View = System.Windows.Forms.View.List;
-            // 
-            // comboTacGia
-            // 
-            this.comboTacGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboTacGia.BackColor = System.Drawing.Color.Transparent;
-            this.comboTacGia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboTacGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboTacGia.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboTacGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboTacGia.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboTacGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboTacGia.ItemHeight = 30;
-            this.comboTacGia.Location = new System.Drawing.Point(146, 432);
-            this.comboTacGia.Name = "comboTacGia";
-            this.comboTacGia.Size = new System.Drawing.Size(262, 36);
-            this.comboTacGia.TabIndex = 8;
             // 
             // comboTheLoai
             // 
@@ -288,6 +271,15 @@
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
+            // comboTacGia
+            // 
+            this.comboTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTacGia.FormattingEnabled = true;
+            this.comboTacGia.Location = new System.Drawing.Point(148, 432);
+            this.comboTacGia.Name = "comboTacGia";
+            this.comboTacGia.Size = new System.Drawing.Size(241, 28);
+            this.comboTacGia.TabIndex = 12;
+            // 
             // fAddTuaSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,9 +315,9 @@
         private System.Windows.Forms.Label label3;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAddTacGia;
         private System.Windows.Forms.ListView listViewTacGia;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTacGia;
         private System.Windows.Forms.LinkLabel addNewTacGia;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butOK;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private System.Windows.Forms.ComboBox comboTacGia;
     }
 }
