@@ -29,7 +29,7 @@ namespace GUI.UserControls
             foreach (DataGridViewRow row in TheLoaiGrid.Rows)
             {
                 row.Cells["SoTuaSach"].Value = "10";//TheLoaiList[i].TUASACHes.ToList().Count.ToString();
-                Console.WriteLine(row.Cells["SoTuaSach"].Value = 10);
+                Console.WriteLine(row.Cells["SoTuaSach"].Value);
                 i++;
             }
         }
