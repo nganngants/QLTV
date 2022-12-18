@@ -23,7 +23,7 @@ namespace DAL
 
         public List<NGUOIDUNG> GetAllNguoiDung()
         {
-            return QLTVDb.Instance.NGUOIDUNGs.ToList();
+            return QLTVDb.Instance.NGUOIDUNGs.AsNoTracking().ToList();
         }
 
         public NGUOIDUNG GetNguoiDungById(int id)
@@ -33,7 +33,7 @@ namespace DAL
 
         public NGUOIDUNG GetNguoiDungByMa (string maNguoiDung)
         {
-            var res = QLTVDb.Instance.NGUOIDUNGs.Where(n => n.MaNguoiDung == maNguoiDung);
+            var res = QLTVDb.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.MaNguoiDung == maNguoiDung);
             if (res.Any())
                 return res.FirstOrDefault();
             return null;
@@ -41,7 +41,7 @@ namespace DAL
 
         public NGUOIDUNG GetNguoiDungByUsername (string username)
         {
-            var res = QLTVDb.Instance.NGUOIDUNGs.Where(n => n.TenDangNhap == username);
+            var res = QLTVDb.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.TenDangNhap == username);
             if (res.Any())
                 return res.FirstOrDefault();
             return null;

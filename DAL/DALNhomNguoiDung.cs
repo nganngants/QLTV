@@ -23,7 +23,7 @@ namespace DAL
 
         public List<NHOMNGUOIDUNG> GetAllNhomNguoiDung ()
         {
-            return QLTVDb.Instance.NHOMNGUOIDUNGs.ToList ();
+            return QLTVDb.Instance.NHOMNGUOIDUNGs.AsNoTracking().ToList ();
         }
 
         public NHOMNGUOIDUNG GetNhomNguoiDungById (int id)
@@ -33,7 +33,7 @@ namespace DAL
 
         public NHOMNGUOIDUNG GetNhomNguoiDungByMa (string ma)
         {
-            var res = QLTVDb.Instance.NHOMNGUOIDUNGs.Where(n => n.MaNhomNguoiDung == ma);
+            var res = QLTVDb.Instance.NHOMNGUOIDUNGs.AsNoTracking().Where(n => n.MaNhomNguoiDung == ma);
             return (res.Any() ? res.First() : null);
         }
 

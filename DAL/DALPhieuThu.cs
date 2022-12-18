@@ -23,7 +23,7 @@ namespace DAL
 
         public List<PHIEUTHU> GetAllPhieuThu ()
         {
-            return QLTVDb.Instance.PHIEUTHUs.ToList ();
+            return QLTVDb.Instance.PHIEUTHUs.AsNoTracking().ToList ();
         }
 
         public PHIEUTHU GetPhieuThuById (int id)

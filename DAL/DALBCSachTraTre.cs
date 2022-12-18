@@ -23,7 +23,7 @@ namespace DAL
 
         public List<BCSACHTRATRE> GetAllBaoCao ()
         {
-            return QLTVDb.Instance.BCSACHTRATREs.ToList();
+            return QLTVDb.Instance.BCSACHTRATREs.AsNoTracking().ToList();
         }
 
         public BCSACHTRATRE GetBaoCao(DateTime ngayBaoCao, int idCuonSach)
@@ -33,12 +33,12 @@ namespace DAL
 
         public List<BCSACHTRATRE> FindBaoCaoByDate(DateTime ngayBC)
         {
-            return QLTVDb.Instance.BCSACHTRATREs.Where(b => b.Ngay == ngayBC).ToList();
+            return QLTVDb.Instance.BCSACHTRATREs.AsNoTracking().Where(b => b.Ngay == ngayBC).ToList();
         }
 
         public List<BCSACHTRATRE> FindBaoCaoByCuonSach (int idCuonSach)
         {
-            return QLTVDb.Instance.BCSACHTRATREs.Where(b => b.idCuonSach == idCuonSach).ToList();   
+            return QLTVDb.Instance.BCSACHTRATREs.AsNoTracking().Where(b => b.idCuonSach == idCuonSach).ToList();   
         }
 
         public bool AddBaoCao(DateTime ngayBC, int idCuonSach, DateTime ngayMuon, int soNgayTre)

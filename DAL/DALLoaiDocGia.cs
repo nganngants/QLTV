@@ -27,7 +27,7 @@ namespace DAL
         /// <returns> List <LOAIDOCGIA> </returns>
         public List<LOAIDOCGIA> GetAllLoaiDocGia ()
         {
-            return QLTVDb.Instance.LOAIDOCGIAs.ToList();
+            return QLTVDb.Instance.LOAIDOCGIAs.AsNoTracking().ToList();
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace DAL
         /// <returns>LOAIDOCGIA</returns>
         public LOAIDOCGIA GetLoaiDocGiaByMa (string maLoaiDocGia)
         {
-            var res = QLTVDb.Instance.LOAIDOCGIAs.Where(l => l.MaLoaiDocGia == maLoaiDocGia);
+            var res = QLTVDb.Instance.LOAIDOCGIAs.AsNoTracking().Where(l => l.MaLoaiDocGia == maLoaiDocGia);
             if (res.Any())
                 return res.FirstOrDefault();
             return null;
@@ -78,7 +78,7 @@ namespace DAL
         /// <returns>List<LOAIDOCGIA></returns>
         public List<LOAIDOCGIA> FindLoaiDocGia(string tenLoaiDocGia)
         {
-            return QLTVDb.Instance.LOAIDOCGIAs.Where(i => i.TenLoaiDocGia == tenLoaiDocGia).Select(i => i).ToList();
+            return QLTVDb.Instance.LOAIDOCGIAs.AsNoTracking().Where(i => i.TenLoaiDocGia == tenLoaiDocGia).Select(i => i).ToList();
         }
 
         /// <summary>
