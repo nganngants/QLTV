@@ -35,7 +35,8 @@ namespace BUS
             THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
             if ((int)DateTime.Now.Year - NamXb > thamso.KhoangCachXuatBan)
                 return "Năm xuất bản không hợp lệ";
-            if (DALSach.Instance.AddSachMoi(ts, SoLuong, DonGia, NamXb, NhaXB))
+            int idSach = DALSach.Instance.AddSachMoi(ts, DonGia, NamXb, NhaXB);
+            if (idSach != -1)
                 return "";
             return "Không thể thêm sách";
         }
