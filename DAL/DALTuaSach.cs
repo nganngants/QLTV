@@ -49,7 +49,7 @@ namespace DAL
         /// <returns></returns>
         public TUASACH GetTuaSachByMa(string maTuaSach)
         {
-            var res = QLTVDb.Instance.TUASACHes.Where(t => t.MaTuaSach == maTuaSach);
+            var res = QLTVDb.Instance.TUASACHes.AsNoTracking().Where(t => t.MaTuaSach == maTuaSach);
             if (res.Any())
                 return res.FirstOrDefault();
             return null;
@@ -64,7 +64,7 @@ namespace DAL
         /// <returns></returns>
         public List<TUASACH> FindTuaSach(string tenTuaSach, THELOAI theloai, List<TACGIA> tacgias)
         {
-            List<TUASACH> res = QLTVDb.Instance.TUASACHes.ToList();
+            List<TUASACH> res = QLTVDb.Instance.TUASACHes.AsNoTracking().ToList();
             if (tenTuaSach != null) res = res.Where(t => t.TenTuaSach == tenTuaSach).Select(t => t).ToList();
             if (theloai != null) res = res.Where(t => t.THELOAI == theloai).Select(t => t).ToList();
             if (tacgias != null) 

@@ -42,7 +42,7 @@ namespace DAL
         public THAMSO GetAllThamSo()
         {
 
-            return QLTVDb.Instance.THAMSOes.First();
+            return QLTVDb.Instance.THAMSOes.AsNoTracking().First();
         }
 
         public bool UpdTuoiToiThieu (int tuoi)

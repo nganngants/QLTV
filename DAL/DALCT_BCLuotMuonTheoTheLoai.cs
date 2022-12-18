@@ -23,7 +23,7 @@ namespace DAL
 
         public List<CT_BCLUOTMUONTHEOTHELOAI> GetAllCTBC ()
         {
-            return QLTVDb.Instance.CT_BCLUOTMUONTHEOTHELOAI.ToList();
+            return QLTVDb.Instance.CT_BCLUOTMUONTHEOTHELOAI.AsNoTracking().ToList();
         }
 
         public CT_BCLUOTMUONTHEOTHELOAI GetCTBC (int idBC, int idTheLoai)

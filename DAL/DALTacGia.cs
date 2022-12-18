@@ -23,7 +23,7 @@ namespace DAL
 
         public List<TACGIA> GetAllTacGia()
         {
-            return QLTVDb.Instance.TACGIAs.ToList();
+            return QLTVDb.Instance.TACGIAs.AsNoTracking().ToList();
         }
 
         public TACGIA GetTacGiaById (int id)
@@ -38,7 +38,7 @@ namespace DAL
         /// <returns></returns>
         public TACGIA GetTacGiaByMa(string maTacGia)
         {
-            var res = QLTVDb.Instance.TACGIAs.Where(t => t.MATACGIA == maTacGia);
+            var res = QLTVDb.Instance.TACGIAs.AsNoTracking().Where(t => t.MATACGIA == maTacGia);
             if (res.Any())
                 return res.FirstOrDefault();
             return null;

@@ -23,7 +23,7 @@ namespace DAL
 
         public List<PHIEUMUONTRA> GetAllPhieuMuonTra()
         {
-            return QLTVDb.Instance.PHIEUMUONTRAs.ToList();
+            return QLTVDb.Instance.PHIEUMUONTRAs.AsNoTracking().ToList();
         }
 
         public PHIEUMUONTRA GetPhieuMuonTraById(int id)
@@ -51,7 +51,7 @@ namespace DAL
         }
         public List<PHIEUMUONTRA> FindPhieuMuonTre(DateTime today)
         {
-            return QLTVDb.Instance.PHIEUMUONTRAs.Where(p => p.NgayTra == null && p.HanTra < today).ToList();
+            return QLTVDb.Instance.PHIEUMUONTRAs.AsNoTracking().Where(p => p.NgayTra == null && p.HanTra < today).ToList();
         }
 
         public List<PHIEUMUONTRA> FindPhieuMuonTre(List<PHIEUMUONTRA> ds, DateTime today)

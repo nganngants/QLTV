@@ -23,7 +23,7 @@ namespace DAL
 
         public List<THELOAI> GetAllTheLoai()
         {
-            return QLTVDb.Instance.THELOAIs.ToList();
+            return QLTVDb.Instance.THELOAIs.AsNoTracking().ToList();
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace DAL
         /// <returns></returns>
         public THELOAI GetTheLoaiByMa(string maTheLoai)
         {
-            var res = QLTVDb.Instance.THELOAIs.Where(t => t.MaTheLoai == maTheLoai);
+            var res = QLTVDb.Instance.THELOAIs.AsNoTracking().Where(t => t.MaTheLoai == maTheLoai);
             if (res.Any())
                 return res.FirstOrDefault();
             return null;
@@ -56,7 +56,7 @@ namespace DAL
         /// <returns></returns>
         public List<THELOAI> FindTheLoai(string tenTheLoai)
         {
-            return QLTVDb.Instance.THELOAIs.Where(t => t.TenTheLoai == tenTheLoai).Select(t => t).ToList();
+            return QLTVDb.Instance.THELOAIs.AsNoTracking().Where(t => t.TenTheLoai == tenTheLoai).Select(t => t).ToList();
         }
 
         public bool AddTheLoai(string tenTheLoai)

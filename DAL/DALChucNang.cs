@@ -24,7 +24,7 @@ namespace DAL
 
         public List<CHUCNANG> GetAllChucNang()
         {
-            return QLTVDb.Instance.CHUCNANGs.ToList();
+            return QLTVDb.Instance.CHUCNANGs.AsNoTracking().ToList();
         }
 
         public CHUCNANG GetChucNangById (int id)
@@ -34,11 +34,11 @@ namespace DAL
 
         public CHUCNANG GetChucNangByMa(string ma)
         {
-            var res = QLTVDb.Instance.CHUCNANGs.Where(c => c.MaChucNang == ma);
+            var res = QLTVDb.Instance.CHUCNANGs.AsNoTracking().Where(c => c.MaChucNang == ma);
             return (res.Any() ? res.First() : null);
         }
 
-        public bool AllChucNang(string tenChucNang, string tenManHinh)
+        public bool AddChucNang(string tenChucNang, string tenManHinh)
         {
             try
             {
