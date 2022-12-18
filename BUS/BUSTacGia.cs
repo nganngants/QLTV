@@ -25,11 +25,10 @@ namespace BUS
         {
             return DALTacGia.Instance.GetAllTacGia();
         }
-        public string AddTacGia(string name)
+        public int AddTacGia(string name)
         {
-            if (DALTacGia.Instance.AddTacGia(name))
-                return "";
-            return "Khong the them tac gia";
+            return (DALTacGia.Instance.AddTacGia(name));
+             
         }
         public string DelTacGia(int id)
         {
@@ -39,10 +38,10 @@ namespace BUS
                 return "";
             return "Khong the xoa tac gia";
         }
-        public TACGIA GetTacGia(string MaTacGia)
+        public TACGIA GetTacGia(int id)
         {
             TACGIA tg;
-            tg = DALTacGia.Instance.GetTacGiaByMa(MaTacGia);
+            tg = DALTacGia.Instance.GetTacGiaById(id);
             return tg;
                 
         }

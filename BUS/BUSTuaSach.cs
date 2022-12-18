@@ -54,7 +54,7 @@ namespace BUS
                 foreach(CUONSACH cs in sach.CUONSACHes)
                 {
                     if (cs.TinhTrang == 1)
-                        return "Tựa sách còn sách đang được mượn. Không thể xoá";
+                        return "Tựa sách "+ts.MaTuaSach + " còn sách đang được mượn. Không thể xoá";
                 }
             }
             if (DALTuaSach.Instance.DelTuaSach(ts.id))
