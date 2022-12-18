@@ -24,7 +24,7 @@ namespace DAL
 
         public List<PHIEUNHAPSACH> GetAllPhieuNhapSach()
         {
-            return QLTVDb.Instance.PHIEUNHAPSACHes.ToList();
+            return QLTVDb.Instance.PHIEUNHAPSACHes.AsNoTracking().ToList();
         }
 
         public PHIEUNHAPSACH GetPhieuById (int id)
@@ -34,7 +34,7 @@ namespace DAL
 
         public PHIEUNHAPSACH GetPhieuByNgayNhap (DateTime ngayNhap)
         {
-            var res = QLTVDb.Instance.PHIEUNHAPSACHes.Where(p => p.NgayNhap == ngayNhap);
+            var res = QLTVDb.Instance.PHIEUNHAPSACHes.AsNoTracking().Where(p => p.NgayNhap == ngayNhap);
             return (res.Any() ? res.First() : null);
         }
 

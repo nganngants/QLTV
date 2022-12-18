@@ -24,7 +24,7 @@ namespace DAL
 
         public List<CT_PHIEUNHAP> GetAllCTPhieuNhap ()
         {
-            return QLTVDb.Instance.CT_PHIEUNHAP.ToList();
+            return QLTVDb.Instance.CT_PHIEUNHAP.AsNoTracking().ToList();
         }
 
         public CT_PHIEUNHAP GetCT_PHIEUNHAP(int soPhieu, int idSach)

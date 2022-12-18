@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace DAL
 
         public List<BCLUOTMUONTHEOTHELOAI> GetAllBaoCao()
         {
-            return QLTVDb.Instance.BCLUOTMUONTHEOTHELOAIs.ToList();
+            return QLTVDb.Instance.BCLUOTMUONTHEOTHELOAIs.AsNoTracking().ToList();
         }
 
         public BCLUOTMUONTHEOTHELOAI GetBaoCaoById(int id)
@@ -33,7 +34,7 @@ namespace DAL
 
         public BCLUOTMUONTHEOTHELOAI GetBaoCaoByMa (string ma)
         {
-            var res = QLTVDb.Instance.BCLUOTMUONTHEOTHELOAIs.Where(b => b.MaBaoCao == ma);
+            var res = QLTVDb.Instance.BCLUOTMUONTHEOTHELOAIs.Where(b => b.MaBaoCao == ma).AsNoTracking();
             return (res.Any() ? res.First() : null);
         }
 

@@ -22,7 +22,7 @@ namespace DAL
 
         public List<SACH> GetAllSach()
         {
-            return QLTVDb.Instance.SACHes.ToList();
+            return QLTVDb.Instance.SACHes.AsNoTracking().ToList();
         }
 
         public SACH GetSachById (int id)
@@ -36,7 +36,7 @@ namespace DAL
         /// <returns></returns>
         public SACH GetSachByMa (string maSach)
         {
-            var res = QLTVDb.Instance.SACHes.Where(s => s.MaSach == maSach);
+            var res = QLTVDb.Instance.SACHes.AsNoTracking().Where(s => s.MaSach == maSach);
             if (res.Any())
                 return res.FirstOrDefault();
             return null;

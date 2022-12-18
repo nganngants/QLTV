@@ -23,7 +23,7 @@ namespace DAL
 
         public List<CUONSACH> GetAllCuonSach()
         {
-            return QLTVDb.Instance.CUONSACHes.ToList();
+            return QLTVDb.Instance.CUONSACHes.AsNoTracking().ToList();
         }
         /// <summary>
         /// Get CUONSACH by Id
@@ -42,7 +42,7 @@ namespace DAL
         /// <returns></returns>
         public CUONSACH GetCuonSachByMa(string maCuonSach)
         {
-            var res = QLTVDb.Instance.CUONSACHes.Where(c => c.MaCuonSach == maCuonSach);
+            var res = QLTVDb.Instance.CUONSACHes.AsNoTracking().Where(c => c.MaCuonSach == maCuonSach);
             if (res.Any())
                 return res.FirstOrDefault();
             return null;
