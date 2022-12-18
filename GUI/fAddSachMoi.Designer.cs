@@ -57,6 +57,7 @@
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.siticoneAnimateWindow1 = new Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow(this.components);
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -181,6 +182,8 @@
             this.txtSoLuongNhap.SelectedText = "";
             this.txtSoLuongNhap.Size = new System.Drawing.Size(186, 36);
             this.txtSoLuongNhap.TabIndex = 16;
+            this.txtSoLuongNhap.TextChanged += new System.EventHandler(this.txtSoLuongNhap_TextChanged);
+            //this.txtSoLuongNhap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSoLuongNhap_KeyUp);
             // 
             // dateNgayNhap
             // 
@@ -241,6 +244,7 @@
             this.txtDonGia.SelectedText = "";
             this.txtDonGia.Size = new System.Drawing.Size(220, 36);
             this.txtDonGia.TabIndex = 12;
+            this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
             // 
             // txtNhaXB
             // 
@@ -441,7 +445,7 @@
             // 
             // ErrorDia
             // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
             this.ErrorDia.Caption = null;
             this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
             this.ErrorDia.Parent = null;
@@ -497,5 +501,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private System.Windows.Forms.ComboBox comboTuaSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow siticoneAnimateWindow1;
     }
 }
