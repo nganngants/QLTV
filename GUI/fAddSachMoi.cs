@@ -36,14 +36,27 @@ namespace GUI
                 ErrorDia.Show("Chưa nhập đủ dữ liệu");
                 return;
             }
-            int Nam = Convert.ToInt32(txtNamXB.Text);
+
+            int Nam;
+            try
+            {
+                Nam = Convert.ToInt32(txtNamXB.Text);
+            }
+            catch
+            {
+                txtNamXB.Text = null;
+                ErrorDia.Show("Năm không hợp lệ");
+                return;
+            }
             string NXB = txtNhaXB.Text.ToString();
             
             DateTime NgayNhap = dateNgayNhap.Value.Date;
             int ThanhTien = this.SoLuongNhap * this.DonGia;
             int id = (int)comboTuaSach.SelectedValue;
             labelThanhTien.Text = "Thành tiền: " + ThanhTien.ToString();
-            string err = BUSSach.Instance.AddSach(id,this.SoLuongNhap,this.DonGia,Nam,NXB);
+            Tuple<string,int> kq = BUSSach.Instance.AddSach(id,this.SoLuongNhap,this.DonGia,Nam,NXB);
+            int idSach = kq.Item2;
+            string err = kq.Item1;
             if(err != "")
             {
                 ErrorDia.Show(err);
@@ -53,15 +66,19 @@ namespace GUI
             if(MaPhieuNhap == -1)
             {
                 ErrorDia.Show("Ngày nhập không hợp lệ");
+                BUSSach.Instance.DelSach(idSach);
                 return;
             }
-            err = BUSCT_PhieuNhap.Instance.AddCtPhieuNhap(MaPhieuNhap,id,DonGia,SoLuongNhap);
+            err = BUSCT_PhieuNhap.Instance.AddCtPhieuNhap(MaPhieuNhap,idSach,DonGia,SoLuongNhap);
             if(err!="")
             {
+                BUSSach.Instance.DelSach(idSach);
+                
                 ErrorDia.Show(err);
                 return;
             }
             SuccDia.Show("Thêm sách mới thành công");
+            this.Close();
         }
 
         private void txtSoLuongNhap_TextChanged(object sender, EventArgs e)

@@ -24,21 +24,21 @@ namespace BUS
         {
             return DALSach.Instance.GetAllSach();
         }
-        public string AddSach(int id, int SoLuong, int DonGia, int NamXb, string NhaXB)
+        public Tuple<string,int> AddSach(int id, int SoLuong, int DonGia, int NamXb, string NhaXB)
         {
             TUASACH ts;
             ts = DALTuaSach.Instance.GetTuaSachById(id);
             if(ts == null)
             {
-                return "Tựa sách không hợp lệ";
+                return Tuple.Create("Tựa sách không hợp lệ",-1);
             }
             THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
-            if ((int)DateTime.Now.Year - NamXb > thamso.KhoangCachXuatBan)
-                return "Năm xuất bản không hợp lệ";
+            if ((int)DateTime.Now.Year - NamXb > thamso.KhoangCachXuatBan || (int)DateTime.Now.Year - NamXb <0)
+                return Tuple.Create("Năm xuất bản không hợp lệ",-1);
             int idSach = DALSach.Instance.AddSachMoi(ts, DonGia, NamXb, NhaXB);
             if (idSach != -1)
-                return "";
-            return "Không thể thêm sách";
+                return Tuple.Create("",idSach);
+            return Tuple.Create("Không thể thêm sách"   , -1)   ;
         }
         public TUASACH GetTuaSachOfSach(string MaSach)
         {
