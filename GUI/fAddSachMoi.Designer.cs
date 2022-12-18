@@ -34,6 +34,7 @@
             this.miniControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.comboTuaSach = new System.Windows.Forms.ComboBox();
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtSoLuongNhap = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.dateNgayNhap = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
@@ -50,7 +51,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboTuaSach = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
@@ -104,6 +104,7 @@
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.mainPanel.Controls.Add(this.comboTuaSach);
             this.mainPanel.Controls.Add(this.butOK);
             this.mainPanel.Controls.Add(this.txtSoLuongNhap);
             this.mainPanel.Controls.Add(this.dateNgayNhap);
@@ -120,7 +121,6 @@
             this.mainPanel.Controls.Add(this.label9);
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.label2);
-            this.mainPanel.Controls.Add(this.comboTuaSach);
             this.mainPanel.Controls.Add(this.siticoneSeparator1);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.labelTitle);
@@ -128,6 +128,19 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(605, 557);
             this.mainPanel.TabIndex = 4;
+            // 
+            // comboTuaSach
+            // 
+            this.comboTuaSach.AllowDrop = true;
+            this.comboTuaSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboTuaSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboTuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTuaSach.FormattingEnabled = true;
+            this.comboTuaSach.ItemHeight = 20;
+            this.comboTuaSach.Location = new System.Drawing.Point(117, 141);
+            this.comboTuaSach.Name = "comboTuaSach";
+            this.comboTuaSach.Size = new System.Drawing.Size(207, 28);
+            this.comboTuaSach.TabIndex = 18;
             // 
             // butOK
             // 
@@ -263,12 +276,12 @@
             this.txtNamXB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamXB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNamXB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNamXB.Location = new System.Drawing.Point(345, 140);
+            this.txtNamXB.Location = new System.Drawing.Point(361, 140);
             this.txtNamXB.Name = "txtNamXB";
             this.txtNamXB.PasswordChar = '\0';
             this.txtNamXB.PlaceholderText = "";
             this.txtNamXB.SelectedText = "";
-            this.txtNamXB.Size = new System.Drawing.Size(145, 44);
+            this.txtNamXB.Size = new System.Drawing.Size(129, 44);
             this.txtNamXB.TabIndex = 10;
             // 
             // label5
@@ -343,7 +356,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label9.Location = new System.Drawing.Point(341, 116);
+            this.label9.Location = new System.Drawing.Point(357, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 22);
             this.label9.TabIndex = 9;
@@ -374,27 +387,6 @@
             this.label2.Size = new System.Drawing.Size(76, 22);
             this.label2.TabIndex = 9;
             this.label2.Text = "Tựa Sách";
-            // 
-            // comboTuaSach
-            // 
-            
-            this.comboTuaSach.AllowDrop = true;
-            this.comboTuaSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboTuaSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboTuaSach.BackColor = System.Drawing.Color.Transparent;
-            this.comboTuaSach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboTuaSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboTuaSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboTuaSach.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboTuaSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboTuaSach.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboTuaSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboTuaSach.ItemHeight = 30;
-            this.comboTuaSach.Location = new System.Drawing.Point(114, 140);
-            this.comboTuaSach.Name = "comboTuaSach";
-            this.comboTuaSach.Size = new System.Drawing.Size(203, 36);
-            this.comboTuaSach.TabIndex = 8;
             // 
             // siticoneSeparator1
             // 
@@ -483,7 +475,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox closeControlBox;
         private Siticone.Desktop.UI.WinForms.SiticonePanel mainPanel;
         private System.Windows.Forms.Label labelTitle;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTuaSach;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -505,5 +496,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private System.Windows.Forms.ComboBox comboTuaSach;
     }
 }

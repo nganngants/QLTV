@@ -16,15 +16,20 @@ namespace GUI
         public fAddSachMoi()
         {
             InitializeComponent();
+            List<TUASACH> TuaSachList = BUSTuaSach.Instance.GetAllTuaSach();
+            foreach(TUASACH ts in TuaSachList)
+            {
+                ts.TenTuaSach = ts.TenTuaSach + " (" +ts.MaTuaSach + ")";
+            }
             
+            comboTuaSach.DataSource = TuaSachList;
+            comboTuaSach.DisplayMember = "TenTuaSach";
+            comboTuaSach.ValueMember = "id";
         }
 
         private void butOK_Click(object sender, EventArgs e)
         {
-            List<TUASACH> TuaSachList = BUSTuaSach.Instance.GetAllTuaSach();
-            comboTuaSach.DataSource = TuaSachList;
-            comboTuaSach.DisplayMember = "MaTuaSach";
-            comboTuaSach.ValueMember= "id";
+            
             if(comboTuaSach.SelectedValue==null || txtNamXB.Text=="" || txtNhaXB.Text=="" || txtDonGia.Text=="" || txtSoLuongNhap.Text=="")
             {
                 ErrorDia.Show("Chưa nhập đủ dữ liệu");
