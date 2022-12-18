@@ -23,26 +23,26 @@ namespace DAL
 
         public DALThamSo()
         {
-            if (!QLTVDb.Instance.THAMSOes.Any()) 
-            {
-                QLTVDb.Instance.THAMSOes.Add(new THAMSO
-                {
-                    TuoiToiThieu = 18,
-                    TuoiToiDa = 55,
-                    ThoiHanThe = 6,
-                    KhoangCachXuatBan = 8,
-                    SoSachMuonToiDa = 5,
-                    SoNgayMuonToiDa = 4,
-                    DonGiaPhat = 1000,
-                    AD_QDKTTienThu = 1
-                });
-                QLTVDb.Instance.SaveChanges();
-            }
+            //if (!QLTVDb.Instance.THAMSOes.Any()) 
+            //{
+            //    QLTVDb.Instance.THAMSOes.Add(new THAMSO
+            //    {
+            //        TuoiToiThieu = 18,
+            //        TuoiToiDa = 55,
+            //        ThoiHanThe = 6,
+            //        KhoangCachXuatBan = 8,
+            //        SoSachMuonToiDa = 5,
+            //        SoNgayMuonToiDa = 4,
+            //        DonGiaPhat = 1000,
+            //        AD_QDKTTienThu = 1
+            //    });
+            //    QLTVDb.Instance.SaveChanges();
+            //}
         }
         public THAMSO GetAllThamSo()
         {
 
-            return QLTVDb.Instance.THAMSOes.AsNoTracking().First();
+            return QLTVDb.Instance.THAMSOes.First();
         }
 
         public bool UpdTuoiToiThieu (int tuoi)

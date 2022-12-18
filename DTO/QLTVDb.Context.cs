@@ -23,7 +23,7 @@ namespace DTO
                 if (instance == null)
                 {
                     instance = new QLTVDb();
-                    instance.Configuration.AutoDetectChangesEnabled = false;
+                    //instance.Configuration.AutoDetectChangesEnabled = false;
                 }
                 return instance;
             }

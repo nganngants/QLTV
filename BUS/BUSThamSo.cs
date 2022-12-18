@@ -38,12 +38,15 @@ namespace BUS
         }
         public string UpTuoiToiDa(int val)
         {
+            if (val < DALThamSo.Instance.GetAllThamSo().TuoiToiThieu) return "Tuổi tối đa không được nhỏ hơn tuổi tối thiểu.";
             if (DALThamSo.Instance.UpdTuoiToiDa(val))
                 return "";
             return "Lỗi";
         }
         public string UpdTuoiToiThieu(int val)
         {
+            if (val > DALThamSo.Instance.GetAllThamSo().TuoiToiDa) return "Tuổi tối thiểu không được lớn hơn tuổi tối đa.";
+
             if (DALThamSo.Instance.UpdTuoiToiThieu(val))
                 return "";
             return "Lỗi";
@@ -56,13 +59,13 @@ namespace BUS
         }
         public string UpdSoSachToiDa(int val)
         {
-            if (DALThamSo.Instance.UpdSoNgayMuonToiDa(val))
+            if (DALThamSo.Instance.UpdSoSachMuonToiDa(val))
                 return "";
             return "Lỗi";
         }
         public string UpdADQDTienPhat(int val)
         {
-            if (DALThamSo.Instance.UpdSoNgayMuonToiDa(val))
+            if (DALThamSo.Instance.UpdQDKTTienPhat(val))
                 return "";
             return "Lỗi";
         }
