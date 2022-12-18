@@ -364,6 +364,7 @@
             this.id.HeaderText = "";
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
+            this.id.Visible = false;
             // 
             // fAddTuaSach
             // 
