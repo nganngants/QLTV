@@ -19,11 +19,11 @@ namespace GUI
             List<TUASACH> TuaSachList = BUSTuaSach.Instance.GetAllTuaSach();
             foreach(TUASACH ts in TuaSachList)
             {
-                ts.TenTuaSach = ts.TenTuaSach + " (" +ts.MaTuaSach + ")";
+                ts.TenTuaSach = ts.TenTuaSach + " (" + ts.MaTuaSach + ")";
             }
             
             comboTuaSach.DataSource = TuaSachList;
-            comboTuaSach.DisplayMember = "TenTuaSach";
+            comboTuaSach.DisplayMember = "TenTuaSach" ;
             comboTuaSach.ValueMember = "id";
         }
 
