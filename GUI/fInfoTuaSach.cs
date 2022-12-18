@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,22 +8,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BUS;
+using System.Security.Cryptography;
 
 namespace GUI
 {
     public partial class fInfoTuaSach : Form
     {
-        private static int id;
+        TUASACH tuasach;
+        private int id;
         public fInfoTuaSach(int _id)
         {
             InitializeComponent();
             id = _id;
+            init();
         }
-
+        private void init()
+        {
+            tuasach = BUSTuaSach.Instance.GetTuaSach(id);
+            labelMaTS.Text = tuasach.MaTuaSach;
+            labelTenTS.Text = tuasach.TenTuaSach;
+            labelTheLoai.Text = tuasach.THELOAI.TenTheLoai.ToString();
+            string tacgia = "";
+            foreach (TACGIA tg in tuasach.TACGIAs)
+            {
+                tacgia += tg.TenTacGia + ", ";
+            }
+            tacgia.Remove(tacgia.Length - 1);
+            tacgia.Remove(tacgia.Length - 1);
+            labelTacGia.Text = tacgia;
+        }
         private void butChange_Click(object sender, EventArgs e)
         {
-            var f = new fEditTuaSach(id);
+            var f = new fEditTuaSach(tuasach.id);
             f.ShowDialog();
+            init();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableInfo_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

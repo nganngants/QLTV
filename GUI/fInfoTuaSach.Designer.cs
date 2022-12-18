@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.controlPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.miniControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
@@ -47,10 +48,14 @@
             this.labelMaTS = new System.Windows.Forms.Label();
             this.labelTenTS = new System.Windows.Forms.Label();
             this.labelTheLoai = new System.Windows.Forms.Label();
-            this.listViewTacGia = new System.Windows.Forms.ListView();
+            this.labelTacGia = new System.Windows.Forms.Label();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butChange = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.dataGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneSeparator3 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
+            this.label7 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTuaSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,13 +64,6 @@
             this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhaXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUONSACHesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tUASACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneSeparator3 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
-            this.label7 = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.tableInfo.SuspendLayout();
@@ -156,7 +154,7 @@
             this.tableInfo.Controls.Add(this.labelMaTS, 1, 0);
             this.tableInfo.Controls.Add(this.labelTenTS, 1, 1);
             this.tableInfo.Controls.Add(this.labelTheLoai, 1, 2);
-            this.tableInfo.Controls.Add(this.listViewTacGia, 1, 3);
+            this.tableInfo.Controls.Add(this.labelTacGia, 1, 3);
             this.tableInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableInfo.Location = new System.Drawing.Point(0, 122);
             this.tableInfo.Margin = new System.Windows.Forms.Padding(6);
@@ -170,6 +168,7 @@
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableInfo.Size = new System.Drawing.Size(1500, 197);
             this.tableInfo.TabIndex = 5;
+            this.tableInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.tableInfo_Paint);
             // 
             // label3
             // 
@@ -248,8 +247,16 @@
             this.labelTheLoai.TabIndex = 0;
             this.labelTheLoai.Text = "x";
             // 
-            // listViewTacGia
+            // labelTacGia
             // 
+            this.labelTacGia.AutoSize = true;
+            this.labelTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTacGia.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelTacGia.Location = new System.Drawing.Point(306, 103);
+            this.labelTacGia.Name = "labelTacGia";
+            this.labelTacGia.Size = new System.Drawing.Size(0, 27);
+            this.labelTacGia.TabIndex = 1;
+            this.labelTacGia.Click += new System.EventHandler(this.label6_Click);
             this.listViewTacGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.listViewTacGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,18 +298,26 @@
             // 
             // dataGrid
             // 
+            this.dataGrid.AllowUserToAddRows = false;
+            this.dataGrid.AllowUserToDeleteRows = false;
+            this.dataGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid.AutoGenerateColumns = false;
+            this.dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGrid.ColumnHeadersHeight = 18;
+            this.dataGrid.ColumnHeadersHeight = 35;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -312,10 +327,7 @@
             this.soLuongConLaiDataGridViewTextBoxColumn,
             this.donGiaDataGridViewTextBoxColumn,
             this.namXBDataGridViewTextBoxColumn,
-            this.nhaXBDataGridViewTextBoxColumn,
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn,
-            this.cUONSACHesDataGridViewTextBoxColumn,
-            this.tUASACHDataGridViewTextBoxColumn});
+            this.nhaXBDataGridViewTextBoxColumn});
             this.dataGrid.DataSource = this.sACHBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -329,6 +341,15 @@
             this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGrid.Location = new System.Drawing.Point(0, 426);
             this.dataGrid.Name = "dataGrid";
+            this.dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid.RowHeadersVisible = false;
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
@@ -346,15 +367,49 @@
             this.dataGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGrid.ThemeStyle.HeaderStyle.Height = 18;
+            this.dataGrid.ThemeStyle.HeaderStyle.Height = 35;
             this.dataGrid.ThemeStyle.ReadOnly = false;
             this.dataGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGrid.ThemeStyle.RowsStyle.Height = 24;
+            this.dataGrid.ThemeStyle.RowsStyle.Height = 28;
             this.dataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataSource = typeof(DTO.SACH);
+            // 
+            // siticonePanel3
+            // 
+            this.siticonePanel3.Controls.Add(this.siticoneSeparator3);
+            this.siticonePanel3.Controls.Add(this.label7);
+            this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel3.Location = new System.Drawing.Point(0, 358);
+            this.siticonePanel3.Name = "siticonePanel3";
+            this.siticonePanel3.Size = new System.Drawing.Size(751, 68);
+            this.siticonePanel3.TabIndex = 8;
+            // 
+            // siticoneSeparator3
+            // 
+            this.siticoneSeparator3.FillColor = System.Drawing.Color.SlateBlue;
+            this.siticoneSeparator3.FillThickness = 2;
+            this.siticoneSeparator3.Location = new System.Drawing.Point(94, 52);
+            this.siticoneSeparator3.Name = "siticoneSeparator3";
+            this.siticoneSeparator3.Size = new System.Drawing.Size(563, 10);
+            this.siticoneSeparator3.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label7.Location = new System.Drawing.Point(227, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(336, 37);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "DANH SÁCH CÁC SÁCH";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -362,13 +417,16 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // maSachDataGridViewTextBoxColumn
             // 
             this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
-            this.maSachDataGridViewTextBoxColumn.HeaderText = "MaSach";
+            this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã sách";
             this.maSachDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
+            this.maSachDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maSachDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // idTuaSachDataGridViewTextBoxColumn
             // 
@@ -376,39 +434,48 @@
             this.idTuaSachDataGridViewTextBoxColumn.HeaderText = "idTuaSach";
             this.idTuaSachDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idTuaSachDataGridViewTextBoxColumn.Name = "idTuaSachDataGridViewTextBoxColumn";
+            this.idTuaSachDataGridViewTextBoxColumn.Visible = false;
             // 
             // soLuongDataGridViewTextBoxColumn
             // 
             this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            this.soLuongDataGridViewTextBoxColumn.HeaderText = "SoLuong";
+            this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số lượng";
             this.soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            this.soLuongDataGridViewTextBoxColumn.ReadOnly = true;
+            this.soLuongDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // soLuongConLaiDataGridViewTextBoxColumn
             // 
             this.soLuongConLaiDataGridViewTextBoxColumn.DataPropertyName = "SoLuongConLai";
-            this.soLuongConLaiDataGridViewTextBoxColumn.HeaderText = "SoLuongConLai";
+            this.soLuongConLaiDataGridViewTextBoxColumn.HeaderText = "Còn lại";
             this.soLuongConLaiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.soLuongConLaiDataGridViewTextBoxColumn.Name = "soLuongConLaiDataGridViewTextBoxColumn";
+            this.soLuongConLaiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.soLuongConLaiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // donGiaDataGridViewTextBoxColumn
             // 
             this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.HeaderText = "DonGia";
+            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn giá";
             this.donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            this.donGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.donGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // namXBDataGridViewTextBoxColumn
             // 
             this.namXBDataGridViewTextBoxColumn.DataPropertyName = "NamXB";
-            this.namXBDataGridViewTextBoxColumn.HeaderText = "NamXB";
+            this.namXBDataGridViewTextBoxColumn.HeaderText = "Năm XB";
             this.namXBDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.namXBDataGridViewTextBoxColumn.Name = "namXBDataGridViewTextBoxColumn";
+            this.namXBDataGridViewTextBoxColumn.ReadOnly = true;
+            this.namXBDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // nhaXBDataGridViewTextBoxColumn
             // 
             this.nhaXBDataGridViewTextBoxColumn.DataPropertyName = "NhaXB";
-            this.nhaXBDataGridViewTextBoxColumn.HeaderText = "NhaXB";
+            this.nhaXBDataGridViewTextBoxColumn.HeaderText = "NXB";
             this.nhaXBDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nhaXBDataGridViewTextBoxColumn.Name = "nhaXBDataGridViewTextBoxColumn";
             // 
@@ -508,17 +575,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         private System.Windows.Forms.Label label1;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView dataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maSachDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idTuaSachDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongConLaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namXBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nhaXBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cTPHIEUNHAPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cUONSACHesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tUASACHDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource sACHBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private System.Windows.Forms.TableLayoutPanel tableInfo;
@@ -529,10 +585,18 @@
         private System.Windows.Forms.Label labelMaTS;
         private System.Windows.Forms.Label labelTenTS;
         private System.Windows.Forms.Label labelTheLoai;
-        private System.Windows.Forms.ListView listViewTacGia;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator3;
         private System.Windows.Forms.Label label7;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butChange;
+        private System.Windows.Forms.Label labelTacGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTuaSachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongConLaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namXBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nhaXBDataGridViewTextBoxColumn;
     }
 }
