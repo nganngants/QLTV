@@ -2,7 +2,7 @@
 CREATE DATABASE QLTV
 go
 USE QLTV
---use QLGV
+
 go
 CREATE TABLE NHOMNGUOIDUNG
 (
@@ -22,7 +22,14 @@ CREATE TABLE CHUCNANG
      TenManHinh VARCHAR(MAX)
 )
 go
+
 insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLDG', 'Quan Ly Doc Gia')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLS', 'Quan Ly Sach')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLPM', 'Quan Ly Phieu Muon Tra')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLPT', 'Quan Ly Phieu Thu')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('BCTK', 'Bao Cao Thong Ke')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLND', 'Quan Ly Nguoi Dung')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('TDQD', 'Thay Doi Quy Dinh')
 
 go
 CREATE TABLE PHANQUYEN

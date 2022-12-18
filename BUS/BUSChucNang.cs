@@ -23,6 +23,11 @@ namespace BUS
         {
             return DALChucNang.Instance.GetAllChucNang();
         }
+
+        public CHUCNANG GetChucNangById (int id)
+        {
+            return DALChucNang.Instance.GetChucNangById(id);
+        }
         public string DelChucNang(string MaCN )
         {
             CHUCNANG cn = DALChucNang.Instance.GetChucNangByMa(MaCN);

@@ -153,7 +153,7 @@
             this.siticonePanel4.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel4.Location = new System.Drawing.Point(11, 70);
+            this.siticonePanel4.Location = new System.Drawing.Point(11, 68);
             this.siticonePanel4.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel4.Name = "siticonePanel4";
             this.siticonePanel4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -233,7 +233,7 @@
             // 
             this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneSeparator1.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 58);
+            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 56);
             this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(438, 12);
@@ -248,7 +248,7 @@
             this.label1.Location = new System.Drawing.Point(11, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 48);
+            this.label1.Size = new System.Drawing.Size(299, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách thể loại";
             // 
@@ -361,7 +361,7 @@
             this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox1.Location = new System.Drawing.Point(145, 15);
+            this.siticoneTextBox1.Location = new System.Drawing.Point(140, 15);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
             this.siticoneTextBox1.PlaceholderText = "";
@@ -378,7 +378,7 @@
             this.labFeat02.Location = new System.Drawing.Point(0, 15);
             this.labFeat02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat02.Name = "labFeat02";
-            this.labFeat02.Size = new System.Drawing.Size(145, 33);
+            this.labFeat02.Size = new System.Drawing.Size(140, 32);
             this.labFeat02.TabIndex = 0;
             this.labFeat02.Text = "Tên thể loại:";
             // 
@@ -404,7 +404,7 @@
             this.labFeat01.Location = new System.Drawing.Point(0, 15);
             this.labFeat01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat01.Name = "labFeat01";
-            this.labFeat01.Size = new System.Drawing.Size(141, 33);
+            this.labFeat01.Size = new System.Drawing.Size(137, 32);
             this.labFeat01.TabIndex = 0;
             this.labFeat01.Text = "Mã thể loại:";
             // 

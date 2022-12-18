@@ -89,7 +89,7 @@
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(751, 54);
+            this.controlPanel.Size = new System.Drawing.Size(1500, 54);
             this.controlPanel.TabIndex = 3;
             // 
             // miniControlBox
@@ -98,7 +98,7 @@
             this.miniControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.miniControlBox.Location = new System.Drawing.Point(628, 0);
+            this.miniControlBox.Location = new System.Drawing.Point(1377, 0);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(60, 54);
             this.miniControlBox.TabIndex = 0;
@@ -108,7 +108,7 @@
             this.closeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.closeControlBox.Location = new System.Drawing.Point(690, 0);
+            this.closeControlBox.Location = new System.Drawing.Point(1439, 0);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(61, 54);
             this.closeControlBox.TabIndex = 0;
@@ -120,14 +120,14 @@
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 54);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(751, 68);
+            this.siticonePanel1.Size = new System.Drawing.Size(1500, 68);
             this.siticonePanel1.TabIndex = 4;
             // 
             // siticoneSeparator1
             // 
             this.siticoneSeparator1.FillColor = System.Drawing.Color.SlateBlue;
             this.siticoneSeparator1.FillThickness = 2;
-            this.siticoneSeparator1.Location = new System.Drawing.Point(94, 52);
+            this.siticoneSeparator1.Location = new System.Drawing.Point(469, 52);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(563, 10);
             this.siticoneSeparator1.TabIndex = 5;
@@ -137,7 +137,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(227, 14);
+            this.label1.Location = new System.Drawing.Point(602, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(321, 37);
             this.label1.TabIndex = 4;
@@ -168,7 +168,7 @@
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableInfo.Size = new System.Drawing.Size(751, 197);
+            this.tableInfo.Size = new System.Drawing.Size(1500, 197);
             this.tableInfo.TabIndex = 5;
             this.tableInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.tableInfo_Paint);
             // 
@@ -221,7 +221,7 @@
             this.labelMaTS.AutoSize = true;
             this.labelMaTS.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMaTS.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelMaTS.Location = new System.Drawing.Point(306, 7);
+            this.labelMaTS.Location = new System.Drawing.Point(602, 7);
             this.labelMaTS.Name = "labelMaTS";
             this.labelMaTS.Size = new System.Drawing.Size(21, 27);
             this.labelMaTS.TabIndex = 0;
@@ -232,7 +232,7 @@
             this.labelTenTS.AutoSize = true;
             this.labelTenTS.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenTS.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelTenTS.Location = new System.Drawing.Point(306, 39);
+            this.labelTenTS.Location = new System.Drawing.Point(602, 39);
             this.labelTenTS.Name = "labelTenTS";
             this.labelTenTS.Size = new System.Drawing.Size(20, 27);
             this.labelTenTS.TabIndex = 0;
@@ -243,7 +243,7 @@
             this.labelTheLoai.AutoSize = true;
             this.labelTheLoai.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTheLoai.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelTheLoai.Location = new System.Drawing.Point(306, 71);
+            this.labelTheLoai.Location = new System.Drawing.Point(602, 71);
             this.labelTheLoai.Name = "labelTheLoai";
             this.labelTheLoai.Size = new System.Drawing.Size(21, 27);
             this.labelTheLoai.TabIndex = 0;
@@ -259,6 +259,16 @@
             this.labelTacGia.Size = new System.Drawing.Size(0, 27);
             this.labelTacGia.TabIndex = 1;
             this.labelTacGia.Click += new System.EventHandler(this.label6_Click);
+            this.listViewTacGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.listViewTacGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewTacGia.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.listViewTacGia.HideSelection = false;
+            this.listViewTacGia.Location = new System.Drawing.Point(602, 106);
+            this.listViewTacGia.Name = "listViewTacGia";
+            this.listViewTacGia.Size = new System.Drawing.Size(868, 81);
+            this.listViewTacGia.TabIndex = 1;
+            this.listViewTacGia.UseCompatibleStateImageBehavior = false;
             // 
             // siticonePanel2
             // 
@@ -267,7 +277,7 @@
             this.siticonePanel2.Location = new System.Drawing.Point(0, 319);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.siticonePanel2.Size = new System.Drawing.Size(751, 39);
+            this.siticonePanel2.Size = new System.Drawing.Size(1500, 39);
             this.siticonePanel2.TabIndex = 6;
             // 
             // butChange
@@ -281,7 +291,7 @@
             this.butChange.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butChange.ForeColor = System.Drawing.Color.White;
             this.butChange.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butChange.Location = new System.Drawing.Point(538, 0);
+            this.butChange.Location = new System.Drawing.Point(1287, 0);
             this.butChange.Name = "butChange";
             this.butChange.Size = new System.Drawing.Size(188, 39);
             this.butChange.TabIndex = 5;

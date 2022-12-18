@@ -37,7 +37,7 @@ namespace DAL
             return (res.Any() ? res.First() : null);
         }
 
-        public bool AddNhomNguoiDung (string tenNhom)
+        public int AddNhomNguoiDung (string tenNhom)
         {
             try
             {
@@ -47,12 +47,12 @@ namespace DAL
                 };
                 QLTVDb.Instance.NHOMNGUOIDUNGs.Add(nhom);
                 QLTVDb.Instance.SaveChanges();
-                return true;
+                return nhom.id;
             }
             catch (Exception ex)
             {
                 Console.WriteLine (ex.InnerException.ToString ());
-                return false;
+                return -1;
             }
         }
 
@@ -81,7 +81,7 @@ namespace DAL
                 if (nhom == null) return false;
                 foreach (var cn in dsChucNang)
                 {
-                    if (!nhom.CHUCNANGs.Contains(cn)) nhom.CHUCNANGs.Add(cn);
+                    nhom.CHUCNANGs.Add(cn);
                 }
                 QLTVDb.Instance.SaveChanges();
                 return true;
