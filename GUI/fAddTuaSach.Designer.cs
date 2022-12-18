@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.controlPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.miniControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.addNewTacGia = new System.Windows.Forms.LinkLabel();
+            this.TacGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.comboTacGia = new System.Windows.Forms.ComboBox();
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAddTacGia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.listViewTacGia = new System.Windows.Forms.ListView();
             this.comboTheLoai = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,9 +48,14 @@
             this.txtTenTuaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.comboTacGia = new System.Windows.Forms.ComboBox();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -96,11 +104,10 @@
             this.mainPanel.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.mainPanel.BorderRadius = 4;
             this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.TacGiaGrid);
             this.mainPanel.Controls.Add(this.comboTacGia);
-            this.mainPanel.Controls.Add(this.addNewTacGia);
             this.mainPanel.Controls.Add(this.butOK);
             this.mainPanel.Controls.Add(this.butAddTacGia);
-            this.mainPanel.Controls.Add(this.listViewTacGia);
             this.mainPanel.Controls.Add(this.comboTheLoai);
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.label2);
@@ -112,18 +119,78 @@
             this.mainPanel.Size = new System.Drawing.Size(690, 648);
             this.mainPanel.TabIndex = 3;
             // 
-            // addNewTacGia
+            // TacGiaGrid
             // 
-            this.addNewTacGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.addNewTacGia.AutoSize = true;
-            this.addNewTacGia.Location = new System.Drawing.Point(145, 486);
-            this.addNewTacGia.Name = "addNewTacGia";
-            this.addNewTacGia.Size = new System.Drawing.Size(215, 16);
-            this.addNewTacGia.TabIndex = 11;
-            this.addNewTacGia.TabStop = true;
-            this.addNewTacGia.Text = "Chưa có tác giả? Thêm tác giả mới.";
-            this.addNewTacGia.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addNewTacGia_LinkClicked);
+            this.TacGiaGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TacGiaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TacGiaGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.TacGiaGrid.ColumnHeadersHeight = 29;
+            this.TacGiaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.TacGiaGrid.ColumnHeadersVisible = false;
+            this.TacGiaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenTacGia,
+            this.id});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TacGiaGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TacGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.TacGiaGrid.Location = new System.Drawing.Point(149, 301);
+            this.TacGiaGrid.Name = "TacGiaGrid";
+            this.TacGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TacGiaGrid.RowHeadersVisible = false;
+            this.TacGiaGrid.RowHeadersWidth = 51;
+            this.TacGiaGrid.RowTemplate.Height = 24;
+            this.TacGiaGrid.Size = new System.Drawing.Size(396, 108);
+            this.TacGiaGrid.TabIndex = 13;
+            this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TacGiaGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.TacGiaGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.TacGiaGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.TacGiaGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TacGiaGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TacGiaGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.TacGiaGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.TacGiaGrid.ThemeStyle.HeaderStyle.Height = 29;
+            this.TacGiaGrid.ThemeStyle.ReadOnly = false;
+            this.TacGiaGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.TacGiaGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.TacGiaGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TacGiaGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TacGiaGrid.ThemeStyle.RowsStyle.Height = 24;
+            this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // comboTacGia
+            // 
+            this.comboTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTacGia.FormattingEnabled = true;
+            this.comboTacGia.Location = new System.Drawing.Point(148, 432);
+            this.comboTacGia.Name = "comboTacGia";
+            this.comboTacGia.Size = new System.Drawing.Size(241, 28);
+            this.comboTacGia.TabIndex = 12;
+            this.comboTacGia.TextUpdate += new System.EventHandler(this.comboTacGia_TextUpdate);
+            this.comboTacGia.TextChanged += new System.EventHandler(this.comboTacGia_TextChanged);
             // 
             // butOK
             // 
@@ -143,6 +210,7 @@
             this.butOK.Size = new System.Drawing.Size(131, 44);
             this.butOK.TabIndex = 10;
             this.butOK.Text = "Thêm";
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
             // butAddTacGia
             // 
@@ -162,20 +230,7 @@
             this.butAddTacGia.Size = new System.Drawing.Size(131, 44);
             this.butAddTacGia.TabIndex = 10;
             this.butAddTacGia.Text = "Thêm tác giả";
-            // 
-            // listViewTacGia
-            // 
-            this.listViewTacGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewTacGia.CheckBoxes = true;
-            this.listViewTacGia.FullRowSelect = true;
-            this.listViewTacGia.HideSelection = false;
-            this.listViewTacGia.Location = new System.Drawing.Point(146, 301);
-            this.listViewTacGia.Name = "listViewTacGia";
-            this.listViewTacGia.Size = new System.Drawing.Size(399, 125);
-            this.listViewTacGia.TabIndex = 9;
-            this.listViewTacGia.UseCompatibleStateImageBehavior = false;
-            this.listViewTacGia.View = System.Windows.Forms.View.List;
+            this.butAddTacGia.Click += new System.EventHandler(this.butAddTacGia_Click);
             // 
             // comboTheLoai
             // 
@@ -271,14 +326,45 @@
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // comboTacGia
+            // ErrorDia
             // 
-            this.comboTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboTacGia.FormattingEnabled = true;
-            this.comboTacGia.Location = new System.Drawing.Point(148, 432);
-            this.comboTacGia.Name = "comboTacGia";
-            this.comboTacGia.Size = new System.Drawing.Size(241, 28);
-            this.comboTacGia.TabIndex = 12;
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.ErrorDia.Text = null;
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.AskDia.Text = null;
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.SuccDia.Text = null;
+            // 
+            // TenTacGia
+            // 
+            this.TenTacGia.HeaderText = "";
+            this.TenTacGia.MinimumWidth = 6;
+            this.TenTacGia.Name = "TenTacGia";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
             // 
             // fAddTuaSach
             // 
@@ -296,6 +382,7 @@
             this.controlPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,10 +401,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAddTacGia;
-        private System.Windows.Forms.ListView listViewTacGia;
-        private System.Windows.Forms.LinkLabel addNewTacGia;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butOK;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
         private System.Windows.Forms.ComboBox comboTacGia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView TacGiaGrid;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }
