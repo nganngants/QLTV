@@ -64,9 +64,9 @@ namespace BUS
                 return "";
             return "Không thể xoá sách.";
         }
-        public SACH GetSach(string id)
+        public SACH GetSach(int id)
         {
-            return DALSach.Instance.GetSachByMa(id);
+            return DALSach.Instance.GetSachById(id);
         }
     }
 }
