@@ -22,6 +22,12 @@ namespace GUI.UserControls
         {
             SachList = BUSSach.Instance.GetAllSach();
             this.SachGrid.DataSource = SachList;
+            int i = 0;
+            foreach(DataGridViewRow row in SachGrid.Rows)
+            {
+                row.Cells["TenTuaSach"].Value = SachList[i].TUASACH.TenTuaSach;
+                i++;
+            }
         }
         private void ucSach_Load(object sender, EventArgs e)
         {
