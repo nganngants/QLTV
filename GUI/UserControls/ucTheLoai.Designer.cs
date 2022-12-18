@@ -39,7 +39,11 @@
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TheLoaiGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.tHELOAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.maTheLoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +77,7 @@
             this.txtTenTL.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenTL.Location = new System.Drawing.Point(157, 78);
-            this.txtTenTL.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTenTL.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenTL.Name = "txtTenTL";
             this.txtTenTL.PasswordChar = '\0';
             this.txtTenTL.PlaceholderText = "Tên Thể Loại";
@@ -122,6 +126,7 @@
             this.butDel.TabIndex = 8;
             this.butDel.Text = "Xóa Thể Loại";
             this.butDel.TextOffset = new System.Drawing.Point(12, 0);
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // TheLoaiGrid
             // 
@@ -135,7 +140,6 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.TheLoaiGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TheLoaiGrid.AutoGenerateColumns = false;
-            this.TheLoaiGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,7 +151,8 @@
             this.TheLoaiGrid.ColumnHeadersHeight = 35;
             this.TheLoaiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TheLoaiGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.id,
+            this.isChosen,
             this.maTheLoaiDataGridViewTextBoxColumn,
             this.TenTheLoai,
             this.SoTuaSach});
@@ -205,13 +210,51 @@
             // 
             this.tHELOAIBindingSource.DataSource = typeof(DTO.THELOAI);
             // 
-            // idDataGridViewTextBoxColumn
+            // SuccDia
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.SuccDia.Text = null;
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.AskDia.Text = null;
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Width = 6;
             // 
             // maTheLoaiDataGridViewTextBoxColumn
             // 
@@ -258,7 +301,11 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenTL;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
         private System.Windows.Forms.DataGridViewTextBoxColumn maTheLoaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTuaSach;
