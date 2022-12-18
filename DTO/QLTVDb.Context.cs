@@ -20,7 +20,11 @@ namespace DTO
         { 
             get
             {
-                if (instance == null) instance = new QLTVDb();
+                if (instance == null)
+                {
+                    instance = new QLTVDb();
+                    instance.Configuration.AutoDetectChangesEnabled = false;
+                }
                 return instance;
             }
             set => instance = value; 
