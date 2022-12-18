@@ -23,7 +23,11 @@ namespace GUI
             InitializeComponent();
             id = _id;
             init();
+            List<SACH> SachList = tuasach.SACHes.ToList();
+            SachGrid.DataSource = SachList;
+            
         }
+        
         private void init()
         {
             tuasach = BUSTuaSach.Instance.GetTuaSach(id);
@@ -55,5 +59,7 @@ namespace GUI
         {
 
         }
+
+       
     }
 }

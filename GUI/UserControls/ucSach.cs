@@ -11,6 +11,7 @@ namespace GUI.UserControls
         public ucSach()
         {
             InitializeComponent();
+            Binding();
         }
         private List<SACH> SachList;
         private void siticoneButton2_Click(object sender, EventArgs e)
