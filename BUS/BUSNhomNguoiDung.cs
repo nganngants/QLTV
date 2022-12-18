@@ -9,7 +9,7 @@ namespace BUS
 {
      public class BUSNhomNguoiDung
     {
-        public static BUSNhomNguoiDung instance;
+        private static BUSNhomNguoiDung instance;
         public static BUSNhomNguoiDung Instance
         {
             get
@@ -23,6 +23,11 @@ namespace BUS
         {
             return DALNhomNguoiDung.Instance.GetAllNhomNguoiDung();
         }
+
+        public NHOMNGUOIDUNG GetNhomNguoiDungById(int id)
+        {
+            return DALNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
+        }
         public string DelNhomNguoiDung(string maNhomNguoiDung)
         {
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
@@ -32,11 +37,18 @@ namespace BUS
                 return "";
             return "Không thể xoá nhóm người dùng";
         }
-        public string AddNhomNguoiDung(string tenNhom)
+        public int AddNhomNguoiDung(string tenNhom)
         {
-            if (DALNhomNguoiDung.Instance.AddNhomNguoiDung(tenNhom))
-                return "";
-            return "Không thể thêm nhóm người dùng";
+            try
+            {
+                int id = DALNhomNguoiDung.Instance.AddNhomNguoiDung(tenNhom);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return -1;
+            }
         }
         public string UpdNhomNguoiDung(string maNhomNguoiDung, string name)
         {
@@ -48,18 +60,21 @@ namespace BUS
             return "Không thể cập nhật nhóm người dùng";
         }
 
-        public string AddChucNangForNhom(string maNhomNguoiDung, List<String> dsChucNang)
+        public string AddChucNangForNhom(int maNhomNguoiDung, List<String> dsChucNang)
         {
             List<CHUCNANG> ds = new List<CHUCNANG>();
             foreach(var ma in dsChucNang)
             {
                 var cn = DALChucNang.Instance.GetChucNangByMa(ma);
+                Console.WriteLine(ma);
                 if (cn == null) return "Danh sách các mã chức năng không hợp lệ.";
+
                 ds.Add(cn);
             }
+
             // REMEMBER TO ADD LOGIC HERE
 
-            var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
+            var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(maNhomNguoiDung);
             if (nnd == null) return "Mã nhóm người dùng không đúng.";
             if (DALNhomNguoiDung.Instance.AddChucNangForNhom(nnd.id, ds))
                 return "";

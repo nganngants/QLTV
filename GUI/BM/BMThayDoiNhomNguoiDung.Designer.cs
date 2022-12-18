@@ -184,7 +184,7 @@
             this.siticonePanel4.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel4.Location = new System.Drawing.Point(11, 63);
+            this.siticonePanel4.Location = new System.Drawing.Point(11, 62);
             this.siticonePanel4.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.siticonePanel4.Name = "siticonePanel4";
             this.siticonePanel4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
@@ -271,7 +271,7 @@
             // 
             this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneSeparator1.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 51);
+            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 50);
             this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(438, 12);
@@ -286,7 +286,7 @@
             this.label1.Location = new System.Drawing.Point(11, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(429, 41);
+            this.label1.Size = new System.Drawing.Size(421, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách nhóm người dùng";
             // 
@@ -332,7 +332,7 @@
             this.label3.Location = new System.Drawing.Point(0, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 33);
+            this.label3.Size = new System.Drawing.Size(170, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên chức năng:";
             // 
@@ -361,7 +361,7 @@
             this.siticoneComboBox1.Font = new System.Drawing.Font("Segoe UI", 17.856F);
             this.siticoneComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.siticoneComboBox1.ItemHeight = 30;
-            this.siticoneComboBox1.Location = new System.Drawing.Point(175, 15);
+            this.siticoneComboBox1.Location = new System.Drawing.Point(167, 15);
             this.siticoneComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneComboBox1.Name = "siticoneComboBox1";
             this.siticoneComboBox1.Size = new System.Drawing.Size(218, 36);
@@ -376,7 +376,7 @@
             this.label2.Location = new System.Drawing.Point(0, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 33);
+            this.label2.Size = new System.Drawing.Size(167, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã chức năng:";
             // 
@@ -471,7 +471,7 @@
             this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox1.Location = new System.Drawing.Point(128, 15);
+            this.siticoneTextBox1.Location = new System.Drawing.Point(121, 15);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
             this.siticoneTextBox1.PlaceholderText = "";
@@ -488,7 +488,7 @@
             this.labFeat02.Location = new System.Drawing.Point(0, 15);
             this.labFeat02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat02.Name = "labFeat02";
-            this.labFeat02.Size = new System.Drawing.Size(128, 33);
+            this.labFeat02.Size = new System.Drawing.Size(121, 32);
             this.labFeat02.TabIndex = 0;
             this.labFeat02.Text = "Tên nhóm:";
             // 
@@ -514,7 +514,7 @@
             this.labFeat01.Location = new System.Drawing.Point(0, 15);
             this.labFeat01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeat01.Name = "labFeat01";
-            this.labFeat01.Size = new System.Drawing.Size(258, 33);
+            this.labFeat01.Size = new System.Drawing.Size(245, 32);
             this.labFeat01.TabIndex = 0;
             this.labFeat01.Text = "Mã nhóm người dùng:";
             // 

@@ -12,9 +12,11 @@ namespace GUI
 {
     public partial class fInfoPhieuNhap : Form
     {
-        public fInfoPhieuNhap()
+        private static int id;
+        public fInfoPhieuNhap(int _id)
         {
             InitializeComponent();
+            id = _id;
         }
     }
 }
