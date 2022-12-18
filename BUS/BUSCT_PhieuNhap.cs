@@ -43,11 +43,6 @@ namespace BUS
                 return "";
             return "Không thể nhập sách này";
         }
-        public string DelCTPhieuNhap ( int soPhieu,int idSach)
-        {
-            if (DALCTPhieuNhap.Instance.DelCTPhieuNhap(soPhieu, idSach))
-                return "";
-            return "Không thể xoá phiếu nhập";
-        }
+        
     }
 }

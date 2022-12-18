@@ -57,7 +57,16 @@ namespace DAL
             return res;
         }
 
-        public bool AddSachMoi(TUASACH tuaSach, int soLuong, int donGia, int? namXB, string nhaXB)
+        /// <summary>
+        /// Add info for new Sach (with soLuong = 0)
+        /// return id of new Sach
+        /// </summary>
+        /// <param name="tuaSach"></param>
+        /// <param name="donGia"></param>
+        /// <param name="namXB"></param>
+        /// <param name="nhaXB"></param>
+        /// <returns></returns>
+        public int AddSachMoi(TUASACH tuaSach, int donGia, int? namXB, string nhaXB)
         {
             try
             {
@@ -72,17 +81,13 @@ namespace DAL
                     NhaXB = nhaXB
                 };
                 QLTVDb.Instance.SACHes.Add(sach);
-                for (int i = 0; i < soLuong; ++i)
-                {
-                    DALCuonSach.Instance.AddCuonSach(sach, 1);
-                }
                 QLTVDb.Instance.SaveChanges();
-                return true;
+                return sach.id;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                return -1;
             }
         }
 

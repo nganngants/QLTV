@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,10 +23,19 @@ namespace DAL
             }
             set => instance = value;
         }
+        //public static List<TUASACH> Copy(List<TUASACH> item)
+        //{
+        //    List<TUASACH> res = new List<TUASACH>();
+        //    foreach (var i in item)
+        //    {
+        //        res.Add(i.Copy());
+        //    }
+        //    return res;
+        //}
 
         public List<TUASACH> GetAllTuaSach()
         {
-            return QLTVDb.Instance.TUASACHes.ToList();
+            return QLTVDb.Instance.TUASACHes.AsNoTracking().ToList();
         }
 
         public TUASACH GetTuaSachById (int id)

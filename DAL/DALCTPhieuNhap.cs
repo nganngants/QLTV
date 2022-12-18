@@ -50,7 +50,13 @@ namespace DAL
                     ThanhTien = donGia * soLuongNhap
                 };
                 QLTVDb.Instance.CT_PHIEUNHAP.Add(ct);
+
+                // update tongTien in PhieuNhap
                 DALPhieuNhapSach.Instance.UpdPhieuNhap(soPhieu, null, phieu.TongTien + ct.ThanhTien);
+
+                // Add Sach
+                DALSach.Instance.AddSachDaCo(idSach, soLuongNhap);
+
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
@@ -61,52 +67,6 @@ namespace DAL
             }
         }
 
-        public bool UpdCTPhieuNhap (int soPhieu, int idSach, int? donGia, int? soLuongNhap)
-        {
-            try
-            {
-                var phieu = DALPhieuNhapSach.Instance.GetPhieuById(soPhieu);
-                var sach = DALSach.Instance.GetSachById(idSach);
-                if (phieu == null || sach == null) return false;
 
-                var ct = GetCT_PHIEUNHAP(soPhieu, idSach);
-                if (donGia != null) ct.DonGia = donGia;
-                if (soLuongNhap != null) ct.SoLuongNhap = soLuongNhap;
-                int thanhTienCu = (int)ct.ThanhTien;
-
-                // update ThanhTien of CTPhieu and TongTien of Phieu
-                ct.ThanhTien = donGia * soLuongNhap;
-                DALPhieuNhapSach.Instance.UpdPhieuNhap(soPhieu, null, 
-                                                       phieu.TongTien - thanhTienCu + ct.ThanhTien);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
-        }
-
-        public bool DelCTPhieuNhap(int soPhieu, int idSach)
-        {
-            try
-            {
-                var ct = GetCT_PHIEUNHAP(soPhieu, idSach);
-                if (ct == null) return false;
-                var phieu = DALPhieuNhapSach.Instance.GetPhieuById(soPhieu);
-
-                // update TongTien of Phieu
-                DALPhieuNhapSach.Instance.UpdPhieuNhap(soPhieu, null, phieu.TongTien - ct.ThanhTien);
-                QLTVDb.Instance.CT_PHIEUNHAP.Remove(ct);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
-        }
     }
 }
