@@ -30,7 +30,7 @@ namespace GUI
         private int SoLuongNhap;
         private void butOK_Click(object sender, EventArgs e)
         {
-            if (NgayNhap.Date > DateTime.Now)
+            if (dateNgayNhap.Value.Date > DateTime.Now)
             {
                 ErrorDia.Show("Ngày nhập không hợp lệ");
                 return;
