@@ -54,6 +54,7 @@ CREATE TABLE NGUOIDUNG
     idNhomNguoiDung INT REFERENCES NHOMNGUOIDUNG on delete cascade NOT NULL
 )
 go
+
 INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, idNhomNguoiDung) VALUES ('Ngan Ngan', 'admin', '123', 1)
 
 go
