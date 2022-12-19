@@ -40,12 +40,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.labelMaDG = new System.Windows.Forms.Label();
-            this.labelMaLoaiDG = new System.Windows.Forms.Label();
+            this.labelMaNd = new System.Windows.Forms.Label();
+            this.labelNhomND = new System.Windows.Forms.Label();
             this.labelHoTen = new System.Windows.Forms.Label();
             this.labelNgaySinh = new System.Windows.Forms.Label();
-            this.labelDiaChi = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelChucVu = new System.Windows.Forms.Label();
+            this.labelTenDN = new System.Windows.Forms.Label();
             this.butChange = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label1 = new System.Windows.Forms.Label();
             this.siticonePanel1.SuspendLayout();
@@ -107,12 +107,12 @@
             this.tableInfo.Controls.Add(this.label6, 0, 4);
             this.tableInfo.Controls.Add(this.label7, 0, 5);
             this.tableInfo.Controls.Add(this.label11, 0, 0);
-            this.tableInfo.Controls.Add(this.labelMaDG, 1, 0);
-            this.tableInfo.Controls.Add(this.labelMaLoaiDG, 1, 1);
+            this.tableInfo.Controls.Add(this.labelMaNd, 1, 0);
+            this.tableInfo.Controls.Add(this.labelNhomND, 1, 1);
             this.tableInfo.Controls.Add(this.labelHoTen, 1, 2);
             this.tableInfo.Controls.Add(this.labelNgaySinh, 1, 3);
-            this.tableInfo.Controls.Add(this.labelDiaChi, 1, 4);
-            this.tableInfo.Controls.Add(this.labelEmail, 1, 5);
+            this.tableInfo.Controls.Add(this.labelChucVu, 1, 4);
+            this.tableInfo.Controls.Add(this.labelTenDN, 1, 5);
             this.tableInfo.Location = new System.Drawing.Point(6, 112);
             this.tableInfo.Margin = new System.Windows.Forms.Padding(6);
             this.tableInfo.Name = "tableInfo";
@@ -193,27 +193,27 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Mã Người Dùng";
             // 
-            // labelMaDG
+            // labelMaNd
             // 
-            this.labelMaDG.AutoSize = true;
-            this.labelMaDG.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaDG.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelMaDG.Location = new System.Drawing.Point(301, 7);
-            this.labelMaDG.Name = "labelMaDG";
-            this.labelMaDG.Size = new System.Drawing.Size(24, 31);
-            this.labelMaDG.TabIndex = 0;
-            this.labelMaDG.Text = "x";
+            this.labelMaNd.AutoSize = true;
+            this.labelMaNd.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMaNd.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelMaNd.Location = new System.Drawing.Point(301, 7);
+            this.labelMaNd.Name = "labelMaNd";
+            this.labelMaNd.Size = new System.Drawing.Size(24, 31);
+            this.labelMaNd.TabIndex = 0;
+            this.labelMaNd.Text = "x";
             // 
-            // labelMaLoaiDG
+            // labelNhomND
             // 
-            this.labelMaLoaiDG.AutoSize = true;
-            this.labelMaLoaiDG.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaLoaiDG.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelMaLoaiDG.Location = new System.Drawing.Point(301, 49);
-            this.labelMaLoaiDG.Name = "labelMaLoaiDG";
-            this.labelMaLoaiDG.Size = new System.Drawing.Size(24, 31);
-            this.labelMaLoaiDG.TabIndex = 0;
-            this.labelMaLoaiDG.Text = "z";
+            this.labelNhomND.AutoSize = true;
+            this.labelNhomND.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNhomND.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelNhomND.Location = new System.Drawing.Point(301, 49);
+            this.labelNhomND.Name = "labelNhomND";
+            this.labelNhomND.Size = new System.Drawing.Size(24, 31);
+            this.labelNhomND.TabIndex = 0;
+            this.labelNhomND.Text = "z";
             // 
             // labelHoTen
             // 
@@ -237,27 +237,27 @@
             this.labelNgaySinh.TabIndex = 0;
             this.labelNgaySinh.Text = "x";
             // 
-            // labelDiaChi
+            // labelChucVu
             // 
-            this.labelDiaChi.AutoSize = true;
-            this.labelDiaChi.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiaChi.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelDiaChi.Location = new System.Drawing.Point(301, 175);
-            this.labelDiaChi.Name = "labelDiaChi";
-            this.labelDiaChi.Size = new System.Drawing.Size(24, 31);
-            this.labelDiaChi.TabIndex = 0;
-            this.labelDiaChi.Text = "x";
+            this.labelChucVu.AutoSize = true;
+            this.labelChucVu.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChucVu.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelChucVu.Location = new System.Drawing.Point(301, 175);
+            this.labelChucVu.Name = "labelChucVu";
+            this.labelChucVu.Size = new System.Drawing.Size(24, 31);
+            this.labelChucVu.TabIndex = 0;
+            this.labelChucVu.Text = "x";
             // 
-            // labelEmail
+            // labelTenDN
             // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelEmail.Location = new System.Drawing.Point(301, 217);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(24, 31);
-            this.labelEmail.TabIndex = 0;
-            this.labelEmail.Text = "x";
+            this.labelTenDN.AutoSize = true;
+            this.labelTenDN.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTenDN.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelTenDN.Location = new System.Drawing.Point(301, 217);
+            this.labelTenDN.Name = "labelTenDN";
+            this.labelTenDN.Size = new System.Drawing.Size(24, 31);
+            this.labelTenDN.TabIndex = 0;
+            this.labelTenDN.Text = "x";
             // 
             // butChange
             // 
@@ -326,11 +326,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label labelMaDG;
-        private System.Windows.Forms.Label labelMaLoaiDG;
+        private System.Windows.Forms.Label labelMaNd;
+        private System.Windows.Forms.Label labelNhomND;
         private System.Windows.Forms.Label labelHoTen;
         private System.Windows.Forms.Label labelNgaySinh;
-        private System.Windows.Forms.Label labelDiaChi;
-        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelChucVu;
+        private System.Windows.Forms.Label labelTenDN;
     }
 }

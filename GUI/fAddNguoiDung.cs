@@ -16,8 +16,36 @@ namespace GUI
         public fAddNguoiDung()
         {
             InitializeComponent();
+            Bind();
         }
 
+        private void Bind()
+        {
+            var dsNND = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
+            foreach (var n in dsNND)
+            {
+                n.TenNhomNguoiDung = n.TenNhomNguoiDung + "(" + n.MaNhomNguoiDung + ")";
+            }    
+            comboNhomND.DataSource = dsNND;
+            comboNhomND.ValueMember = "id";
+            comboNhomND.DisplayMember = "TenNhomNguoiDung";
+        }
 
+        private void butSave_Click(object sender, EventArgs e)
+        {
+            string ten = txtHoTen.Text;
+            DateTime ngaysinh = dateNgaySinh.Value.Date;
+            string chucvu = txtChucVu.Text;
+            string tendn = txtUsername.Text;
+            string matkhau = txtUserpwd.Text;
+            int id = (int)comboNhomND.SelectedValue;
+
+            string err = BUSNguoiDung.Instance.AddNguoiDung(ten, ngaysinh, chucvu, tendn, matkhau, id);
+            if (err == "")
+            {
+                messageDia.Show("Thêm người dùng thành công");
+            }
+            else errorDia.Show(err);
+        }
     }
 }

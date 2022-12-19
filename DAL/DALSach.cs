@@ -97,6 +97,8 @@ namespace DAL
             {
                 SACH sach = GetSachById(id);
                 if (sach == null) return false;
+                sach.SoLuong += soLuongThem;
+                sach.SoLuongConLai += soLuongThem;
                 for (int i = 0; i < soLuongThem; ++i)
                 {
                     DALCuonSach.Instance.AddCuonSach(sach, 1);

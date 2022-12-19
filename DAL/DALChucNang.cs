@@ -34,7 +34,7 @@ namespace DAL
 
         public CHUCNANG GetChucNangByMa(string ma)
         {
-            var res = QLTVDb.Instance.CHUCNANGs.AsNoTracking().Where(c => c.MaChucNang == ma);
+            var res = QLTVDb.Instance.CHUCNANGs.Where(c => c.MaChucNang == ma);
             return (res.Any() ? res.First() : null);
         }
 

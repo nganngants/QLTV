@@ -79,10 +79,8 @@ namespace DAL
             {
                 var nhom = GetNhomNguoiDungById(id);
                 if (nhom == null) return false;
-                foreach (var cn in dsChucNang)
-                {
-                    nhom.CHUCNANGs.Add(cn);
-                }
+                nhom.CHUCNANGs.Clear();
+                nhom.CHUCNANGs = dsChucNang;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }

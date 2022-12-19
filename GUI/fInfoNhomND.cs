@@ -25,9 +25,15 @@ namespace GUI
         {
             var nnd = BUSNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
             this.dsChucNang.DataSource = nnd.CHUCNANGs.ToList();
-            this.labelMaNhom.Text += nnd.MaNhomNguoiDung.ToString();
+            this.labelMaNhom.Text = "Mã Nhóm Người Dùng: " + nnd.MaNhomNguoiDung.ToString();
             this.labelTenNhom.Text += nnd.TenNhomNguoiDung;
         }
 
+        private void butChange_Click(object sender, EventArgs e)
+        {
+            var f = new fEditNhomND(id);
+            f.ShowDialog();
+            Bind();
+        }
     }
 }

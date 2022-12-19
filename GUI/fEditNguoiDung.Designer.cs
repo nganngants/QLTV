@@ -33,9 +33,9 @@
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.comboNhomND = new System.Windows.Forms.ComboBox();
             this.txtUserpwd = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.comboNhomND = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -46,8 +46,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.labelMaNd = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.errorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.messageDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,9 +87,9 @@
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticonePanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.siticonePanel1.BorderThickness = 2;
+            this.siticonePanel1.Controls.Add(this.comboNhomND);
             this.siticonePanel1.Controls.Add(this.txtUserpwd);
             this.siticonePanel1.Controls.Add(this.txtUsername);
-            this.siticonePanel1.Controls.Add(this.comboNhomND);
             this.siticonePanel1.Controls.Add(this.label3);
             this.siticonePanel1.Controls.Add(this.label5);
             this.siticonePanel1.Controls.Add(this.butSave);
@@ -98,13 +100,22 @@
             this.siticonePanel1.Controls.Add(this.label4);
             this.siticonePanel1.Controls.Add(this.label7);
             this.siticonePanel1.Controls.Add(this.label6);
-            this.siticonePanel1.Controls.Add(this.label8);
+            this.siticonePanel1.Controls.Add(this.labelMaNd);
             this.siticonePanel1.Controls.Add(this.label2);
             this.siticonePanel1.Location = new System.Drawing.Point(86, 80);
             this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(696, 650);
             this.siticonePanel1.TabIndex = 12;
+            // 
+            // comboNhomND
+            // 
+            this.comboNhomND.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboNhomND.FormattingEnabled = true;
+            this.comboNhomND.Location = new System.Drawing.Point(137, 252);
+            this.comboNhomND.Name = "comboNhomND";
+            this.comboNhomND.Size = new System.Drawing.Size(204, 30);
+            this.comboNhomND.TabIndex = 53;
             // 
             // txtUserpwd
             // 
@@ -143,22 +154,6 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(427, 40);
             this.txtUsername.TabIndex = 50;
-            // 
-            // comboNhomND
-            // 
-            this.comboNhomND.BackColor = System.Drawing.Color.Transparent;
-            this.comboNhomND.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboNhomND.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboNhomND.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboNhomND.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboNhomND.Font = new System.Drawing.Font("Segoe UI", 20.16F);
-            this.comboNhomND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboNhomND.ItemHeight = 30;
-            this.comboNhomND.Location = new System.Drawing.Point(137, 250);
-            this.comboNhomND.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboNhomND.Name = "comboNhomND";
-            this.comboNhomND.Size = new System.Drawing.Size(193, 36);
-            this.comboNhomND.TabIndex = 45;
             // 
             // label3
             // 
@@ -199,6 +194,7 @@
             this.butSave.Size = new System.Drawing.Size(150, 50);
             this.butSave.TabIndex = 4;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // label1
             // 
@@ -299,6 +295,17 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Tên Đăng Nhập";
             // 
+            // labelMaNd
+            // 
+            this.labelMaNd.AutoSize = true;
+            this.labelMaNd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMaNd.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelMaNd.Location = new System.Drawing.Point(202, 74);
+            this.labelMaNd.Name = "labelMaNd";
+            this.labelMaNd.Size = new System.Drawing.Size(164, 27);
+            this.labelMaNd.TabIndex = 28;
+            this.labelMaNd.Text = "Mã Người Dùng: ";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -310,16 +317,23 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Họ Tên";
             // 
-            // label8
+            // errorDia
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label8.Location = new System.Drawing.Point(202, 74);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 27);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Mã Người Dùng: ";
+            this.errorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.errorDia.Caption = null;
+            this.errorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.errorDia.Parent = null;
+            this.errorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.errorDia.Text = null;
+            // 
+            // messageDia
+            // 
+            this.messageDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.messageDia.Caption = null;
+            this.messageDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
+            this.messageDia.Parent = null;
+            this.messageDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.messageDia.Text = null;
             // 
             // fEditNguoiDung
             // 
@@ -348,7 +362,6 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUserpwd;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUsername;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboNhomND;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butSave;
@@ -359,7 +372,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelMaNd;
         private System.Windows.Forms.Label label2;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog errorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog messageDia;
+        private System.Windows.Forms.ComboBox comboNhomND;
     }
 }

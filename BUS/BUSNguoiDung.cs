@@ -11,7 +11,7 @@ namespace BUS
 {
      public class BUSNguoiDung
     {
-        public static BUSNguoiDung instance;
+        private static BUSNguoiDung instance;
         public static BUSNguoiDung Instance
         {
             get
@@ -46,15 +46,20 @@ namespace BUS
             NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungByMa(maNguoiDung);
             return nd;
         }
-        public String UpdNguoiDung(string maNguoiDung, string ten, DateTime NgaySinh, string ChucVu, string NhomNguoiDung)
+
+        public NGUOIDUNG GetNguoiDungById (int id)
         {
-            NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungByMa(maNguoiDung);
+            return DALNguoiDung.Instance.GetNguoiDungById(id);
+        }
+        public String UpdNguoiDung(int id, string ten, DateTime NgaySinh, string ChucVu, int idNhomNguoiDung)
+        {
+            NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungById(id);
             if(nd == null )
             {
                 return "Người dùng không hợp lệ";
 
             }
-            NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(NhomNguoiDung);
+            NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung);
             if (nnd == null)
                 return " Nhóm người dùng không hợp lệ";
             if (DALNguoiDung.Instance.UpdNguoiDung(nd.id, ten, NgaySinh, ChucVu, nnd.id))

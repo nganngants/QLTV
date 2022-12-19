@@ -485,7 +485,51 @@
             this.nhaXBDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nhaXBDataGridViewTextBoxColumn.Name = "nhaXBDataGridViewTextBoxColumn";
             // 
-            // Edit
+            // cTPHIEUNHAPDataGridViewTextBoxColumn
+            // 
+            this.cTPHIEUNHAPDataGridViewTextBoxColumn.DataPropertyName = "CT_PHIEUNHAP";
+            this.cTPHIEUNHAPDataGridViewTextBoxColumn.HeaderText = "CT_PHIEUNHAP";
+            this.cTPHIEUNHAPDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cTPHIEUNHAPDataGridViewTextBoxColumn.Name = "cTPHIEUNHAPDataGridViewTextBoxColumn";
+            // 
+            // cUONSACHesDataGridViewTextBoxColumn
+            // 
+            this.cUONSACHesDataGridViewTextBoxColumn.DataPropertyName = "CUONSACHes";
+            this.cUONSACHesDataGridViewTextBoxColumn.HeaderText = "CUONSACHes";
+            this.cUONSACHesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cUONSACHesDataGridViewTextBoxColumn.Name = "cUONSACHesDataGridViewTextBoxColumn";
+            // 
+            // tUASACHDataGridViewTextBoxColumn
+            // 
+            this.tUASACHDataGridViewTextBoxColumn.DataPropertyName = "TUASACH";
+            this.tUASACHDataGridViewTextBoxColumn.HeaderText = "TUASACH";
+            this.tUASACHDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tUASACHDataGridViewTextBoxColumn.Name = "tUASACHDataGridViewTextBoxColumn";
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataSource = typeof(DTO.SACH);
+            // 
+            // siticonePanel3
+            // 
+            this.siticonePanel3.Controls.Add(this.siticoneSeparator3);
+            this.siticonePanel3.Controls.Add(this.label7);
+            this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel3.Location = new System.Drawing.Point(0, 358);
+            this.siticonePanel3.Name = "siticonePanel3";
+            this.siticonePanel3.Size = new System.Drawing.Size(1500, 68);
+            this.siticonePanel3.TabIndex = 8;
+            // 
+            // siticoneSeparator3
+            // 
+            this.siticoneSeparator3.FillColor = System.Drawing.Color.SlateBlue;
+            this.siticoneSeparator3.FillThickness = 2;
+            this.siticoneSeparator3.Location = new System.Drawing.Point(469, 52);
+            this.siticoneSeparator3.Name = "siticoneSeparator3";
+            this.siticoneSeparator3.Size = new System.Drawing.Size(563, 10);
+            this.siticoneSeparator3.TabIndex = 5;
+            // 
+            // label7
             // 
             this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Edit.HeaderText = "";
