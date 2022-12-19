@@ -26,6 +26,7 @@ namespace GUI
             this.comboLoaiDG.DataSource = LoaiDocGiaList;
             comboLoaiDG.DisplayMember= "TenLoaiDocGia";
             comboLoaiDG.ValueMember = "id";
+            comboLoaiDG.SelectedIndex =0;
         }
 
         private void butOK_Click(object sender, EventArgs e)
@@ -33,6 +34,7 @@ namespace GUI
             // Them doc gia
             string tenDG = txtHoTen.Text;
             int idLDG = (int)comboLoaiDG.SelectedValue;
+           
             string email = txtEmail.Text;
             string DiaChi = txtDiaChi.Text;
             DateTime NgaySinh = dateNgaySinh.Value.Date;
@@ -41,7 +43,7 @@ namespace GUI
            
             DateTime NgayHetHan = NgayLapThe.AddMonths((int)thamso.ThoiHanThe);
             dateNgayHetHan.Text = NgayHetHan.Date.ToString();
-            if(tenDG == "" || DiaChi == "")
+            if(tenDG == "" || DiaChi == "" )
             {
                 ErrorDia.Text = "Chưa điền đủ thông tin";
                 ErrorDia.Show();

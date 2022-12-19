@@ -32,8 +32,6 @@ namespace GUI.BM
         {
             this.components = new System.ComponentModel.Container();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.comboDocGia = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.comboCuonSach = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.isDaTra = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.siticoneVSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
             this.siticoneVSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
@@ -63,6 +61,9 @@ namespace GUI.BM
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.comboCuonSach = new System.Windows.Forms.ComboBox();
+            this.comboDocGia = new System.Windows.Forms.ComboBox();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,36 +104,6 @@ namespace GUI.BM
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(1000, 745);
             this.siticonePanel1.TabIndex = 1;
-            // 
-            // comboDocGia
-            // 
-            this.comboDocGia.BackColor = System.Drawing.Color.Transparent;
-            this.comboDocGia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboDocGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboDocGia.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboDocGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboDocGia.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboDocGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboDocGia.ItemHeight = 30;
-            this.comboDocGia.Location = new System.Drawing.Point(592, 200);
-            this.comboDocGia.Name = "comboDocGia";
-            this.comboDocGia.Size = new System.Drawing.Size(293, 36);
-            this.comboDocGia.TabIndex = 153;
-            // 
-            // comboCuonSach
-            // 
-            this.comboCuonSach.BackColor = System.Drawing.Color.Transparent;
-            this.comboCuonSach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboCuonSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCuonSach.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboCuonSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboCuonSach.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboCuonSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboCuonSach.ItemHeight = 30;
-            this.comboCuonSach.Location = new System.Drawing.Point(122, 200);
-            this.comboCuonSach.Name = "comboCuonSach";
-            this.comboCuonSach.Size = new System.Drawing.Size(293, 36);
-            this.comboCuonSach.TabIndex = 153;
             // 
             // isDaTra
             // 
@@ -241,7 +212,7 @@ namespace GUI.BM
             this.dateNgayTra.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayTra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgayTra.Name = "dateNgayTra";
-            this.dateNgayTra.Size = new System.Drawing.Size(160, 50);
+            this.dateNgayTra.Size = new System.Drawing.Size(167, 50);
             this.dateNgayTra.TabIndex = 131;
             this.dateNgayTra.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
             // 
@@ -257,16 +228,17 @@ namespace GUI.BM
             this.dateNgayMuon.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayMuon.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgayMuon.Name = "dateNgayMuon";
-            this.dateNgayMuon.Size = new System.Drawing.Size(160, 50);
+            this.dateNgayMuon.Size = new System.Drawing.Size(167, 50);
             this.dateNgayMuon.TabIndex = 131;
             this.dateNgayMuon.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
+            this.dateNgayMuon.ValueChanged += new System.EventHandler(this.dateNgayMuon_ValueChanged_1);
             // 
             // labelHanTra
             // 
             this.labelHanTra.AutoSize = true;
             this.labelHanTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHanTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelHanTra.Location = new System.Drawing.Point(324, 474);
+            this.labelHanTra.Location = new System.Drawing.Point(306, 474);
             this.labelHanTra.Name = "labelHanTra";
             this.labelHanTra.Size = new System.Drawing.Size(148, 31);
             this.labelHanTra.TabIndex = 129;
@@ -422,7 +394,7 @@ namespace GUI.BM
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(299, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 58);
+            this.label1.Size = new System.Drawing.Size(394, 57);
             this.label1.TabIndex = 5;
             this.label1.Text = "PHIẾU MƯỢN TRẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -455,6 +427,39 @@ namespace GUI.BM
             this.siticoneDragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneDragControl1.TargetControl = this;
             this.siticoneDragControl1.UseTransparentDrag = true;
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.ErrorDia.Text = null;
+            // 
+            // comboCuonSach
+            // 
+            this.comboCuonSach.AllowDrop = true;
+            this.comboCuonSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboCuonSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboCuonSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboCuonSach.FormattingEnabled = true;
+            this.comboCuonSach.Location = new System.Drawing.Point(122, 201);
+            this.comboCuonSach.Name = "comboCuonSach";
+            this.comboCuonSach.Size = new System.Drawing.Size(231, 32);
+            this.comboCuonSach.Sorted = true;
+            this.comboCuonSach.TabIndex = 154;
+            // 
+            // comboDocGia
+            // 
+            this.comboDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboDocGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboDocGia.FormattingEnabled = true;
+            this.comboDocGia.Location = new System.Drawing.Point(592, 201);
+            this.comboDocGia.Name = "comboDocGia";
+            this.comboDocGia.Size = new System.Drawing.Size(236, 32);
+            this.comboDocGia.TabIndex = 155;
             // 
             // fPhieuMuonSach
             // 
@@ -493,8 +498,6 @@ namespace GUI.BM
         private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticoneVSeparator1;
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dateNgayTra;
         private Label label16;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboDocGia;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboCuonSach;
         private Siticone.Desktop.UI.WinForms.SiticoneCheckBox isDaTra;
         private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticoneVSeparator2;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
@@ -510,5 +513,8 @@ namespace GUI.BM
         private Label labelTenCS;
         private Label label2;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private ComboBox comboDocGia;
+        private ComboBox comboCuonSach;
     }
 }

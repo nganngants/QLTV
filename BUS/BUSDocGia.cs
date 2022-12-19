@@ -24,12 +24,12 @@ namespace BUS
         {
             return DALDocGia.Instance.GetAllDocGia();
         }
-        public DOCGIA GetDocGia(string MaDocGia)
+        public DOCGIA GetDocGia(int MaDocGia)
         {
             DOCGIA dg;
             try
             {
-               dg =  DALDocGia.Instance.GetDocGiaByMa(MaDocGia);
+               dg =  DALDocGia.Instance.GetDocGiaById(MaDocGia);
                 return dg;
             }
             catch
