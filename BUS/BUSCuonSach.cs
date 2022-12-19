@@ -44,6 +44,10 @@ namespace BUS
                 return "";
             return "Không thể xoá cuốn sách";
         }
+        public CUONSACH GetCuonSach(int id)
+        {
+            return DALCuonSach.Instance.GetCuonSachById(id);
+        }
     }
 
 }
