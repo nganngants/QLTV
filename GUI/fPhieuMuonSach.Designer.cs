@@ -64,6 +64,7 @@ namespace GUI.BM
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.comboCuonSach = new System.Windows.Forms.ComboBox();
             this.comboDocGia = new System.Windows.Forms.ComboBox();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,9 +114,9 @@ namespace GUI.BM
             this.isDaTra.CheckedState.BorderThickness = 0;
             this.isDaTra.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.isDaTra.CheckMarkColor = System.Drawing.Color.Violet;
-            this.isDaTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isDaTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F);
             this.isDaTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.isDaTra.Location = new System.Drawing.Point(330, 575);
+            this.isDaTra.Location = new System.Drawing.Point(318, 564);
             this.isDaTra.Name = "isDaTra";
             this.isDaTra.Size = new System.Drawing.Size(97, 35);
             this.isDaTra.TabIndex = 152;
@@ -166,6 +167,7 @@ namespace GUI.BM
             this.butSave.Size = new System.Drawing.Size(150, 50);
             this.butSave.TabIndex = 65;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click_1);
             // 
             // label13
             // 
@@ -461,6 +463,15 @@ namespace GUI.BM
             this.comboDocGia.Size = new System.Drawing.Size(236, 32);
             this.comboDocGia.TabIndex = 155;
             // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.SuccDia.Text = null;
+            // 
             // fPhieuMuonSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -516,5 +527,6 @@ namespace GUI.BM
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private ComboBox comboDocGia;
         private ComboBox comboCuonSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
     }
 }

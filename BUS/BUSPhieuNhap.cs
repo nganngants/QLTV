@@ -35,12 +35,18 @@ namespace BUS
         {
             //DateTime NgayNhap = new DateTime(Nam, Thang, Ngay);
             if(DateTime.Now < NgayNhap) { return -1; };
-            if (DALPhieuNhapSach.Instance.AddPhieuNhap(NgayNhap))
+            if (DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap) != null)
             {
                 PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap);
                 return pn.SoPhieuNhap;
-            }    
-            return -1;
+            }
+            else
+            {
+                DALPhieuNhapSach.Instance.AddPhieuNhap(NgayNhap);
+                PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap);
+                return pn.SoPhieuNhap;
+            }
+            
         }
         public string DelPhieuNhap(int id)
         {

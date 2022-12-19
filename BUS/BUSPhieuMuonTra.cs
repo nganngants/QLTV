@@ -19,6 +19,10 @@ namespace BUS
             }
             set => instance = value;
         }
+        public PHIEUMUONTRA GetPhieuMuonTra(int id)
+        {
+            return DALPhieuMuonTra.Instance.GetPhieuMuonTraById(id);
+        }
         public string AddPhieuMuonTra(string MaCuonSach, string MaDocGia, DateTime NgayMuon)
         {
             CUONSACH cs;
@@ -81,7 +85,7 @@ namespace BUS
                 return "";
             return "Lỗi không thể cập nhật phiếu mượn.";
         }
-        public List<PHIEUMUONTRA> GetPHIEUMUONTRA()
+        public List<PHIEUMUONTRA> GetAllPhieuMuon()
         {
             return DALPhieuMuonTra.Instance.GetAllPhieuMuonTra();
         }

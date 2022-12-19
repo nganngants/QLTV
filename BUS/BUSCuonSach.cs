@@ -25,6 +25,14 @@ namespace BUS
         {
             return DALCuonSach.Instance.GetAllCuonSach();
         }
+        public List<CUONSACH> GetAllCuonSachAvai()
+        {
+            List<CUONSACH> CuonSachList = new List<CUONSACH>();
+            foreach(CUONSACH cs in DALCuonSach.Instance.GetAllCuonSach())
+                if(cs.TinhTrang == 1)
+                    CuonSachList.Add(cs);
+            return CuonSachList;
+        }
         public SACH GetSachOfCuonSach(string MaCuonSach)
         {
             CUONSACH cs;

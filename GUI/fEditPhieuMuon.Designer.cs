@@ -407,9 +407,9 @@
             this.labelMaCS.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.labelMaCS.Location = new System.Drawing.Point(116, 213);
             this.labelMaCS.Name = "labelMaCS";
-            this.labelMaCS.Size = new System.Drawing.Size(159, 31);
+            this.labelMaCS.Size = new System.Drawing.Size(164, 31);
             this.labelMaCS.TabIndex = 159;
-            this.labelMaCS.Text = "Mã Cuốn Sách";
+            this.labelMaCS.Text = "Mã Cuốn Sách:";
             // 
             // labelSoPhieu
             // 
@@ -429,7 +429,7 @@
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(299, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 58);
+            this.label1.Size = new System.Drawing.Size(394, 57);
             this.label1.TabIndex = 71;
             this.label1.Text = "PHIẾU MƯỢN TRẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

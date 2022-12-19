@@ -39,11 +39,6 @@ namespace GUI.UserControls
             this.butAddOld = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.siticoneCreditCardValidationTool1 = new Siticone.Desktop.UI.Winforms.SiticoneCreditCardValidationTool();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +48,11 @@ namespace GUI.UserControls
             this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhaXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.siticoneCreditCardValidationTool1 = new Siticone.Desktop.UI.Winforms.SiticoneCreditCardValidationTool();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
@@ -141,17 +141,18 @@ namespace GUI.UserControls
             this.SachGrid.AllowUserToDeleteRows = false;
             this.SachGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.SachGrid.AutoGenerateColumns = false;
+            this.SachGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.SachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -184,7 +185,7 @@ namespace GUI.UserControls
             this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.SachGrid.RowHeadersVisible = false;
             this.SachGrid.RowHeadersWidth = 51;
-            this.SachGrid.RowTemplate.Height = 28;
+            this.SachGrid.RowTemplate.Height = 30;
             this.SachGrid.Size = new System.Drawing.Size(997, 476);
             this.SachGrid.TabIndex = 1;
             this.SachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -205,41 +206,10 @@ namespace GUI.UserControls
             this.SachGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.SachGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SachGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SachGrid.ThemeStyle.RowsStyle.Height = 28;
+            this.SachGrid.ThemeStyle.RowsStyle.Height = 30;
             this.SachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.SachGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
-            // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.SuccDia.Text = null;
-            // 
-            // AskDia
-            // 
-            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
-            this.AskDia.Caption = null;
-            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
-            this.AskDia.Parent = null;
-            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.AskDia.Text = null;
-            // 
-            // sACHBindingSource
-            // 
-            this.sACHBindingSource.DataSource = typeof(DTO.SACH);
             // 
             // isChosen
             // 
@@ -319,6 +289,37 @@ namespace GUI.UserControls
             this.nhaXBDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nhaXBDataGridViewTextBoxColumn.Name = "nhaXBDataGridViewTextBoxColumn";
             this.nhaXBDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataSource = typeof(DTO.SACH);
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.SuccDia.Text = null;
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.AskDia.Text = null;
             // 
             // ucSach
             // 
