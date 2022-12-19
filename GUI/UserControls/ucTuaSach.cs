@@ -108,8 +108,14 @@ namespace GUI.UserControls
                 else cnt++;
             }
 
+
             SuccDia.Show("Đã xoá thành công " + cnt + " tựa sách");
             Binding();
+        }
+
+        private void tUASACHBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

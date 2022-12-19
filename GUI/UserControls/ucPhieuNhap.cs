@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,16 @@ namespace GUI.UserControls
 {
     public partial class ucPhieuNhap : UserControl
     {
+        List<PHIEUNHAPSACH> PhieuNhapList;
         public ucPhieuNhap()
         {
             InitializeComponent();
+            Binding();
+        }
+        private void Binding()
+        {
+            PhieuNhapList = BUSPhieuNhap.Instance.GetAllPhieuNhap();
+            PhieuNhapgrid.DataSource = PhieuNhapList;   
         }
     }
 }
