@@ -24,13 +24,10 @@ namespace GUI.UserControls
         public void Binding()
         {
             TheLoaiList = BUSTheLoai.Instance.GetAllTheLoai();
-            TheLoaiGrid.DataSource = TheLoaiList;
             int i = 0;
-            foreach (DataGridViewRow row in TheLoaiGrid.Rows)
+            foreach(THELOAI theLoai in TheLoaiList)
             {
-                row.Cells["SoTuaSach"].Value = "10";//TheLoaiList[i].TUASACHes.ToList().Count.ToString();
-                Console.WriteLine(row.Cells["SoTuaSach"].Value);
-                i++;
+                TheLoaiGrid.Rows.Add(0,theLoai.MaTheLoai,theLoai.TenTheLoai,theLoai.TUASACHes.Count);
             }
         }
 

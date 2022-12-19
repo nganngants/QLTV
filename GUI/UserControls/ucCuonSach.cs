@@ -20,21 +20,27 @@ namespace GUI.UserControls
         {
             InitializeComponent();
             Binding();
+            
         }
         private void Binding()
         {
             CuonSachList = BUSCuonSach.Instance.GetAllCuonSach();
-            this.CuonSachGrid.DataSource = CuonSachList;
-            int i = 0;
-            foreach(DataGridViewRow row in this.CuonSachGrid.Rows)
+            
+            foreach(CUONSACH cs in CuonSachList)
             {
-                row.Cells["TenSach"].Value = CuonSachList[i].SACH.TUASACH.TenTuaSach;
-                row.Cells["MaSach"].Value = CuonSachList[i].SACH.MaSach;
-                row.Cells["TinhTrang"].Value = (CuonSachList[i].TinhTrang == 1) ? "Đã mượn" : "Còn";
-                CuonSachGrid.UpdateCellValue(2, i);
-                this.CuonSachGrid.NotifyCurrentCellDirty(true);
-                i++;
+                string TinhTrang = (cs.TinhTrang == 1) ? ("Còn") : ("Đã được mượn");
+                CuonSachGrid.Rows.Add(cs.MaCuonSach, cs.SACH.MaSach, cs.SACH.TUASACH.TenTuaSach, TinhTrang);
             }
+            
+        }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void ucCuonSach_Load(object sender, EventArgs e)
+        {
+            Binding();
         }
     }
 }
