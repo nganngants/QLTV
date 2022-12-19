@@ -28,13 +28,16 @@ namespace GUI.UserControls
         {
             var f = new fAddNhomND();
             f.ShowDialog();
+            Bind();
         }
 
-        private void gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int stt = e.RowIndex;
+            if (stt == -1) return;
             var fInfor = new fInfoNhomND(Convert.ToInt32(gridView.Rows[stt].Cells["id"].Value));
             fInfor.ShowDialog();
+            Bind();
         }
     }
 }

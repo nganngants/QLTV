@@ -257,16 +257,7 @@
             this.labelTacGia.Size = new System.Drawing.Size(0, 27);
             this.labelTacGia.TabIndex = 1;
             this.labelTacGia.Click += new System.EventHandler(this.label6_Click);
-            this.listViewTacGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.listViewTacGia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewTacGia.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.listViewTacGia.HideSelection = false;
-            this.listViewTacGia.Location = new System.Drawing.Point(602, 106);
-            this.listViewTacGia.Name = "listViewTacGia";
-            this.listViewTacGia.Size = new System.Drawing.Size(868, 81);
-            this.listViewTacGia.TabIndex = 1;
-            this.listViewTacGia.UseCompatibleStateImageBehavior = false;
+
             // 
             // siticonePanel2
             // 
@@ -478,27 +469,6 @@
             this.nhaXBDataGridViewTextBoxColumn.HeaderText = "NXB";
             this.nhaXBDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nhaXBDataGridViewTextBoxColumn.Name = "nhaXBDataGridViewTextBoxColumn";
-            // 
-            // cTPHIEUNHAPDataGridViewTextBoxColumn
-            // 
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn.DataPropertyName = "CT_PHIEUNHAP";
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn.HeaderText = "CT_PHIEUNHAP";
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn.Name = "cTPHIEUNHAPDataGridViewTextBoxColumn";
-            // 
-            // cUONSACHesDataGridViewTextBoxColumn
-            // 
-            this.cUONSACHesDataGridViewTextBoxColumn.DataPropertyName = "CUONSACHes";
-            this.cUONSACHesDataGridViewTextBoxColumn.HeaderText = "CUONSACHes";
-            this.cUONSACHesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cUONSACHesDataGridViewTextBoxColumn.Name = "cUONSACHesDataGridViewTextBoxColumn";
-            // 
-            // tUASACHDataGridViewTextBoxColumn
-            // 
-            this.tUASACHDataGridViewTextBoxColumn.DataPropertyName = "TUASACH";
-            this.tUASACHDataGridViewTextBoxColumn.HeaderText = "TUASACH";
-            this.tUASACHDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tUASACHDataGridViewTextBoxColumn.Name = "tUASACHDataGridViewTextBoxColumn";
             // 
             // sACHBindingSource
             // 

@@ -29,7 +29,6 @@ namespace GUI
 
         private void butSave_Click(object sender, EventArgs e)
         {
-                Console.WriteLine("????");
             string ten = txtTenNhom.Text;
             int id = BUSNhomNguoiDung.Instance.AddNhomNguoiDung(ten);
             if (id == -1)
@@ -39,7 +38,8 @@ namespace GUI
             List<String> dsCn = new List<String>();
             foreach (DataGridViewRow row in this.dsChucNang.Rows )
             {
-                if (row.Cells["isChoosen"].Value == "1")
+                Console.WriteLine(row.Cells["isChoosen"].Value);
+                if (row.Cells["isChoosen"].Value.ToString() == "1")
                 {
                     Console.WriteLine(row.Cells["MaChucNang"].Value.ToString());
                     dsCn.Add(row.Cells["MaChucNang"].Value.ToString());

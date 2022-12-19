@@ -65,7 +65,7 @@ namespace GUI.UserControls
         private void TuaSachGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-            
+            if (idx == -1) return;
             if (e.ColumnIndex == 0) return ;
             if(e.ColumnIndex == TuaSachGrid.Columns["Edit"].Index)
             {

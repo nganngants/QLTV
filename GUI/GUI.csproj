@@ -135,6 +135,12 @@
     <Compile Include="fAddNguoiDung.designer.cs">
       <DependentUpon>fAddNguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="fAddNhomND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddNhomND.Designer.cs">
+      <DependentUpon>fAddNhomND.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAddSachDaCo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
     <Compile Include="fEditNguoiDung.Designer.cs">
       <DependentUpon>fEditNguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditNhomND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditNhomND.Designer.cs">
+      <DependentUpon>fEditNhomND.cs</DependentUpon>
+    </Compile>
     <Compile Include="fEditPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +212,12 @@
     </Compile>
     <Compile Include="fInfoNguoiDung.Designer.cs">
       <DependentUpon>fInfoNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInfoNhomND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoNhomND.Designer.cs">
+      <DependentUpon>fInfoNhomND.cs</DependentUpon>
     </Compile>
     <Compile Include="fInfoTuaSach.cs">
       <SubType>Form</SubType>
@@ -402,6 +420,9 @@
     <EmbeddedResource Include="fAddNguoiDung.resx">
       <DependentUpon>fAddNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fAddNhomND.resx">
+      <DependentUpon>fAddNhomND.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fAddSachDaCo.resx">
       <DependentUpon>fAddSachDaCo.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +444,9 @@
     <EmbeddedResource Include="fEditNguoiDung.resx">
       <DependentUpon>fEditNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fEditNhomND.resx">
+      <DependentUpon>fEditNhomND.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fEditPhieuMuon.resx">
       <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fInfoNguoiDung.resx">
       <DependentUpon>fInfoNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoNhomND.resx">
+      <DependentUpon>fInfoNhomND.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fInfoTuaSach.resx">
       <DependentUpon>fInfoTuaSach.cs</DependentUpon>
@@ -527,6 +554,7 @@
       <DependentUpon>ucTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.CHUCNANG1.datasource" />
     <None Include="Properties\DataSources\DTO.CT_PHIEUNHAP.datasource" />
     <None Include="Properties\DataSources\DTO.CUONSACH.datasource" />
     <None Include="Properties\DataSources\DTO.DOCGIA.datasource" />

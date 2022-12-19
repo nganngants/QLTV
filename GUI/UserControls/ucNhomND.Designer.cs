@@ -37,7 +37,7 @@
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.gridView = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.nHOMNGUOIDUNGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNhomNguoiDungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNhomNguoiDungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nGUOIDUNGsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,16 +111,16 @@
             this.gridView.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridView.ColumnHeadersHeight = 18;
+            this.gridView.ColumnHeadersHeight = 36;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.id,
             this.maNhomNguoiDungDataGridViewTextBoxColumn,
             this.tenNhomNguoiDungDataGridViewTextBoxColumn,
             this.nGUOIDUNGsDataGridViewTextBoxColumn,
@@ -156,7 +156,7 @@
             this.gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridView.ThemeStyle.HeaderStyle.Height = 18;
+            this.gridView.ThemeStyle.HeaderStyle.Height = 36;
             this.gridView.ThemeStyle.ReadOnly = true;
             this.gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -165,25 +165,25 @@
             this.gridView.ThemeStyle.RowsStyle.Height = 24;
             this.gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellContentClick);
+            this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
             // 
             // nHOMNGUOIDUNGBindingSource
             // 
             this.nHOMNGUOIDUNGBindingSource.DataSource = typeof(DTO.NHOMNGUOIDUNG);
             // 
-            // idDataGridViewTextBoxColumn
+            // id
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // maNhomNguoiDungDataGridViewTextBoxColumn
             // 
             this.maNhomNguoiDungDataGridViewTextBoxColumn.DataPropertyName = "MaNhomNguoiDung";
-            this.maNhomNguoiDungDataGridViewTextBoxColumn.HeaderText = "MaNhomNguoiDung";
+            this.maNhomNguoiDungDataGridViewTextBoxColumn.HeaderText = "Mã Nhóm Người Dùng";
             this.maNhomNguoiDungDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maNhomNguoiDungDataGridViewTextBoxColumn.Name = "maNhomNguoiDungDataGridViewTextBoxColumn";
             this.maNhomNguoiDungDataGridViewTextBoxColumn.ReadOnly = true;
@@ -191,7 +191,7 @@
             // tenNhomNguoiDungDataGridViewTextBoxColumn
             // 
             this.tenNhomNguoiDungDataGridViewTextBoxColumn.DataPropertyName = "TenNhomNguoiDung";
-            this.tenNhomNguoiDungDataGridViewTextBoxColumn.HeaderText = "TenNhomNguoiDung";
+            this.tenNhomNguoiDungDataGridViewTextBoxColumn.HeaderText = "Tên Nhóm Người Dùng";
             this.tenNhomNguoiDungDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenNhomNguoiDungDataGridViewTextBoxColumn.Name = "tenNhomNguoiDungDataGridViewTextBoxColumn";
             this.tenNhomNguoiDungDataGridViewTextBoxColumn.ReadOnly = true;
@@ -236,7 +236,7 @@
         private System.Windows.Forms.BindingSource nHOMNGUOIDUNGBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn maNhomNguoiDungDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNhomNguoiDungDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nGUOIDUNGsDataGridViewTextBoxColumn;

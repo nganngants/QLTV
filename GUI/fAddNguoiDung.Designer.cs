@@ -48,6 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.errorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.messageDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +68,7 @@
             this.butSave.Size = new System.Drawing.Size(150, 50);
             this.butSave.TabIndex = 4;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // label1
             // 
@@ -86,13 +89,13 @@
             this.comboNhomND.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboNhomND.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboNhomND.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboNhomND.Font = new System.Drawing.Font("Segoe UI", 20.16F);
+            this.comboNhomND.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboNhomND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboNhomND.ItemHeight = 30;
             this.comboNhomND.Location = new System.Drawing.Point(137, 250);
             this.comboNhomND.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboNhomND.Name = "comboNhomND";
-            this.comboNhomND.Size = new System.Drawing.Size(193, 36);
+            this.comboNhomND.Size = new System.Drawing.Size(210, 36);
             this.comboNhomND.TabIndex = 45;
             // 
             // dateNgaySinh
@@ -120,7 +123,7 @@
             this.txtHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtHoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtHoTen.Location = new System.Drawing.Point(137, 156);
             this.txtHoTen.Name = "txtHoTen";
@@ -221,7 +224,7 @@
             this.txtUserpwd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUserpwd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUserpwd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtUserpwd.Location = new System.Drawing.Point(137, 500);
             this.txtUserpwd.Name = "txtUserpwd";
@@ -240,7 +243,7 @@
             this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtUsername.Location = new System.Drawing.Point(137, 419);
             this.txtUsername.Name = "txtUsername";
@@ -271,7 +274,7 @@
             this.txtChucVu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtChucVu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtChucVu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtChucVu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtChucVu.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChucVu.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtChucVu.Location = new System.Drawing.Point(137, 339);
             this.txtChucVu.Name = "txtChucVu";
@@ -308,6 +311,24 @@
             this.siticoneDragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneDragControl1.TargetControl = this;
             this.siticoneDragControl1.UseTransparentDrag = true;
+            // 
+            // errorDia
+            // 
+            this.errorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.errorDia.Caption = null;
+            this.errorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.errorDia.Parent = null;
+            this.errorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.errorDia.Text = null;
+            // 
+            // messageDia
+            // 
+            this.messageDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.messageDia.Caption = null;
+            this.messageDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
+            this.messageDia.Parent = null;
+            this.messageDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.messageDia.Text = null;
             // 
             // fAddNguoiDung
             // 
@@ -348,5 +369,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog errorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog messageDia;
     }
 }
