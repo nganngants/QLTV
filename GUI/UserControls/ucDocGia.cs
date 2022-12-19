@@ -3,6 +3,7 @@ using DTO;
 using GUI.BM;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 namespace GUI.UserControls
 {
@@ -34,13 +35,16 @@ namespace GUI.UserControls
         private void Binding()
         {
             DocGiaList = BUSDocGia.Instance.GetAllDocGia();
-            this.DocGiaGrid.DataSource = DocGiaList;
+            DocGiaGrid.Rows.Clear();
+            DocGiaGrid.Refresh();
+            //this.DocGiaGrid.DataSource = DocGiaList;
             int i = 0;
-            foreach (DataGridViewRow row in DocGiaGrid.Rows)
+            Image img = Properties.Resources.edit_icon;
+            img = (Image)(new Bitmap(img, new Size(25, 25)));
+            foreach (DOCGIA docgia in DocGiaList)
             {
-                row.Cells["LoaiDocGia"].Value = DocGiaList[i].LOAIDOCGIA.TenLoaiDocGia;
-                row.Cells["SoSachDangMuon"].Value = BUSDocGia.Instance.GetSoSachDangMuon(DocGiaList[i].ID);
-                i++;
+                int SachMuon = BUSDocGia.Instance.GetSoSachDangMuon(docgia.ID);
+                DocGiaGrid.Rows.Add(docgia.ID,0, docgia.MaDocGia, docgia.TenDocGia, docgia.LOAIDOCGIA.TenLoaiDocGia, SachMuon, docgia.NgayHetHan.Date, docgia.TongNoHienTai,img);
             }
         }
         private void ucDocGia_Load(object sender, EventArgs e)
@@ -86,6 +90,24 @@ namespace GUI.UserControls
                 SuccDia.Show("Đã xoá thành công " + cnt + " độc giả");
             Binding();
             
+        }
+
+        private void DocGiaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+
+            if (e.ColumnIndex == 1) return;
+            if (e.ColumnIndex == DocGiaGrid.Columns["Edit"].Index)
+            {
+                var f = new fEditDocGia((Convert.ToInt32(DocGiaGrid.Rows[idx].Cells["id"].Value)));
+                f.ShowDialog();
+                Binding();
+                return;
+            }
+            var fInfor = new fInfoDocGia(Convert.ToInt32(DocGiaGrid.Rows[idx].Cells["id"].Value));
+            fInfor.ShowDialog();
+            Binding();
+            return;
         }
     }
 }

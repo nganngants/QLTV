@@ -53,7 +53,7 @@ namespace BUS
             {
                 foreach(CUONSACH cs in sach.CUONSACHes)
                 {
-                    if (cs.TinhTrang == 1)
+                    if (cs.TinhTrang == 0)
                         return "Tựa sách "+ts.MaTuaSach + " còn sách đang được mượn. Không thể xoá";
                 }
             }
