@@ -554,7 +554,7 @@
       <DependentUpon>ucTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\DTO.CHUCNANG1.datasource" />
+    <None Include="Properties\DataSources\DTO.CHUCNANG.datasource" />
     <None Include="Properties\DataSources\DTO.CT_PHIEUNHAP.datasource" />
     <None Include="Properties\DataSources\DTO.CUONSACH.datasource" />
     <None Include="Properties\DataSources\DTO.DOCGIA.datasource" />

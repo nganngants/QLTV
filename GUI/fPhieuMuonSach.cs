@@ -22,7 +22,7 @@ namespace GUI.BM
         }
         private void init()
         {
-            List<CUONSACH> CuonSachList = BUSCuonSach.Instance.GetAllCuonSach();
+            List<CUONSACH> CuonSachList = BUSCuonSach.Instance.GetAllCuonSachAvai();
             
             comboCuonSach.DataSource = CuonSachList;
             comboCuonSach.DisplayMember = "MaCuonSach";
@@ -60,6 +60,15 @@ namespace GUI.BM
                 ErrorDia.Show("Ngày mượn không hợp lệ");
                 return;
             }
+            DOCGIA docgia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
+            CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(Convert.ToInt32(comboCuonSach.SelectedValue));
+            string error = BUSPhieuMuonTra.Instance.AddPhieuMuonTra(cuonsach.MaCuonSach, docgia.MaDocGia, NgayMuon);
+            if(error !="")
+            {
+                ErrorDia.Show(error);
+                return;
+            }
+            SuccDia.Show("Thêm phiếu mượn thành công");
         }
 
         private void comboCuonSach_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,6 +102,31 @@ namespace GUI.BM
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
             NgayMuon = dateNgayMuon.Value.Date;
             labelHanTra.Text =NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa).ToShortDateString();
+        }
+
+        private void butSave_Click_1(object sender, EventArgs e)
+        {
+            NgayTra = dateNgayTra.Value.Date;
+            NgayMuon = dateNgayMuon.Value.Date;
+            if (NgayTra < NgayMuon)
+            {
+                ErrorDia.Show("Ngày trả không hợp lệ");
+                return;
+            }
+            if (NgayMuon > DateTime.Now)
+            {
+                ErrorDia.Show("Ngày mượn không hợp lệ");
+                return;
+            }
+            DOCGIA docgia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
+            CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(Convert.ToInt32(comboCuonSach.SelectedValue));
+            string error = BUSPhieuMuonTra.Instance.AddPhieuMuonTra(cuonsach.MaCuonSach, docgia.MaDocGia, NgayMuon);
+            if (error != "")
+            {
+                ErrorDia.Show(error);
+                return;
+            }
+            SuccDia.Show("Thêm phiếu mượn thành công");
         }
     }
 }

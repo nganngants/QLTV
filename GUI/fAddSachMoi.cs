@@ -30,8 +30,12 @@ namespace GUI
         private int SoLuongNhap;
         private void butOK_Click(object sender, EventArgs e)
         {
-            
-            if(comboTuaSach.SelectedValue==null || txtNamXB.Text=="" || txtNhaXB.Text=="" || txtDonGia.Text=="" || txtSoLuongNhap.Text=="")
+            if (dateNgayNhap.Value.Date > DateTime.Now)
+            {
+                ErrorDia.Show("Ngày nhập không hợp lệ");
+                return;
+            }
+            if (comboTuaSach.SelectedValue==null || txtNamXB.Text=="" || txtNhaXB.Text=="" || txtDonGia.Text=="" || txtSoLuongNhap.Text=="")
             {
                 ErrorDia.Show("Chưa nhập đủ dữ liệu");
                 return;

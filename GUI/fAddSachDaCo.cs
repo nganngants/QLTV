@@ -69,7 +69,13 @@ namespace GUI
         private void butOK_Click(object sender, EventArgs e)
         {
             DateTime NgayNhap = dateNgayNhap.Value.Date;
+            if(NgayNhap.Date > DateTime.Now)
+            {
+                ErrorDia.Show("Ngày nhập không hợp lệ");
+                return;
+            }
             int pn = BUSPhieuNhap.Instance.AddPhieuNhap(NgayNhap);
+            Console.WriteLine("Phieu nhap",pn);
             foreach(DataGridViewRow row in SachGrid.Rows)
             {
                 int id = Convert.ToInt32(row.Cells["id"].Value);
