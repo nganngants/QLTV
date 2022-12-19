@@ -19,9 +19,11 @@ namespace GUI.UserControls
         public ucQLPhieuMuon()
         {
             InitializeComponent();
+            Binding();
         }
         private void Binding()
         {
+            PhieuMuonGrid.Rows.Clear();
             Image img = Properties.Resources.edit_icon;
             img = (Image)(new Bitmap(img, new Size(20, 20)));
             PhieuMuonList = BUSPhieuMuonTra.Instance.GetAllPhieuMuon();
@@ -40,14 +42,18 @@ namespace GUI.UserControls
 
         private void PhieuMuonGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+        }
+
+        private void PhieuMuonGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             int idx = e.RowIndex;
-            if (e.RowIndex == 0) return;
             if (e.ColumnIndex == 0) return;
-            
+
             var f = new fEditPhieuMuon((Convert.ToInt32(PhieuMuonGrid.Rows[idx].Cells["SoPhieuMuon"].Value)));
             f.ShowDialog();
             Binding();
-               
+
             return;
         }
     }

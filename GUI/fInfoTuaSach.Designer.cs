@@ -487,24 +487,7 @@
             // 
             // cTPHIEUNHAPDataGridViewTextBoxColumn
             // 
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn.DataPropertyName = "CT_PHIEUNHAP";
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn.HeaderText = "CT_PHIEUNHAP";
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cTPHIEUNHAPDataGridViewTextBoxColumn.Name = "cTPHIEUNHAPDataGridViewTextBoxColumn";
-            // 
-            // cUONSACHesDataGridViewTextBoxColumn
-            // 
-            this.cUONSACHesDataGridViewTextBoxColumn.DataPropertyName = "CUONSACHes";
-            this.cUONSACHesDataGridViewTextBoxColumn.HeaderText = "CUONSACHes";
-            this.cUONSACHesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cUONSACHesDataGridViewTextBoxColumn.Name = "cUONSACHesDataGridViewTextBoxColumn";
-            // 
-            // tUASACHDataGridViewTextBoxColumn
-            // 
-            this.tUASACHDataGridViewTextBoxColumn.DataPropertyName = "TUASACH";
-            this.tUASACHDataGridViewTextBoxColumn.HeaderText = "TUASACH";
-            this.tUASACHDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tUASACHDataGridViewTextBoxColumn.Name = "tUASACHDataGridViewTextBoxColumn";
+            
             // 
             // sACHBindingSource
             // 

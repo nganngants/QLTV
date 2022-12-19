@@ -66,9 +66,11 @@ namespace GUI.BM
             if(error !="")
             {
                 ErrorDia.Show(error);
+                this.Close();
                 return;
             }
             SuccDia.Show("Thêm phiếu mượn thành công");
+            this.Close();
         }
 
         private void comboCuonSach_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,6 +129,7 @@ namespace GUI.BM
                 return;
             }
             SuccDia.Show("Thêm phiếu mượn thành công");
+            this.Close();
         }
     }
 }
