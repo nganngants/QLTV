@@ -21,7 +21,7 @@ namespace GUI.UserControls
         private void Bind()
         {
             Image img = Properties.Resources.edit_icon;
-            img = (Image)(new Bitmap(img, new Size(25, 25)));
+            img = (Image)(new Bitmap(img, new Size(20, 20)));
             this.NDGrid.DataSource = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
             foreach(DataGridViewRow row in NDGrid.Rows)
             {

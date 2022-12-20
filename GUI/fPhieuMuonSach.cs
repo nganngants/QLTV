@@ -26,11 +26,17 @@ namespace GUI.BM
             comboCuonSach.DataSource = CuonSachList;
             comboCuonSach.DisplayMember = "MaCuonSach";
             comboCuonSach.ValueMember = "id";
-
+            
             var docGiaList = BUSDocGia.Instance.GetAllDocGia();
             comboDocGia.DataSource = docGiaList;
             comboDocGia.DisplayMember = "MaDocGia";
             comboDocGia.ValueMember = "id";
+            if(CuonSachList == null)
+            {
+                SuccDia.Show("Sách đã được mượn hết");
+                this.Close();
+                return;
+            }
             CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(Convert.ToInt32(comboCuonSach.SelectedValue));
             Console.WriteLine(Convert.ToInt32(comboCuonSach.SelectedValue));
             labelTenCS.Text = "Tên: " + cuonsach.SACH.TUASACH.TenTuaSach;

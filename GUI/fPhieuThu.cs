@@ -42,14 +42,14 @@ namespace GUI
             }
             catch
             {
-                textTienThu.Text = null;
+                textTienThu.Text = "";
                 ErrorDia.Show("Số tiền thu sai format");
                 return;
             }
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
             if(thamso.AD_QDKTTienThu == 1 && TienThu > DocGia.TongNoHienTai)
             {
-                textTienThu.Text = null;
+                textTienThu.Text = "";
                 ErrorDia.Show("Số tiền thu vượt quá quy định");
                 return;
             }
@@ -59,17 +59,28 @@ namespace GUI
 
         private void butLogin_Click(object sender, EventArgs e)
         {
+            TienThu = Convert.ToInt32(textTienThu.Text);
+            Console.WriteLine("Bf: ",TienThu);
             if (dateNgayLap.Value < DateTime.Now.Date)
             {
                 ErrorDia.Show("Ngày lập không hợp lệ");
                 return;
             }
+            Console.WriteLine(TienThu);
             string err = BUSPhieuThu.Instance.AddPhieuThu(DocGia.ID, TienThu, dateNgayLap.Value.Date);
+            Console.WriteLine("Tien thu: ");
+            Console.WriteLine((int)TienThu);
             if(err !="")
             {
                 ErrorDia.Show(err);
                 return;
             }
+            /*err = BUSDocGia.Instance.UpdTongNo((int)DocGia.ID, (int)DocGia.TongNoHienTai - TienThu);
+            if (err != "")
+            {
+                ErrorDia.Show(err);
+                return;
+            }*/
             SuccDia.Show("Thêm phiếu thu thành công");
             this.Close();
         }
@@ -78,6 +89,7 @@ namespace GUI
         {
             DocGia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
             labelNoHienTai.Text = DocGia.TongNoHienTai.ToString();
+            
         }
     }
 }

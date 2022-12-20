@@ -54,7 +54,7 @@ namespace DAL
                 var phieu = new PHIEUTHU
                 {
                     idDocGia = idDocGia,
-                    SoPhieuThu = soTienThu,
+                    SoTienThu = soTienThu,
                     NgayLap = ngayLap
                 };
                 var dg = DALDocGia.Instance.GetDocGiaById(idDocGia);
@@ -89,6 +89,7 @@ namespace DAL
                 {
                     var dg = DALDocGia.Instance.GetDocGiaById((int)phieu.idDocGia);
                     dg.TongNoHienTai += phieu.SoTienThu - soTienThu;
+                    Console.WriteLine("DAL: ", soTienThu);
                     phieu.SoTienThu = soTienThu;
                 }
                 if (ngayLap != null) phieu.NgayLap = ngayLap;

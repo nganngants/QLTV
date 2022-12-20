@@ -30,10 +30,12 @@ namespace GUI.UserControls
         private void Bind()
         {
             dataGrid.Rows.Clear();
+            Image img = Properties.Resources.edit_icon;
+            img = (Image)(new Bitmap(img, new Size(20, 20)));
             var dsND = BUSNguoiDung.Instance.GetAllNguoiDung();
             foreach (var nd in dsND)
-                dataGrid.Rows.Add(nd.MaNguoiDung, 
-                    nd.TenNguoiDung,  nd.ChucVu, nd.TenDangNhap, nd.NHOMNGUOIDUNG.TenNhomNguoiDung);
+                dataGrid.Rows.Add(0,nd.id,nd.MaNguoiDung, 
+                    nd.TenNguoiDung,  nd.ChucVu, nd.TenDangNhap, nd.NHOMNGUOIDUNG.TenNhomNguoiDung,img);
         }
 
         private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -48,6 +50,11 @@ namespace GUI.UserControls
         private void butRefresh_Click(object sender, EventArgs e)
         {
             Bind();
+        }
+
+        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
