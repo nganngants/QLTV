@@ -95,5 +95,15 @@ namespace GUI.UserControls
         {
             Binding();
         }
+
+        private void butSearch_Click(object sender, EventArgs e)
+        {
+            List<SACH> SachFindList = BUSSach.Instance.FindSach();
+        }
+
+        private void butMaSach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
