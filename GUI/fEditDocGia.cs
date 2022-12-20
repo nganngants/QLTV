@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +14,49 @@ namespace GUI
 {
     public partial class fEditDocGia : Form
     {
-        public fEditDocGia(int id)
+        private static int id;
+        public fEditDocGia(int _id)
         {
             InitializeComponent();
+            id = _id;
+            Bind();
+        }
+
+        private void Bind()
+        {
+            var dg = BUSDocGia.Instance.GetDocGia(id);
+            labelMaDG.Text = "Mã Độc Giả: " + dg.MaDocGia;
+            txtHoTen.Text = dg.TenDocGia;
+            if (dg.NgaySinh != null) dateNgaySinh.Value = dg.NgaySinh;
+            txtDiaChi.Text = dg.DiaChi;
+            txtEmail.Text = dg.Email;
+            labelNgayLap.Text = dg.NgayLapThe.Date.ToShortDateString();
+            labelHan.Text = dg.NgayHetHan.ToShortDateString();
+
+            List<LOAIDOCGIA> LoaiDocGiaList;
+            LoaiDocGiaList = BUSLoaiDocGia.Instance.GetAllLoaiDocGia();
+            this.comboLoaiDG.DataSource = LoaiDocGiaList;
+            comboLoaiDG.DisplayMember = "TenLoaiDocGia";
+            comboLoaiDG.ValueMember = "id";
+            comboLoaiDG.SelectedValue = dg.ID;
         }
         private void fEditDocGia_Load(object sender, EventArgs e)
         {
             // Load combo Loai Doc Gia len
+        }
+
+        private void butOK_Click(object sender, EventArgs e)
+        {
+            string tenDG = txtHoTen.Text;
+            int idLDG = (int)comboLoaiDG.SelectedValue;
+
+            string email = txtEmail.Text;
+            string DiaChi = txtDiaChi.Text;
+            DateTime NgaySinh = dateNgaySinh.Value.Date;
+
+            string err = BUSDocGia.Instance.UpdDocGia(id, tenDG, idLDG, email, DiaChi, NgaySinh);
+            if (err == "") messDia.Show("Sua thong tin thanh cong");
+            else errDia.Show(err);
         }
     }
 }

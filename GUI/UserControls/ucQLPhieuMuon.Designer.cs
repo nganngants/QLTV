@@ -36,9 +36,7 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.PhieuMuonGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.pHIEUMUONTRABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SoPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,9 @@ namespace GUI.UserControls
             this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.pHIEUMUONTRABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONTRABindingSource)).BeginInit();
@@ -56,34 +57,13 @@ namespace GUI.UserControls
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Controls.Add(this.butRefresh);
             this.siticonePanel1.Controls.Add(this.butAdd);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(997, 120);
             this.siticonePanel1.TabIndex = 0;
-            // 
-            // butAdd
-            // 
-            this.butAdd.BorderRadius = 6;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
-            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(3, 82);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(112, 22);
-            this.butAdd.TabIndex = 6;
-            this.butAdd.Text = "Thêm Phiếu";
-            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
-            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // PhieuMuonGrid
             // 
@@ -167,10 +147,6 @@ namespace GUI.UserControls
             this.PhieuMuonGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhieuMuonGrid_CellClick);
             this.PhieuMuonGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhieuMuonGrid_CellContentClick);
             // 
-            // pHIEUMUONTRABindingSource
-            // 
-            this.pHIEUMUONTRABindingSource.DataSource = typeof(DTO.PHIEUMUONTRA);
-            // 
             // isChosen
             // 
             this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -253,6 +229,47 @@ namespace GUI.UserControls
             this.Edit.Visible = false;
             this.Edit.Width = 6;
             // 
+            // butAdd
+            // 
+            this.butAdd.BorderRadius = 6;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(3, 82);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(112, 22);
+            this.butAdd.TabIndex = 6;
+            this.butAdd.Text = "Thêm Phiếu";
+            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
+            // 
+            // pHIEUMUONTRABindingSource
+            // 
+            this.pHIEUMUONTRABindingSource.DataSource = typeof(DTO.PHIEUMUONTRA);
+            // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Location = new System.Drawing.Point(121, 66);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            // 
             // ucQLPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,5 +301,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn NgayTra;
         private DataGridViewTextBoxColumn SoTienPhat;
         private DataGridViewImageColumn Edit;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
     }
 }

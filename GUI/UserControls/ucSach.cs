@@ -26,7 +26,7 @@ namespace GUI.UserControls
             int i = 0;
             foreach(DataGridViewRow row in SachGrid.Rows)
             {
-                row.Cells["TenTuaSach"].Value = SachList[i].TUASACH.TenTuaSach;
+                row.Cells["TuaSach"].Value = SachList[i].TUASACH.TenTuaSach + " (" + SachList[i].TUASACH.MaTuaSach + ")";
                 i++;
             }
         }
@@ -88,6 +88,11 @@ namespace GUI.UserControls
             }
 
             SuccDia.Show("Đã xoá thành công " + cnt + " sách");
+            Binding();
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
             Binding();
         }
     }

@@ -109,5 +109,10 @@ namespace GUI.UserControls
             Binding();
             return;
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding();
+        }
     }
 }
