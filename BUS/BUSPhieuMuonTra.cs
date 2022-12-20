@@ -23,6 +23,11 @@ namespace BUS
         {
             return DALPhieuMuonTra.Instance.GetPhieuMuonTraById(id);
         }
+
+        public List<PHIEUMUONTRA> GetPhieuTraTre (DateTime ngay)
+        {
+            return DALPhieuMuonTra.Instance.FindPhieuMuonTre(ngay);
+        }
         public string AddPhieuMuonTra(string MaCuonSach, string MaDocGia, DateTime NgayMuon)
         {
             CUONSACH cs;
@@ -42,7 +47,7 @@ namespace BUS
             THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
             //System.TimeSpan duration = new System.TimeSpan(thamso.ThoiHanMuonSach, 0, 0, 0);
             DateTime HanTra = NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa);
-            if (cs.TinhTrang == 1) return "Cuốn sách đã được mượn!";
+            if (cs.TinhTrang == 0) return "Cuốn sách đã được mượn!";
             if (DALPhieuMuonTra.Instance.AddPhieuMuonTra(dg.ID, cs.id, NgayMuon, HanTra))
                 return "";
             return "Không thể thêm phiếu mượn.";
