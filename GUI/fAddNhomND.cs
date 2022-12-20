@@ -48,6 +48,7 @@ namespace GUI
             string res = BUSNhomNguoiDung.Instance.AddChucNangForNhom(id, dsCn);
             if (res == "") messageDia.Show("Thêm nhóm người dùng thành công!");
             else ErrorDia.Show(res);
+            this.Close();
         }
     }
 }
