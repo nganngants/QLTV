@@ -31,11 +31,13 @@ namespace GUI
             foreach(PHIEUMUONTRA pmt in DocGia.PHIEUMUONTRAs)
             {
                 DateTime NgayMuon = (DateTime)(pmt.NgayMuon);
-                DateTime NgayTra = (DateTime)(pmt.NgayTra);
-                string NgayTra_ = (pmt.NgayTra!=null) ?NgayTra.ToShortDateString() : "Chưa trả";
+                string NgayTra = "Chưa trả";
+                if (pmt.NgayTra != null)
+                NgayTra = ((DateTime)(pmt.NgayTra)).ToShortDateString();
+                
                 DateTime HanTra = (DateTime)(pmt.HanTra);
 
-                PhieuMuonGrid.Rows.Add(pmt.SoPhieuMuonTra, pmt.CUONSACH.MaCuonSach, pmt.CUONSACH.SACH.TUASACH.TenTuaSach, NgayMuon.ToShortDateString(), HanTra.ToShortDateString(), NgayTra_, pmt.SoTienPhat);
+                PhieuMuonGrid.Rows.Add(pmt.SoPhieuMuonTra, pmt.CUONSACH.MaCuonSach, pmt.CUONSACH.SACH.TUASACH.TenTuaSach, NgayMuon.ToShortDateString(), HanTra.ToShortDateString(), NgayTra, pmt.SoTienPhat);
             }
             labelMaDG.Text = DocGia.MaDocGia;
             labelHoTen.Text = DocGia.TenDocGia;

@@ -104,7 +104,7 @@ namespace GUI.UserControls
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PhieuMuonGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.PhieuMuonGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.PhieuMuonGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PhieuMuonGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuMuonGrid.Location = new System.Drawing.Point(0, 120);
@@ -117,7 +117,7 @@ namespace GUI.UserControls
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PhieuMuonGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.PhieuMuonGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.PhieuMuonGrid.RowHeadersVisible = false;
             this.PhieuMuonGrid.RowHeadersWidth = 51;
             this.PhieuMuonGrid.RowTemplate.Height = 30;
@@ -144,6 +144,7 @@ namespace GUI.UserControls
             this.PhieuMuonGrid.ThemeStyle.RowsStyle.Height = 30;
             this.PhieuMuonGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuMuonGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PhieuMuonGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhieuMuonGrid_CellClick);
             this.PhieuMuonGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhieuMuonGrid_CellContentClick);
             // 
             // isChosen
@@ -152,6 +153,7 @@ namespace GUI.UserControls
             this.isChosen.HeaderText = "";
             this.isChosen.MinimumWidth = 6;
             this.isChosen.Name = "isChosen";
+            this.isChosen.Visible = false;
             this.isChosen.Width = 6;
             // 
             // SoPhieuMuon
@@ -224,6 +226,7 @@ namespace GUI.UserControls
             this.Edit.HeaderText = "";
             this.Edit.MinimumWidth = 6;
             this.Edit.Name = "Edit";
+            this.Edit.Visible = false;
             this.Edit.Width = 6;
             // 
             // butAdd

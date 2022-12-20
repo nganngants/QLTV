@@ -60,6 +60,9 @@
             this.labelMaCS = new System.Windows.Forms.Label();
             this.labelSoPhieu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.labelNgayTra = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +107,7 @@
             this.mainPanel.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.mainPanel.BorderRadius = 4;
             this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.labelNgayTra);
             this.mainPanel.Controls.Add(this.isDaTra);
             this.mainPanel.Controls.Add(this.siticoneVSeparator2);
             this.mainPanel.Controls.Add(this.butSave);
@@ -143,7 +147,7 @@
             this.isDaTra.CheckedState.BorderThickness = 0;
             this.isDaTra.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.isDaTra.CheckMarkColor = System.Drawing.Color.Violet;
-            this.isDaTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isDaTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F);
             this.isDaTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.isDaTra.Location = new System.Drawing.Point(331, 583);
             this.isDaTra.Name = "isDaTra";
@@ -154,6 +158,7 @@
             this.isDaTra.UncheckedState.BorderRadius = 0;
             this.isDaTra.UncheckedState.BorderThickness = 0;
             this.isDaTra.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.isDaTra.CheckedChanged += new System.EventHandler(this.isDaTra_CheckedChanged);
             // 
             // siticoneVSeparator2
             // 
@@ -179,6 +184,7 @@
             this.butSave.Size = new System.Drawing.Size(150, 50);
             this.butSave.TabIndex = 165;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // dateNgayTra
             // 
@@ -187,7 +193,7 @@
             this.dateNgayTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayTra.ForeColor = System.Drawing.Color.SlateBlue;
             this.dateNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayTra.Location = new System.Drawing.Point(123, 568);
+            this.dateNgayTra.Location = new System.Drawing.Point(122, 568);
             this.dateNgayTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateNgayTra.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayTra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -195,26 +201,27 @@
             this.dateNgayTra.Size = new System.Drawing.Size(160, 50);
             this.dateNgayTra.TabIndex = 174;
             this.dateNgayTra.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
+            this.dateNgayTra.ValueChanged += new System.EventHandler(this.dateNgayTra_ValueChanged);
             // 
             // labelNgayMuon
             // 
             this.labelNgayMuon.AutoSize = true;
-            this.labelNgayMuon.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNgayMuon.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayMuon.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelNgayMuon.Location = new System.Drawing.Point(141, 482);
+            this.labelNgayMuon.Location = new System.Drawing.Point(117, 482);
             this.labelNgayMuon.Name = "labelNgayMuon";
-            this.labelNgayMuon.Size = new System.Drawing.Size(148, 31);
+            this.labelNgayMuon.Size = new System.Drawing.Size(126, 27);
             this.labelNgayMuon.TabIndex = 172;
             this.labelNgayMuon.Text = "dd/mm/yyyy";
             // 
             // labelHanTra
             // 
             this.labelHanTra.AutoSize = true;
-            this.labelHanTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHanTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHanTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelHanTra.Location = new System.Drawing.Point(325, 482);
+            this.labelHanTra.Location = new System.Drawing.Point(307, 482);
             this.labelHanTra.Name = "labelHanTra";
-            this.labelHanTra.Size = new System.Drawing.Size(148, 31);
+            this.labelHanTra.Size = new System.Drawing.Size(126, 27);
             this.labelHanTra.TabIndex = 172;
             this.labelHanTra.Text = "dd/mm/yyyy";
             // 
@@ -434,6 +441,35 @@
             this.label1.Text = "PHIẾU MƯỢN TRẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.ErrorDia.Text = null;
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.SuccDia.Text = null;
+            // 
+            // labelNgayTra
+            // 
+            this.labelNgayTra.AutoSize = true;
+            this.labelNgayTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNgayTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelNgayTra.Location = new System.Drawing.Point(118, 583);
+            this.labelNgayTra.Name = "labelNgayTra";
+            this.labelNgayTra.Size = new System.Drawing.Size(0, 27);
+            this.labelNgayTra.TabIndex = 178;
+            this.labelNgayTra.Visible = false;
+            // 
             // fEditPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -485,5 +521,8 @@
         private System.Windows.Forms.Label labelSoNgayTre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelNgayMuon;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private System.Windows.Forms.Label labelNgayTra;
     }
 }
