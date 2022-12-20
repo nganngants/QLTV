@@ -20,6 +20,12 @@ namespace GUI.UserControls
 
         private void butAdd_Click(object sender, EventArgs e)
         {
+           
+
+        }
+
+        private void butAdd_Click_1(object sender, EventArgs e)
+        {
             dataGrid.Rows.Clear();
             var ngayBC = dateBC.Value;
             var bc = BUSBCSachTraTre.Instance.GetBaoCao(ngayBC);
@@ -37,15 +43,14 @@ namespace GUI.UserControls
             {
                 errDia.Show("Khong co bao cao");
                 return;
-            }    
+            }
             int i = 1;
             dataGrid.Rows.Clear();
             foreach (var b in bc)
-            {     
+            {
                 dataGrid.Rows.Add(i, b.CUONSACH.MaCuonSach, b.CUONSACH.SACH.TUASACH.TenTuaSach, b.NgayMuon, b.SoNgayTre);
                 i++;
             }
-
         }
     }
 }
