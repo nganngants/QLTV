@@ -32,6 +32,10 @@ namespace GUI.BM
         {
             this.components = new System.ComponentModel.Container();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.comboDocGia = new System.Windows.Forms.ComboBox();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboCuonSach = new System.Windows.Forms.ComboBox();
+            this.cUONSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.isDaTra = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.siticoneVSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
             this.siticoneVSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
@@ -62,10 +66,10 @@ namespace GUI.BM
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.comboCuonSach = new System.Windows.Forms.ComboBox();
-            this.comboDocGia = new System.Windows.Forms.ComboBox();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticonePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -105,6 +109,45 @@ namespace GUI.BM
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(1000, 745);
             this.siticonePanel1.TabIndex = 1;
+            // 
+            // comboDocGia
+            // 
+            this.comboDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboDocGia.DataSource = this.dOCGIABindingSource;
+            this.comboDocGia.DisplayMember = "MaDocGia";
+            this.comboDocGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboDocGia.FormattingEnabled = true;
+            this.comboDocGia.Location = new System.Drawing.Point(592, 201);
+            this.comboDocGia.Name = "comboDocGia";
+            this.comboDocGia.Size = new System.Drawing.Size(236, 32);
+            this.comboDocGia.TabIndex = 155;
+            this.comboDocGia.ValueMember = "ID";
+            this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
+            // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
+            // 
+            // comboCuonSach
+            // 
+            this.comboCuonSach.AllowDrop = true;
+            this.comboCuonSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboCuonSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboCuonSach.DataSource = this.cUONSACHBindingSource;
+            this.comboCuonSach.DisplayMember = "MaCuonSach";
+            this.comboCuonSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboCuonSach.FormattingEnabled = true;
+            this.comboCuonSach.Location = new System.Drawing.Point(122, 201);
+            this.comboCuonSach.Name = "comboCuonSach";
+            this.comboCuonSach.Size = new System.Drawing.Size(231, 32);
+            this.comboCuonSach.TabIndex = 154;
+            this.comboCuonSach.ValueMember = "id";
+            this.comboCuonSach.SelectedIndexChanged += new System.EventHandler(this.comboCuonSach_SelectedIndexChanged);
+            // 
+            // cUONSACHBindingSource
+            // 
+            this.cUONSACHBindingSource.DataSource = typeof(DTO.CUONSACH);
             // 
             // isDaTra
             // 
@@ -439,30 +482,6 @@ namespace GUI.BM
             this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.ErrorDia.Text = null;
             // 
-            // comboCuonSach
-            // 
-            this.comboCuonSach.AllowDrop = true;
-            this.comboCuonSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboCuonSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboCuonSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboCuonSach.FormattingEnabled = true;
-            this.comboCuonSach.Location = new System.Drawing.Point(122, 201);
-            this.comboCuonSach.Name = "comboCuonSach";
-            this.comboCuonSach.Size = new System.Drawing.Size(231, 32);
-            this.comboCuonSach.Sorted = true;
-            this.comboCuonSach.TabIndex = 154;
-            // 
-            // comboDocGia
-            // 
-            this.comboDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboDocGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboDocGia.FormattingEnabled = true;
-            this.comboDocGia.Location = new System.Drawing.Point(592, 201);
-            this.comboDocGia.Name = "comboDocGia";
-            this.comboDocGia.Size = new System.Drawing.Size(236, 32);
-            this.comboDocGia.TabIndex = 155;
-            // 
             // SuccDia
             // 
             this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
@@ -488,6 +507,8 @@ namespace GUI.BM
             this.Text = "BMChoMuonSach";
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,5 +549,7 @@ namespace GUI.BM
         private ComboBox comboDocGia;
         private ComboBox comboCuonSach;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private BindingSource dOCGIABindingSource;
+        private BindingSource cUONSACHBindingSource;
     }
 }
