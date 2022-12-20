@@ -26,7 +26,7 @@ namespace GUI
             this.comboLoaiDG.DataSource = LoaiDocGiaList;
             comboLoaiDG.DisplayMember= "TenLoaiDocGia";
             comboLoaiDG.ValueMember = "id";
-            comboLoaiDG.SelectedIndex =0;
+            comboLoaiDG.SelectedIndex =0  ;
         }
 
         private void butOK_Click(object sender, EventArgs e)
@@ -76,5 +76,6 @@ namespace GUI
                 dateNgayHetHan.Text = NgayHetHan.Date.ToString();
             
         }
+
     }
 }

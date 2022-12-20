@@ -44,5 +44,10 @@ namespace GUI.UserControls
             f.Show();
             Bind();
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Bind();
+        }
     }
 }

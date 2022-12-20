@@ -56,5 +56,10 @@ namespace GUI.UserControls
 
             return;
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding();
+        }
     }
 }

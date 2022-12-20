@@ -62,5 +62,10 @@ namespace GUI.UserControls
             SuccDia.Show("Đã xoá thành công " + cnt + " thể loại");
             Binding();
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding();
+        }
     }
 }

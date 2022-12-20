@@ -19,18 +19,11 @@ namespace GUI
         {
             InitializeComponent();
             DocGia = BUSDocGia.Instance.GetDocGia(_id);
+            Binding();
         }
         private void fInfoDocGia_Load(object sender, EventArgs e)
         {
-            labelMaDG.Text = DocGia.MaDocGia;
-            labelHoTen.Text = DocGia.TenDocGia;
-            labelEmail.Text = DocGia.Email;
-            labelMaLoaiDG.Text = DocGia.LOAIDOCGIA.TenLoaiDocGia;
-            labelDiaChi.Text = DocGia.DiaChi;
-            labelNgayLapThe.Text = DocGia.NgayLapThe.ToShortDateString();
-            labelNgayHetHan.Text = DocGia.NgayHetHan.ToShortDateString();
-            labelNgaySinh.Text = DocGia.NgaySinh.ToShortDateString();
-            labelTongNo.Text = DocGia.TongNoHienTai.ToString();
+            
         }
         private void Binding()
         {
@@ -44,12 +37,22 @@ namespace GUI
 
                 PhieuMuonGrid.Rows.Add(pmt.SoPhieuMuonTra, pmt.CUONSACH.MaCuonSach, pmt.CUONSACH.SACH.TUASACH.TenTuaSach, NgayMuon.ToShortDateString(), HanTra.ToShortDateString(), NgayTra_, pmt.SoTienPhat);
             }
+            labelMaDG.Text = DocGia.MaDocGia;
+            labelHoTen.Text = DocGia.TenDocGia;
+            labelEmail.Text = DocGia.Email;
+            labelMaLoaiDG.Text = DocGia.LOAIDOCGIA.TenLoaiDocGia;
+            labelDiaChi.Text = DocGia.DiaChi;
+            labelNgayLapThe.Text = DocGia.NgayLapThe.ToShortDateString();
+            labelNgayHetHan.Text = DocGia.NgayHetHan.ToShortDateString();
+            labelNgaySinh.Text = DocGia.NgaySinh.ToShortDateString();
+            labelTongNo.Text = DocGia.TongNoHienTai.ToString();
         }
 
         private void butChange_Click(object sender, EventArgs e)
         {
             var f = new fEditDocGia(DocGia.ID);
             f.ShowDialog();
+            Binding();
         }
     }
 }

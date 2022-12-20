@@ -39,5 +39,10 @@ namespace GUI.UserControls
             fInfor.ShowDialog();
             Bind();
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Bind();
+        }
     }
 }

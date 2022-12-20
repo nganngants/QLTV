@@ -24,5 +24,9 @@ namespace GUI.UserControls
             var f = new fPhieuThu();
             f.ShowDialog();
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
