@@ -34,6 +34,7 @@
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.labelNgayTra = new System.Windows.Forms.Label();
             this.isDaTra = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.siticoneVSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
             this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -62,7 +63,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.labelNgayTra = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +138,17 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1000, 764);
             this.mainPanel.TabIndex = 70;
+            // 
+            // labelNgayTra
+            // 
+            this.labelNgayTra.AutoSize = true;
+            this.labelNgayTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNgayTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelNgayTra.Location = new System.Drawing.Point(118, 583);
+            this.labelNgayTra.Name = "labelNgayTra";
+            this.labelNgayTra.Size = new System.Drawing.Size(0, 27);
+            this.labelNgayTra.TabIndex = 178;
+            this.labelNgayTra.Visible = false;
             // 
             // isDaTra
             // 
@@ -447,7 +458,7 @@
             this.ErrorDia.Caption = null;
             this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
             this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.ErrorDia.Text = null;
             // 
             // SuccDia
@@ -456,19 +467,8 @@
             this.SuccDia.Caption = null;
             this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
             this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.SuccDia.Text = null;
-            // 
-            // labelNgayTra
-            // 
-            this.labelNgayTra.AutoSize = true;
-            this.labelNgayTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNgayTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelNgayTra.Location = new System.Drawing.Point(118, 583);
-            this.labelNgayTra.Name = "labelNgayTra";
-            this.labelNgayTra.Size = new System.Drawing.Size(0, 27);
-            this.labelNgayTra.TabIndex = 178;
-            this.labelNgayTra.Visible = false;
             // 
             // fEditPhieuMuon
             // 

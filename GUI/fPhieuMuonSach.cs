@@ -32,7 +32,7 @@ namespace GUI.BM
             comboDocGia.DisplayMember = "MaDocGia";
             comboDocGia.ValueMember = "id";
             CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(Convert.ToInt32(comboCuonSach.SelectedValue));
-            Console.WriteLine(Convert.ToInt32(comboCuonSach.SelectedValue));
+            //Console.WriteLine(Convert.ToInt32(comboCuonSach.SelectedValue));
             labelTenCS.Text = "Tên: " + cuonsach.SACH.TUASACH.TenTuaSach;
             labelTheLoai.Text = "Thể loại: " + cuonsach.SACH.TUASACH.THELOAI.TenTheLoai;
             DOCGIA docgia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
@@ -72,6 +72,7 @@ namespace GUI.BM
             }
             DOCGIA docgia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
             CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(Convert.ToInt32(comboCuonSach.SelectedValue));
+            Console.WriteLine(cuonsach.TinhTrang);
             string error = BUSPhieuMuonTra.Instance.AddPhieuMuonTra(cuonsach.MaCuonSach, docgia.MaDocGia, NgayMuon);
             if (error != "")
             {

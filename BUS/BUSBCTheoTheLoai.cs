@@ -25,22 +25,36 @@ namespace BUS
         {
             return DALBCLuotMuonTheoTheLoai.Instance.GetAllBaoCao();
         }
-        public string AddBC(DateTime NgayLap)
+
+        public BCLUOTMUONTHEOTHELOAI GetBC(int month, int year)
         {
-            int thang = NgayLap.Month;
-            int nam = NgayLap.Year;
-            if (NgayLap > DateTime.Now) return "Ngày báo cáo không hợp lệ";
-            if (DALBCLuotMuonTheoTheLoai.Instance.AddBaoCao(thang, nam))
+            var ds = DALBCLuotMuonTheoTheLoai.Instance.FindBaoCaoByDate(month, year);
+            if (!ds.Any()) return null;
+            return ds.First();
+        }
+
+        public BCLUOTMUONTHEOTHELOAI GetBCById(int id)
+        {
+            return DALBCLuotMuonTheoTheLoai.Instance.GetBaoCaoById(id);
+        }
+        public string AddBC(int thang, int nam)
+        {
+            if (nam > DateTime.Today.Year || (nam == DateTime.Today.Year && thang > DateTime.Today.Month))
+                return "Tháng, năm không hợp lệ";
+            int id = DALBCLuotMuonTheoTheLoai.Instance.AddBaoCao(thang, nam);
+            if (id != -1)
             {
-                List<BCLUOTMUONTHEOTHELOAI> bc = DALBCLuotMuonTheoTheLoai.Instance.FindBaoCaoByDate(thang, nam);
                 List<THELOAI> ltl = DALTheLoai.Instance.GetAllTheLoai();
                 foreach (THELOAI tl in ltl)
                 {
-                    if (BUSCT_BCLuotMuonTheoThang.Instance.AddCT_BCLuotMuon(bc[0].id, tl.id, thang, nam) == "")
-                        continue;
-                }    
+                    string err = BUSCT_BCLuotMuonTheoThang.Instance.AddCT_BCLuotMuon(id, tl.id, thang, nam);
+                    if (err != "") return err;
+                }
+
+                DALBCLuotMuonTheoTheLoai.Instance.Compute(id);
+                return "";
             }    
-            return "KHông thể lập báo cáo";
+            else return "KHông thể lập báo cáo";
         }
         public string DelBC(string Mabc)
         {

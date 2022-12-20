@@ -34,7 +34,7 @@ namespace GUI
                 var cn = BUSChucNang.Instance.GetChucNangById(Convert.ToInt32(row.Cells["idCol"].Value));
                 if (nnd.CHUCNANGs.Contains(cn))
                 {
-                    Console.WriteLine(cn.TenChucNang);
+                    //Console.WriteLine(cn.TenChucNang);
                     row.Cells["isChoosen"].Value = "1";
                 }
             }    

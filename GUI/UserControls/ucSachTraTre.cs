@@ -23,7 +23,7 @@ namespace GUI.UserControls
             dataGrid.Rows.Clear();
             var ngayBC = dateBC.Value;
             var bc = BUSBCSachTraTre.Instance.GetBaoCao(ngayBC);
-            if (bc == null || !bc.Any())
+            if (bc == null)
             {
                 string err = BUSBCSachTraTre.Instance.AddBaoCao(ngayBC);
                 if (err != "")
@@ -39,6 +39,7 @@ namespace GUI.UserControls
                 return;
             }    
             int i = 1;
+            dataGrid.Rows.Clear();
             foreach (var b in bc)
             {     
                 dataGrid.Rows.Add(i, b.CUONSACH.MaCuonSach, b.CUONSACH.SACH.TUASACH.TenTuaSach, b.NgayMuon, b.SoNgayTre);

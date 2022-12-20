@@ -48,7 +48,7 @@ namespace GUI.UserControls
             List<string> idDel = new List<string>();
             foreach (DataGridViewRow row in CuonSachGrid.Rows)
             {
-                Console.WriteLine(row.Cells["isChosen"].Value);
+                //Console.WriteLine(row.Cells["isChosen"].Value);
                 if (row.Cells["isChosen"].Value == "1")
                 {
                     idDel.Add((string)row.Cells["MaCuonSach"].Value);
@@ -83,6 +83,11 @@ namespace GUI.UserControls
         private void CuonSachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding();
         }
     }
 }

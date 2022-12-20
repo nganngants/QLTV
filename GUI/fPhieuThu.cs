@@ -38,7 +38,7 @@ namespace GUI
             try 
             {
                 TienThu = Convert.ToInt32(textTienThu.Text);
-                Console.WriteLine(TienThu);
+                //Console.WriteLine(TienThu);
             }
             catch
             {

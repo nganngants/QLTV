@@ -70,7 +70,7 @@ namespace DAL
                     HanTra = hanTra
                 };
                 // mark cuonsach as borrowed
-                DALCuonSach.Instance.UpdCuonSach(idCuonSach, 1);
+                DALCuonSach.Instance.UpdCuonSach(idCuonSach, 0);
                 QLTVDb.Instance.PHIEUMUONTRAs.Add(phieu);
                 QLTVDb.Instance.SaveChanges();
                 return true;
@@ -94,7 +94,7 @@ namespace DAL
                 {
                     phieu.NgayTra = ngayTra;
                     // mark cuonsach as unborrowed
-                    DALCuonSach.Instance.UpdCuonSach(phieu.idCuonSach, 0);
+                    DALCuonSach.Instance.UpdCuonSach(phieu.idCuonSach, 1);
                 }
                 if (soTienPhat != null) phieu.SoTienPhat = soTienPhat;
                 QLTVDb.Instance.SaveChanges();

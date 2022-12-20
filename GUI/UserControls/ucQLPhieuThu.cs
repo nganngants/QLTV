@@ -26,6 +26,7 @@ namespace GUI.UserControls
             PhieuThuList = BUSPhieuThu.Instance.GetAllPhieuThu();
             foreach(PHIEUTHU pt in PhieuThuList)
             {
+                Console.WriteLine(pt.SoTienThu);
                 PhieuThuGrid.Rows.Add(pt.SoPhieuThu, pt.DOCGIA.MaDocGia, pt.SoTienThu, ((DateTime)pt.NgayLap).ToShortDateString());
             }
         }

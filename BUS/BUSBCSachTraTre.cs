@@ -33,7 +33,7 @@ namespace BUS
             {
                 if(pmt.NgayTra == null)
                 {
-                    int SoNgayTraTre = ((TimeSpan)(DateTime.Now - pmt.HanTra)).Days;
+                    int SoNgayTraTre = ((TimeSpan)(NgayBC - pmt.HanTra)).Days;
                      DALBCSachTraTre.Instance.AddBaoCao(NgayBC, pmt.idCuonSach,(DateTime)pmt.NgayMuon,SoNgayTraTre);
                 }
             }

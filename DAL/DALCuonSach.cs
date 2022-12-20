@@ -73,8 +73,6 @@ namespace DAL
                     TinhTrang = tinhTrang
                 };
                 QLTVDb.Instance.CUONSACHes.Add(cuonsach);
-                sach.SoLuongConLai++;
-                sach.SoLuong++;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
