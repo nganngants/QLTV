@@ -29,7 +29,8 @@ namespace GUI
             labelSoPhieu.Text += PhieuMuon.SoPhieuMuonTra;
             labelNgayMuon.Text = ((DateTime)PhieuMuon.NgayMuon).ToShortDateString();
             labelHanTra.Text = ((DateTime)PhieuMuon.HanTra).ToShortDateString();
-            labelHoTen.Text += PhieuMuon.DOCGIA.TenDocGia;
+            labelHoTen.Text +=" "+ PhieuMuon.DOCGIA.TenDocGia;
+            labelMaDG.Text +=": " +PhieuMuon.DOCGIA.MaDocGia;
             labelTheLoai.Text += PhieuMuon.CUONSACH.SACH.TUASACH.THELOAI.TenTheLoai;
             labelTongNoHienTai.Text += PhieuMuon.DOCGIA.TongNoHienTai.ToString();
             if(PhieuMuon.NgayTra !=null)

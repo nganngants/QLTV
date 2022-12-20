@@ -86,6 +86,7 @@ namespace GUI.BM
         {
             DOCGIA docgia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
             if (docgia == null) return;
+           
             labelHoTen.Text = "Họ tên: " + docgia.TenDocGia;
             labelTongNoHienTai.Text = "Tổng nợ hiện tại: " + docgia.TongNoHienTai.ToString();
         }

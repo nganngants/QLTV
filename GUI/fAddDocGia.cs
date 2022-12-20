@@ -27,6 +27,7 @@ namespace GUI
             comboLoaiDG.DisplayMember= "TenLoaiDocGia";
             comboLoaiDG.ValueMember = "id";
             comboLoaiDG.SelectedIndex =0  ;
+            dateNgayLap.Value = DateTime.Now;
         }
 
         private void butOK_Click(object sender, EventArgs e)
@@ -73,7 +74,7 @@ namespace GUI
                 THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
                 DateTime NgayLapThe = dateNgayLap.Value.Date;
                 DateTime NgayHetHan = NgayLapThe.AddMonths((int)thamso.ThoiHanThe);
-                dateNgayHetHan.Text = NgayHetHan.Date.ToString();
+                dateNgayHetHan.Text = NgayHetHan.Date.ToShortDateString();
             
         }
 
