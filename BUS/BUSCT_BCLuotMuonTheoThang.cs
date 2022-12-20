@@ -27,22 +27,13 @@ namespace BUS
         public string AddCT_BCLuotMuon(int id, int idTL, int month, int year)
         {
             int soLuot = 0;
-            THELOAI tl = DALTheLoai.Instance.GetTheLoaiById(idTL);
-            List<TUASACH> lts = DALTuaSach.Instance.FindTuaSach(null, tl, null);
-            foreach(TUASACH ts in lts)
-             foreach(SACH sach in ts.SACHes)
-                {
-                    foreach(CUONSACH cs in sach.CUONSACHes.ToList())
-                    {
-                        foreach(PHIEUMUONTRA pmt in cs.PHIEUMUONTRAs)
-                        {
-                            DateTime nm = (DateTime)pmt.NgayMuon;
-                            if (nm.Month == month && nm.Year == year)
-                                soLuot++;
-                        }
-                    }
-                }
-            if (DALCT_BCLuotMuonTheoTheLoai.Instance.AddCTBC(id, tl.id, soLuot))
+            var dspm = DALPhieuMuonTra.Instance.FindTheoNgayMuon(null, month, year);
+            foreach (var pm in dspm)
+            {
+                if (pm.CUONSACH.SACH.TUASACH.THELOAI.id == idTL) soLuot++;
+            }
+
+            if (DALCT_BCLuotMuonTheoTheLoai.Instance.AddCTBC(id, idTL, soLuot))
                 return "";
             return "Lỗi";
 

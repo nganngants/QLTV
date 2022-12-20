@@ -30,7 +30,7 @@ namespace BUS
             pt = DALPhieuThu.Instance.GetPhieuThuById(id);
             if(pt == null)
             { 
-                Console.WriteLine("Mã phiếu thu không hợp lệ");
+                //Console.WriteLine("Mã phiếu thu không hợp lệ");
                 return null;
             }
             return pt;
@@ -50,9 +50,9 @@ namespace BUS
             DOCGIA dg;
             dg = DALDocGia.Instance.GetDocGiaById(idDocGia);
             if(dg == null)
-            return "Không tìm thấy độc giả";
+                return "Không tìm thấy độc giả";
             THAMSO ts = DALThamSo.Instance.GetAllThamSo();
-            if (dg.TongNoHienTai < soTienThu && ts.AD_QDKTTienThu==1) return "Số tiền thu không hợp lệ";
+            if (dg.TongNoHienTai < soTienThu && ts.AD_QDKTTienThu == 1) return "Số tiền thu không hợp lệ";
             if (DALPhieuThu.Instance.AddPhieuThu(idDocGia, soTienThu, ngayLap))
                 return "";
             return "Không thể thêm phiếu thu";

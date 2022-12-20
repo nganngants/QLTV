@@ -62,12 +62,12 @@ namespace BUS
 
         public string AddChucNangForNhom(int maNhomNguoiDung, List<String> dsChucNang)
         {
-            Console.WriteLine("Into BUS: {0}", dsChucNang.Count);
+            //Console.WriteLine("Into BUS: {0}", dsChucNang.Count);
             List<CHUCNANG> ds = new List<CHUCNANG>();
             foreach(var ma in dsChucNang)
             {
                 var cn = DALChucNang.Instance.GetChucNangByMa(ma);
-                Console.WriteLine(ma);
+                //Console.WriteLine(ma);
                 if (cn == null) return "Danh sách các mã chức năng không hợp lệ.";
 
                 ds.Add(cn);

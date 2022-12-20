@@ -33,7 +33,8 @@ namespace DAL
 
         public List<BCSACHTRATRE> FindBaoCaoByDate(DateTime ngayBC)
         {
-            return QLTVDb.Instance.BCSACHTRATREs.AsNoTracking().Where(b => b.Ngay == ngayBC).ToList();
+            return QLTVDb.Instance.BCSACHTRATREs.AsNoTracking().Where(b => 
+            b.Ngay.Day == ngayBC.Day && b.Ngay.Month == ngayBC.Month && b.Ngay.Year == ngayBC.Year).ToList();
         }
 
         public List<BCSACHTRATRE> FindBaoCaoByCuonSach (int idCuonSach)

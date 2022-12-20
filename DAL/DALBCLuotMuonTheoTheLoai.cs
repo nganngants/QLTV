@@ -51,7 +51,7 @@ namespace DAL
         /// <param name="thang"></param>
         /// <param name="nam"></param>
         /// <returns></returns>
-        public bool AddBaoCao (int thang, int nam)
+        public int AddBaoCao (int thang, int nam)
         {
             try
             {
@@ -64,12 +64,12 @@ namespace DAL
                 QLTVDb.Instance.BCLUOTMUONTHEOTHELOAIs.Add(bc);
                 QLTVDb.Instance.SaveChanges();
 
-                return true;
+                return bc.id;
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                return -1;
             }
         }
 
@@ -93,7 +93,8 @@ namespace DAL
             // Compute TiLe for each CT_BC
             foreach (var ct in bc.CT_BCLUOTMUONTHEOTHELOAI)
             {
-                ct.TiLe = (decimal)ct.SoLuotMuon / sum;
+                if (sum != 0) ct.TiLe = (decimal)ct.SoLuotMuon / sum;
+                else ct.TiLe = 0;
             }
             QLTVDb.Instance.SaveChanges();
             return true;

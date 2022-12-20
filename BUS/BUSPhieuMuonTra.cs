@@ -23,6 +23,11 @@ namespace BUS
         {
             return DALPhieuMuonTra.Instance.GetPhieuMuonTraById(id);
         }
+
+        public List<PHIEUMUONTRA> GetPhieuTraTre (DateTime ngay)
+        {
+            return DALPhieuMuonTra.Instance.FindPhieuMuonTre(ngay);
+        }
         public string AddPhieuMuonTra(string MaCuonSach, string MaDocGia, DateTime NgayMuon)
         {
             CUONSACH cs;

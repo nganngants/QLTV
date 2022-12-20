@@ -54,7 +54,7 @@ namespace GUI.UserControls
             List<int> idDel = new List<int>();
             foreach (DataGridViewRow row in LoaiDocGiaGrid.Rows)
             {
-                Console.WriteLine(row.Cells["isChosen"].Value);
+                //Console.WriteLine(row.Cells["isChosen"].Value);
                 if (row.Cells["isChosen"].Value == "1")
                 {
                     idDel.Add((int)row.Cells["id"].Value);

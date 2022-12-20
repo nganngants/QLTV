@@ -27,12 +27,13 @@ namespace BUS
         public string AddBaoCao(DateTime NgayBC)
         {
             if (NgayBC > DateTime.Now) return "Ngày báo cáo không hợp lệ";
-            List<PHIEUMUONTRA> lpmt = DALPhieuMuonTra.Instance.GetAllPhieuMuonTra();
+            List<PHIEUMUONTRA> lpmt = DALPhieuMuonTra.Instance.FindPhieuMuonTre(NgayBC);
+            if (!lpmt.Any()) return "Không có sách trả trễ trong ngày này";
             foreach(PHIEUMUONTRA pmt in lpmt )
             {
                 if(pmt.NgayTra == null)
                 {
-                    int SoNgayTraTre = ((TimeSpan)(DateTime.Now - pmt.HanTra)).Days;
+                    int SoNgayTraTre = ((TimeSpan)(NgayBC - pmt.HanTra)).Days;
                      DALBCSachTraTre.Instance.AddBaoCao(NgayBC, pmt.idCuonSach,(DateTime)pmt.NgayMuon,SoNgayTraTre);
                 }
             }
@@ -52,7 +53,7 @@ namespace BUS
         }
         public List<BCSACHTRATRE>GetBaoCao(DateTime NgayBC)
         {
-            List<BCSACHTRATRE> lbc = DALBCSachTraTre.Instance.FindBaoCaoByDate(NgayBC).ToList();
+            List<BCSACHTRATRE> lbc = DALBCSachTraTre.Instance.FindBaoCaoByDate(NgayBC);
             if (lbc.Count == 0) return null;
             return lbc;
         }

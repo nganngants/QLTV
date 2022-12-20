@@ -38,10 +38,10 @@ namespace GUI
             List<String> dsCn = new List<String>();
             foreach (DataGridViewRow row in this.dsChucNang.Rows )
             {
-                Console.WriteLine(row.Cells["isChoosen"].Value);
+                //Console.WriteLine(row.Cells["isChoosen"].Value);
                 if (row.Cells["isChoosen"].Value.ToString() == "1")
                 {
-                    Console.WriteLine(row.Cells["MaChucNang"].Value.ToString());
+                    //Console.WriteLine(row.Cells["MaChucNang"].Value.ToString());
                     dsCn.Add(row.Cells["MaChucNang"].Value.ToString());
                 }
             }

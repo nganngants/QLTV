@@ -30,223 +30,216 @@ namespace GUI.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.dgTabControl = new System.Windows.Forms.TabControl();
-            this.pageThem = new System.Windows.Forms.TabPage();
-            this.pageSua = new System.Windows.Forms.TabPage();
-            this.pageXoa = new System.Windows.Forms.TabPage();
-            this.pageTim = new System.Windows.Forms.TabPage();
-            this.tableBCLuotMuonTheoTheLoai = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.MaBaoCao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongSoLuotMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.siticonePanel1.SuspendLayout();
-            this.dgTabControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBCLuotMuonTheoTheLoai)).BeginInit();
-            this.siticonePanel2.SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.labelTongLM = new System.Windows.Forms.Label();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.dateBC = new System.Windows.Forms.DateTimePicker();
+            this.dataGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuotMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiLe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.siticoneMessageDialog1 = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // siticonePanel1
+            // topPanel
             // 
-            this.siticonePanel1.Controls.Add(this.dgTabControl);
-            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
-            this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(997, 186);
-            this.siticonePanel1.TabIndex = 2;
+            this.topPanel.Controls.Add(this.labelTongLM);
+            this.topPanel.Controls.Add(this.butAdd);
+            this.topPanel.Controls.Add(this.dateBC);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1052, 100);
+            this.topPanel.TabIndex = 0;
             // 
-            // dgTabControl
+            // labelTongLM
             // 
-            this.dgTabControl.Controls.Add(this.pageThem);
-            this.dgTabControl.Controls.Add(this.pageSua);
-            this.dgTabControl.Controls.Add(this.pageXoa);
-            this.dgTabControl.Controls.Add(this.pageTim);
-            this.dgTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.dgTabControl.ItemSize = new System.Drawing.Size(60, 30);
-            this.dgTabControl.Location = new System.Drawing.Point(0, 0);
-            this.dgTabControl.Name = "dgTabControl";
-            this.dgTabControl.SelectedIndex = 0;
-            this.dgTabControl.Size = new System.Drawing.Size(997, 186);
-            this.dgTabControl.TabIndex = 0;
+            this.labelTongLM.AutoSize = true;
+            this.labelTongLM.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongLM.Location = new System.Drawing.Point(589, 54);
+            this.labelTongLM.Name = "labelTongLM";
+            this.labelTongLM.Size = new System.Drawing.Size(0, 37);
+            this.labelTongLM.TabIndex = 3;
             // 
-            // pageThem
+            // butAdd
             // 
-            this.pageThem.Location = new System.Drawing.Point(4, 34);
-            this.pageThem.Name = "pageThem";
-            this.pageThem.Padding = new System.Windows.Forms.Padding(3);
-            this.pageThem.Size = new System.Drawing.Size(989, 148);
-            this.pageThem.TabIndex = 0;
-            this.pageThem.Text = "Thêm";
-            this.pageThem.UseVisualStyleBackColor = true;
+            this.butAdd.BorderRadius = 6;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(127, 53);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(117, 23);
+            this.butAdd.TabIndex = 2;
+            this.butAdd.Text = "Tạo Báo Cáo";
+            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
-            // pageSua
+            // dateBC
             // 
-            this.pageSua.Location = new System.Drawing.Point(4, 34);
-            this.pageSua.Name = "pageSua";
-            this.pageSua.Padding = new System.Windows.Forms.Padding(3);
-            this.pageSua.Size = new System.Drawing.Size(989, 148);
-            this.pageSua.TabIndex = 1;
-            this.pageSua.Text = "Sửa";
-            this.pageSua.UseVisualStyleBackColor = true;
+            this.dateBC.CustomFormat = "MM/yyyy";
+            this.dateBC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateBC.Location = new System.Drawing.Point(3, 54);
+            this.dateBC.Name = "dateBC";
+            this.dateBC.Size = new System.Drawing.Size(118, 22);
+            this.dateBC.TabIndex = 0;
             // 
-            // pageXoa
+            // dataGrid
             // 
-            this.pageXoa.Location = new System.Drawing.Point(4, 34);
-            this.pageXoa.Name = "pageXoa";
-            this.pageXoa.Padding = new System.Windows.Forms.Padding(3);
-            this.pageXoa.Size = new System.Drawing.Size(989, 148);
-            this.pageXoa.TabIndex = 2;
-            this.pageXoa.Text = "Xóa";
-            this.pageXoa.UseVisualStyleBackColor = true;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGrid.ColumnHeadersHeight = 30;
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaTheLoai,
+            this.TenTheLoai,
+            this.SoLuotMuon,
+            this.TiLe});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGrid.Location = new System.Drawing.Point(0, 100);
+            this.dataGrid.Name = "dataGrid";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGrid.RowHeadersVisible = false;
+            this.dataGrid.RowHeadersWidth = 51;
+            this.dataGrid.RowTemplate.Height = 24;
+            this.dataGrid.Size = new System.Drawing.Size(1052, 576);
+            this.dataGrid.TabIndex = 1;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGrid.ThemeStyle.HeaderStyle.Height = 30;
+            this.dataGrid.ThemeStyle.ReadOnly = false;
+            this.dataGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGrid.ThemeStyle.RowsStyle.Height = 24;
+            this.dataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // pageTim
+            // MaTheLoai
             // 
-            this.pageTim.Location = new System.Drawing.Point(4, 34);
-            this.pageTim.Name = "pageTim";
-            this.pageTim.Padding = new System.Windows.Forms.Padding(3);
-            this.pageTim.Size = new System.Drawing.Size(989, 148);
-            this.pageTim.TabIndex = 3;
-            this.pageTim.Text = "Tìm kiếm";
-            this.pageTim.UseVisualStyleBackColor = true;
+            this.MaTheLoai.HeaderText = "Mã Thể Loại";
+            this.MaTheLoai.MinimumWidth = 6;
+            this.MaTheLoai.Name = "MaTheLoai";
+            this.MaTheLoai.ReadOnly = true;
             // 
-            // tableBCLuotMuonTheoTheLoai
+            // TenTheLoai
             // 
-            this.tableBCLuotMuonTheoTheLoai.AllowUserToAddRows = false;
-            this.tableBCLuotMuonTheoTheLoai.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tableBCLuotMuonTheoTheLoai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tableBCLuotMuonTheoTheLoai.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.tableBCLuotMuonTheoTheLoai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableBCLuotMuonTheoTheLoai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tableBCLuotMuonTheoTheLoai.ColumnHeadersHeight = 50;
-            this.tableBCLuotMuonTheoTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableBCLuotMuonTheoTheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaBaoCao,
-            this.Thang,
-            this.Nam,
-            this.TongSoLuotMuon});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableBCLuotMuonTheoTheLoai.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tableBCLuotMuonTheoTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableBCLuotMuonTheoTheLoai.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableBCLuotMuonTheoTheLoai.Location = new System.Drawing.Point(0, 0);
-            this.tableBCLuotMuonTheoTheLoai.Name = "tableBCLuotMuonTheoTheLoai";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableBCLuotMuonTheoTheLoai.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tableBCLuotMuonTheoTheLoai.RowHeadersVisible = false;
-            this.tableBCLuotMuonTheoTheLoai.RowHeadersWidth = 53;
-            this.tableBCLuotMuonTheoTheLoai.RowTemplate.Height = 25;
-            this.tableBCLuotMuonTheoTheLoai.Size = new System.Drawing.Size(997, 410);
-            this.tableBCLuotMuonTheoTheLoai.TabIndex = 0;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.HeaderStyle.Height = 50;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.ReadOnly = false;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F);
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.RowsStyle.Height = 25;
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tableBCLuotMuonTheoTheLoai.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TenTheLoai.HeaderText = "Tên Thể Loại";
+            this.TenTheLoai.MinimumWidth = 6;
+            this.TenTheLoai.Name = "TenTheLoai";
+            this.TenTheLoai.ReadOnly = true;
             // 
-            // siticonePanel2
+            // SoLuotMuon
             // 
-            this.siticonePanel2.Controls.Add(this.tableBCLuotMuonTheoTheLoai);
-            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel2.Location = new System.Drawing.Point(0, 186);
-            this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(997, 410);
-            this.siticonePanel2.TabIndex = 3;
+            this.SoLuotMuon.HeaderText = "Số Lượt Mượn";
+            this.SoLuotMuon.MinimumWidth = 6;
+            this.SoLuotMuon.Name = "SoLuotMuon";
+            this.SoLuotMuon.ReadOnly = true;
             // 
-            // MaBaoCao
+            // TiLe
             // 
-            this.MaBaoCao.HeaderText = "Mã Báo Cáo";
-            this.MaBaoCao.MinimumWidth = 7;
-            this.MaBaoCao.Name = "MaBaoCao";
+            this.TiLe.HeaderText = "Tỉ Lệ";
+            this.TiLe.MinimumWidth = 6;
+            this.TiLe.Name = "TiLe";
+            this.TiLe.ReadOnly = true;
             // 
-            // Thang
+            // errDia
             // 
-            this.Thang.HeaderText = "Tháng";
-            this.Thang.MinimumWidth = 7;
-            this.Thang.Name = "Thang";
+            this.errDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.errDia.Caption = null;
+            this.errDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.errDia.Parent = null;
+            this.errDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.errDia.Text = null;
             // 
-            // Nam
+            // siticoneMessageDialog1
             // 
-            this.Nam.HeaderText = "Năm";
-            this.Nam.MinimumWidth = 7;
-            this.Nam.Name = "Nam";
-            // 
-            // TongSoLuotMuon
-            // 
-            this.TongSoLuotMuon.HeaderText = "Tổng Số Lượt Mượn";
-            this.TongSoLuotMuon.MinimumWidth = 7;
-            this.TongSoLuotMuon.Name = "TongSoLuotMuon";
+            this.siticoneMessageDialog1.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.siticoneMessageDialog1.Caption = null;
+            this.siticoneMessageDialog1.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.siticoneMessageDialog1.Parent = null;
+            this.siticoneMessageDialog1.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.siticoneMessageDialog1.Text = null;
             // 
             // ucMuonTheoTheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.siticonePanel2);
-            this.Controls.Add(this.siticonePanel1);
+            this.Controls.Add(this.dataGrid);
+            this.Controls.Add(this.topPanel);
             this.Name = "ucMuonTheoTheLoai";
-            this.Size = new System.Drawing.Size(997, 596);
-            this.siticonePanel1.ResumeLayout(false);
-            this.dgTabControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableBCLuotMuonTheoTheLoai)).EndInit();
-            this.siticonePanel2.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1052, 676);
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView tableBCLuotMuonTheoTheLoai;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
-        private TabControl dgTabControl;
-        private TabPage pageThem;
-        private TabPage pageSua;
-        private TabPage pageXoa;
-        private TabPage pageTim;
-        private DataGridViewTextBoxColumn MaBaoCao;
-        private DataGridViewTextBoxColumn Thang;
-        private DataGridViewTextBoxColumn Nam;
-        private DataGridViewTextBoxColumn TongSoLuotMuon;
+
+        private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
+        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView dataGrid;
+        private DataGridViewTextBoxColumn MaTheLoai;
+        private DataGridViewTextBoxColumn TenTheLoai;
+        private DataGridViewTextBoxColumn SoLuotMuon;
+        private DataGridViewTextBoxColumn TiLe;
+        private DateTimePicker dateBC;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog errDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog siticoneMessageDialog1;
+        private Label labelTongLM;
     }
 }
