@@ -20,13 +20,31 @@ namespace GUI.UserControls
 
         private void butAdd_Click(object sender, EventArgs e)
         {
-            var date = dateBC.Value;
-            var ds = BUSPhieuMuonTra.Instance.GetPhieuTraTre(date);
-            foreach (var p in ds)
+            dataGrid.Rows.Clear();
+            var ngayBC = dateBC.Value;
+            var bc = BUSBCSachTraTre.Instance.GetBaoCao(ngayBC);
+            if (bc == null || !bc.Any())
             {
-                int soNgayTre = (date - p.HanTra).Value.Days;
-                dataGrid.Rows.Add(p.SoPhieuMuonTra, p.CUONSACH.MaCuonSach, p.DOCGIA.MaDocGia, p.NgayMuon, p.HanTra, soNgayTre);
+                string err = BUSBCSachTraTre.Instance.AddBaoCao(ngayBC);
+                if (err != "")
+                {
+                    errDia.Show(err);
+                    return;
+                }
+                bc = BUSBCSachTraTre.Instance.GetBaoCao(ngayBC);
             }
+            if (bc == null)
+            {
+                errDia.Show("Khong co bao cao");
+                return;
+            }    
+            int i = 1;
+            foreach (var b in bc)
+            {     
+                dataGrid.Rows.Add(i, b.CUONSACH.MaCuonSach, b.CUONSACH.SACH.TUASACH.TenTuaSach, b.NgayMuon, b.SoNgayTre);
+                i++;
+            }
+
         }
     }
 }

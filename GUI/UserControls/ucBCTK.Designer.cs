@@ -59,10 +59,12 @@ namespace GUI.UserControls
             // 
             // butTraTre
             // 
+            this.butTraTre.BackColor = System.Drawing.SystemColors.Control;
             this.butTraTre.BorderColor = System.Drawing.Color.Transparent;
             this.butTraTre.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butTraTre.CheckedState.BorderColor = System.Drawing.Color.Transparent;
             this.butTraTre.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
+            this.butTraTre.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.butTraTre.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butTraTre.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butTraTre.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -83,10 +85,12 @@ namespace GUI.UserControls
             // 
             // butTheLoai
             // 
+            this.butTheLoai.BackColor = System.Drawing.SystemColors.Control;
             this.butTheLoai.BorderColor = System.Drawing.Color.Transparent;
             this.butTheLoai.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butTheLoai.CheckedState.BorderColor = System.Drawing.Color.Transparent;
             this.butTheLoai.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
+            this.butTheLoai.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.butTheLoai.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butTheLoai.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butTheLoai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
