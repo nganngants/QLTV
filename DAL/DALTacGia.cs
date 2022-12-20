@@ -91,6 +91,7 @@ namespace DAL
                 TACGIA tacgia = GetTacGiaById(id);
                 if (tacgia == null) return false;
                 QLTVDb.Instance.TACGIAs.Remove(tacgia);
+                QLTVDb.Instance.SaveChanges();
                 return true;
             }
             catch

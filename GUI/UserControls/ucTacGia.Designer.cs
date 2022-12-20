@@ -39,13 +39,13 @@
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.tACGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TacGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mATACGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTacGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATACGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTacGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).BeginInit();
@@ -174,7 +174,7 @@
             this.TacGiaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TacGiaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChosen,
-            this.idDataGridViewTextBoxColumn,
+            this.id,
             this.mATACGIADataGridViewTextBoxColumn,
             this.tenTacGiaDataGridViewTextBoxColumn});
             this.TacGiaGrid.DataSource = this.tACGIABindingSource;
@@ -222,41 +222,6 @@
             this.TacGiaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TacGiaGrid_CellClick);
             this.TacGiaGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.siticoneDataGridView1_CellContentClick);
             // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.FalseValue = "0";
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Width = 6;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mATACGIADataGridViewTextBoxColumn
-            // 
-            this.mATACGIADataGridViewTextBoxColumn.DataPropertyName = "MATACGIA";
-            this.mATACGIADataGridViewTextBoxColumn.HeaderText = "Mã tác giả";
-            this.mATACGIADataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mATACGIADataGridViewTextBoxColumn.Name = "mATACGIADataGridViewTextBoxColumn";
-            this.mATACGIADataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tenTacGiaDataGridViewTextBoxColumn
-            // 
-            this.tenTacGiaDataGridViewTextBoxColumn.DataPropertyName = "TenTacGia";
-            this.tenTacGiaDataGridViewTextBoxColumn.HeaderText = "Tên tác giả";
-            this.tenTacGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenTacGiaDataGridViewTextBoxColumn.Name = "tenTacGiaDataGridViewTextBoxColumn";
-            this.tenTacGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // SuccDia
             // 
             this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
@@ -284,6 +249,41 @@
             this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.AskDia.Text = null;
             // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Width = 6;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // mATACGIADataGridViewTextBoxColumn
+            // 
+            this.mATACGIADataGridViewTextBoxColumn.DataPropertyName = "MATACGIA";
+            this.mATACGIADataGridViewTextBoxColumn.HeaderText = "Mã tác giả";
+            this.mATACGIADataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mATACGIADataGridViewTextBoxColumn.Name = "mATACGIADataGridViewTextBoxColumn";
+            this.mATACGIADataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tenTacGiaDataGridViewTextBoxColumn
+            // 
+            this.tenTacGiaDataGridViewTextBoxColumn.DataPropertyName = "TenTacGia";
+            this.tenTacGiaDataGridViewTextBoxColumn.HeaderText = "Tên tác giả";
+            this.tenTacGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenTacGiaDataGridViewTextBoxColumn.Name = "tenTacGiaDataGridViewTextBoxColumn";
+            this.tenTacGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // ucTacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,12 +309,12 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtHoTen;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mATACGIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenTacGiaDataGridViewTextBoxColumn;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mATACGIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenTacGiaDataGridViewTextBoxColumn;
     }
 }

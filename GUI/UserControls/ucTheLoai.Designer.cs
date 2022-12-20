@@ -37,14 +37,14 @@
             this.txtTenTL = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TheLoaiGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tHELOAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TheLoaiGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHELOAIBindingSource)).BeginInit();
@@ -187,40 +187,6 @@
             this.TheLoaiGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TheLoaiGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.FalseValue = "0";
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Width = 6;
-            // 
-            // MaTheLoai
-            // 
-            this.MaTheLoai.HeaderText = "Mã thể loại";
-            this.MaTheLoai.MinimumWidth = 6;
-            this.MaTheLoai.Name = "MaTheLoai";
-            this.MaTheLoai.ReadOnly = true;
-            this.MaTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TenTheLoai
-            // 
-            this.TenTheLoai.HeaderText = "Tên thể loại";
-            this.TenTheLoai.MinimumWidth = 6;
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.ReadOnly = true;
-            this.TenTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // SoTuaSach
-            // 
-            this.SoTuaSach.HeaderText = "Số tựa sách";
-            this.SoTuaSach.MinimumWidth = 6;
-            this.SoTuaSach.Name = "SoTuaSach";
-            this.SoTuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // tHELOAIBindingSource
             // 
             this.tHELOAIBindingSource.DataSource = typeof(DTO.THELOAI);
@@ -252,6 +218,41 @@
             this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.ErrorDia.Text = null;
             // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Visible = false;
+            this.isChosen.Width = 6;
+            // 
+            // MaTheLoai
+            // 
+            this.MaTheLoai.HeaderText = "Mã thể loại";
+            this.MaTheLoai.MinimumWidth = 6;
+            this.MaTheLoai.Name = "MaTheLoai";
+            this.MaTheLoai.ReadOnly = true;
+            this.MaTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TenTheLoai
+            // 
+            this.TenTheLoai.HeaderText = "Tên thể loại";
+            this.TenTheLoai.MinimumWidth = 6;
+            this.TenTheLoai.Name = "TenTheLoai";
+            this.TenTheLoai.ReadOnly = true;
+            this.TenTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // SoTuaSach
+            // 
+            this.SoTuaSach.HeaderText = "Số tựa sách";
+            this.SoTuaSach.MinimumWidth = 6;
+            this.SoTuaSach.Name = "SoTuaSach";
+            this.SoTuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // ucTheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,10 +279,10 @@
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTuaSach;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
     }
 }

@@ -48,6 +48,8 @@ namespace BUS
             {
                 return "Mã cuốn sách không hợp lệ";
             }
+            if (cs.TinhTrang == 0)
+                return "Cuốn sách đang được mượn không thể xoá";
             if (DALCuonSach.Instance.DelCuonSach(cs.id))
                 return "";
             return "Không thể xoá cuốn sách";
