@@ -95,5 +95,55 @@ namespace GUI.UserControls
         {
             Binding();
         }
+
+        private void butSearch_Click(object sender, EventArgs e)
+        {
+            
+            
+            
+        }
+
+        private void butMaSach_Click(object sender, EventArgs e)
+        {
+            string pat = txtMaSach.Text;
+            SachList = BUSSach.Instance.GetAllSach();
+            List<SACH> Res = new List<SACH>();
+            foreach (SACH sach in SachList)
+            {
+                if (sach.MaSach.Contains(pat))
+                    Res.Add(sach);
+            }
+            this.SachGrid.DataSource = Res;
+            int i = 0;
+            foreach (DataGridViewRow row in SachGrid.Rows)
+            {
+                row.Cells["TuaSach"].Value = Res[i].TUASACH.TenTuaSach + " (" + Res[i].TUASACH.MaTuaSach + ")";
+                i++;
+            }
+        }
+
+        private void txtMaSach_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butTenSach_Click(object sender, EventArgs e)
+        {
+            string pat = txtTenSach.Text;
+            SachList = BUSSach.Instance.GetAllSach();
+            List<SACH> Res = new List<SACH>();
+            foreach (SACH sach in SachList)
+            {
+                if (sach.TUASACH.TenTuaSach.Contains(pat))
+                    Res.Add(sach);
+            }
+            this.SachGrid.DataSource = Res;
+            int i = 0;
+            foreach (DataGridViewRow row in SachGrid.Rows)
+            {
+                row.Cells["TuaSach"].Value = Res[i].TUASACH.TenTuaSach + " (" + Res[i].TUASACH.MaTuaSach + ")";
+                i++;
+            }
+        }
     }
 }

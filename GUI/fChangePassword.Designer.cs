@@ -33,13 +33,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneTextBox5 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.siticoneTextBox2 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtRMKM = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtMKM = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtMKHT = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticoneContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +53,9 @@
             this.siticoneContainerControl1.Controls.Add(this.label3);
             this.siticoneContainerControl1.Controls.Add(this.label2);
             this.siticoneContainerControl1.Controls.Add(this.butSave);
-            this.siticoneContainerControl1.Controls.Add(this.siticoneTextBox5);
-            this.siticoneContainerControl1.Controls.Add(this.siticoneTextBox2);
-            this.siticoneContainerControl1.Controls.Add(this.siticoneTextBox1);
+            this.siticoneContainerControl1.Controls.Add(this.txtRMKM);
+            this.siticoneContainerControl1.Controls.Add(this.txtMKM);
+            this.siticoneContainerControl1.Controls.Add(this.txtMKHT);
             this.siticoneContainerControl1.Controls.Add(this.label1);
             this.siticoneContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneContainerControl1.Location = new System.Drawing.Point(100, 100);
@@ -70,7 +72,7 @@
             this.label3.ForeColor = System.Drawing.Color.SlateBlue;
             this.label3.Location = new System.Drawing.Point(128, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 24);
+            this.label3.Size = new System.Drawing.Size(177, 22);
             this.label3.TabIndex = 13;
             this.label3.Text = "Nhập mật khẩu hiện tại";
             // 
@@ -82,7 +84,7 @@
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(128, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 24);
+            this.label2.Size = new System.Drawing.Size(240, 22);
             this.label2.TabIndex = 12;
             this.label2.Text = "Nhập và xác nhận mật khẩu mới";
             // 
@@ -103,71 +105,72 @@
             this.butSave.Text = "Lưu";
             this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
-            // siticoneTextBox5
+            // txtRMKM
             // 
-            this.siticoneTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox5.DefaultText = "";
-            this.siticoneTextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.siticoneTextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox5.ForeColor = System.Drawing.Color.SlateBlue;
-            this.siticoneTextBox5.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox5.Location = new System.Drawing.Point(132, 336);
-            this.siticoneTextBox5.Name = "siticoneTextBox5";
-            this.siticoneTextBox5.PasswordChar = '\0';
-            this.siticoneTextBox5.PlaceholderText = "Xác nhận mật khẩu mới";
-            this.siticoneTextBox5.SelectedText = "";
-            this.siticoneTextBox5.Size = new System.Drawing.Size(337, 50);
-            this.siticoneTextBox5.TabIndex = 10;
+            this.txtRMKM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.txtRMKM.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.txtRMKM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRMKM.DefaultText = "";
+            this.txtRMKM.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRMKM.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRMKM.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRMKM.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRMKM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.txtRMKM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRMKM.ForeColor = System.Drawing.Color.SlateBlue;
+            this.txtRMKM.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtRMKM.Location = new System.Drawing.Point(132, 336);
+            this.txtRMKM.Name = "txtRMKM";
+            this.txtRMKM.PasswordChar = '*';
+            this.txtRMKM.PlaceholderText = "Xác nhận mật khẩu mới";
+            this.txtRMKM.SelectedText = "";
+            this.txtRMKM.Size = new System.Drawing.Size(337, 50);
+            this.txtRMKM.TabIndex = 10;
+            this.txtRMKM.TextChanged += new System.EventHandler(this.txtRMKM_TextChanged);
             // 
-            // siticoneTextBox2
+            // txtMKM
             // 
-            this.siticoneTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox2.DefaultText = "";
-            this.siticoneTextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.siticoneTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox2.ForeColor = System.Drawing.Color.SlateBlue;
-            this.siticoneTextBox2.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox2.Location = new System.Drawing.Point(132, 280);
-            this.siticoneTextBox2.Name = "siticoneTextBox2";
-            this.siticoneTextBox2.PasswordChar = '\0';
-            this.siticoneTextBox2.PlaceholderText = "Mật khẩu mới";
-            this.siticoneTextBox2.SelectedText = "";
-            this.siticoneTextBox2.Size = new System.Drawing.Size(337, 50);
-            this.siticoneTextBox2.TabIndex = 7;
+            this.txtMKM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.txtMKM.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.txtMKM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMKM.DefaultText = "";
+            this.txtMKM.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMKM.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMKM.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMKM.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMKM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.txtMKM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMKM.ForeColor = System.Drawing.Color.SlateBlue;
+            this.txtMKM.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtMKM.Location = new System.Drawing.Point(132, 280);
+            this.txtMKM.Name = "txtMKM";
+            this.txtMKM.PasswordChar = '*';
+            this.txtMKM.PlaceholderText = "Mật khẩu mới";
+            this.txtMKM.SelectedText = "";
+            this.txtMKM.Size = new System.Drawing.Size(337, 50);
+            this.txtMKM.TabIndex = 7;
             // 
-            // siticoneTextBox1
+            // txtMKHT
             // 
-            this.siticoneTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox1.DefaultText = "";
-            this.siticoneTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox1.Location = new System.Drawing.Point(132, 182);
-            this.siticoneTextBox1.Name = "siticoneTextBox1";
-            this.siticoneTextBox1.PasswordChar = '\0';
-            this.siticoneTextBox1.PlaceholderText = "Mật khẩu hiện tại";
-            this.siticoneTextBox1.SelectedText = "";
-            this.siticoneTextBox1.Size = new System.Drawing.Size(337, 50);
-            this.siticoneTextBox1.TabIndex = 6;
+            this.txtMKHT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.txtMKHT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.txtMKHT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMKHT.DefaultText = "";
+            this.txtMKHT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMKHT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMKHT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMKHT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMKHT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.txtMKHT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMKHT.ForeColor = System.Drawing.Color.SlateBlue;
+            this.txtMKHT.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtMKHT.Location = new System.Drawing.Point(132, 182);
+            this.txtMKHT.Name = "txtMKHT";
+            this.txtMKHT.PasswordChar = '*';
+            this.txtMKHT.PlaceholderText = "Mật khẩu hiện tại";
+            this.txtMKHT.SelectedText = "";
+            this.txtMKHT.Size = new System.Drawing.Size(337, 50);
+            this.txtMKHT.TabIndex = 6;
             // 
             // label1
             // 
@@ -177,7 +180,7 @@
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(110, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(400, 84);
+            this.label1.Size = new System.Drawing.Size(380, 80);
             this.label1.TabIndex = 4;
             this.label1.Text = "Đổi mật khẩu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,6 +214,24 @@
             this.siticoneDragControl1.TargetControl = this;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.SuccDia.Text = null;
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.ErrorDia.Text = null;
+            // 
             // fChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,14 +255,16 @@
 
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl1;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butSave;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox5;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox2;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtRMKM;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtMKM;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtMKHT;
         private System.Windows.Forms.Label label1;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
     }
 }
