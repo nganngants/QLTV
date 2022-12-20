@@ -39,5 +39,10 @@ namespace GUI.UserControls
         {
             Binding();
         }
+
+        private void PhieuNhapgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

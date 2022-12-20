@@ -51,6 +51,10 @@ namespace BUS
         {
             return DALNguoiDung.Instance.GetNguoiDungById(id);
         }
+        public bool UpdMK(int id,string MatKhau)
+        {
+            return DALNguoiDung.Instance.UpdPassword(id, MatKhau);
+        }
         public String UpdNguoiDung(int id, string ten, DateTime NgaySinh, string ChucVu, int idNhomNguoiDung)
         {
             NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungById(id);
