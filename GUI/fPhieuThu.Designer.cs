@@ -36,9 +36,10 @@ namespace GUI
             this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label1 = new System.Windows.Forms.Label();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneComboBox1 = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.siticoneTextBox5 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.textTienThu = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.labelNoMoi = new System.Windows.Forms.Label();
+            this.labelNoHienTai = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateNgayLap = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
@@ -47,10 +48,13 @@ namespace GUI
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.topPanel = new System.Windows.Forms.Panel();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.labelNoHienTai = new System.Windows.Forms.Label();
-            this.labelNoMoi = new System.Windows.Forms.Label();
+            this.comboDocGia = new System.Windows.Forms.ComboBox();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siticonePanel1.SuspendLayout();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneControlBox2
@@ -91,6 +95,7 @@ namespace GUI
             this.butLogin.Size = new System.Drawing.Size(150, 50);
             this.butLogin.TabIndex = 70;
             this.butLogin.Text = "Lưu";
+            this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
             // 
             // label1
             // 
@@ -108,11 +113,11 @@ namespace GUI
             // siticonePanel1
             // 
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.siticonePanel1.Controls.Add(this.siticoneComboBox1);
+            this.siticonePanel1.Controls.Add(this.comboDocGia);
             this.siticonePanel1.Controls.Add(this.label1);
             this.siticonePanel1.Controls.Add(this.butLogin);
             this.siticonePanel1.Controls.Add(this.label3);
-            this.siticonePanel1.Controls.Add(this.siticoneTextBox5);
+            this.siticonePanel1.Controls.Add(this.textTienThu);
             this.siticonePanel1.Controls.Add(this.labelNoMoi);
             this.siticonePanel1.Controls.Add(this.labelNoHienTai);
             this.siticonePanel1.Controls.Add(this.label9);
@@ -127,21 +132,6 @@ namespace GUI
             this.siticonePanel1.Size = new System.Drawing.Size(793, 716);
             this.siticonePanel1.TabIndex = 68;
             // 
-            // siticoneComboBox1
-            // 
-            this.siticoneComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.siticoneComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.siticoneComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneComboBox1.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.siticoneComboBox1.ItemHeight = 30;
-            this.siticoneComboBox1.Location = new System.Drawing.Point(218, 191);
-            this.siticoneComboBox1.Name = "siticoneComboBox1";
-            this.siticoneComboBox1.Size = new System.Drawing.Size(368, 36);
-            this.siticoneComboBox1.TabIndex = 100;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -153,24 +143,48 @@ namespace GUI
             this.label3.TabIndex = 98;
             this.label3.Text = "Tổng nợ mới:";
             // 
-            // siticoneTextBox5
+            // textTienThu
             // 
-            this.siticoneTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox5.DefaultText = "";
-            this.siticoneTextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.siticoneTextBox5.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneTextBox5.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.siticoneTextBox5.Location = new System.Drawing.Point(218, 355);
-            this.siticoneTextBox5.Name = "siticoneTextBox5";
-            this.siticoneTextBox5.PasswordChar = '\0';
-            this.siticoneTextBox5.PlaceholderText = "";
-            this.siticoneTextBox5.SelectedText = "";
-            this.siticoneTextBox5.Size = new System.Drawing.Size(368, 51);
-            this.siticoneTextBox5.TabIndex = 96;
+            this.textTienThu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textTienThu.DefaultText = "";
+            this.textTienThu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textTienThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textTienThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textTienThu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textTienThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.textTienThu.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTienThu.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.textTienThu.Location = new System.Drawing.Point(218, 355);
+            this.textTienThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textTienThu.Name = "textTienThu";
+            this.textTienThu.PasswordChar = '\0';
+            this.textTienThu.PlaceholderText = "";
+            this.textTienThu.SelectedText = "";
+            this.textTienThu.Size = new System.Drawing.Size(368, 49);
+            this.textTienThu.TabIndex = 96;
+            this.textTienThu.TextChanged += new System.EventHandler(this.siticoneTextBox5_TextChanged);
+            // 
+            // labelNoMoi
+            // 
+            this.labelNoMoi.AutoSize = true;
+            this.labelNoMoi.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoMoi.ForeColor = System.Drawing.Color.SlateBlue;
+            this.labelNoMoi.Location = new System.Drawing.Point(213, 446);
+            this.labelNoMoi.Name = "labelNoMoi";
+            this.labelNoMoi.Size = new System.Drawing.Size(26, 31);
+            this.labelNoMoi.TabIndex = 94;
+            this.labelNoMoi.Text = "0";
+            // 
+            // labelNoHienTai
+            // 
+            this.labelNoHienTai.AutoSize = true;
+            this.labelNoHienTai.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoHienTai.ForeColor = System.Drawing.Color.SlateBlue;
+            this.labelNoHienTai.Location = new System.Drawing.Point(213, 283);
+            this.labelNoHienTai.Name = "labelNoHienTai";
+            this.labelNoHienTai.Size = new System.Drawing.Size(26, 31);
+            this.labelNoHienTai.TabIndex = 94;
+            this.labelNoHienTai.Text = "0";
             // 
             // label9
             // 
@@ -250,27 +264,42 @@ namespace GUI
             this.siticoneDragControl1.TargetControl = this.topPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // labelNoHienTai
+            // comboDocGia
             // 
-            this.labelNoHienTai.AutoSize = true;
-            this.labelNoHienTai.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoHienTai.ForeColor = System.Drawing.Color.SlateBlue;
-            this.labelNoHienTai.Location = new System.Drawing.Point(213, 283);
-            this.labelNoHienTai.Name = "labelNoHienTai";
-            this.labelNoHienTai.Size = new System.Drawing.Size(26, 31);
-            this.labelNoHienTai.TabIndex = 94;
-            this.labelNoHienTai.Text = "0";
+            this.comboDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboDocGia.DataSource = this.dOCGIABindingSource;
+            this.comboDocGia.DisplayMember = "MaDocGia";
+            this.comboDocGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboDocGia.FormattingEnabled = true;
+            this.comboDocGia.Location = new System.Drawing.Point(218, 192);
+            this.comboDocGia.Name = "comboDocGia";
+            this.comboDocGia.Size = new System.Drawing.Size(368, 35);
+            this.comboDocGia.TabIndex = 99;
+            this.comboDocGia.ValueMember = "ID";
+            this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
             // 
-            // labelNoMoi
+            // ErrorDia
             // 
-            this.labelNoMoi.AutoSize = true;
-            this.labelNoMoi.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoMoi.ForeColor = System.Drawing.Color.SlateBlue;
-            this.labelNoMoi.Location = new System.Drawing.Point(213, 446);
-            this.labelNoMoi.Name = "labelNoMoi";
-            this.labelNoMoi.Size = new System.Drawing.Size(26, 31);
-            this.labelNoMoi.TabIndex = 94;
-            this.labelNoMoi.Text = "0";
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.ErrorDia.Text = null;
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.SuccDia.Text = null;
+            // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
             // 
             // fPhieuThu
             // 
@@ -288,6 +317,7 @@ namespace GUI
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
             this.topPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,7 +329,7 @@ namespace GUI
         private Siticone.Desktop.UI.WinForms.SiticoneButton butLogin;
         private Label label1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox5;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox textTienThu;
         private Label label9;
         private Label label8;
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dateNgayLap;
@@ -308,9 +338,12 @@ namespace GUI
         private Label label3;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private Panel topPanel;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox siticoneComboBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
         private Label labelNoMoi;
         private Label labelNoHienTai;
+        private ComboBox comboDocGia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private BindingSource dOCGIABindingSource;
     }
 }

@@ -33,15 +33,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtHoTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.tACGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TacGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mATACGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenTacGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).BeginInit();
@@ -59,6 +63,21 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(1037, 121);
             this.siticonePanel1.TabIndex = 0;
+            // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Location = new System.Drawing.Point(469, 62);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // txtHoTen
             // 
@@ -102,6 +121,7 @@
             this.butDel.Text = "Xóa Tác Giả";
             this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.TextOffset = new System.Drawing.Point(3, 0);
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butAdd
             // 
@@ -153,7 +173,8 @@
             this.TacGiaGrid.ColumnHeadersHeight = 35;
             this.TacGiaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TacGiaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.isChosen,
+            this.id,
             this.mATACGIADataGridViewTextBoxColumn,
             this.tenTacGiaDataGridViewTextBoxColumn});
             this.TacGiaGrid.DataSource = this.tACGIABindingSource;
@@ -170,7 +191,6 @@
             this.TacGiaGrid.Location = new System.Drawing.Point(0, 121);
             this.TacGiaGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TacGiaGrid.Name = "TacGiaGrid";
-            this.TacGiaGrid.ReadOnly = true;
             this.TacGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.TacGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TacGiaGrid.RowHeadersVisible = false;
@@ -191,7 +211,7 @@
             this.TacGiaGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.TacGiaGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TacGiaGrid.ThemeStyle.HeaderStyle.Height = 35;
-            this.TacGiaGrid.ThemeStyle.ReadOnly = true;
+            this.TacGiaGrid.ThemeStyle.ReadOnly = false;
             this.TacGiaGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.TacGiaGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.TacGiaGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,16 +219,54 @@
             this.TacGiaGrid.ThemeStyle.RowsStyle.Height = 30;
             this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TacGiaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TacGiaGrid_CellClick);
             this.TacGiaGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.siticoneDataGridView1_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn
+            // SuccDia
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.SuccDia.Text = null;
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.ErrorDia.Text = null;
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.AskDia.Text = null;
+            // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Width = 6;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
             // 
             // mATACGIADataGridViewTextBoxColumn
             // 
@@ -216,7 +274,6 @@
             this.mATACGIADataGridViewTextBoxColumn.HeaderText = "Mã tác giả";
             this.mATACGIADataGridViewTextBoxColumn.MinimumWidth = 6;
             this.mATACGIADataGridViewTextBoxColumn.Name = "mATACGIADataGridViewTextBoxColumn";
-            this.mATACGIADataGridViewTextBoxColumn.ReadOnly = true;
             this.mATACGIADataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // tenTacGiaDataGridViewTextBoxColumn
@@ -225,23 +282,7 @@
             this.tenTacGiaDataGridViewTextBoxColumn.HeaderText = "Tên tác giả";
             this.tenTacGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenTacGiaDataGridViewTextBoxColumn.Name = "tenTacGiaDataGridViewTextBoxColumn";
-            this.tenTacGiaDataGridViewTextBoxColumn.ReadOnly = true;
             this.tenTacGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(469, 62);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 54);
-            this.butRefresh.TabIndex = 9;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // ucTacGia
             // 
@@ -267,9 +308,13 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtHoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn mATACGIADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTacGiaDataGridViewTextBoxColumn;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
     }
 }

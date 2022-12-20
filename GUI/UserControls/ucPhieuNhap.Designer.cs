@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.PhieuNhapgrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.SoPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHIEUNHAPSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapgrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPSACHBindingSource)).BeginInit();
@@ -52,6 +52,21 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(932, 120);
             this.topPanel.TabIndex = 0;
+            // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Location = new System.Drawing.Point(3, 66);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // PhieuNhapgrid
             // 
@@ -122,6 +137,7 @@
             this.PhieuNhapgrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuNhapgrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.PhieuNhapgrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhieuNhapgrid_CellClick);
+            this.PhieuNhapgrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhieuNhapgrid_CellContentClick);
             // 
             // SoPhieuNhap
             // 
@@ -150,21 +166,6 @@
             // pHIEUNHAPSACHBindingSource
             // 
             this.pHIEUNHAPSACHBindingSource.DataSource = typeof(DTO.PHIEUNHAPSACH);
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(3, 66);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 54);
-            this.butRefresh.TabIndex = 9;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // ucPhieuNhap
             // 

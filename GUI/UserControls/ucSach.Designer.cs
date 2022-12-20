@@ -35,47 +35,247 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butMaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.txtTenSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtMaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.butAddOld = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siticoneCreditCardValidationTool1 = new Siticone.Desktop.UI.Winforms.SiticoneCreditCardValidationTool();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.comboMaSach = new System.Windows.Forms.ComboBox();
-            this.comboTenTuaSach = new System.Windows.Forms.ComboBox();
+            this.siticoneContextMenuStrip1 = new Siticone.Desktop.UI.WinForms.SiticoneContextMenuStrip();
+            this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.butTenSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongConLaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhaXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.butSearch = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butAddOld = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.butTenSach);
             this.topPanel.Controls.Add(this.butRefresh);
-            this.topPanel.Controls.Add(this.butSearch);
-            this.topPanel.Controls.Add(this.comboTenTuaSach);
-            this.topPanel.Controls.Add(this.comboMaSach);
+            this.topPanel.Controls.Add(this.butMaSach);
             this.topPanel.Controls.Add(this.butDel);
             this.topPanel.Controls.Add(this.butAddOld);
+            this.topPanel.Controls.Add(this.txtTenSach);
             this.topPanel.Controls.Add(this.butAdd);
+            this.topPanel.Controls.Add(this.txtMaSach);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1264, 120);
             this.topPanel.TabIndex = 0;
+            // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Location = new System.Drawing.Point(419, 63);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.TabIndex = 8;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            // 
+            // butDel
+            // 
+            this.butDel.BorderRadius = 6;
+            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDel.ForeColor = System.Drawing.Color.White;
+            this.butDel.Image = global::GUI.Properties.Resources.close_icon;
+            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butDel.Location = new System.Drawing.Point(288, 78);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(134, 22);
+            this.butDel.TabIndex = 3;
+            this.butDel.Text = "Xóa Sách";
+            this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
+            // 
+            // butMaSach
+            // 
+            this.butMaSach.AutoRoundedCorners = true;
+            this.butMaSach.BorderRadius = 10;
+            this.butMaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butMaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butMaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butMaSach.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butMaSach.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butMaSach.ForeColor = System.Drawing.Color.White;
+            this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
+            this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
+            this.butMaSach.Location = new System.Drawing.Point(831, 36);
+            this.butMaSach.Name = "butMaSach";
+            this.butMaSach.Size = new System.Drawing.Size(129, 22);
+            this.butMaSach.TabIndex = 9;
+            this.butMaSach.Text = "Tìm kiếm";
+            this.butMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butMaSach.TextOffset = new System.Drawing.Point(3, 0);
+            this.butMaSach.Click += new System.EventHandler(this.butMaSach_Click);
+            // 
+            // txtTenSach
+            // 
+            this.txtTenSach.AllowDrop = true;
+            this.txtTenSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtTenSach.AutoRoundedCorners = true;
+            this.txtTenSach.BorderRadius = 11;
+            this.txtTenSach.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenSach.DefaultText = "";
+            this.txtTenSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenSach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenSach.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtTenSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenSach.Location = new System.Drawing.Point(619, 70);
+            this.txtTenSach.Name = "txtTenSach";
+            this.txtTenSach.PasswordChar = '\0';
+            this.txtTenSach.PlaceholderText = "Tên sách";
+            this.txtTenSach.SelectedText = "";
+            this.txtTenSach.Size = new System.Drawing.Size(201, 24);
+            this.txtTenSach.TabIndex = 12;
+            // 
+            // txtMaSach
+            // 
+            this.txtMaSach.AutoRoundedCorners = true;
+            this.txtMaSach.BorderRadius = 10;
+            this.txtMaSach.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaSach.DefaultText = "";
+            this.txtMaSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaSach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaSach.Location = new System.Drawing.Point(619, 36);
+            this.txtMaSach.Name = "txtMaSach";
+            this.txtMaSach.PasswordChar = '\0';
+            this.txtMaSach.PlaceholderText = "Mã sách";
+            this.txtMaSach.SelectedText = "";
+            this.txtMaSach.Size = new System.Drawing.Size(201, 22);
+            this.txtMaSach.TabIndex = 13;
+            this.txtMaSach.TextChanged += new System.EventHandler(this.txtMaSach_TextChanged);
+            // 
+            // butAddOld
+            // 
+            this.butAddOld.BorderRadius = 6;
+            this.butAddOld.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAddOld.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAddOld.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAddOld.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAddOld.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAddOld.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAddOld.ForeColor = System.Drawing.Color.White;
+            this.butAddOld.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAddOld.Location = new System.Drawing.Point(143, 78);
+            this.butAddOld.Name = "butAddOld";
+            this.butAddOld.Size = new System.Drawing.Size(142, 22);
+            this.butAddOld.TabIndex = 4;
+            this.butAddOld.Text = "Nhập Sách Đã Có";
+            this.butAddOld.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAddOld.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAddOld.Click += new System.EventHandler(this.butAddOld_Click);
+            // 
+            // butAdd
+            // 
+            this.butAdd.BorderRadius = 6;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(7, 78);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(134, 22);
+            this.butAdd.TabIndex = 4;
+            this.butAdd.Text = "Nhập Sách Mới";
+            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataSource = typeof(DTO.SACH);
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.SuccDia.Text = null;
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.AskDia.Text = null;
+            // 
+            // siticoneContextMenuStrip1
+            // 
+            this.siticoneContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.siticoneContextMenuStrip1.Name = "siticoneContextMenuStrip1";
+            this.siticoneContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.siticoneContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.siticoneContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.siticoneContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.siticoneContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.siticoneContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.siticoneContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.siticoneContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.siticoneContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.siticoneContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // SachGrid
             // 
@@ -152,52 +352,28 @@ namespace GUI.UserControls
             this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.SachGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
-            // ErrorDia
+            // butTenSach
             // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.SuccDia.Text = null;
-            // 
-            // AskDia
-            // 
-            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
-            this.AskDia.Caption = null;
-            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
-            this.AskDia.Parent = null;
-            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.AskDia.Text = null;
-            // 
-            // comboMaSach
-            // 
-            this.comboMaSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboMaSach.FormattingEnabled = true;
-            this.comboMaSach.Location = new System.Drawing.Point(570, 76);
-            this.comboMaSach.Name = "comboMaSach";
-            this.comboMaSach.Size = new System.Drawing.Size(139, 35);
-            this.comboMaSach.TabIndex = 5;
-            this.comboMaSach.Text = "Mã Sách";
-            // 
-            // comboTenTuaSach
-            // 
-            this.comboTenTuaSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboTenTuaSach.FormattingEnabled = true;
-            this.comboTenTuaSach.Location = new System.Drawing.Point(715, 76);
-            this.comboTenTuaSach.Name = "comboTenTuaSach";
-            this.comboTenTuaSach.Size = new System.Drawing.Size(140, 35);
-            this.comboTenTuaSach.TabIndex = 6;
-            this.comboTenTuaSach.Text = "Tên Tựa Sách";
+            this.butTenSach.AutoRoundedCorners = true;
+            this.butTenSach.BorderRadius = 10;
+            this.butTenSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butTenSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butTenSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butTenSach.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butTenSach.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butTenSach.ForeColor = System.Drawing.Color.White;
+            this.butTenSach.Image = global::GUI.Properties.Resources.search_icon;
+            this.butTenSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butTenSach.ImageOffset = new System.Drawing.Point(3, 0);
+            this.butTenSach.Location = new System.Drawing.Point(831, 73);
+            this.butTenSach.Name = "butTenSach";
+            this.butTenSach.Size = new System.Drawing.Size(129, 22);
+            this.butTenSach.TabIndex = 14;
+            this.butTenSach.Text = "Tìm kiếm";
+            this.butTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butTenSach.TextOffset = new System.Drawing.Point(3, 0);
+            this.butTenSach.Click += new System.EventHandler(this.butTenSach_Click);
             // 
             // isChosen
             // 
@@ -212,16 +388,6 @@ namespace GUI.UserControls
             this.isChosen.TrueValue = "1";
             this.isChosen.Width = 21;
             // 
-            // TuaSach
-            // 
-            this.TuaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TuaSach.HeaderText = "Tựa Sách";
-            this.TuaSach.MinimumWidth = 6;
-            this.TuaSach.Name = "TuaSach";
-            this.TuaSach.ReadOnly = true;
-            this.TuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TuaSach.Width = 118;
-            // 
             // id
             // 
             this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -234,14 +400,25 @@ namespace GUI.UserControls
             // 
             // maSachDataGridViewTextBoxColumn
             // 
+            this.maSachDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
             this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã sách";
             this.maSachDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
             this.maSachDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // TuaSach
+            // 
+            this.TuaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TuaSach.HeaderText = "Tựa Sách";
+            this.TuaSach.MinimumWidth = 6;
+            this.TuaSach.Name = "TuaSach";
+            this.TuaSach.ReadOnly = true;
+            this.TuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // soLuongDataGridViewTextBoxColumn
             // 
+            this.soLuongDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
             this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số lượng";
             this.soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -250,6 +427,7 @@ namespace GUI.UserControls
             // 
             // soLuongConLaiDataGridViewTextBoxColumn
             // 
+            this.soLuongConLaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.soLuongConLaiDataGridViewTextBoxColumn.DataPropertyName = "SoLuongConLai";
             this.soLuongConLaiDataGridViewTextBoxColumn.HeaderText = "Còn lại";
             this.soLuongConLaiDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -258,6 +436,7 @@ namespace GUI.UserControls
             // 
             // donGiaDataGridViewTextBoxColumn
             // 
+            this.donGiaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
             this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn giá";
             this.donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -266,6 +445,7 @@ namespace GUI.UserControls
             // 
             // namXBDataGridViewTextBoxColumn
             // 
+            this.namXBDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.namXBDataGridViewTextBoxColumn.DataPropertyName = "NamXB";
             this.namXBDataGridViewTextBoxColumn.HeaderText = "Năm XB";
             this.namXBDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -274,117 +454,12 @@ namespace GUI.UserControls
             // 
             // nhaXBDataGridViewTextBoxColumn
             // 
+            this.nhaXBDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nhaXBDataGridViewTextBoxColumn.DataPropertyName = "NhaXB";
             this.nhaXBDataGridViewTextBoxColumn.HeaderText = "NXB";
             this.nhaXBDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nhaXBDataGridViewTextBoxColumn.Name = "nhaXBDataGridViewTextBoxColumn";
             this.nhaXBDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sACHBindingSource
-            // 
-            this.sACHBindingSource.DataSource = typeof(DTO.SACH);
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(419, 63);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 54);
-            this.butRefresh.TabIndex = 8;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
-            // 
-            // butSearch
-            // 
-            this.butSearch.BorderRadius = 4;
-            this.butSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butSearch.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butSearch.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butSearch.ForeColor = System.Drawing.Color.White;
-            this.butSearch.Image = global::GUI.Properties.Resources.search_icon;
-            this.butSearch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butSearch.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butSearch.Location = new System.Drawing.Point(861, 76);
-            this.butSearch.Name = "butSearch";
-            this.butSearch.Size = new System.Drawing.Size(129, 22);
-            this.butSearch.TabIndex = 7;
-            this.butSearch.Text = "Tìm kiếm";
-            this.butSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butSearch.TextOffset = new System.Drawing.Point(3, 0);
-            // 
-            // butDel
-            // 
-            this.butDel.BorderRadius = 6;
-            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDel.ForeColor = System.Drawing.Color.White;
-            this.butDel.Image = global::GUI.Properties.Resources.close_icon;
-            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(288, 78);
-            this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(134, 22);
-            this.butDel.TabIndex = 3;
-            this.butDel.Text = "Xóa Sách";
-            this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
-            this.butDel.Click += new System.EventHandler(this.butDel_Click);
-            // 
-            // butAddOld
-            // 
-            this.butAddOld.BorderRadius = 6;
-            this.butAddOld.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAddOld.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAddOld.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAddOld.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAddOld.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butAddOld.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAddOld.ForeColor = System.Drawing.Color.White;
-            this.butAddOld.Image = global::GUI.Properties.Resources.Plus_icon;
-            this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAddOld.Location = new System.Drawing.Point(143, 78);
-            this.butAddOld.Name = "butAddOld";
-            this.butAddOld.Size = new System.Drawing.Size(142, 22);
-            this.butAddOld.TabIndex = 4;
-            this.butAddOld.Text = "Nhập Sách Đã Có";
-            this.butAddOld.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAddOld.TextOffset = new System.Drawing.Point(3, 0);
-            this.butAddOld.Click += new System.EventHandler(this.butAddOld_Click);
-            // 
-            // butAdd
-            // 
-            this.butAdd.BorderRadius = 6;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
-            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(7, 78);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(134, 22);
-            this.butAdd.TabIndex = 4;
-            this.butAdd.Text = "Nhập Sách Mới";
-            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
-            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // ucSach
             // 
@@ -396,8 +471,8 @@ namespace GUI.UserControls
             this.Size = new System.Drawing.Size(1264, 596);
             this.Load += new System.EventHandler(this.ucSach_Load);
             this.topPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,7 +480,6 @@ namespace GUI.UserControls
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView SachGrid;
         private Siticone.Desktop.UI.Winforms.SiticoneCreditCardValidationTool siticoneCreditCardValidationTool1;
         private BindingSource sACHBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
@@ -417,9 +491,13 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butSearch;
-        private ComboBox comboTenTuaSach;
-        private ComboBox comboMaSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butMaSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtMaSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneContextMenuStrip siticoneContextMenuStrip1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView SachGrid;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butTenSach;
         private DataGridViewCheckBoxColumn isChosen;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn maSachDataGridViewTextBoxColumn;
@@ -429,6 +507,5 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn namXBDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nhaXBDataGridViewTextBoxColumn;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
     }
 }

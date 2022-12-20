@@ -34,7 +34,7 @@ namespace BUS
         {
             TACGIA tg = DALTacGia.Instance.GetTacGiaById(id);
             if (tg == null) return "Mã tác giả không hợp lệ ";
-            if (DALTacGia.Instance.DelTacGia(id))
+            if (DALTacGia.Instance.DelTacGia(tg.id))
                 return "";
             return "Khong the xoa tac gia";
         }
