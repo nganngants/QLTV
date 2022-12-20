@@ -79,5 +79,10 @@ namespace GUI.UserControls
                 SuccDia.Show("Đã xoá thành công " + cnt + " loại độc giả");
             Binding();
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding();
+        }
     }
 }

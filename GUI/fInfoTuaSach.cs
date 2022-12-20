@@ -39,8 +39,8 @@ namespace GUI
             {
                 tacgia += tg.TenTacGia + ", ";
             }
-            tacgia.Remove(tacgia.Length - 1);
-            tacgia.Remove(tacgia.Length - 1);
+            if (tacgia != "") tacgia.Remove(tacgia.Length - 1);
+            if (tacgia != "") tacgia.Remove(tacgia.Length - 1);
             labelTacGia.Text = tacgia;
         }
         private void butChange_Click(object sender, EventArgs e)

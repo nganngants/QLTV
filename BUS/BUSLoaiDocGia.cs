@@ -23,6 +23,11 @@ namespace BUS
         {
             return DALLoaiDocGia.Instance.GetAllLoaiDocGia();
         }
+
+        public LOAIDOCGIA GetLoaiDocGiaById(int id)
+        {
+            return DALLoaiDocGia.Instance.GetLoaiDocGiaById(id);
+        }
         public string DelLoaiDocGia(int id)
         {
             if (DALLoaiDocGia.Instance.DelLoaiDocGia(id))

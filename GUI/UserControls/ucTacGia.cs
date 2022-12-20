@@ -33,5 +33,10 @@ namespace GUI.UserControls
         {
 
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding();
+        }
     }
 }

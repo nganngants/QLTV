@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.controlPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.miniControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
@@ -42,14 +43,7 @@
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label6 = new System.Windows.Forms.Label();
-            this.siticoneDataGridView1 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.soPhieuNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanhTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pHIEUNHAPSACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.cTPHIEUNHAPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,10 +52,16 @@
             this.labelSoPhieu = new System.Windows.Forms.Label();
             this.labelNgayNhap = new System.Windows.Forms.Label();
             this.labelTongTien = new System.Windows.Forms.Label();
+            this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPHIEUNHAPBindingSource)).BeginInit();
             this.tableInfo.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +80,7 @@
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(1500, 54);
+            this.controlPanel.Size = new System.Drawing.Size(1236, 54);
             this.controlPanel.TabIndex = 4;
             // 
             // miniControlBox
@@ -89,7 +89,7 @@
             this.miniControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.miniControlBox.Location = new System.Drawing.Point(1377, 0);
+            this.miniControlBox.Location = new System.Drawing.Point(1113, 0);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(60, 54);
             this.miniControlBox.TabIndex = 0;
@@ -99,7 +99,7 @@
             this.closeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.closeControlBox.Location = new System.Drawing.Point(1439, 0);
+            this.closeControlBox.Location = new System.Drawing.Point(1175, 0);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(61, 54);
             this.closeControlBox.TabIndex = 0;
@@ -111,7 +111,7 @@
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 54);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(1500, 68);
+            this.siticonePanel1.Size = new System.Drawing.Size(1236, 68);
             this.siticonePanel1.TabIndex = 5;
             // 
             // siticoneSeparator1
@@ -122,7 +122,7 @@
             this.siticoneSeparator1.FillThickness = 2;
             this.siticoneSeparator1.Location = new System.Drawing.Point(94, 52);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
-            this.siticoneSeparator1.Size = new System.Drawing.Size(1269, 10);
+            this.siticoneSeparator1.Size = new System.Drawing.Size(1005, 10);
             this.siticoneSeparator1.TabIndex = 5;
             // 
             // label1
@@ -132,7 +132,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(577, 14);
+            this.label1.Location = new System.Drawing.Point(445, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(347, 37);
             this.label1.TabIndex = 4;
@@ -145,7 +145,7 @@
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel2.Location = new System.Drawing.Point(0, 234);
             this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(1500, 68);
+            this.siticonePanel2.Size = new System.Drawing.Size(1236, 68);
             this.siticonePanel2.TabIndex = 7;
             // 
             // siticoneSeparator2
@@ -156,7 +156,7 @@
             this.siticoneSeparator2.FillThickness = 2;
             this.siticoneSeparator2.Location = new System.Drawing.Point(94, 52);
             this.siticoneSeparator2.Name = "siticoneSeparator2";
-            this.siticoneSeparator2.Size = new System.Drawing.Size(1269, 10);
+            this.siticoneSeparator2.Size = new System.Drawing.Size(1005, 10);
             this.siticoneSeparator2.TabIndex = 5;
             // 
             // label6
@@ -166,123 +166,88 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label6.Location = new System.Drawing.Point(597, 14);
+            this.label6.Location = new System.Drawing.Point(465, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(306, 37);
             this.label6.TabIndex = 4;
             this.label6.Text = "CHI TIẾT PHIẾU NHẬP";
             // 
-            // siticoneDataGridView1
+            // dataGrid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.siticoneDataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.siticoneDataGridView1.ColumnHeadersHeight = 18;
-            this.siticoneDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.soPhieuNhapDataGridViewTextBoxColumn,
-            this.idSachDataGridViewTextBoxColumn,
-            this.donGiaDataGridViewTextBoxColumn,
-            this.thanhTienDataGridViewTextBoxColumn,
-            this.soLuongNhapDataGridViewTextBoxColumn,
-            this.sACHDataGridViewTextBoxColumn,
-            this.pHIEUNHAPSACHDataGridViewTextBoxColumn});
-            this.siticoneDataGridView1.DataSource = this.cTPHIEUNHAPBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.siticoneDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticoneDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.Location = new System.Drawing.Point(0, 302);
-            this.siticoneDataGridView1.Name = "siticoneDataGridView1";
-            this.siticoneDataGridView1.RowHeadersVisible = false;
-            this.siticoneDataGridView1.RowHeadersWidth = 51;
-            this.siticoneDataGridView1.RowTemplate.Height = 24;
-            this.siticoneDataGridView1.Size = new System.Drawing.Size(1500, 698);
-            this.siticoneDataGridView1.TabIndex = 8;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.siticoneDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Height = 18;
-            this.siticoneDataGridView1.ThemeStyle.ReadOnly = false;
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // soPhieuNhapDataGridViewTextBoxColumn
-            // 
-            this.soPhieuNhapDataGridViewTextBoxColumn.DataPropertyName = "SoPhieuNhap";
-            this.soPhieuNhapDataGridViewTextBoxColumn.HeaderText = "SoPhieuNhap";
-            this.soPhieuNhapDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soPhieuNhapDataGridViewTextBoxColumn.Name = "soPhieuNhapDataGridViewTextBoxColumn";
-            // 
-            // idSachDataGridViewTextBoxColumn
-            // 
-            this.idSachDataGridViewTextBoxColumn.DataPropertyName = "idSach";
-            this.idSachDataGridViewTextBoxColumn.HeaderText = "idSach";
-            this.idSachDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idSachDataGridViewTextBoxColumn.Name = "idSachDataGridViewTextBoxColumn";
-            // 
-            // donGiaDataGridViewTextBoxColumn
-            // 
-            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.HeaderText = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
-            // 
-            // thanhTienDataGridViewTextBoxColumn
-            // 
-            this.thanhTienDataGridViewTextBoxColumn.DataPropertyName = "ThanhTien";
-            this.thanhTienDataGridViewTextBoxColumn.HeaderText = "ThanhTien";
-            this.thanhTienDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.thanhTienDataGridViewTextBoxColumn.Name = "thanhTienDataGridViewTextBoxColumn";
-            // 
-            // soLuongNhapDataGridViewTextBoxColumn
-            // 
-            this.soLuongNhapDataGridViewTextBoxColumn.DataPropertyName = "SoLuongNhap";
-            this.soLuongNhapDataGridViewTextBoxColumn.HeaderText = "SoLuongNhap";
-            this.soLuongNhapDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soLuongNhapDataGridViewTextBoxColumn.Name = "soLuongNhapDataGridViewTextBoxColumn";
-            // 
-            // sACHDataGridViewTextBoxColumn
-            // 
-            this.sACHDataGridViewTextBoxColumn.DataPropertyName = "SACH";
-            this.sACHDataGridViewTextBoxColumn.HeaderText = "SACH";
-            this.sACHDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sACHDataGridViewTextBoxColumn.Name = "sACHDataGridViewTextBoxColumn";
-            // 
-            // pHIEUNHAPSACHDataGridViewTextBoxColumn
-            // 
-            this.pHIEUNHAPSACHDataGridViewTextBoxColumn.DataPropertyName = "PHIEUNHAPSACH";
-            this.pHIEUNHAPSACHDataGridViewTextBoxColumn.HeaderText = "PHIEUNHAPSACH";
-            this.pHIEUNHAPSACHDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pHIEUNHAPSACHDataGridViewTextBoxColumn.Name = "pHIEUNHAPSACHDataGridViewTextBoxColumn";
+            this.dataGrid.AllowUserToAddRows = false;
+            this.dataGrid.AllowUserToDeleteRows = false;
+            this.dataGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGrid.ColumnHeadersHeight = 30;
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaSach,
+            this.TuaSach,
+            this.DonGia,
+            this.SoLuongNhap,
+            this.ThanhTien});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGrid.Location = new System.Drawing.Point(0, 302);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.ReadOnly = true;
+            this.dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGrid.RowHeadersVisible = false;
+            this.dataGrid.RowHeadersWidth = 51;
+            this.dataGrid.RowTemplate.Height = 24;
+            this.dataGrid.Size = new System.Drawing.Size(1236, 698);
+            this.dataGrid.TabIndex = 8;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGrid.ThemeStyle.HeaderStyle.Height = 30;
+            this.dataGrid.ThemeStyle.ReadOnly = true;
+            this.dataGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGrid.ThemeStyle.RowsStyle.Height = 24;
+            this.dataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // cTPHIEUNHAPBindingSource
             // 
@@ -342,7 +307,7 @@
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableInfo.Size = new System.Drawing.Size(1500, 112);
+            this.tableInfo.Size = new System.Drawing.Size(1236, 112);
             this.tableInfo.TabIndex = 6;
             // 
             // labelSoPhieu
@@ -350,7 +315,7 @@
             this.labelSoPhieu.AutoSize = true;
             this.labelSoPhieu.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSoPhieu.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelSoPhieu.Location = new System.Drawing.Point(602, 7);
+            this.labelSoPhieu.Location = new System.Drawing.Point(497, 7);
             this.labelSoPhieu.Name = "labelSoPhieu";
             this.labelSoPhieu.Size = new System.Drawing.Size(21, 27);
             this.labelSoPhieu.TabIndex = 0;
@@ -361,7 +326,7 @@
             this.labelNgayNhap.AutoSize = true;
             this.labelNgayNhap.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayNhap.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelNgayNhap.Location = new System.Drawing.Point(602, 39);
+            this.labelNgayNhap.Location = new System.Drawing.Point(497, 39);
             this.labelNgayNhap.Name = "labelNgayNhap";
             this.labelNgayNhap.Size = new System.Drawing.Size(20, 27);
             this.labelNgayNhap.TabIndex = 0;
@@ -372,19 +337,60 @@
             this.labelTongTien.AutoSize = true;
             this.labelTongTien.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongTien.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelTongTien.Location = new System.Drawing.Point(602, 71);
+            this.labelTongTien.Location = new System.Drawing.Point(497, 71);
             this.labelTongTien.Name = "labelTongTien";
             this.labelTongTien.Size = new System.Drawing.Size(21, 27);
             this.labelTongTien.TabIndex = 0;
             this.labelTongTien.Text = "x";
+            // 
+            // siticoneDragControl1
+            // 
+            this.siticoneDragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneDragControl1.TargetControl = this.controlPanel;
+            this.siticoneDragControl1.UseTransparentDrag = true;
+            // 
+            // MaSach
+            // 
+            this.MaSach.HeaderText = "Mã Sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // TuaSach
+            // 
+            this.TuaSach.HeaderText = "Tên Tựa Sách";
+            this.TuaSach.MinimumWidth = 6;
+            this.TuaSach.Name = "TuaSach";
+            this.TuaSach.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // SoLuongNhap
+            // 
+            this.SoLuongNhap.HeaderText = "Số Lượng Nhập";
+            this.SoLuongNhap.MinimumWidth = 6;
+            this.SoLuongNhap.Name = "SoLuongNhap";
+            this.SoLuongNhap.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
             // 
             // fInfoPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1500, 1000);
-            this.Controls.Add(this.siticoneDataGridView1);
+            this.ClientSize = new System.Drawing.Size(1236, 1000);
+            this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.siticonePanel2);
             this.Controls.Add(this.tableInfo);
             this.Controls.Add(this.siticonePanel1);
@@ -398,7 +404,7 @@
             this.siticonePanel1.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPHIEUNHAPBindingSource)).EndInit();
             this.tableInfo.ResumeLayout(false);
             this.tableInfo.PerformLayout();
@@ -415,14 +421,7 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         private System.Windows.Forms.Label label1;
-        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView siticoneDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soPhieuNhapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idSachDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thanhTienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongNhapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sACHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pHIEUNHAPSACHDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneDataGridView dataGrid;
         private System.Windows.Forms.BindingSource cTPHIEUNHAPBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
@@ -434,5 +433,11 @@
         private System.Windows.Forms.Label labelSoPhieu;
         private System.Windows.Forms.Label labelNgayNhap;
         private System.Windows.Forms.Label labelTongTien;
+        private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TuaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }

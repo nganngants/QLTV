@@ -25,5 +25,19 @@ namespace GUI.UserControls
             PhieuNhapList = BUSPhieuNhap.Instance.GetAllPhieuNhap();
             PhieuNhapgrid.DataSource = PhieuNhapList;   
         }
+
+        private void PhieuNhapgrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int stt = e.RowIndex;
+            if (stt == -1) return;
+            int idPhieu = (int)PhieuNhapgrid.Rows[stt].Cells["SoPhieuNhap"].Value;
+            var f = new fInfoPhieuNhap(idPhieu);
+            f.ShowDialog();
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding();
+        }
     }
 }

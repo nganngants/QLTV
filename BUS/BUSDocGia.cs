@@ -76,9 +76,38 @@ namespace BUS
                 
             if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
                 return "Tuổi không đúng";
+
+            var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(idLDG);
+            if (ldg == null) return "Loai Doc Gia khong hop le";
             if (DALDocGia.Instance.AddDocGia(ten, NgaySinh, DiaChi, Email, NgayLapThe, NgayHetHan, idLDG, 0))
                 return "";
             return "Lỗi khi thêm độc giả";
+        }
+
+        public string UpdDocGia(int id, string ten, int? idLDG, string Email, string diaChi, DateTime? NgaySinh)
+        {
+            var dg = GetDocGia(id);
+            if (NgaySinh != null)
+            {
+                var NgayLapThe = dg.NgayLapThe;
+                THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
+                int gap = NgayLapThe.Year - NgaySinh.Value.Year;
+                if (NgayLapThe.Month < NgaySinh.Value.Month || (NgayLapThe.Month == NgaySinh.Value.Month && NgayLapThe.Day < NgaySinh.Value.Day))
+                    gap -= 1;
+
+                if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
+                    return "Tuổi không đúng";
+                if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
+                    return "Tuổi không đúng";
+            }
+            if (idLDG != null)
+            {
+                var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById((int)idLDG);
+                if (ldg == null) return "Loai Doc Gia khong hop le";
+            }
+            if(DALDocGia.Instance.UpdDocGia(id, ten, NgaySinh, diaChi, Email, null, idLDG))
+                return "";
+            return "Sua thong tin that bai";
         }
     }
 }
