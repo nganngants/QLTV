@@ -34,7 +34,7 @@ namespace GUI.UserControls
             img = (Image)(new Bitmap(img, new Size(20, 20)));
 
             foreach (NGUOIDUNG nd in NguoiDungList)
-                dataGrid.Rows.Add(0,nd.id,nd.MaNguoiDung, 
+                dataGrid.Rows.Add(nd.id,"0", nd.MaNguoiDung, 
                     nd.TenNguoiDung,  nd.ChucVu, nd.TenDangNhap, nd.NHOMNGUOIDUNG.TenNhomNguoiDung,img);
         }
 
@@ -42,6 +42,7 @@ namespace GUI.UserControls
         {
             int stt = e.RowIndex;
             if (stt == -1) return;
+            if (e.ColumnIndex == 1) return;
             var f = new fInfoNguoiDung(BUSNguoiDung.Instance.GetNguoiDung(dataGrid.Rows[stt].Cells["MaNguoiDung"].Value.ToString()).id);
             f.Show();
             Bind(BUSNguoiDung.Instance.GetAllNguoiDung());

@@ -48,7 +48,7 @@ namespace GUI.UserControls
             dataGrid.Rows.Clear();
             foreach (var b in bc)
             {
-                dataGrid.Rows.Add(i, b.CUONSACH.MaCuonSach, b.CUONSACH.SACH.TUASACH.TenTuaSach, b.NgayMuon, b.SoNgayTre);
+                dataGrid.Rows.Add(i, b.CUONSACH.MaCuonSach, b.CUONSACH.SACH.TUASACH.TenTuaSach, b.NgayMuon.Value.ToShortDateString(), b.SoNgayTre);
                 i++;
             }
         }
