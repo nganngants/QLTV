@@ -23,6 +23,7 @@ namespace GUI.UserControls
         List<THELOAI> TheLoaiList;
         public void Binding()
         {
+            TheLoaiGrid.Rows.Clear();
             TheLoaiList = BUSTheLoai.Instance.GetAllTheLoai();
             int i = 0;
             foreach(THELOAI theLoai in TheLoaiList)
@@ -31,13 +32,17 @@ namespace GUI.UserControls
             }
         }
 
-        private void butDel_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void butRefresh_Click(object sender, EventArgs e)
         {
+            Binding();
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            var tentl = txtTenTL.Text;
+            if (tentl == "") return;
+            BUSTheLoai.Instance.AddTheLoai(tentl);
+            SuccDia.Show("Thêm thể loại thành công!");
             Binding();
         }
     }

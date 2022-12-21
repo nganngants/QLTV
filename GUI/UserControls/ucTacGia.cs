@@ -26,7 +26,12 @@ namespace GUI.UserControls
         }
         private void butAdd_Click(object sender, EventArgs e)
         {
-
+            var tentg = txtHoTen.Text;
+            if (tentg == "") return;
+            int id = BUSTacGia.Instance.AddTacGia(tentg);
+            if (id == -1) ErrorDia.Show("Có lỗi xảy ra. Không thể thêm tác giả. Vui lòng kiểm tra lại!");
+            else SuccDia.Show("Thêm tác giả mới thành công!");
+            Binding();
         }
 
         private void siticoneDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

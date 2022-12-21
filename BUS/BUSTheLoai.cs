@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using System.Diagnostics.Contracts;
+using System.Diagnostics.Eventing.Reader;
 
 namespace BUS
 {
@@ -40,6 +41,11 @@ namespace BUS
         public bool UpdTheLoai(int id,string name)
         {
             return DALTheLoai.Instance.UpdTheLoai(GetTheLoai(id).id, name);
+        }
+
+        public bool AddTheLoai (string name)
+        {
+            return DALTheLoai.Instance.AddTheLoai(name);
         }
     }
 }
