@@ -16,12 +16,14 @@ namespace GUI.UserControls
         public ucTuaSach()
         {
             InitializeComponent();
-            DataGridViewImageColumn iconColumn = new DataGridViewImageColumn();
+            comboTheLoai.DataSource = BUSTheLoai.Instance.GetAllTheLoai();
+            comboTheLoai.DisplayMember = "TenTheLoai";
+            comboTheLoai.ValueMember = "id";
+           
         }
-        private List<TUASACH> TuaSachList;
-        private void Binding()
+        private void Binding(List<TUASACH> TuaSachList)
         {
-            TuaSachList = BUSTuaSach.Instance.GetAllTuaSach();
+            
             this.TuaSachGrid.DataSource = TuaSachList;
             int i = 0;
             Image img = Properties.Resources.edit_icon;
@@ -52,31 +54,38 @@ namespace GUI.UserControls
         }
         private void ucTuaSach_Load(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
 
         private void butAdd_Click(object sender, EventArgs e)
         {
             var f = new fAddTuaSach();
             f.ShowDialog();
-            Binding();
+            Binding(BUSTuaSach.Instance.GetAllTuaSach());
+        }
+        private void Sorting(int idx)
+        {
+            this.TuaSachGrid.Sort(this.TuaSachGrid.Columns[idx], ListSortDirection.Ascending);
         }
 
         private void TuaSachGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-            if (idx == -1) return;
+            if (idx == -1)
+            {
+                Sorting(e.ColumnIndex); return;
+            }
             if (e.ColumnIndex == 0) return ;
             if(e.ColumnIndex == TuaSachGrid.Columns["Edit"].Index)
             {
                 var f = new fEditTuaSach((Convert.ToInt32(TuaSachGrid.Rows[idx].Cells["id"].Value)));
                 f.ShowDialog();
-                Binding();
+                Binding(BUSTuaSach.Instance.GetAllTuaSach());
                 return;
             }
             var fInfor = new fInfoTuaSach(Convert.ToInt32(TuaSachGrid.Rows[idx].Cells["id"].Value));
             fInfor.ShowDialog();
-            Binding();
+            Binding(BUSTuaSach.Instance.GetAllTuaSach());
             return;
         }
 
@@ -110,7 +119,7 @@ namespace GUI.UserControls
 
 
             SuccDia.Show("Đã xoá thành công " + cnt + " tựa sách");
-            Binding();
+            Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
 
         private void tUASACHBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -120,7 +129,51 @@ namespace GUI.UserControls
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSTuaSach.Instance.GetAllTuaSach());
+        }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butFind_Click(object sender, EventArgs e)
+        {
+            List<TUASACH> Res = new List<TUASACH>();
+            string pat = txtFind.Text.ToLower();
+            foreach(TUASACH ts in BUSTuaSach.Instance.GetAllTuaSach())
+            {
+                if (ts.TenTuaSach.ToLower().Contains(pat) || ts.MaTuaSach.ToLower().Contains(pat))
+                    Res.Add(ts);
+                else
+                {
+                    foreach(TACGIA tg in ts.TACGIAs)
+                        if(tg.TenTacGia.ToLower().Contains(pat))
+                        {
+                            Res.Add(ts);
+                            break;
+                        }
+                }
+            }
+            Binding(Res);
+
+        }
+
+        private void comboTheLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butFil_Click(object sender, EventArgs e)
+        {
+            List<TUASACH> Res = new List<TUASACH>();
+            THELOAI tl = BUSTheLoai.Instance.GetTheLoai((int)comboTheLoai.SelectedValue);
+            foreach (TUASACH ts in BUSTuaSach.Instance.GetAllTuaSach())
+            {
+                if (ts.THELOAI.id == tl.id)
+                    Res.Add(ts);
+            }
+            Binding(Res);
         }
     }
 }

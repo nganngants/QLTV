@@ -130,7 +130,7 @@ namespace GUI.UserControls
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PhieuThuGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.PhieuThuGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.PhieuThuGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PhieuThuGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuThuGrid.Location = new System.Drawing.Point(0, 120);
@@ -144,7 +144,7 @@ namespace GUI.UserControls
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PhieuThuGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.PhieuThuGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.PhieuThuGrid.RowHeadersVisible = false;
             this.PhieuThuGrid.RowHeadersWidth = 51;
             this.PhieuThuGrid.RowTemplate.Height = 30;

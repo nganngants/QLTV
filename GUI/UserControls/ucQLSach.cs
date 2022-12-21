@@ -67,7 +67,9 @@ namespace GUI.UserControls
         private void butCuonsach_Click_1(object sender, EventArgs e)
         {
             Control[] con = container.Controls.Find("cuonsach", false);
+            
             con[0].BringToFront();
+            //con[0].
         }
 
         private void butTacGia_Click(object sender, EventArgs e)
