@@ -66,26 +66,26 @@
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(897, 120);
+            this.siticonePanel1.Size = new System.Drawing.Size(897, 114);
             this.siticonePanel1.TabIndex = 0;
             // 
             // butFind
             // 
             this.butFind.AutoRoundedCorners = true;
-            this.butFind.BorderRadius = 10;
+            this.butFind.BorderRadius = 16;
             this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butFind.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butFind.FillColor = System.Drawing.Color.SlateBlue;
             this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
             this.butFind.ForeColor = System.Drawing.Color.White;
             this.butFind.Image = global::GUI.Properties.Resources.search_icon;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(607, 46);
+            this.butFind.Location = new System.Drawing.Point(723, 73);
             this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(129, 22);
+            this.butFind.Size = new System.Drawing.Size(129, 35);
             this.butFind.TabIndex = 16;
             this.butFind.Text = "Tìm kiếm";
             this.butFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -100,19 +100,19 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(299, 60);
+            this.butRefresh.Location = new System.Drawing.Point(371, 57);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.Size = new System.Drawing.Size(82, 66);
             this.butRefresh.TabIndex = 9;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // txtFind
             // 
             this.txtFind.AutoRoundedCorners = true;
-            this.txtFind.BorderRadius = 6;
+            this.txtFind.BorderRadius = 16;
             this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFind.DefaultText = "Tên, mã, chức vụ, ...";
+            this.txtFind.DefaultText = "";
             this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -121,13 +121,13 @@
             this.txtFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(410, 46);
+            this.txtFind.Location = new System.Drawing.Point(538, 72);
             this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderText = "Mã, tên, tác giả";
             this.txtFind.SelectedText = "";
-            this.txtFind.Size = new System.Drawing.Size(179, 15);
+            this.txtFind.Size = new System.Drawing.Size(179, 35);
             this.txtFind.TabIndex = 17;
             // 
             // butDel
@@ -137,15 +137,15 @@
             this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butDel.FillColor = System.Drawing.Color.SlateBlue;
             this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butDel.ForeColor = System.Drawing.Color.White;
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(155, 76);
+            this.butDel.Location = new System.Drawing.Point(192, 79);
             this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(138, 22);
+            this.butDel.Size = new System.Drawing.Size(173, 28);
             this.butDel.TabIndex = 5;
             this.butDel.Text = "Xóa Người Dùng";
             this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -159,15 +159,15 @@
             this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
             this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(3, 76);
+            this.butAdd.Location = new System.Drawing.Point(3, 79);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(146, 22);
+            this.butAdd.Size = new System.Drawing.Size(173, 28);
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Người Dùng";
             this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -215,14 +215,14 @@
             this.dataGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGrid.Location = new System.Drawing.Point(0, 120);
+            this.dataGrid.Location = new System.Drawing.Point(0, 114);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid.RowHeadersVisible = false;
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 30;
-            this.dataGrid.Size = new System.Drawing.Size(897, 513);
+            this.dataGrid.Size = new System.Drawing.Size(897, 519);
             this.dataGrid.TabIndex = 1;
             this.dataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGrid.ThemeStyle.AlternatingRowsStyle.Font = null;

@@ -65,10 +65,10 @@ namespace GUI
             string err = BUSTuaSach.Instance.UpdTuaSach(tuasach.id,TenTuaSach, tl, TgList);
             if (err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err);
                 return;
             }
-            SuccDia.Show("Chỉnh sửa tựa sách thành công");
+            MessageBox.Show("Chỉnh sửa tựa sách thành công");
             this.Close();
 
         }

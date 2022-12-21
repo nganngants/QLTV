@@ -176,7 +176,7 @@
             this.butChangePass.Location = new System.Drawing.Point(11, 486);
             this.butChangePass.Margin = new System.Windows.Forms.Padding(4);
             this.butChangePass.Name = "butChangePass";
-            this.butChangePass.Size = new System.Drawing.Size(108, 38);
+            this.butChangePass.Size = new System.Drawing.Size(124, 38);
             this.butChangePass.TabIndex = 6;
             this.butChangePass.Text = "Đổi mật khẩu";
             this.butChangePass.Click += new System.EventHandler(this.butChangePass_Click);

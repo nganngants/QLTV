@@ -55,21 +55,21 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " cuốn sách?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count + " cuốn sách?") == DialogResult.No) return;
             foreach (string id in idDel)
             {
             Retry:
                 string error = BUSCuonSach.Instance.DelCuonSach(id);
                 if (error != "")
                 {
-                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                    if (MessageBox.Show(error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
 
-            SuccDia.Show("Đã xoá thành công " + cnt + " cuốn sách");
+            MessageBox.Show("Đã xoá thành công " + cnt + " cuốn sách");
             Binding(BUSCuonSach.Instance.GetAllCuonSach());
         }
 

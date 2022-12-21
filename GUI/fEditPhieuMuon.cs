@@ -96,7 +96,7 @@ namespace GUI
             
             if(err!="")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err);
                 return;
             }
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
@@ -104,7 +104,7 @@ namespace GUI
             if (dateNgayTra.Value > PhieuMuon.HanTra)
                 TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
             err = BUSDocGia.Instance.UpdTongNo(PhieuMuon.DOCGIA.ID, (int)PhieuMuon.DOCGIA.TongNoHienTai + (int)(thamso.DonGiaPhat * TienPhat));
-            SuccDia.Show("Đã cập nhật phiếu mượn thành công");
+            MessageBox.Show("Đã cập nhật phiếu mượn thành công");
             this.Close();
         }
     }

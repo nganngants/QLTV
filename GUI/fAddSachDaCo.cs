@@ -47,7 +47,7 @@ namespace GUI
             int SoLuongNhap;
             if (txtSoLuongNhap.Text == "")
             {
-                ErrorDia.Show("Chưa điền số lượng nhập");
+                MessageBox.Show("Chưa điền số lượng nhập");
                 return;
             }
             try
@@ -56,7 +56,7 @@ namespace GUI
             }
             catch
             {
-                ErrorDia.Show("Sai format");
+                MessageBox.Show("Sai format");
                 return;
             }
             SACH sach = BUSSach.Instance.GetSach(Convert.ToInt32(comboSach.SelectedValue));
@@ -71,7 +71,7 @@ namespace GUI
             DateTime NgayNhap = dateNgayNhap.Value.Date;
             if(NgayNhap.Date > DateTime.Now)
             {
-                ErrorDia.Show("Ngày nhập không hợp lệ");
+                MessageBox.Show("Ngày nhập không hợp lệ");
                 return;
             }
             int pn = BUSPhieuNhap.Instance.AddPhieuNhap(NgayNhap);
@@ -84,7 +84,7 @@ namespace GUI
                 BUSCT_PhieuNhap.Instance.AddCtPhieuNhap(pn, id, DonGia, SoLuongNhap);
                 //Console.WriteLine("sdfsdf",id, DonGia, SoLuongNhap);
             }
-            SuccDia.Show("Thêm phiếu nhập thành công");
+            MessageBox.Show("Thêm phiếu nhập thành công");
             this.Close();
         }
     }
