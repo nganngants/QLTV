@@ -33,17 +33,21 @@ namespace BUS
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(maNhomNguoiDung);
             if(nnd == null)
             { return "Mã nhóm người dùng không đúng"; }
+            if (nnd.TenNhomNguoiDung == "Quan ly")
+                return "Không thể xoá nhóm người dùng này";
             if (DALNhomNguoiDung.Instance.DelNhomNguoiDung(nnd.id))
                 return "";
             return "Không thể xoá nhóm người dùng";
         }
         public int AddNhomNguoiDung(string tenNhom)
         {
+            if (tenNhom == "Quan ly") return -1;
             try
             {
                 int id = DALNhomNguoiDung.Instance.AddNhomNguoiDung(tenNhom);
                 return id;
             }
+            
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
@@ -55,6 +59,11 @@ namespace BUS
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
             if (nnd == null)
             { return "Mã nhóm người dùng không đúng"; }
+            if (name == "Quan ly") return "Không thể đặt tên này";
+            if(nnd.TenNhomNguoiDung=="Quan ly")
+            {
+                return "Không thể sửa nhóm người dùng này";
+            }
             if (DALNhomNguoiDung.Instance.UpdNhomNguoiDung(nnd.id, name))
                 return "";
             return "Không thể cập nhật nhóm người dùng";

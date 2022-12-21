@@ -15,21 +15,19 @@ namespace GUI.UserControls
 
     public partial class ucCuonSach : UserControl
     {
-        private List<CUONSACH> CuonSachList;
         public ucCuonSach()
         {
             InitializeComponent();
-            Binding();
+            Binding(BUSCuonSach.Instance.GetAllCuonSach());
             
         }
-        private void Binding()
+        private void Binding(List<CUONSACH> CuonSachList)
         {
-            CuonSachList = BUSCuonSach.Instance.GetAllCuonSach();
             CuonSachGrid.Rows.Clear();
             foreach(CUONSACH cs in CuonSachList)
             {
                 string TinhTrang = (cs.TinhTrang == 1) ? ("Còn") : ("Đã được mượn");
-                CuonSachGrid.Rows.Add(0,cs.MaCuonSach, cs.SACH.MaSach, cs.SACH.TUASACH.TenTuaSach, TinhTrang);
+                CuonSachGrid.Rows.Add(0,cs.MaCuonSach,cs.SACH.TUASACH.MaTuaSach, cs.SACH.MaSach, cs.SACH.TUASACH.TenTuaSach, TinhTrang);
             }
             
         }
@@ -40,7 +38,7 @@ namespace GUI.UserControls
         }
         private void ucCuonSach_Load(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSCuonSach.Instance.GetAllCuonSach());
         }
 
         private void butDel_Click(object sender, EventArgs e)
@@ -72,7 +70,7 @@ namespace GUI.UserControls
             }
 
             SuccDia.Show("Đã xoá thành công " + cnt + " cuốn sách");
-            Binding();
+            Binding(BUSCuonSach.Instance.GetAllCuonSach());
         }
 
         private void CuonSachGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -81,7 +79,7 @@ namespace GUI.UserControls
         }
         private void Sorting(int idx)
         {
-            this.CuonSachGrid.Sort(this.CuonSachGrid.Columns[idx], ListSortDirection.Ascending);
+            this.CuonSachGrid.Sort(this.CuonSachGrid.Columns[idx], ListSortDirection.Descending);
         }
         private void CuonSachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -94,7 +92,19 @@ namespace GUI.UserControls
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSCuonSach.Instance.GetAllCuonSach());
+        }
+
+        private void butMaSach_Click(object sender, EventArgs e)
+        {
+            string pat = txtMaSach.Text.ToLower();
+            var Res =new  List<CUONSACH>();
+            foreach(CUONSACH cs in BUSCuonSach.Instance.GetAllCuonSach())
+            {
+                if (cs.MaCuonSach.ToLower().Contains(pat) || cs.SACH.MaSach.ToLower().Contains(pat) || cs.SACH.TUASACH.MaTuaSach.ToLower().Contains(pat) || cs.SACH.TUASACH.TenTuaSach.ToLower().Contains(pat))
+                    Res.Add(cs);
+            }
+            Binding(Res);
         }
     }
 }

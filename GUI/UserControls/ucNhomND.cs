@@ -88,5 +88,10 @@ namespace GUI.UserControls
             SuccDia.Show("Đã xoá thành công " + cnt + " nhóm người dùng");
             Bind();
         }
+
+        private void NDGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
