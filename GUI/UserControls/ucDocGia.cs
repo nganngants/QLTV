@@ -3,6 +3,7 @@ using DTO;
 using GUI.BM;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 namespace GUI.UserControls
@@ -12,7 +13,7 @@ namespace GUI.UserControls
         public ucDocGia()
         {
             InitializeComponent();
-            Binding();
+            Binding(BUSDocGia.Instance.GetAllDocGia());
         }
 
         private void siticoneButton9_Click(object sender, EventArgs e)
@@ -31,10 +32,10 @@ namespace GUI.UserControls
         {
 
         }
-        private List<DOCGIA> DocGiaList;
-        private void Binding()
+
+        private void Binding(List<DOCGIA> DocGiaList)
         {
-            DocGiaList = BUSDocGia.Instance.GetAllDocGia();
+             
             DocGiaGrid.Rows.Clear();
             DocGiaGrid.Refresh();
             //this.DocGiaGrid.DataSource = DocGiaList;
@@ -57,7 +58,7 @@ namespace GUI.UserControls
         {
             var f = new fAddDocGia();
             f.ShowDialog();
-            Binding();
+            Binding(BUSDocGia.Instance.GetAllDocGia());
         }
 
         private void butDel_Click(object sender, EventArgs e)
@@ -88,31 +89,52 @@ namespace GUI.UserControls
             }
             if(cnt!=0)
                 SuccDia.Show("Đã xoá thành công " + cnt + " độc giả");
-            Binding();
+            Binding(BUSDocGia.Instance.GetAllDocGia());
             
         }
-
+        private void Sorting(int idx)
+        {
+            this.DocGiaGrid.Sort(this.DocGiaGrid.Columns[idx], ListSortDirection.Ascending);
+        }
         private void DocGiaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-            if (idx == -1) return;
+            if (idx == -1)
+            {
+                Sorting(e.ColumnIndex);
+                return;
+            }
             if (e.ColumnIndex == 1) return;
             if (e.ColumnIndex == DocGiaGrid.Columns["Edit"].Index)
             {
                 var f = new fEditDocGia((Convert.ToInt32(DocGiaGrid.Rows[idx].Cells["id"].Value)));
                 f.ShowDialog();
-                Binding();
+                Binding(BUSDocGia.Instance.GetAllDocGia());
                 return;
             }
             var fInfor = new fInfoDocGia(Convert.ToInt32(DocGiaGrid.Rows[idx].Cells["id"].Value));
             fInfor.ShowDialog();
-            Binding();
+            Binding(BUSDocGia.Instance.GetAllDocGia());
             return;
         }
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSDocGia.Instance.GetAllDocGia());
+        }
+
+        private void butFind_Click(object sender, EventArgs e)
+        {
+            string pat = txtFind.Text.ToLower();
+            List<DOCGIA> Res = new List<DOCGIA>();
+            foreach(DOCGIA dg in BUSDocGia.Instance.GetAllDocGia())
+            {
+                if(dg.MaDocGia.ToLower().Contains(pat) || dg.TenDocGia.ToLower().Contains(pat))
+                {
+                    Res.Add(dg);
+                }
+            }
+            Binding(Res);
         }
     }
 }

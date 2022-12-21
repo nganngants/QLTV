@@ -79,10 +79,17 @@ namespace GUI.UserControls
         {
 
         }
-
+        private void Sorting(int idx)
+        {
+            this.CuonSachGrid.Sort(this.CuonSachGrid.Columns[idx], ListSortDirection.Ascending);
+        }
         private void CuonSachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if(e.RowIndex == -1)
+            {
+                Sorting(e.ColumnIndex);
+                return;
+            }
         }
 
         private void butRefresh_Click(object sender, EventArgs e)

@@ -63,11 +63,18 @@ namespace GUI.UserControls
             f.ShowDialog();
             Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
+        private void Sorting(int idx)
+        {
+            this.TuaSachGrid.Sort(this.TuaSachGrid.Columns[idx], ListSortDirection.Ascending);
+        }
 
         private void TuaSachGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-            if (idx == -1) return;
+            if (idx == -1)
+            {
+                Sorting(e.ColumnIndex); return;
+            }
             if (e.ColumnIndex == 0) return ;
             if(e.ColumnIndex == TuaSachGrid.Columns["Edit"].Index)
             {
