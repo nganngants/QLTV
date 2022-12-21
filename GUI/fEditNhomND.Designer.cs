@@ -37,6 +37,11 @@
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.dsChucNang = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.isChoosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenManHinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenNhom = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -45,11 +50,6 @@
             this.cHUCNANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.messageDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.isChoosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenManHinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsChucNang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUCNANGBindingSource)).BeginInit();
@@ -108,18 +108,22 @@
             this.dsChucNang.AllowUserToResizeColumns = false;
             this.dsChucNang.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dsChucNang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dsChucNang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dsChucNang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dsChucNang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dsChucNang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dsChucNang.ColumnHeadersHeight = 34;
+            this.dsChucNang.ColumnHeadersHeight = 35;
             this.dsChucNang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dsChucNang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChoosen,
@@ -166,6 +170,45 @@
             this.dsChucNang.ThemeStyle.RowsStyle.Height = 30;
             this.dsChucNang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dsChucNang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // isChoosen
+            // 
+            this.isChoosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.isChoosen.FalseValue = "0";
+            this.isChoosen.HeaderText = "";
+            this.isChoosen.MinimumWidth = 6;
+            this.isChoosen.Name = "isChoosen";
+            this.isChoosen.TrueValue = "1";
+            this.isChoosen.Width = 30;
+            // 
+            // idCol
+            // 
+            this.idCol.HeaderText = "id";
+            this.idCol.MinimumWidth = 6;
+            this.idCol.Name = "idCol";
+            this.idCol.ReadOnly = true;
+            this.idCol.Visible = false;
+            // 
+            // MaChucNang
+            // 
+            this.MaChucNang.HeaderText = "Mã Chức Năng";
+            this.MaChucNang.MinimumWidth = 6;
+            this.MaChucNang.Name = "MaChucNang";
+            this.MaChucNang.ReadOnly = true;
+            // 
+            // TenChucNang
+            // 
+            this.TenChucNang.HeaderText = "Tên Chức Năng";
+            this.TenChucNang.MinimumWidth = 6;
+            this.TenChucNang.Name = "TenChucNang";
+            this.TenChucNang.ReadOnly = true;
+            // 
+            // TenManHinh
+            // 
+            this.TenManHinh.HeaderText = "Tên Màn Hình";
+            this.TenManHinh.MinimumWidth = 6;
+            this.TenManHinh.Name = "TenManHinh";
+            this.TenManHinh.ReadOnly = true;
             // 
             // butSave
             // 
@@ -260,45 +303,6 @@
             this.messageDia.Parent = null;
             this.messageDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.messageDia.Text = null;
-            // 
-            // isChoosen
-            // 
-            this.isChoosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.isChoosen.FalseValue = "0";
-            this.isChoosen.HeaderText = "";
-            this.isChoosen.MinimumWidth = 6;
-            this.isChoosen.Name = "isChoosen";
-            this.isChoosen.TrueValue = "1";
-            this.isChoosen.Width = 30;
-            // 
-            // idCol
-            // 
-            this.idCol.HeaderText = "id";
-            this.idCol.MinimumWidth = 6;
-            this.idCol.Name = "idCol";
-            this.idCol.ReadOnly = true;
-            this.idCol.Visible = false;
-            // 
-            // MaChucNang
-            // 
-            this.MaChucNang.HeaderText = "Mã Chức Năng";
-            this.MaChucNang.MinimumWidth = 6;
-            this.MaChucNang.Name = "MaChucNang";
-            this.MaChucNang.ReadOnly = true;
-            // 
-            // TenChucNang
-            // 
-            this.TenChucNang.HeaderText = "Tên Chức Năng";
-            this.TenChucNang.MinimumWidth = 6;
-            this.TenChucNang.Name = "TenChucNang";
-            this.TenChucNang.ReadOnly = true;
-            // 
-            // TenManHinh
-            // 
-            this.TenManHinh.HeaderText = "Tên Màn Hình";
-            this.TenManHinh.MinimumWidth = 6;
-            this.TenManHinh.Name = "TenManHinh";
-            this.TenManHinh.ReadOnly = true;
             // 
             // fEditNhomND
             // 

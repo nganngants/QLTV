@@ -59,12 +59,12 @@ namespace GUI.UserControls
             // 
             // butTraTre
             // 
-            this.butTraTre.BackColor = System.Drawing.SystemColors.Control;
+            this.butTraTre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.butTraTre.BorderColor = System.Drawing.Color.Transparent;
             this.butTraTre.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
-            this.butTraTre.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.butTraTre.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTraTre.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butTraTre.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butTraTre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTraTre.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butTraTre.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butTraTre.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -74,7 +74,7 @@ namespace GUI.UserControls
             this.butTraTre.Dock = System.Windows.Forms.DockStyle.Left;
             this.butTraTre.FillColor = System.Drawing.Color.Transparent;
             this.butTraTre.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butTraTre.ForeColor = System.Drawing.Color.DimGray;
+            this.butTraTre.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butTraTre.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butTraTre.Location = new System.Drawing.Point(239, 0);
             this.butTraTre.Name = "butTraTre";
@@ -85,12 +85,12 @@ namespace GUI.UserControls
             // 
             // butTheLoai
             // 
-            this.butTheLoai.BackColor = System.Drawing.SystemColors.Control;
+            this.butTheLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.butTheLoai.BorderColor = System.Drawing.Color.Transparent;
             this.butTheLoai.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
-            this.butTheLoai.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.butTheLoai.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTheLoai.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butTheLoai.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butTheLoai.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTheLoai.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butTheLoai.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butTheLoai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -100,7 +100,7 @@ namespace GUI.UserControls
             this.butTheLoai.Dock = System.Windows.Forms.DockStyle.Left;
             this.butTheLoai.FillColor = System.Drawing.Color.Transparent;
             this.butTheLoai.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butTheLoai.ForeColor = System.Drawing.Color.DimGray;
+            this.butTheLoai.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butTheLoai.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butTheLoai.Location = new System.Drawing.Point(0, 0);
             this.butTheLoai.Name = "butTheLoai";

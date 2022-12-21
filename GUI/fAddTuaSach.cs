@@ -83,7 +83,7 @@ namespace GUI
         {
             if(txtTenTuaSach.Text == "" )
             {
-                ErrorDia.Show("Chưa nhập đủ thông tin");
+                MessageBox.Show("Chưa nhập đủ thông tin");
                 return;
             }
 
@@ -98,10 +98,10 @@ namespace GUI
             string err = BUSTuaSach.Instance.AddTuaSach(TenTuaSach, tl, TgList);
             if(err !="")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err);
                 return;
             }
-            SuccDia.Show("Thêm tựa sách thành công");
+            MessageBox.Show("Thêm tựa sách thành công");
             this.Close();
             
         }

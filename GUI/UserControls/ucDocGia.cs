@@ -81,14 +81,14 @@ namespace GUI.UserControls
                 string error = BUSDocGia.Instance.DelDocGia(id);
                 if (error != "")
                 {
-                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                    if (MessageBox.Show(error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
             if(cnt!=0)
-                SuccDia.Show("Đã xoá thành công " + cnt + " độc giả");
+                MessageBox.Show("Đã xoá thành công " + cnt + " độc giả");
             Binding(BUSDocGia.Instance.GetAllDocGia());
             
         }

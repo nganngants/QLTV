@@ -55,7 +55,7 @@ namespace GUI
             DateTime NgaySinh = dateNgaySinh.Value.Date;
 
             string err = BUSDocGia.Instance.UpdDocGia(id, tenDG, idLDG, email, DiaChi, NgaySinh);
-            if (err == "") messDia.Show("Sua thong tin thanh cong");
+            if (err == "") MessageBox.Show("Sua thong tin thanh cong");
             else errDia.Show(err);
         }
     }

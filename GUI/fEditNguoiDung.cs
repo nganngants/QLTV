@@ -54,8 +54,8 @@ namespace GUI
             string err = BUSNguoiDung.Instance.UpdNguoiDung(id, ten, ngaysinh, chucvu, idNhom);
 
             if (err == "")
-                messageDia.Show("Sửa thông tin thành công");
-            else errorDia.Show(err);
+                MessageBox.Show("Sửa thông tin thành công");
+            else MessageBox.Show(err);
         }
     }
 }
