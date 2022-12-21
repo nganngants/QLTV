@@ -14,14 +14,15 @@ namespace GUI
 {
     public partial class fChangePassword : Form
     {
-        public fChangePassword()
+        private NGUOIDUNG usr;
+        public fChangePassword(int _id)
         {
             InitializeComponent();
+            usr = BUSNguoiDung.Instance.GetNguoiDungById(_id);
         }
 
         private void butSave_Click(object sender, EventArgs e)
         {
-            NGUOIDUNG usr = BUSLogin.usr;
             if(txtMKHT.Text != usr.MatKhau)
             {
                 ErrorDia.Show("Mật khẩu hiện tại không đúng");

@@ -92,7 +92,7 @@ namespace BUS
 
         }
 
-        public string DelChucNangForNhom (string maNhomNguoiDung, List <String> dsChucNang)
+        public string DelChucNangForNhom(int id, List <String> dsChucNang)
         {
             List<CHUCNANG> ds = new List<CHUCNANG>();
             foreach (var ma in dsChucNang)
@@ -103,7 +103,7 @@ namespace BUS
             }
             // REMEMBER TO ADD LOGIC HERE
 
-            var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
+            var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
             if (nnd == null) return "Mã nhóm người dùng không đúng.";
             if (DALNhomNguoiDung.Instance.DelChucNangForNhom(nnd.id, ds))
                 return "";

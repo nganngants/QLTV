@@ -14,7 +14,8 @@ namespace GUI.UserControls
 {
     public partial class ucThongTinTaiKhoan : UserControl
     {
-        public ucThongTinTaiKhoan()
+        private NGUOIDUNG usr;
+        public ucThongTinTaiKhoan(int id)
         {
             InitializeComponent();
             init();
@@ -22,7 +23,7 @@ namespace GUI.UserControls
         private NGUOIDUNG usr;
         private void butChangePass_Click(object sender, EventArgs e)
         {
-            var f = new fChangePassword();
+            var f = new fChangePassword(usr.id);
             f.Show();
         }
         private void init()
