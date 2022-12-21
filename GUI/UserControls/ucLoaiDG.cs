@@ -36,14 +36,13 @@ namespace GUI.UserControls
             string mss = BUSLoaiDocGia.Instance.AddLoaiDocGia(ten);
             if (mss == "")
             {
-                SuccDia.Text = "Thêm loại độc giả thành công";
-                SuccDia.Show();
+                
+                MessageBox.Show("Thêm loại độc giả thành công");
 
             }
             else
             {
-                ErrorDia.Text = mss;
-                ErrorDia.Show();
+                MessageBox.Show(mss);
             }
             Binding();
         }
@@ -69,14 +68,14 @@ namespace GUI.UserControls
                 string error = BUSLoaiDocGia.Instance.DelLoaiDocGia(id);
                 if (error != "")
                 {
-                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                    if (MessageBox.Show(error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
             
-                SuccDia.Show("Đã xoá thành công " + cnt + " loại độc giả");
+                MessageBox.Show("Đã xoá thành công " + cnt + " loại độc giả");
             Binding();
         }
 

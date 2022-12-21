@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Quản Lý Độc Giả");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Quản Lý Độc Giả");
             this.tableLayoutTen = new System.Windows.Forms.TableLayoutPanel();
             this.labelRole = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
@@ -176,7 +176,7 @@
             this.butChangePass.Location = new System.Drawing.Point(11, 486);
             this.butChangePass.Margin = new System.Windows.Forms.Padding(4);
             this.butChangePass.Name = "butChangePass";
-            this.butChangePass.Size = new System.Drawing.Size(108, 38);
+            this.butChangePass.Size = new System.Drawing.Size(124, 38);
             this.butChangePass.TabIndex = 6;
             this.butChangePass.Text = "Đổi mật khẩu";
             this.butChangePass.Click += new System.EventHandler(this.butChangePass_Click);
@@ -332,7 +332,7 @@
             this.listView1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(11, 68);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(425, 456);

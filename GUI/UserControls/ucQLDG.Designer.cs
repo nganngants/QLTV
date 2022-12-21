@@ -64,7 +64,7 @@ namespace GUI.UserControls
             this.butLoaiDG.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butLoaiDG.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
             this.butLoaiDG.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.butLoaiDG.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.butLoaiDG.CheckedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butLoaiDG.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butLoaiDG.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butLoaiDG.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

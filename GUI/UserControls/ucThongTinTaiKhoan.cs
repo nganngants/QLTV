@@ -39,7 +39,7 @@ namespace GUI.UserControls
             labelUsrName.Text += usr.TenDangNhap;
             listView1.Clear();
             foreach (CHUCNANG cn in usr.NHOMNGUOIDUNG.CHUCNANGs)
-                listView1.Items.Add(cn.TenChucNang);
+                listView1.Items.Add(cn.TenManHinh);
         }
         
     }

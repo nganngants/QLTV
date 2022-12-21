@@ -64,7 +64,7 @@ namespace GUI.UserControls
             this.butNhomND.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butNhomND.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
             this.butNhomND.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.butNhomND.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.butNhomND.CheckedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butNhomND.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butNhomND.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butNhomND.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -90,7 +90,7 @@ namespace GUI.UserControls
             this.butNguoiDung.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butNguoiDung.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
             this.butNguoiDung.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.butNguoiDung.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.butNguoiDung.CheckedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butNguoiDung.CustomBorderColor = System.Drawing.Color.Transparent;
             this.butNguoiDung.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.butNguoiDung.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
