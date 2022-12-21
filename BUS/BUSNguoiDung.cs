@@ -32,11 +32,18 @@ namespace BUS
             {
                 return "Mã người dùng không hợp lệ";
             }
+            if (nd.TenDangNhap == "admin")
+            {
+                return "Không thể xoá người dùng này";
+            }
             if (DALNguoiDung.Instance.DelNguoiDung(nd.id)) return "";
             return "Không thể xoá người dùng";
         }
         public string AddNguoiDung(string ten, DateTime NgaySinh,string ChucVu,string tenDN,string MK,int NhomNguoiDung)
         {
+            foreach (NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
+                if (nd.TenDangNhap == tenDN)
+                    return "Tên đăng nhập đã tồn tại";
             if (DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, ChucVu, tenDN, MK, NhomNguoiDung))
                 return "";
             return "Không thể thêm người dùng";
@@ -63,6 +70,8 @@ namespace BUS
                 return "Người dùng không hợp lệ";
 
             }
+            if (nd.TenDangNhap == "admin")
+                return "Không thể sửa người dùng này";
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung);
             if (nnd == null)
                 return " Nhóm người dùng không hợp lệ";

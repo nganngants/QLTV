@@ -18,22 +18,30 @@ namespace GUI.UserControls
         public ucThongTinTaiKhoan(int id)
         {
             InitializeComponent();
-            usr = BUSNguoiDung.Instance.GetNguoiDungById(id);
-            Bind();
+            init();
         }
-
-        private void Bind()
-        {
-            labelRole.Text = usr.NHOMNGUOIDUNG.TenNhomNguoiDung;
-            labelName.Text = usr.TenNguoiDung;
-
-        }
+        private NGUOIDUNG usr;
         private void butChangePass_Click(object sender, EventArgs e)
         {
             var f = new fChangePassword(usr.id);
             f.Show();
         }
+        private void init()
+        {
+            usr = BUSLogin.usr;
 
+            labelName.Text = usr.TenNguoiDung;
+            labelRole.Text = usr.NHOMNGUOIDUNG.TenNhomNguoiDung;
+            if(usr.ChucVu !=null)
+            labelChucVu.Text += usr.ChucVu;
+            if(usr.NgaySinh !=null)
+            labelNgaySinh.Text += ((DateTime)usr.NgaySinh).ToShortDateString();
+            labelMaND.Text += usr.MaNguoiDung;
+            labelUsrName.Text += usr.TenDangNhap;
+            listView1.Clear();
+            foreach (CHUCNANG cn in usr.NHOMNGUOIDUNG.CHUCNANGs)
+                listView1.Items.Add(cn.TenChucNang);
+        }
         
     }
 }
