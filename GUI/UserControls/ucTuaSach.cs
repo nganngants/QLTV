@@ -16,6 +16,9 @@ namespace GUI.UserControls
         public ucTuaSach()
         {
             InitializeComponent();
+            comboTheLoai.DataSource = BUSTheLoai.Instance.GetAllTheLoai();
+            comboTheLoai.DisplayMember = "TenTheLoai";
+            comboTheLoai.ValueMember = "id";
            
         }
         private void Binding(List<TUASACH> TuaSachList)
@@ -147,6 +150,23 @@ namespace GUI.UserControls
             }
             Binding(Res);
 
+        }
+
+        private void comboTheLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butFil_Click(object sender, EventArgs e)
+        {
+            List<TUASACH> Res = new List<TUASACH>();
+            THELOAI tl = BUSTheLoai.Instance.GetTheLoai((int)comboTheLoai.SelectedValue);
+            foreach (TUASACH ts in BUSTuaSach.Instance.GetAllTuaSach())
+            {
+                if (ts.THELOAI.id == tl.id)
+                    Res.Add(ts);
+            }
+            Binding(Res);
         }
     }
 }
