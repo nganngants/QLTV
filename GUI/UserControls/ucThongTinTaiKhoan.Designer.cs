@@ -37,13 +37,13 @@
             this.infoPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butChangePass = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelUsrName = new System.Windows.Forms.Label();
             this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelChucVu = new System.Windows.Forms.Label();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelNgaySinh = new System.Windows.Forms.Label();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelMaND = new System.Windows.Forms.Label();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.featPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -183,7 +183,7 @@
             // 
             // siticonePanel6
             // 
-            this.siticonePanel6.Controls.Add(this.label6);
+            this.siticonePanel6.Controls.Add(this.labelUsrName);
             this.siticonePanel6.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -194,22 +194,22 @@
             this.siticonePanel6.Size = new System.Drawing.Size(424, 37);
             this.siticonePanel6.TabIndex = 5;
             // 
-            // label6
+            // labelUsrName
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label6.Location = new System.Drawing.Point(0, 12);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 32);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Tên đăng nhập:";
+            this.labelUsrName.AutoSize = true;
+            this.labelUsrName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelUsrName.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsrName.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelUsrName.Location = new System.Drawing.Point(0, 12);
+            this.labelUsrName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUsrName.Name = "labelUsrName";
+            this.labelUsrName.Size = new System.Drawing.Size(172, 32);
+            this.labelUsrName.TabIndex = 1;
+            this.labelUsrName.Text = "Tên đăng nhập:";
             // 
             // siticonePanel5
             // 
-            this.siticonePanel5.Controls.Add(this.label5);
+            this.siticonePanel5.Controls.Add(this.labelChucVu);
             this.siticonePanel5.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -220,22 +220,22 @@
             this.siticonePanel5.Size = new System.Drawing.Size(424, 36);
             this.siticonePanel5.TabIndex = 4;
             // 
-            // label5
+            // labelChucVu
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label5.Location = new System.Drawing.Point(0, 12);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 32);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Chức vụ";
+            this.labelChucVu.AutoSize = true;
+            this.labelChucVu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelChucVu.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChucVu.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelChucVu.Location = new System.Drawing.Point(0, 12);
+            this.labelChucVu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelChucVu.Name = "labelChucVu";
+            this.labelChucVu.Size = new System.Drawing.Size(101, 32);
+            this.labelChucVu.TabIndex = 1;
+            this.labelChucVu.Text = "Chức vụ";
             // 
             // siticonePanel4
             // 
-            this.siticonePanel4.Controls.Add(this.label4);
+            this.siticonePanel4.Controls.Add(this.labelNgaySinh);
             this.siticonePanel4.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -246,22 +246,22 @@
             this.siticonePanel4.Size = new System.Drawing.Size(424, 36);
             this.siticonePanel4.TabIndex = 3;
             // 
-            // label4
+            // labelNgaySinh
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label4.Location = new System.Drawing.Point(0, 12);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 32);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Ngày sinh:";
+            this.labelNgaySinh.AutoSize = true;
+            this.labelNgaySinh.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelNgaySinh.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNgaySinh.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelNgaySinh.Location = new System.Drawing.Point(0, 12);
+            this.labelNgaySinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNgaySinh.Name = "labelNgaySinh";
+            this.labelNgaySinh.Size = new System.Drawing.Size(124, 32);
+            this.labelNgaySinh.TabIndex = 1;
+            this.labelNgaySinh.Text = "Ngày sinh:";
             // 
             // siticonePanel3
             // 
-            this.siticonePanel3.Controls.Add(this.label3);
+            this.siticonePanel3.Controls.Add(this.labelMaND);
             this.siticonePanel3.CustomBorderColor = System.Drawing.Color.MediumSlateBlue;
             this.siticonePanel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -272,18 +272,18 @@
             this.siticonePanel3.Size = new System.Drawing.Size(424, 36);
             this.siticonePanel3.TabIndex = 2;
             // 
-            // label3
+            // labelMaND
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(0, 12);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 32);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mã người dùng: ";
+            this.labelMaND.AutoSize = true;
+            this.labelMaND.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelMaND.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMaND.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelMaND.Location = new System.Drawing.Point(0, 12);
+            this.labelMaND.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMaND.Name = "labelMaND";
+            this.labelMaND.Size = new System.Drawing.Size(185, 32);
+            this.labelMaND.TabIndex = 0;
+            this.labelMaND.Text = "Mã người dùng: ";
             // 
             // siticoneSeparator1
             // 
@@ -453,11 +453,11 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel5;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelMaND;
 
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelUsrName;
+        private System.Windows.Forms.Label labelChucVu;
+        private System.Windows.Forms.Label labelNgaySinh;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butChangePass;
         private System.Windows.Forms.Label label1;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;

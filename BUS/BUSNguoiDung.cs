@@ -41,6 +41,9 @@ namespace BUS
         }
         public string AddNguoiDung(string ten, DateTime NgaySinh,string ChucVu,string tenDN,string MK,int NhomNguoiDung)
         {
+            foreach (NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
+                if (nd.TenDangNhap == tenDN)
+                    return "Tên đăng nhập đã tồn tại";
             if (DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, ChucVu, tenDN, MK, NhomNguoiDung))
                 return "";
             return "Không thể thêm người dùng";

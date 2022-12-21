@@ -44,8 +44,10 @@ namespace GUI
             if (err == "")
             {
                 messageDia.Show("Thêm người dùng thành công");
+                this.Close();
             }
             else errorDia.Show(err);
+
         }
     }
 }
