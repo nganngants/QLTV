@@ -44,7 +44,7 @@ namespace GUI.UserControls
             // 
             // siticoneGradientPanel1
             // 
-            this.siticoneGradientPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.siticoneGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneGradientPanel1.Controls.Add(this.butPhieuNhap);
             this.siticoneGradientPanel1.Controls.Add(this.butTheLoai);
             this.siticoneGradientPanel1.Controls.Add(this.butTacGia);
@@ -53,6 +53,7 @@ namespace GUI.UserControls
             this.siticoneGradientPanel1.Controls.Add(this.siticoneContainerControl1);
             this.siticoneGradientPanel1.Controls.Add(this.butTuaSach);
             this.siticoneGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticoneGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
             this.siticoneGradientPanel1.Size = new System.Drawing.Size(1121, 50);
@@ -62,8 +63,9 @@ namespace GUI.UserControls
             // 
             this.butPhieuNhap.BorderColor = System.Drawing.Color.Transparent;
             this.butPhieuNhap.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.butPhieuNhap.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butPhieuNhap.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butPhieuNhap.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butPhieuNhap.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butPhieuNhap.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butPhieuNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -73,7 +75,7 @@ namespace GUI.UserControls
             this.butPhieuNhap.Dock = System.Windows.Forms.DockStyle.Left;
             this.butPhieuNhap.FillColor = System.Drawing.Color.Transparent;
             this.butPhieuNhap.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butPhieuNhap.ForeColor = System.Drawing.Color.DimGray;
+            this.butPhieuNhap.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butPhieuNhap.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butPhieuNhap.Location = new System.Drawing.Point(845, 0);
             this.butPhieuNhap.Name = "butPhieuNhap";
@@ -87,8 +89,9 @@ namespace GUI.UserControls
             // 
             this.butTheLoai.BorderColor = System.Drawing.Color.Transparent;
             this.butTheLoai.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.butTheLoai.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTheLoai.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butTheLoai.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butTheLoai.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTheLoai.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butTheLoai.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butTheLoai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -98,7 +101,7 @@ namespace GUI.UserControls
             this.butTheLoai.Dock = System.Windows.Forms.DockStyle.Left;
             this.butTheLoai.FillColor = System.Drawing.Color.Transparent;
             this.butTheLoai.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butTheLoai.ForeColor = System.Drawing.Color.DimGray;
+            this.butTheLoai.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butTheLoai.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butTheLoai.Location = new System.Drawing.Point(676, 0);
             this.butTheLoai.Name = "butTheLoai";
@@ -112,8 +115,9 @@ namespace GUI.UserControls
             // 
             this.butTacGia.BorderColor = System.Drawing.Color.Transparent;
             this.butTacGia.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.butTacGia.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTacGia.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butTacGia.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butTacGia.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTacGia.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butTacGia.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butTacGia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -123,7 +127,7 @@ namespace GUI.UserControls
             this.butTacGia.Dock = System.Windows.Forms.DockStyle.Left;
             this.butTacGia.FillColor = System.Drawing.Color.Transparent;
             this.butTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butTacGia.ForeColor = System.Drawing.Color.DimGray;
+            this.butTacGia.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butTacGia.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butTacGia.Location = new System.Drawing.Point(507, 0);
             this.butTacGia.Name = "butTacGia";
@@ -137,8 +141,9 @@ namespace GUI.UserControls
             // 
             this.butCuonsach.BorderColor = System.Drawing.Color.Transparent;
             this.butCuonsach.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.butCuonsach.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butCuonsach.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butCuonsach.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butCuonsach.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butCuonsach.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butCuonsach.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butCuonsach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -148,7 +153,7 @@ namespace GUI.UserControls
             this.butCuonsach.Dock = System.Windows.Forms.DockStyle.Left;
             this.butCuonsach.FillColor = System.Drawing.Color.Transparent;
             this.butCuonsach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butCuonsach.ForeColor = System.Drawing.Color.DimGray;
+            this.butCuonsach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butCuonsach.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butCuonsach.Location = new System.Drawing.Point(338, 0);
             this.butCuonsach.Name = "butCuonsach";
@@ -162,8 +167,9 @@ namespace GUI.UserControls
             // 
             this.butSach.BorderColor = System.Drawing.Color.Transparent;
             this.butSach.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.butSach.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butSach.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butSach.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butSach.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butSach.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.butSach.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -173,7 +179,7 @@ namespace GUI.UserControls
             this.butSach.Dock = System.Windows.Forms.DockStyle.Left;
             this.butSach.FillColor = System.Drawing.Color.Transparent;
             this.butSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold);
-            this.butSach.ForeColor = System.Drawing.Color.DimGray;
+            this.butSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butSach.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butSach.Location = new System.Drawing.Point(169, 0);
             this.butSach.Name = "butSach";
@@ -193,24 +199,27 @@ namespace GUI.UserControls
             // 
             // butTuaSach
             // 
-            this.butTuaSach.BorderColor = System.Drawing.Color.Transparent;
+            this.butTuaSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.butTuaSach.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTuaSach.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.butTuaSach.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTuaSach.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butTuaSach.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.butTuaSach.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.butTuaSach.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.butTuaSach.CheckedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.butTuaSach.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.butTuaSach.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.butTuaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butTuaSach.DisabledState.BorderColor = System.Drawing.Color.White;
             this.butTuaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butTuaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butTuaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butTuaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.butTuaSach.DisabledState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butTuaSach.Dock = System.Windows.Forms.DockStyle.Left;
-            this.butTuaSach.FillColor = System.Drawing.Color.Transparent;
-            this.butTuaSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butTuaSach.ForeColor = System.Drawing.Color.DimGray;
+            this.butTuaSach.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.butTuaSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold);
+            this.butTuaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butTuaSach.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butTuaSach.Location = new System.Drawing.Point(0, 0);
             this.butTuaSach.Name = "butTuaSach";
-            this.butTuaSach.PressedColor = System.Drawing.Color.Transparent;
+            this.butTuaSach.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTuaSach.Size = new System.Drawing.Size(169, 50);
             this.butTuaSach.TabIndex = 1;
             this.butTuaSach.Text = "Tựa sách";
@@ -218,6 +227,7 @@ namespace GUI.UserControls
             // 
             // container
             // 
+            this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 50);
             this.container.Name = "container";

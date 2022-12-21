@@ -32,10 +32,10 @@ namespace GUI.UserControls
             labelName.Text = usr.TenNguoiDung;
             labelRole.Text = usr.NHOMNGUOIDUNG.TenNhomNguoiDung;
             if(usr.ChucVu !=null)
-            labelChucVu.Text += usr.ChucVu;
+            labelChucVu.Text +=" "+ usr.ChucVu;
             if(usr.NgaySinh !=null)
-            labelNgaySinh.Text += ((DateTime)usr.NgaySinh).ToShortDateString();
-            labelMaND.Text += usr.MaNguoiDung;
+            labelNgaySinh.Text += " "+((DateTime)usr.NgaySinh).ToShortDateString();
+            labelMaND.Text +=usr.MaNguoiDung;
             labelUsrName.Text += usr.TenDangNhap;
             listView1.Clear();
             foreach (CHUCNANG cn in usr.NHOMNGUOIDUNG.CHUCNANGs)

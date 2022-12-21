@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Quản Lý Độc Giả");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Quản Lý Độc Giả");
             this.tableLayoutTen = new System.Windows.Forms.TableLayoutPanel();
             this.labelRole = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
@@ -203,9 +203,9 @@
             this.labelUsrName.Location = new System.Drawing.Point(0, 12);
             this.labelUsrName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsrName.Name = "labelUsrName";
-            this.labelUsrName.Size = new System.Drawing.Size(172, 32);
+            this.labelUsrName.Size = new System.Drawing.Size(178, 32);
             this.labelUsrName.TabIndex = 1;
-            this.labelUsrName.Text = "Tên đăng nhập:";
+            this.labelUsrName.Text = "Tên đăng nhập: ";
             // 
             // siticonePanel5
             // 
@@ -229,9 +229,9 @@
             this.labelChucVu.Location = new System.Drawing.Point(0, 12);
             this.labelChucVu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelChucVu.Name = "labelChucVu";
-            this.labelChucVu.Size = new System.Drawing.Size(101, 32);
+            this.labelChucVu.Size = new System.Drawing.Size(106, 32);
             this.labelChucVu.TabIndex = 1;
-            this.labelChucVu.Text = "Chức vụ";
+            this.labelChucVu.Text = "Chức vụ:";
             // 
             // siticonePanel4
             // 
@@ -332,7 +332,7 @@
             this.listView1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(11, 68);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(425, 456);
