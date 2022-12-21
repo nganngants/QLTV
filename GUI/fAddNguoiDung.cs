@@ -43,10 +43,10 @@ namespace GUI
             string err = BUSNguoiDung.Instance.AddNguoiDung(ten, ngaysinh, chucvu, tendn, matkhau, id);
             if (err == "")
             {
-                messageDia.Show("Thêm người dùng thành công");
+                MessageBox.Show("Thêm người dùng thành công");
                 this.Close();
             }
-            else errorDia.Show(err);
+            else MessageBox.Show(err);
 
         }
     }

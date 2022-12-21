@@ -78,20 +78,20 @@ namespace GUI.UserControls
             // butMaSach
             // 
             this.butMaSach.AutoRoundedCorners = true;
-            this.butMaSach.BorderRadius = 10;
+            this.butMaSach.BorderRadius = 13;
             this.butMaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butMaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butMaSach.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butMaSach.FillColor = System.Drawing.Color.SlateBlue;
             this.butMaSach.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
             this.butMaSach.ForeColor = System.Drawing.Color.White;
             this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butMaSach.Location = new System.Drawing.Point(647, 78);
+            this.butMaSach.Location = new System.Drawing.Point(733, 90);
             this.butMaSach.Name = "butMaSach";
-            this.butMaSach.Size = new System.Drawing.Size(129, 22);
+            this.butMaSach.Size = new System.Drawing.Size(129, 28);
             this.butMaSach.TabIndex = 14;
             this.butMaSach.Text = "Tìm kiếm";
             this.butMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -106,7 +106,7 @@ namespace GUI.UserControls
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(144, 61);
+            this.butRefresh.Location = new System.Drawing.Point(187, 77);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(64, 54);
@@ -116,7 +116,7 @@ namespace GUI.UserControls
             // txtMaSach
             // 
             this.txtMaSach.AutoRoundedCorners = true;
-            this.txtMaSach.BorderRadius = 10;
+            this.txtMaSach.BorderRadius = 13;
             this.txtMaSach.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaSach.DefaultText = "";
             this.txtMaSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -127,12 +127,12 @@ namespace GUI.UserControls
             this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Location = new System.Drawing.Point(435, 78);
+            this.txtMaSach.Location = new System.Drawing.Point(502, 90);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
             this.txtMaSach.PlaceholderText = "Mã sách";
             this.txtMaSach.SelectedText = "";
-            this.txtMaSach.Size = new System.Drawing.Size(201, 22);
+            this.txtMaSach.Size = new System.Drawing.Size(201, 28);
             this.txtMaSach.TabIndex = 15;
             // 
             // butDel
@@ -142,16 +142,16 @@ namespace GUI.UserControls
             this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butDel.FillColor = System.Drawing.Color.SlateBlue;
             this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butDel.ForeColor = System.Drawing.Color.White;
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(3, 78);
+            this.butDel.Location = new System.Drawing.Point(3, 87);
             this.butDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(135, 23);
+            this.butDel.Size = new System.Drawing.Size(178, 28);
             this.butDel.TabIndex = 7;
             this.butDel.Text = "Xóa Cuốn Sách";
             this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -173,7 +173,6 @@ namespace GUI.UserControls
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.CuonSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.CuonSachGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,7 +292,6 @@ namespace GUI.UserControls
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.siticoneDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.siticoneDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

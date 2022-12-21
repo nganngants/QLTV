@@ -213,7 +213,9 @@ namespace GUI.UserControls
             this.butTuaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butTuaSach.DisabledState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butTuaSach.Dock = System.Windows.Forms.DockStyle.Left;
-            this.butTuaSach.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+
+            this.butTuaSach.FillColor = System.Drawing.Color.Transparent;
+
             this.butTuaSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold);
             this.butTuaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butTuaSach.HoverState.FillColor = System.Drawing.Color.Transparent;

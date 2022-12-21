@@ -64,13 +64,8 @@ namespace GUI.BM
 
         private void butSave_Click_1(object sender, EventArgs e)
         {
-            NgayTra = dateNgayTra.Value.Date;
             NgayMuon = dateNgayMuon.Value.Date;
-            if (NgayTra < NgayMuon)
-            {
-                ErrorDia.Show("Ngày trả không hợp lệ");
-                return;
-            }
+           
             if (NgayMuon > DateTime.Now)
             {
                 ErrorDia.Show("Ngày mượn không hợp lệ");

@@ -36,7 +36,6 @@ namespace GUI.BM
             this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboCuonSach = new System.Windows.Forms.ComboBox();
             this.cUONSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.isDaTra = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.siticoneVSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
             this.siticoneVSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
@@ -44,10 +43,8 @@ namespace GUI.BM
             this.label13 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateNgayTra = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.dateNgayMuon = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.labelHanTra = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelTheLoai = new System.Windows.Forms.Label();
@@ -79,7 +76,6 @@ namespace GUI.BM
             this.siticonePanel1.BorderThickness = 2;
             this.siticonePanel1.Controls.Add(this.comboDocGia);
             this.siticonePanel1.Controls.Add(this.comboCuonSach);
-            this.siticonePanel1.Controls.Add(this.isDaTra);
             this.siticonePanel1.Controls.Add(this.siticoneVSeparator2);
             this.siticonePanel1.Controls.Add(this.siticoneVSeparator1);
             this.siticonePanel1.Controls.Add(this.siticoneSeparator2);
@@ -87,10 +83,8 @@ namespace GUI.BM
             this.siticonePanel1.Controls.Add(this.label13);
             this.siticonePanel1.Controls.Add(this.label8);
             this.siticonePanel1.Controls.Add(this.label10);
-            this.siticonePanel1.Controls.Add(this.dateNgayTra);
             this.siticonePanel1.Controls.Add(this.dateNgayMuon);
             this.siticonePanel1.Controls.Add(this.labelHanTra);
-            this.siticonePanel1.Controls.Add(this.label16);
             this.siticonePanel1.Controls.Add(this.label11);
             this.siticonePanel1.Controls.Add(this.label3);
             this.siticonePanel1.Controls.Add(this.labelTheLoai);
@@ -148,26 +142,6 @@ namespace GUI.BM
             // cUONSACHBindingSource
             // 
             this.cUONSACHBindingSource.DataSource = typeof(DTO.CUONSACH);
-            // 
-            // isDaTra
-            // 
-            this.isDaTra.AutoSize = true;
-            this.isDaTra.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.isDaTra.CheckedState.BorderRadius = 0;
-            this.isDaTra.CheckedState.BorderThickness = 0;
-            this.isDaTra.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.isDaTra.CheckMarkColor = System.Drawing.Color.Violet;
-            this.isDaTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F);
-            this.isDaTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.isDaTra.Location = new System.Drawing.Point(318, 564);
-            this.isDaTra.Name = "isDaTra";
-            this.isDaTra.Size = new System.Drawing.Size(97, 35);
-            this.isDaTra.TabIndex = 152;
-            this.isDaTra.Text = "Đã Trả";
-            this.isDaTra.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isDaTra.UncheckedState.BorderRadius = 0;
-            this.isDaTra.UncheckedState.BorderThickness = 0;
-            this.isDaTra.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // siticoneVSeparator2
             // 
@@ -245,22 +219,6 @@ namespace GUI.BM
             this.label10.TabIndex = 146;
             this.label10.Text = "Thông tin cuốn sách";
             // 
-            // dateNgayTra
-            // 
-            this.dateNgayTra.Checked = true;
-            this.dateNgayTra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.dateNgayTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNgayTra.ForeColor = System.Drawing.Color.SlateBlue;
-            this.dateNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayTra.Location = new System.Drawing.Point(122, 560);
-            this.dateNgayTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateNgayTra.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateNgayTra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateNgayTra.Name = "dateNgayTra";
-            this.dateNgayTra.Size = new System.Drawing.Size(167, 50);
-            this.dateNgayTra.TabIndex = 131;
-            this.dateNgayTra.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
-            // 
             // dateNgayMuon
             // 
             this.dateNgayMuon.Checked = true;
@@ -288,17 +246,6 @@ namespace GUI.BM
             this.labelHanTra.Size = new System.Drawing.Size(148, 31);
             this.labelHanTra.TabIndex = 129;
             this.labelHanTra.Text = "dd/mm/yyyy";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label16.Location = new System.Drawing.Point(118, 534);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(79, 24);
-            this.label16.TabIndex = 128;
-            this.label16.Text = "Ngày Trả";
             // 
             // label11
             // 
@@ -528,9 +475,6 @@ namespace GUI.BM
         private Label label12;
         private Label labelHanTra;
         private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticoneVSeparator1;
-        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dateNgayTra;
-        private Label label16;
-        private Siticone.Desktop.UI.WinForms.SiticoneCheckBox isDaTra;
         private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticoneVSeparator2;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
         private Label label8;

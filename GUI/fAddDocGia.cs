@@ -46,23 +46,20 @@ namespace GUI
             dateNgayHetHan.Text = NgayHetHan.Date.ToString();
             if(tenDG == "" || DiaChi == "" )
             {
-                ErrorDia.Text = "Chưa điền đủ thông tin";
-                ErrorDia.Show();
+                MessageBox.Show("Chưa điền đủ thông tin");
                 return;
             }
 
             string messg = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan);
             if (messg != "")
             {
-                ErrorDia.Text = messg;
-                ErrorDia.Show();
+                MessageBox.Show(messg);
 
             }
             else
             {
                 
-                SuccDia.Text = "Thêm độc giả thành công";
-                SuccDia.Show();
+                MessageBox.Show("Thêm độc giả thành công");
                 this.Close();
             }
 

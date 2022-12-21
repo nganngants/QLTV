@@ -25,6 +25,7 @@ namespace GUI
             comboTuaSach.DataSource = TuaSachList;
             comboTuaSach.DisplayMember = "TenTuaSach" ;
             comboTuaSach.ValueMember = "id";
+            dateNgayNhap.Value = DateTime.Now;
         }
         private int DonGia;
         private int SoLuongNhap;
@@ -32,12 +33,12 @@ namespace GUI
         {
             if (dateNgayNhap.Value.Date > DateTime.Now)
             {
-                ErrorDia.Show("Ngày nhập không hợp lệ");
+                MessageBox.Show("Ngày nhập không hợp lệ");
                 return;
             }
             if (comboTuaSach.SelectedValue==null || txtNamXB.Text=="" || txtNhaXB.Text=="" || txtDonGia.Text=="" || txtSoLuongNhap.Text=="")
             {
-                ErrorDia.Show("Chưa nhập đủ dữ liệu");
+                MessageBox.Show("Chưa nhập đủ dữ liệu");
                 return;
             }
 
@@ -49,7 +50,7 @@ namespace GUI
             catch
             {
                 txtNamXB.Text = null;
-                ErrorDia.Show("Năm không hợp lệ");
+                MessageBox.Show("Năm không hợp lệ");
                 return;
             }
             string NXB = txtNhaXB.Text.ToString();
@@ -63,13 +64,13 @@ namespace GUI
             string err = kq.Item1;
             if(err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err);
                 return;
             }
             int MaPhieuNhap = BUSPhieuNhap.Instance.AddPhieuNhap(NgayNhap);
             if(MaPhieuNhap == -1)
             {
-                ErrorDia.Show("Ngày nhập không hợp lệ");
+                MessageBox.Show("Ngày nhập không hợp lệ");
                 BUSSach.Instance.DelSach(idSach);
                 return;
             }
@@ -78,10 +79,10 @@ namespace GUI
             {
                 BUSSach.Instance.DelSach(idSach);
                 
-                ErrorDia.Show(err);
+                MessageBox.Show(err);
                 return;
             }
-            SuccDia.Show("Thêm sách mới thành công");
+            MessageBox.Show("Thêm sách mới thành công");
             this.Close();
         }
 
@@ -96,7 +97,7 @@ namespace GUI
             }
             catch
             {
-                ErrorDia.Show("Không đúng format");
+                MessageBox.Show("Không đúng format");
                 txtSoLuongNhap.Text = null;
                 return;
             }
@@ -117,7 +118,7 @@ namespace GUI
             }
             catch
             {
-                ErrorDia.Show("Không đúng format");
+                MessageBox.Show("Không đúng format");
                 txtDonGia.Text = null;
                 return;
                 

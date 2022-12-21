@@ -32,14 +32,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.controlPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.miniControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.comboSach = new System.Windows.Forms.ComboBox();
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSoLuongNhap = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.dateNgayNhap = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.labelTongTien = new System.Windows.Forms.Label();
@@ -48,16 +56,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.comboSach = new System.Windows.Forms.ComboBox();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
@@ -125,6 +126,17 @@
             this.mainPanel.Size = new System.Drawing.Size(663, 625);
             this.mainPanel.TabIndex = 5;
             // 
+            // comboSach
+            // 
+            this.comboSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSach.FormattingEnabled = true;
+            this.comboSach.Location = new System.Drawing.Point(49, 480);
+            this.comboSach.Name = "comboSach";
+            this.comboSach.Size = new System.Drawing.Size(241, 30);
+            this.comboSach.TabIndex = 19;
+            // 
             // butOK
             // 
             this.butOK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -165,19 +177,25 @@
             // SachGrid
             // 
             this.SachGrid.AllowUserToAddRows = false;
+            this.SachGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.SachGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.SachGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.SachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.SachGrid.ColumnHeadersHeight = 34;
+            this.SachGrid.ColumnHeadersHeight = 35;
             this.SachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.SachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -188,19 +206,28 @@
             this.ThanhTien});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SachGrid.DefaultCellStyle = dataGridViewCellStyle1;
+            this.SachGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.SachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.Location = new System.Drawing.Point(45, 143);
             this.SachGrid.Name = "SachGrid";
             this.SachGrid.ReadOnly = true;
+            this.SachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.SachGrid.RowHeadersVisible = false;
             this.SachGrid.RowHeadersWidth = 51;
-            this.SachGrid.RowTemplate.Height = 24;
+            this.SachGrid.RowTemplate.Height = 30;
             this.SachGrid.Size = new System.Drawing.Size(573, 266);
             this.SachGrid.TabIndex = 11;
             this.SachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -215,15 +242,58 @@
             this.SachGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SachGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.SachGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.SachGrid.ThemeStyle.HeaderStyle.Height = 34;
+            this.SachGrid.ThemeStyle.HeaderStyle.Height = 35;
             this.SachGrid.ThemeStyle.ReadOnly = true;
             this.SachGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.SachGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.SachGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SachGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SachGrid.ThemeStyle.RowsStyle.Height = 24;
+            this.SachGrid.ThemeStyle.RowsStyle.Height = 30;
             this.SachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // maSach
+            // 
+            this.maSach.HeaderText = "Mã Sách";
+            this.maSach.MinimumWidth = 6;
+            this.maSach.Name = "maSach";
+            this.maSach.ReadOnly = true;
+            // 
+            // tenSach
+            // 
+            this.tenSach.HeaderText = "Tên Sách";
+            this.tenSach.MinimumWidth = 6;
+            this.tenSach.Name = "tenSach";
+            this.tenSach.ReadOnly = true;
+            // 
+            // donGia
+            // 
+            this.donGia.HeaderText = "Đơn Giá";
+            this.donGia.MinimumWidth = 6;
+            this.donGia.Name = "donGia";
+            this.donGia.ReadOnly = true;
+            // 
+            // soLuongNhap
+            // 
+            this.soLuongNhap.HeaderText = "Số Lượng Nhập";
+            this.soLuongNhap.MinimumWidth = 6;
+            this.soLuongNhap.Name = "soLuongNhap";
+            this.soLuongNhap.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
             // 
             // txtSoLuongNhap
             // 
@@ -333,17 +403,6 @@
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // comboSach
-            // 
-            this.comboSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.comboSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboSach.FormattingEnabled = true;
-            this.comboSach.Location = new System.Drawing.Point(49, 480);
-            this.comboSach.Name = "comboSach";
-            this.comboSach.Size = new System.Drawing.Size(241, 30);
-            this.comboSach.TabIndex = 19;
-            // 
             // AskDia
             // 
             this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
@@ -370,49 +429,6 @@
             this.SuccDia.Parent = null;
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.SuccDia.Text = null;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // maSach
-            // 
-            this.maSach.HeaderText = "Mã Sách";
-            this.maSach.MinimumWidth = 6;
-            this.maSach.Name = "maSach";
-            this.maSach.ReadOnly = true;
-            // 
-            // tenSach
-            // 
-            this.tenSach.HeaderText = "Tên Sách";
-            this.tenSach.MinimumWidth = 6;
-            this.tenSach.Name = "tenSach";
-            this.tenSach.ReadOnly = true;
-            // 
-            // donGia
-            // 
-            this.donGia.HeaderText = "Đơn Giá";
-            this.donGia.MinimumWidth = 6;
-            this.donGia.Name = "donGia";
-            this.donGia.ReadOnly = true;
-            // 
-            // soLuongNhap
-            // 
-            this.soLuongNhap.HeaderText = "Số Lượng Nhập";
-            this.soLuongNhap.MinimumWidth = 6;
-            this.soLuongNhap.Name = "soLuongNhap";
-            this.soLuongNhap.ReadOnly = true;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
             // 
             // fAddSachDaCo
             // 

@@ -59,11 +59,13 @@ namespace GUI.UserControls
             // 
             // butLoaiDG
             // 
+            this.butLoaiDG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.butLoaiDG.BorderColor = System.Drawing.Color.Transparent;
             this.butLoaiDG.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butLoaiDG.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butLoaiDG.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.butLoaiDG.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.butLoaiDG.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.butLoaiDG.CheckedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.butLoaiDG.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.butLoaiDG.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.butLoaiDG.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butLoaiDG.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -72,7 +74,7 @@ namespace GUI.UserControls
             this.butLoaiDG.Dock = System.Windows.Forms.DockStyle.Left;
             this.butLoaiDG.FillColor = System.Drawing.Color.Transparent;
             this.butLoaiDG.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butLoaiDG.ForeColor = System.Drawing.Color.DimGray;
+            this.butLoaiDG.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butLoaiDG.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butLoaiDG.Location = new System.Drawing.Point(180, 0);
             this.butLoaiDG.Name = "butLoaiDG";
@@ -84,11 +86,12 @@ namespace GUI.UserControls
             // 
             // butDocGia
             // 
+            this.butDocGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.butDocGia.BorderColor = System.Drawing.Color.Transparent;
             this.butDocGia.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butDocGia.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butDocGia.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.butDocGia.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.butDocGia.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.butDocGia.CheckedState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butDocGia.CustomBorderColor = System.Drawing.Color.Transparent;
             this.butDocGia.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.butDocGia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -98,7 +101,7 @@ namespace GUI.UserControls
             this.butDocGia.Dock = System.Windows.Forms.DockStyle.Left;
             this.butDocGia.FillColor = System.Drawing.Color.Transparent;
             this.butDocGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDocGia.ForeColor = System.Drawing.Color.DimGray;
+            this.butDocGia.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.butDocGia.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.butDocGia.Location = new System.Drawing.Point(0, 0);
             this.butDocGia.Name = "butDocGia";
