@@ -118,6 +118,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.splitContainer1.Panel1.Controls.Add(this.siticonePanel10);
             this.splitContainer1.Panel1.Controls.Add(this.siticonePanel3);
             this.splitContainer1.Panel1.Controls.Add(this.siticonePanel4);
@@ -130,6 +131,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.splitContainer1.Panel2.Controls.Add(this.siticonePanel11);
             this.splitContainer1.Panel2.Controls.Add(this.siticonePanel6);
             this.splitContainer1.Panel2.Controls.Add(this.siticonePanel2);

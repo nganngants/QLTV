@@ -37,6 +37,7 @@ namespace GUI.UserControls
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::GUI.Properties.Resources.ban;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.DoubleBuffered = true;
