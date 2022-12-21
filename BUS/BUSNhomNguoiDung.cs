@@ -33,8 +33,8 @@ namespace BUS
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(maNhomNguoiDung);
             if(nnd == null)
             { return "Mã nhóm người dùng không đúng"; }
-            if (nnd.TenNhomNguoiDung == "Quan ly")
-                return "Không thể xoá nhóm người dùng này";
+            if (nnd.TenNhomNguoiDung == "Quan ly" && nnd.id == 1)
+                return "Không thể xoá nhóm người dùng Quản lý";
             if (DALNhomNguoiDung.Instance.DelNhomNguoiDung(nnd.id))
                 return "";
             return "Không thể xoá nhóm người dùng";
@@ -62,7 +62,7 @@ namespace BUS
             if (name == "Quan ly") return "Không thể đặt tên này";
             if(nnd.TenNhomNguoiDung=="Quan ly")
             {
-                return "Không thể sửa nhóm người dùng này";
+                return "Không thể sửa nhóm người dùng Quản lý";
             }
             if (DALNhomNguoiDung.Instance.UpdNhomNguoiDung(nnd.id, name))
                 return "";
