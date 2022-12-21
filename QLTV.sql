@@ -1,6 +1,5 @@
--- Note: you have to drop QLTV database first before running entire script
+-- Note: you have to drop QLTV database (if you had) first before running entire script
 -- Note: Just run the script and you're good to go with a new database
-
 CREATE DATABASE QLTV
 go
 USE QLTV
@@ -231,6 +230,7 @@ go
 
 create table THAMSO
 (
+	id int identity(1,1) primary key,
 	TuoiToiThieu int, 
 	TuoiToiDa int, 
 	ThoiHanThe int, 
@@ -241,4 +241,4 @@ create table THAMSO
 	AD_QDKTTienThu int
 )
 go
-
+INSERT INTO THAMSO VALUES(18, 55, 6, 8, 5, 4, 1000, 1)
