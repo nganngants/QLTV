@@ -20,8 +20,13 @@ namespace GUI.UserControls
         }
         private void Bind()
         {
-            this.gridView.DataSource = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
-
+            Image img = Properties.Resources.edit_icon;
+            img = (Image)(new Bitmap(img, new Size(20, 20)));
+            this.NDGrid.DataSource = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
+            foreach(DataGridViewRow row in NDGrid.Rows)
+            {
+                row.Cells["Edit"].Value = img;
+            }
         }
 
         private void butAdd_Click(object sender, EventArgs e)
@@ -34,14 +39,53 @@ namespace GUI.UserControls
         private void gridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int stt = e.RowIndex;
+            if (e.ColumnIndex == 0 ) return;
+            if(e.ColumnIndex == NDGrid.Columns["Edit"].Index)
+            {
+                var fEdit = new fEditNhomND(Convert.ToInt32(NDGrid.Rows[stt].Cells["id"].Value));
+                fEdit.ShowDialog();
+                Bind();
+            }
             if (stt == -1) return;
-            var fInfor = new fInfoNhomND(Convert.ToInt32(gridView.Rows[stt].Cells["id"].Value));
+            var fInfor = new fInfoNhomND(Convert.ToInt32(NDGrid.Rows[stt].Cells["id"].Value));
             fInfor.ShowDialog();
             Bind();
         }
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
+            Bind();
+        }
+
+        private void butDel_Click(object sender, EventArgs e)
+        {
+            List<int> idDel = new List<int>();
+            foreach (DataGridViewRow row in NDGrid.Rows)
+            {
+                Console.WriteLine(row.Cells["isChosen"].Value);
+                if (row.Cells["isChosen"].Value == "1")
+                {
+                    idDel.Add((int)row.Cells["id"].Value);
+
+                }
+            }
+            if (idDel.Count == 0) { return; }
+            int cnt = 0;
+            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " nhóm người dùng?") == DialogResult.No) return;
+            foreach (int id in idDel)
+            {
+            Retry:
+                string error = BUSNhomNguoiDung.Instance.DelNhomNguoiDung(id);
+                if (error != "")
+                {
+                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                        goto Retry;
+                    else continue;
+                }
+                else cnt++;
+            }
+
+            SuccDia.Show("Đã xoá thành công " + cnt + " nhóm người dùng");
             Bind();
         }
     }

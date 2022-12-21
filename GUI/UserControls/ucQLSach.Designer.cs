@@ -31,6 +31,7 @@ namespace GUI.UserControls
         private void InitializeComponent()
         {
             this.siticoneGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
+            this.butPhieuNhap = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butTheLoai = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butTacGia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butCuonsach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -38,7 +39,6 @@ namespace GUI.UserControls
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.butTuaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.container = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.butPhieuNhap = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,31 @@ namespace GUI.UserControls
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
             this.siticoneGradientPanel1.Size = new System.Drawing.Size(1121, 50);
             this.siticoneGradientPanel1.TabIndex = 0;
+            // 
+            // butPhieuNhap
+            // 
+            this.butPhieuNhap.BorderColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.butPhieuNhap.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
+            this.butPhieuNhap.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
+            this.butPhieuNhap.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.butPhieuNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butPhieuNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butPhieuNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butPhieuNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butPhieuNhap.Dock = System.Windows.Forms.DockStyle.Left;
+            this.butPhieuNhap.FillColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butPhieuNhap.ForeColor = System.Drawing.Color.DimGray;
+            this.butPhieuNhap.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.Location = new System.Drawing.Point(845, 0);
+            this.butPhieuNhap.Name = "butPhieuNhap";
+            this.butPhieuNhap.PressedColor = System.Drawing.Color.Transparent;
+            this.butPhieuNhap.Size = new System.Drawing.Size(169, 50);
+            this.butPhieuNhap.TabIndex = 5;
+            this.butPhieuNhap.Text = "Phiếu Nhập Sách";
+            this.butPhieuNhap.Click += new System.EventHandler(this.butPhieuNhap_Click);
             // 
             // butTheLoai
             // 
@@ -199,31 +224,6 @@ namespace GUI.UserControls
             this.container.Size = new System.Drawing.Size(1121, 643);
             this.container.TabIndex = 1;
             this.container.Text = "siticoneContainerControl2";
-            // 
-            // butPhieuNhap
-            // 
-            this.butPhieuNhap.BorderColor = System.Drawing.Color.Transparent;
-            this.butPhieuNhap.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
-            this.butPhieuNhap.CheckedState.CustomBorderColor = System.Drawing.Color.SlateBlue;
-            this.butPhieuNhap.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.butPhieuNhap.CheckedState.ForeColor = System.Drawing.Color.SlateBlue;
-            this.butPhieuNhap.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.butPhieuNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butPhieuNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butPhieuNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butPhieuNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butPhieuNhap.Dock = System.Windows.Forms.DockStyle.Left;
-            this.butPhieuNhap.FillColor = System.Drawing.Color.Transparent;
-            this.butPhieuNhap.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butPhieuNhap.ForeColor = System.Drawing.Color.DimGray;
-            this.butPhieuNhap.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.butPhieuNhap.Location = new System.Drawing.Point(845, 0);
-            this.butPhieuNhap.Name = "butPhieuNhap";
-            this.butPhieuNhap.PressedColor = System.Drawing.Color.Transparent;
-            this.butPhieuNhap.Size = new System.Drawing.Size(169, 50);
-            this.butPhieuNhap.TabIndex = 5;
-            this.butPhieuNhap.Text = "Phiếu Nhập Sách";
-            this.butPhieuNhap.Click += new System.EventHandler(this.butPhieuNhap_Click);
             // 
             // ucQLSach
             // 

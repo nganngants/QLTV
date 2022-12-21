@@ -35,13 +35,14 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butTenSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butMaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.txtTenSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtMaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAddOld = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.txtTenSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.txtMaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siticoneCreditCardValidationTool1 = new Siticone.Desktop.UI.Winforms.SiticoneCreditCardValidationTool();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
@@ -49,7 +50,6 @@ namespace GUI.UserControls
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticoneContextMenuStrip1 = new Siticone.Desktop.UI.WinForms.SiticoneContextMenuStrip();
             this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.butTenSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +80,29 @@ namespace GUI.UserControls
             this.topPanel.Size = new System.Drawing.Size(1264, 120);
             this.topPanel.TabIndex = 0;
             // 
+            // butTenSach
+            // 
+            this.butTenSach.AutoRoundedCorners = true;
+            this.butTenSach.BorderRadius = 10;
+            this.butTenSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butTenSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butTenSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butTenSach.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butTenSach.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butTenSach.ForeColor = System.Drawing.Color.White;
+            this.butTenSach.Image = global::GUI.Properties.Resources.search_icon;
+            this.butTenSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butTenSach.ImageOffset = new System.Drawing.Point(3, 0);
+            this.butTenSach.Location = new System.Drawing.Point(831, 73);
+            this.butTenSach.Name = "butTenSach";
+            this.butTenSach.Size = new System.Drawing.Size(129, 22);
+            this.butTenSach.TabIndex = 14;
+            this.butTenSach.Text = "Tìm kiếm";
+            this.butTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butTenSach.TextOffset = new System.Drawing.Point(3, 0);
+            this.butTenSach.Click += new System.EventHandler(this.butTenSach_Click);
+            // 
             // butRefresh
             // 
             this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
@@ -94,28 +117,6 @@ namespace GUI.UserControls
             this.butRefresh.Size = new System.Drawing.Size(64, 54);
             this.butRefresh.TabIndex = 8;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
-            // 
-            // butDel
-            // 
-            this.butDel.BorderRadius = 6;
-            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDel.ForeColor = System.Drawing.Color.White;
-            this.butDel.Image = global::GUI.Properties.Resources.close_icon;
-            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(288, 78);
-            this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(134, 22);
-            this.butDel.TabIndex = 3;
-            this.butDel.Text = "Xóa Sách";
-            this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
-            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butMaSach
             // 
@@ -139,6 +140,50 @@ namespace GUI.UserControls
             this.butMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.TextOffset = new System.Drawing.Point(3, 0);
             this.butMaSach.Click += new System.EventHandler(this.butMaSach_Click);
+            // 
+            // butDel
+            // 
+            this.butDel.BorderRadius = 6;
+            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butDel.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDel.ForeColor = System.Drawing.Color.White;
+            this.butDel.Image = global::GUI.Properties.Resources.close_icon;
+            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butDel.Location = new System.Drawing.Point(288, 78);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(134, 22);
+            this.butDel.TabIndex = 3;
+            this.butDel.Text = "Xóa Sách";
+            this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
+            // 
+            // butAddOld
+            // 
+            this.butAddOld.BorderRadius = 6;
+            this.butAddOld.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAddOld.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAddOld.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAddOld.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAddOld.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAddOld.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAddOld.ForeColor = System.Drawing.Color.White;
+            this.butAddOld.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAddOld.Location = new System.Drawing.Point(143, 78);
+            this.butAddOld.Name = "butAddOld";
+            this.butAddOld.Size = new System.Drawing.Size(142, 22);
+            this.butAddOld.TabIndex = 4;
+            this.butAddOld.Text = "Nhập Sách Đã Có";
+            this.butAddOld.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAddOld.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAddOld.Click += new System.EventHandler(this.butAddOld_Click);
             // 
             // txtTenSach
             // 
@@ -164,6 +209,28 @@ namespace GUI.UserControls
             this.txtTenSach.Size = new System.Drawing.Size(201, 24);
             this.txtTenSach.TabIndex = 12;
             // 
+            // butAdd
+            // 
+            this.butAdd.BorderRadius = 6;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(7, 78);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(134, 22);
+            this.butAdd.TabIndex = 4;
+            this.butAdd.Text = "Nhập Sách Mới";
+            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
+            // 
             // txtMaSach
             // 
             this.txtMaSach.AutoRoundedCorners = true;
@@ -186,50 +253,6 @@ namespace GUI.UserControls
             this.txtMaSach.Size = new System.Drawing.Size(201, 22);
             this.txtMaSach.TabIndex = 13;
             this.txtMaSach.TextChanged += new System.EventHandler(this.txtMaSach_TextChanged);
-            // 
-            // butAddOld
-            // 
-            this.butAddOld.BorderRadius = 6;
-            this.butAddOld.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAddOld.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAddOld.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAddOld.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAddOld.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butAddOld.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAddOld.ForeColor = System.Drawing.Color.White;
-            this.butAddOld.Image = global::GUI.Properties.Resources.Plus_icon;
-            this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAddOld.Location = new System.Drawing.Point(143, 78);
-            this.butAddOld.Name = "butAddOld";
-            this.butAddOld.Size = new System.Drawing.Size(142, 22);
-            this.butAddOld.TabIndex = 4;
-            this.butAddOld.Text = "Nhập Sách Đã Có";
-            this.butAddOld.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAddOld.TextOffset = new System.Drawing.Point(3, 0);
-            this.butAddOld.Click += new System.EventHandler(this.butAddOld_Click);
-            // 
-            // butAdd
-            // 
-            this.butAdd.BorderRadius = 6;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
-            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(7, 78);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(134, 22);
-            this.butAdd.TabIndex = 4;
-            this.butAdd.Text = "Nhập Sách Mới";
-            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
-            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // sACHBindingSource
             // 
@@ -351,29 +374,6 @@ namespace GUI.UserControls
             this.SachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.SachGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
-            // 
-            // butTenSach
-            // 
-            this.butTenSach.AutoRoundedCorners = true;
-            this.butTenSach.BorderRadius = 10;
-            this.butTenSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butTenSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butTenSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butTenSach.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butTenSach.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.butTenSach.ForeColor = System.Drawing.Color.White;
-            this.butTenSach.Image = global::GUI.Properties.Resources.search_icon;
-            this.butTenSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butTenSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butTenSach.Location = new System.Drawing.Point(831, 73);
-            this.butTenSach.Name = "butTenSach";
-            this.butTenSach.Size = new System.Drawing.Size(129, 22);
-            this.butTenSach.TabIndex = 14;
-            this.butTenSach.Text = "Tìm kiếm";
-            this.butTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butTenSach.TextOffset = new System.Drawing.Point(3, 0);
-            this.butTenSach.Click += new System.EventHandler(this.butTenSach_Click);
             // 
             // isChosen
             // 

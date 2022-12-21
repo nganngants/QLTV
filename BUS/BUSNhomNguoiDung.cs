@@ -28,9 +28,9 @@ namespace BUS
         {
             return DALNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
         }
-        public string DelNhomNguoiDung(string maNhomNguoiDung)
+        public string DelNhomNguoiDung(int maNhomNguoiDung)
         {
-            NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
+            NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(maNhomNguoiDung);
             if(nnd == null)
             { return "Mã nhóm người dùng không đúng"; }
             if (DALNhomNguoiDung.Instance.DelNhomNguoiDung(nnd.id))

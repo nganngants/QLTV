@@ -49,7 +49,7 @@ namespace GUI.UserControls
         {
             int idx = e.RowIndex;
             if (e.ColumnIndex == 0) return;
-
+            if (idx == -1) return;
             var f = new fEditPhieuMuon((Convert.ToInt32(PhieuMuonGrid.Rows[idx].Cells["SoPhieuMuon"].Value)));
             f.ShowDialog();
             Binding();

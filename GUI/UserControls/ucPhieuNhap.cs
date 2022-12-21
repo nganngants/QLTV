@@ -25,11 +25,19 @@ namespace GUI.UserControls
             PhieuNhapList = BUSPhieuNhap.Instance.GetAllPhieuNhap();
             PhieuNhapgrid.DataSource = PhieuNhapList;   
         }
+        private void Sorting(int idx)
+        {
+            this.PhieuNhapgrid.Sort(this.PhieuNhapgrid.Columns[idx], ListSortDirection.Ascending);
+        }
 
         private void PhieuNhapgrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int stt = e.RowIndex;
-            if (stt == -1) return;
+            if (stt == -1)
+            {
+                Sorting(e.ColumnIndex);
+                return;
+            }
             int idPhieu = (int)PhieuNhapgrid.Rows[stt].Cells["SoPhieuNhap"].Value;
             var f = new fInfoPhieuNhap(idPhieu);
             f.ShowDialog();
