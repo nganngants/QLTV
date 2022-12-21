@@ -28,7 +28,7 @@ namespace GUI.UserControls
         }
         private void init()
         {
-            
+
             labelName.Text = usr.TenNguoiDung;
             labelRole.Text = usr.NHOMNGUOIDUNG.TenNhomNguoiDung;
             if(usr.ChucVu !=null)

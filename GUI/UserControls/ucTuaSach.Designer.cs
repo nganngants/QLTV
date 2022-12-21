@@ -171,7 +171,9 @@ namespace GUI.UserControls
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
+
             this.butRefresh.Location = new System.Drawing.Point(330, 72);
+
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(64, 54);
@@ -191,9 +193,11 @@ namespace GUI.UserControls
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
+
             this.butDel.Location = new System.Drawing.Point(166, 85);
             this.butDel.Name = "butDel";
             this.butDel.Size = new System.Drawing.Size(158, 28);
+
             this.butDel.TabIndex = 5;
             this.butDel.Text = "Xóa Tựa Sách";
             this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -215,7 +219,9 @@ namespace GUI.UserControls
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAdd.Location = new System.Drawing.Point(1, 85);
             this.butAdd.Name = "butAdd";
+
             this.butAdd.Size = new System.Drawing.Size(159, 28);
+
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Tựa Sách";
             this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -234,6 +240,7 @@ namespace GUI.UserControls
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.TuaSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.TuaSachGrid.AutoGenerateColumns = false;
+
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
