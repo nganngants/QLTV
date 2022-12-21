@@ -39,19 +39,22 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butMaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.txtMaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.cUONSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CuonSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticoneDataGridView2 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CuonSachGrid)).BeginInit();
@@ -60,7 +63,9 @@ namespace GUI.UserControls
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.butMaSach);
             this.topPanel.Controls.Add(this.butRefresh);
+            this.topPanel.Controls.Add(this.txtMaSach);
             this.topPanel.Controls.Add(this.butDel);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -69,6 +74,66 @@ namespace GUI.UserControls
             this.topPanel.Size = new System.Drawing.Size(997, 121);
             this.topPanel.TabIndex = 0;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
+            // 
+            // butMaSach
+            // 
+            this.butMaSach.AutoRoundedCorners = true;
+            this.butMaSach.BorderRadius = 10;
+            this.butMaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butMaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butMaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butMaSach.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butMaSach.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butMaSach.ForeColor = System.Drawing.Color.White;
+            this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
+            this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
+            this.butMaSach.Location = new System.Drawing.Point(647, 78);
+            this.butMaSach.Name = "butMaSach";
+            this.butMaSach.Size = new System.Drawing.Size(129, 22);
+            this.butMaSach.TabIndex = 14;
+            this.butMaSach.Text = "Tìm kiếm";
+            this.butMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butMaSach.TextOffset = new System.Drawing.Point(3, 0);
+            this.butMaSach.Click += new System.EventHandler(this.butMaSach_Click);
+            // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Location = new System.Drawing.Point(144, 61);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.TabIndex = 10;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            // 
+            // txtMaSach
+            // 
+            this.txtMaSach.AutoRoundedCorners = true;
+            this.txtMaSach.BorderRadius = 10;
+            this.txtMaSach.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaSach.DefaultText = "";
+            this.txtMaSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaSach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaSach.Location = new System.Drawing.Point(435, 78);
+            this.txtMaSach.Name = "txtMaSach";
+            this.txtMaSach.PasswordChar = '\0';
+            this.txtMaSach.PlaceholderText = "Mã sách";
+            this.txtMaSach.SelectedText = "";
+            this.txtMaSach.Size = new System.Drawing.Size(201, 22);
+            this.txtMaSach.TabIndex = 15;
             // 
             // butDel
             // 
@@ -121,6 +186,7 @@ namespace GUI.UserControls
             this.CuonSachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChosen,
             this.MaCuonSach,
+            this.MaTuaSach,
             this.MaSach,
             this.TenSach,
             this.TinhTrang});
@@ -166,48 +232,6 @@ namespace GUI.UserControls
             this.CuonSachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.CuonSachGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CuonSachGrid_CellClick);
             this.CuonSachGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CuonSachGrid_CellContentClick);
-            // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.FalseValue = "0";
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Width = 6;
-            // 
-            // MaCuonSach
-            // 
-            this.MaCuonSach.HeaderText = "Mã cuốn sách";
-            this.MaCuonSach.MinimumWidth = 6;
-            this.MaCuonSach.Name = "MaCuonSach";
-            this.MaCuonSach.ReadOnly = true;
-            // 
-            // MaSach
-            // 
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            this.MaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TenSach
-            // 
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.MinimumWidth = 6;
-            this.TenSach.Name = "TenSach";
-            this.TenSach.ReadOnly = true;
-            this.TenSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.HeaderText = "Tình trạng";
-            this.TinhTrang.MinimumWidth = 6;
-            this.TinhTrang.Name = "TinhTrang";
-            this.TinhTrang.ReadOnly = true;
-            this.TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // siticoneDataGridView2
             // 
@@ -302,20 +326,55 @@ namespace GUI.UserControls
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.SuccDia.Text = null;
             // 
-            // butRefresh
+            // isChosen
             // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(144, 61);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 54);
-            this.butRefresh.TabIndex = 10;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Width = 6;
+            // 
+            // MaCuonSach
+            // 
+            this.MaCuonSach.HeaderText = "Mã cuốn sách";
+            this.MaCuonSach.MinimumWidth = 6;
+            this.MaCuonSach.Name = "MaCuonSach";
+            this.MaCuonSach.ReadOnly = true;
+            // 
+            // MaTuaSach
+            // 
+            this.MaTuaSach.HeaderText = "Mã tựa sách";
+            this.MaTuaSach.MinimumWidth = 6;
+            this.MaTuaSach.Name = "MaTuaSach";
+            this.MaTuaSach.ReadOnly = true;
+            this.MaTuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // MaSach
+            // 
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            this.MaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TenSach
+            // 
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.MinimumWidth = 6;
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            this.TenSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.HeaderText = "Tình trạng";
+            this.TinhTrang.MinimumWidth = 6;
+            this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.ReadOnly = true;
+            this.TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ucCuonSach
             // 
@@ -342,14 +401,17 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView CuonSachGrid;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView siticoneDataGridView2;
-        private DataGridViewCheckBoxColumn isChosen;
-        private DataGridViewTextBoxColumn MaCuonSach;
-        private DataGridViewTextBoxColumn MaSach;
-        private DataGridViewTextBoxColumn TenSach;
-        private DataGridViewTextBoxColumn TinhTrang;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butMaSach;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtMaSach;
+        private DataGridViewCheckBoxColumn isChosen;
+        private DataGridViewTextBoxColumn MaCuonSach;
+        private DataGridViewTextBoxColumn MaTuaSach;
+        private DataGridViewTextBoxColumn MaSach;
+        private DataGridViewTextBoxColumn TenSach;
+        private DataGridViewTextBoxColumn TinhTrang;
     }
 }
