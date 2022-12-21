@@ -30,11 +30,12 @@ namespace GUI
             string username = txtUsername.Text;
             string userpwd = txtUserpwd.Text;
             BUSLogin bLogin = new BUSLogin();
-            if (bLogin.checkValidLogin(username, userpwd))
+            int id = bLogin.checkValidLogin(username, userpwd);
+            if (id != -1)
             {
                 MessageBox.Show("Đăng nhập thành công!\nChào mừng " + username + "!",
                                 "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                var f = new fMainForm();
+                var f = new fMainForm(id);
                 //BmPhieuThuTienPhat f = new BmPhieuThuTienPhat();
                 this.Hide();
                 f.ShowDialog();
