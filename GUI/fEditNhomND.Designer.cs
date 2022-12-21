@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
@@ -45,10 +45,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.isChoosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maChucNangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenChucNangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenManHinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nHOMNGUOIDUNGsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenManHinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.messageDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsChucNang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUCNANGBindingSource)).BeginInit();
@@ -106,37 +107,34 @@
             this.dsChucNang.AllowUserToDeleteRows = false;
             this.dsChucNang.AllowUserToResizeColumns = false;
             this.dsChucNang.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dsChucNang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dsChucNang.AutoGenerateColumns = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dsChucNang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dsChucNang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dsChucNang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dsChucNang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dsChucNang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dsChucNang.ColumnHeadersHeight = 34;
             this.dsChucNang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dsChucNang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChoosen,
             this.idCol,
-            this.maChucNangDataGridViewTextBoxColumn,
-            this.tenChucNangDataGridViewTextBoxColumn,
-            this.tenManHinhDataGridViewTextBoxColumn,
-            this.nHOMNGUOIDUNGsDataGridViewTextBoxColumn});
-            this.dsChucNang.DataSource = this.cHUCNANGBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dsChucNang.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaChucNang,
+            this.TenChucNang,
+            this.TenManHinh});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dsChucNang.DefaultCellStyle = dataGridViewCellStyle6;
             this.dsChucNang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dsChucNang.Location = new System.Drawing.Point(87, 252);
             this.dsChucNang.Name = "dsChucNang";
@@ -186,6 +184,7 @@
             this.butSave.Size = new System.Drawing.Size(150, 50);
             this.butSave.TabIndex = 4;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // label1
             // 
@@ -254,43 +253,50 @@
             // 
             // idCol
             // 
-            this.idCol.DataPropertyName = "id";
             this.idCol.HeaderText = "id";
             this.idCol.MinimumWidth = 6;
             this.idCol.Name = "idCol";
+            this.idCol.ReadOnly = true;
             this.idCol.Visible = false;
             // 
-            // maChucNangDataGridViewTextBoxColumn
+            // MaChucNang
             // 
-            this.maChucNangDataGridViewTextBoxColumn.DataPropertyName = "MaChucNang";
-            this.maChucNangDataGridViewTextBoxColumn.HeaderText = "Mã Chức Năng";
-            this.maChucNangDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maChucNangDataGridViewTextBoxColumn.Name = "maChucNangDataGridViewTextBoxColumn";
-            this.maChucNangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.MaChucNang.HeaderText = "Mã Chức Năng";
+            this.MaChucNang.MinimumWidth = 6;
+            this.MaChucNang.Name = "MaChucNang";
+            this.MaChucNang.ReadOnly = true;
             // 
-            // tenChucNangDataGridViewTextBoxColumn
+            // TenChucNang
             // 
-            this.tenChucNangDataGridViewTextBoxColumn.DataPropertyName = "TenChucNang";
-            this.tenChucNangDataGridViewTextBoxColumn.HeaderText = "Tên Chức Năng";
-            this.tenChucNangDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenChucNangDataGridViewTextBoxColumn.Name = "tenChucNangDataGridViewTextBoxColumn";
-            this.tenChucNangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.TenChucNang.HeaderText = "Tên Chức Năng";
+            this.TenChucNang.MinimumWidth = 6;
+            this.TenChucNang.Name = "TenChucNang";
+            this.TenChucNang.ReadOnly = true;
             // 
-            // tenManHinhDataGridViewTextBoxColumn
+            // TenManHinh
             // 
-            this.tenManHinhDataGridViewTextBoxColumn.DataPropertyName = "TenManHinh";
-            this.tenManHinhDataGridViewTextBoxColumn.HeaderText = "Tên Màn Hình";
-            this.tenManHinhDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenManHinhDataGridViewTextBoxColumn.Name = "tenManHinhDataGridViewTextBoxColumn";
-            this.tenManHinhDataGridViewTextBoxColumn.ReadOnly = true;
+            this.TenManHinh.HeaderText = "Tên Màn Hình Được Load";
+            this.TenManHinh.MinimumWidth = 6;
+            this.TenManHinh.Name = "TenManHinh";
+            this.TenManHinh.ReadOnly = true;
             // 
-            // nHOMNGUOIDUNGsDataGridViewTextBoxColumn
+            // ErrorDia
             // 
-            this.nHOMNGUOIDUNGsDataGridViewTextBoxColumn.DataPropertyName = "NHOMNGUOIDUNGs";
-            this.nHOMNGUOIDUNGsDataGridViewTextBoxColumn.HeaderText = "NHOMNGUOIDUNGs";
-            this.nHOMNGUOIDUNGsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nHOMNGUOIDUNGsDataGridViewTextBoxColumn.Name = "nHOMNGUOIDUNGsDataGridViewTextBoxColumn";
-            this.nHOMNGUOIDUNGsDataGridViewTextBoxColumn.Visible = false;
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // messageDia
+            // 
+            this.messageDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.messageDia.Caption = null;
+            this.messageDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
+            this.messageDia.Parent = null;
+            this.messageDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.messageDia.Text = null;
             // 
             // fEditNhomND
             // 
@@ -328,9 +334,10 @@
         private System.Windows.Forms.Label labelMaNND;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isChoosen;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maChucNangDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenChucNangDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenManHinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nHOMNGUOIDUNGsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaChucNang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenChucNang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenManHinh;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog messageDia;
     }
 }

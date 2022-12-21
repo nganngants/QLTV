@@ -27,18 +27,39 @@ namespace GUI
             labelMaNND.Text += nnd.MaNhomNguoiDung;
             txtTenNhom.Text = nnd.TenNhomNguoiDung;
             var dscn = BUSChucNang.Instance.GetAllChucNang();
-            dsChucNang.DataSource = dscn;
+            //dsChucNang.DataSource = dscn;
             //dsChucNang.VirtualMode = true;
-            foreach (DataGridViewRow row in dsChucNang.Rows)
+            foreach (var cn in dscn)
             {
-                var cn = BUSChucNang.Instance.GetChucNangById(Convert.ToInt32(row.Cells["idCol"].Value));
                 if (nnd.CHUCNANGs.Contains(cn))
                 {
-                    //Console.WriteLine(cn.TenChucNang);
-                    row.Cells["isChoosen"].Value = "1";
+                    dsChucNang.Rows.Add("1", cn.id, cn.MaChucNang, cn.TenChucNang, cn.TenManHinh);
                 }
+                else
+                    dsChucNang.Rows.Add("0", cn.id, cn.MaChucNang, cn.TenChucNang, cn.TenManHinh);
             }    
         }
 
+        private void butSave_Click(object sender, EventArgs e)
+        {
+            string ten = txtTenNhom.Text;
+
+            List<String> dsCn = new List<String>();
+            foreach (DataGridViewRow row in this.dsChucNang.Rows)
+            {
+                //Console.WriteLine(row.Cells["isChoosen"].Value);
+                if (row.Cells["isChoosen"].Value.ToString() == "1")
+                {
+                    //Console.WriteLine(row.Cells["MaChucNang"].Value.ToString());
+                    dsCn.Add(row.Cells["MaChucNang"].Value.ToString());
+                }
+            }
+            string res = BUSNhomNguoiDung.Instance.DelChucNangForNhom(id, dsCn);
+
+            res = BUSNhomNguoiDung.Instance.AddChucNangForNhom(id, dsCn);
+            if (res == "") messageDia.Show("Cập nhật nhóm người dùng thành công!");
+            else ErrorDia.Show(res);
+            this.Close();
+        }
     }
 }
