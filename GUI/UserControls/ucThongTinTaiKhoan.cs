@@ -18,9 +18,9 @@ namespace GUI.UserControls
         public ucThongTinTaiKhoan(int id)
         {
             InitializeComponent();
+            usr = BUSNguoiDung.Instance.GetNguoiDungById(id);
             init();
         }
-        private NGUOIDUNG usr;
         private void butChangePass_Click(object sender, EventArgs e)
         {
             var f = new fChangePassword(usr.id);
@@ -28,8 +28,7 @@ namespace GUI.UserControls
         }
         private void init()
         {
-            usr = BUSLogin.usr;
-
+            
             labelName.Text = usr.TenNguoiDung;
             labelRole.Text = usr.NHOMNGUOIDUNG.TenNhomNguoiDung;
             if(usr.ChucVu !=null)

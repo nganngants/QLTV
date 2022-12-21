@@ -36,16 +36,16 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.dateBC = new System.Windows.Forms.DateTimePicker();
-            this.errDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.messDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoNgayTre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.dateBC = new System.Windows.Forms.DateTimePicker();
+            this.errDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.messDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -130,66 +130,6 @@ namespace GUI.UserControls
             this.dataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
-            // topPanel
-            // 
-            this.topPanel.Controls.Add(this.butAdd);
-            this.topPanel.Controls.Add(this.dateBC);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(925, 83);
-            this.topPanel.TabIndex = 1;
-            // 
-            // butAdd
-            // 
-            this.butAdd.BorderRadius = 6;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
-            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(125, 47);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(102, 18);
-            this.butAdd.TabIndex = 4;
-            this.butAdd.Text = "Tạo Báo Cáo";
-            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
-            this.butAdd.Click += new System.EventHandler(this.butAdd_Click_1);
-            // 
-            // dateBC
-            // 
-            this.dateBC.CustomFormat = "MM/yyyy";
-            this.dateBC.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateBC.Location = new System.Drawing.Point(1, 47);
-            this.dateBC.Name = "dateBC";
-            this.dateBC.Size = new System.Drawing.Size(118, 22);
-            this.dateBC.TabIndex = 3;
-            // 
-            // errDia
-            // 
-            this.errDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.errDia.Caption = null;
-            this.errDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.errDia.Parent = null;
-            this.errDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.errDia.Text = null;
-            // 
-            // messDia
-            // 
-            this.messDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.messDia.Caption = null;
-            this.messDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.messDia.Parent = null;
-            this.messDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.messDia.Text = null;
-            // 
             // STT
             // 
             this.STT.HeaderText = "Số Thứ Tự";
@@ -229,6 +169,66 @@ namespace GUI.UserControls
             this.SoNgayTre.Name = "SoNgayTre";
             this.SoNgayTre.ReadOnly = true;
             this.SoNgayTre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.butAdd);
+            this.topPanel.Controls.Add(this.dateBC);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(925, 83);
+            this.topPanel.TabIndex = 1;
+            // 
+            // butAdd
+            // 
+            this.butAdd.BorderRadius = 6;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(125, 38);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(122, 31);
+            this.butAdd.TabIndex = 4;
+            this.butAdd.Text = "Tạo Báo Cáo";
+            this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click_1);
+            // 
+            // dateBC
+            // 
+            this.dateBC.CustomFormat = "MM/yyyy";
+            this.dateBC.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateBC.Location = new System.Drawing.Point(1, 47);
+            this.dateBC.Name = "dateBC";
+            this.dateBC.Size = new System.Drawing.Size(118, 22);
+            this.dateBC.TabIndex = 3;
+            // 
+            // errDia
+            // 
+            this.errDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.errDia.Caption = null;
+            this.errDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.errDia.Parent = null;
+            this.errDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.errDia.Text = null;
+            // 
+            // messDia
+            // 
+            this.messDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.messDia.Caption = null;
+            this.messDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.messDia.Parent = null;
+            this.messDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.messDia.Text = null;
             // 
             // ucSachTraTre
             // 
