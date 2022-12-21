@@ -95,7 +95,7 @@ namespace GUI.UserControls
         private void DocGiaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-
+            if (idx == -1) return;
             if (e.ColumnIndex == 1) return;
             if (e.ColumnIndex == DocGiaGrid.Columns["Edit"].Index)
             {
