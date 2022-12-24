@@ -1,6 +1,6 @@
 ﻿-- Note: you have to drop QLTV database (if you had) first before running entire script
 -- Note: Just run the script and you're good to go with a new database
-DROP DATABASE QLTV
+--DROP DATABASE QLTV
 
 CREATE DATABASE QLTV
 go
@@ -33,6 +33,7 @@ insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLPT', 'Quan Ly Phieu Th
 insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('BCTK', 'Bao Cao Thong Ke')
 insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLND', 'Quan Ly Nguoi Dung')
 insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('TDQD', 'Thay Doi Quy Dinh')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('DG', 'Doc Gia')
 
 go
 CREATE TABLE PHANQUYEN
@@ -137,12 +138,12 @@ CREATE TABLE DOCGIA
 )
 go
 set dateformat dmy
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, idLoaiDocGia) 
-VALUES ('Doc Gia A', '13/12/1989', '27/10/2022', '11/9/2023', 1)
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, idLoaiDocGia) 
-VALUES ('Doc Gia B', '13/12/1989', '31/10/2022', '11/11/2023', 2)
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, idLoaiDocGia) 
-VALUES ('Doc Gia C', '13/12/1989', '27/8/2022', '11/5/2023', 3)
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, TongNoHienTai, idLoaiDocGia) 
+VALUES ('Doc Gia A', '13/12/1989', '27/10/2022', '11/9/2023', 0, 1)
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, TongNoHienTai, idLoaiDocGia) 
+VALUES ('Doc Gia B', '13/12/1989', '31/10/2022', '11/11/2023', 0, 2)
+INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, TongNoHienTai, idLoaiDocGia) 
+VALUES ('Doc Gia C', '13/12/1989', '27/8/2022', '11/5/2023', 0, 3)
 go
 CREATE TABLE SACH
 (
