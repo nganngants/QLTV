@@ -31,10 +31,12 @@ namespace BUS
             pn = DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
             return pn;
         }
+
         public int AddPhieuNhap( DateTime NgayNhap)
         {
             //DateTime NgayNhap = new DateTime(Nam, Thang, Ngay);
             if(DateTime.Now < NgayNhap) { return -1; };
+
             if (DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap) != null)
             {
                 PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap);

@@ -39,7 +39,7 @@ namespace GUI
             foreach (DataGridViewRow row in this.dsChucNang.Rows )
             {
                 //Console.WriteLine(row.Cells["isChoosen"].Value);
-                if (row.Cells["isChoosen"].Value.ToString() == "1")
+                if (row.Cells["isChoosen"].Value == "1")
                 {
                     //Console.WriteLine(row.Cells["MaChucNang"].Value.ToString());
                     dsCn.Add(row.Cells["MaChucNang"].Value.ToString());

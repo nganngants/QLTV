@@ -41,6 +41,7 @@
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label2 = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.siticoneDragControl2 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             this.SuspendLayout();
@@ -215,6 +216,12 @@
             this.siticoneDragControl1.TargetControl = this;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
+            // siticoneDragControl2
+            // 
+            this.siticoneDragControl2.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneDragControl2.TargetControl = this.siticonePanel2;
+            this.siticoneDragControl2.UseTransparentDrag = true;
+            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,5 +256,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
         private System.Windows.Forms.Label label2;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
+        private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl2;
     }
 }

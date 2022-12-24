@@ -183,7 +183,6 @@
             this.txtSoLuongNhap.Size = new System.Drawing.Size(186, 36);
             this.txtSoLuongNhap.TabIndex = 16;
             this.txtSoLuongNhap.TextChanged += new System.EventHandler(this.txtSoLuongNhap_TextChanged);
-            //this.txtSoLuongNhap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSoLuongNhap_KeyUp);
             // 
             // dateNgayNhap
             // 
@@ -323,9 +322,9 @@
             this.label8.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label8.Location = new System.Drawing.Point(302, 373);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 22);
+            this.label8.Size = new System.Drawing.Size(131, 22);
             this.label8.TabIndex = 9;
-            this.label8.Text = "Số Lượng Nhập";
+            this.label8.Text = "Số Lượng Nhập*";
             // 
             // label7
             // 
@@ -336,9 +335,9 @@
             this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label7.Location = new System.Drawing.Point(113, 373);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 22);
+            this.label7.Size = new System.Drawing.Size(101, 22);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Ngày Nhập";
+            this.label7.Text = "Ngày Nhập*";
             // 
             // label4
             // 
@@ -349,9 +348,9 @@
             this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label4.Location = new System.Drawing.Point(115, 261);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 22);
+            this.label4.Size = new System.Drawing.Size(76, 22);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Đơn Giá";
+            this.label4.Text = "Đơn Giá*";
             // 
             // label9
             // 
@@ -362,9 +361,9 @@
             this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label9.Location = new System.Drawing.Point(357, 115);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 22);
+            this.label9.Size = new System.Drawing.Size(120, 22);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Năm Xuất Bản";
+            this.label9.Text = "Năm Xuất Bản*";
             // 
             // label3
             // 
@@ -388,9 +387,9 @@
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label2.Location = new System.Drawing.Point(114, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 22);
+            this.label2.Size = new System.Drawing.Size(83, 22);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Tựa Sách";
+            this.label2.Text = "Tựa Sách*";
             // 
             // siticoneSeparator1
             // 

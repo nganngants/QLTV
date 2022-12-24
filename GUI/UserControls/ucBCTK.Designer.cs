@@ -40,6 +40,7 @@ namespace GUI.UserControls
             // 
             // siticoneGradientPanel1
             // 
+            this.siticoneGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneGradientPanel1.Controls.Add(this.siticoneContainerControl1);
             this.siticoneGradientPanel1.Controls.Add(this.butTraTre);
             this.siticoneGradientPanel1.Controls.Add(this.butTheLoai);
@@ -111,7 +112,9 @@ namespace GUI.UserControls
             // 
             // container
             // 
+            this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.container.Location = new System.Drawing.Point(0, 50);
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(997, 602);

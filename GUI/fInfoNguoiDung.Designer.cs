@@ -48,6 +48,7 @@
             this.labelTenDN = new System.Windows.Forms.Label();
             this.butChange = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticonePanel1.SuspendLayout();
             this.tableInfo.SuspendLayout();
             this.SuspendLayout();
@@ -290,6 +291,15 @@
             this.label1.Text = "THÔNG TIN NGƯỜI DÙNG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // errorDia
+            // 
+            this.errorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.errorDia.Caption = null;
+            this.errorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.errorDia.Parent = null;
+            this.errorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.errorDia.Text = null;
+            // 
             // fInfoNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,5 +342,6 @@
         private System.Windows.Forms.Label labelNgaySinh;
         private System.Windows.Forms.Label labelChucVu;
         private System.Windows.Forms.Label labelTenDN;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog errorDia;
     }
 }

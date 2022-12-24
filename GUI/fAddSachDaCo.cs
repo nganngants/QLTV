@@ -82,7 +82,7 @@ namespace GUI
                 int DonGia = Convert.ToInt32(row.Cells["donGia"].Value);
                 int SoLuongNhap = Convert.ToInt32(row.Cells["soLuongNhap"].Value);
                 BUSCT_PhieuNhap.Instance.AddCtPhieuNhap(pn, id, DonGia, SoLuongNhap);
-                //Console.WriteLine("sdfsdf",id, DonGia, SoLuongNhap);
+                Console.WriteLine("sdfsdf",id, DonGia, SoLuongNhap);
             }
             MessageBox.Show("Thêm phiếu nhập thành công");
             this.Close();

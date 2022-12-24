@@ -100,6 +100,11 @@ namespace GUI
                 return;
             }
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+            if (dateNgayTra.Value < PhieuMuon.NgayMuon)
+            {
+                ErrorDia.Show("Lỗi: Ngày trả không được trước ngày mượn!");
+                return;
+            }    
             int TienPhat = 0;
             if (dateNgayTra.Value > PhieuMuon.HanTra)
                 TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;

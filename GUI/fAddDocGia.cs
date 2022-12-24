@@ -43,7 +43,7 @@ namespace GUI
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
            
             DateTime NgayHetHan = NgayLapThe.AddMonths((int)thamso.ThoiHanThe);
-            dateNgayHetHan.Text = NgayHetHan.Date.ToString();
+            dateNgayHetHan.Text = NgayHetHan.Date.ToShortDateString();
             if(tenDG == "" || DiaChi == "" )
             {
                 MessageBox.Show("Chưa điền đủ thông tin");

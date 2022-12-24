@@ -26,7 +26,7 @@ namespace GUI
             var nnd = BUSNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
             this.dsChucNang.DataSource = nnd.CHUCNANGs.ToList();
             this.labelMaNhom.Text = "Mã Nhóm Người Dùng: " + nnd.MaNhomNguoiDung.ToString();
-            this.labelTenNhom.Text += nnd.TenNhomNguoiDung;
+            this.labelTenNhom.Text = "Tên Nhóm Người Dùng: " + nnd.TenNhomNguoiDung;
         }
 
         private void butChange_Click(object sender, EventArgs e)

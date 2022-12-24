@@ -72,9 +72,9 @@
             this.label3.ForeColor = System.Drawing.Color.SlateBlue;
             this.label3.Location = new System.Drawing.Point(128, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 22);
+            this.label3.Size = new System.Drawing.Size(184, 22);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Nhập mật khẩu hiện tại";
+            this.label3.Text = "Nhập mật khẩu hiện tại*";
             // 
             // label2
             // 
@@ -84,9 +84,9 @@
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(128, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 22);
+            this.label2.Size = new System.Drawing.Size(247, 22);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Nhập và xác nhận mật khẩu mới";
+            this.label2.Text = "Nhập và xác nhận mật khẩu mới*";
             // 
             // butSave
             // 

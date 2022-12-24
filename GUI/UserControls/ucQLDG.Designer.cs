@@ -40,6 +40,7 @@ namespace GUI.UserControls
             // 
             // siticoneGradientPanel1
             // 
+            this.siticoneGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticoneGradientPanel1.Controls.Add(this.siticoneContainerControl1);
             this.siticoneGradientPanel1.Controls.Add(this.butLoaiDG);
             this.siticoneGradientPanel1.Controls.Add(this.butDocGia);

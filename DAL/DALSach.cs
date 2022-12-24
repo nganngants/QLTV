@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -99,6 +100,7 @@ namespace DAL
                 if (sach == null) return false;
                 sach.SoLuong += soLuongThem;
                 sach.SoLuongConLai += soLuongThem;
+                Console.WriteLine("{0} {1}", id, sach.SoLuong);
                 for (int i = 0; i < soLuongThem; ++i)
                 {
                     DALCuonSach.Instance.AddCuonSach(sach, 1);

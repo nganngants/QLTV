@@ -94,6 +94,7 @@
             // 
             // infoPanel
             // 
+            this.infoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.infoPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
             this.infoPanel.BorderRadius = 5;
             this.infoPanel.BorderThickness = 2;

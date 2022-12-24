@@ -126,6 +126,7 @@
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtHoTen.Location = new System.Drawing.Point(137, 156);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
             this.txtHoTen.PlaceholderText = "";
@@ -164,9 +165,9 @@
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label3.Location = new System.Drawing.Point(132, 221);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 27);
+            this.label3.Size = new System.Drawing.Size(189, 27);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Nhóm Người Dùng";
+            this.label3.Text = "Nhóm Người Dùng*";
             // 
             // label2
             // 
@@ -175,9 +176,9 @@
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label2.Location = new System.Drawing.Point(132, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 27);
+            this.label2.Size = new System.Drawing.Size(80, 27);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Họ Tên";
+            this.label2.Text = "Họ Tên*";
             // 
             // siticoneControlBox1
             // 
@@ -227,6 +228,7 @@
             this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtUserpwd.Location = new System.Drawing.Point(137, 500);
+            this.txtUserpwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserpwd.Name = "txtUserpwd";
             this.txtUserpwd.PasswordChar = '\0';
             this.txtUserpwd.PlaceholderText = "";
@@ -246,6 +248,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtUsername.Location = new System.Drawing.Point(137, 419);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "";
@@ -277,6 +280,7 @@
             this.txtChucVu.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChucVu.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtChucVu.Location = new System.Drawing.Point(137, 339);
+            this.txtChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.PasswordChar = '\0';
             this.txtChucVu.PlaceholderText = "";
@@ -291,9 +295,9 @@
             this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label7.Location = new System.Drawing.Point(132, 471);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 27);
+            this.label7.Size = new System.Drawing.Size(102, 27);
             this.label7.TabIndex = 28;
-            this.label7.Text = "Mật khẩu";
+            this.label7.Text = "Mật khẩu*";
             // 
             // label6
             // 
@@ -302,9 +306,9 @@
             this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label6.Location = new System.Drawing.Point(132, 389);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 27);
+            this.label6.Size = new System.Drawing.Size(154, 27);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Tên Đăng Nhập";
+            this.label6.Text = "Tên Đăng Nhập*";
             // 
             // siticoneDragControl1
             // 

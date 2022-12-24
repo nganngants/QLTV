@@ -130,6 +130,7 @@ namespace GUI.UserControls
             this.txtMaSach.Location = new System.Drawing.Point(502, 90);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
+            this.txtMaSach.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtMaSach.PlaceholderText = "Mã sách";
             this.txtMaSach.SelectedText = "";
             this.txtMaSach.Size = new System.Drawing.Size(201, 28);

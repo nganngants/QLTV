@@ -45,7 +45,7 @@ namespace GUI.UserControls
             foreach (DOCGIA docgia in DocGiaList)
             {
                 int SachMuon = BUSDocGia.Instance.GetSoSachDangMuon(docgia.ID);
-                DocGiaGrid.Rows.Add(docgia.ID,0, docgia.MaDocGia, docgia.TenDocGia, docgia.LOAIDOCGIA.TenLoaiDocGia, SachMuon, docgia.NgayHetHan.Date, docgia.TongNoHienTai,img);
+                DocGiaGrid.Rows.Add(docgia.ID,0, docgia.MaDocGia, docgia.TenDocGia, docgia.LOAIDOCGIA.TenLoaiDocGia, SachMuon, docgia.NgayHetHan.ToShortDateString(), docgia.TongNoHienTai,img);
             }
         }
         private void ucDocGia_Load(object sender, EventArgs e)

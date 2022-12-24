@@ -45,6 +45,7 @@ namespace GUI.UserControls
                 var fEdit = new fEditNhomND(Convert.ToInt32(NDGrid.Rows[stt].Cells["id"].Value));
                 fEdit.ShowDialog();
                 Bind();
+                return;
             }
             if (stt == -1) return;
             var fInfor = new fInfoNhomND(Convert.ToInt32(NDGrid.Rows[stt].Cells["id"].Value));

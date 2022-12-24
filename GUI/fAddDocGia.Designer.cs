@@ -234,9 +234,9 @@
             this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label6.Location = new System.Drawing.Point(129, 443);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 22);
+            this.label6.Size = new System.Drawing.Size(118, 22);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Ngày Lập Thẻ";
+            this.label6.Text = "Ngày Lập Thẻ*";
             // 
             // label3
             // 
@@ -245,9 +245,9 @@
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label3.Location = new System.Drawing.Point(314, 209);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 22);
+            this.label3.Size = new System.Drawing.Size(110, 22);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Loại Độc Giả";
+            this.label3.Text = "Loại Độc Giả*";
             // 
             // label2
             // 
@@ -256,9 +256,9 @@
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label2.Location = new System.Drawing.Point(130, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 22);
+            this.label2.Size = new System.Drawing.Size(92, 22);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Ngày Sinh";
+            this.label2.Text = "Ngày Sinh*";
             // 
             // label5
             // 
@@ -278,9 +278,9 @@
             this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label4.Location = new System.Drawing.Point(130, 283);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 22);
+            this.label4.Size = new System.Drawing.Size(70, 22);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Địa Chỉ";
+            this.label4.Text = "Địa Chỉ*";
             // 
             // label1
             // 
@@ -289,9 +289,9 @@
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label1.Location = new System.Drawing.Point(130, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 22);
+            this.label1.Size = new System.Drawing.Size(68, 22);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Họ Tên";
+            this.label1.Text = "Họ Tên*";
             // 
             // txtEmail
             // 

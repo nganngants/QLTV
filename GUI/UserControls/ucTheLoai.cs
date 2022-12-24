@@ -41,6 +41,15 @@ namespace GUI.UserControls
         {
             var tentl = txtTenTL.Text;
             if (tentl == "") return;
+            var tllist = BUSTheLoai.Instance.GetAllTheLoai();
+            foreach (var theLoai in tllist)
+            {
+                if (theLoai.TenTheLoai == tentl)
+                {
+                    if (AskDia.Show("Thể loại này đã có. Bạn có chắc muốn thêm?") == DialogResult.Yes) break;
+                    else return;
+                }    
+            }
             BUSTheLoai.Instance.AddTheLoai(tentl);
             SuccDia.Show("Thêm thể loại thành công!");
             Binding();

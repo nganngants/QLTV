@@ -24,6 +24,11 @@ namespace GUI
         private void Bind()
         {
             var nd = BUSNguoiDung.Instance.GetNguoiDungById(id);
+            if (nd == null)
+            {
+                errorDia.Show("Có lỗi xảy ra, vui lòng thử lại!");
+                this.Close();
+            }
             if (nd.ChucVu != null) labelChucVu.Text = nd.ChucVu;
             else labelChucVu.Text = "";
             labelHoTen.Text = nd.TenNguoiDung;
