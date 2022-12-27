@@ -23,11 +23,6 @@ namespace GUI.UserControls
 
         private void InitializeContainer()
         {
-            uctheloai = new ucMuonTheoTheLoai();
-            uctheloai.Dock = DockStyle.Fill;
-
-            uctratre = new ucSachTraTre();
-            uctratre.Dock = DockStyle.Fill;
 
             // add ca 2 UC MuonTheoTheLoai va SachTraTre vao container
             container.Controls.Add(new ucMuonTheoTheLoai() { Dock = DockStyle.Fill, Name = "theloai" });

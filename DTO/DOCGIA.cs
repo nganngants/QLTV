@@ -31,11 +31,13 @@ namespace DTO
         public System.DateTime NgayHetHan { get; set; }
         public Nullable<int> idLoaiDocGia { get; set; }
         public Nullable<int> TongNoHienTai { get; set; }
+        public Nullable<int> idNguoiDung { get; set; }
     
         public virtual LOAIDOCGIA LOAIDOCGIA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHIEUMUONTRA> PHIEUMUONTRAs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHIEUTHU> PHIEUTHUs { get; set; }
+        public virtual NGUOIDUNG NGUOIDUNG { get; set; }
     }
 }

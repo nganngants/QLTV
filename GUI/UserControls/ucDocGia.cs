@@ -16,22 +16,7 @@ namespace GUI.UserControls
             Binding(BUSDocGia.Instance.GetAllDocGia());
         }
 
-        private void siticoneButton9_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void siticoneButton2_Click(object sender, EventArgs e)
-        {
-            var f = new BMLapTheDocGia();
-            f.Show();
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Binding(List<DOCGIA> DocGiaList)
         {

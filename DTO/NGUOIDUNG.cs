@@ -14,6 +14,12 @@ namespace DTO
     
     public partial class NGUOIDUNG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NGUOIDUNG()
+        {
+            this.DOCGIAs = new HashSet<DOCGIA>();
+        }
+    
         public int id { get; set; }
         public string MaNguoiDung { get; set; }
         public string TenNguoiDung { get; set; }
@@ -24,5 +30,7 @@ namespace DTO
         public int idNhomNguoiDung { get; set; }
     
         public virtual NHOMNGUOIDUNG NHOMNGUOIDUNG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DOCGIA> DOCGIAs { get; set; }
     }
 }

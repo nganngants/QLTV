@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class fMainForm : Form
+    public partial class fManager : Form
     {
         private NGUOIDUNG user;
-        public fMainForm(int id)
+        public fManager(int id)
         {
             InitializeComponent();
             user = BUSNguoiDung.Instance.GetNguoiDungById(id);

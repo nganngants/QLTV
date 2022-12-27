@@ -38,6 +38,7 @@
         <AssociationConnector Association="QLTVModel.FK__TUASACH__idTheLo__30F848ED" ManuallyRouted="false" />
         <AssociationConnector Association="QLTVModel.CT_TACGIA" ManuallyRouted="false" />
         <AssociationConnector Association="QLTVModel.PHANQUYEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__DOCGIA__idNguoiD__3C69FB99" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

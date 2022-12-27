@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLTVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLTVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BCLUOTMUONTHEOTHELOAI">
           <Key>
             <PropertyRef Name="id" />
@@ -71,6 +71,7 @@
           <Property Name="MaCuonSach" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
           <Property Name="idSach" Type="int" />
           <Property Name="TinhTrang" Type="int" />
+          <Property Name="DaAn" Type="int" />
         </EntityType>
         <EntityType Name="DOCGIA">
           <Key>
@@ -86,6 +87,7 @@
           <Property Name="NgayHetHan" Type="datetime" Nullable="false" />
           <Property Name="idLoaiDocGia" Type="int" />
           <Property Name="TongNoHienTai" Type="int" />
+          <Property Name="idNguoiDung" Type="int" />
         </EntityType>
         <EntityType Name="LOAIDOCGIA">
           <Key>
@@ -165,6 +167,7 @@
           <Property Name="DonGia" Type="int" />
           <Property Name="NamXB" Type="int" />
           <Property Name="NhaXB" Type="varchar(max)" />
+          <Property Name="DaAn" Type="int" />
         </EntityType>
         <EntityType Name="TACGIA">
           <Key>
@@ -193,7 +196,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MaTheLoai" Type="char" MaxLength="5" StoreGeneratedPattern="Computed" />
+          <Property Name="MaTheLoai" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
           <Property Name="TenTheLoai" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="TUASACH">
@@ -204,8 +207,9 @@
           <Property Name="MaTuaSach" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
           <Property Name="TenTuaSach" Type="varchar(max)" />
           <Property Name="idTheLoai" Type="int" />
+          <Property Name="DaAn" Type="int" />
         </EntityType>
-        <Association Name="FK__BCSACHTRA__idCuo__5629CD9C">
+        <Association Name="FK__BCSACHTRA__idCuo__571DF1D5">
           <End Role="CUONSACH" Type="Self.CUONSACH" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -219,7 +223,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_BCLUOT__idBao__52593CB8">
+        <Association Name="FK__CT_BCLUOT__idBao__534D60F1">
           <End Role="BCLUOTMUONTHEOTHELOAI" Type="Self.BCLUOTMUONTHEOTHELOAI" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -233,7 +237,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_BCLUOT__idThe__534D60F1">
+        <Association Name="FK__CT_BCLUOT__idThe__5441852A">
           <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -247,7 +251,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_PHIEUN__idSac__440B1D61">
+        <Association Name="FK__CT_PHIEUN__idSac__44FF419A">
           <End Role="SACH" Type="Self.SACH" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -261,7 +265,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_PHIEUN__SoPhi__4316F928">
+        <Association Name="FK__CT_PHIEUN__SoPhi__440B1D61">
           <End Role="PHIEUNHAPSACH" Type="Self.PHIEUNHAPSACH" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -303,7 +307,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CUONSACH__idSach__46E78A0C">
+        <Association Name="FK__CUONSACH__idSach__47DBAE45">
           <End Role="SACH" Type="Self.SACH" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -328,6 +332,18 @@
             </Principal>
             <Dependent Role="DOCGIA">
               <PropertyRef Name="idLoaiDocGia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DOCGIA__idNguoiD__3C69FB99">
+          <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="0..1" />
+          <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGUOIDUNG">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DOCGIA">
+              <PropertyRef Name="idNguoiDung" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -373,7 +389,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHIEUMUON__idCuo__4AB81AF0">
+        <Association Name="FK__PHIEUMUON__idCuo__4BAC3F29">
           <End Role="CUONSACH" Type="Self.CUONSACH" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -387,7 +403,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHIEUMUON__idDoc__49C3F6B7">
+        <Association Name="FK__PHIEUMUON__idDoc__4AB81AF0">
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -401,7 +417,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHIEUTHU__idDocG__4D94879B">
+        <Association Name="FK__PHIEUTHU__idDocG__4E88ABD4">
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -415,7 +431,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SACH__idTuaSach__3E52440B">
+        <Association Name="FK__SACH__idTuaSach__3F466844">
           <End Role="TUASACH" Type="Self.TUASACH" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -464,23 +480,23 @@
           <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THELOAI" EntityType="Self.THELOAI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TUASACH" EntityType="Self.TUASACH" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__BCSACHTRA__idCuo__5629CD9C" Association="Self.FK__BCSACHTRA__idCuo__5629CD9C">
+          <AssociationSet Name="FK__BCSACHTRA__idCuo__571DF1D5" Association="Self.FK__BCSACHTRA__idCuo__571DF1D5">
             <End Role="CUONSACH" EntitySet="CUONSACH" />
             <End Role="BCSACHTRATRE" EntitySet="BCSACHTRATRE" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_BCLUOT__idBao__52593CB8" Association="Self.FK__CT_BCLUOT__idBao__52593CB8">
+          <AssociationSet Name="FK__CT_BCLUOT__idBao__534D60F1" Association="Self.FK__CT_BCLUOT__idBao__534D60F1">
             <End Role="BCLUOTMUONTHEOTHELOAI" EntitySet="BCLUOTMUONTHEOTHELOAI" />
             <End Role="CT_BCLUOTMUONTHEOTHELOAI" EntitySet="CT_BCLUOTMUONTHEOTHELOAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_BCLUOT__idThe__534D60F1" Association="Self.FK__CT_BCLUOT__idThe__534D60F1">
+          <AssociationSet Name="FK__CT_BCLUOT__idThe__5441852A" Association="Self.FK__CT_BCLUOT__idThe__5441852A">
             <End Role="THELOAI" EntitySet="THELOAI" />
             <End Role="CT_BCLUOTMUONTHEOTHELOAI" EntitySet="CT_BCLUOTMUONTHEOTHELOAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_PHIEUN__idSac__440B1D61" Association="Self.FK__CT_PHIEUN__idSac__440B1D61">
+          <AssociationSet Name="FK__CT_PHIEUN__idSac__44FF419A" Association="Self.FK__CT_PHIEUN__idSac__44FF419A">
             <End Role="SACH" EntitySet="SACH" />
             <End Role="CT_PHIEUNHAP" EntitySet="CT_PHIEUNHAP" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_PHIEUN__SoPhi__4316F928" Association="Self.FK__CT_PHIEUN__SoPhi__4316F928">
+          <AssociationSet Name="FK__CT_PHIEUN__SoPhi__440B1D61" Association="Self.FK__CT_PHIEUN__SoPhi__440B1D61">
             <End Role="PHIEUNHAPSACH" EntitySet="PHIEUNHAPSACH" />
             <End Role="CT_PHIEUNHAP" EntitySet="CT_PHIEUNHAP" />
           </AssociationSet>
@@ -492,12 +508,16 @@
             <End Role="TUASACH" EntitySet="TUASACH" />
             <End Role="CT_TACGIA" EntitySet="CT_TACGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__CUONSACH__idSach__46E78A0C" Association="Self.FK__CUONSACH__idSach__46E78A0C">
+          <AssociationSet Name="FK__CUONSACH__idSach__47DBAE45" Association="Self.FK__CUONSACH__idSach__47DBAE45">
             <End Role="SACH" EntitySet="SACH" />
             <End Role="CUONSACH" EntitySet="CUONSACH" />
           </AssociationSet>
           <AssociationSet Name="FK__DOCGIA__idLoaiDo__3B75D760" Association="Self.FK__DOCGIA__idLoaiDo__3B75D760">
             <End Role="LOAIDOCGIA" EntitySet="LOAIDOCGIA" />
+            <End Role="DOCGIA" EntitySet="DOCGIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DOCGIA__idNguoiD__3C69FB99" Association="Self.FK__DOCGIA__idNguoiD__3C69FB99">
+            <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
             <End Role="DOCGIA" EntitySet="DOCGIA" />
           </AssociationSet>
           <AssociationSet Name="FK__NGUOIDUNG__idNho__2C3393D0" Association="Self.FK__NGUOIDUNG__idNho__2C3393D0">
@@ -512,19 +532,19 @@
             <End Role="NHOMNGUOIDUNG" EntitySet="NHOMNGUOIDUNG" />
             <End Role="PHANQUYEN" EntitySet="PHANQUYEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHIEUMUON__idCuo__4AB81AF0" Association="Self.FK__PHIEUMUON__idCuo__4AB81AF0">
+          <AssociationSet Name="FK__PHIEUMUON__idCuo__4BAC3F29" Association="Self.FK__PHIEUMUON__idCuo__4BAC3F29">
             <End Role="CUONSACH" EntitySet="CUONSACH" />
             <End Role="PHIEUMUONTRA" EntitySet="PHIEUMUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHIEUMUON__idDoc__49C3F6B7" Association="Self.FK__PHIEUMUON__idDoc__49C3F6B7">
+          <AssociationSet Name="FK__PHIEUMUON__idDoc__4AB81AF0" Association="Self.FK__PHIEUMUON__idDoc__4AB81AF0">
             <End Role="DOCGIA" EntitySet="DOCGIA" />
             <End Role="PHIEUMUONTRA" EntitySet="PHIEUMUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHIEUTHU__idDocG__4D94879B" Association="Self.FK__PHIEUTHU__idDocG__4D94879B">
+          <AssociationSet Name="FK__PHIEUTHU__idDocG__4E88ABD4" Association="Self.FK__PHIEUTHU__idDocG__4E88ABD4">
             <End Role="DOCGIA" EntitySet="DOCGIA" />
             <End Role="PHIEUTHU" EntitySet="PHIEUTHU" />
           </AssociationSet>
-          <AssociationSet Name="FK__SACH__idTuaSach__3E52440B" Association="Self.FK__SACH__idTuaSach__3E52440B">
+          <AssociationSet Name="FK__SACH__idTuaSach__3F466844" Association="Self.FK__SACH__idTuaSach__3F466844">
             <End Role="TUASACH" EntitySet="TUASACH" />
             <End Role="SACH" EntitySet="SACH" />
           </AssociationSet>
@@ -533,8 +553,7 @@
             <End Role="TUASACH" EntitySet="TUASACH" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLTVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -606,6 +625,7 @@
           <NavigationProperty Name="BCSACHTRATREs" Relationship="Self.FK__BCSACHTRA__idCuo__5629CD9C" FromRole="CUONSACH" ToRole="BCSACHTRATRE" />
           <NavigationProperty Name="SACH" Relationship="Self.FK__CUONSACH__idSach__46E78A0C" FromRole="CUONSACH" ToRole="SACH" />
           <NavigationProperty Name="PHIEUMUONTRAs" Relationship="Self.FK__PHIEUMUON__idCuo__4AB81AF0" FromRole="CUONSACH" ToRole="PHIEUMUONTRA" />
+          <Property Name="DaAn" Type="Int32" />
         </EntityType>
         <EntityType Name="DOCGIA">
           <Key>
@@ -624,6 +644,8 @@
           <NavigationProperty Name="LOAIDOCGIA" Relationship="Self.FK__DOCGIA__idLoaiDo__3B75D760" FromRole="DOCGIA" ToRole="LOAIDOCGIA" />
           <NavigationProperty Name="PHIEUMUONTRAs" Relationship="Self.FK__PHIEUMUON__idDoc__49C3F6B7" FromRole="DOCGIA" ToRole="PHIEUMUONTRA" />
           <NavigationProperty Name="PHIEUTHUs" Relationship="Self.FK__PHIEUTHU__idDocG__4D94879B" FromRole="DOCGIA" ToRole="PHIEUTHU" />
+          <Property Name="idNguoiDung" Type="Int32" />
+          <NavigationProperty Name="NGUOIDUNG" Relationship="QLTVModel.FK__DOCGIA__idNguoiD__3C69FB99" FromRole="DOCGIA" ToRole="NGUOIDUNG" />
         </EntityType>
         <EntityType Name="LOAIDOCGIA">
           <Key>
@@ -647,6 +669,7 @@
           <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idNhomNguoiDung" Type="Int32" Nullable="false" />
           <NavigationProperty Name="NHOMNGUOIDUNG" Relationship="Self.FK__NGUOIDUNG__idNho__2C3393D0" FromRole="NGUOIDUNG" ToRole="NHOMNGUOIDUNG" />
+          <NavigationProperty Name="DOCGIAs" Relationship="QLTVModel.FK__DOCGIA__idNguoiD__3C69FB99" FromRole="NGUOIDUNG" ToRole="DOCGIA" />
         </EntityType>
         <EntityType Name="NHOMNGUOIDUNG">
           <Key>
@@ -706,6 +729,7 @@
           <NavigationProperty Name="CT_PHIEUNHAP" Relationship="Self.FK__CT_PHIEUN__idSac__440B1D61" FromRole="SACH" ToRole="CT_PHIEUNHAP" />
           <NavigationProperty Name="CUONSACHes" Relationship="Self.FK__CUONSACH__idSach__46E78A0C" FromRole="SACH" ToRole="CUONSACH" />
           <NavigationProperty Name="TUASACH" Relationship="Self.FK__SACH__idTuaSach__3E52440B" FromRole="SACH" ToRole="TUASACH" />
+          <Property Name="DaAn" Type="Int32" />
         </EntityType>
         <EntityType Name="TACGIA">
           <Key>
@@ -735,7 +759,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaTheLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="MaTheLoai" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
           <Property Name="TenTheLoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CT_BCLUOTMUONTHEOTHELOAI" Relationship="Self.FK__CT_BCLUOT__idThe__534D60F1" FromRole="THELOAI" ToRole="CT_BCLUOTMUONTHEOTHELOAI" />
           <NavigationProperty Name="TUASACHes" Relationship="Self.FK__TUASACH__idTheLo__30F848ED" FromRole="THELOAI" ToRole="TUASACH" />
@@ -751,6 +775,7 @@
           <NavigationProperty Name="SACHes" Relationship="Self.FK__SACH__idTuaSach__3E52440B" FromRole="TUASACH" ToRole="SACH" />
           <NavigationProperty Name="THELOAI" Relationship="Self.FK__TUASACH__idTheLo__30F848ED" FromRole="TUASACH" ToRole="THELOAI" />
           <NavigationProperty Name="TACGIAs" Relationship="Self.CT_TACGIA" FromRole="TUASACH" ToRole="TACGIA" />
+          <Property Name="DaAn" Type="Int32" />
         </EntityType>
         <Association Name="FK__CT_BCLUOT__idBao__52593CB8">
           <End Role="BCLUOTMUONTHEOTHELOAI" Type="Self.BCLUOTMUONTHEOTHELOAI" Multiplicity="1">
@@ -1021,7 +1046,23 @@
             <End Role="CHUCNANG" EntitySet="CHUCNANGs" />
             <End Role="NHOMNGUOIDUNG" EntitySet="NHOMNGUOIDUNGs" />
           </AssociationSet>
+          <AssociationSet Name="FK__DOCGIA__idNguoiD__3C69FB99" Association="QLTVModel.FK__DOCGIA__idNguoiD__3C69FB99">
+            <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+            <End Role="DOCGIA" EntitySet="DOCGIAs" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK__DOCGIA__idNguoiD__3C69FB99">
+          <End Type="QLTVModel.NGUOIDUNG" Role="NGUOIDUNG" Multiplicity="0..1" />
+          <End Type="QLTVModel.DOCGIA" Role="DOCGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGUOIDUNG">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DOCGIA">
+              <PropertyRef Name="idNguoiDung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1083,6 +1124,7 @@
           <EntitySetMapping Name="CUONSACHes">
             <EntityTypeMapping TypeName="QLTVModel.CUONSACH">
               <MappingFragment StoreEntitySet="CUONSACH">
+                <ScalarProperty Name="DaAn" ColumnName="DaAn" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MaCuonSach" ColumnName="MaCuonSach" />
                 <ScalarProperty Name="idSach" ColumnName="idSach" />
@@ -1093,6 +1135,7 @@
           <EntitySetMapping Name="DOCGIAs">
             <EntityTypeMapping TypeName="QLTVModel.DOCGIA">
               <MappingFragment StoreEntitySet="DOCGIA">
+                <ScalarProperty Name="idNguoiDung" ColumnName="idNguoiDung" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
                 <ScalarProperty Name="TenDocGia" ColumnName="TenDocGia" />
@@ -1173,6 +1216,7 @@
           <EntitySetMapping Name="SACHes">
             <EntityTypeMapping TypeName="QLTVModel.SACH">
               <MappingFragment StoreEntitySet="SACH">
+                <ScalarProperty Name="DaAn" ColumnName="DaAn" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MaSach" ColumnName="MaSach" />
                 <ScalarProperty Name="idTuaSach" ColumnName="idTuaSach" />
@@ -1220,6 +1264,7 @@
           <EntitySetMapping Name="TUASACHes">
             <EntityTypeMapping TypeName="QLTVModel.TUASACH">
               <MappingFragment StoreEntitySet="TUASACH">
+                <ScalarProperty Name="DaAn" ColumnName="DaAn" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MaTuaSach" ColumnName="MaTuaSach" />
                 <ScalarProperty Name="TenTuaSach" ColumnName="TenTuaSach" />

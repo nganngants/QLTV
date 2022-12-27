@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DTO;
 using GUI.BM;
 using System;
 using System.Collections.Generic;
@@ -35,10 +36,24 @@ namespace GUI
             {
                 MessageBox.Show("Đăng nhập thành công!\nChào mừng " + username + "!",
                                 "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                var f = new fMainForm(id);
-                //BmPhieuThuTienPhat f = new BmPhieuThuTienPhat();
+
+                var user = BUSNguoiDung.Instance.GetNguoiDungById(id);
+                bool isDG = false;
+                foreach (var cn in user.NHOMNGUOIDUNG.CHUCNANGs)
+                {
+                    if (cn.TenChucNang == "DG") { isDG = true; break; }
+                }
                 this.Hide();
-                f.ShowDialog();
+                if (isDG)
+                {
+                    var f = new fHome(id);
+                    f.ShowDialog();
+                }
+                else
+                {
+                    var f = new fManager(id);
+                    f.ShowDialog(); 
+                }
                 this.resetTextboxs();
                 this.Show();
             }

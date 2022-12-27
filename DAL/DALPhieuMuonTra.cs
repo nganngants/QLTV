@@ -94,7 +94,7 @@ namespace DAL
                 {
                     phieu.NgayTra = ngayTra;
                     // mark cuonsach as unborrowed
-                    DALCuonSach.Instance.UpdCuonSach(phieu.idCuonSach, 1);
+                    DALCuonSach.Instance.UpdCuonSach((int)phieu.idCuonSach, 1);
                 }
                 if (soTienPhat != null) phieu.SoTienPhat = soTienPhat;
                 QLTVDb.Instance.SaveChanges();

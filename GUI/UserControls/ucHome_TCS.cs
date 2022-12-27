@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.BM
+namespace GUI.UserControls
 {
-    public partial class BMThayDoiNhomNguoiDung : Form
+    public partial class ucHome_TCS : UserControl
     {
-        public BMThayDoiNhomNguoiDung()
+        public ucHome_TCS()
         {
             InitializeComponent();
         }

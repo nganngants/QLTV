@@ -29,6 +29,7 @@ namespace DTO
         public Nullable<int> DonGia { get; set; }
         public Nullable<int> NamXB { get; set; }
         public string NhaXB { get; set; }
+        public Nullable<int> DaAn { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_PHIEUNHAP> CT_PHIEUNHAP { get; set; }
