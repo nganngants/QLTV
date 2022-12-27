@@ -16,6 +16,8 @@ CREATE TABLE NHOMNGUOIDUNG
 go
 insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Quan ly')
 insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Thu thu')
+insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Doc gia')
+
 go
 CREATE TABLE CHUCNANG
 (
@@ -33,7 +35,7 @@ insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLPT', 'Quan Ly Phieu Th
 insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('BCTK', 'Bao Cao Thong Ke')
 insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLND', 'Quan Ly Nguoi Dung')
 insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('TDQD', 'Thay Doi Quy Dinh')
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('DG', 'Doc Gia')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('DG', 'La Doc Gia')
 
 go
 CREATE TABLE PHANQUYEN
@@ -51,6 +53,15 @@ INSERT INTO PHANQUYEN VALUES (1, 5)
 INSERT INTO PHANQUYEN VALUES (1, 6)
 INSERT INTO PHANQUYEN VALUES (1, 7)
 
+INSERT INTO PHANQUYEN VALUES (2, 1)
+INSERT INTO PHANQUYEN VALUES (2, 2)
+INSERT INTO PHANQUYEN VALUES (2, 3)
+INSERT INTO PHANQUYEN VALUES (2, 4)
+INSERT INTO PHANQUYEN VALUES (2, 5)
+
+INSERT INTO PHANQUYEN VALUES (3, 8)
+
+
 
 go
 CREATE TABLE NGUOIDUNG
@@ -67,12 +78,13 @@ CREATE TABLE NGUOIDUNG
 go
 
 INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, idNhomNguoiDung) VALUES ('Admin he thong', 'admin', '123', 1)
+INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, idNhomNguoiDung) VALUES ('Thu thu', 'lib', '123', 2)
 
 go
 CREATE TABLE THELOAI
 (
 	id int IDENTITY(1,1)  primary key,
-	MaTheLoai As Cast('TL' + right('000' + CAST(id as varchar(3)), 3) as char(5)) persisted,  
+	MaTheLoai As Cast('TL' + right('0000' + CAST(id as varchar(4)), 4) as char(6)) persisted,  
 	TenTheLoai VARCHAR(MAX) 
 )
 go
@@ -86,7 +98,8 @@ CREATE TABLE TUASACH
 	id INT IDENTITY  PRIMARY KEY,
 	MaTuaSach  AS cast('TS'+ right('0000' + CAST(ID AS VARCHAR(10)), 4) as char(6)) PERSISTED,
 	TenTuaSach VARCHAR(MAX),
-	idTheLoai int references THELOAI on delete cascade
+	idTheLoai int references THELOAI on delete cascade,
+	DaAn int
 )
 go
 insert into TUASACH values ('Tua sach 1', 1)
@@ -134,16 +147,10 @@ CREATE TABLE DOCGIA
 	NgayLapThe Datetime NOT NULL, 
 	NgayHetHan Datetime NOT NULL, 
 	idLoaiDocGia INT references LOAIDOCGIA on delete cascade, 
-	TongNoHienTai int
+	TongNoHienTai int,
+	idNguoiDung INT REFERENCES NGUOIDUNG
 )
-go
-set dateformat dmy
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, TongNoHienTai, idLoaiDocGia) 
-VALUES ('Doc Gia A', '13/12/1989', '27/10/2022', '11/9/2023', 0, 1)
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, TongNoHienTai, idLoaiDocGia) 
-VALUES ('Doc Gia B', '13/12/1989', '31/10/2022', '11/11/2023', 0, 2)
-INSERT INTO DOCGIA(TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, TongNoHienTai, idLoaiDocGia) 
-VALUES ('Doc Gia C', '13/12/1989', '27/8/2022', '11/5/2023', 0, 3)
+
 go
 CREATE TABLE SACH
 (
@@ -154,7 +161,8 @@ CREATE TABLE SACH
 	SoLuongConLai int NOT NULL, 
 	DonGia int, 
 	NamXB int, 
-	NhaXB VARCHAR(MAX)
+	NhaXB VARCHAR(MAX),
+	DaAn int
 )
 
 go
@@ -180,7 +188,8 @@ create table CUONSACH
 	id int IDENTITY(1,1) primary key,
 	MaCuonSach AS CAST('CS'+ RIGHT('0000' + CAST(id AS VARCHAR(10)), 4) AS CHAR(6)) PERSISTED,
 	idSach int references SACH on delete cascade,
-	TinhTrang INT
+	TinhTrang INT,
+	DaAn int
 )
 go
 create table PHIEUMUONTRA
