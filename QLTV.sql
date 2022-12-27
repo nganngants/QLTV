@@ -1,7 +1,6 @@
 ﻿-- Note: you have to drop QLTV database (if you had) first before running entire script
 -- Note: Just run the script and you're good to go with a new database
 --DROP DATABASE QLTV
-
 CREATE DATABASE QLTV
 go
 USE QLTV
@@ -102,8 +101,8 @@ CREATE TABLE TUASACH
 	DaAn int
 )
 go
-insert into TUASACH values ('Tua sach 1', 1)
-insert into TUASACH values ('Tua sach 2', 2)
+insert into TUASACH values ('Tua sach 1', 1, 0)
+insert into TUASACH values ('Tua sach 2', 2, 0)
 go
 
 CREATE TABLE TACGIA
