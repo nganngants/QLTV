@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.BM
+namespace GUI
 {
     public partial class fPhieuMuonSach : Form
     {
@@ -31,16 +31,15 @@ namespace GUI.BM
             comboDocGia.DataSource = docGiaList;
             comboDocGia.DisplayMember = "MaDocGia";
             comboDocGia.ValueMember = "id";
-            if(CuonSachList == null)
-            {
-                SuccDia.Show("Sách đã được mượn hết");
-                this.Close();
+            if (CuonSachList.Count == 0)
                 return;
-            }
+            
             CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(Convert.ToInt32(comboCuonSach.SelectedValue));
             //Console.WriteLine(Convert.ToInt32(comboCuonSach.SelectedValue));
             labelTenCS.Text = "Tên: " + cuonsach.SACH.TUASACH.TenTuaSach;
             labelTheLoai.Text = "Thể loại: " + cuonsach.SACH.TUASACH.THELOAI.TenTheLoai;
+            if(docGiaList.Count != 0)
+            { 
             DOCGIA docgia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
             labelHoTen.Text = "Họ tên: " + docgia.TenDocGia;
             labelTongNoHienTai.Text = "Tổng nợ hiện tại: " + docgia.TongNoHienTai.ToString();
@@ -48,6 +47,7 @@ namespace GUI.BM
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
             NgayMuon = dateNgayMuon.Value.Date;
             labelHanTra.Text =  NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa).ToShortDateString();
+            }
 
         }
         private DateTime NgayTra;
@@ -64,6 +64,17 @@ namespace GUI.BM
 
         private void butSave_Click_1(object sender, EventArgs e)
         {
+            if (comboCuonSach.SelectedValue == null)
+            {
+                MessageBox.Show("Chưa chọn cuốn sách");
+                return;
+            }
+            if (comboDocGia.SelectedValue == null)
+            {
+                MessageBox.Show("Chưa chọn độc giả");
+                return;
+            }
+
             NgayMuon = dateNgayMuon.Value.Date;
            
             if (NgayMuon > DateTime.Now)
@@ -73,7 +84,6 @@ namespace GUI.BM
             }
             DOCGIA docgia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
             CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(Convert.ToInt32(comboCuonSach.SelectedValue));
-            Console.WriteLine(cuonsach.TinhTrang);
             string error = BUSPhieuMuonTra.Instance.AddPhieuMuonTra(cuonsach.MaCuonSach, docgia.MaDocGia, NgayMuon);
             if (error != "")
             {

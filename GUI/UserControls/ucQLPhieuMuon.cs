@@ -1,6 +1,6 @@
 ﻿using BUS;
 using DTO;
-using GUI.BM;
+using GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +19,15 @@ namespace GUI.UserControls
         public ucQLPhieuMuon()
         {
             InitializeComponent();
-            Binding();
+            Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuon());
+            List<string> comboList = new List<string> { "Chưa trả", "Trả trễ", "Đã trả"};
+            comboTinhTrang.DataSource = comboList;
         }
-        private void Binding()
+        private void Binding(List<PHIEUMUONTRA> PhieuMuonList)
         {
             PhieuMuonGrid.Rows.Clear();
             Image img = Properties.Resources.edit_icon;
             img = (Image)(new Bitmap(img, new Size(20, 20)));
-            PhieuMuonList = BUSPhieuMuonTra.Instance.GetAllPhieuMuon();
             foreach(PHIEUMUONTRA pmt in PhieuMuonList)
             {
                 string NgayTra = (pmt.NgayTra != null) ? (((DateTime)pmt.NgayTra).ToShortDateString()) : ("Chưa trả");
@@ -37,7 +38,7 @@ namespace GUI.UserControls
         {
             var f = new fPhieuMuonSach();
             f.ShowDialog();
-            Binding();
+            Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuon());
         }
 
         private void PhieuMuonGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -52,14 +53,54 @@ namespace GUI.UserControls
             if (idx == -1) return;
             var f = new fEditPhieuMuon((Convert.ToInt32(PhieuMuonGrid.Rows[idx].Cells["SoPhieuMuon"].Value)));
             f.ShowDialog();
-            Binding();
+            Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuon());
 
             return;
         }
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuon());
+            txtFind.Text = "";
+        }
+
+        private void butFind_Click(object sender, EventArgs e)
+        {
+            string pat = txtFind.Text.ToLower();
+            List<PHIEUMUONTRA> Res = new List<PHIEUMUONTRA>();
+            foreach(PHIEUMUONTRA pmt in BUSPhieuMuonTra.Instance.GetAllPhieuMuon())
+            {
+                if (pmt.CUONSACH.MaCuonSach.ToLower().Contains(pat) || pmt.DOCGIA.MaDocGia.ToLower().Contains(pat) || pmt.SoPhieuMuonTra.ToString().Contains(pat))
+                    Res.Add(pmt);
+            }
+            Binding(Res);
+        }
+
+        private void comboTinhTrang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butFil_Click(object sender, EventArgs e)
+        {
+            string pat = comboTinhTrang.SelectedValue.ToString();
+          
+            List<PHIEUMUONTRA> Res = new List<PHIEUMUONTRA>();
+            if (pat == "Trả trễ")
+                Res = BUSPhieuMuonTra.Instance.GetPhieuTraTre(DateTime.Now.Date);
+            else
+            {
+                foreach (PHIEUMUONTRA pmt in BUSPhieuMuonTra.Instance.GetAllPhieuMuon())
+                {
+
+                    if (pmt.NgayTra != null && pat == "Đã trả")
+                        Res.Add(pmt);
+                   Console.Write(pmt.NgayTra.ToString());
+                    if(pmt.NgayTra == null && pat == "Chưa trả") 
+                        Res.Add(pmt);
+                }
+            }
+            Binding(Res);
         }
     }
 }

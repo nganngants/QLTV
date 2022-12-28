@@ -1,6 +1,6 @@
 ﻿using BUS;
 using DTO;
-using GUI.BM;
+using GUI;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -11,24 +11,28 @@ namespace GUI.UserControls
         public ucSach()
         {
             InitializeComponent();
-            Binding();
+            Binding(BUSSach.Instance.GetAllSach());
+            comboTinhTrang.Items.Add("Còn");
+            comboTinhTrang.Items.Add("Hết");
         }
         private List<SACH> SachList;
+       
 
-        public void Binding()
+        public void Binding(List<SACH> SachList)
         {
-            SachList = BUSSach.Instance.GetAllSach();
             this.SachGrid.DataSource = SachList;
             int i = 0;
-            foreach(DataGridViewRow row in SachGrid.Rows)
+            foreach (DataGridViewRow row in SachGrid.Rows)
             {
                 row.Cells["TuaSach"].Value = SachList[i].TUASACH.TenTuaSach + " (" + SachList[i].TUASACH.MaTuaSach + ")";
                 i++;
             }
+            
+            
         }
         private void ucSach_Load(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSSach.Instance.GetAllSach());
         }
 
         private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,7 +44,7 @@ namespace GUI.UserControls
         {
             var f = new fAddSachMoi();
             f.ShowDialog();
-            Binding();
+            Binding(BUSSach.Instance.GetAllSach());
         }
 
         private void butAddOld_Click(object sender, EventArgs e)
@@ -84,12 +88,14 @@ namespace GUI.UserControls
             }
 
             SuccDia.Show("Đã xoá thành công " + cnt + " sách");
-            Binding();
+            Binding(BUSSach.Instance.GetAllSach());
         }
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSSach.Instance.GetAllSach());
+            txtMaSach.Text = "";
+
         }
 
 
@@ -100,7 +106,7 @@ namespace GUI.UserControls
             List<SACH> Res = new List<SACH>();
             foreach (SACH sach in SachList)
             {
-                if (sach.MaSach.Contains(pat))
+                if (sach.MaSach.Contains(pat) || sach.TUASACH.TenTuaSach.Contains(pat) || sach.TUASACH.MaTuaSach.Contains(pat))
                     Res.Add(sach);
             }
             this.SachGrid.DataSource = Res;
@@ -119,21 +125,17 @@ namespace GUI.UserControls
 
         private void butTenSach_Click(object sender, EventArgs e)
         {
-            string pat = txtTenSach.Text;
+            int idx = comboTinhTrang.SelectedIndex;
             SachList = BUSSach.Instance.GetAllSach();
             List<SACH> Res = new List<SACH>();
-            foreach (SACH sach in SachList)
+            foreach(SACH sach in SachList)
             {
-                if (sach.TUASACH.TenTuaSach.Contains(pat))
+                if (sach.SoLuongConLai > 0 && comboTinhTrang.Text == "Còn")
+                    Res.Add(sach);
+                if (sach.SoLuongConLai == 0 && comboTinhTrang.Text == "Hết")
                     Res.Add(sach);
             }
-            this.SachGrid.DataSource = Res;
-            int i = 0;
-            foreach (DataGridViewRow row in SachGrid.Rows)
-            {
-                row.Cells["TuaSach"].Value = Res[i].TUASACH.TenTuaSach + " (" + Res[i].TUASACH.MaTuaSach + ")";
-                i++;
-            }
+            Binding(Res);
         }
     }
 }

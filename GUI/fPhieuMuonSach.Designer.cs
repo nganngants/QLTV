@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace GUI.BM
+namespace GUI
 {
     partial class fPhieuMuonSach
     {
