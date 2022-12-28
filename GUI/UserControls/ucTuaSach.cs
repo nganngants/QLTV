@@ -39,14 +39,8 @@ namespace GUI.UserControls
                 {
                     tacgia += tg.TenTacGia + ", ";
                     cnt++;
-                    /*if (cnt >= 2)
-                    {
-                        tacgia += "....";
-                        break;
-                    }*/
                 }
-                if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 1);
-                if (tacgia!="") tacgia = tacgia.Remove(tacgia.Length-1);
+                if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 2,2);
                 row.Cells["TacGia"].Value = tacgia;
                 row.Cells["TheLoai"].Value = (TuaSachList[i].THELOAI!=null)?TuaSachList[i].THELOAI.TenTheLoai : "";
                 i++;
@@ -100,14 +94,15 @@ namespace GUI.UserControls
                     idDel.Add((int)row.Cells["id"].Value);
 
                 }
-            }
+           }
+            Console.WriteLine("asdasd");
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " tựa sách?") == DialogResult.No) return;
+            if (AskDia.Show("Bạn có chắc muốn ẩn " + idDel.Count + " tựa sách?") == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
-                string error = BUSTuaSach.Instance.DelTuaSach(id);
+                string error = BUSTuaSach.Instance.UpdAnTuaSach(id,1);
                 if (error != "")
                 {
                     if (ErrorDia.Show(error) == DialogResult.Retry)
@@ -118,7 +113,7 @@ namespace GUI.UserControls
             }
 
 
-            SuccDia.Show("Đã xoá thành công " + cnt + " tựa sách");
+            SuccDia.Show("Đã ẩn thành công " + cnt + " tựa sách");
             Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
 

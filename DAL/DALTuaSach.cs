@@ -42,6 +42,22 @@ namespace DAL
         {
             return QLTVDb.Instance.TUASACHes.Find(id);
         }
+        public bool UpdAnTuaSach(int id, int data)
+        {
+            
+            try
+            {
+                TUASACH tuaSach = QLTVDb.Instance.TUASACHes.Find(id);
+                tuaSach.DaAn = data;
+                QLTVDb.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
         /// <summary>
         /// Get TUASACH by MaTuaSach
         /// </summary>

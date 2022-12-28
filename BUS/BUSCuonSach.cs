@@ -40,6 +40,15 @@ namespace BUS
            
             return DALSach.Instance.GetSachById((int)cs.idSach);
         }
+        public string UpdAnCuonSach(int id,int data)
+        {
+            CUONSACH cs = DALCuonSach.Instance.GetCuonSachById(id);
+            if (data == 1 && cs.TinhTrang == 0)
+                return "Không thể ẩn vì còn sách đang được mượn";
+            if (DALCuonSach.Instance.UpdAnCuonSach(id, data))
+                return "";
+            return "Lỗi";
+        }
         public string DelCuonSach(string MaCuonSach)
         {
             CUONSACH cs;

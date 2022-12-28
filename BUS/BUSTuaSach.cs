@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -66,6 +67,19 @@ namespace BUS
             if (DALTuaSach.Instance.UpdTuaSach(id, TenTuaSach, theLoai, TacGia))
                 return "";
             return "Không thể cập nhật tựa sách";
+        }
+        public string UpdAnTuaSach(int id,int data)
+        {
+            TUASACH ts = DALTuaSach.Instance.GetTuaSachById(id);
+            foreach(SACH sach in ts.SACHes)
+            {
+                string err = BUSSach.Instance.UpdAnSach(sach.id, data);
+                if (err != "")
+                    return err;
+            }
+            if (DALTuaSach.Instance.UpdAnTuaSach(id, data))
+                return "";
+            return "Lỗi";
         }
     }
 }
