@@ -68,7 +68,7 @@ namespace GUI.UserControls
             this.TuaSachGrid.Sort(this.TuaSachGrid.Columns[idx], ListSortDirection.Ascending);
         }
 
-        private void TuaSachGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void TuaSachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
             if (idx == -1)
