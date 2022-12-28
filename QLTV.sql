@@ -76,6 +76,9 @@ CREATE TABLE NGUOIDUNG
 )
 go
 
+set dateformat dmy
+
+go
 INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, idNhomNguoiDung) 
 VALUES ('Admin he thong', 'admin', '123', 1)
 INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, idNhomNguoiDung) 
