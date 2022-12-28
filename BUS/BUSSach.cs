@@ -24,6 +24,18 @@ namespace BUS
         {
             return DALSach.Instance.GetAllSach();
         }
+        public string UpdAnSach(int id,int data)
+        {
+            SACH sach = DALSach.Instance.GetSachById(id);
+            foreach(CUONSACH cs in sach.CUONSACHes)
+            {
+                string err = BUSCuonSach.Instance.UpdAnCuonSach(cs.id, data);
+                if (err != "") return err;
+            }
+            if (DALSach.Instance.UpdAnSach(id, data))
+                return "";
+            else return "Lỗi";
+        }
         public Tuple<string,int> AddSach(int id, int SoLuong, int DonGia, int NamXb, string NhaXB)
         {
             TUASACH ts;

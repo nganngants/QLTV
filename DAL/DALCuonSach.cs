@@ -20,7 +20,22 @@ namespace DAL
             }
             set => instance = value; 
         }
-
+        public bool UpdAnCuonSach(int id,int data)
+        {
+            try
+            {
+                CUONSACH cuonsach = QLTVDb.Instance.CUONSACHes.Find(id);
+                if (data == 1) cuonsach.TinhTrang = 2;
+                else cuonsach.TinhTrang = 1;
+                QLTVDb.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
         public List<CUONSACH> GetAllCuonSach()
         {
             return QLTVDb.Instance.CUONSACHes.AsNoTracking().ToList();

@@ -20,7 +20,21 @@ namespace DAL
             }
             set { instance = value; }
         }
-
+        public bool UpdAnSach(int id,int data)
+        {
+            try
+            {
+                SACH sach = QLTVDb.Instance.SACHes.Find(id);
+                sach.DaAn = data;
+                QLTVDb.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
         public List<SACH> GetAllSach()
         {
             return QLTVDb.Instance.SACHes.AsNoTracking().ToList();

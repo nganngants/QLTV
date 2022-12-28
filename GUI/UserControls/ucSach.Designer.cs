@@ -176,7 +176,7 @@ namespace GUI.UserControls
             this.butDel.Name = "butDel";
             this.butDel.Size = new System.Drawing.Size(143, 28);
             this.butDel.TabIndex = 3;
-            this.butDel.Text = "Xóa Sách";
+            this.butDel.Text = "Ẩn Sách";
             this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.TextOffset = new System.Drawing.Point(3, 0);
             this.butDel.Click += new System.EventHandler(this.butDel_Click);
