@@ -20,7 +20,7 @@ namespace GUI.UserControls
         {
             InitializeComponent();
             Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuon());
-            List<string> comboList = new List<string> { "Chưa trả", "Trả trễ", "Đã trả"};
+            List<string> comboList = new List<string> { "Chưa trả", "Đã trả"};
             comboTinhTrang.DataSource = comboList;
         }
         private void Binding(List<PHIEUMUONTRA> PhieuMuonList)
@@ -86,10 +86,7 @@ namespace GUI.UserControls
             string pat = comboTinhTrang.SelectedValue.ToString();
           
             List<PHIEUMUONTRA> Res = new List<PHIEUMUONTRA>();
-            if (pat == "Trả trễ")
-                Res = BUSPhieuMuonTra.Instance.GetPhieuTraTre(DateTime.Now.Date);
-            else
-            {
+           
                 foreach (PHIEUMUONTRA pmt in BUSPhieuMuonTra.Instance.GetAllPhieuMuon())
                 {
 
@@ -99,7 +96,6 @@ namespace GUI.UserControls
                     if(pmt.NgayTra == null && pat == "Chưa trả") 
                         Res.Add(pmt);
                 }
-            }
             Binding(Res);
         }
     }

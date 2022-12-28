@@ -55,6 +55,8 @@ namespace GUI.UserControls
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.butTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.comboTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CuonSachGrid)).BeginInit();
@@ -63,6 +65,8 @@ namespace GUI.UserControls
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.comboTinhTrang);
+            this.topPanel.Controls.Add(this.butTinhTrang);
             this.topPanel.Controls.Add(this.butMaSach);
             this.topPanel.Controls.Add(this.butRefresh);
             this.topPanel.Controls.Add(this.txtMaSach);
@@ -131,7 +135,7 @@ namespace GUI.UserControls
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
             this.txtMaSach.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtMaSach.PlaceholderText = "Mã sách";
+            this.txtMaSach.PlaceholderText = "Mã, tên ";
             this.txtMaSach.SelectedText = "";
             this.txtMaSach.Size = new System.Drawing.Size(201, 28);
             this.txtMaSach.TabIndex = 15;
@@ -377,6 +381,46 @@ namespace GUI.UserControls
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.SuccDia.Text = null;
             // 
+            // butTinhTrang
+            // 
+            this.butTinhTrang.AutoRoundedCorners = true;
+            this.butTinhTrang.BorderRadius = 13;
+            this.butTinhTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butTinhTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butTinhTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butTinhTrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butTinhTrang.FillColor = System.Drawing.Color.SlateBlue;
+            this.butTinhTrang.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butTinhTrang.ForeColor = System.Drawing.Color.White;
+            this.butTinhTrang.Image = global::GUI.Properties.Resources.search_icon;
+            this.butTinhTrang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butTinhTrang.ImageOffset = new System.Drawing.Point(3, 0);
+            this.butTinhTrang.Location = new System.Drawing.Point(733, 42);
+            this.butTinhTrang.Name = "butTinhTrang";
+            this.butTinhTrang.Size = new System.Drawing.Size(129, 28);
+            this.butTinhTrang.TabIndex = 16;
+            this.butTinhTrang.Text = "Lọc tình trạng";
+            this.butTinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butTinhTrang.TextOffset = new System.Drawing.Point(3, 0);
+            this.butTinhTrang.Click += new System.EventHandler(this.butTinhTrang_Click);
+            // 
+            // comboTinhTrang
+            // 
+            this.comboTinhTrang.AutoRoundedCorners = true;
+            this.comboTinhTrang.BackColor = System.Drawing.Color.Transparent;
+            this.comboTinhTrang.BorderRadius = 17;
+            this.comboTinhTrang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTinhTrang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboTinhTrang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboTinhTrang.ItemHeight = 30;
+            this.comboTinhTrang.Location = new System.Drawing.Point(502, 42);
+            this.comboTinhTrang.Name = "comboTinhTrang";
+            this.comboTinhTrang.Size = new System.Drawing.Size(201, 36);
+            this.comboTinhTrang.TabIndex = 17;
+            // 
             // ucCuonSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -414,5 +458,7 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn MaSach;
         private DataGridViewTextBoxColumn TenSach;
         private DataGridViewTextBoxColumn TinhTrang;
+        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTinhTrang;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butTinhTrang;
     }
 }

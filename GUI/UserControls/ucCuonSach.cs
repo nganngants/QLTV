@@ -18,15 +18,18 @@ namespace GUI.UserControls
         public ucCuonSach()
         {
             InitializeComponent();
+            comboList = new List<string> { "Đã được mượn", "Còn", "Bị ẩn" };
+            comboTinhTrang.DataSource = comboList;
             Binding(BUSCuonSach.Instance.GetAllCuonSach());
-            
         }
+        List<int> tt;
+        List<string> comboList;
         private void Binding(List<CUONSACH> CuonSachList)
         {
             CuonSachGrid.Rows.Clear();
             foreach(CUONSACH cs in CuonSachList)
             {
-                string TinhTrang = (cs.TinhTrang == 1) ? ("Còn") : ("Đã được mượn");
+                string TinhTrang = comboList[(int)cs.TinhTrang];
                 CuonSachGrid.Rows.Add(0,cs.MaCuonSach,cs.SACH.TUASACH.MaTuaSach, cs.SACH.MaSach, cs.SACH.TUASACH.TenTuaSach, TinhTrang);
             }
             
@@ -103,6 +106,18 @@ namespace GUI.UserControls
             {
                 if (cs.MaCuonSach.ToLower().Contains(pat) || cs.SACH.MaSach.ToLower().Contains(pat) || cs.SACH.TUASACH.MaTuaSach.ToLower().Contains(pat) || cs.SACH.TUASACH.TenTuaSach.ToLower().Contains(pat))
                     Res.Add(cs);
+            }
+            Binding(Res);
+        }
+
+        private void butTinhTrang_Click(object sender, EventArgs e)
+        {
+            int idx = comboTinhTrang.SelectedIndex;
+            
+            var Res = new List<CUONSACH>();
+            foreach (CUONSACH cs in BUSCuonSach.Instance.GetAllCuonSach())
+            {
+               if(cs.TinhTrang == idx)Res.Add(cs);
             }
             Binding(Res);
         }

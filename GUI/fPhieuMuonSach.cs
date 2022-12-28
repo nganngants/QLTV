@@ -33,7 +33,7 @@ namespace GUI
             comboDocGia.ValueMember = "id";
             if (CuonSachList.Count == 0)
                 return;
-            
+            dateNgayMuon.Value = DateTime.Now.Date;
             CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(Convert.ToInt32(comboCuonSach.SelectedValue));
             //Console.WriteLine(Convert.ToInt32(comboCuonSach.SelectedValue));
             labelTenCS.Text = "Tên: " + cuonsach.SACH.TUASACH.TenTuaSach;
