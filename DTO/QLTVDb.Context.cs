@@ -16,24 +16,20 @@ namespace DTO
     public partial class QLTVDb : DbContext
     {
         private static QLTVDb instance;
-        public static QLTVDb Instance
-        {
+        public static QLTVDb Instance 
+        { 
             get
             {
                 if (instance == null) instance = new QLTVDb();
                 return instance;
             }
-            set
-            {
-                instance = value;
-            }
+            set => instance = value; 
         }
+
         public QLTVDb()
             : base("name=QLTVDb")
         {
         }
-
-
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

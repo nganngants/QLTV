@@ -25,7 +25,7 @@ namespace GUI
         {
             var phieu = BUSPhieuNhap.Instance.GetPhieuNhap(id);
             var dsct = phieu.CT_PHIEUNHAP.ToList();
-            labelNgayNhap.Text = phieu.NgayNhap.Value.ToShortDateString();
+            labelNgayNhap.Text = phieu.NgayNhap.ToShortDateString();
             labelSoPhieu.Text = phieu.SoPhieuNhap.ToString();
             labelTongTien.Text = phieu.TongTien.ToString();
             foreach (var ct in dsct)

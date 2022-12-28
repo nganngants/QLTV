@@ -16,9 +16,9 @@ namespace DTO
     {
         public int SoPhieuNhap { get; set; }
         public int idSach { get; set; }
-        public Nullable<int> DonGia { get; set; }
-        public Nullable<int> ThanhTien { get; set; }
-        public Nullable<int> SoLuongNhap { get; set; }
+        public int DonGia { get; set; }
+        public int ThanhTien { get; set; }
+        public int SoLuongNhap { get; set; }
     
         public virtual SACH SACH { get; set; }
         public virtual PHIEUNHAPSACH PHIEUNHAPSACH { get; set; }

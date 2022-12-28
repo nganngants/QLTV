@@ -16,8 +16,8 @@ namespace DTO
     {
         public System.DateTime Ngay { get; set; }
         public int idCuonSach { get; set; }
-        public Nullable<System.DateTime> NgayMuon { get; set; }
-        public Nullable<int> SoNgayTre { get; set; }
+        public System.DateTime NgayMuon { get; set; }
+        public int SoNgayTre { get; set; }
     
         public virtual CUONSACH CUONSACH { get; set; }
     }

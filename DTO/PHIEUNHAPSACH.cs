@@ -21,8 +21,8 @@ namespace DTO
         }
     
         public int SoPhieuNhap { get; set; }
-        public Nullable<int> TongTien { get; set; }
-        public Nullable<System.DateTime> NgayNhap { get; set; }
+        public int TongTien { get; set; }
+        public System.DateTime NgayNhap { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_PHIEUNHAP> CT_PHIEUNHAP { get; set; }

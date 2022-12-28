@@ -27,8 +27,8 @@ namespace GUI
             comboTuaSach.ValueMember = "id";
             dateNgayNhap.Value = DateTime.Now;
         }
-        private int DonGia;
-        private int SoLuongNhap;
+        private int DonGia = 0;
+        private int SoLuongNhap = 0;
         private void butOK_Click(object sender, EventArgs e)
         {
             if (dateNgayNhap.Value.Date > DateTime.Now)
@@ -123,11 +123,8 @@ namespace GUI
                 return;
                 
             }
-            if(this.SoLuongNhap != null )
-            {
-                int ThanhTien = DonGia * SoLuongNhap;
-                labelThanhTien.Text = "Thành tiền: "+ ThanhTien.ToString();
-            }
+            int ThanhTien = DonGia * SoLuongNhap;
+            labelThanhTien.Text = "Thành tiền: "+ ThanhTien.ToString();
 
         }
 

@@ -23,7 +23,6 @@ namespace GUI.UserControls
             DocGiaGrid.Rows.Clear();
             DocGiaGrid.Refresh();
             //this.DocGiaGrid.DataSource = DocGiaList;
-            int i = 0;
             Image img = Properties.Resources.edit_icon;
             img = (Image)(new Bitmap(img, new Size(25, 25)));
             foreach (DOCGIA docgia in DocGiaList)

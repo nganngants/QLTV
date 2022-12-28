@@ -34,9 +34,9 @@ namespace DAL
         public List <PHIEUTHU> FindPhieuThuByNgay (int? ngay, int? thang, int? nam)
         {
             List<PHIEUTHU> res = GetAllPhieuThu();
-            if (ngay != null) res = res.Where(p => p.NgayLap.Value.Day == ngay).ToList();
-            if (thang != null) res = res.Where(p => p.NgayLap.Value.Month == thang).ToList();
-            if (nam != null) res = res.Where(p => p.NgayLap.Value.Year == nam).ToList();
+            if (ngay != null) res = res.Where(p => p.NgayLap.Day == ngay).ToList();
+            if (thang != null) res = res.Where(p => p.NgayLap.Month == thang).ToList();
+            if (nam != null) res = res.Where(p => p.NgayLap.Year == nam).ToList();
             return res;
         }
 
@@ -88,11 +88,11 @@ namespace DAL
                 if (soTienThu != null)
                 {
                     var dg = DALDocGia.Instance.GetDocGiaById((int)phieu.idDocGia);
-                    dg.TongNoHienTai += phieu.SoTienThu - soTienThu;
-                    Console.WriteLine("DAL: ", soTienThu);
-                    phieu.SoTienThu = soTienThu;
+                    dg.TongNoHienTai += (int)phieu.SoTienThu - (int)soTienThu;
+                    //Console.WriteLine("DAL: ", soTienThu);
+                    phieu.SoTienThu = (int)soTienThu;
                 }
-                if (ngayLap != null) phieu.NgayLap = ngayLap;
+                if (ngayLap != null) phieu.NgayLap = ngayLap.Value;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }

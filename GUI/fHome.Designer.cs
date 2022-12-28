@@ -65,7 +65,7 @@
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1100, 71);
+            this.topPanel.Size = new System.Drawing.Size(1350, 71);
             this.topPanel.TabIndex = 2;
             // 
             // label2
@@ -87,7 +87,7 @@
             this.exitControlBox.FillColor = System.Drawing.Color.Transparent;
             this.exitControlBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.exitControlBox.IconColor = System.Drawing.Color.White;
-            this.exitControlBox.Location = new System.Drawing.Point(1017, 0);
+            this.exitControlBox.Location = new System.Drawing.Point(1264, 0);
             this.exitControlBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.exitControlBox.Name = "exitControlBox";
             this.exitControlBox.Size = new System.Drawing.Size(83, 66);
@@ -101,7 +101,7 @@
             this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.White;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(939, 0);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(1186, 0);
             this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
             this.siticoneControlBox1.Size = new System.Drawing.Size(79, 66);
@@ -122,7 +122,7 @@
             this.siticoneGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneGradientPanel1.Location = new System.Drawing.Point(0, 71);
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
-            this.siticoneGradientPanel1.Size = new System.Drawing.Size(1100, 79);
+            this.siticoneGradientPanel1.Size = new System.Drawing.Size(1350, 79);
             this.siticoneGradientPanel1.TabIndex = 3;
             // 
             // butManager
@@ -140,7 +140,7 @@
             this.butManager.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butManager.ImageOffset = new System.Drawing.Point(5, 0);
             this.butManager.ImageSize = new System.Drawing.Size(30, 30);
-            this.butManager.Location = new System.Drawing.Point(920, 0);
+            this.butManager.Location = new System.Drawing.Point(1170, 0);
             this.butManager.Name = "butManager";
             this.butManager.Size = new System.Drawing.Size(180, 79);
             this.butManager.TabIndex = 2;
@@ -207,7 +207,7 @@
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 150);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(1100, 952);
+            this.container.Size = new System.Drawing.Size(1350, 952);
             this.container.TabIndex = 4;
             // 
             // errorDia
@@ -223,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 1102);
+            this.ClientSize = new System.Drawing.Size(1350, 1102);
             this.Controls.Add(this.container);
             this.Controls.Add(this.siticoneGradientPanel1);
             this.Controls.Add(this.topPanel);

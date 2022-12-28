@@ -41,9 +41,9 @@ namespace DAL
         public List<PHIEUNHAPSACH> FindPhieuByNgayNhap(int? ngay, int? thang, int? nam)
         {
             List<PHIEUNHAPSACH> res = GetAllPhieuNhapSach();
-            if (ngay != null) res = res.Where(p => p.NgayNhap.Value.Day == ngay).ToList();
-            if (thang != null) res = res.Where(p => p.NgayNhap.Value.Month == thang).ToList();
-            if (nam != null) res = res.Where(p => p.NgayNhap.Value.Year == nam).ToList();
+            if (ngay != null) res = res.Where(p => p.NgayNhap.Day == ngay).ToList();
+            if (thang != null) res = res.Where(p => p.NgayNhap.Month == thang).ToList();
+            if (nam != null) res = res.Where(p => p.NgayNhap.Year == nam).ToList();
             return res;
         }
 
@@ -76,8 +76,8 @@ namespace DAL
             {
                 PHIEUNHAPSACH phieu = QLTVDb.Instance.PHIEUNHAPSACHes.Find(id);
                 if (phieu == null) return false;
-                if (ngayNhap != null) phieu.NgayNhap = ngayNhap;
-                if (tongTien != null) phieu.TongTien = tongTien;
+                if (ngayNhap != null) phieu.NgayNhap = ngayNhap.Value;
+                if (tongTien != null) phieu.TongTien = tongTien.Value;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }

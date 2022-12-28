@@ -109,6 +109,17 @@ namespace DAL
             return res;
         }
 
+        /// <summary>
+        /// find DOCGIA of an specific idNguoiDung
+        /// </summary>
+        /// <param name="idNguoiDung"></param>
+        /// <returns></returns>
+        public DOCGIA FindDocGiaByIdND (int idNguoiDung)
+        {
+            return QLTVDb.Instance.DOCGIAs.AsNoTracking().Where(d => d.idNguoiDung == idNguoiDung).First();
+        }
+
+
         public bool UpdDocGia(int idDocGia, string tenDocGia, DateTime? ngaySinh, string diaChi, string email,
             DateTime? ngayHetHan, int? idLoaiDocGia)
         {
@@ -122,7 +133,7 @@ namespace DAL
                 if (diaChi != null) dg.DiaChi = diaChi;
                 if (email != null) dg.Email = email;
                 if (ngayHetHan != null) dg.NgayHetHan = (DateTime)ngayHetHan;
-                if (idLoaiDocGia != null) dg.idLoaiDocGia = idLoaiDocGia;
+                if (idLoaiDocGia != null) dg.idLoaiDocGia = (int)idLoaiDocGia;
 
                 QLTVDb.Instance.SaveChanges();
                 return true;

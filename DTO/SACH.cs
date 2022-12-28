@@ -23,13 +23,13 @@ namespace DTO
     
         public int id { get; set; }
         public string MaSach { get; set; }
-        public Nullable<int> idTuaSach { get; set; }
+        public int idTuaSach { get; set; }
         public int SoLuong { get; set; }
         public int SoLuongConLai { get; set; }
-        public Nullable<int> DonGia { get; set; }
-        public Nullable<int> NamXB { get; set; }
+        public int DonGia { get; set; }
+        public int NamXB { get; set; }
         public string NhaXB { get; set; }
-        public Nullable<int> DaAn { get; set; }
+        public int DaAn { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_PHIEUNHAP> CT_PHIEUNHAP { get; set; }
