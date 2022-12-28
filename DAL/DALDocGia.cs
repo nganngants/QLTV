@@ -41,7 +41,7 @@ namespace DAL
         /// <param name="tongNoHienTai"></param>
         /// <returns></returns>
         public bool AddDocGia(string tenDocGia, DateTime ngaySinh, string diaChi, string email,
-            DateTime ngayLapThe, DateTime ngayHetHan, int idLoaiDocGia, int tongNoHienTai)
+            DateTime ngayLapThe, DateTime ngayHetHan, int idLoaiDocGia, int tongNoHienTai, int idND)
         {
             try
             {
@@ -54,6 +54,7 @@ namespace DAL
                 obj.NgayHetHan = ngayHetHan;
                 obj.idLoaiDocGia = idLoaiDocGia;
                 obj.TongNoHienTai = tongNoHienTai;
+                obj.idNguoiDung = idND; 
                 QLTVDb.Instance.DOCGIAs.Add(obj);
                 QLTVDb.Instance.SaveChanges();
                 return true;

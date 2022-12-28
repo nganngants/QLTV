@@ -38,15 +38,15 @@ namespace GUI
             string chucvu = txtChucVu.Text;
             string tendn = txtUsername.Text;
             string matkhau = txtUserpwd.Text;
-            int id = (int)comboNhomND.SelectedValue;
+            int idNhom = (int)comboNhomND.SelectedValue;
 
-            string err = BUSNguoiDung.Instance.AddNguoiDung(ten, ngaysinh, chucvu, tendn, matkhau, id);
-            if (err == "")
+            int id = BUSNguoiDung.Instance.AddNguoiDung(ten, ngaysinh, chucvu, tendn, matkhau, idNhom);
+            if (id != -1)
             {
                 MessageBox.Show("Thêm người dùng thành công");
                 this.Close();
             }
-            else MessageBox.Show(err);
+            else errorDia.Show("Có lỗi xảy ra! Vui lòng kiểm tra lại thông tin!");
 
         }
     }

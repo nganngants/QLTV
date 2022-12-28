@@ -44,13 +44,20 @@ namespace GUI
            
             DateTime NgayHetHan = NgayLapThe.AddMonths((int)thamso.ThoiHanThe);
             dateNgayHetHan.Text = NgayHetHan.Date.ToShortDateString();
-            if(tenDG == "" || DiaChi == "" )
+
+            string username = txtUsername.Text;
+            string userpwd = txtUserpwd.Text;
+            if(tenDG == "" || username == "" || userpwd == "")
             {
                 MessageBox.Show("Chưa điền đủ thông tin");
                 return;
             }
 
-            string messg = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan);
+            //Them account
+            int idND = BUSNguoiDung.Instance.AddNguoiDung(tenDG, NgaySinh, null ,username, userpwd, 3);
+
+
+            string messg = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan, idND);
             if (messg != "")
             {
                 MessageBox.Show(messg);

@@ -47,7 +47,7 @@ namespace DAL
             return null;
         }
 
-        public bool AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
+        public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
                                  string tenDangNhap, string matKhau, int idNhomNguoiDung)
         {
             
@@ -64,12 +64,12 @@ namespace DAL
                 };
                 QLTVDb.Instance.NGUOIDUNGs.Add(nd);
                 QLTVDb.Instance.SaveChanges();
-                return true;
+                return nd.id;
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                return -1;
             }
         }
 

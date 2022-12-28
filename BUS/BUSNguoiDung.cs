@@ -39,14 +39,13 @@ namespace BUS
             if (DALNguoiDung.Instance.DelNguoiDung(nd.id)) return "";
             return "Không thể xoá người dùng";
         }
-        public string AddNguoiDung(string ten, DateTime NgaySinh,string ChucVu,string tenDN,string MK,int NhomNguoiDung)
+        public int AddNguoiDung(string ten, DateTime NgaySinh,string ChucVu,string tenDN,string MK,int NhomNguoiDung)
         {
             foreach (NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
                 if (nd.TenDangNhap == tenDN)
-                    return "Tên đăng nhập đã tồn tại";
-            if (DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, ChucVu, tenDN, MK, NhomNguoiDung))
-                return "";
-            return "Không thể thêm người dùng";
+                    return -1;
+            int id = DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, ChucVu, tenDN, MK, NhomNguoiDung);
+            return id;
         }
         public NGUOIDUNG GetNguoiDung(string maNguoiDung)
         {
