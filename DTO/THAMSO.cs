@@ -15,13 +15,13 @@ namespace DTO
     public partial class THAMSO
     {
         public int id { get; set; }
-        public Nullable<int> TuoiToiThieu { get; set; }
-        public Nullable<int> TuoiToiDa { get; set; }
-        public Nullable<int> ThoiHanThe { get; set; }
-        public Nullable<int> KhoangCachXuatBan { get; set; }
-        public Nullable<int> SoSachMuonToiDa { get; set; }
-        public Nullable<int> SoNgayMuonToiDa { get; set; }
-        public Nullable<int> DonGiaPhat { get; set; }
-        public Nullable<int> AD_QDKTTienThu { get; set; }
+        public int TuoiToiThieu { get; set; }
+        public int TuoiToiDa { get; set; }
+        public int ThoiHanThe { get; set; }
+        public int KhoangCachXuatBan { get; set; }
+        public int SoSachMuonToiDa { get; set; }
+        public int SoNgayMuonToiDa { get; set; }
+        public int DonGiaPhat { get; set; }
+        public int AD_QDKTTienThu { get; set; }
     }
 }

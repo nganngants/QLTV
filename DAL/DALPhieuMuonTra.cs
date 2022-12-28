@@ -34,12 +34,13 @@ namespace DAL
         public List<PHIEUMUONTRA> FindTheoNgayMuon (int? ngay, int? thang, int? nam)
         {
             List<PHIEUMUONTRA> res = GetAllPhieuMuonTra();
-            if (ngay != null) res = res.Where(p => p.NgayMuon.Value.Day == ngay).ToList();
-            if (thang != null) res = res.Where(p => p.NgayMuon.Value.Month == thang).ToList();
-            if (nam != null) res = res.Where(p => p.NgayMuon.Value.Year == nam).ToList();
+            if (ngay != null) res = res.Where(p => p.NgayMuon.Day == ngay).ToList();
+            if (thang != null) res = res.Where(p => p.NgayMuon.Month == thang).ToList();
+            if (nam != null) res = res.Where(p => p.NgayMuon.Year == nam).ToList();
             return res;
 
         }
+
 
         public List<PHIEUMUONTRA> FindTheoNgayTra(int? ngay, int? thang, int? nam)
         {
@@ -58,7 +59,12 @@ namespace DAL
         {
             return ds.Where(p => p.NgayTra == null && p.HanTra < today).ToList();
         }
-        public bool AddPhieuMuonTra(int idDocGia, int idCuonSach, DateTime? ngayMuon, DateTime? hanTra)
+
+        public List<PHIEUMUONTRA> FindPhieuMuonByDocGia (int idDocGia)
+        {
+            return QLTVDb.Instance.PHIEUMUONTRAs.AsNoTracking().Where(p => p.idDocGia == idDocGia).ToList();
+        }
+        public bool AddPhieuMuonTra(int idDocGia, int idCuonSach, DateTime ngayMuon, DateTime hanTra)
         {
             try
             {
@@ -88,8 +94,8 @@ namespace DAL
             {
                 var phieu = GetPhieuMuonTraById(soPhieu);
                 if (phieu == null) return false;
-                if (ngayMuon != null) phieu.NgayMuon = ngayMuon;
-                if (hanTra != null) phieu.HanTra = hanTra;
+                if (ngayMuon != null) phieu.NgayMuon = ngayMuon.Value;
+                if (hanTra != null) phieu.HanTra = hanTra.Value;
                 if (ngayTra != null)
                 {
                     phieu.NgayTra = ngayTra;

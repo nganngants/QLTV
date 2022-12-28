@@ -23,9 +23,9 @@ namespace DTO
     
         public int id { get; set; }
         public string MaCuonSach { get; set; }
-        public Nullable<int> idSach { get; set; }
-        public Nullable<int> TinhTrang { get; set; }
-        public Nullable<int> DaAn { get; set; }
+        public int idSach { get; set; }
+        public int TinhTrang { get; set; }
+        public int DaAn { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BCSACHTRATRE> BCSACHTRATREs { get; set; }

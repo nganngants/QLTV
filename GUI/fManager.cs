@@ -40,8 +40,8 @@ namespace GUI
 
             uctaikhoan = new UserControls.ucThongTinTaiKhoan(user.id);
             uctaikhoan.Dock = DockStyle.Fill;
-            this.pageAccount.Controls.Clear();
-            this.pageAccount.Controls.Add(uctaikhoan);
+            this.tabAccount.Controls.Clear();
+            this.tabAccount.Controls.Add(uctaikhoan);
 
             //Console.WriteLine("qlpt");
             //ucphieuthu = new UserControls.ucQLPhieuThu();
@@ -55,51 +55,51 @@ namespace GUI
                 {
                     ucqldg = new UserControls.ucQLDG();
                     ucqldg.Dock = DockStyle.Fill;
-                    this.pageQLDG.Controls.Clear();
-                    this.pageQLDG.Controls.Add(ucqldg);
+                    this.tabQLDG.Controls.Clear();
+                    this.tabQLDG.Controls.Add(ucqldg);
                 }
                 if (cn.TenChucNang == "QLS")
                 {
                     ucqlsach = new UserControls.ucQLSach();
                     ucqlsach.Dock = DockStyle.Fill;
-                    this.pageQLS.Controls.Clear();
-                    this.pageQLS.Controls.Add(ucqlsach);
+                    this.tabQLS.Controls.Clear();
+                    this.tabQLS.Controls.Add(ucqlsach);
                 }
                 if (cn.TenChucNang == "QLPM")
                 {
                     ucphieumuontra = new UserControls.ucQLPhieuMuon();
                     ucphieumuontra.Dock = DockStyle.Fill;
-                    this.pageQLMT.Controls.Clear();
-                    this.pageQLMT.Controls.Add(ucphieumuontra);
+                    this.tabQLMT.Controls.Clear();
+                    this.tabQLMT.Controls.Add(ucphieumuontra);
                 }
                 if (cn.TenChucNang == "QLPT")
                 {
                     ucphieuthu = new UserControls.ucQLPhieuThu();
                     ucphieuthu.Dock = DockStyle.Fill;
                     ucphieuthu.Visible = true;
-                    this.pageQLPT.Controls.Clear();
-                    this.pageQLPT.Controls.Add(ucphieuthu);
+                    this.tabQLPT.Controls.Clear();
+                    this.tabQLPT.Controls.Add(ucphieuthu);
                 }
                 if (cn.TenChucNang == "BCTK")
                 {
                     ucbaocao = new UserControls.ucBCTK();
                     ucbaocao.Dock = DockStyle.Fill;
-                    this.pageBC.Controls.Clear();
-                    this.pageBC.Controls.Add(ucbaocao);
+                    this.tabBC.Controls.Clear();
+                    this.tabBC.Controls.Add(ucbaocao);
                 }
                 if (cn.TenChucNang == "QLND")
                 {
                     ucnguoidung = new UserControls.ucQLND();
                     ucnguoidung.Dock = DockStyle.Fill;
-                    this.pageQLND.Controls.Clear();
-                    this.pageQLND.Controls.Add(ucnguoidung);
+                    this.tabQLND.Controls.Clear();
+                    this.tabQLND.Controls.Add(ucnguoidung);
                 }
                 if (cn.TenChucNang == "TDQD")
                 {
                     ucquidinh = new UserControls.ucThayDoiQuiDinh();
                     ucquidinh.Dock = DockStyle.Fill;
-                    this.pageTDQD.Controls.Clear();
-                    this.pageTDQD.Controls.Add(ucquidinh);
+                    this.tabTDQD.Controls.Clear();
+                    this.tabTDQD.Controls.Add(ucquidinh);
                 }
             }
 

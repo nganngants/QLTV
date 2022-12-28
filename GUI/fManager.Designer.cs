@@ -39,14 +39,14 @@ namespace GUI
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
-            this.pageAccount = new System.Windows.Forms.TabPage();
-            this.pageQLDG = new System.Windows.Forms.TabPage();
-            this.pageQLS = new System.Windows.Forms.TabPage();
-            this.pageQLMT = new System.Windows.Forms.TabPage();
-            this.pageQLPT = new System.Windows.Forms.TabPage();
-            this.pageBC = new System.Windows.Forms.TabPage();
-            this.pageQLND = new System.Windows.Forms.TabPage();
-            this.pageTDQD = new System.Windows.Forms.TabPage();
+            this.tabAccount = new System.Windows.Forms.TabPage();
+            this.tabQLDG = new System.Windows.Forms.TabPage();
+            this.tabQLS = new System.Windows.Forms.TabPage();
+            this.tabQLMT = new System.Windows.Forms.TabPage();
+            this.tabQLPT = new System.Windows.Forms.TabPage();
+            this.tabBC = new System.Windows.Forms.TabPage();
+            this.tabQLND = new System.Windows.Forms.TabPage();
+            this.tabTDQD = new System.Windows.Forms.TabPage();
             this.iconList = new System.Windows.Forms.ImageList(this.components);
             this.topPanel.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -120,14 +120,14 @@ namespace GUI
             // tabControl
             // 
             this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControl.Controls.Add(this.pageAccount);
-            this.tabControl.Controls.Add(this.pageQLDG);
-            this.tabControl.Controls.Add(this.pageQLS);
-            this.tabControl.Controls.Add(this.pageQLMT);
-            this.tabControl.Controls.Add(this.pageQLPT);
-            this.tabControl.Controls.Add(this.pageBC);
-            this.tabControl.Controls.Add(this.pageQLND);
-            this.tabControl.Controls.Add(this.pageTDQD);
+            this.tabControl.Controls.Add(this.tabAccount);
+            this.tabControl.Controls.Add(this.tabQLDG);
+            this.tabControl.Controls.Add(this.tabQLS);
+            this.tabControl.Controls.Add(this.tabQLMT);
+            this.tabControl.Controls.Add(this.tabQLPT);
+            this.tabControl.Controls.Add(this.tabBC);
+            this.tabControl.Controls.Add(this.tabQLND);
+            this.tabControl.Controls.Add(this.tabTDQD);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.ImageList = this.iconList;
@@ -135,6 +135,7 @@ namespace GUI
             this.tabControl.Location = new System.Drawing.Point(0, 70);
             this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.Name = "tabControl";
+            this.tabControl.Padding = new System.Drawing.Point(0, 0);
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1235, 737);
             this.tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -160,115 +161,101 @@ namespace GUI
             this.tabControl.TabIndex = 2;
             this.tabControl.TabMenuBackColor = System.Drawing.Color.MediumSlateBlue;
             // 
-            // pageAccount
+            // tabAccount
             // 
-            this.pageAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pageAccount.ImageIndex = 6;
-
-            this.pageAccount.Location = new System.Drawing.Point(274, 4);
-            this.pageAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.pageAccount.Name = "pageAccount";
-            this.pageAccount.Size = new System.Drawing.Size(957, 729);
-
-            this.pageAccount.TabIndex = 0;
-            this.pageAccount.Text = "Tài khoản";
+            this.tabAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tabAccount.ImageIndex = 6;
+            this.tabAccount.Location = new System.Drawing.Point(274, 4);
+            this.tabAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.tabAccount.Name = "tabAccount";
+            this.tabAccount.Size = new System.Drawing.Size(957, 729);
+            this.tabAccount.TabIndex = 0;
+            this.tabAccount.Text = "Tài khoản";
             // 
-            // pageQLDG
+            // tabQLDG
             // 
-            this.pageQLDG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageQLDG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pageQLDG.ImageIndex = 0;
-            this.pageQLDG.Location = new System.Drawing.Point(274, 4);
-            this.pageQLDG.Margin = new System.Windows.Forms.Padding(0);
-            this.pageQLDG.Name = "pageQLDG";
-            this.pageQLDG.Size = new System.Drawing.Size(957, 729);
-            this.pageQLDG.TabIndex = 1;
-            this.pageQLDG.Text = "Độc giả";
+            this.tabQLDG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabQLDG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabQLDG.ImageIndex = 0;
+            this.tabQLDG.Location = new System.Drawing.Point(274, 4);
+            this.tabQLDG.Margin = new System.Windows.Forms.Padding(0);
+            this.tabQLDG.Name = "tabQLDG";
+            this.tabQLDG.Size = new System.Drawing.Size(957, 729);
+            this.tabQLDG.TabIndex = 1;
+            this.tabQLDG.Text = "Độc giả";
             // 
-            // pageQLS
+            // tabQLS
             // 
-            this.pageQLS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageQLS.ImageIndex = 5;
-            this.pageQLS.Location = new System.Drawing.Point(274, 4);
-            this.pageQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLS.Name = "pageQLS";
-            this.pageQLS.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-
-            this.pageQLS.Size = new System.Drawing.Size(957, 729);
-
-            this.pageQLS.TabIndex = 2;
-            this.pageQLS.Text = "Sách";
+            this.tabQLS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabQLS.ImageIndex = 5;
+            this.tabQLS.Location = new System.Drawing.Point(274, 4);
+            this.tabQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLS.Name = "tabQLS";
+            this.tabQLS.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLS.Size = new System.Drawing.Size(957, 729);
+            this.tabQLS.TabIndex = 2;
+            this.tabQLS.Text = "Sách";
             // 
-            // pageQLMT
+            // tabQLMT
             // 
-            this.pageQLMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pageQLMT.ImageIndex = 2;
-            this.pageQLMT.Location = new System.Drawing.Point(274, 4);
-            this.pageQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLMT.Name = "pageQLMT";
-            this.pageQLMT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-
-            this.pageQLMT.Size = new System.Drawing.Size(957, 729);
-
-            this.pageQLMT.TabIndex = 3;
-            this.pageQLMT.Text = "Phiếu mượn trả";
+            this.tabQLMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabQLMT.ImageIndex = 2;
+            this.tabQLMT.Location = new System.Drawing.Point(274, 4);
+            this.tabQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLMT.Name = "tabQLMT";
+            this.tabQLMT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLMT.Size = new System.Drawing.Size(957, 729);
+            this.tabQLMT.TabIndex = 3;
+            this.tabQLMT.Text = "Phiếu mượn trả";
             // 
-            // pageQLPT
+            // tabQLPT
             // 
-            this.pageQLPT.BackColor = System.Drawing.SystemColors.Control;
-            this.pageQLPT.ImageIndex = 3;
-            this.pageQLPT.Location = new System.Drawing.Point(274, 4);
-            this.pageQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLPT.Name = "pageQLPT";
-            this.pageQLPT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-
-            this.pageQLPT.Size = new System.Drawing.Size(957, 729);
-
-            this.pageQLPT.TabIndex = 4;
-            this.pageQLPT.Text = "Phiếu thu";
+            this.tabQLPT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabQLPT.ImageIndex = 3;
+            this.tabQLPT.Location = new System.Drawing.Point(274, 4);
+            this.tabQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLPT.Name = "tabQLPT";
+            this.tabQLPT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLPT.Size = new System.Drawing.Size(957, 729);
+            this.tabQLPT.TabIndex = 4;
+            this.tabQLPT.Text = "Phiếu thu";
             // 
-            // pageBC
+            // tabBC
             // 
-            this.pageBC.BackColor = System.Drawing.SystemColors.Control;
-            this.pageBC.ImageIndex = 4;
-            this.pageBC.Location = new System.Drawing.Point(274, 4);
-            this.pageBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageBC.Name = "pageBC";
-            this.pageBC.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-
-            this.pageBC.Size = new System.Drawing.Size(957, 729);
-
-            this.pageBC.TabIndex = 5;
-            this.pageBC.Text = "Báo cáo thống kê";
+            this.tabBC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabBC.ImageIndex = 4;
+            this.tabBC.Location = new System.Drawing.Point(274, 4);
+            this.tabBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabBC.Name = "tabBC";
+            this.tabBC.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabBC.Size = new System.Drawing.Size(957, 729);
+            this.tabBC.TabIndex = 5;
+            this.tabBC.Text = "Báo cáo thống kê";
             // 
-            // pageQLND
+            // tabQLND
             // 
-            this.pageQLND.BackColor = System.Drawing.SystemColors.Control;
-            this.pageQLND.ImageIndex = 1;
-            this.pageQLND.Location = new System.Drawing.Point(274, 4);
-            this.pageQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pageQLND.Name = "pageQLND";
-            this.pageQLND.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-
-            this.pageQLND.Size = new System.Drawing.Size(957, 729);
-
-            this.pageQLND.TabIndex = 6;
-            this.pageQLND.Text = "Người dùng";
+            this.tabQLND.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabQLND.ImageIndex = 1;
+            this.tabQLND.Location = new System.Drawing.Point(274, 4);
+            this.tabQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLND.Name = "tabQLND";
+            this.tabQLND.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLND.Size = new System.Drawing.Size(957, 729);
+            this.tabQLND.TabIndex = 6;
+            this.tabQLND.Text = "Người dùng";
             // 
-            // pageTDQD
+            // tabTDQD
             // 
-            this.pageTDQD.BackColor = System.Drawing.SystemColors.Control;
-            this.pageTDQD.ImageIndex = 7;
-            this.pageTDQD.Location = new System.Drawing.Point(274, 4);
-            this.pageTDQD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pageTDQD.Name = "pageTDQD";
-            this.pageTDQD.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
-            this.pageTDQD.Size = new System.Drawing.Size(957, 729);
-
-            this.pageTDQD.TabIndex = 7;
-            this.pageTDQD.Text = "Thay đổi quy định";
+            this.tabTDQD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.tabTDQD.ImageIndex = 7;
+            this.tabTDQD.Location = new System.Drawing.Point(274, 4);
+            this.tabTDQD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabTDQD.Name = "tabTDQD";
+            this.tabTDQD.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabTDQD.Size = new System.Drawing.Size(957, 729);
+            this.tabTDQD.TabIndex = 7;
+            this.tabTDQD.Text = "Thay đổi quy định";
             // 
             // iconList
             // 
@@ -283,7 +270,7 @@ namespace GUI
             this.iconList.Images.SetKeyName(6, "taikhoan.png");
             this.iconList.Images.SetKeyName(7, "thaydoiquydinh.png");
             // 
-            // fMainForm
+            // fManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -292,7 +279,7 @@ namespace GUI
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.Name = "fMainForm";
+            this.Name = "fManager";
             this.Text = "fAdmin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.topPanel.ResumeLayout(false);
@@ -308,13 +295,13 @@ namespace GUI
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox exitControlBox;
         private Siticone.Desktop.UI.WinForms.SiticoneTabControl tabControl;
-        private TabPage pageQLDG;
+        private TabPage tabQLDG;
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
-        private TabPage pageQLS;
-        private TabPage pageQLMT;
-        private TabPage pageQLPT;
-        private TabPage pageBC;
-        private TabPage pageQLND;
+        private TabPage tabQLS;
+        private TabPage tabQLMT;
+        private TabPage tabQLPT;
+        private TabPage tabBC;
+        private TabPage tabQLND;
         private static ucBanAccess ucBan;
         private static ucQLDG ucqldg;
         private static ucQLSach ucqlsach;
@@ -327,8 +314,8 @@ namespace GUI
         private static ucThayDoiQuiDinh ucquidinh;
         private Label label2;
         private ImageList iconList;
-        private TabPage pageTDQD;
-        private TabPage pageAccount;
+        private TabPage tabTDQD;
+        private TabPage tabAccount;
 
     }
 }

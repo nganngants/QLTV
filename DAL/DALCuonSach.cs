@@ -94,7 +94,7 @@ namespace DAL
                 if (tinhTrang != null) if (tinhTrang == cuonsach.TinhTrang) return false;
                     else
                     {
-                        cuonsach.TinhTrang = tinhTrang;
+                        cuonsach.TinhTrang = (int)tinhTrang;
                         if (tinhTrang == 1) sach.SoLuongConLai++;
                         else sach.SoLuongConLai--;
                     }

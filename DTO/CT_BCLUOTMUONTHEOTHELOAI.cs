@@ -16,7 +16,7 @@ namespace DTO
     {
         public int idBaoCao { get; set; }
         public int idTheLoai { get; set; }
-        public Nullable<int> SoLuotMuon { get; set; }
+        public int SoLuotMuon { get; set; }
         public Nullable<decimal> TiLe { get; set; }
     
         public virtual BCLUOTMUONTHEOTHELOAI BCLUOTMUONTHEOTHELOAI { get; set; }

@@ -67,7 +67,7 @@ namespace DAL
         /// <param name="namXB"></param>
         /// <param name="nhaXB"></param>
         /// <returns></returns>
-        public int AddSachMoi(TUASACH tuaSach, int donGia, int? namXB, string nhaXB)
+        public int AddSachMoi(TUASACH tuaSach, int donGia, int namXB, string nhaXB)
         {
             try
             {
@@ -127,13 +127,14 @@ namespace DAL
             {
                 SACH sach = GetSachById(id);
                 if (sach == null) return false;
-                if (namXB != null) sach.NamXB = namXB;
+                if (namXB != null) sach.NamXB = (int)namXB;
                 if (nhaXB != null) sach.NhaXB = nhaXB;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.ToString());
                 return false;
             }
         }
@@ -159,8 +160,9 @@ namespace DAL
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.ToString());
                 return false;
             }
         }

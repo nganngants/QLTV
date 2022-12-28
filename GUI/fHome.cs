@@ -21,7 +21,7 @@ namespace GUI
             InitializeComponent();
 
             user = BUSNguoiDung.Instance.GetNguoiDungById(id);
-            container.Controls.Add(new ucHome_TTTK() { Dock = DockStyle.Fill, Name = "tttk" });
+            container.Controls.Add(new ucHome_TTTK(id) { Dock = DockStyle.Fill, Name = "tttk" });
             container.Controls.Add(new ucHome_TCS() { Dock = DockStyle.Fill, Name = "tcsach" });
             butTTTK.Checked = true;
         }

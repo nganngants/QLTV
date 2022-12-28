@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BUS
 {
      public class BUSBCSachTraTre
-    {
+     {
         private static BUSBCSachTraTre instance;
         public static BUSBCSachTraTre Instance
         {
@@ -57,5 +57,5 @@ namespace BUS
             if (lbc.Count == 0) return null;
             return lbc;
         }
-    }
+     }
 }

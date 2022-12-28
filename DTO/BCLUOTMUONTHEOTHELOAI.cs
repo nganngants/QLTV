@@ -21,10 +21,10 @@ namespace DTO
         }
     
         public int id { get; set; }
-        public Nullable<int> Thang { get; set; }
-        public Nullable<int> Nam { get; set; }
+        public int Thang { get; set; }
+        public int Nam { get; set; }
         public string MaBaoCao { get; set; }
-        public Nullable<int> TongSoLuotMuon { get; set; }
+        public int TongSoLuotMuon { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_BCLUOTMUONTHEOTHELOAI> CT_BCLUOTMUONTHEOTHELOAI { get; set; }

@@ -25,7 +25,6 @@ namespace GUI.UserControls
         {
             TheLoaiGrid.Rows.Clear();
             TheLoaiList = BUSTheLoai.Instance.GetAllTheLoai();
-            int i = 0;
             foreach(THELOAI theLoai in TheLoaiList)
             {
                 TheLoaiGrid.Rows.Add(0,theLoai.MaTheLoai,theLoai.TenTheLoai,theLoai.TUASACHes.Count);

@@ -95,6 +95,11 @@ namespace BUS
                 return "";
             return "Lỗi không thể cập nhật phiếu mượn.";
         }
+
+        public List<PHIEUMUONTRA> FindPhieuMuonByDocGia (int idDocGia)
+        {
+            return DALPhieuMuonTra.Instance.FindPhieuMuonByDocGia(idDocGia);
+        }
         public List<PHIEUMUONTRA> GetAllPhieuMuon()
         {
             return DALPhieuMuonTra.Instance.GetAllPhieuMuonTra();

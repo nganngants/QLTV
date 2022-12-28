@@ -374,9 +374,9 @@
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label3.Location = new System.Drawing.Point(113, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 22);
+            this.label3.Size = new System.Drawing.Size(115, 22);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Nhà Xuất Bản";
+            this.label3.Text = "Nhà Xuất Bản*";
             // 
             // label2
             // 

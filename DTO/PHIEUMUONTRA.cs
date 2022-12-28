@@ -15,11 +15,11 @@ namespace DTO
     public partial class PHIEUMUONTRA
     {
         public int SoPhieuMuonTra { get; set; }
-        public Nullable<int> idDocGia { get; set; }
-        public Nullable<int> idCuonSach { get; set; }
-        public Nullable<System.DateTime> NgayMuon { get; set; }
+        public int idDocGia { get; set; }
+        public int idCuonSach { get; set; }
+        public System.DateTime NgayMuon { get; set; }
         public Nullable<System.DateTime> NgayTra { get; set; }
-        public Nullable<System.DateTime> HanTra { get; set; }
+        public System.DateTime HanTra { get; set; }
         public Nullable<int> SoTienPhat { get; set; }
     
         public virtual CUONSACH CUONSACH { get; set; }
