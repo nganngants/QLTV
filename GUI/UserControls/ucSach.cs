@@ -14,6 +14,9 @@ namespace GUI.UserControls
             Binding(BUSSach.Instance.GetAllSach());
             comboTinhTrang.Items.Add("Còn");
             comboTinhTrang.Items.Add("Hết");
+            comboTinhTrang.Items.Add("Chưa ẩn");
+            comboTinhTrang.Items.Add("Đã ẩn");
+
         }
         private List<SACH> SachList;
        
@@ -133,6 +136,10 @@ namespace GUI.UserControls
                 if (sach.SoLuongConLai > 0 && comboTinhTrang.Text == "Còn")
                     Res.Add(sach);
                 if (sach.SoLuongConLai == 0 && comboTinhTrang.Text == "Hết")
+                    Res.Add(sach);
+                if(sach.DaAn == 1 && comboTinhTrang.Text == "Đã ẩn")
+                    Res.Add(sach);
+                if(sach.DaAn == 0 && comboTinhTrang.Text == "Chưa ẩn")
                     Res.Add(sach);
             }
             Binding(Res);
