@@ -1,6 +1,6 @@
 ﻿using BUS;
 using DTO;
-using GUI;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,7 +81,7 @@ namespace GUI.UserControls
         {
             this.DocGiaGrid.Sort(this.DocGiaGrid.Columns[idx], ListSortDirection.Ascending);
         }
-        private void DocGiaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DocGiaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
             if (idx == -1)
