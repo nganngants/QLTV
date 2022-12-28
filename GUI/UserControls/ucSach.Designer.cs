@@ -31,16 +31,15 @@ namespace GUI.UserControls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butTenSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.butMaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAddOld = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.txtTenSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtMaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -59,6 +58,7 @@ namespace GUI.UserControls
             this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhaXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
@@ -66,12 +66,12 @@ namespace GUI.UserControls
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.comboTinhTrang);
             this.topPanel.Controls.Add(this.butTenSach);
             this.topPanel.Controls.Add(this.butRefresh);
             this.topPanel.Controls.Add(this.butMaSach);
             this.topPanel.Controls.Add(this.butDel);
             this.topPanel.Controls.Add(this.butAddOld);
-            this.topPanel.Controls.Add(this.txtTenSach);
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Controls.Add(this.txtMaSach);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -98,7 +98,7 @@ namespace GUI.UserControls
             this.butTenSach.Name = "butTenSach";
             this.butTenSach.Size = new System.Drawing.Size(129, 28);
             this.butTenSach.TabIndex = 14;
-            this.butTenSach.Text = "Tìm kiếm";
+            this.butTenSach.Text = "Lọc tình trạng";
             this.butTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butTenSach.TextOffset = new System.Drawing.Point(3, 0);
             this.butTenSach.Click += new System.EventHandler(this.butTenSach_Click);
@@ -185,31 +185,6 @@ namespace GUI.UserControls
             this.butAddOld.TextOffset = new System.Drawing.Point(3, 0);
             this.butAddOld.Click += new System.EventHandler(this.butAddOld_Click);
             // 
-            // txtTenSach
-            // 
-            this.txtTenSach.AllowDrop = true;
-            this.txtTenSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtTenSach.AutoRoundedCorners = true;
-            this.txtTenSach.BorderRadius = 13;
-            this.txtTenSach.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenSach.DefaultText = "";
-            this.txtTenSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenSach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenSach.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtTenSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenSach.Location = new System.Drawing.Point(769, 82);
-            this.txtTenSach.Name = "txtTenSach";
-            this.txtTenSach.PasswordChar = '\0';
-            this.txtTenSach.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtTenSach.PlaceholderText = "Tên sách";
-            this.txtTenSach.SelectedText = "";
-            this.txtTenSach.Size = new System.Drawing.Size(201, 28);
-            this.txtTenSach.TabIndex = 12;
-            // 
             // butAdd
             // 
             this.butAdd.BorderRadius = 6;
@@ -246,7 +221,7 @@ namespace GUI.UserControls
             this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Location = new System.Drawing.Point(769, 48);
+            this.txtMaSach.Location = new System.Drawing.Point(774, 40);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
             this.txtMaSach.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -307,21 +282,21 @@ namespace GUI.UserControls
             this.SachGrid.AllowUserToAddRows = false;
             this.SachGrid.AllowUserToDeleteRows = false;
             this.SachGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.SachGrid.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.SachGrid.ColumnHeadersHeight = 35;
             this.SachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.SachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -335,20 +310,20 @@ namespace GUI.UserControls
             this.namXBDataGridViewTextBoxColumn,
             this.nhaXBDataGridViewTextBoxColumn});
             this.SachGrid.DataSource = this.sACHBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SachGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SachGrid.DefaultCellStyle = dataGridViewCellStyle9;
             this.SachGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.Location = new System.Drawing.Point(0, 120);
             this.SachGrid.Name = "SachGrid";
             this.SachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.SachGrid.RowHeadersVisible = false;
             this.SachGrid.RowHeadersWidth = 51;
             this.SachGrid.RowTemplate.Height = 30;
@@ -463,6 +438,23 @@ namespace GUI.UserControls
             this.nhaXBDataGridViewTextBoxColumn.Name = "nhaXBDataGridViewTextBoxColumn";
             this.nhaXBDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // comboTinhTrang
+            // 
+            this.comboTinhTrang.AutoRoundedCorners = true;
+            this.comboTinhTrang.BackColor = System.Drawing.Color.Transparent;
+            this.comboTinhTrang.BorderRadius = 17;
+            this.comboTinhTrang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTinhTrang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboTinhTrang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboTinhTrang.ItemHeight = 30;
+            this.comboTinhTrang.Location = new System.Drawing.Point(774, 74);
+            this.comboTinhTrang.Name = "comboTinhTrang";
+            this.comboTinhTrang.Size = new System.Drawing.Size(201, 36);
+            this.comboTinhTrang.TabIndex = 15;
+            // 
             // ucSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -497,7 +489,6 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneButton butMaSach;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtMaSach;
         private Siticone.Desktop.UI.WinForms.SiticoneContextMenuStrip siticoneContextMenuStrip1;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenSach;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView SachGrid;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butTenSach;
         private DataGridViewCheckBoxColumn isChosen;
@@ -509,5 +500,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn namXBDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nhaXBDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTinhTrang;
     }
 }

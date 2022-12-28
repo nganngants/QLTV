@@ -1,4 +1,4 @@
-﻿using GUI.BM;
+﻿using GUI;
 using GUI.UserControls;
 using System;
 using System.Collections.Generic;
