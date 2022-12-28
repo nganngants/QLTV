@@ -39,14 +39,8 @@ namespace GUI.UserControls
                 {
                     tacgia += tg.TenTacGia + ", ";
                     cnt++;
-                    /*if (cnt >= 2)
-                    {
-                        tacgia += "....";
-                        break;
-                    }*/
                 }
-                if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 1);
-                if (tacgia!="") tacgia = tacgia.Remove(tacgia.Length-1);
+                if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 2,2);
                 row.Cells["TacGia"].Value = tacgia;
                 row.Cells["TheLoai"].Value = (TuaSachList[i].THELOAI!=null)?TuaSachList[i].THELOAI.TenTheLoai : "";
                 i++;
