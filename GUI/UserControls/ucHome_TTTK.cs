@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,18 @@ namespace GUI.UserControls
 {
     public partial class ucHome_TTTK : UserControl
     {
-        public ucHome_TTTK()
+        private static NGUOIDUNG user;
+
+        public ucHome_TTTK(int id)
         {
             InitializeComponent();
+            user = BUSNguoiDung.Instance.GetNguoiDungById(id);
+            Binding();
+        }
+
+        private void Binding()
+        {
+            labelMaDG.Text = user.MaNguoiDung;
         }
     }
 }
