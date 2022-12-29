@@ -60,7 +60,8 @@ namespace DAL
                     ChucVu = chucVu,
                     TenDangNhap = tenDangNhap,
                     MatKhau = matKhau,
-                    idNhomNguoiDung = idNhomNguoiDung
+                    idNhomNguoiDung = idNhomNguoiDung,
+                    NHOMNGUOIDUNG = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung)
                 };
                 QLTVDb.Instance.NGUOIDUNGs.Add(nd);
                 QLTVDb.Instance.SaveChanges();

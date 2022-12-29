@@ -71,7 +71,9 @@ namespace DAL
                 var phieu = new PHIEUMUONTRA
                 {
                     idDocGia = idDocGia,
+                    DOCGIA = DALDocGia.Instance.GetDocGiaById(idDocGia),
                     idCuonSach = idCuonSach,
+                    CUONSACH = DALCuonSach.Instance.GetCuonSachById(idCuonSach),
                     NgayMuon = ngayMuon,
                     HanTra = hanTra
                 };

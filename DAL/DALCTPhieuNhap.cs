@@ -44,7 +44,9 @@ namespace DAL
                 var ct = new CT_PHIEUNHAP
                 {
                     SoPhieuNhap = soPhieu,
+                    PHIEUNHAPSACH = DALPhieuNhapSach.Instance.GetPhieuById(soPhieu),
                     idSach = idSach,
+                    SACH = DALSach.Instance.GetSachById(idSach),
                     DonGia = donGia,
                     SoLuongNhap = soLuongNhap,
                     ThanhTien = donGia * soLuongNhap

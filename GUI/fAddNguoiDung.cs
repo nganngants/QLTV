@@ -39,14 +39,36 @@ namespace GUI
             string tendn = txtUsername.Text;
             string matkhau = txtUserpwd.Text;
             int idNhom = (int)comboNhomND.SelectedValue;
-
+            var nhom = BUSNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhom);
+            bool isDG = false;
+            foreach (var cn in nhom.CHUCNANGs)
+            {
+                if (cn.TenChucNang == "DG") isDG = true;
+            }
+            if (isDG)
+            {
+                DialogResult res;
+                res = MessageBox.Show("Không thể thêm người dùng thuộc nhóm người dùng có chức năng độc giả!" +
+                    " Bạn có muốn thêm thẻ độc giả?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (res == DialogResult.Yes)
+                {
+                    var f = new fAddDocGia();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                    return;
+                }
+            }
             int id = BUSNguoiDung.Instance.AddNguoiDung(ten, ngaysinh, chucvu, tendn, matkhau, idNhom);
             if (id != -1)
             {
+                
                 MessageBox.Show("Thêm người dùng thành công");
+
                 this.Close();
             }
-            else errorDia.Show("Có lỗi xảy ra! Vui lòng kiểm tra lại thông tin!");
+            else MessageBox.Show("Có lỗi xảy ra! Vui lòng kiểm tra lại thông tin!", "Lỗi", 
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
     }

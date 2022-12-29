@@ -38,7 +38,9 @@ namespace DAL
                 var ct = new CT_BCLUOTMUONTHEOTHELOAI
                 {
                     idBaoCao = idBC,
+                    BCLUOTMUONTHEOTHELOAI = DALBCLuotMuonTheoTheLoai.Instance.GetBaoCaoById(idBC),
                     idTheLoai = idTheLoai,
+                    THELOAI = DALTheLoai.Instance.GetTheLoaiById(idTheLoai),
                     SoLuotMuon = soLuotMuon
                 };
                 QLTVDb.Instance.CT_BCLUOTMUONTHEOTHELOAI.Add(ct);

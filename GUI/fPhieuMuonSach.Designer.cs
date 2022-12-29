@@ -443,7 +443,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1200, 915);
+            this.ClientSize = new System.Drawing.Size(1200, 926);
             this.Controls.Add(this.siticoneControlBox2);
             this.Controls.Add(this.siticoneControlBox1);
             this.Controls.Add(this.siticonePanel1);

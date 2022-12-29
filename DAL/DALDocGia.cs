@@ -54,7 +54,8 @@ namespace DAL
                 obj.NgayHetHan = ngayHetHan;
                 obj.idLoaiDocGia = idLoaiDocGia;
                 obj.TongNoHienTai = tongNoHienTai;
-                obj.idNguoiDung = idND; 
+                obj.idNguoiDung = idND;
+                obj.NGUOIDUNG = DALNguoiDung.Instance.GetNguoiDungById(idND);
                 QLTVDb.Instance.DOCGIAs.Add(obj);
                 QLTVDb.Instance.SaveChanges();
                 return true;

@@ -96,6 +96,7 @@ namespace DAL
                 TUASACH tuaSach = new TUASACH();
                 tuaSach.TenTuaSach = tenTuaSach;
                 tuaSach.idTheLoai = theLoai.id;
+                tuaSach.THELOAI = theLoai;
                 tuaSach.TACGIAs = dsTacGia;
                 QLTVDb.Instance.TUASACHes.Add(tuaSach);
                 QLTVDb.Instance.SaveChanges();

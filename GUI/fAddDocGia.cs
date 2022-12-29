@@ -28,6 +28,23 @@ namespace GUI
             comboLoaiDG.ValueMember = "id";
             comboLoaiDG.SelectedIndex =0  ;
             dateNgayLap.Value = DateTime.Now;
+
+            var nndList = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
+            List<NHOMNGUOIDUNG> dgList = new List<NHOMNGUOIDUNG>();
+            foreach (var nnd in nndList)
+            {
+                bool isDG = false;
+                foreach (CHUCNANG cn in nnd.CHUCNANGs)
+                    if (cn.TenChucNang == "DG")
+                    {
+                        isDG = true;
+                        break;
+                    }
+                if (isDG) dgList.Add(nnd);
+            }
+            comboNND.DataSource = dgList;
+            comboNND.DisplayMember = "TenNhomNguoiDung";
+            comboNND.ValueMember = "id";
         }
 
         private void butOK_Click(object sender, EventArgs e)
@@ -47,14 +64,17 @@ namespace GUI
 
             string username = txtUsername.Text;
             string userpwd = txtUserpwd.Text;
-            if(tenDG == "" || username == "" || userpwd == "")
+            string chucVu = txtChucVu.Text;
+            if(tenDG == "" || username == "" || userpwd == "" || comboNND.SelectedItem == null)
             {
                 MessageBox.Show("Chưa điền đủ thông tin");
                 return;
             }
+            int idNhom = (int)comboNND.SelectedValue;
+
 
             //Them account
-            int idND = BUSNguoiDung.Instance.AddNguoiDung(tenDG, NgaySinh, null ,username, userpwd, 3);
+            int idND = BUSNguoiDung.Instance.AddNguoiDung(tenDG, NgaySinh, chucVu ,username, userpwd, idNhom);
 
 
             string messg = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan, idND);

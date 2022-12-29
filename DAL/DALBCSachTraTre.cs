@@ -50,6 +50,7 @@ namespace DAL
                 {
                     Ngay = ngayBC,
                     idCuonSach = idCuonSach,
+                    CUONSACH = DALCuonSach.Instance.GetCuonSachById(idCuonSach),
                     NgayMuon = ngayMuon,
                     SoNgayTre = soNgayTre
                 };

@@ -38,61 +38,6 @@ namespace DAL
             return (res.Any() ? res.First() : null);
         }
 
-        public bool AddChucNang(string tenChucNang, string tenManHinh)
-        {
-            try
-            {
-                var cn = new CHUCNANG
-                {
-                    TenChucNang = tenChucNang,
-                    TenManHinh = tenManHinh
-                };
-                QLTVDb.Instance.CHUCNANGs.Add(cn);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
-        }
-
-        public bool UpdChucNang (int id, string tenChucNang, string tenManHinh) 
-        {
-            try
-            {
-                var cn = GetChucNangById(id);
-                if (cn == null) return false;
-
-                if (tenChucNang != null) cn.TenChucNang = tenChucNang;
-                if (tenManHinh != null) cn.TenManHinh = tenManHinh;
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
-        }
-
-        public bool DelChucNang(int id)
-        {
-            try
-            {
-                var cn = GetChucNangById(id);
-                if (cn == null) return false;
-
-                QLTVDb.Instance.CHUCNANGs.Remove(cn);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
-        }
+        
     }
 }

@@ -38,11 +38,14 @@ namespace GUI.UserControls
             labelTenDangNhap.Text = "Tên đăng nhập: " + user.TenDangNhap;
             labelTongNo.Text = dg.TongNoHienTai.ToString();
             var phieumuonList = BUSPhieuMuonTra.Instance.FindPhieuMuonByDocGia(dg.ID);
+            if (phieumuonList.Any())
             foreach (var pm in phieumuonList)
             {
+                    string ngayTra = (pm.NgayTra != null ? pm.NgayTra.Value.ToShortDateString() : "Chưa trả");
+                    string soTienPhat = (pm.SoTienPhat != null ? pm.SoTienPhat.Value.ToString() : "");
                 PhieuMuonGrid.Rows.Add(pm.SoPhieuMuonTra, pm.CUONSACH.MaCuonSach,
                     pm.CUONSACH.SACH.TUASACH.TenTuaSach, pm.NgayMuon.ToShortDateString(), pm.HanTra.ToShortDateString(),
-                    pm.NgayTra.Value.ToShortDateString(), pm.SoTienPhat);
+                    ngayTra, soTienPhat);
             }
         }
 

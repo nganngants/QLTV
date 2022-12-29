@@ -54,6 +54,7 @@ namespace DAL
                 var phieu = new PHIEUTHU
                 {
                     idDocGia = idDocGia,
+                    DOCGIA = DALDocGia.Instance.GetDocGiaById(idDocGia),
                     SoTienThu = soTienThu,
                     NgayLap = ngayLap
                 };

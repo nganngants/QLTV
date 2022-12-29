@@ -28,13 +28,5 @@ namespace BUS
         {
             return DALChucNang.Instance.GetChucNangById(id);
         }
-        public string DelChucNang(string MaCN )
-        {
-            CHUCNANG cn = DALChucNang.Instance.GetChucNangByMa(MaCN);
-            if(DALChucNang.Instance.DelChucNang(cn.id))
-                return "";
-            return "Không thể xoá chức năng";
-        }
-     
     }
 }

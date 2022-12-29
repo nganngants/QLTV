@@ -51,6 +51,7 @@ namespace GUI
             {
                 textTienThu.Text = "";
                 MessageBox.Show("Số tiền thu vượt quá quy định");
+                labelNoMoi.Text = labelNoHienTai.Text;
                 return;
             }
             labelNoMoi.Text = ((int)DocGia.TongNoHienTai - (int)TienThu).ToString();
@@ -60,16 +61,16 @@ namespace GUI
         private void butLogin_Click(object sender, EventArgs e)
         {
             TienThu = Convert.ToInt32(textTienThu.Text);
-            Console.WriteLine("Bf: ",TienThu);
-            if (dateNgayLap.Value < DateTime.Now.Date)
+            //Console.WriteLine("Bf: ",TienThu);
+            if (dateNgayLap.Value > DateTime.Now.Date)
             {
-                MessageBox.Show("Ngày lập không hợp lệ");
+                MessageBox.Show("Ngày lập không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
                 return;
             }
             Console.WriteLine(TienThu);
             string err = BUSPhieuThu.Instance.AddPhieuThu(DocGia.ID, TienThu, dateNgayLap.Value.Date);
-            Console.WriteLine("Tien thu: ");
-            Console.WriteLine((int)TienThu);
+            //Console.WriteLine("Tien thu: ");
+            //Console.WriteLine((int)TienThu);
             if(err !="")
             {
                 MessageBox.Show(err);

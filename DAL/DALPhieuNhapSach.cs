@@ -69,7 +69,6 @@ namespace DAL
         }
 
 
-
         public bool UpdPhieuNhap(int id, DateTime? ngayNhap, int? tongTien)
         {
             try

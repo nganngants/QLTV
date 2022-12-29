@@ -45,22 +45,28 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtUserpwd = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.txtDiaChi = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.txtHoTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.siticoneEmailValidatingTool1 = new Siticone.Desktop.UI.Winforms.SiticoneEmailValidatingTool();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtUserpwd = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtChucVu = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboNND = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.nHOMNGUOIDUNGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nHOMNGUOIDUNGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -77,7 +83,7 @@
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(810, 54);
+            this.controlPanel.Size = new System.Drawing.Size(831, 54);
             this.controlPanel.TabIndex = 0;
             // 
             // miniControlBox
@@ -86,7 +92,7 @@
             this.miniControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.miniControlBox.Location = new System.Drawing.Point(687, 0);
+            this.miniControlBox.Location = new System.Drawing.Point(708, 0);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(60, 54);
             this.miniControlBox.TabIndex = 0;
@@ -96,7 +102,7 @@
             this.closeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.closeControlBox.Location = new System.Drawing.Point(749, 0);
+            this.closeControlBox.Location = new System.Drawing.Point(770, 0);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(61, 54);
             this.closeControlBox.TabIndex = 0;
@@ -115,6 +121,7 @@
             this.mainPanel.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.mainPanel.BorderRadius = 2;
             this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.comboNND);
             this.mainPanel.Controls.Add(this.labelEmailError);
             this.mainPanel.Controls.Add(this.dateNgayHetHan);
             this.mainPanel.Controls.Add(this.label7);
@@ -126,29 +133,32 @@
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Controls.Add(this.label9);
+            this.mainPanel.Controls.Add(this.label11);
+            this.mainPanel.Controls.Add(this.label10);
             this.mainPanel.Controls.Add(this.label8);
             this.mainPanel.Controls.Add(this.label5);
             this.mainPanel.Controls.Add(this.label4);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.txtEmail);
             this.mainPanel.Controls.Add(this.txtUserpwd);
+            this.mainPanel.Controls.Add(this.txtChucVu);
             this.mainPanel.Controls.Add(this.txtUsername);
             this.mainPanel.Controls.Add(this.txtDiaChi);
             this.mainPanel.Controls.Add(this.txtHoTen);
             this.mainPanel.Controls.Add(this.labelTitle);
-            this.mainPanel.Location = new System.Drawing.Point(90, 109);
+            this.mainPanel.Location = new System.Drawing.Point(91, 109);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.ShadowDecoration.Color = System.Drawing.Color.MediumSlateBlue;
             this.mainPanel.ShadowDecoration.CustomizableEdges.BottomLeft = false;
             this.mainPanel.ShadowDecoration.CustomizableEdges.TopLeft = false;
             this.mainPanel.ShadowDecoration.CustomizableEdges.TopRight = false;
-            this.mainPanel.Size = new System.Drawing.Size(630, 648);
+            this.mainPanel.Size = new System.Drawing.Size(649, 721);
             this.mainPanel.TabIndex = 1;
             // 
             // labelEmailError
             // 
             this.labelEmailError.AutoSize = true;
-            this.labelEmailError.Location = new System.Drawing.Point(133, 387);
+            this.labelEmailError.Location = new System.Drawing.Point(133, 394);
             this.labelEmailError.Name = "labelEmailError";
             this.labelEmailError.Size = new System.Drawing.Size(0, 16);
             this.labelEmailError.TabIndex = 8;
@@ -157,7 +167,7 @@
             // 
             this.dateNgayHetHan.AutoSize = true;
             this.dateNgayHetHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNgayHetHan.Location = new System.Drawing.Point(343, 500);
+            this.dateNgayHetHan.Location = new System.Drawing.Point(343, 570);
             this.dateNgayHetHan.Name = "dateNgayHetHan";
             this.dateNgayHetHan.Size = new System.Drawing.Size(112, 25);
             this.dateNgayHetHan.TabIndex = 7;
@@ -168,7 +178,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.Location = new System.Drawing.Point(339, 472);
+            this.label7.Location = new System.Drawing.Point(339, 542);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 22);
             this.label7.TabIndex = 6;
@@ -184,7 +194,7 @@
             this.butOK.FillColor = System.Drawing.Color.SlateBlue;
             this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
-            this.butOK.Location = new System.Drawing.Point(256, 572);
+            this.butOK.Location = new System.Drawing.Point(274, 636);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(101, 45);
             this.butOK.TabIndex = 5;
@@ -212,7 +222,7 @@
             this.dateNgayLap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.dateNgayLap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayLap.Location = new System.Drawing.Point(136, 497);
+            this.dateNgayLap.Location = new System.Drawing.Point(136, 567);
             this.dateNgayLap.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dateNgayLap.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateNgayLap.Name = "dateNgayLap";
@@ -240,7 +250,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label6.Location = new System.Drawing.Point(132, 472);
+            this.label6.Location = new System.Drawing.Point(132, 542);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 22);
             this.label6.TabIndex = 2;
@@ -267,6 +277,28 @@
             this.label2.Size = new System.Drawing.Size(92, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ngày Sinh*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label9.Location = new System.Drawing.Point(313, 397);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 22);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Mật Khẩu*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label8.Location = new System.Drawing.Point(132, 397);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(129, 22);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Tên Đăng Nhập*";
             // 
             // label5
             // 
@@ -319,6 +351,44 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(367, 36);
             this.txtEmail.TabIndex = 1;
+            // 
+            // txtUserpwd
+            // 
+            this.txtUserpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserpwd.DefaultText = "";
+            this.txtUserpwd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserpwd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserpwd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserpwd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserpwd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserpwd.Location = new System.Drawing.Point(317, 422);
+            this.txtUserpwd.Name = "txtUserpwd";
+            this.txtUserpwd.PasswordChar = '\0';
+            this.txtUserpwd.PlaceholderText = "";
+            this.txtUserpwd.SelectedText = "";
+            this.txtUserpwd.Size = new System.Drawing.Size(183, 36);
+            this.txtUserpwd.TabIndex = 1;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.Location = new System.Drawing.Point(133, 422);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.Size = new System.Drawing.Size(159, 36);
+            this.txtUsername.TabIndex = 1;
             // 
             // txtDiaChi
             // 
@@ -394,72 +464,69 @@
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.SuccDia.Text = null;
             // 
-            // txtUsername
+            // txtChucVu
             // 
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(133, 415);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "";
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(159, 36);
-            this.txtUsername.TabIndex = 1;
+            this.txtChucVu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtChucVu.DefaultText = "";
+            this.txtChucVu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtChucVu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtChucVu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtChucVu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtChucVu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtChucVu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtChucVu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtChucVu.Location = new System.Drawing.Point(133, 494);
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.PasswordChar = '\0';
+            this.txtChucVu.PlaceholderText = "";
+            this.txtChucVu.SelectedText = "";
+            this.txtChucVu.Size = new System.Drawing.Size(159, 36);
+            this.txtChucVu.TabIndex = 1;
             // 
-            // txtUserpwd
+            // label10
             // 
-            this.txtUserpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserpwd.DefaultText = "";
-            this.txtUserpwd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUserpwd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUserpwd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserpwd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserpwd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserpwd.Location = new System.Drawing.Point(317, 415);
-            this.txtUserpwd.Name = "txtUserpwd";
-            this.txtUserpwd.PasswordChar = '\0';
-            this.txtUserpwd.PlaceholderText = "";
-            this.txtUserpwd.SelectedText = "";
-            this.txtUserpwd.Size = new System.Drawing.Size(183, 36);
-            this.txtUserpwd.TabIndex = 1;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label10.Location = new System.Drawing.Point(132, 469);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 22);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Chức Vụ";
             // 
-            // label8
+            // comboNND
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label8.Location = new System.Drawing.Point(132, 390);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 22);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Tên đăng nhập*";
+            this.comboNND.DataSource = this.nHOMNGUOIDUNGBindingSource;
+            this.comboNND.DisplayMember = "TenNhomNguoiDung";
+            this.comboNND.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboNND.FormattingEnabled = true;
+            this.comboNND.Location = new System.Drawing.Point(317, 494);
+            this.comboNND.Name = "comboNND";
+            this.comboNND.Size = new System.Drawing.Size(183, 30);
+            this.comboNND.TabIndex = 9;
+            this.comboNND.ValueMember = "id";
             // 
-            // label9
+            // label11
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label9.Location = new System.Drawing.Point(313, 390);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 22);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Mật khẩu*";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label11.Location = new System.Drawing.Point(313, 469);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(151, 22);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Nhóm Người Dùng";
+            // 
+            // nHOMNGUOIDUNGBindingSource
+            // 
+            this.nHOMNGUOIDUNGBindingSource.DataSource = typeof(DTO.NHOMNGUOIDUNG);
             // 
             // fAddDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(810, 810);
+            this.ClientSize = new System.Drawing.Size(831, 888);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -470,6 +537,7 @@
             this.controlPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nHOMNGUOIDUNGBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,5 +574,10 @@
         private System.Windows.Forms.Label label8;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUserpwd;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUsername;
+        private System.Windows.Forms.ComboBox comboNND;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtChucVu;
+        private System.Windows.Forms.BindingSource nHOMNGUOIDUNGBindingSource;
     }
 }
