@@ -80,7 +80,7 @@ namespace BUS
                 gap -=1;
                 
             if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
-                return "Tuổi không đúng";
+                return "Tuổi không hợp lệ!";
 
             var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(idLDG);
             if (ldg == null) return "Loai Doc Gia khong hop le";
@@ -101,18 +101,18 @@ namespace BUS
                     gap -= 1;
 
                 if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
-                    return "Tuổi không đúng";
+                    return "Tuổi không hợp lệ";
                 if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
-                    return "Tuổi không đúng";
+                    return "Tuổi không hợp lệ";
             }
             if (idLDG != null)
             {
                 var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById((int)idLDG);
-                if (ldg == null) return "Loai Doc Gia khong hop le";
+                if (ldg == null) return "Loại độc giả không hợp lệ";
             }
             if(DALDocGia.Instance.UpdDocGia(id, ten, NgaySinh, diaChi, Email, null, idLDG))
                 return "";
-            return "Sua thong tin that bai";
+            return "Sửa thông tin thất bại";
         }
         public string UpdTongNo(int id,int TongNo)
         {

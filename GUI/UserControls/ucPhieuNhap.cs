@@ -14,15 +14,14 @@ namespace GUI.UserControls
 {
     public partial class ucPhieuNhap : UserControl
     {
-        List<PHIEUNHAPSACH> PhieuNhapList;
+       
         public ucPhieuNhap()
         {
             InitializeComponent();
-            Binding();
+            Binding(BUSPhieuNhap.Instance.GetAllPhieuNhap());
         }
-        public void Binding()
+        public void Binding(List<PHIEUNHAPSACH> PhieuNhapList)
         {
-            PhieuNhapList = BUSPhieuNhap.Instance.GetAllPhieuNhap();
             PhieuNhapgrid.DataSource = PhieuNhapList;   
         }
         private void Sorting(int idx)
@@ -45,11 +44,24 @@ namespace GUI.UserControls
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSPhieuNhap.Instance.GetAllPhieuNhap());
         }
 
         private void PhieuNhapgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void butFind_Click(object sender, EventArgs e)
+        {
+            string pat = txtFind.Text.ToLower();
+            List<PHIEUNHAPSACH> Res = new List<PHIEUNHAPSACH>();
+            foreach(PHIEUNHAPSACH pn in BUSPhieuNhap.Instance.GetAllPhieuNhap())
+            {
+                if (pn.SoPhieuNhap.ToString().Contains(pat) || pn.NgayNhap.ToShortTimeString().Contains(pat))
+                    Res.Add(pn);
+            }
+            Binding(Res);
 
         }
     }
