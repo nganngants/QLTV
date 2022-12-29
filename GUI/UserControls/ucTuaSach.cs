@@ -21,7 +21,7 @@ namespace GUI.UserControls
             comboTheLoai.ValueMember = "id";
            
         }
-        private void Binding(List<TUASACH> TuaSachList)
+        public void Binding(List<TUASACH> TuaSachList)
         {
             
             this.TuaSachGrid.DataSource = TuaSachList;
@@ -95,10 +95,9 @@ namespace GUI.UserControls
 
                 }
            }
-            Console.WriteLine("asdasd");
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (AskDia.Show("Bạn có chắc muốn ẩn " + idDel.Count + " tựa sách?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " tựa sách?","", MessageBoxButtons.YesNo) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
@@ -113,7 +112,7 @@ namespace GUI.UserControls
             }
 
 
-            SuccDia.Show("Đã ẩn thành công " + cnt + " tựa sách");
+            MessageBox.Show("Đã ẩn thành công " + cnt + " tựa sách","",MessageBoxButtons.OK);
             Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
 
@@ -169,6 +168,39 @@ namespace GUI.UserControls
                     Res.Add(ts);
             }
             Binding(Res);
+        }
+
+        private void butHien_Click(object sender, EventArgs e)
+        {
+            List<int> idDel = new List<int>();
+            foreach (DataGridViewRow row in TuaSachGrid.Rows)
+            {
+                //Console.WriteLine(row.Cells["isChosen"].Value);
+                if (row.Cells["isChosen"].Value == "1")
+                {
+                    idDel.Add((int)row.Cells["id"].Value);
+
+                }
+            }
+            if (idDel.Count == 0) { return; }
+            int cnt = 0;
+            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " tựa sách?", "", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            foreach (int id in idDel)
+            {
+            Retry:
+                string error = BUSTuaSach.Instance.UpdAnTuaSach(id, 0);
+                if (error != "")
+                {
+                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                        goto Retry;
+                    else continue;
+                }
+                else cnt++;
+            }
+
+
+            MessageBox.Show("Đã hiện thành công " + cnt + " tựa sách", "", MessageBoxButtons.OK);
+            Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
     }
 }

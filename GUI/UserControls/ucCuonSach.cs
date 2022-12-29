@@ -24,7 +24,7 @@ namespace GUI.UserControls
         }
         List<int> tt;
         List<string> comboList;
-        private void Binding(List<CUONSACH> CuonSachList)
+        public void Binding(List<CUONSACH> CuonSachList)
         {
             CuonSachGrid.Rows.Clear();
             foreach(CUONSACH cs in CuonSachList)
@@ -58,21 +58,21 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count + " cuốn sách?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " cuốn sách?") == DialogResult.No) return;
             foreach (string id in idDel)
             {
             Retry:
-                string error = BUSCuonSach.Instance.DelCuonSach(id);
+                string error = BUSCuonSach.Instance.UpdAnCuonSach(id,1);
                 if (error != "")
                 {
-                    if (MessageBox.Show(error) == DialogResult.Retry)
+                    if (MessageBox.Show(error,"Lỗi", MessageBoxButtons.RetryCancel) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
 
-            MessageBox.Show("Đã xoá thành công " + cnt + " cuốn sách");
+            MessageBox.Show("Đã ẩn thành công " + cnt + " cuốn sách","", MessageBoxButtons.OK);
             Binding(BUSCuonSach.Instance.GetAllCuonSach());
         }
 
@@ -120,6 +120,38 @@ namespace GUI.UserControls
                if(cs.TinhTrang == idx)Res.Add(cs);
             }
             Binding(Res);
+        }
+
+        private void butHien_Click(object sender, EventArgs e)
+        {
+            List<string> idDel = new List<string>();
+            foreach (DataGridViewRow row in CuonSachGrid.Rows)
+            {
+                //Console.WriteLine(row.Cells["isChosen"].Value);
+                if (row.Cells["isChosen"].Value == "1")
+                {
+                    idDel.Add((string)row.Cells["MaCuonSach"].Value);
+
+                }
+            }
+            if (idDel.Count == 0) { return; }
+            int cnt = 0;
+            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " cuốn sách?") == DialogResult.No) return;
+            foreach (string id in idDel)
+            {
+            Retry:
+                string error = BUSCuonSach.Instance.UpdAnCuonSach(id, 0);
+                if (error != "")
+                {
+                    if (MessageBox.Show(error, "Lỗi", MessageBoxButtons.RetryCancel) == DialogResult.Retry)
+                        goto Retry;
+                    else continue;
+                }
+                else cnt++;
+            }
+
+            MessageBox.Show("Đã hiện thành công " + cnt + " cuốn sách", "", MessageBoxButtons.OK);
+            Binding(BUSCuonSach.Instance.GetAllCuonSach());
         }
     }
 }

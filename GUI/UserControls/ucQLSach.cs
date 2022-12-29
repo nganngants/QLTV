@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,15 +25,27 @@ namespace GUI.UserControls
             butTuaSach_Click(this, EventArgs.Empty);
         }
 
+        private ucSach ucsach;
+        private ucTuaSach uctuaSach;
+        private ucCuonSach uccuonSach;
+        private ucTheLoai uctheLoai;
+        private ucTacGia uctacGia;
+        private ucPhieuNhap ucphieuNhap;
         private void InitializeContainer()
         {
             // add ca 3 UC Sach, Cuon sach va Tua sach vao container
-            container.Controls.Add(new ucSach() { Dock = DockStyle.Fill, Name = "sach" });
-            container.Controls.Add(new ucTuaSach() { Dock = DockStyle.Fill, Name = "tuasach" });
-            container.Controls.Add(new ucCuonSach() { Dock = DockStyle.Fill, Name = "cuonsach" });
-            container.Controls.Add(new ucTacGia() { Dock = DockStyle.Fill, Name = "tacgia" });
-            container.Controls.Add(new ucTheLoai() { Dock = DockStyle.Fill, Name = "theloai" });
-            container.Controls.Add(new ucPhieuNhap() { Dock = DockStyle.Fill, Name = "phieunhap" });
+            ucsach = new ucSach() { Dock = DockStyle.Fill, Name = "sach" };
+            uctuaSach = new ucTuaSach() { Dock = DockStyle.Fill, Name = "tuasach" };
+            uccuonSach = new ucCuonSach() { Dock = DockStyle.Fill, Name = "cuonsach" };
+            uctacGia = new ucTacGia() { Dock = DockStyle.Fill, Name = "tacgia" };
+            uctheLoai = new ucTheLoai() { Dock = DockStyle.Fill, Name = "theloai" };
+            ucphieuNhap = new ucPhieuNhap() { Dock = DockStyle.Fill, Name = "phieunhap" };
+            container.Controls.Add(ucsach);
+            container.Controls.Add(uctuaSach);
+            container.Controls.Add(uccuonSach);
+            container.Controls.Add(uctacGia);
+            container.Controls.Add(uctheLoai);
+            container.Controls.Add(ucphieuNhap);
         }
 
         /// <summary>
@@ -44,6 +57,7 @@ namespace GUI.UserControls
         {
             // tim UC Sach va dem no len hien thi
             Control[] con = container.Controls.Find("sach", false);
+            ucsach.Binding(BUSSach.Instance.GetAllSach());
             con[0].BringToFront();
         }
 
@@ -56,6 +70,7 @@ namespace GUI.UserControls
         {
             // tim UC Tua sach va dem no len hien thi
             Control[] con = container.Controls.Find("tuasach", false);
+            uctuaSach.Binding(BUSTuaSach.Instance.GetAllTuaSach());
             con[0].BringToFront();
         }
 
@@ -67,7 +82,7 @@ namespace GUI.UserControls
         private void butCuonsach_Click_1(object sender, EventArgs e)
         {
             Control[] con = container.Controls.Find("cuonsach", false);
-            
+            uccuonSach.Binding(BUSCuonSach.Instance.GetAllCuonSach());
             con[0].BringToFront();
             //con[0].
         }
@@ -75,6 +90,7 @@ namespace GUI.UserControls
         private void butTacGia_Click(object sender, EventArgs e)
         {
             Control[] con = container.Controls.Find("tacgia", false);
+            uctacGia.Binding();
             con[0].BringToFront();
         }
 
@@ -87,6 +103,7 @@ namespace GUI.UserControls
         private void butPhieuNhap_Click(object sender, EventArgs e)
         {
             Control[] con = container.Controls.Find("phieunhap", false);
+            ucphieuNhap.Binding();
             con[0].BringToFront();
         }
     }
