@@ -76,21 +76,21 @@ namespace GUI.UserControls
             }
             if(idDel.Count ==0) { return; }
             int cnt = 0;
-            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " sách?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " sách?","", MessageBoxButtons.YesNo) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
-                string error = BUSSach.Instance.DelSach(id);
+                string error = BUSSach.Instance.UpdAnSach(id,1);
                 if (error != "")
                 {
-                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                    if (MessageBox.Show(error,"", MessageBoxButtons.RetryCancel) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
 
-            SuccDia.Show("Đã xoá thành công " + cnt + " sách");
+            SuccDia.Show("Đã xoá thành ẩn " + cnt + " sách");
             Binding(BUSSach.Instance.GetAllSach());
         }
 
@@ -143,6 +143,38 @@ namespace GUI.UserControls
                     Res.Add(sach);
             }
             Binding(Res);
+        }
+
+        private void butHien_Click(object sender, EventArgs e)
+        {
+            List<int> idDel = new List<int>();
+            foreach (DataGridViewRow row in SachGrid.Rows)
+            {
+                //Console.WriteLine(row.Cells["isChosen"].Value);
+                if (row.Cells["isChosen"].Value == "1")
+                {
+                    idDel.Add((int)row.Cells["id"].Value);
+
+                }
+            }
+            if (idDel.Count == 0) { return; }
+            int cnt = 0;
+            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " sách?", "", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            foreach (int id in idDel)
+            {
+            Retry:
+                string error = BUSSach.Instance.UpdAnSach(id, 0);
+                if (error != "")
+                {
+                    if (MessageBox.Show(error, "", MessageBoxButtons.RetryCancel) == DialogResult.Retry)
+                        goto Retry;
+                    else continue;
+                }
+                else cnt++;
+            }
+
+            SuccDia.Show("Đã hiện thành công " + cnt + " sách");
+            Binding(BUSSach.Instance.GetAllSach());
         }
     }
 }

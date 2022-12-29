@@ -20,7 +20,7 @@ namespace GUI.UserControls
             InitializeComponent();
             Binding();
         }
-        private void Binding()
+        public void Binding()
         {
             PhieuNhapList = BUSPhieuNhap.Instance.GetAllPhieuNhap();
             PhieuNhapgrid.DataSource = PhieuNhapList;   

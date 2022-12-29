@@ -19,7 +19,7 @@ namespace GUI.UserControls
             InitializeComponent();
             Binding();
         }
-        private void Binding()
+        public void Binding()
         {
             TacGiaList = BUSTacGia.Instance.GetAllTacGia();
             TacGiaGrid.DataSource = TacGiaList;
