@@ -18,9 +18,9 @@ namespace GUI.UserControls
         public ucPhieuNhap()
         {
             InitializeComponent();
-            Binding();
+            Binding(BUSPhieuNhap.Instance.GetAllPhieuNhap());
         }
-        public void Binding(List<PHIEUNHAPSACH> PhieuNhapList = BUSPhieuNhap.Instance.GetAllPhieuNhap())
+        public void Binding(List<PHIEUNHAPSACH> PhieuNhapList)
         {
             PhieuNhapgrid.DataSource = PhieuNhapList;   
         }
@@ -44,7 +44,7 @@ namespace GUI.UserControls
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Binding();
+            Binding(BUSPhieuNhap.Instance.GetAllPhieuNhap());
         }
 
         private void PhieuNhapgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

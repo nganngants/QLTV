@@ -103,7 +103,7 @@ namespace GUI.UserControls
         private void butPhieuNhap_Click(object sender, EventArgs e)
         {
             Control[] con = container.Controls.Find("phieunhap", false);
-            ucphieuNhap.Binding();
+            ucphieuNhap.Binding(BUSPhieuNhap.Instance.GetAllPhieuNhap());
             con[0].BringToFront();
         }
     }
