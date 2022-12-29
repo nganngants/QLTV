@@ -60,6 +60,7 @@ namespace GUI.UserControls
             this.namXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhaXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DaAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.butHien = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
@@ -67,6 +68,7 @@ namespace GUI.UserControls
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.butHien);
             this.topPanel.Controls.Add(this.comboTinhTrang);
             this.topPanel.Controls.Add(this.butTenSach);
             this.topPanel.Controls.Add(this.butRefresh);
@@ -129,7 +131,7 @@ namespace GUI.UserControls
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(481, 77);
+            this.butRefresh.Location = new System.Drawing.Point(7, 26);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(64, 54);
@@ -465,6 +467,28 @@ namespace GUI.UserControls
             this.DaAn.Name = "DaAn";
             this.DaAn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // butHien
+            // 
+            this.butHien.BorderRadius = 6;
+            this.butHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butHien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butHien.FillColor = System.Drawing.Color.SlateBlue;
+            this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butHien.ForeColor = System.Drawing.Color.White;
+            this.butHien.Image = global::GUI.Properties.Resources.close_icon;
+            this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butHien.Location = new System.Drawing.Point(478, 86);
+            this.butHien.Name = "butHien";
+            this.butHien.Size = new System.Drawing.Size(143, 28);
+            this.butHien.TabIndex = 16;
+            this.butHien.Text = "Hiện Sách";
+            this.butHien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butHien.TextOffset = new System.Drawing.Point(3, 0);
+            this.butHien.Click += new System.EventHandler(this.butHien_Click);
+            // 
             // ucSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -512,5 +536,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn namXBDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nhaXBDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn DaAn;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butHien;
     }
 }

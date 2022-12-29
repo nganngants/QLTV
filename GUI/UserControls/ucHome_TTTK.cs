@@ -40,9 +40,12 @@ namespace GUI.UserControls
             var phieumuonList = BUSPhieuMuonTra.Instance.FindPhieuMuonByDocGia(dg.ID);
             foreach (var pm in phieumuonList)
             {
+                string nt;
+                if (pm.NgayTra == null) nt = "Chưa trả";
+                else nt = pm.NgayTra.Value.ToShortDateString();
                 PhieuMuonGrid.Rows.Add(pm.SoPhieuMuonTra, pm.CUONSACH.MaCuonSach,
                     pm.CUONSACH.SACH.TUASACH.TenTuaSach, pm.NgayMuon.ToShortDateString(), pm.HanTra.ToShortDateString(),
-                    pm.NgayTra.Value.ToShortDateString(), pm.SoTienPhat);
+                   nt, pm.SoTienPhat);
             }
         }
 

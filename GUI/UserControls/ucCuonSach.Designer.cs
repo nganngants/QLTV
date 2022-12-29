@@ -39,6 +39,8 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.comboTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.butTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butMaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtMaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -55,8 +57,7 @@ namespace GUI.UserControls
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.butTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.comboTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.butHien = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CuonSachGrid)).BeginInit();
@@ -65,6 +66,7 @@ namespace GUI.UserControls
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.butHien);
             this.topPanel.Controls.Add(this.comboTinhTrang);
             this.topPanel.Controls.Add(this.butTinhTrang);
             this.topPanel.Controls.Add(this.butMaSach);
@@ -78,6 +80,46 @@ namespace GUI.UserControls
             this.topPanel.Size = new System.Drawing.Size(997, 121);
             this.topPanel.TabIndex = 0;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
+            // 
+            // comboTinhTrang
+            // 
+            this.comboTinhTrang.AutoRoundedCorners = true;
+            this.comboTinhTrang.BackColor = System.Drawing.Color.Transparent;
+            this.comboTinhTrang.BorderRadius = 17;
+            this.comboTinhTrang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTinhTrang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboTinhTrang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboTinhTrang.ItemHeight = 30;
+            this.comboTinhTrang.Location = new System.Drawing.Point(502, 42);
+            this.comboTinhTrang.Name = "comboTinhTrang";
+            this.comboTinhTrang.Size = new System.Drawing.Size(201, 36);
+            this.comboTinhTrang.TabIndex = 17;
+            // 
+            // butTinhTrang
+            // 
+            this.butTinhTrang.AutoRoundedCorners = true;
+            this.butTinhTrang.BorderRadius = 13;
+            this.butTinhTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butTinhTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butTinhTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butTinhTrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butTinhTrang.FillColor = System.Drawing.Color.SlateBlue;
+            this.butTinhTrang.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butTinhTrang.ForeColor = System.Drawing.Color.White;
+            this.butTinhTrang.Image = global::GUI.Properties.Resources.search_icon;
+            this.butTinhTrang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butTinhTrang.ImageOffset = new System.Drawing.Point(3, 0);
+            this.butTinhTrang.Location = new System.Drawing.Point(733, 42);
+            this.butTinhTrang.Name = "butTinhTrang";
+            this.butTinhTrang.Size = new System.Drawing.Size(129, 28);
+            this.butTinhTrang.TabIndex = 16;
+            this.butTinhTrang.Text = "Lọc tình trạng";
+            this.butTinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butTinhTrang.TextOffset = new System.Drawing.Point(3, 0);
+            this.butTinhTrang.Click += new System.EventHandler(this.butTinhTrang_Click);
             // 
             // butMaSach
             // 
@@ -110,7 +152,7 @@ namespace GUI.UserControls
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(187, 77);
+            this.butRefresh.Location = new System.Drawing.Point(12, 16);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(64, 54);
@@ -142,13 +184,14 @@ namespace GUI.UserControls
             // 
             // butDel
             // 
-            this.butDel.BorderRadius = 6;
+            this.butDel.AutoRoundedCorners = true;
+            this.butDel.BorderRadius = 13;
             this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butDel.FillColor = System.Drawing.Color.SlateBlue;
-            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
             this.butDel.ForeColor = System.Drawing.Color.White;
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -158,7 +201,7 @@ namespace GUI.UserControls
             this.butDel.Name = "butDel";
             this.butDel.Size = new System.Drawing.Size(178, 28);
             this.butDel.TabIndex = 7;
-            this.butDel.Text = "Xóa Cuốn Sách";
+            this.butDel.Text = "Ẩn Cuốn Sách";
             this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.TextOffset = new System.Drawing.Point(3, 0);
             this.butDel.Click += new System.EventHandler(this.butDel_Click);
@@ -381,45 +424,29 @@ namespace GUI.UserControls
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.SuccDia.Text = null;
             // 
-            // butTinhTrang
+            // butHien
             // 
-            this.butTinhTrang.AutoRoundedCorners = true;
-            this.butTinhTrang.BorderRadius = 13;
-            this.butTinhTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butTinhTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butTinhTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butTinhTrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butTinhTrang.FillColor = System.Drawing.Color.SlateBlue;
-            this.butTinhTrang.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.butTinhTrang.ForeColor = System.Drawing.Color.White;
-            this.butTinhTrang.Image = global::GUI.Properties.Resources.search_icon;
-            this.butTinhTrang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butTinhTrang.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butTinhTrang.Location = new System.Drawing.Point(733, 42);
-            this.butTinhTrang.Name = "butTinhTrang";
-            this.butTinhTrang.Size = new System.Drawing.Size(129, 28);
-            this.butTinhTrang.TabIndex = 16;
-            this.butTinhTrang.Text = "Lọc tình trạng";
-            this.butTinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butTinhTrang.TextOffset = new System.Drawing.Point(3, 0);
-            this.butTinhTrang.Click += new System.EventHandler(this.butTinhTrang_Click);
-            // 
-            // comboTinhTrang
-            // 
-            this.comboTinhTrang.AutoRoundedCorners = true;
-            this.comboTinhTrang.BackColor = System.Drawing.Color.Transparent;
-            this.comboTinhTrang.BorderRadius = 17;
-            this.comboTinhTrang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboTinhTrang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboTinhTrang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboTinhTrang.ItemHeight = 30;
-            this.comboTinhTrang.Location = new System.Drawing.Point(502, 42);
-            this.comboTinhTrang.Name = "comboTinhTrang";
-            this.comboTinhTrang.Size = new System.Drawing.Size(201, 36);
-            this.comboTinhTrang.TabIndex = 17;
+            this.butHien.AutoRoundedCorners = true;
+            this.butHien.BorderRadius = 13;
+            this.butHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butHien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butHien.FillColor = System.Drawing.Color.SlateBlue;
+            this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butHien.ForeColor = System.Drawing.Color.White;
+            this.butHien.Image = global::GUI.Properties.Resources.close_icon;
+            this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butHien.Location = new System.Drawing.Point(202, 88);
+            this.butHien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butHien.Name = "butHien";
+            this.butHien.Size = new System.Drawing.Size(178, 28);
+            this.butHien.TabIndex = 18;
+            this.butHien.Text = "Hiện Cuốn Sách";
+            this.butHien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butHien.TextOffset = new System.Drawing.Point(3, 0);
+            this.butHien.Click += new System.EventHandler(this.butHien_Click);
             // 
             // ucCuonSach
             // 
@@ -460,5 +487,6 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn TinhTrang;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTinhTrang;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butTinhTrang;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butHien;
     }
 }

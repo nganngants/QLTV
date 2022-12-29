@@ -27,9 +27,13 @@ namespace BUS
         public string UpdAnSach(int id,int data)
         {
             SACH sach = DALSach.Instance.GetSachById(id);
-            foreach(CUONSACH cs in sach.CUONSACHes)
+            foreach (CUONSACH cs in sach.CUONSACHes)
             {
-                string err = BUSCuonSach.Instance.UpdAnCuonSach(cs.id, data);
+                if (cs.TinhTrang == 0 && data == 1) return "Sách đang có người mượn, không thể ẩn";
+            }
+            foreach (CUONSACH cs in sach.CUONSACHes)
+            {
+                string err = BUSCuonSach.Instance.UpdAnCuonSach(cs.MaCuonSach, data);
                 if (err != "") return err;
             }
             if (DALSach.Instance.UpdAnSach(id, data))
