@@ -55,8 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticoneAnimateWindow1 = new Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow(this.components);
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -433,26 +431,9 @@
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.SuccDia.Text = null;
-            // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
             // fAddSachMoi
             // 
+            this.AcceptButton = this.butOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
@@ -497,8 +478,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label labelThanhTien;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private System.Windows.Forms.ComboBox comboTuaSach;
         private Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow siticoneAnimateWindow1;
     }

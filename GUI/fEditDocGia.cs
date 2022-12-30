@@ -38,7 +38,8 @@ namespace GUI
             this.comboLoaiDG.DataSource = LoaiDocGiaList;
             comboLoaiDG.DisplayMember = "TenLoaiDocGia";
             comboLoaiDG.ValueMember = "id";
-            comboLoaiDG.SelectedValue = dg.ID.ToString();
+
+            comboLoaiDG.SelectedIndex = comboLoaiDG.FindString(dg.LOAIDOCGIA.TenLoaiDocGia);
         }
         private void fEditDocGia_Load(object sender, EventArgs e)
         {

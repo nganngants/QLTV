@@ -268,7 +268,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(142, 276);
+            this.label3.Location = new System.Drawing.Point(142, 282);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 22);
             this.label3.TabIndex = 6;
@@ -337,11 +337,11 @@
             this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
-            this.labelTitle.Location = new System.Drawing.Point(104, 19);
+            this.labelTitle.Location = new System.Drawing.Point(111, 19);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(507, 49);
+            this.labelTitle.Size = new System.Drawing.Size(466, 46);
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Text = "SỬA THÔNG TIN TỰA SÁCH";
             // 
@@ -374,6 +374,7 @@
             // 
             // fEditTuaSach
             // 
+            this.AcceptButton = this.butOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));

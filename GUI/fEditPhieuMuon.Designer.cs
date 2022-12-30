@@ -158,6 +158,7 @@
             this.isDaTra.CheckedState.BorderThickness = 0;
             this.isDaTra.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.isDaTra.CheckMarkColor = System.Drawing.Color.Violet;
+            this.isDaTra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.isDaTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F);
             this.isDaTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.isDaTra.Location = new System.Drawing.Point(331, 583);
@@ -166,9 +167,9 @@
             this.isDaTra.TabIndex = 177;
             this.isDaTra.Text = "Đã Trả";
             this.isDaTra.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isDaTra.UncheckedState.BorderRadius = 0;
-            this.isDaTra.UncheckedState.BorderThickness = 0;
-            this.isDaTra.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.isDaTra.UncheckedState.BorderRadius = 4;
+            this.isDaTra.UncheckedState.BorderThickness = 2;
+            this.isDaTra.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.isDaTra.CheckedChanged += new System.EventHandler(this.isDaTra_CheckedChanged);
             // 
             // siticoneVSeparator2
@@ -250,11 +251,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label11.Location = new System.Drawing.Point(309, 449);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 24);
+            this.label11.Size = new System.Drawing.Size(88, 31);
             this.label11.TabIndex = 173;
             this.label11.Text = "Hạn Trả";
             // 
@@ -305,11 +306,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label12.Location = new System.Drawing.Point(119, 447);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 24);
+            this.label12.Size = new System.Drawing.Size(132, 31);
             this.label12.TabIndex = 171;
             this.label12.Text = "Ngày Mượn";
             // 
@@ -333,11 +334,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label13.Location = new System.Drawing.Point(625, 140);
+            this.label13.Location = new System.Drawing.Point(612, 140);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(240, 37);
+            this.label13.Size = new System.Drawing.Size(253, 40);
             this.label13.TabIndex = 162;
             this.label13.Text = "Thông tin độc giả";
             // 
@@ -355,11 +356,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label10.Location = new System.Drawing.Point(140, 140);
+            this.label10.Location = new System.Drawing.Point(138, 140);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(275, 37);
+            this.label10.Size = new System.Drawing.Size(290, 40);
             this.label10.TabIndex = 161;
             this.label10.Text = "Thông tin cuốn sách";
             // 

@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
@@ -178,10 +179,16 @@
             this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
             this.labelTitle.Location = new System.Drawing.Point(78, 38);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(246, 46);
+            this.labelTitle.Size = new System.Drawing.Size(239, 44);
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "SỬA THỂ LOẠI";
             this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
+            // 
+            // siticoneDragControl1
+            // 
+            this.siticoneDragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneDragControl1.TargetControl = this.controlPanel;
+            this.siticoneDragControl1.UseTransparentDrag = true;
             // 
             // fEditTheLoai
             // 
@@ -193,6 +200,7 @@
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fEditTheLoai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fEditTheLoai";
             this.controlPanel.ResumeLayout(false);
             this.siticonePanel1.ResumeLayout(false);
@@ -213,5 +221,6 @@
         private System.Windows.Forms.Label label1;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTen;
         private System.Windows.Forms.Label labelTitle;
+        private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
     }
 }

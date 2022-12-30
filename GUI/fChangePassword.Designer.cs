@@ -40,8 +40,6 @@
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticoneContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,24 +212,6 @@
             this.siticoneDragControl1.TargetControl = this;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
-            this.SuccDia.Text = null;
-            // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
-            this.ErrorDia.Text = null;
-            // 
             // fChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -264,7 +244,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
     }
 }

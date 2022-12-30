@@ -38,7 +38,7 @@
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.labelMaLoaiDG = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtTenLoai = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
@@ -57,9 +57,9 @@
             this.controlPanel.Controls.Add(this.closeControlBox);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
-            this.controlPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.controlPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(375, 44);
+            this.controlPanel.Size = new System.Drawing.Size(500, 54);
             this.controlPanel.TabIndex = 2;
             // 
             // miniControlBox
@@ -68,10 +68,10 @@
             this.miniControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.miniControlBox.Location = new System.Drawing.Point(283, 0);
-            this.miniControlBox.Margin = new System.Windows.Forms.Padding(2);
+            this.miniControlBox.Location = new System.Drawing.Point(377, 0);
+            this.miniControlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.miniControlBox.Name = "miniControlBox";
-            this.miniControlBox.Size = new System.Drawing.Size(45, 44);
+            this.miniControlBox.Size = new System.Drawing.Size(60, 54);
             this.miniControlBox.TabIndex = 0;
             // 
             // closeControlBox
@@ -79,10 +79,10 @@
             this.closeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.closeControlBox.Location = new System.Drawing.Point(329, 0);
-            this.closeControlBox.Margin = new System.Windows.Forms.Padding(2);
+            this.closeControlBox.Location = new System.Drawing.Point(439, 0);
+            this.closeControlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.closeControlBox.Name = "closeControlBox";
-            this.closeControlBox.Size = new System.Drawing.Size(46, 44);
+            this.closeControlBox.Size = new System.Drawing.Size(61, 54);
             this.closeControlBox.TabIndex = 0;
             // 
             // siticoneDragControl1
@@ -100,12 +100,12 @@
             this.siticonePanel1.Controls.Add(this.butOK);
             this.siticonePanel1.Controls.Add(this.labelMaLoaiDG);
             this.siticonePanel1.Controls.Add(this.label1);
-            this.siticonePanel1.Controls.Add(this.siticoneTextBox1);
+            this.siticonePanel1.Controls.Add(this.txtTenLoai);
             this.siticonePanel1.Controls.Add(this.labelTitle);
-            this.siticonePanel1.Location = new System.Drawing.Point(56, 85);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.siticonePanel1.Location = new System.Drawing.Point(75, 105);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(262, 284);
+            this.siticonePanel1.Size = new System.Drawing.Size(349, 350);
             this.siticonePanel1.TabIndex = 3;
             // 
             // butOK
@@ -120,12 +120,13 @@
             this.butOK.FillColor = System.Drawing.Color.SlateBlue;
             this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
-            this.butOK.Location = new System.Drawing.Point(89, 206);
-            this.butOK.Margin = new System.Windows.Forms.Padding(2);
+            this.butOK.Location = new System.Drawing.Point(119, 254);
+            this.butOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(83, 41);
+            this.butOK.Size = new System.Drawing.Size(111, 50);
             this.butOK.TabIndex = 6;
             this.butOK.Text = "Lưu";
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
             // labelMaLoaiDG
             // 
@@ -134,10 +135,9 @@
             this.labelMaLoaiDG.AutoSize = true;
             this.labelMaLoaiDG.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMaLoaiDG.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelMaLoaiDG.Location = new System.Drawing.Point(44, 108);
-            this.labelMaLoaiDG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelMaLoaiDG.Location = new System.Drawing.Point(59, 133);
             this.labelMaLoaiDG.Name = "labelMaLoaiDG";
-            this.labelMaLoaiDG.Size = new System.Drawing.Size(98, 16);
+            this.labelMaLoaiDG.Size = new System.Drawing.Size(122, 20);
             this.labelMaLoaiDG.TabIndex = 5;
             this.labelMaLoaiDG.Text = "Mã Loại Độc Giả: ";
             // 
@@ -148,34 +148,33 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(44, 136);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(59, 167);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
+            this.label1.Size = new System.Drawing.Size(118, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tên Loại Độc Giả";
             // 
-            // siticoneTextBox1
+            // txtTenLoai
             // 
-            this.siticoneTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTenLoai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox1.DefaultText = "";
-            this.siticoneTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox1.Location = new System.Drawing.Point(47, 154);
-            this.siticoneTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.siticoneTextBox1.Name = "siticoneTextBox1";
-            this.siticoneTextBox1.PasswordChar = '\0';
-            this.siticoneTextBox1.PlaceholderText = "";
-            this.siticoneTextBox1.SelectedText = "";
-            this.siticoneTextBox1.Size = new System.Drawing.Size(172, 29);
-            this.siticoneTextBox1.TabIndex = 4;
+            this.txtTenLoai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenLoai.DefaultText = "";
+            this.txtTenLoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenLoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenLoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenLoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenLoai.Location = new System.Drawing.Point(63, 190);
+            this.txtTenLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenLoai.Name = "txtTenLoai";
+            this.txtTenLoai.PasswordChar = '\0';
+            this.txtTenLoai.PlaceholderText = "";
+            this.txtTenLoai.SelectedText = "";
+            this.txtTenLoai.Size = new System.Drawing.Size(229, 36);
+            this.txtTenLoai.TabIndex = 4;
             // 
             // labelTitle
             // 
@@ -184,23 +183,22 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
-            this.labelTitle.Location = new System.Drawing.Point(30, 37);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTitle.Location = new System.Drawing.Point(40, 46);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(209, 30);
+            this.labelTitle.Size = new System.Drawing.Size(271, 37);
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "SỬA LOẠI ĐỘC GIẢ";
             // 
             // fEditLoaiDG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(375, 406);
+            this.ClientSize = new System.Drawing.Size(500, 500);
             this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fEditLoaiDG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fEditLoaiDG";
@@ -222,7 +220,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label1;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenLoai;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butOK;
         private System.Windows.Forms.Label labelMaLoaiDG;
     }

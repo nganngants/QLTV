@@ -382,11 +382,11 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(299, 31);
+            this.label1.Location = new System.Drawing.Point(331, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(394, 57);
+            this.label1.Size = new System.Drawing.Size(338, 49);
             this.label1.TabIndex = 5;
             this.label1.Text = "PHIẾU MƯỢN TRẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

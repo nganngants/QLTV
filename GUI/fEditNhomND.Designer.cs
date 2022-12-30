@@ -48,8 +48,6 @@
             this.labelMaNND = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cHUCNANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.messageDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsChucNang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUCNANGBindingSource)).BeginInit();
@@ -207,12 +205,13 @@
             // 
             // butSave
             // 
+            this.butSave.BorderRadius = 4;
             this.butSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butSave.FillColor = System.Drawing.Color.SlateBlue;
-            this.butSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSave.ForeColor = System.Drawing.Color.White;
             this.butSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.butSave.Location = new System.Drawing.Point(273, 571);
@@ -227,11 +226,11 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(92, 20);
+            this.label1.Location = new System.Drawing.Point(129, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(512, 53);
+            this.label1.Size = new System.Drawing.Size(438, 46);
             this.label1.TabIndex = 5;
             this.label1.Text = "SỬA NHÓM NGƯỜI DÙNG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,7 +244,7 @@
             this.txtTenNhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenNhom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenNhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtTenNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenNhom.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNhom.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtTenNhom.Location = new System.Drawing.Point(137, 156);
             this.txtTenNhom.Name = "txtTenNhom";
@@ -269,11 +268,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(132, 126);
+            this.label2.Location = new System.Drawing.Point(133, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 27);
+            this.label2.Size = new System.Drawing.Size(180, 22);
             this.label2.TabIndex = 28;
             this.label2.Text = "Tên Nhóm Người Dùng";
             // 
@@ -281,26 +280,9 @@
             // 
             this.cHUCNANGBindingSource.DataSource = typeof(DTO.CHUCNANG);
             // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
-            // messageDia
-            // 
-            this.messageDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.messageDia.Caption = null;
-            this.messageDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
-            this.messageDia.Parent = null;
-            this.messageDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.messageDia.Text = null;
-            // 
             // fEditNhomND
             // 
+            this.AcceptButton = this.butSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
@@ -333,8 +315,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource cHUCNANGBindingSource;
         private System.Windows.Forms.Label labelMaNND;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog messageDia;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isChoosen;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaChucNang;

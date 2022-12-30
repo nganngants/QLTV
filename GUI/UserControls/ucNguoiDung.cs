@@ -97,7 +97,7 @@ namespace GUI.UserControls
                 string error = BUSNguoiDung.Instance.DelNguoidung(id);
                 if (error != "")
                 {
-                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                    if (MessageBox.Show(error, "Lỗi", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
