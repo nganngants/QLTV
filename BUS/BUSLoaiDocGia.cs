@@ -41,5 +41,12 @@ namespace BUS
                 return "";
             return "Không thể thêm loại độc giả";
         }
+
+        public string UpdLoaiDocGia(int id, string name)
+        {
+            if (DALLoaiDocGia.Instance.UpdLoaiDocGia(id, name))
+                return "";
+            return "Có lỗi xảy ra! Vui lòng kiểm tra và thử lại!";
+        }
     }
 }
