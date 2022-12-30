@@ -33,15 +33,15 @@ namespace BUS
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(maNhomNguoiDung);
             if(nnd == null)
             { return "Mã nhóm người dùng không đúng"; }
-            if (nnd.TenNhomNguoiDung == "Quan ly" && nnd.id == 1)
-                return "Không thể xoá nhóm người dùng Quản lý";
+            if (nnd.id == 1)
+                return "Không thể xoá nhóm người dùng Quản Lý";
             if (DALNhomNguoiDung.Instance.DelNhomNguoiDung(nnd.id))
                 return "";
             return "Không thể xoá nhóm người dùng";
         }
         public int AddNhomNguoiDung(string tenNhom)
         {
-            if (tenNhom == "Quản lý") return -1;
+            if (tenNhom == "Quản Lý") return -1;
             try
             {
                 int id = DALNhomNguoiDung.Instance.AddNhomNguoiDung(tenNhom);
@@ -59,8 +59,8 @@ namespace BUS
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
             if (nnd == null)
             { return "Mã nhóm người dùng không đúng"; }
-            if (name == "Quản lý") return "Không thể đặt tên này";
-            if(nnd.TenNhomNguoiDung=="Quản lý")
+            if (name == "Quản Lý") return "Không thể đặt tên này";
+            if(nnd.id == 1)
             {
                 return "Không thể sửa nhóm người dùng Quản lý";
             }
@@ -86,7 +86,7 @@ namespace BUS
 
             var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(maNhomNguoiDung);
             if (nnd == null) return "Mã nhóm người dùng không đúng.";
-            if (nnd.TenNhomNguoiDung == "Quản lý") return "Không thể chỉnh sửa nhóm người dùng này";
+            if (nnd.id == 1) return "Không thể chỉnh sửa nhóm người dùng này";
             if (DALNhomNguoiDung.Instance.AddChucNangForNhom(nnd.id, ds))
                 return "";
             return "Không thể thêm chức năng cho nhóm người dùng.";
@@ -106,7 +106,8 @@ namespace BUS
 
             var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
             if (nnd == null) return "Mã nhóm người dùng không đúng.";
-            if (nnd.TenNhomNguoiDung == "Quản lý") return "Không thể chỉnh sửa nhóm người dùng này";
+            if (nnd.id == 1)
+                return "Không thể chỉnh sửa nhóm người dùng này";
             if (DALNhomNguoiDung.Instance.DelChucNangForNhom(nnd.id, ds))
                 return "";
             return "Không thể thêm chức năng cho nhóm người dùng.";
