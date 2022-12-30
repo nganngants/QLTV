@@ -62,8 +62,9 @@ namespace DAL
                 QLTVDb.Instance.SaveChanges();
                 return tacGia.id;
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.ToString());
                 return -1;
             }
         }
