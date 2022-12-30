@@ -46,10 +46,6 @@ namespace GUI
             comboTacGia.ValueMember = "id";
         }
 
-        private void addNewTacGia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
 
         private void butOK_Click(object sender, EventArgs e)
         {
@@ -65,10 +61,10 @@ namespace GUI
             string err = BUSTuaSach.Instance.UpdTuaSach(tuasach.id,TenTuaSach, tl, TgList);
             if (err != "")
             {
-                MessageBox.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error  );
                 return;
             }
-            MessageBox.Show("Chỉnh sửa tựa sách thành công");
+            MessageBox.Show("Chỉnh sửa tựa sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
 
         }
@@ -83,7 +79,8 @@ namespace GUI
                     check = true;
             if (check == false)
             {
-                var ask = AskDia.Show("Tác giả chưa có, bạn có muốn thêm mới?");
+                var ask = MessageBox.Show("Tác giả chưa có, bạn có muốn thêm mới?", "Thêm tác giả",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (ask == DialogResult.Yes)
                 {
                     id = BUSTacGia.Instance.AddTacGia(newTg);

@@ -38,10 +38,6 @@ namespace GUI.UserControls
             Binding(BUSSach.Instance.GetAllSach());
         }
 
-        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void butAdd_Click(object sender, EventArgs e)
         {
@@ -57,10 +53,6 @@ namespace GUI.UserControls
         }
 
 
-        private void siticoneButton1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void butDel_Click(object sender, EventArgs e)
         {
@@ -76,21 +68,21 @@ namespace GUI.UserControls
             }
             if(idDel.Count ==0) { return; }
             int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " sách?","", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " sách?","", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
                 string error = BUSSach.Instance.UpdAnSach(id,1);
                 if (error != "")
                 {
-                    if (MessageBox.Show(error,"", MessageBoxButtons.RetryCancel) == DialogResult.Retry)
+                    if (MessageBox.Show(error,"", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
 
-            SuccDia.Show("Đã xoá thành ẩn " + cnt + " sách");
+            MessageBox.Show("Đã xoá thành ẩn " + cnt + " sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding(BUSSach.Instance.GetAllSach());
         }
 
@@ -159,21 +151,23 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " sách?", "", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " sách?", "", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
                 string error = BUSSach.Instance.UpdAnSach(id, 0);
                 if (error != "")
                 {
-                    if (MessageBox.Show(error, "", MessageBoxButtons.RetryCancel) == DialogResult.Retry)
+                    if (MessageBox.Show(error, "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
 
-            SuccDia.Show("Đã hiện thành công " + cnt + " sách");
+            MessageBox.Show("Đã hiện thành công " + cnt + " sách", "Thông báo",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding(BUSSach.Instance.GetAllSach());
         }
     }

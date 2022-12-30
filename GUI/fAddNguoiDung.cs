@@ -58,12 +58,16 @@ namespace GUI
                     this.Close();
                     return;
                 }
+                else
+                {
+                    return;
+                }
             }
             int id = BUSNguoiDung.Instance.AddNguoiDung(ten, ngaysinh, chucvu, tendn, matkhau, idNhom);
             if (id != -1)
             {
                 
-                MessageBox.Show("Thêm người dùng thành công");
+                MessageBox.Show("Thêm người dùng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
             }

@@ -34,14 +34,14 @@ namespace GUI.UserControls
                 string err = BUSBCSachTraTre.Instance.AddBaoCao(ngayBC);
                 if (err != "")
                 {
-                    errDia.Show(err);
+                    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 bc = BUSBCSachTraTre.Instance.GetBaoCao(ngayBC);
             }
             if (bc == null)
             {
-                errDia.Show("Khong co bao cao");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng thử lại sau", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             int i = 1;

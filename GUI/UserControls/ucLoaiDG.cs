@@ -37,7 +37,8 @@ namespace GUI.UserControls
             if (mss == "")
             {
                 
-                MessageBox.Show("Thêm loại độc giả thành công");
+                MessageBox.Show("Thêm loại độc giả thành công", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
@@ -61,21 +62,23 @@ namespace GUI.UserControls
                 }
             }
             int cnt = 0;
-            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count+ " loại độc giả?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count+ " loại độc giả?", "Xóa loại độc giả",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
                 string error = BUSLoaiDocGia.Instance.DelLoaiDocGia(id);
                 if (error != "")
                 {
-                    if (MessageBox.Show(error) == DialogResult.Retry)
+                    if (MessageBox.Show(error, "Lỗi", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
             
-                MessageBox.Show("Đã xoá thành công " + cnt + " loại độc giả");
+                MessageBox.Show("Đã xoá thành công " + cnt + " loại độc giả", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding();
         }
 

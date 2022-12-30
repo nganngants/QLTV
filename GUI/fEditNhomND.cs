@@ -45,6 +45,14 @@ namespace GUI
             string ten = txtTenNhom.Text;
 
             List<String> dsCn = new List<String>();
+            bool hasIsDGPre = false;
+            bool hasIsDGPost = false;
+            var nnd = BUSNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
+            foreach (var cn in nnd.CHUCNANGs)
+            {
+                if (cn.TenChucNang == "DG") { hasIsDGPre = true; break; }
+            }
+
             foreach (DataGridViewRow row in this.dsChucNang.Rows)
             {
                 //Console.WriteLine(row.Cells["isChoosen"].Value);
@@ -52,13 +60,24 @@ namespace GUI
                 {
                     //Console.WriteLine(row.Cells["MaChucNang"].Value.ToString());
                     dsCn.Add(row.Cells["MaChucNang"].Value.ToString());
+                    if (row.Cells["TenChucNang"].Value.ToString() == "DG") hasIsDGPost = true;
+                }
+            }
+            if (hasIsDGPre != hasIsDGPost)
+            {
+                if (nnd.NGUOIDUNGs.Count > 0)
+                {
+                    MessageBox.Show("Nhóm người dùng này đã có người dùng, không thể thêm/xóa chức năng độc giả!",
+                        "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
             string res = BUSNhomNguoiDung.Instance.DelChucNangForNhom(id, dsCn);
 
             res = BUSNhomNguoiDung.Instance.AddChucNangForNhom(id, dsCn);
-            if (res == "") messageDia.Show("Cập nhật nhóm người dùng thành công!");
-            else ErrorDia.Show(res);
+            if (res == "") MessageBox.Show("Cập nhật nhóm người dùng thành công!",
+                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show(res, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.Close();
         }
     }

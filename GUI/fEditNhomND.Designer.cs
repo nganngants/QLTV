@@ -132,12 +132,12 @@
             this.TenManHinh});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dsChucNang.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dsChucNang.DefaultCellStyle = dataGridViewCellStyle3;
             this.dsChucNang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dsChucNang.Location = new System.Drawing.Point(87, 252);
             this.dsChucNang.Name = "dsChucNang";
@@ -185,7 +185,6 @@
             this.idCol.HeaderText = "id";
             this.idCol.MinimumWidth = 6;
             this.idCol.Name = "idCol";
-            this.idCol.ReadOnly = true;
             this.idCol.Visible = false;
             // 
             // MaChucNang
@@ -193,21 +192,18 @@
             this.MaChucNang.HeaderText = "Mã Chức Năng";
             this.MaChucNang.MinimumWidth = 6;
             this.MaChucNang.Name = "MaChucNang";
-            this.MaChucNang.ReadOnly = true;
             // 
             // TenChucNang
             // 
             this.TenChucNang.HeaderText = "Tên Chức Năng";
             this.TenChucNang.MinimumWidth = 6;
             this.TenChucNang.Name = "TenChucNang";
-            this.TenChucNang.ReadOnly = true;
             // 
             // TenManHinh
             // 
             this.TenManHinh.HeaderText = "Tên Màn Hình";
             this.TenManHinh.MinimumWidth = 6;
             this.TenManHinh.Name = "TenManHinh";
-            this.TenManHinh.ReadOnly = true;
             // 
             // butSave
             // 

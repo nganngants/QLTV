@@ -25,16 +25,16 @@ namespace GUI
         {
             if(txtMKHT.Text != usr.MatKhau)
             {
-                MessageBox.Show("Mật khẩu hiện tại không đúng");
+                MessageBox.Show("Mật khẩu hiện tại không đúng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; 
             }
             if(txtMKM.Text != txtRMKM.Text)
             {
-                MessageBox.Show("Mật khẩu mới không khớp");
+                MessageBox.Show("Mật khẩu mới không khớp", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             BUSNguoiDung.Instance.UpdMK(usr.id, txtMKM.Text);
-            MessageBox.Show("Cập nhật mật khẩu thành công");
+            MessageBox.Show("Cập nhật mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 

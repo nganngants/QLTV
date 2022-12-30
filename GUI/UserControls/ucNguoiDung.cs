@@ -87,7 +87,8 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " người dùng?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count + " người dùng?", "Xóa người dùng",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (string id in idDel)
             {
             Retry:
@@ -101,7 +102,7 @@ namespace GUI.UserControls
                 else cnt++;
             }
 
-            SuccDia.Show("Đã xoá thành công " + cnt + " người dùng");
+            MessageBox.Show("Đã xoá thành công " + cnt + " người dùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Bind(BUSNguoiDung.Instance.GetAllNguoiDung());
         }
     }

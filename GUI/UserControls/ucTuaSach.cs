@@ -97,14 +97,15 @@ namespace GUI.UserControls
            }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " tựa sách?","", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " tựa sách?","", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
                 string error = BUSTuaSach.Instance.UpdAnTuaSach(id,1);
                 if (error != "")
                 {
-                    if (ErrorDia.Show(error) == DialogResult.Retry)
+                    if (MessageBox.Show(error, "Lỗi", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
@@ -112,7 +113,8 @@ namespace GUI.UserControls
             }
 
 
-            MessageBox.Show("Đã ẩn thành công " + cnt + " tựa sách","",MessageBoxButtons.OK);
+            MessageBox.Show("Đã ẩn thành công " + cnt + " tựa sách","Thông báo",MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
             Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
 
@@ -184,7 +186,8 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " tựa sách?", "", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " tựa sách?", "", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
@@ -199,7 +202,8 @@ namespace GUI.UserControls
             }
 
 
-            MessageBox.Show("Đã hiện thành công " + cnt + " tựa sách", "", MessageBoxButtons.OK);
+            MessageBox.Show("Đã hiện thành công " + cnt + " tựa sách", "Thông báo", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
             Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
     }
