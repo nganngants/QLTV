@@ -56,10 +56,15 @@ namespace GUI
             }
             catch
             {
-                MessageBox.Show("Sai format");
+                MessageBox.Show("Sai format","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
             SACH sach = BUSSach.Instance.GetSach(Convert.ToInt32(comboSach.SelectedValue));
+            if(sach.NamXB > dateNgayNhap.Value.Year )
+            {
+                MessageBox.Show("Năm xuất bản của sách lớn hơn ngày nhập","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
             int ThanhTien = SoLuongNhap * (int)sach.DonGia;
             TongTien += ThanhTien;
             labelTongTien.Text = "Tổng tiền: " + TongTien.ToString();
