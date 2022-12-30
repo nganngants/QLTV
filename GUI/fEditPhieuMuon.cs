@@ -24,7 +24,7 @@ namespace GUI
         }
         private void init()
         {
-            labelMaCS.Text += PhieuMuon.CUONSACH.MaCuonSach;
+            labelMaCS.Text +=" "+ PhieuMuon.CUONSACH.MaCuonSach;
             labelTenCS.Text += PhieuMuon.CUONSACH.SACH.TUASACH.TenTuaSach;
             labelSoPhieu.Text += PhieuMuon.SoPhieuMuonTra;
             labelNgayMuon.Text = ((DateTime)PhieuMuon.NgayMuon).ToShortDateString();

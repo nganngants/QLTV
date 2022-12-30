@@ -52,14 +52,13 @@ namespace GUI.UserControls
             this.siticoneContextMenuStrip1 = new Siticone.Desktop.UI.WinForms.SiticoneContextMenuStrip();
             this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongConLaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nhaXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DaAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
@@ -330,7 +329,6 @@ namespace GUI.UserControls
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.SachGrid.AutoGenerateColumns = false;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,16 +341,14 @@ namespace GUI.UserControls
             this.SachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.SachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChosen,
-            this.id,
-            this.maSachDataGridViewTextBoxColumn,
+            this.MaSach,
+            this.MaTuaSach,
             this.TuaSach,
-            this.soLuongDataGridViewTextBoxColumn,
-            this.soLuongConLaiDataGridViewTextBoxColumn,
-            this.donGiaDataGridViewTextBoxColumn,
-            this.namXBDataGridViewTextBoxColumn,
-            this.nhaXBDataGridViewTextBoxColumn,
+            this.NamXB,
+            this.NXB,
+            this.SoLuong,
+            this.ConLai,
             this.DaAn});
-            this.SachGrid.DataSource = this.sACHBindingSource;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -407,24 +403,19 @@ namespace GUI.UserControls
             this.isChosen.TrueValue = "1";
             this.isChosen.Width = 21;
             // 
-            // id
+            // MaSach
             // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
-            this.id.Width = 56;
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
             // 
-            // maSachDataGridViewTextBoxColumn
+            // MaTuaSach
             // 
-            this.maSachDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
-            this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã sách";
-            this.maSachDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
-            this.maSachDataGridViewTextBoxColumn.ReadOnly = true;
+            this.MaTuaSach.HeaderText = "Mã tựa sách";
+            this.MaTuaSach.MinimumWidth = 6;
+            this.MaTuaSach.Name = "MaTuaSach";
+            this.MaTuaSach.ReadOnly = true;
             // 
             // TuaSach
             // 
@@ -435,50 +426,33 @@ namespace GUI.UserControls
             this.TuaSach.ReadOnly = true;
             this.TuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // soLuongDataGridViewTextBoxColumn
+            // NamXB
             // 
-            this.soLuongDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số lượng";
-            this.soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
-            this.soLuongDataGridViewTextBoxColumn.ReadOnly = true;
+            this.NamXB.HeaderText = "Năm XB";
+            this.NamXB.MinimumWidth = 6;
+            this.NamXB.Name = "NamXB";
+            this.NamXB.ReadOnly = true;
             // 
-            // soLuongConLaiDataGridViewTextBoxColumn
+            // NXB
             // 
-            this.soLuongConLaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.soLuongConLaiDataGridViewTextBoxColumn.DataPropertyName = "SoLuongConLai";
-            this.soLuongConLaiDataGridViewTextBoxColumn.HeaderText = "Còn lại";
-            this.soLuongConLaiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soLuongConLaiDataGridViewTextBoxColumn.Name = "soLuongConLaiDataGridViewTextBoxColumn";
-            this.soLuongConLaiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.NXB.HeaderText = "NXB";
+            this.NXB.MinimumWidth = 6;
+            this.NXB.Name = "NXB";
+            this.NXB.ReadOnly = true;
             // 
-            // donGiaDataGridViewTextBoxColumn
+            // SoLuong
             // 
-            this.donGiaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn giá";
-            this.donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
-            this.donGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
             // 
-            // namXBDataGridViewTextBoxColumn
+            // ConLai
             // 
-            this.namXBDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.namXBDataGridViewTextBoxColumn.DataPropertyName = "NamXB";
-            this.namXBDataGridViewTextBoxColumn.HeaderText = "Năm XB";
-            this.namXBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namXBDataGridViewTextBoxColumn.Name = "namXBDataGridViewTextBoxColumn";
-            this.namXBDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nhaXBDataGridViewTextBoxColumn
-            // 
-            this.nhaXBDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nhaXBDataGridViewTextBoxColumn.DataPropertyName = "NhaXB";
-            this.nhaXBDataGridViewTextBoxColumn.HeaderText = "NXB";
-            this.nhaXBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nhaXBDataGridViewTextBoxColumn.Name = "nhaXBDataGridViewTextBoxColumn";
-            this.nhaXBDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ConLai.HeaderText = "Còn lại";
+            this.ConLai.MinimumWidth = 6;
+            this.ConLai.Name = "ConLai";
+            this.ConLai.ReadOnly = true;
             // 
             // DaAn
             // 
@@ -525,16 +499,15 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView SachGrid;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butTenSach;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTinhTrang;
-        private DataGridViewCheckBoxColumn isChosen;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn maSachDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn TuaSach;
-        private DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn soLuongConLaiDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn namXBDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nhaXBDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn DaAn;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butHien;
+        private DataGridViewCheckBoxColumn isChosen;
+        private DataGridViewTextBoxColumn MaSach;
+        private DataGridViewTextBoxColumn MaTuaSach;
+        private DataGridViewTextBoxColumn TuaSach;
+        private DataGridViewTextBoxColumn NamXB;
+        private DataGridViewTextBoxColumn NXB;
+        private DataGridViewTextBoxColumn SoLuong;
+        private DataGridViewTextBoxColumn ConLai;
+        private DataGridViewTextBoxColumn DaAn;
     }
 }
