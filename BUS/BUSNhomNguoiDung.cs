@@ -35,6 +35,13 @@ namespace BUS
             { return "Mã nhóm người dùng không đúng"; }
             if (nnd.TenNhomNguoiDung == "Quan ly" && nnd.id == 1)
                 return "Không thể xoá nhóm người dùng Quản lý";
+            bool isDG = false;
+            foreach (CHUCNANG cn in nnd.CHUCNANGs)
+            {
+                if (cn.TenChucNang == "DG") isDG = true;
+            }
+            if (isDG && nnd.NGUOIDUNGs.Count > 0) 
+                return "Không thể xóa nhóm người dùng này vì các người dùng thuộc nhóm có quyền độc giả!";
             if (DALNhomNguoiDung.Instance.DelNhomNguoiDung(nnd.id))
                 return "";
             return "Không thể xoá nhóm người dùng";

@@ -36,6 +36,12 @@ namespace BUS
             {
                 return "Không thể xoá người dùng này";
             }
+            bool isDG = false;
+            foreach (CHUCNANG cn in nd.NHOMNGUOIDUNG.CHUCNANGs)
+            {
+                if (cn.TenChucNang == "DG") isDG = true;
+            }
+            if (isDG) return "Không thể xóa người dùng là độc giả";
             if (DALNguoiDung.Instance.DelNguoiDung(nd.id)) return "";
             return "Không thể xoá người dùng";
         }
