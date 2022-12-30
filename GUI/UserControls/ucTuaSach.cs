@@ -198,9 +198,6 @@ namespace GUI.UserControls
             Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
 
-        private void TuaSachGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

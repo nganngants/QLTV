@@ -103,7 +103,7 @@
             this.txtTenTL.SelectedText = "";
             this.txtTenTL.Size = new System.Drawing.Size(179, 28);
             this.txtTenTL.TabIndex = 10;
-            this.txtTenTL.TextChanged += new System.EventHandler(this.txtTenTL_TextChanged);
+           
             // 
             // butAdd
             // 
@@ -147,24 +147,23 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.TheLoaiGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.TheLoaiGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+           
 
             this.TheLoaiGrid.ColumnHeadersHeight = 35;
             this.TheLoaiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TheLoaiGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChosen,
             this.id,
-            this.MaTheLoai,
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaTheLoai
+            });
+           
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle6;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.TheLoaiGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TheLoaiGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TheLoaiGrid.Location = new System.Drawing.Point(0, 121);
@@ -172,7 +171,7 @@
             this.TheLoaiGrid.Name = "TheLoaiGrid";
             this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TheLoaiGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TheLoaiGrid.RowHeadersVisible = false;
             this.TheLoaiGrid.RowHeadersWidth = 51;
             this.TheLoaiGrid.RowTemplate.Height = 30;

@@ -22,6 +22,7 @@ namespace GUI
         {
             InitializeComponent();
             id = _id;
+            tuasach = BUSTuaSach.Instance.GetTuaSach(id);
             init();
             List<SACH> SachList = tuasach.SACHes.ToList();
             SachGrid.DataSource = SachList;
@@ -30,14 +31,15 @@ namespace GUI
         
         private void init()
         {
-            tuasach = BUSTuaSach.Instance.GetTuaSach(id);
+            
             labelMaTS.Text = tuasach.MaTuaSach;
             labelTenTS.Text = tuasach.TenTuaSach;
             labelTheLoai.Text = tuasach.THELOAI.TenTheLoai.ToString();
             string tacgia = "";
-            Console.WriteLine("id: ",id);
+          
             foreach (TACGIA tg in tuasach.TACGIAs)
             {
+                if (tg == null) continue;
                 tacgia += tg.TenTacGia + ", ";
             }
             if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 2,2);
