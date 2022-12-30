@@ -33,7 +33,7 @@ namespace GUI
             this.components = new System.ComponentModel.Container();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
-            this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label1 = new System.Windows.Forms.Label();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.comboDocGia = new System.Windows.Forms.ComboBox();
@@ -78,23 +78,23 @@ namespace GUI
             this.siticoneControlBox1.Size = new System.Drawing.Size(57, 45);
             this.siticoneControlBox1.TabIndex = 72;
             // 
-            // butLogin
+            // butSave
             // 
-            this.butLogin.BorderRadius = 4;
-            this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butLogin.FillColor = System.Drawing.Color.SlateBlue;
-            this.butLogin.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butLogin.ForeColor = System.Drawing.Color.White;
-            this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butLogin.Location = new System.Drawing.Point(307, 612);
-            this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(150, 50);
-            this.butLogin.TabIndex = 70;
-            this.butLogin.Text = "Lưu";
-            this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
+            this.butSave.BorderRadius = 4;
+            this.butSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butSave.FillColor = System.Drawing.Color.SlateBlue;
+            this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSave.ForeColor = System.Drawing.Color.White;
+            this.butSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.butSave.Location = new System.Drawing.Point(307, 612);
+            this.butSave.Name = "butSave";
+            this.butSave.Size = new System.Drawing.Size(150, 50);
+            this.butSave.TabIndex = 70;
+            this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butLogin_Click);
             // 
             // label1
             // 
@@ -104,7 +104,7 @@ namespace GUI
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(191, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(440, 53);
+            this.label1.Size = new System.Drawing.Size(464, 56);
             this.label1.TabIndex = 69;
             this.label1.Text = "PHIẾU THU TIỀN PHẠT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,7 +114,7 @@ namespace GUI
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.siticonePanel1.Controls.Add(this.comboDocGia);
             this.siticonePanel1.Controls.Add(this.label1);
-            this.siticonePanel1.Controls.Add(this.butLogin);
+            this.siticonePanel1.Controls.Add(this.butSave);
             this.siticonePanel1.Controls.Add(this.label3);
             this.siticonePanel1.Controls.Add(this.textTienThu);
             this.siticonePanel1.Controls.Add(this.labelNoMoi);
@@ -141,7 +141,7 @@ namespace GUI
             this.comboDocGia.FormattingEnabled = true;
             this.comboDocGia.Location = new System.Drawing.Point(218, 192);
             this.comboDocGia.Name = "comboDocGia";
-            this.comboDocGia.Size = new System.Drawing.Size(368, 35);
+            this.comboDocGia.Size = new System.Drawing.Size(368, 36);
             this.comboDocGia.TabIndex = 99;
             this.comboDocGia.ValueMember = "ID";
             this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
@@ -157,7 +157,7 @@ namespace GUI
             this.label3.ForeColor = System.Drawing.Color.SlateBlue;
             this.label3.Location = new System.Drawing.Point(213, 408);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 25);
+            this.label3.Size = new System.Drawing.Size(123, 25);
             this.label3.TabIndex = 98;
             this.label3.Text = "Tổng nợ mới:";
             // 
@@ -173,7 +173,7 @@ namespace GUI
             this.textTienThu.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTienThu.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.textTienThu.Location = new System.Drawing.Point(218, 355);
-            this.textTienThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textTienThu.Margin = new System.Windows.Forms.Padding(4);
             this.textTienThu.Name = "textTienThu";
             this.textTienThu.PasswordChar = '\0';
             this.textTienThu.PlaceholderText = "";
@@ -189,7 +189,7 @@ namespace GUI
             this.labelNoMoi.ForeColor = System.Drawing.Color.SlateBlue;
             this.labelNoMoi.Location = new System.Drawing.Point(213, 446);
             this.labelNoMoi.Name = "labelNoMoi";
-            this.labelNoMoi.Size = new System.Drawing.Size(26, 31);
+            this.labelNoMoi.Size = new System.Drawing.Size(27, 32);
             this.labelNoMoi.TabIndex = 94;
             this.labelNoMoi.Text = "0";
             // 
@@ -200,7 +200,7 @@ namespace GUI
             this.labelNoHienTai.ForeColor = System.Drawing.Color.SlateBlue;
             this.labelNoHienTai.Location = new System.Drawing.Point(213, 283);
             this.labelNoHienTai.Name = "labelNoHienTai";
-            this.labelNoHienTai.Size = new System.Drawing.Size(26, 31);
+            this.labelNoHienTai.Size = new System.Drawing.Size(27, 32);
             this.labelNoHienTai.TabIndex = 94;
             this.labelNoHienTai.Text = "0";
             // 
@@ -211,7 +211,7 @@ namespace GUI
             this.label9.ForeColor = System.Drawing.Color.SlateBlue;
             this.label9.Location = new System.Drawing.Point(213, 245);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 25);
+            this.label9.Size = new System.Drawing.Size(154, 25);
             this.label9.TabIndex = 94;
             this.label9.Text = "Tổng nợ hiện tại:";
             // 
@@ -222,7 +222,7 @@ namespace GUI
             this.label8.ForeColor = System.Drawing.Color.SlateBlue;
             this.label8.Location = new System.Drawing.Point(213, 327);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 25);
+            this.label8.Size = new System.Drawing.Size(107, 25);
             this.label8.TabIndex = 93;
             this.label8.Text = "Số tiền thu:";
             // 
@@ -250,7 +250,7 @@ namespace GUI
             this.label12.ForeColor = System.Drawing.Color.SlateBlue;
             this.label12.Location = new System.Drawing.Point(213, 498);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 25);
+            this.label12.Size = new System.Drawing.Size(91, 25);
             this.label12.TabIndex = 78;
             this.label12.Text = "Ngày lập:";
             // 
@@ -261,7 +261,7 @@ namespace GUI
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(213, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 25);
+            this.label2.Size = new System.Drawing.Size(80, 25);
             this.label2.TabIndex = 46;
             this.label2.Text = "Độc giả:";
             // 
@@ -284,7 +284,7 @@ namespace GUI
             // 
             // fPhieuThu
             // 
-            this.AcceptButton = this.butLogin;
+            this.AcceptButton = this.butSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
@@ -308,7 +308,7 @@ namespace GUI
 
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butLogin;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butSave;
         private Label label1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox textTienThu;
