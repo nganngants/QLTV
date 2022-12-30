@@ -62,7 +62,7 @@ namespace GUI
         {
             TienThu = Convert.ToInt32(textTienThu.Text);
             //Console.WriteLine("Bf: ",TienThu);
-            if (dateNgayLap.Value > DateTime.Now.Date)
+            if (dateNgayLap.Value > DateTime.Now.Date || dateNgayLap.Value.Date < DocGia.NgayLapThe)
             {
                 MessageBox.Show("Ngày lập không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
                 return;
