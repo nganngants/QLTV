@@ -41,7 +41,7 @@ namespace GUI.UserControls
             string err = BUSThamSo.Instance.UpdTuoiToiThieu(tuoiMin);
             if (err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Bind();
                 return;
             }
@@ -50,7 +50,7 @@ namespace GUI.UserControls
             err = BUSThamSo.Instance.UpTuoiToiDa(tuoiMax);
             if (err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Bind();
                 return;
             }
@@ -59,7 +59,7 @@ namespace GUI.UserControls
             err = BUSThamSo.Instance.UpdSoNgayMuon(soNgayMuon);
             if (err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Bind();
                 return;
             }
@@ -67,7 +67,7 @@ namespace GUI.UserControls
             err = BUSThamSo.Instance.UpdKCXB(kc);
             if (err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Bind();
                 return;
             }
@@ -76,7 +76,7 @@ namespace GUI.UserControls
             err = BUSThamSo.Instance.UpdSoSachToiDa(soSach);
             if (err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Bind();
                 return;
             }
@@ -85,7 +85,7 @@ namespace GUI.UserControls
             err = BUSThamSo.Instance.UpdThoiHanThe(thoiHan);
             if (err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Bind();
                 return;
             }
@@ -94,7 +94,7 @@ namespace GUI.UserControls
             err = BUSThamSo.Instance.UpdDonGiaPhat(donGia);
             if (err != "")
             {
-                ErrorDia.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Bind();
                 return;
             }
@@ -102,7 +102,7 @@ namespace GUI.UserControls
             if (checkQDThu.Checked) BUSThamSo.Instance.UpdADQDTienPhat(1);
             else BUSThamSo.Instance.UpdADQDTienPhat(0);
 
-            messageDia.Show("Đã lưu thay đổi");
+            MessageBox.Show("Đã lưu thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Bind();
         }
 
@@ -115,7 +115,7 @@ namespace GUI.UserControls
             }
             catch
             {
-                ErrorDia.Show("Vui lòng chỉ nhập số nguyên");
+                MessageBox.Show("Vui lòng chỉ nhập số nguyên dương", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtDonGia.Text = null;
                 return;
 

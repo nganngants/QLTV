@@ -29,7 +29,7 @@ namespace GUI.UserControls
                 string err = BUSBCTheoTheLoai.Instance.AddBC(month, year);
                 if (err != "")
                 {
-                    errDia.Show(err);
+                    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 bc = BUSBCTheoTheLoai.Instance.GetBC(month, year);

@@ -41,10 +41,6 @@ namespace GUI.UserControls
             Binding(BUSPhieuThu.Instance.GetAllPhieuThu());
         }
 
-        private void PhieuThuGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
 
         private void butFind_Click(object sender, EventArgs e)
         {

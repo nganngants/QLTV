@@ -94,22 +94,22 @@ namespace GUI
             if (isDaTra.Checked == false) return; 
             string err = BUSPhieuMuonTra.Instance.UpdPhieuMuonTra(PhieuMuon.SoPhieuMuonTra, dateNgayTra.Value.Date);
             
-            if(err!="")
+            if(err != "")
             {
-                MessageBox.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
             if (dateNgayTra.Value < PhieuMuon.NgayMuon)
             {
-                ErrorDia.Show("Lỗi: Ngày trả không được trước ngày mượn!");
+                MessageBox.Show("Ngày trả không được trước ngày mượn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }    
             int TienPhat = 0;
             if (dateNgayTra.Value > PhieuMuon.HanTra)
                 TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
             err = BUSDocGia.Instance.UpdTongNo(PhieuMuon.DOCGIA.ID, (int)PhieuMuon.DOCGIA.TongNoHienTai + (int)(thamso.DonGiaPhat * TienPhat));
-            MessageBox.Show("Đã cập nhật phiếu mượn thành công");
+            MessageBox.Show("Đã cập nhật phiếu mượn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }

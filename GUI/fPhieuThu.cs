@@ -43,14 +43,14 @@ namespace GUI
             catch
             {
                 textTienThu.Text = "";
-                MessageBox.Show("Số tiền thu sai format");
+                MessageBox.Show("Số tiền thu sai format", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
             if(thamso.AD_QDKTTienThu == 1 && TienThu > DocGia.TongNoHienTai)
             {
                 textTienThu.Text = "";
-                MessageBox.Show("Số tiền thu vượt quá quy định");
+                MessageBox.Show("Số tiền thu vượt quá quy định", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 labelNoMoi.Text = labelNoHienTai.Text;
                 return;
             }
@@ -82,7 +82,7 @@ namespace GUI
                 MessageBox.Show(err);
                 return;
             }*/
-            MessageBox.Show("Thêm phiếu thu thành công");
+            MessageBox.Show("Thêm phiếu thu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 

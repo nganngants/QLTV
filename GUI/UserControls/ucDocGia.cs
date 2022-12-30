@@ -57,7 +57,8 @@ namespace GUI.UserControls
                 }
             }
             if(idDel.Count == 0) { return; }
-            if (AskDia.Show("Bạn có chắc muốn xoá "+ idDel.Count + " độc giả?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn xoá "+ idDel.Count + " độc giả?", "Xóa độc giả",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
             int cnt = 0;
             foreach (int id in idDel)
             {
@@ -72,7 +73,7 @@ namespace GUI.UserControls
                 else cnt++;
             }
             if(cnt!=0)
-                MessageBox.Show("Đã xoá thành công " + cnt + " độc giả");
+                MessageBox.Show("Đã xoá thành công " + cnt + " độc giả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding(BUSDocGia.Instance.GetAllDocGia());
             
         }

@@ -22,8 +22,13 @@ namespace GUI
 
         private void Bind()
         {
-            var dsCn = BUSChucNang.Instance.GetAllChucNang();
-            this.dsChucNang.DataSource = dsCn;
+            var dscn = BUSChucNang.Instance.GetAllChucNang();
+            //dsChucNang.DataSource = dscn;
+            //dsChucNang.VirtualMode = true;
+            foreach (var cn in dscn)
+            {
+                dsChucNang.Rows.Add("0", cn.MaChucNang, cn.TenChucNang, cn.TenManHinh);
+            }
 
         }
 
@@ -39,15 +44,15 @@ namespace GUI
             foreach (DataGridViewRow row in this.dsChucNang.Rows )
             {
                 //Console.WriteLine(row.Cells["isChoosen"].Value);
-                if (row.Cells["isChoosen"].Value == "1")
+                if (row.Cells["isChoosen"].Value.ToString() == "1")
                 {
                     //Console.WriteLine(row.Cells["MaChucNang"].Value.ToString());
                     dsCn.Add(row.Cells["MaChucNang"].Value.ToString());
                 }
             }
             string res = BUSNhomNguoiDung.Instance.AddChucNangForNhom(id, dsCn);
-            if (res == "") MessageBox.Show("Thêm nhóm người dùng thành công!");
-            else ErrorDia.Show(res);
+            if (res == "") MessageBox.Show("Thêm nhóm người dùng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show(res, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.Close();
         }
     }

@@ -72,7 +72,8 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " nhóm người dùng?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count + " nhóm người dùng?", "Xóa nhóm người dùng",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
@@ -86,13 +87,11 @@ namespace GUI.UserControls
                 else cnt++;
             }
 
-            SuccDia.Show("Đã xoá thành công " + cnt + " nhóm người dùng");
+            MessageBox.Show("Đã xoá thành công " + cnt + " nhóm người dùng", "Thông báo",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             Bind();
         }
 
-        private void NDGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -10,31 +10,31 @@ CREATE TABLE NHOMNGUOIDUNG
 (
 	id int IDENTITY(1,1) primary key,
 	MaNhomNguoiDung AS CAST('NND' + right('000' + CAST(id as varchar(5)), 3) AS CHAR(6)) persisted ,
-	TenNhomNguoiDung varchar(max) NOT NULL
+	TenNhomNguoiDung nvarchar(max) NOT NULL
 );
 go
-insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Quan ly')
-insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Thu thu')
-insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values ('Doc gia')
+insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values (N'Quản Lý')
+insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values (N'Thủ Thư')
+insert into NHOMNGUOIDUNG (TenNhomNguoiDung) values (N'Độc Giả')
 
 go
 CREATE TABLE CHUCNANG
 (
      id int  primary key IDENTITY(1,1),
 	 MaChucNang AS CAST('CN' + right('000' + CAST(id as varchar(3)), 3) as char(5))persisted,
-     TenChucNang VARCHAR(MAX) NOT NULL,
-     TenManHinh VARCHAR(MAX) NOT NULL
+     TenChucNang NVARCHAR(MAX) NOT NULL,
+     TenManHinh NVARCHAR(MAX) NOT NULL
 )
 go
 
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLDG', 'Quan Ly Doc Gia')
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLS', 'Quan Ly Sach')
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLPM', 'Quan Ly Phieu Muon Tra')
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLPT', 'Quan Ly Phieu Thu')
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('BCTK', 'Bao Cao Thong Ke')
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLND', 'Quan Ly Nguoi Dung')
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('TDQD', 'Thay Doi Quy Dinh')
-insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('DG', 'La Doc Gia')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLDG', N'Quản Lý Độc Giả')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLS', N'Quản Lý Sách')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLPM', N'Quản Lý Phiếu Mượn Trả')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLPT', N'Quản Lý Phiếu Thu')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('BCTK', N'Báo Cáo Thống Kê')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('QLND', N'Quản Lý Người Dùng')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('TDQD', N'Thay Đổi Quy Định')
+insert into CHUCNANG (TenChucNang, TenManHinh) VALUES ('DG', N'Là Độc Giả')
 
 go
 CREATE TABLE PHANQUYEN
@@ -67,9 +67,9 @@ CREATE TABLE NGUOIDUNG
 (
 	id INT IDENTITY PRIMARY KEY,
 	MaNguoiDung  AS CAST('ND'+ RIGHT('000000' + CAST(id AS VARCHAR(4)), 4) AS CHAR(6)) PERSISTED,
-    TenNguoiDung VARCHAR(MAX) NOT NULL,
+    TenNguoiDung NVARCHAR(MAX) NOT NULL,
     NgaySinh datetime,
-    ChucVu VARCHAR(MAX),
+    ChucVu NVARCHAR(MAX),
     TenDangNhap VARCHAR(MAX) NOT NULL,
     MatKhau VARCHAR(MAX) NOT NULL,
     idNhomNguoiDung INT REFERENCES NHOMNGUOIDUNG on delete cascade NOT NULL
@@ -80,22 +80,22 @@ set dateformat dmy
 
 go
 INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, idNhomNguoiDung) 
-VALUES ('Admin he thong', 'admin', '123', 1)
+VALUES (N'Admin Hệ Thống', 'admin', '123', 1)
 INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, MatKhau, idNhomNguoiDung) 
-VALUES ('Thu thu', 'lib', '123', 2)
+VALUES (N'Thủ Thư', 'lib', '123', 2)
 INSERT INTO NGUOIDUNG(TenNguoiDung, TenDangNhap, NgaySinh, MatKhau, idNhomNguoiDung) 
-VALUES ('Doc Gia A', 'docgia1', '13/12/1999', '123', 3)
+VALUES (N'Độc Giả A', 'docgia1', '13/12/1999', '123', 3)
 
 go
 CREATE TABLE THELOAI
 (
 	id int IDENTITY(1,1)  primary key,
 	MaTheLoai As Cast('TL' + right('0000' + CAST(id as varchar(4)), 4) as char(6)) persisted,  
-	TenTheLoai VARCHAR(MAX) NOT NULL
+	TenTheLoai NVARCHAR(MAX) NOT NULL
 )
 go
-insert into THELOAI values('X')
-insert into THELOAI values('Y')
+insert into THELOAI values(N'Thể loại X')
+insert into THELOAI values(N'Thể loại Y')
 
 go
 
@@ -103,23 +103,23 @@ CREATE TABLE TUASACH
 (
 	id INT IDENTITY  PRIMARY KEY,
 	MaTuaSach  AS cast('TS'+ right('0000' + CAST(ID AS VARCHAR(10)), 4) as char(6)) PERSISTED,
-	TenTuaSach VARCHAR(MAX) NOT NULL,
+	TenTuaSach NVARCHAR(MAX) NOT NULL,
 	idTheLoai int references THELOAI NOT NULL,
 	DaAn int DEFAULT 0
 )
 go
-insert into TUASACH values ('Tua sach 1', 1, 0)
-insert into TUASACH values ('Tua sach 2', 2, 0)
+insert into TUASACH values (N'Tựa sách 1', 1, 0)
+insert into TUASACH values (N'Tựa sách 2', 2, 0)
 go
 
 CREATE TABLE TACGIA
 (
 	id INT IDENTITY PRIMARY KEY,
 	MATACGIA  AS CAST('TG'+ RIGHT('0000' + CAST(ID AS VARCHAR(10)), 4) AS CHAR(6))PERSISTED,
-	TenTacGia VARCHAR(MAX) NOT NULL
+	TenTacGia NVARCHAR(MAX) NOT NULL
 )
 go
-INSERT INTO TACGIA VALUES ('Nguyen Nhat Anh')
+INSERT INTO TACGIA VALUES (N'Nguyễn Nhật Ánh')
 go
 CREATE TABLE CT_TACGIA
 (
@@ -135,20 +135,20 @@ CREATE TABLE LOAIDOCGIA
 (
 	id INT IDENTITY(1,1) PRIMARY KEY,
 	MaLoaiDocGia  AS CAST('LDG'+ RIGHT('000' + CAST(ID AS VARCHAR(10)), 3) AS CHAR(6))PERSISTED,
-	TenLoaiDocGia VARCHAR(MAX) NOT NULL
+	TenLoaiDocGia NVARCHAR(MAX) NOT NULL
 )
 go
-INSERT INTO LOAIDOCGIA VALUES('Giang vien')
-INSERT INTO LOAIDOCGIA VALUES('Sinh vien UIT')
-INSERT INTO LOAIDOCGIA VALUES('Sinh vien khac')
+INSERT INTO LOAIDOCGIA VALUES(N'Giảng viên')
+INSERT INTO LOAIDOCGIA VALUES(N'Sinh viên')
+INSERT INTO LOAIDOCGIA VALUES(N'Khác')
 go
 CREATE TABLE DOCGIA
 (
 	ID int IDENTITY(1,1) PRIMARY KEY,
 	MaDocGia  AS CAST('DG'+ RIGHT('0000' + CAST(ID AS VARCHAR(10)), 4) AS CHAR(6))PERSISTED,
-	TenDocGia VARCHAR(MAX) NOT NULL,
+	TenDocGia NVARCHAR(MAX) NOT NULL,
 	NgaySinh datetime NOT NULL, 
-	DiaChi VARCHAR(MAX),
+	DiaChi NVARCHAR(MAX),
 	Email VARCHAR(MAX),
 	NgayLapThe Datetime NOT NULL, 
 	NgayHetHan Datetime NOT NULL, 
@@ -158,7 +158,7 @@ CREATE TABLE DOCGIA
 )
 go
 INSERT INTO DOCGIA (TenDocGia, NgaySinh, NgayLapThe, NgayHetHan, idLoaiDocGia, idNguoiDung)
-VALUES ('Doc Gia A', '13/12/1999', '20/10/2020', '20/4/2021', 2, 3)
+VALUES (N'Độc Giả A', '13/12/1999', '20/10/2020', '20/4/2021', 2, 3)
 
 go
 CREATE TABLE SACH
@@ -170,7 +170,7 @@ CREATE TABLE SACH
 	SoLuongConLai int NOT NULL, 
 	DonGia int NOT NULL, 
 	NamXB int NOT NULL, 
-	NhaXB VARCHAR(MAX) NOT NULL,
+	NhaXB NVARCHAR(MAX) NOT NULL,
 	DaAn int NOT NULL DEFAULT 0
 )
 

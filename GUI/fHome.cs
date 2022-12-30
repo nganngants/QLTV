@@ -52,7 +52,8 @@ namespace GUI
             }
             else
             {
-                errorDia.Show("Bạn không có quyền truy cập vào chức năng này!");
+                MessageBox.Show("Bạn không có quyền truy cập vào chức năng này!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

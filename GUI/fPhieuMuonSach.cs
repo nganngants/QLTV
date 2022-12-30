@@ -66,12 +66,12 @@ namespace GUI
         {
             if (comboCuonSach.SelectedValue == null)
             {
-                MessageBox.Show("Chưa chọn cuốn sách");
+                MessageBox.Show("Chưa chọn cuốn sách", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (comboDocGia.SelectedValue == null)
             {
-                MessageBox.Show("Chưa chọn độc giả");
+                MessageBox.Show("Chưa chọn độc giả", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -79,7 +79,7 @@ namespace GUI
            
             if (NgayMuon > DateTime.Now)
             {
-                ErrorDia.Show("Ngày mượn không hợp lệ");
+                MessageBox.Show("Ngày mượn không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             DOCGIA docgia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
@@ -87,10 +87,10 @@ namespace GUI
             string error = BUSPhieuMuonTra.Instance.AddPhieuMuonTra(cuonsach.MaCuonSach, docgia.MaDocGia, NgayMuon);
             if (error != "")
             {
-                ErrorDia.Show(error);
+                MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            SuccDia.Show("Thêm phiếu mượn thành công");
+            MessageBox.Show("Thêm phiếu mượn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 

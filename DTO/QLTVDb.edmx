@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLTVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLTVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BCLUOTMUONTHEOTHELOAI">
           <Key>
             <PropertyRef Name="id" />
@@ -31,8 +31,8 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaChucNang" Type="char" MaxLength="5" StoreGeneratedPattern="Computed" />
-          <Property Name="TenChucNang" Type="varchar(max)" Nullable="false" />
-          <Property Name="TenManHinh" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenChucNang" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TenManHinh" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="CT_BCLUOTMUONTHEOTHELOAI">
           <Key>
@@ -79,9 +79,9 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaDocGia" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
-          <Property Name="TenDocGia" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenDocGia" Type="nvarchar(max)" Nullable="false" />
           <Property Name="NgaySinh" Type="datetime" Nullable="false" />
-          <Property Name="DiaChi" Type="varchar(max)" />
+          <Property Name="DiaChi" Type="nvarchar(max)" />
           <Property Name="Email" Type="varchar(max)" />
           <Property Name="NgayLapThe" Type="datetime" Nullable="false" />
           <Property Name="NgayHetHan" Type="datetime" Nullable="false" />
@@ -95,7 +95,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaLoaiDocGia" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
-          <Property Name="TenLoaiDocGia" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenLoaiDocGia" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="NGUOIDUNG">
           <Key>
@@ -103,9 +103,9 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaNguoiDung" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
-          <Property Name="TenNguoiDung" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenNguoiDung" Type="nvarchar(max)" Nullable="false" />
           <Property Name="NgaySinh" Type="datetime" />
-          <Property Name="ChucVu" Type="varchar(max)" />
+          <Property Name="ChucVu" Type="nvarchar(max)" />
           <Property Name="TenDangNhap" Type="varchar(max)" Nullable="false" />
           <Property Name="MatKhau" Type="varchar(max)" Nullable="false" />
           <Property Name="idNhomNguoiDung" Type="int" Nullable="false" />
@@ -116,7 +116,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaNhomNguoiDung" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
-          <Property Name="TenNhomNguoiDung" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenNhomNguoiDung" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="PHANQUYEN">
           <Key>
@@ -166,7 +166,7 @@
           <Property Name="SoLuongConLai" Type="int" Nullable="false" />
           <Property Name="DonGia" Type="int" Nullable="false" />
           <Property Name="NamXB" Type="int" Nullable="false" />
-          <Property Name="NhaXB" Type="varchar(max)" Nullable="false" />
+          <Property Name="NhaXB" Type="nvarchar(max)" Nullable="false" />
           <Property Name="DaAn" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="TACGIA">
@@ -175,7 +175,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MATACGIA" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
-          <Property Name="TenTacGia" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenTacGia" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="THAMSO">
           <Key>
@@ -197,7 +197,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaTheLoai" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
-          <Property Name="TenTheLoai" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenTheLoai" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="TUASACH">
           <Key>
@@ -205,7 +205,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaTuaSach" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
-          <Property Name="TenTuaSach" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenTuaSach" Type="nvarchar(max)" Nullable="false" />
           <Property Name="idTheLoai" Type="int" Nullable="false" />
           <Property Name="DaAn" Type="int" />
         </EntityType>
@@ -531,8 +531,7 @@
             <End Role="TUASACH" EntitySet="TUASACH" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLTVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -564,8 +563,8 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaChucNang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="TenChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TenManHinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenManHinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="NHOMNGUOIDUNGs" Relationship="Self.PHANQUYEN" FromRole="CHUCNANG" ToRole="NHOMNGUOIDUNG" />
         </EntityType>
         <EntityType Name="CT_BCLUOTMUONTHEOTHELOAI">
@@ -612,9 +611,9 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaDocGia" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="TenDocGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenDocGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="NgayLapThe" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="NgayHetHan" Type="DateTime" Nullable="false" Precision="3" />
@@ -632,7 +631,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaLoaiDocGia" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="TenLoaiDocGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenLoaiDocGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="DOCGIAs" Relationship="Self.FK__DOCGIA__idLoaiDo__3C69FB99" FromRole="LOAIDOCGIA" ToRole="DOCGIA" />
         </EntityType>
         <EntityType Name="NGUOIDUNG">
@@ -641,9 +640,9 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaNguoiDung" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="TenNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgaySinh" Type="DateTime" Precision="3" />
-          <Property Name="ChucVu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ChucVu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TenDangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idNhomNguoiDung" Type="Int32" Nullable="false" />
@@ -656,7 +655,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaNhomNguoiDung" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="TenNhomNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenNhomNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="NGUOIDUNGs" Relationship="Self.FK__NGUOIDUNG__idNho__2C3393D0" FromRole="NHOMNGUOIDUNG" ToRole="NGUOIDUNG" />
           <NavigationProperty Name="CHUCNANGs" Relationship="Self.PHANQUYEN" FromRole="NHOMNGUOIDUNG" ToRole="CHUCNANG" />
         </EntityType>
@@ -704,7 +703,7 @@
           <Property Name="SoLuongConLai" Type="Int32" Nullable="false" />
           <Property Name="DonGia" Type="Int32" Nullable="false" />
           <Property Name="NamXB" Type="Int32" Nullable="false" />
-          <Property Name="NhaXB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NhaXB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DaAn" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CT_PHIEUNHAP" Relationship="Self.FK__CT_PHIEUN__idSac__48CFD27E" FromRole="SACH" ToRole="CT_PHIEUNHAP" />
           <NavigationProperty Name="CUONSACHes" Relationship="Self.FK__CUONSACH__idSach__4BAC3F29" FromRole="SACH" ToRole="CUONSACH" />
@@ -716,7 +715,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MATACGIA" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="TenTacGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenTacGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="TUASACHes" Relationship="Self.CT_TACGIA" FromRole="TACGIA" ToRole="TUASACH" />
         </EntityType>
         <EntityType Name="THAMSO">
@@ -739,7 +738,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaTheLoai" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="TenTheLoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenTheLoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="CT_BCLUOTMUONTHEOTHELOAI" Relationship="Self.FK__CT_BCLUOT__idThe__5CD6CB2B" FromRole="THELOAI" ToRole="CT_BCLUOTMUONTHEOTHELOAI" />
           <NavigationProperty Name="TUASACHes" Relationship="Self.FK__TUASACH__idTheLo__30F848ED" FromRole="THELOAI" ToRole="TUASACH" />
         </EntityType>
@@ -749,7 +748,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaTuaSach" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="TenTuaSach" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenTuaSach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="idTheLoai" Type="Int32" Nullable="false" />
           <Property Name="DaAn" Type="Int32" />
           <NavigationProperty Name="SACHes" Relationship="Self.FK__SACH__idTuaSach__412EB0B6" FromRole="TUASACH" ToRole="SACH" />

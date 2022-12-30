@@ -73,7 +73,7 @@
             this.comboTheLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTheLoai.ItemHeight = 30;
-            this.comboTheLoai.Location = new System.Drawing.Point(621, 77);
+            this.comboTheLoai.Location = new System.Drawing.Point(626, 66);
             this.comboTheLoai.Name = "comboTheLoai";
             this.comboTheLoai.Size = new System.Drawing.Size(201, 36);
             this.comboTheLoai.TabIndex = 15;
@@ -92,9 +92,9 @@
             this.butFil.Image = global::GUI.Properties.Resources.search_icon;
             this.butFil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFil.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFil.Location = new System.Drawing.Point(833, 86);
+            this.butFil.Location = new System.Drawing.Point(833, 66);
             this.butFil.Name = "butFil";
-            this.butFil.Size = new System.Drawing.Size(148, 28);
+            this.butFil.Size = new System.Drawing.Size(159, 28);
             this.butFil.TabIndex = 14;
             this.butFil.Text = "Lọc thể loại";
             this.butFil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -130,9 +130,9 @@
             this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butMaSach.Location = new System.Drawing.Point(833, 42);
+            this.butMaSach.Location = new System.Drawing.Point(833, 29);
             this.butMaSach.Name = "butMaSach";
-            this.butMaSach.Size = new System.Drawing.Size(148, 28);
+            this.butMaSach.Size = new System.Drawing.Size(159, 28);
             this.butMaSach.TabIndex = 9;
             this.butMaSach.Text = "Tìm kiếm";
             this.butMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -153,7 +153,7 @@
             this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Location = new System.Drawing.Point(626, 42);
+            this.txtMaSach.Location = new System.Drawing.Point(626, 29);
             this.txtMaSach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';

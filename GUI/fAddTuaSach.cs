@@ -56,7 +56,7 @@ namespace GUI
                     check = true;
             if(check == false)
             {
-                var ask = AskDia.Show("Tác giả chưa có, bạn có muốn thêm mới?");
+                var ask = MessageBox.Show("Tác giả chưa có, bạn có muốn thêm mới?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (ask == DialogResult.Yes)
                 {
                     id = BUSTacGia.Instance.AddTacGia(newTg);
@@ -83,7 +83,7 @@ namespace GUI
         {
             if(txtTenTuaSach.Text == "" )
             {
-                MessageBox.Show("Chưa nhập đủ thông tin");
+                MessageBox.Show("Chưa nhập đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -99,10 +99,10 @@ namespace GUI
             string err = BUSTuaSach.Instance.AddTuaSach(TenTuaSach, tl, TgList);
             if(err !="")
             {
-                MessageBox.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            MessageBox.Show("Thêm tựa sách thành công");
+            MessageBox.Show("Thêm tựa sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
             
         }

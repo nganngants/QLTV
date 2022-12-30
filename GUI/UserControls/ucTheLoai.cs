@@ -45,12 +45,14 @@ namespace GUI.UserControls
             {
                 if (theLoai.TenTheLoai == tentl)
                 {
-                    if (AskDia.Show("Thể loại này đã có. Bạn có chắc muốn thêm?") == DialogResult.Yes) break;
+                    if (MessageBox.Show("Thể loại này đã có. Bạn có chắc muốn thêm?", "Thêm thể loại",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) break;
                     else return;
                 }    
             }
             BUSTheLoai.Instance.AddTheLoai(tentl);
-            SuccDia.Show("Thêm thể loại thành công!");
+            MessageBox.Show("Thêm thể loại thành công!", "Thông báo",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding();
         }
 

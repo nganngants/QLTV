@@ -32,12 +32,14 @@ namespace GUI.UserControls
             foreach (var tg in tglist)
             {
                 if (tg.TenTacGia == tentg)
-                    if (AskDia.Show("Tên tác giả này đã có, bạn có chắc muốn thêm?") == DialogResult.Yes) break;
+                    if (MessageBox.Show("Tên tác giả này đã có, bạn có chắc muốn thêm?",
+                        "Thêm tác giả", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) break;
                     else return;
             }    
             int id = BUSTacGia.Instance.AddTacGia(tentg);
-            if (id == -1) ErrorDia.Show("Có lỗi xảy ra. Không thể thêm tác giả. Vui lòng kiểm tra lại!");
-            else SuccDia.Show("Thêm tác giả mới thành công!");
+            if (id == -1) MessageBox.Show("Có lỗi xảy ra. Không thể thêm tác giả. Vui lòng kiểm tra lại!", "Lỗi",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show("Thêm tác giả mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding();
         }
 
@@ -75,21 +77,22 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (AskDia.Show("Bạn có chắc muốn xoá " + idDel.Count + " tác giả?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count + " tác giả?", "Xóa tác giả",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
             Retry:
                 string error = BUSTacGia.Instance.DelTacGia(id);
                 if (error !="")
                 {
-                    if (ErrorDia.Show("Lỗi khi xoá tác giả") == DialogResult.Retry)
+                    if (MessageBox.Show("Lỗi khi xoá tác giả", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
 
-            SuccDia.Show("Đã xoá thành công " + cnt + " tác giả");
+            MessageBox.Show("Đã xoá thành công " + cnt + " tác giả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding();
         }
     }

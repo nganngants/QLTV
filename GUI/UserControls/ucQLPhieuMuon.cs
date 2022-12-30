@@ -76,10 +76,6 @@ namespace GUI.UserControls
             Binding(Res);
         }
 
-        private void comboTinhTrang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void butFil_Click(object sender, EventArgs e)
         {

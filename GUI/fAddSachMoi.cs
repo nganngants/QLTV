@@ -35,12 +35,12 @@ namespace GUI
         {
             if (dateNgayNhap.Value.Date > DateTime.Now)
             {
-                MessageBox.Show("Ngày nhập không hợp lệ");
+                MessageBox.Show("Ngày nhập không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (comboTuaSach.SelectedValue==null || txtNamXB.Text=="" || txtNhaXB.Text=="" || txtDonGia.Text=="" || txtSoLuongNhap.Text=="")
             {
-                MessageBox.Show("Chưa nhập đủ dữ liệu");
+                MessageBox.Show("Chưa nhập đủ dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -52,7 +52,7 @@ namespace GUI
             catch
             {
                 txtNamXB.Text = null;
-                MessageBox.Show("Năm không hợp lệ");
+                MessageBox.Show("Năm không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string NXB = txtNhaXB.Text.ToString();
@@ -66,13 +66,13 @@ namespace GUI
             string err = kq.Item1;
             if(err != "")
             {
-                MessageBox.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             int MaPhieuNhap = BUSPhieuNhap.Instance.AddPhieuNhap(NgayNhap);
             if(MaPhieuNhap == -1)
             {
-                MessageBox.Show("Ngày nhập không hợp lệ");
+                MessageBox.Show("Ngày nhập không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 BUSSach.Instance.DelSach(idSach);
                 return;
             }
@@ -81,10 +81,10 @@ namespace GUI
             {
                 BUSSach.Instance.DelSach(idSach);
                 
-                MessageBox.Show(err);
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            MessageBox.Show("Thêm sách mới thành công");
+            MessageBox.Show("Thêm sách mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 
@@ -99,7 +99,7 @@ namespace GUI
             }
             catch
             {
-                MessageBox.Show("Không đúng format");
+                MessageBox.Show("Không đúng format", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSoLuongNhap.Text = null;
                 return;
             }
@@ -120,7 +120,7 @@ namespace GUI
             }
             catch
             {
-                MessageBox.Show("Không đúng format");
+                MessageBox.Show("Không đúng format", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtDonGia.Text = null;
                 return;
                 

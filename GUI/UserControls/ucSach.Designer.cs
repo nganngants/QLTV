@@ -95,7 +95,7 @@ namespace GUI.UserControls
             this.butHien.Image = global::GUI.Properties.Resources.close_icon;
             this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butHien.Location = new System.Drawing.Point(478, 86);
+            this.butHien.Location = new System.Drawing.Point(477, 72);
             this.butHien.Name = "butHien";
             this.butHien.Size = new System.Drawing.Size(143, 28);
             this.butHien.TabIndex = 16;
@@ -116,7 +116,7 @@ namespace GUI.UserControls
             this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTinhTrang.ItemHeight = 30;
-            this.comboTinhTrang.Location = new System.Drawing.Point(774, 74);
+            this.comboTinhTrang.Location = new System.Drawing.Point(770, 72);
             this.comboTinhTrang.Name = "comboTinhTrang";
             this.comboTinhTrang.Size = new System.Drawing.Size(201, 36);
             this.comboTinhTrang.TabIndex = 15;
@@ -135,7 +135,7 @@ namespace GUI.UserControls
             this.butTenSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butTenSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butTenSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butTenSach.Location = new System.Drawing.Point(981, 82);
+            this.butTenSach.Location = new System.Drawing.Point(977, 72);
             this.butTenSach.Name = "butTenSach";
             this.butTenSach.Size = new System.Drawing.Size(129, 28);
             this.butTenSach.TabIndex = 14;
@@ -152,7 +152,7 @@ namespace GUI.UserControls
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(7, 26);
+            this.butRefresh.Location = new System.Drawing.Point(6, 12);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(64, 54);
@@ -173,7 +173,7 @@ namespace GUI.UserControls
             this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butMaSach.Location = new System.Drawing.Point(981, 48);
+            this.butMaSach.Location = new System.Drawing.Point(977, 38);
             this.butMaSach.Name = "butMaSach";
             this.butMaSach.Size = new System.Drawing.Size(129, 28);
             this.butMaSach.TabIndex = 9;
@@ -195,7 +195,7 @@ namespace GUI.UserControls
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(320, 86);
+            this.butDel.Location = new System.Drawing.Point(319, 72);
             this.butDel.Name = "butDel";
             this.butDel.Size = new System.Drawing.Size(143, 28);
             this.butDel.TabIndex = 3;
@@ -217,7 +217,7 @@ namespace GUI.UserControls
             this.butAddOld.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAddOld.Location = new System.Drawing.Point(160, 86);
+            this.butAddOld.Location = new System.Drawing.Point(159, 72);
             this.butAddOld.Name = "butAddOld";
             this.butAddOld.Size = new System.Drawing.Size(154, 28);
             this.butAddOld.TabIndex = 4;
@@ -239,7 +239,7 @@ namespace GUI.UserControls
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(7, 86);
+            this.butAdd.Location = new System.Drawing.Point(6, 72);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(147, 28);
             this.butAdd.TabIndex = 4;
@@ -262,7 +262,7 @@ namespace GUI.UserControls
             this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Location = new System.Drawing.Point(774, 40);
+            this.txtMaSach.Location = new System.Drawing.Point(770, 38);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
             this.txtMaSach.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -389,7 +389,6 @@ namespace GUI.UserControls
             this.SachGrid.ThemeStyle.RowsStyle.Height = 30;
             this.SachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SachGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
             // isChosen
             // 

@@ -67,7 +67,7 @@ namespace GUI
             string chucVu = txtChucVu.Text;
             if(tenDG == "" || username == "" || userpwd == "" || comboNND.SelectedItem == null)
             {
-                MessageBox.Show("Chưa điền đủ thông tin");
+                MessageBox.Show("Chưa điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             int idNhom = (int)comboNND.SelectedValue;
@@ -80,13 +80,13 @@ namespace GUI
             string messg = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan, idND);
             if (messg != "")
             {
-                MessageBox.Show(messg);
+                MessageBox.Show(messg, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
                 
-                MessageBox.Show("Thêm độc giả thành công");
+                MessageBox.Show("Thêm độc giả thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
 

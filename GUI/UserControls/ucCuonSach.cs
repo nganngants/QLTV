@@ -58,21 +58,22 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " cuốn sách?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn ẩn " + idDel.Count + " cuốn sách?", "Ẩn cuốn sách", MessageBoxButtons.YesNo, MessageBoxIcon.Question) 
+                == DialogResult.No) return;
             foreach (string id in idDel)
             {
             Retry:
                 string error = BUSCuonSach.Instance.UpdAnCuonSach(id,1);
                 if (error != "")
                 {
-                    if (MessageBox.Show(error,"Lỗi", MessageBoxButtons.RetryCancel) == DialogResult.Retry)
+                    if (MessageBox.Show(error,"Lỗi", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
 
-            MessageBox.Show("Đã ẩn thành công " + cnt + " cuốn sách","", MessageBoxButtons.OK);
+            MessageBox.Show("Đã ẩn thành công " + cnt + " cuốn sách","", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding(BUSCuonSach.Instance.GetAllCuonSach());
         }
 
@@ -136,21 +137,22 @@ namespace GUI.UserControls
             }
             if (idDel.Count == 0) { return; }
             int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " cuốn sách?") == DialogResult.No) return;
+            if (MessageBox.Show("Bạn có chắc muốn hiện " + idDel.Count + " cuốn sách?", "Hiện cuốn sách",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (string id in idDel)
             {
             Retry:
                 string error = BUSCuonSach.Instance.UpdAnCuonSach(id, 0);
                 if (error != "")
                 {
-                    if (MessageBox.Show(error, "Lỗi", MessageBoxButtons.RetryCancel) == DialogResult.Retry)
+                    if (MessageBox.Show(error, "Lỗi", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                         goto Retry;
                     else continue;
                 }
                 else cnt++;
             }
 
-            MessageBox.Show("Đã hiện thành công " + cnt + " cuốn sách", "", MessageBoxButtons.OK);
+            MessageBox.Show("Đã hiện thành công " + cnt + " cuốn sách", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding(BUSCuonSach.Instance.GetAllCuonSach());
         }
     }
