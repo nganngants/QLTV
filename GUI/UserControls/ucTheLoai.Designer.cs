@@ -33,11 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtTenTL = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TheLoaiGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.tHELOAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,7 +103,7 @@
             this.txtTenTL.SelectedText = "";
             this.txtTenTL.Size = new System.Drawing.Size(179, 28);
             this.txtTenTL.TabIndex = 10;
-            this.txtTenTL.TextChanged += new System.EventHandler(this.txtTenTL_TextChanged);
+           
             // 
             // butAdd
             // 
@@ -142,27 +147,29 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.TheLoaiGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+           
+
             this.TheLoaiGrid.ColumnHeadersHeight = 35;
             this.TheLoaiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TheLoaiGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChosen,
-            this.MaTheLoai,
-            this.TenTheLoai,
-            this.SoTuaSach});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id,
+            this.MaTheLoai
+            });
+           
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.TheLoaiGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TheLoaiGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TheLoaiGrid.Location = new System.Drawing.Point(0, 121);
             this.TheLoaiGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TheLoaiGrid.Name = "TheLoaiGrid";
-            this.TheLoaiGrid.ReadOnly = true;
+            this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TheLoaiGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TheLoaiGrid.RowHeadersVisible = false;
@@ -191,6 +198,75 @@
             this.TheLoaiGrid.ThemeStyle.RowsStyle.Height = 30;
             this.TheLoaiGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TheLoaiGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TheLoaiGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TheLoaiGrid_CellClick);
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.SuccDia.Text = null;
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.AskDia.Text = null;
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Location = new System.Drawing.Point(383, 73);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(73, 65);
+            this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            // 
+            // butAdd
+            // 
+            this.butAdd.BorderRadius = 6;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(217, 89);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(160, 28);
+            this.butAdd.TabIndex = 9;
+            this.butAdd.Text = "Thêm Thể Loại";
+            this.butAdd.TextOffset = new System.Drawing.Point(12, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
+            // 
+            // tHELOAIBindingSource
+            // 
+            this.tHELOAIBindingSource.DataSource = typeof(DTO.THELOAI);
             // 
             // isChosen
             // 
@@ -204,6 +280,13 @@
             this.isChosen.TrueValue = "1";
             this.isChosen.Visible = false;
             this.isChosen.Width = 6;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
             // 
             // MaTheLoai
             // 
@@ -227,8 +310,6 @@
             this.SoTuaSach.MinimumWidth = 6;
             this.SoTuaSach.Name = "SoTuaSach";
             this.SoTuaSach.ReadOnly = true;
-            this.SoTuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // SuccDia
             // 
             this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
@@ -260,6 +341,8 @@
             // 
             this.tHELOAIBindingSource.DataSource = typeof(DTO.THELOAI);
             // 
+            this.ErrorDia.Text = null;
+            // 
             // ucTheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,6 +371,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTuaSach;

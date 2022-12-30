@@ -38,8 +38,6 @@
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.TacGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboTacGia = new System.Windows.Forms.ComboBox();
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAddTacGia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -53,6 +51,8 @@
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).BeginInit();
@@ -180,19 +180,6 @@
             this.TacGiaGrid.ThemeStyle.RowsStyle.Height = 24;
             this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // TenTacGia
-            // 
-            this.TenTacGia.HeaderText = "";
-            this.TenTacGia.MinimumWidth = 6;
-            this.TenTacGia.Name = "TenTacGia";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
             // 
             // comboTacGia
             // 
@@ -367,6 +354,18 @@
             this.SuccDia.Parent = null;
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.SuccDia.Text = null;
+            // 
+            // TenTacGia
+            // 
+            this.TenTacGia.HeaderText = "";
+            this.TenTacGia.MinimumWidth = 6;
+            this.TenTacGia.Name = "TenTacGia";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
             // 
             // fAddTuaSach
             // 

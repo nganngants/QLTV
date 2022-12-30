@@ -23,6 +23,7 @@ namespace GUI.UserControls
 
         public void Binding(List<SACH> SachList)
         {
+            SachGrid.Rows.Clear();
             foreach(SACH sach in SachList)
             {
                 SachGrid.Rows.Add(0, sach.MaSach, sach.TUASACH.MaTuaSach, sach.TUASACH.TenTuaSach, sach.NamXB, sach.NhaXB, sach.SoLuong, sach.SoLuongConLai, sach.DaAn);

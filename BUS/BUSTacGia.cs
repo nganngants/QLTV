@@ -49,5 +49,13 @@ namespace BUS
         {
             return DALTacGia.Instance.FindTacGia(name);
         }
+        public bool UpdTacGia(int id,string name)
+        {
+            TACGIA tacgia = DALTacGia.Instance.GetTacGiaById(id);
+            if (tacgia == null) return false;
+            if (DALTacGia.Instance.UpdTacGia(id, name))
+                return true;
+            else return false;
+        }
     }
 }

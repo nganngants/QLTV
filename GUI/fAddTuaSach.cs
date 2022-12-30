@@ -40,7 +40,7 @@ namespace GUI
         private void butAddTacGia_Click(object sender, EventArgs e)
         {
             bool check = false;
-            int id = Convert.ToInt32(comboTacGia.SelectedValue);
+            int id =  Convert.ToInt32(comboTacGia.SelectedValue);
             string newTg = comboTacGia.Text;
             foreach (TACGIA tg in TacGiaList)
                 if (tg.TenTacGia == newTg)
@@ -84,7 +84,7 @@ namespace GUI
             THELOAI tl = BUSTheLoai.Instance.GetTheLoai(TheLoai);
             foreach(DataGridViewRow row in TacGiaGrid.Rows)
             {
-                TgList.Add(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value)));
+                TgList.Add(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value)));       
             }
             string err = BUSTuaSach.Instance.AddTuaSach(TenTuaSach, tl, TgList);
             if(err !="")
