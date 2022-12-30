@@ -118,7 +118,7 @@
             this.txtFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFind.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFind.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F);
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFind.Location = new System.Drawing.Point(538, 72);
@@ -126,7 +126,7 @@
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtFind.PlaceholderText = "Mã, tên người dùng";
+            this.txtFind.PlaceholderText = "Mã, tên ND, tên ĐN";
             this.txtFind.SelectedText = "";
             this.txtFind.Size = new System.Drawing.Size(179, 35);
             this.txtFind.TabIndex = 17;

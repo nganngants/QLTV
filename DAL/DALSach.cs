@@ -114,6 +114,7 @@ namespace DAL
                 if (sach == null) return false;
                 sach.SoLuong += soLuongThem;
                 sach.SoLuongConLai += soLuongThem;
+                sach.DaAn = 0;
                 Console.WriteLine("{0} {1}", id, sach.SoLuong);
                 for (int i = 0; i < soLuongThem; ++i)
                 {

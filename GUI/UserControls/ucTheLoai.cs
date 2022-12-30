@@ -27,7 +27,7 @@ namespace GUI.UserControls
             TheLoaiList = BUSTheLoai.Instance.GetAllTheLoai();
             foreach(THELOAI theLoai in TheLoaiList)
             {
-                TheLoaiGrid.Rows.Add(0,theLoai.id,theLoai.MaTheLoai,theLoai.TenTheLoai,theLoai.TUASACHes.Count);
+                TheLoaiGrid.Rows.Add(theLoai.id,theLoai.MaTheLoai,theLoai.TenTheLoai,theLoai.TUASACHes.Count);
             }
         }
 
