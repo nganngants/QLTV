@@ -29,10 +29,13 @@ namespace DAL
                 if(data != cuonsach.DaAn)
                 {
                     if (data == 1) sach.SoLuongConLai--;
-                    else sach.SoLuongConLai++;
+                    if(data == 0) sach.SoLuongConLai++;
                 }
                 if (data == 1) cuonsach.TinhTrang = 2;
-                else cuonsach.TinhTrang = 1;
+                else 
+                    if(cuonsach.TinhTrang ==2) 
+                    cuonsach.TinhTrang = 1;
+                cuonsach.DaAn = data;
                 QLTVDb.Instance.SaveChanges();
                 return true;
             }

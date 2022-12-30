@@ -99,7 +99,7 @@ namespace GUI
             {
                 int id = Convert.ToInt32(row.Cells["id"].Value);
                 int DonGia = Convert.ToInt32(row.Cells["donGia"].Value);
-                int SoLuongNhap = Convert.ToInt32(row.Cells["soLuongNhap"].Value);
+                int SoLuongNhap = Convert.ToInt32(row.Cells["SoLuong"].Value);
                 BUSCT_PhieuNhap.Instance.AddCtPhieuNhap(pn, id, DonGia, SoLuongNhap);
             }
             MessageBox.Show("Thêm phiếu nhập thành công");

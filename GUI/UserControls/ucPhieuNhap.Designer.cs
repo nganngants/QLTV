@@ -29,10 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.txtNam = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtThang = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtNgay = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
@@ -41,10 +45,6 @@
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHIEUNHAPSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.txtNam = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtThang = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtNgay = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapgrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPSACHBindingSource)).BeginInit();
@@ -65,6 +65,95 @@
             this.topPanel.Size = new System.Drawing.Size(932, 100);
             this.topPanel.TabIndex = 0;
             // 
+            // siticoneButton1
+            // 
+            this.siticoneButton1.AutoRoundedCorners = true;
+            this.siticoneButton1.BorderRadius = 13;
+            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton1.FillColor = System.Drawing.Color.SlateBlue;
+            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton1.Image = global::GUI.Properties.Resources.search_icon;
+            this.siticoneButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.siticoneButton1.ImageOffset = new System.Drawing.Point(3, 0);
+            this.siticoneButton1.Location = new System.Drawing.Point(698, 57);
+            this.siticoneButton1.Name = "siticoneButton1";
+            this.siticoneButton1.Size = new System.Drawing.Size(151, 28);
+            this.siticoneButton1.TabIndex = 29;
+            this.siticoneButton1.Text = "Lọc ngày nhập";
+            this.siticoneButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.siticoneButton1.TextOffset = new System.Drawing.Point(3, 0);
+            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
+            // 
+            // txtNam
+            // 
+            this.txtNam.AutoRoundedCorners = true;
+            this.txtNam.BorderRadius = 14;
+            this.txtNam.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNam.DefaultText = "";
+            this.txtNam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNam.Location = new System.Drawing.Point(599, 57);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.PasswordChar = '\0';
+            this.txtNam.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtNam.PlaceholderText = "Năm";
+            this.txtNam.SelectedText = "";
+            this.txtNam.Size = new System.Drawing.Size(83, 30);
+            this.txtNam.TabIndex = 28;
+            // 
+            // txtThang
+            // 
+            this.txtThang.AutoRoundedCorners = true;
+            this.txtThang.BorderRadius = 14;
+            this.txtThang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThang.DefaultText = "";
+            this.txtThang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtThang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtThang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThang.Location = new System.Drawing.Point(520, 57);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.PasswordChar = '\0';
+            this.txtThang.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtThang.PlaceholderText = "Tháng";
+            this.txtThang.SelectedText = "";
+            this.txtThang.Size = new System.Drawing.Size(73, 30);
+            this.txtThang.TabIndex = 27;
+            // 
+            // txtNgay
+            // 
+            this.txtNgay.AutoRoundedCorners = true;
+            this.txtNgay.BorderRadius = 14;
+            this.txtNgay.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNgay.DefaultText = "";
+            this.txtNgay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNgay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNgay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNgay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNgay.Location = new System.Drawing.Point(446, 57);
+            this.txtNgay.Name = "txtNgay";
+            this.txtNgay.PasswordChar = '\0';
+            this.txtNgay.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtNgay.PlaceholderText = "Ngày";
+            this.txtNgay.SelectedText = "";
+            this.txtNgay.Size = new System.Drawing.Size(68, 30);
+            this.txtNgay.TabIndex = 26;
+            // 
             // butFind
             // 
             this.butFind.AutoRoundedCorners = true;
@@ -74,14 +163,14 @@
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butFind.FillColor = System.Drawing.Color.SlateBlue;
-            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFind.ForeColor = System.Drawing.Color.White;
             this.butFind.Image = global::GUI.Properties.Resources.search_icon;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(671, 54);
+            this.butFind.Location = new System.Drawing.Point(698, 23);
             this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(140, 28);
+            this.butFind.Size = new System.Drawing.Size(151, 28);
             this.butFind.TabIndex = 16;
             this.butFind.Text = "Tìm kiếm";
             this.butFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -91,7 +180,7 @@
             // txtFind
             // 
             this.txtFind.AutoRoundedCorners = true;
-            this.txtFind.BorderRadius = 13;
+            this.txtFind.BorderRadius = 12;
             this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.DefaultText = "";
             this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -99,16 +188,16 @@
             this.txtFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFind.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFind.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtFind.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(544, 54);
+            this.txtFind.Location = new System.Drawing.Point(526, 25);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtFind.PlaceholderText = "Số phiếu";
             this.txtFind.SelectedText = "";
-            this.txtFind.Size = new System.Drawing.Size(121, 28);
+            this.txtFind.Size = new System.Drawing.Size(156, 26);
             this.txtFind.TabIndex = 17;
             // 
             // butRefresh
@@ -132,21 +221,21 @@
             this.PhieuNhapgrid.AllowUserToDeleteRows = false;
             this.PhieuNhapgrid.AllowUserToResizeColumns = false;
             this.PhieuNhapgrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.PhieuNhapgrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PhieuNhapgrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.PhieuNhapgrid.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PhieuNhapgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PhieuNhapgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.PhieuNhapgrid.ColumnHeadersHeight = 35;
             this.PhieuNhapgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.PhieuNhapgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -154,21 +243,21 @@
             this.TongTien,
             this.NgayNhap});
             this.PhieuNhapgrid.DataSource = this.pHIEUNHAPSACHBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PhieuNhapgrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PhieuNhapgrid.DefaultCellStyle = dataGridViewCellStyle9;
             this.PhieuNhapgrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PhieuNhapgrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuNhapgrid.Location = new System.Drawing.Point(0, 100);
             this.PhieuNhapgrid.Name = "PhieuNhapgrid";
             this.PhieuNhapgrid.ReadOnly = true;
             this.PhieuNhapgrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.PhieuNhapgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.PhieuNhapgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.PhieuNhapgrid.RowHeadersVisible = false;
             this.PhieuNhapgrid.RowHeadersWidth = 51;
             this.PhieuNhapgrid.RowTemplate.Height = 30;
@@ -225,86 +314,6 @@
             // pHIEUNHAPSACHBindingSource
             // 
             this.pHIEUNHAPSACHBindingSource.DataSource = typeof(DTO.PHIEUNHAPSACH);
-            // 
-            // siticoneButton1
-            // 
-            this.siticoneButton1.AutoRoundedCorners = true;
-            this.siticoneButton1.BorderRadius = 13;
-            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton1.FillColor = System.Drawing.Color.SlateBlue;
-            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Image = global::GUI.Properties.Resources.search_icon;
-            this.siticoneButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.siticoneButton1.ImageOffset = new System.Drawing.Point(3, 0);
-            this.siticoneButton1.Location = new System.Drawing.Point(671, 20);
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(95, 28);
-            this.siticoneButton1.TabIndex = 29;
-            this.siticoneButton1.Text = "Tìm";
-            this.siticoneButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.siticoneButton1.TextOffset = new System.Drawing.Point(3, 0);
-            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
-            // 
-            // txtNam
-            // 
-            this.txtNam.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNam.DefaultText = "";
-            this.txtNam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNam.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNam.Location = new System.Drawing.Point(586, 20);
-            this.txtNam.Name = "txtNam";
-            this.txtNam.PasswordChar = '\0';
-            this.txtNam.PlaceholderText = "Năm";
-            this.txtNam.SelectedText = "";
-            this.txtNam.Size = new System.Drawing.Size(69, 30);
-            this.txtNam.TabIndex = 28;
-            // 
-            // txtThang
-            // 
-            this.txtThang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThang.DefaultText = "";
-            this.txtThang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtThang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThang.Location = new System.Drawing.Point(509, 20);
-            this.txtThang.Name = "txtThang";
-            this.txtThang.PasswordChar = '\0';
-            this.txtThang.PlaceholderText = "Tháng";
-            this.txtThang.SelectedText = "";
-            this.txtThang.Size = new System.Drawing.Size(57, 30);
-            this.txtThang.TabIndex = 27;
-            // 
-            // txtNgay
-            // 
-            this.txtNgay.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNgay.DefaultText = "";
-            this.txtNgay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNgay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNgay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNgay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNgay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNgay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNgay.Location = new System.Drawing.Point(423, 20);
-            this.txtNgay.Name = "txtNgay";
-            this.txtNgay.PasswordChar = '\0';
-            this.txtNgay.PlaceholderText = "Ngày";
-            this.txtNgay.SelectedText = "";
-            this.txtNgay.Size = new System.Drawing.Size(56, 30);
-            this.txtNgay.TabIndex = 26;
             // 
             // ucPhieuNhap
             // 

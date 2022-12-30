@@ -39,13 +39,13 @@ namespace GUI.UserControls
             this.txtTenLoaiDG = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.LoaiDocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lOAIDOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoaiDocGiaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).BeginInit();
@@ -108,7 +108,7 @@ namespace GUI.UserControls
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -193,6 +193,33 @@ namespace GUI.UserControls
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.LoaiDocGiaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LoaiDocGiaGrid_CellClick);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // maLoaiDocGiaDataGridViewTextBoxColumn
+            // 
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaLoaiDocGia";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã loại độc giả";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.Name = "maLoaiDocGiaDataGridViewTextBoxColumn";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tenLoaiDocGiaDataGridViewTextBoxColumn
+            // 
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiDocGia";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Tên loại độc giả";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // lOAIDOCGIABindingSource
             // 
             this.lOAIDOCGIABindingSource.DataSource = typeof(DTO.LOAIDOCGIA);
@@ -223,33 +250,6 @@ namespace GUI.UserControls
             this.SuccDia.Parent = null;
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.SuccDia.Text = null;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // maLoaiDocGiaDataGridViewTextBoxColumn
-            // 
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaLoaiDocGia";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã loại độc giả";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.Name = "maLoaiDocGiaDataGridViewTextBoxColumn";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tenLoaiDocGiaDataGridViewTextBoxColumn
-            // 
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiDocGia";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Tên loại độc giả";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ucLoaiDG
             // 
