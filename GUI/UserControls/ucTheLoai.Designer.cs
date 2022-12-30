@@ -69,7 +69,7 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(383, 56);
+            this.butRefresh.Location = new System.Drawing.Point(374, 66);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(73, 65);
@@ -86,9 +86,9 @@
             this.txtTenTL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenTL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenTL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenTL.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTL.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
             this.txtTenTL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenTL.Location = new System.Drawing.Point(14, 72);
+            this.txtTenTL.Location = new System.Drawing.Point(5, 88);
             this.txtTenTL.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenTL.Name = "txtTenTL";
             this.txtTenTL.PasswordChar = '\0';
@@ -111,7 +111,7 @@
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(217, 72);
+            this.butAdd.Location = new System.Drawing.Point(208, 88);
             this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(160, 28);

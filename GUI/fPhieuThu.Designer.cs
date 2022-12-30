@@ -60,8 +60,8 @@ namespace GUI
             this.siticoneControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.siticoneControlBox2.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.siticoneControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneControlBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(74)))), ((int)(((byte)(182)))));
-            this.siticoneControlBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(74)))), ((int)(((byte)(182)))));
+            this.siticoneControlBox2.ForeColor = System.Drawing.Color.White;
+            this.siticoneControlBox2.IconColor = System.Drawing.Color.White;
             this.siticoneControlBox2.Location = new System.Drawing.Point(683, 0);
             this.siticoneControlBox2.Name = "siticoneControlBox2";
             this.siticoneControlBox2.Size = new System.Drawing.Size(55, 45);
@@ -72,7 +72,7 @@ namespace GUI
             this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(74)))), ((int)(((byte)(182)))));
-            this.siticoneControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(74)))), ((int)(((byte)(182)))));
+            this.siticoneControlBox1.IconColor = System.Drawing.Color.White;
             this.siticoneControlBox1.Location = new System.Drawing.Point(736, 0);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
             this.siticoneControlBox1.Size = new System.Drawing.Size(57, 45);
@@ -104,7 +104,7 @@ namespace GUI
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(191, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 56);
+            this.label1.Size = new System.Drawing.Size(440, 53);
             this.label1.TabIndex = 69;
             this.label1.Text = "PHIẾU THU TIỀN PHẠT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,7 +141,7 @@ namespace GUI
             this.comboDocGia.FormattingEnabled = true;
             this.comboDocGia.Location = new System.Drawing.Point(218, 192);
             this.comboDocGia.Name = "comboDocGia";
-            this.comboDocGia.Size = new System.Drawing.Size(368, 36);
+            this.comboDocGia.Size = new System.Drawing.Size(368, 35);
             this.comboDocGia.TabIndex = 99;
             this.comboDocGia.ValueMember = "ID";
             this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
@@ -157,7 +157,7 @@ namespace GUI
             this.label3.ForeColor = System.Drawing.Color.SlateBlue;
             this.label3.Location = new System.Drawing.Point(213, 408);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 25);
+            this.label3.Size = new System.Drawing.Size(119, 25);
             this.label3.TabIndex = 98;
             this.label3.Text = "Tổng nợ mới:";
             // 
@@ -189,7 +189,7 @@ namespace GUI
             this.labelNoMoi.ForeColor = System.Drawing.Color.SlateBlue;
             this.labelNoMoi.Location = new System.Drawing.Point(213, 446);
             this.labelNoMoi.Name = "labelNoMoi";
-            this.labelNoMoi.Size = new System.Drawing.Size(27, 32);
+            this.labelNoMoi.Size = new System.Drawing.Size(26, 31);
             this.labelNoMoi.TabIndex = 94;
             this.labelNoMoi.Text = "0";
             // 
@@ -200,7 +200,7 @@ namespace GUI
             this.labelNoHienTai.ForeColor = System.Drawing.Color.SlateBlue;
             this.labelNoHienTai.Location = new System.Drawing.Point(213, 283);
             this.labelNoHienTai.Name = "labelNoHienTai";
-            this.labelNoHienTai.Size = new System.Drawing.Size(27, 32);
+            this.labelNoHienTai.Size = new System.Drawing.Size(26, 31);
             this.labelNoHienTai.TabIndex = 94;
             this.labelNoHienTai.Text = "0";
             // 
@@ -211,7 +211,7 @@ namespace GUI
             this.label9.ForeColor = System.Drawing.Color.SlateBlue;
             this.label9.Location = new System.Drawing.Point(213, 245);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(154, 25);
+            this.label9.Size = new System.Drawing.Size(145, 25);
             this.label9.TabIndex = 94;
             this.label9.Text = "Tổng nợ hiện tại:";
             // 
@@ -222,7 +222,7 @@ namespace GUI
             this.label8.ForeColor = System.Drawing.Color.SlateBlue;
             this.label8.Location = new System.Drawing.Point(213, 327);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 25);
+            this.label8.Size = new System.Drawing.Size(102, 25);
             this.label8.TabIndex = 93;
             this.label8.Text = "Số tiền thu:";
             // 
@@ -250,7 +250,7 @@ namespace GUI
             this.label12.ForeColor = System.Drawing.Color.SlateBlue;
             this.label12.Location = new System.Drawing.Point(213, 498);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 25);
+            this.label12.Size = new System.Drawing.Size(87, 25);
             this.label12.TabIndex = 78;
             this.label12.Text = "Ngày lập:";
             // 
@@ -261,13 +261,13 @@ namespace GUI
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(213, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 46;
             this.label2.Text = "Độc giả:";
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.topPanel.BackColor = System.Drawing.Color.SlateBlue;
             this.topPanel.Controls.Add(this.siticoneControlBox1);
             this.topPanel.Controls.Add(this.siticoneControlBox2);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;

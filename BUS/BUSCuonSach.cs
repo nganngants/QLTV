@@ -45,6 +45,7 @@ namespace BUS
             CUONSACH cs = DALCuonSach.Instance.GetCuonSachByMa(id);
             if (data == 1 && cs.TinhTrang == 0)
                 return "Không thể ẩn vì còn sách đang được mượn";
+            if (cs.TinhTrang == 0) return "";
             if (DALCuonSach.Instance.UpdAnCuonSach(cs.id, data))
                 return "";
             return "Lỗi";

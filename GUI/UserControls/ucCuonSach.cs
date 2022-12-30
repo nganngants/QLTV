@@ -50,7 +50,7 @@ namespace GUI.UserControls
             foreach (DataGridViewRow row in CuonSachGrid.Rows)
             {
                 //Console.WriteLine(row.Cells["isChosen"].Value);
-                if (row.Cells["isChosen"].Value == "1")
+                if (row.Cells["isChosen"].Value == "1" && row.Cells["TinhTrang"].Value != "Đang được muuợn")
                 {
                     idDel.Add((string)row.Cells["MaCuonSach"].Value);
 

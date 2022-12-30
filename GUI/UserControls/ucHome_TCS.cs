@@ -26,7 +26,7 @@ namespace GUI.UserControls
         {
             SachGrid.Rows.Clear();
             foreach(SACH sach in SachList)
-                if(sach.DaAn == 0)
+                if(sach.DaAn == 0 && sach.SoLuongConLai >0)
             {
                     string tacgia = "";
                     foreach (TACGIA tg in sach.TUASACH.TACGIAs)

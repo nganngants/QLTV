@@ -31,9 +31,9 @@ namespace GUI.UserControls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butHien = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.comboTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
@@ -85,18 +85,19 @@ namespace GUI.UserControls
             // 
             // butHien
             // 
-            this.butHien.BorderRadius = 6;
+            this.butHien.AutoRoundedCorners = true;
+            this.butHien.BorderRadius = 13;
             this.butHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butHien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butHien.FillColor = System.Drawing.Color.SlateBlue;
-            this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold);
             this.butHien.ForeColor = System.Drawing.Color.White;
             this.butHien.Image = global::GUI.Properties.Resources.close_icon;
             this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butHien.Location = new System.Drawing.Point(477, 72);
+            this.butHien.Location = new System.Drawing.Point(477, 86);
             this.butHien.Name = "butHien";
             this.butHien.Size = new System.Drawing.Size(143, 28);
             this.butHien.TabIndex = 16;
@@ -114,7 +115,7 @@ namespace GUI.UserControls
             this.comboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTinhTrang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboTinhTrang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTinhTrang.ItemHeight = 30;
             this.comboTinhTrang.Location = new System.Drawing.Point(770, 72);
@@ -131,12 +132,12 @@ namespace GUI.UserControls
             this.butTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butTenSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butTenSach.FillColor = System.Drawing.Color.SlateBlue;
-            this.butTenSach.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butTenSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butTenSach.ForeColor = System.Drawing.Color.White;
             this.butTenSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butTenSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butTenSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butTenSach.Location = new System.Drawing.Point(977, 72);
+            this.butTenSach.Location = new System.Drawing.Point(977, 80);
             this.butTenSach.Name = "butTenSach";
             this.butTenSach.Size = new System.Drawing.Size(129, 28);
             this.butTenSach.TabIndex = 14;
@@ -169,7 +170,7 @@ namespace GUI.UserControls
             this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butMaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butMaSach.FillColor = System.Drawing.Color.SlateBlue;
-            this.butMaSach.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butMaSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butMaSach.ForeColor = System.Drawing.Color.White;
             this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -185,18 +186,19 @@ namespace GUI.UserControls
             // 
             // butDel
             // 
-            this.butDel.BorderRadius = 6;
+            this.butDel.AutoRoundedCorners = true;
+            this.butDel.BorderRadius = 13;
             this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butDel.FillColor = System.Drawing.Color.SlateBlue;
-            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold);
             this.butDel.ForeColor = System.Drawing.Color.White;
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(319, 72);
+            this.butDel.Location = new System.Drawing.Point(319, 86);
             this.butDel.Name = "butDel";
             this.butDel.Size = new System.Drawing.Size(143, 28);
             this.butDel.TabIndex = 3;
@@ -207,18 +209,19 @@ namespace GUI.UserControls
             // 
             // butAddOld
             // 
-            this.butAddOld.BorderRadius = 6;
+            this.butAddOld.AutoRoundedCorners = true;
+            this.butAddOld.BorderRadius = 13;
             this.butAddOld.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butAddOld.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAddOld.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAddOld.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAddOld.FillColor = System.Drawing.Color.SlateBlue;
-            this.butAddOld.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAddOld.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold);
             this.butAddOld.ForeColor = System.Drawing.Color.White;
             this.butAddOld.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAddOld.Location = new System.Drawing.Point(159, 72);
+            this.butAddOld.Location = new System.Drawing.Point(159, 86);
             this.butAddOld.Name = "butAddOld";
             this.butAddOld.Size = new System.Drawing.Size(154, 28);
             this.butAddOld.TabIndex = 4;
@@ -229,18 +232,19 @@ namespace GUI.UserControls
             // 
             // butAdd
             // 
-            this.butAdd.BorderRadius = 6;
+            this.butAdd.AutoRoundedCorners = true;
+            this.butAdd.BorderRadius = 13;
             this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold);
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(6, 72);
+            this.butAdd.Location = new System.Drawing.Point(6, 86);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(147, 28);
             this.butAdd.TabIndex = 4;
@@ -260,7 +264,7 @@ namespace GUI.UserControls
             this.txtMaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaSach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaSach.Location = new System.Drawing.Point(770, 38);
@@ -324,20 +328,20 @@ namespace GUI.UserControls
             this.SachGrid.AllowUserToAddRows = false;
             this.SachGrid.AllowUserToDeleteRows = false;
             this.SachGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.SachGrid.ColumnHeadersHeight = 35;
             this.SachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.SachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -351,20 +355,20 @@ namespace GUI.UserControls
             this.SoLuong,
             this.ConLai,
             this.DaAn});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SachGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SachGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.SachGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.Location = new System.Drawing.Point(0, 120);
             this.SachGrid.Name = "SachGrid";
             this.SachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.SachGrid.RowHeadersVisible = false;
             this.SachGrid.RowHeadersWidth = 51;
             this.SachGrid.RowTemplate.Height = 30;

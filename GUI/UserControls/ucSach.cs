@@ -47,6 +47,7 @@ namespace GUI.UserControls
         {
             var f = new fAddSachDaCo();
             f.ShowDialog();
+            Binding(BUSSach.Instance.GetAllSach());
         }
 
 
@@ -101,7 +102,7 @@ namespace GUI.UserControls
                 if (sach.MaSach.Contains(pat) || sach.TUASACH.TenTuaSach.Contains(pat) || sach.TUASACH.MaTuaSach.Contains(pat))
                     Res.Add(sach);
             }
-            this.SachGrid.DataSource = Res;
+            Binding(Res);
           
         }
 
