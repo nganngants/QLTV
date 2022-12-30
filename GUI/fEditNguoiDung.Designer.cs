@@ -33,7 +33,6 @@
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.comboNhomND = new System.Windows.Forms.ComboBox();
             this.txtUserpwd = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.labelMaNd = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.labelNhomNND = new System.Windows.Forms.Label();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,9 +86,9 @@
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticonePanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.siticonePanel1.BorderThickness = 2;
-            this.siticonePanel1.Controls.Add(this.comboNhomND);
             this.siticonePanel1.Controls.Add(this.txtUserpwd);
             this.siticonePanel1.Controls.Add(this.txtUsername);
+            this.siticonePanel1.Controls.Add(this.labelNhomNND);
             this.siticonePanel1.Controls.Add(this.label3);
             this.siticonePanel1.Controls.Add(this.label5);
             this.siticonePanel1.Controls.Add(this.butSave);
@@ -106,15 +106,6 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(696, 650);
             this.siticonePanel1.TabIndex = 12;
-            // 
-            // comboNhomND
-            // 
-            this.comboNhomND.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboNhomND.FormattingEnabled = true;
-            this.comboNhomND.Location = new System.Drawing.Point(137, 252);
-            this.comboNhomND.Name = "comboNhomND";
-            this.comboNhomND.Size = new System.Drawing.Size(204, 30);
-            this.comboNhomND.TabIndex = 53;
             // 
             // txtUserpwd
             // 
@@ -202,7 +193,7 @@
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(91, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(515, 46);
+            this.label1.Size = new System.Drawing.Size(500, 44);
             this.label1.TabIndex = 5;
             this.label1.Text = "SỬA THÔNG TIN NGƯỜI DÙNG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -322,6 +313,18 @@
             this.siticoneDragControl1.TargetControl = this;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
+            // labelNhomNND
+            // 
+            this.labelNhomNND.AutoSize = true;
+            this.labelNhomNND.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.labelNhomNND.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNhomNND.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelNhomNND.Location = new System.Drawing.Point(133, 260);
+            this.labelNhomNND.Name = "labelNhomNND";
+            this.labelNhomNND.Size = new System.Drawing.Size(165, 24);
+            this.labelNhomNND.TabIndex = 31;
+            this.labelNhomNND.Text = "Nhóm Người Dùng";
+            // 
             // fEditNguoiDung
             // 
             this.AcceptButton = this.butSave;
@@ -362,7 +365,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelMaNd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboNhomND;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private System.Windows.Forms.Label labelNhomNND;
     }
 }

@@ -34,9 +34,7 @@ namespace GUI
             {
                 n.TenNhomNguoiDung = n.TenNhomNguoiDung + "(" + n.MaNhomNguoiDung + ")";
             }
-            comboNhomND.DataSource = dsNND;
-            comboNhomND.ValueMember = "id";
-            comboNhomND.DisplayMember = "TenNhomNguoiDung";
+            labelNhomNND.Text = nd.NHOMNGUOIDUNG.TenNhomNguoiDung;
             //comboNhomND.SelectedValue = nd.id;
 
             if (nd.NgaySinh != null) dateNgaySinh.Value = (DateTime) nd.NgaySinh;
@@ -49,9 +47,8 @@ namespace GUI
             string chucvu = txtChucVu.Text;
             string tendn = txtUsername.Text;
             string matkhau = txtUserpwd.Text;
-            int idNhom = (int)comboNhomND.SelectedValue;
-
-            string err = BUSNguoiDung.Instance.UpdNguoiDung(id, ten, ngaysinh, chucvu, idNhom);
+            var nd = BUSNguoiDung.Instance.GetNguoiDungById(id);
+            string err = BUSNguoiDung.Instance.UpdNguoiDung(id, ten, ngaysinh, chucvu, nd.NHOMNGUOIDUNG.id);
 
             if (err == "")
                 MessageBox.Show("Sửa thông tin thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

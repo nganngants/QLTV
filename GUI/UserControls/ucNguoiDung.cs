@@ -43,6 +43,13 @@ namespace GUI.UserControls
             int stt = e.RowIndex;
             if (stt == -1) return;
             if (e.ColumnIndex == 1) return;
+            if (e.ColumnIndex == 7)
+            {
+                var fedit = new fEditNguoiDung(BUSNguoiDung.Instance.GetNguoiDung(dataGrid.Rows[stt].Cells["MaNguoiDung"].Value.ToString()).id);
+                fedit.ShowDialog();
+                Bind(BUSNguoiDung.Instance.GetAllNguoiDung());
+                return;
+            }
             var f = new fInfoNguoiDung(BUSNguoiDung.Instance.GetNguoiDung(dataGrid.Rows[stt].Cells["MaNguoiDung"].Value.ToString()).id);
             f.Show();
             Bind(BUSNguoiDung.Instance.GetAllNguoiDung());
