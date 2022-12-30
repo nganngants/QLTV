@@ -68,8 +68,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label16 = new System.Windows.Forms.Label();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.messageDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.infoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -704,24 +702,6 @@
             this.label16.TabIndex = 10;
             this.label16.Text = "Quy định về sách và mượn trả";
             // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
-            // messageDia
-            // 
-            this.messageDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.messageDia.Caption = null;
-            this.messageDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
-            this.messageDia.Parent = null;
-            this.messageDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.messageDia.Text = null;
-            // 
             // ucThayDoiQuiDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -804,7 +784,5 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton butSave;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel10;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel11;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog messageDia;
     }
 }
