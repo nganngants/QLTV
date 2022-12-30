@@ -23,15 +23,11 @@ namespace GUI.UserControls
 
         public void Binding(List<SACH> SachList)
         {
-            this.SachGrid.DataSource = SachList;
-            int i = 0;
-            foreach (DataGridViewRow row in SachGrid.Rows)
+            foreach(SACH sach in SachList)
             {
-                row.Cells["TuaSach"].Value = SachList[i].TUASACH.TenTuaSach + " (" + SachList[i].TUASACH.MaTuaSach + ")";
-                i++;
+                SachGrid.Rows.Add(0, sach.MaSach, sach.TUASACH.MaTuaSach, sach.TUASACH.TenTuaSach, sach.NamXB, sach.NhaXB, sach.SoLuong, sach.SoLuongConLai, sach.DaAn);
             }
-            
-            
+
         }
         private void ucSach_Load(object sender, EventArgs e)
         {
@@ -113,12 +109,7 @@ namespace GUI.UserControls
                     Res.Add(sach);
             }
             this.SachGrid.DataSource = Res;
-            int i = 0;
-            foreach (DataGridViewRow row in SachGrid.Rows)
-            {
-                row.Cells["TuaSach"].Value = Res[i].TUASACH.TenTuaSach + " (" + Res[i].TUASACH.MaTuaSach + ")";
-                i++;
-            }
+          
         }
 
         private void txtMaSach_TextChanged(object sender, EventArgs e)
