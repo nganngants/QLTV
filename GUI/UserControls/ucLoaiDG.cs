@@ -48,39 +48,7 @@ namespace GUI.UserControls
             Binding();
         }
 
-        private void butDel_Click(object sender, EventArgs e)
-        {
-            
-            List<int> idDel = new List<int>();
-            foreach (DataGridViewRow row in LoaiDocGiaGrid.Rows)
-            {
-                //Console.WriteLine(row.Cells["isChosen"].Value);
-                if (row.Cells["isChosen"].Value == "1")
-                {
-                    idDel.Add((int)row.Cells["id"].Value);
-                   
-                }
-            }
-            int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count+ " loại độc giả?", "Xóa loại độc giả",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
-            foreach (int id in idDel)
-            {
-            Retry:
-                string error = BUSLoaiDocGia.Instance.DelLoaiDocGia(id);
-                if (error != "")
-                {
-                    if (MessageBox.Show(error, "Lỗi", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
-                        goto Retry;
-                    else continue;
-                }
-                else cnt++;
-            }
-            
-                MessageBox.Show("Đã xoá thành công " + cnt + " loại độc giả", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Binding();
-        }
+       
 
         private void butRefresh_Click(object sender, EventArgs e)
         {

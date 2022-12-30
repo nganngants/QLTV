@@ -35,6 +35,8 @@ namespace GUI.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.PhieuThuGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
@@ -43,8 +45,10 @@ namespace GUI.UserControls
             this.SoTienThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHIEUTHUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtNgay = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtThang = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtNam = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.butFindNgay = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuThuGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUTHUBindingSource)).BeginInit();
@@ -52,6 +56,10 @@ namespace GUI.UserControls
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.butFindNgay);
+            this.topPanel.Controls.Add(this.txtNam);
+            this.topPanel.Controls.Add(this.txtThang);
+            this.topPanel.Controls.Add(this.txtNgay);
             this.topPanel.Controls.Add(this.butFind);
             this.topPanel.Controls.Add(this.txtFind);
             this.topPanel.Controls.Add(this.butRefresh);
@@ -61,6 +69,52 @@ namespace GUI.UserControls
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(997, 120);
             this.topPanel.TabIndex = 0;
+            // 
+            // butFind
+            // 
+            this.butFind.AutoRoundedCorners = true;
+            this.butFind.BorderRadius = 13;
+            this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butFind.FillColor = System.Drawing.Color.SlateBlue;
+            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butFind.ForeColor = System.Drawing.Color.White;
+            this.butFind.Image = global::GUI.Properties.Resources.search_icon;
+            this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
+            this.butFind.Location = new System.Drawing.Point(758, 86);
+            this.butFind.Name = "butFind";
+            this.butFind.Size = new System.Drawing.Size(150, 28);
+            this.butFind.TabIndex = 16;
+            this.butFind.Text = "Tìm kiếm";
+            this.butFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butFind.TextOffset = new System.Drawing.Point(3, 0);
+            this.butFind.Click += new System.EventHandler(this.butFind_Click);
+            // 
+            // txtFind
+            // 
+            this.txtFind.AutoRoundedCorners = true;
+            this.txtFind.BorderRadius = 13;
+            this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFind.DefaultText = "";
+            this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFind.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFind.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFind.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFind.Location = new System.Drawing.Point(567, 86);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.PasswordChar = '\0';
+            this.txtFind.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtFind.PlaceholderText = "Số phiếu, mã độc giả";
+            this.txtFind.SelectedText = "";
+            this.txtFind.Size = new System.Drawing.Size(185, 28);
+            this.txtFind.TabIndex = 17;
             // 
             // butRefresh
             // 
@@ -167,6 +221,7 @@ namespace GUI.UserControls
             this.PhieuThuGrid.ThemeStyle.RowsStyle.Height = 30;
             this.PhieuThuGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuThuGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PhieuThuGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhieuThuGrid_CellContentClick);
             // 
             // SoPhieuThu
             // 
@@ -200,51 +255,88 @@ namespace GUI.UserControls
             // 
             this.pHIEUTHUBindingSource.DataSource = typeof(DTO.PHIEUTHU);
             // 
-            // butFind
+            // txtNgay
             // 
-            this.butFind.AutoRoundedCorners = true;
-            this.butFind.BorderRadius = 13;
-            this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butFind.FillColor = System.Drawing.Color.SlateBlue;
-            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.butFind.ForeColor = System.Drawing.Color.White;
-            this.butFind.Image = global::GUI.Properties.Resources.search_icon;
-            this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(758, 86);
-            this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(140, 28);
-            this.butFind.TabIndex = 16;
-            this.butFind.Text = "Tìm kiếm";
-            this.butFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butFind.TextOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Click += new System.EventHandler(this.butFind_Click);
+            this.txtNgay.BorderRadius = 4;
+            this.txtNgay.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNgay.DefaultText = "";
+            this.txtNgay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNgay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNgay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNgay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNgay.Location = new System.Drawing.Point(567, 50);
+            this.txtNgay.Name = "txtNgay";
+            this.txtNgay.PasswordChar = '\0';
+            this.txtNgay.PlaceholderText = "Ngày";
+            this.txtNgay.SelectedText = "";
+            this.txtNgay.Size = new System.Drawing.Size(48, 30);
+            this.txtNgay.TabIndex = 18;
             // 
-            // txtFind
+            // txtThang
             // 
-            this.txtFind.AutoRoundedCorners = true;
-            this.txtFind.BorderRadius = 13;
-            this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFind.DefaultText = "";
-            this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFind.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFind.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(491, 86);
-            this.txtFind.Name = "txtFind";
-            this.txtFind.PasswordChar = '\0';
-            this.txtFind.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtFind.PlaceholderText = "Số phiếu, mã độc giả, ngày lập";
-            this.txtFind.SelectedText = "";
-            this.txtFind.Size = new System.Drawing.Size(261, 28);
-            this.txtFind.TabIndex = 17;
+            this.txtThang.BorderRadius = 4;
+            this.txtThang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThang.DefaultText = "";
+            this.txtThang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtThang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtThang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtThang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThang.Location = new System.Drawing.Point(621, 50);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.PasswordChar = '\0';
+            this.txtThang.PlaceholderText = "Tháng";
+            this.txtThang.SelectedText = "";
+            this.txtThang.Size = new System.Drawing.Size(55, 30);
+            this.txtThang.TabIndex = 19;
+            // 
+            // txtNam
+            // 
+            this.txtNam.BorderRadius = 4;
+            this.txtNam.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNam.DefaultText = "";
+            this.txtNam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNam.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNam.Location = new System.Drawing.Point(682, 50);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.PasswordChar = '\0';
+            this.txtNam.PlaceholderText = "Năm";
+            this.txtNam.SelectedText = "";
+            this.txtNam.Size = new System.Drawing.Size(70, 30);
+            this.txtNam.TabIndex = 20;
+            // 
+            // butFindNgay
+            // 
+            this.butFindNgay.AutoRoundedCorners = true;
+            this.butFindNgay.BorderRadius = 13;
+            this.butFindNgay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butFindNgay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butFindNgay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butFindNgay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butFindNgay.FillColor = System.Drawing.Color.SlateBlue;
+            this.butFindNgay.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butFindNgay.ForeColor = System.Drawing.Color.White;
+            this.butFindNgay.Image = global::GUI.Properties.Resources.search_icon;
+            this.butFindNgay.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butFindNgay.ImageOffset = new System.Drawing.Point(3, 0);
+            this.butFindNgay.Location = new System.Drawing.Point(758, 50);
+            this.butFindNgay.Name = "butFindNgay";
+            this.butFindNgay.Size = new System.Drawing.Size(150, 28);
+            this.butFindNgay.TabIndex = 21;
+            this.butFindNgay.Text = "Lọc theo ngày";
+            this.butFindNgay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butFindNgay.TextOffset = new System.Drawing.Point(3, 0);
+            this.butFindNgay.Click += new System.EventHandler(this.butFindNgay_Click);
             // 
             // ucQLPhieuThu
             // 
@@ -274,5 +366,9 @@ namespace GUI.UserControls
         private DataGridViewTextBoxColumn NgayLap;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butFind;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtFind;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butFindNgay;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtNam;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtThang;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtNgay;
     }
 }

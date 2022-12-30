@@ -25,6 +25,10 @@ namespace BUS
         {
             return DALPhieuNhapSach.Instance.GetAllPhieuNhapSach();
         }
+        public List<PHIEUNHAPSACH> FindPhieuNhap(int? Ngay, int? Thang, int? Nam)
+        {
+            return DALPhieuNhapSach.Instance.FindPhieuByNgayNhap(Ngay, Thang, Nam);
+        }
         public PHIEUNHAPSACH GetPhieuNhap(int MaPhieuNhap)
         {
             PHIEUNHAPSACH pn;

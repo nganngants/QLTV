@@ -32,11 +32,7 @@ namespace GUI.UserControls
         private void PhieuNhapgrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int stt = e.RowIndex;
-            if (stt == -1)
-            {
-                Sorting(e.ColumnIndex);
-                return;
-            }
+          
             int idPhieu = (int)PhieuNhapgrid.Rows[stt].Cells["SoPhieuNhap"].Value;
             var f = new fInfoPhieuNhap(idPhieu);
             f.ShowDialog();
@@ -45,6 +41,7 @@ namespace GUI.UserControls
         private void butRefresh_Click(object sender, EventArgs e)
         {
             Binding(BUSPhieuNhap.Instance.GetAllPhieuNhap());
+            txtNam.Text = txtThang.Text = txtNgay.Text = txtFind.Text = "";
         }
 
         private void PhieuNhapgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,6 +60,28 @@ namespace GUI.UserControls
             }
             Binding(Res);
 
+        }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            int? Ngay = null, Thang = null, Nam = null;
+            try
+            {
+
+                if (txtNgay.Text != "")
+                    Ngay = (Convert.ToInt32(txtNgay.Text));
+                if (txtThang.Text != "")
+                    Thang = (Convert.ToInt32(txtThang.Text));
+                if (txtNam.Text != "")
+                    Nam = (Convert.ToInt32(txtNam.Text));
+               
+            }
+            catch
+            {
+                MessageBox.Show("Ngày tháng năm sai format!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Binding(BUSPhieuNhap.Instance.FindPhieuNhap(Ngay, Thang, Nam));
         }
     }
 }

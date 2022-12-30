@@ -37,17 +37,15 @@ namespace GUI.UserControls
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtTenLoaiDG = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.LoaiDocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lOAIDOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoaiDocGiaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).BeginInit();
@@ -57,7 +55,6 @@ namespace GUI.UserControls
             // 
             this.topPanel.Controls.Add(this.butRefresh);
             this.topPanel.Controls.Add(this.txtTenLoaiDG);
-            this.topPanel.Controls.Add(this.butDel);
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -75,7 +72,7 @@ namespace GUI.UserControls
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(567, 69);
+            this.butRefresh.Location = new System.Drawing.Point(390, 69);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(82, 66);
@@ -94,7 +91,7 @@ namespace GUI.UserControls
             this.txtTenLoaiDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenLoaiDG.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
             this.txtTenLoaiDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenLoaiDG.Location = new System.Drawing.Point(185, 87);
+            this.txtTenLoaiDG.Location = new System.Drawing.Point(8, 87);
             this.txtTenLoaiDG.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenLoaiDG.Name = "txtTenLoaiDG";
             this.txtTenLoaiDG.PasswordChar = '\0';
@@ -102,29 +99,6 @@ namespace GUI.UserControls
             this.txtTenLoaiDG.SelectedText = "";
             this.txtTenLoaiDG.Size = new System.Drawing.Size(179, 28);
             this.txtTenLoaiDG.TabIndex = 11;
-            // 
-            // butDel
-            // 
-            this.butDel.BorderRadius = 6;
-            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butDel.FillColor = System.Drawing.Color.SlateBlue;
-            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDel.ForeColor = System.Drawing.Color.White;
-            this.butDel.Image = global::GUI.Properties.Resources.close_icon;
-            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(3, 87);
-            this.butDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(174, 28);
-            this.butDel.TabIndex = 1;
-            this.butDel.Text = "Xóa Loại Độc Giả";
-            this.butDel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
-            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butAdd
             // 
@@ -139,7 +113,7 @@ namespace GUI.UserControls
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(372, 87);
+            this.butAdd.Location = new System.Drawing.Point(195, 87);
             this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(189, 28);
@@ -172,7 +146,6 @@ namespace GUI.UserControls
             this.LoaiDocGiaGrid.ColumnHeadersHeight = 35;
             this.LoaiDocGiaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.LoaiDocGiaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.isChosen,
             this.id,
             this.maLoaiDocGiaDataGridViewTextBoxColumn,
             this.tenLoaiDocGiaDataGridViewTextBoxColumn});
@@ -220,45 +193,6 @@ namespace GUI.UserControls
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.LoaiDocGiaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LoaiDocGiaGrid_CellClick);
             // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.FalseValue = "0";
-            this.isChosen.FillWeight = 80.21391F;
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Width = 6;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // maLoaiDocGiaDataGridViewTextBoxColumn
-            // 
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaLoaiDocGia";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã loại độc giả";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.Name = "maLoaiDocGiaDataGridViewTextBoxColumn";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tenLoaiDocGiaDataGridViewTextBoxColumn
-            // 
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiDocGia";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Tên loại độc giả";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // lOAIDOCGIABindingSource
             // 
             this.lOAIDOCGIABindingSource.DataSource = typeof(DTO.LOAIDOCGIA);
@@ -290,6 +224,33 @@ namespace GUI.UserControls
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.SuccDia.Text = null;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // maLoaiDocGiaDataGridViewTextBoxColumn
+            // 
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaLoaiDocGia";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã loại độc giả";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.Name = "maLoaiDocGiaDataGridViewTextBoxColumn";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tenLoaiDocGiaDataGridViewTextBoxColumn
+            // 
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiDocGia";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Tên loại độc giả";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // ucLoaiDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -308,8 +269,6 @@ namespace GUI.UserControls
         }
 
         #endregion
-
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView LoaiDocGiaGrid;
@@ -317,11 +276,10 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
-        private DataGridViewCheckBoxColumn isChosen;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenLoaiDG;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn maLoaiDocGiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tenLoaiDocGiaDataGridViewTextBoxColumn;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenLoaiDG;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
     }
 }
