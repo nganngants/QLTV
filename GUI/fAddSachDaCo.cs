@@ -59,6 +59,11 @@ namespace GUI
                 MessageBox.Show("Sai format","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
+            if (SoLuongNhap <= 0)
+            {
+                MessageBox.Show("Số lượng nhập không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             SACH sach = BUSSach.Instance.GetSach(Convert.ToInt32(comboSach.SelectedValue));
             if(sach.NamXB > dateNgayNhap.Value.Year )
             {
@@ -68,6 +73,15 @@ namespace GUI
             int ThanhTien = SoLuongNhap * (int)sach.DonGia;
             TongTien += ThanhTien;
             labelTongTien.Text = "Tổng tiền: " + TongTien.ToString();
+            foreach(DataGridViewRow row in SachGrid.Rows)
+            {
+                if (Convert.ToInt32(row.Cells["id"].Value) == sach.id)
+                {
+                    row.Cells["SoLuong"].Value = Convert.ToInt32(row.Cells["SoLuong"].Value )+ SoLuongNhap;
+                    row.Cells["ThanhTien"].Value = Convert.ToInt32(row.Cells["ThanhTien"].Value) + ThanhTien;
+                    return;
+                }
+            }
             SachGrid.Rows.Add(sach.id,sach.MaSach, sach.TUASACH.TenTuaSach, sach.DonGia, SoLuongNhap, ThanhTien);
         }
 
@@ -87,7 +101,6 @@ namespace GUI
                 int DonGia = Convert.ToInt32(row.Cells["donGia"].Value);
                 int SoLuongNhap = Convert.ToInt32(row.Cells["soLuongNhap"].Value);
                 BUSCT_PhieuNhap.Instance.AddCtPhieuNhap(pn, id, DonGia, SoLuongNhap);
-                Console.WriteLine("sdfsdf",id, DonGia, SoLuongNhap);
             }
             MessageBox.Show("Thêm phiếu nhập thành công");
             this.Close();
