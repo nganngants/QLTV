@@ -47,8 +47,13 @@ namespace BUS
             THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
             //System.TimeSpan duration = new System.TimeSpan(thamso.ThoiHanMuonSach, 0, 0, 0);
             DateTime HanTra = NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa);
+            if (NgayMuon > dg.NgayHetHan)
+                return "Thẻ đã hết hạn";
+            if (NgayMuon < dg.NgayLapThe)
+                return "Ngày mượn nhỏ hơn ngày lập thẻ!";
             if (cs.TinhTrang == 0) return "Cuốn sách đã được mượn!";
             int cnt = 0;
+
             foreach (PHIEUMUONTRA pmt in dg.PHIEUMUONTRAs)
             {
                 if (pmt.NgayTra == null && DateTime.Now.Date < pmt.HanTra)
