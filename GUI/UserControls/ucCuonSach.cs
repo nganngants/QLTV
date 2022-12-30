@@ -30,7 +30,7 @@ namespace GUI.UserControls
             foreach(CUONSACH cs in CuonSachList)
             {
                 string TinhTrang = comboList[(int)cs.TinhTrang];
-                CuonSachGrid.Rows.Add(0,cs.MaCuonSach,cs.SACH.TUASACH.MaTuaSach, cs.SACH.MaSach, cs.SACH.TUASACH.TenTuaSach, TinhTrang);
+                CuonSachGrid.Rows.Add(0,cs.MaCuonSach, cs.SACH.MaSach, cs.SACH.TUASACH.TenTuaSach + " (" + cs.SACH.TUASACH.MaTuaSach + " )", TinhTrang);
             }
             
         }

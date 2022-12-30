@@ -64,7 +64,9 @@ namespace GUI.UserControls
             List<NGUOIDUNG> Res = new List<NGUOIDUNG>();
             foreach(NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
             {
-                if (nd.TenNguoiDung.ToLower().Contains(pat) || nd.MaNguoiDung.ToLower().Contains(pat))
+                if (nd.TenNguoiDung.ToLower().Contains(pat) 
+                    || nd.MaNguoiDung.ToLower().Contains(pat)
+                    || nd.TenDangNhap.ToLower().Contains(pat))
                     Res.Add(nd);
                 else if (nd.ChucVu != null && nd.ChucVu.ToLower().Contains(pat))
                     Res.Add(nd);

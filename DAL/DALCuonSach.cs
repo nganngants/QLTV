@@ -77,7 +77,7 @@ namespace DAL
             return res;
         }
 
-        public bool AddCuonSach (SACH sach, int tinhTrang)
+        public bool AddCuonSach (SACH sach, int tinhTrang = 2)
         {
             try
             {
