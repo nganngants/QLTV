@@ -36,11 +36,11 @@ namespace BUS
         }
         public bool DelTheLoai(int id)
         {
-            return DALTheLoai.Instance.DelTheLoai(GetTheLoai(id).id);
+            return DALTheLoai.Instance.DelTheLoai(id);
         }
         public bool UpdTheLoai(int id,string name)
         {
-            return DALTheLoai.Instance.UpdTheLoai(GetTheLoai(id).id, name);
+            return DALTheLoai.Instance.UpdTheLoai(id, name);
         }
 
         public bool AddTheLoai (string name)
