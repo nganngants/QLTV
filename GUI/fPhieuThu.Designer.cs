@@ -36,6 +36,8 @@ namespace GUI
             this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label1 = new System.Windows.Forms.Label();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.comboDocGia = new System.Windows.Forms.ComboBox();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.textTienThu = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelNoMoi = new System.Windows.Forms.Label();
@@ -48,13 +50,9 @@ namespace GUI
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.topPanel = new System.Windows.Forms.Panel();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.comboDocGia = new System.Windows.Forms.ComboBox();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siticonePanel1.SuspendLayout();
-            this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticoneControlBox2
@@ -82,12 +80,13 @@ namespace GUI
             // 
             // butLogin
             // 
+            this.butLogin.BorderRadius = 4;
             this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butLogin.FillColor = System.Drawing.Color.SlateBlue;
-            this.butLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.butLogin.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butLogin.ForeColor = System.Drawing.Color.White;
             this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.butLogin.Location = new System.Drawing.Point(307, 612);
@@ -132,6 +131,25 @@ namespace GUI
             this.siticonePanel1.Size = new System.Drawing.Size(793, 716);
             this.siticonePanel1.TabIndex = 68;
             // 
+            // comboDocGia
+            // 
+            this.comboDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboDocGia.DataSource = this.dOCGIABindingSource;
+            this.comboDocGia.DisplayMember = "MaDocGia";
+            this.comboDocGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboDocGia.FormattingEnabled = true;
+            this.comboDocGia.Location = new System.Drawing.Point(218, 192);
+            this.comboDocGia.Name = "comboDocGia";
+            this.comboDocGia.Size = new System.Drawing.Size(368, 35);
+            this.comboDocGia.TabIndex = 99;
+            this.comboDocGia.ValueMember = "ID";
+            this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
+            // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -152,7 +170,7 @@ namespace GUI
             this.textTienThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textTienThu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textTienThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.textTienThu.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTienThu.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTienThu.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.textTienThu.Location = new System.Drawing.Point(218, 355);
             this.textTienThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -160,7 +178,7 @@ namespace GUI
             this.textTienThu.PasswordChar = '\0';
             this.textTienThu.PlaceholderText = "";
             this.textTienThu.SelectedText = "";
-            this.textTienThu.Size = new System.Drawing.Size(368, 49);
+            this.textTienThu.Size = new System.Drawing.Size(368, 37);
             this.textTienThu.TabIndex = 96;
             this.textTienThu.TextChanged += new System.EventHandler(this.siticoneTextBox5_TextChanged);
             // 
@@ -213,7 +231,7 @@ namespace GUI
             this.dateNgayLap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.dateNgayLap.Checked = true;
             this.dateNgayLap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.dateNgayLap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateNgayLap.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayLap.ForeColor = System.Drawing.Color.SlateBlue;
             this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateNgayLap.Location = new System.Drawing.Point(218, 525);
@@ -255,7 +273,7 @@ namespace GUI
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(793, 68);
+            this.topPanel.Size = new System.Drawing.Size(793, 54);
             this.topPanel.TabIndex = 73;
             // 
             // siticoneDragControl1
@@ -264,45 +282,9 @@ namespace GUI
             this.siticoneDragControl1.TargetControl = this.topPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // comboDocGia
-            // 
-            this.comboDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboDocGia.DataSource = this.dOCGIABindingSource;
-            this.comboDocGia.DisplayMember = "MaDocGia";
-            this.comboDocGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboDocGia.FormattingEnabled = true;
-            this.comboDocGia.Location = new System.Drawing.Point(218, 192);
-            this.comboDocGia.Name = "comboDocGia";
-            this.comboDocGia.Size = new System.Drawing.Size(368, 35);
-            this.comboDocGia.TabIndex = 99;
-            this.comboDocGia.ValueMember = "ID";
-            this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
-            // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
-            this.ErrorDia.Text = null;
-            // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
-            this.SuccDia.Text = null;
-            // 
-            // dOCGIABindingSource
-            // 
-            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
-            // 
             // fPhieuThu
             // 
+            this.AcceptButton = this.butLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
@@ -316,8 +298,8 @@ namespace GUI
             this.Text = "BmPhieuThuTienPhat";
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
-            this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
+            this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -342,8 +324,6 @@ namespace GUI
         private Label labelNoMoi;
         private Label labelNoHienTai;
         private ComboBox comboDocGia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private BindingSource dOCGIABindingSource;
     }
 }

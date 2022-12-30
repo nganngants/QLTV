@@ -92,6 +92,12 @@ namespace GUI
         private void butSave_Click(object sender, EventArgs e)
         {
             if (isDaTra.Checked == false) return; 
+            THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+            if (dateNgayTra.Value < PhieuMuon.NgayMuon)
+            {
+                MessageBox.Show("Ngày trả không được trước ngày mượn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
             string err = BUSPhieuMuonTra.Instance.UpdPhieuMuonTra(PhieuMuon.SoPhieuMuonTra, dateNgayTra.Value.Date);
             
             if(err != "")
@@ -99,12 +105,6 @@ namespace GUI
                 MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
-            if (dateNgayTra.Value < PhieuMuon.NgayMuon)
-            {
-                MessageBox.Show("Ngày trả không được trước ngày mượn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }    
             int TienPhat = 0;
             if (dateNgayTra.Value > PhieuMuon.HanTra)
                 TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
