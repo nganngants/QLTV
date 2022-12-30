@@ -39,6 +39,7 @@ namespace GUI.UserControls
         private void butRefresh_Click(object sender, EventArgs e)
         {
             Binding(BUSPhieuThu.Instance.GetAllPhieuThu());
+            txtNam.Text = txtNgay.Text = txtThang.Text = txtFind.Text = "";
         }
 
 

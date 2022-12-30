@@ -97,6 +97,7 @@ namespace GUI.UserControls
         private void butRefresh_Click(object sender, EventArgs e)
         {
             Binding(BUSCuonSach.Instance.GetAllCuonSach());
+            txtMaSach.Text = "";
         }
 
         private void butMaSach_Click(object sender, EventArgs e)
