@@ -93,6 +93,8 @@ namespace GUI
             THELOAI tl = BUSTheLoai.Instance.GetTheLoai(TheLoai);
             foreach(DataGridViewRow row in TacGiaGrid.Rows)
             {
+                if (TgList.Contains(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value))))
+                    continue;
                 TgList.Add(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value)));       
             }
             string err = BUSTuaSach.Instance.AddTuaSach(TenTuaSach, tl, TgList);

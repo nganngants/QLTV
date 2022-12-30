@@ -98,6 +98,7 @@ namespace DAL
                 tuaSach.idTheLoai = theLoai.id;
                 tuaSach.THELOAI = theLoai;
                 tuaSach.TACGIAs = dsTacGia;
+                tuaSach.DaAn = 0;
                 QLTVDb.Instance.TUASACHes.Add(tuaSach);
                 QLTVDb.Instance.SaveChanges();
 
