@@ -55,9 +55,9 @@ namespace BUS
                 return id;
             }
             
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine(ex.InnerException.ToString());
+                //Console.WriteLine(ex.InnerException.ToString());
                 return -1;
             }
         }

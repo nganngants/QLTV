@@ -71,11 +71,18 @@ namespace GUI
                 return;
             }
             int idNhom = (int)comboNND.SelectedValue;
-
+            Console.WriteLine("Nhom: {0}", idNhom);
 
             //Them account
             int idND = BUSNguoiDung.Instance.AddNguoiDung(tenDG, NgaySinh, chucVu ,username, userpwd, idNhom);
-
+            if (idND == -1)
+            {
+                Console.WriteLine("Error when add account!");
+                MessageBox.Show("Tên đăng nhập đã tồn tại!", "Lỗi", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Console.WriteLine("Id account: {0}", idND);
 
             string messg = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan, idND);
             if (messg != "")
