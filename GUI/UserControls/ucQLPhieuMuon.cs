@@ -94,5 +94,10 @@ namespace GUI.UserControls
                 }
             Binding(Res);
         }
+
+        private void butFindNgay_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
