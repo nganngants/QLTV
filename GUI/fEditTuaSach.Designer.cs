@@ -218,7 +218,7 @@
             this.butOK.FillColor = System.Drawing.Color.SlateBlue;
             this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
-            this.butOK.Location = new System.Drawing.Point(280, 532);
+            this.butOK.Location = new System.Drawing.Point(260, 531);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(130, 44);
             this.butOK.TabIndex = 10;
@@ -342,7 +342,7 @@
             this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
             this.labelTitle.Location = new System.Drawing.Point(111, 19);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(466, 46);
+            this.labelTitle.Size = new System.Drawing.Size(453, 44);
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Text = "SỬA THÔNG TIN TỰA SÁCH";
             // 
