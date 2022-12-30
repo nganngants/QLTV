@@ -33,7 +33,7 @@ namespace GUI
         private int SoLuongNhap = 0;
         private void butOK_Click(object sender, EventArgs e)
         {
-            if (dateNgayNhap.Value.Date > DateTime.Now)
+            if (dateNgayNhap.Value.Date > DateTime.Now )
             {
                 MessageBox.Show("Ngày nhập không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -56,8 +56,12 @@ namespace GUI
                 return;
             }
             string NXB = txtNhaXB.Text.ToString();
-            
             DateTime NgayNhap = dateNgayNhap.Value.Date;
+            if(Nam > NgayNhap.Year)
+            {
+                MessageBox.Show("Ngày nhập trước năm xuất bản", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int ThanhTien = this.SoLuongNhap * this.DonGia;
             int id = (int)comboTuaSach.SelectedValue;
             labelThanhTien.Text = "Thành tiền: " + ThanhTien.ToString();

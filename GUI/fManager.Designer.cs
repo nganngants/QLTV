@@ -316,6 +316,5 @@ namespace GUI
         private ImageList iconList;
         private TabPage tabTDQD;
         private TabPage tabAccount;
-
     }
 }

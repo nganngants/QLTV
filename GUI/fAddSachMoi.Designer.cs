@@ -194,7 +194,7 @@
             this.dateNgayNhap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayNhap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgayNhap.Name = "dateNgayNhap";
-            this.dateNgayNhap.Size = new System.Drawing.Size(144, 36);
+            this.dateNgayNhap.Size = new System.Drawing.Size(164, 36);
             this.dateNgayNhap.TabIndex = 15;
             this.dateNgayNhap.Value = new System.DateTime(2022, 12, 16, 21, 3, 20, 621);
             // 
