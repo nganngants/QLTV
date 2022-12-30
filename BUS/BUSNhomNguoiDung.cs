@@ -41,7 +41,7 @@ namespace BUS
         }
         public int AddNhomNguoiDung(string tenNhom)
         {
-            if (tenNhom == "Quan ly") return -1;
+            if (tenNhom == "Quản lý") return -1;
             try
             {
                 int id = DALNhomNguoiDung.Instance.AddNhomNguoiDung(tenNhom);
@@ -59,8 +59,8 @@ namespace BUS
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungByMa(maNhomNguoiDung);
             if (nnd == null)
             { return "Mã nhóm người dùng không đúng"; }
-            if (name == "Quan ly") return "Không thể đặt tên này";
-            if(nnd.TenNhomNguoiDung=="Quan ly")
+            if (name == "Quản lý") return "Không thể đặt tên này";
+            if(nnd.TenNhomNguoiDung=="Quản lý")
             {
                 return "Không thể sửa nhóm người dùng Quản lý";
             }
