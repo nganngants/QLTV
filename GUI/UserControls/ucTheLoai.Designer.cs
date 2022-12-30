@@ -29,22 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtTenTL = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TheLoaiGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tHELOAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.tHELOAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TheLoaiGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHELOAIBindingSource)).BeginInit();
@@ -61,21 +62,6 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1080, 121);
             this.topPanel.TabIndex = 0;
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(383, 73);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(73, 65);
-            this.butRefresh.TabIndex = 9;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // txtTenTL
             // 
@@ -98,72 +84,49 @@
             this.txtTenTL.Size = new System.Drawing.Size(179, 28);
             this.txtTenTL.TabIndex = 10;
             // 
-            // butAdd
-            // 
-            this.butAdd.BorderRadius = 6;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
-            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(217, 89);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(160, 28);
-            this.butAdd.TabIndex = 9;
-            this.butAdd.Text = "Thêm Thể Loại";
-            this.butAdd.TextOffset = new System.Drawing.Point(12, 0);
-            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
-            // 
             // TheLoaiGrid
             // 
             this.TheLoaiGrid.AllowUserToAddRows = false;
             this.TheLoaiGrid.AllowUserToDeleteRows = false;
             this.TheLoaiGrid.AllowUserToResizeColumns = false;
             this.TheLoaiGrid.AllowUserToResizeRows = false;
-
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.TheLoaiGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TheLoaiGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TheLoaiGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TheLoaiGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.TheLoaiGrid.ColumnHeadersHeight = 35;
             this.TheLoaiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TheLoaiGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isChosen,
+            this.id,
             this.MaTheLoai,
             this.TenTheLoai,
             this.SoTuaSach});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.TheLoaiGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TheLoaiGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TheLoaiGrid.Location = new System.Drawing.Point(0, 121);
             this.TheLoaiGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TheLoaiGrid.Name = "TheLoaiGrid";
             this.TheLoaiGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TheLoaiGrid.RowHeadersVisible = false;
             this.TheLoaiGrid.RowHeadersWidth = 51;
             this.TheLoaiGrid.RowTemplate.Height = 30;
@@ -190,45 +153,7 @@
             this.TheLoaiGrid.ThemeStyle.RowsStyle.Height = 30;
             this.TheLoaiGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TheLoaiGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.FalseValue = "0";
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Visible = false;
-            this.isChosen.Width = 6;
-            // 
-            // MaTheLoai
-            // 
-            this.MaTheLoai.HeaderText = "Mã thể loại";
-            this.MaTheLoai.MinimumWidth = 6;
-            this.MaTheLoai.Name = "MaTheLoai";
-            this.MaTheLoai.ReadOnly = true;
-            this.MaTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TenTheLoai
-            // 
-            this.TenTheLoai.HeaderText = "Tên thể loại";
-            this.TenTheLoai.MinimumWidth = 6;
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.ReadOnly = true;
-            this.TenTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // SoTuaSach
-            // 
-            this.SoTuaSach.HeaderText = "Số tựa sách";
-            this.SoTuaSach.MinimumWidth = 6;
-            this.SoTuaSach.Name = "SoTuaSach";
-            this.SoTuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tHELOAIBindingSource
-            // 
-            this.tHELOAIBindingSource.DataSource = typeof(DTO.THELOAI);
+            this.TheLoaiGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TheLoaiGrid_CellClick);
             // 
             // SuccDia
             // 
@@ -256,6 +181,89 @@
             this.ErrorDia.Parent = null;
             this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.ErrorDia.Text = null;
+            // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.phieumuontra;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Location = new System.Drawing.Point(383, 73);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(73, 65);
+            this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            // 
+            // butAdd
+            // 
+            this.butAdd.BorderRadius = 6;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(217, 89);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(160, 28);
+            this.butAdd.TabIndex = 9;
+            this.butAdd.Text = "Thêm Thể Loại";
+            this.butAdd.TextOffset = new System.Drawing.Point(12, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
+            // 
+            // tHELOAIBindingSource
+            // 
+            this.tHELOAIBindingSource.DataSource = typeof(DTO.THELOAI);
+            // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Visible = false;
+            this.isChosen.Width = 6;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // MaTheLoai
+            // 
+            this.MaTheLoai.HeaderText = "Mã thể loại";
+            this.MaTheLoai.MinimumWidth = 6;
+            this.MaTheLoai.Name = "MaTheLoai";
+            this.MaTheLoai.ReadOnly = true;
+            this.MaTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TenTheLoai
+            // 
+            this.TenTheLoai.HeaderText = "Tên thể loại";
+            this.TenTheLoai.MinimumWidth = 6;
+            this.TenTheLoai.Name = "TenTheLoai";
+            this.TenTheLoai.ReadOnly = true;
+            this.TenTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // SoTuaSach
+            // 
+            this.SoTuaSach.HeaderText = "Số tựa sách";
+            this.SoTuaSach.MinimumWidth = 6;
+            this.SoTuaSach.Name = "SoTuaSach";
+            this.SoTuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ucTheLoai
             // 
@@ -285,6 +293,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTuaSach;

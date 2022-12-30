@@ -27,7 +27,7 @@ namespace GUI.UserControls
             TheLoaiList = BUSTheLoai.Instance.GetAllTheLoai();
             foreach(THELOAI theLoai in TheLoaiList)
             {
-                TheLoaiGrid.Rows.Add(0,theLoai.MaTheLoai,theLoai.TenTheLoai,theLoai.TUASACHes.Count);
+                TheLoaiGrid.Rows.Add(0,theLoai.id,theLoai.MaTheLoai,theLoai.TenTheLoai,theLoai.TUASACHes.Count);
             }
         }
 
@@ -51,6 +51,15 @@ namespace GUI.UserControls
             }
             BUSTheLoai.Instance.AddTheLoai(tentl);
             SuccDia.Show("Thêm thể loại thành công!");
+            Binding();
+        }
+
+        private void TheLoaiGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if (idx == -1) return;
+            var f = new fEditTheLoai(Convert.ToInt32(TheLoaiGrid.Rows[idx].Cells["id"].Value));
+            f.ShowDialog();
             Binding();
         }
     }

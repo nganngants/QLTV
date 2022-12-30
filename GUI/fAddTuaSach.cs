@@ -49,7 +49,7 @@ namespace GUI
         private void butAddTacGia_Click(object sender, EventArgs e)
         {
             bool check = false;
-            int id = Convert.ToInt32(comboTacGia.SelectedValue);
+            int id;
             string newTg = comboTacGia.Text;
             foreach (TACGIA tg in TacGiaList)
                 if (tg.TenTacGia == newTg)
@@ -64,7 +64,7 @@ namespace GUI
                 }
                 else return;
             }
-           
+            id = Convert.ToInt32(comboTacGia.SelectedValue);
             TacGiaGrid.Rows.Add(newTg,id);
            
         }
@@ -94,6 +94,7 @@ namespace GUI
             foreach(DataGridViewRow row in TacGiaGrid.Rows)
             {
                 TgList.Add(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value)));
+                Console.WriteLine(row.Cells["id"].Value);
             }
             string err = BUSTuaSach.Instance.AddTuaSach(TenTuaSach, tl, TgList);
             if(err !="")

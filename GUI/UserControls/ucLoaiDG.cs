@@ -83,5 +83,14 @@ namespace GUI.UserControls
         {
             Binding();
         }
+
+        private void LoaiDocGiaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if( idx < 0) return;
+            var f = new fEditLoaiDG(Convert.ToInt32(LoaiDocGiaGrid.Rows[idx].Cells["id"].Value));
+            f.ShowDialog();
+            Binding();
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace GUI.UserControls
         }
         private void Sorting(int idx)
         {
-            this.PhieuNhapgrid.Sort(this.PhieuNhapgrid.Columns[idx], ListSortDirection.Ascending);
+            //this.PhieuNhapgrid.Sort(this.PhieuNhapgrid.Columns[idx], ListSortDirection.Ascending);
         }
 
         private void PhieuNhapgrid_CellClick(object sender, DataGridViewCellEventArgs e)

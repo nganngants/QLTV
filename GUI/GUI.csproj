@@ -141,6 +141,18 @@
     <Compile Include="fEditPhieuMuon.Designer.cs">
       <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditTacGia.Designer.cs">
+      <DependentUpon>fEditTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fEditTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditTheLoai.Designer.cs">
+      <DependentUpon>fEditTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="fEditTuaSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -386,6 +398,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fEditPhieuMuon.resx">
       <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fEditTacGia.resx">
+      <DependentUpon>fEditTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fEditTheLoai.resx">
+      <DependentUpon>fEditTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fEditTuaSach.resx">
       <DependentUpon>fEditTuaSach.cs</DependentUpon>

@@ -54,8 +54,10 @@ namespace GUI.UserControls
         private void TacGiaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-            if (e.ColumnIndex == 0)
-                return;
+            if (idx == -1) return;
+            var f = new fEditTacGia(Convert.ToInt32(TacGiaGrid.Rows[idx].Cells["id"].Value));
+            f.ShowDialog();
+            Binding();
 
         }
 

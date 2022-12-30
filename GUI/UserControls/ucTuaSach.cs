@@ -27,7 +27,7 @@ namespace GUI.UserControls
             int i = 0;
             Image img = Properties.Resources.edit_icon;
             img = (Image)(new Bitmap(img, new Size(20, 20)));
-
+            TuaSachGrid.Rows.Clear();
             // Icon myIcon = new Icon("F:\\QLTV\\GUI\\Resources\\edit_icon.png");
            foreach(TUASACH tuasach in  TuaSachList)
             {
@@ -59,10 +59,7 @@ namespace GUI.UserControls
         private void TuaSachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-            if (idx == -1)
-            {
-                Sorting(e.ColumnIndex); return;
-            }
+            if (idx < 0) return;
             if (e.ColumnIndex == 0) return ;
             if(e.ColumnIndex == TuaSachGrid.Columns["Edit"].Index)
             {
@@ -195,6 +192,11 @@ namespace GUI.UserControls
 
             MessageBox.Show("Đã hiện thành công " + cnt + " tựa sách", "", MessageBoxButtons.OK);
             Binding(BUSTuaSach.Instance.GetAllTuaSach());
+        }
+
+        private void TuaSachGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

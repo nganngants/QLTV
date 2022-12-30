@@ -82,7 +82,7 @@ namespace GUI.UserControls
         }
         private void Sorting(int idx)
         {
-            this.CuonSachGrid.Sort(this.CuonSachGrid.Columns[idx], ListSortDirection.Descending);
+           // this.CuonSachGrid.Sort(this.CuonSachGrid.Columns[idx], ListSortDirection.Descending);
         }
         private void CuonSachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {

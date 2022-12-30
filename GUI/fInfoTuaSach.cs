@@ -35,12 +35,13 @@ namespace GUI
             labelTenTS.Text = tuasach.TenTuaSach;
             labelTheLoai.Text = tuasach.THELOAI.TenTheLoai.ToString();
             string tacgia = "";
+            Console.WriteLine("id: ",id);
             foreach (TACGIA tg in tuasach.TACGIAs)
             {
                 tacgia += tg.TenTacGia + ", ";
             }
-            if (tacgia != "") tacgia.Remove(tacgia.Length - 1);
-            if (tacgia != "") tacgia.Remove(tacgia.Length - 1);
+            if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 1,2);
+
             labelTacGia.Text = tacgia;
         }
         private void butChange_Click(object sender, EventArgs e)
