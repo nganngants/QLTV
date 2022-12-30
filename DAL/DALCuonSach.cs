@@ -25,6 +25,12 @@ namespace DAL
             try
             {
                 CUONSACH cuonsach = QLTVDb.Instance.CUONSACHes.Find(id);
+                SACH sach = cuonsach.SACH;
+                if(data != cuonsach.DaAn)
+                {
+                    if (data == 1) sach.SoLuongConLai--;
+                    else sach.SoLuongConLai++;
+                }
                 if (data == 1) cuonsach.TinhTrang = 2;
                 else cuonsach.TinhTrang = 1;
                 QLTVDb.Instance.SaveChanges();
@@ -77,7 +83,7 @@ namespace DAL
             return res;
         }
 
-        public bool AddCuonSach (SACH sach, int tinhTrang = 2)
+        public bool AddCuonSach (SACH sach, int tinhTrang = 0)
         {
             try
             {
@@ -85,7 +91,8 @@ namespace DAL
                 {
                     idSach = sach.id,
                     SACH = sach,
-                    TinhTrang = tinhTrang
+                    TinhTrang = tinhTrang,
+                    DaAn = 0
                 };
                 QLTVDb.Instance.CUONSACHes.Add(cuonsach);
                 QLTVDb.Instance.SaveChanges();
