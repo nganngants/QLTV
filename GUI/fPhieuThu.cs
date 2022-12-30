@@ -34,11 +34,16 @@ namespace GUI
         private int TienThu;
         private void siticoneTextBox5_TextChanged(object sender, EventArgs e)
         {
-            if (textTienThu.Text == null || textTienThu.Text == "") return;
+            if (textTienThu.Text == "")
+            {
+                labelNoMoi.Text = "";
+                return;
+            }
             try 
             {
                 TienThu = Convert.ToInt32(textTienThu.Text);
-                //Console.WriteLine(TienThu);
+                Console.WriteLine("TienThu");
+                Console.WriteLine(TienThu);
             }
             catch
             {
@@ -90,7 +95,9 @@ namespace GUI
         {
             DocGia = BUSDocGia.Instance.GetDocGia(Convert.ToInt32(comboDocGia.SelectedValue));
             labelNoHienTai.Text = DocGia.TongNoHienTai.ToString();
-            
+            TienThu = 0;
+            labelNoMoi.Text = "";
+            textTienThu.Text = "";
         }
     }
 }
