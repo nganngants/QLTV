@@ -49,42 +49,33 @@ namespace GUI
 
         private void butOK_Click(object sender, EventArgs e)
         {
-            // Them doc gia
+            //get info docgia
             string tenDG = txtHoTen.Text;
             int idLDG = (int)comboLoaiDG.SelectedValue;
-           
             string email = txtEmail.Text;
             string DiaChi = txtDiaChi.Text;
             DateTime NgaySinh = dateNgaySinh.Value.Date;
             DateTime NgayLapThe = dateNgayLap.Value.Date;
             THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
-           
             DateTime NgayHetHan = NgayLapThe.AddMonths((int)thamso.ThoiHanThe);
             dateNgayHetHan.Text = NgayHetHan.Date.ToShortDateString();
 
+            //get info nguoidung
             string username = txtUsername.Text;
             string userpwd = txtUserpwd.Text;
             string chucVu = txtChucVu.Text;
+
             if(tenDG == "" || username == "" || userpwd == "" || comboNND.SelectedItem == null)
             {
                 MessageBox.Show("Chưa điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             int idNhom = (int)comboNND.SelectedValue;
             Console.WriteLine("Nhom: {0}", idNhom);
 
-            //Them account
-            int idND = BUSNguoiDung.Instance.AddNguoiDung(tenDG, NgaySinh, chucVu ,username, userpwd, idNhom);
-            if (idND == -1)
-            {
-                Console.WriteLine("Error when add account!");
-                MessageBox.Show("Tên đăng nhập đã tồn tại!", "Lỗi", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            Console.WriteLine("Id account: {0}", idND);
-
-            string messg = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan, idND);
+            string messg = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan, 
+                username, userpwd, chucVu, idNhom);
             if (messg != "")
             {
                 MessageBox.Show(messg, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -92,7 +83,6 @@ namespace GUI
             }
             else
             {
-                
                 MessageBox.Show("Thêm độc giả thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

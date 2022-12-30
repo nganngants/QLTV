@@ -72,7 +72,8 @@ namespace BUS
             DALDocGia.Instance.DelDocGia(dg.ID);
             return "";
         }
-        public string AddDocGia(string ten, int idLDG,DateTime NgayLapThe,string Email,string DiaChi,DateTime NgaySinh,DateTime NgayHetHan, int idND)
+        public string AddDocGia(string ten, int idLDG,DateTime NgayLapThe,string Email,string DiaChi,DateTime NgaySinh,DateTime NgayHetHan,
+            string username, string userpwd, string chucVu, int idNND)
         {
             THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
             int gap = NgayLapThe.Year - NgaySinh.Year;
@@ -84,8 +85,12 @@ namespace BUS
 
             var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(idLDG);
             if (ldg == null) return "Loai Doc Gia khong hop le";
+
+            int idND = DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, chucVu, username, userpwd, idNND);
+            if (idND == -1) return "Tên đăng nhập đã tồn tại";
             if (DALDocGia.Instance.AddDocGia(ten, NgaySinh, DiaChi, Email, NgayLapThe, NgayHetHan, idLDG, 0, idND))
                 return "";
+            DALNguoiDung.Instance.DelNguoiDung(idND);
             return "Lỗi khi thêm độc giả";
         }
 
