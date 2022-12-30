@@ -106,6 +106,7 @@ namespace GUI.UserControls
         private void butRefresh_Click(object sender, EventArgs e)
         {
             Binding(BUSDocGia.Instance.GetAllDocGia());
+            txtFind.Text = "";
         }
 
         private void butFind_Click(object sender, EventArgs e)

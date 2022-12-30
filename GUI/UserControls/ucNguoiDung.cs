@@ -51,6 +51,7 @@ namespace GUI.UserControls
         private void butRefresh_Click(object sender, EventArgs e)
         {
             Bind(BUSNguoiDung.Instance.GetAllNguoiDung());
+            txtFind.Text = "";
         }
 
         private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

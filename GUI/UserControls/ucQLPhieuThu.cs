@@ -39,6 +39,7 @@ namespace GUI.UserControls
         private void butRefresh_Click(object sender, EventArgs e)
         {
             Binding(BUSPhieuThu.Instance.GetAllPhieuThu());
+            txtNam.Text = txtNgay.Text = txtThang.Text = txtFind.Text = "";
         }
 
 
@@ -54,6 +55,32 @@ namespace GUI.UserControls
                     Res.Add(pt);
             }
             Binding(Res);
+        }
+
+        private void PhieuThuGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void butFindNgay_Click(object sender, EventArgs e)
+        {
+            int? Ngay = null, Thang=null, Nam=null;
+            try
+            {
+
+                if (txtNgay.Text != "") 
+                    Ngay = (Convert.ToInt32(txtNgay.Text));
+                if (txtThang.Text != "")
+                    Thang = (Convert.ToInt32(txtThang.Text));
+                if (txtNam.Text != "")
+                    Nam = (Convert.ToInt32(txtNam.Text));
+            }
+            catch
+            {
+                MessageBox.Show("Ngày tháng năm sai format!","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            Binding(BUSPhieuThu.Instance.FindPhieuThu(Ngay, Thang, Nam));
         }
     }
 }

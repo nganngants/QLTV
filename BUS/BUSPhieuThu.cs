@@ -24,6 +24,10 @@ namespace BUS
         {
             return DALPhieuThu.Instance.GetAllPhieuThu();
         }
+        public List<PHIEUTHU> FindPhieuThu(int? ngay, int ?thang, int ?nam)
+        {
+            return DALPhieuThu.Instance.FindPhieuThuByNgay(ngay, thang, nam);
+        }
         public PHIEUTHU GetPhieuThu(int id)
         {
             PHIEUTHU pt;
