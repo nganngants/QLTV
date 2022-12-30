@@ -61,8 +61,6 @@
             this.labelMaCS = new System.Windows.Forms.Label();
             this.labelSoPhieu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -167,7 +165,7 @@
             this.isDaTra.TabIndex = 177;
             this.isDaTra.Text = "Đã Trả";
             this.isDaTra.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isDaTra.UncheckedState.BorderRadius = 4;
+            this.isDaTra.UncheckedState.BorderRadius = 0;
             this.isDaTra.UncheckedState.BorderThickness = 2;
             this.isDaTra.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.isDaTra.CheckedChanged += new System.EventHandler(this.isDaTra_CheckedChanged);
@@ -453,24 +451,6 @@
             this.label1.Text = "PHIẾU MƯỢN TRẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.SuccDia.Text = null;
-            // 
             // fEditPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -522,8 +502,6 @@
         private System.Windows.Forms.Label labelSoNgayTre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelNgayMuon;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private System.Windows.Forms.Label labelNgayTra;
     }
 }

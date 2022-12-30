@@ -42,5 +42,24 @@ namespace GUI.UserControls
                 dataGrid.Rows.Add(c.THELOAI.MaTheLoai, c.THELOAI.TenTheLoai, c.SoLuotMuon, c.TiLe);
             }
         }
+
+        private void butHien_Click(object sender, EventArgs e)
+        {
+            int month = dateBC.Value.Month;
+            int year = dateBC.Value.Year;
+
+            var bc = BUSBCTheoTheLoai.Instance.GetBC(month, year);
+            if (bc == null)
+            {
+                MessageBox.Show("Chưa có báo cáo trong tháng này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var res = MessageBox.Show("Bạn có chắc muốn xóa báo cáo của tháng" + month.ToString() + "/" + year.ToString() + "?",
+                "Xóa báo cáo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No) return;
+            BUSBCTheoTheLoai.Instance.DelBC(bc.MaBaoCao);
+            MessageBox.Show("Đã xóa báo cáo", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGrid.Rows.Clear();
+        }
     }
 }

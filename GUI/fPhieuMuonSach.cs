@@ -27,7 +27,7 @@ namespace GUI
             comboCuonSach.DisplayMember = "MaCuonSach";
             comboCuonSach.ValueMember = "id";
             
-            var docGiaList = BUSDocGia.Instance.GetAllDocGia();
+            var docGiaList = BUSDocGia.Instance.GetDocGiaConHan();
             comboDocGia.DataSource = docGiaList;
             comboDocGia.DisplayMember = "MaDocGia";
             comboDocGia.ValueMember = "id";

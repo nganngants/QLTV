@@ -44,8 +44,6 @@ namespace GUI.UserControls
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.dateBC = new System.Windows.Forms.DateTimePicker();
-            this.errDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.messDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -215,24 +213,6 @@ namespace GUI.UserControls
             this.dateBC.Size = new System.Drawing.Size(138, 34);
             this.dateBC.TabIndex = 3;
             // 
-            // errDia
-            // 
-            this.errDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.errDia.Caption = null;
-            this.errDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.errDia.Parent = null;
-            this.errDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.errDia.Text = null;
-            // 
-            // messDia
-            // 
-            this.messDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.messDia.Caption = null;
-            this.messDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.messDia.Parent = null;
-            this.messDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.messDia.Text = null;
-            // 
             // ucSachTraTre
             // 
             this.Controls.Add(this.dataGrid);
@@ -251,8 +231,6 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView dataGrid;
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog errDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog messDia;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private DateTimePicker dateBC;
         private DataGridViewTextBoxColumn STT;

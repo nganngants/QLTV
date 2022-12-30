@@ -24,6 +24,14 @@ namespace BUS
         {
             return DALDocGia.Instance.GetAllDocGia();
         }
+        public List<DOCGIA> GetDocGiaConHan()
+        {
+            var res = new List<DOCGIA>();
+            foreach(DOCGIA docgia in DALDocGia.Instance.GetAllDocGia())
+                if(docgia.NgayHetHan < DateTime.Now.Date)
+                    res.Add(docgia);
+            return res;
+        }
         public DOCGIA GetDocGia(int MaDocGia)
         {
             DOCGIA dg;

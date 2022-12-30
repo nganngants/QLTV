@@ -34,7 +34,7 @@ namespace GUI.UserControls
                 string err = BUSBCSachTraTre.Instance.AddBaoCao(ngayBC);
                 if (err != "")
                 {
-                    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 bc = BUSBCSachTraTre.Instance.GetBaoCao(ngayBC);

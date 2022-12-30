@@ -45,12 +45,14 @@ namespace GUI.UserControls
             this.TiLe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticoneMessageDialog1 = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.butHien = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.butHien);
             this.topPanel.Controls.Add(this.labelTongLM);
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Controls.Add(this.dateBC);
@@ -225,6 +227,30 @@ namespace GUI.UserControls
             this.siticoneMessageDialog1.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.siticoneMessageDialog1.Text = null;
             // 
+            // butHien
+            // 
+            this.butHien.AutoRoundedCorners = true;
+            this.butHien.BorderRadius = 10;
+            this.butHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butHien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butHien.FillColor = System.Drawing.Color.SlateBlue;
+            this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butHien.ForeColor = System.Drawing.Color.White;
+            this.butHien.Image = global::GUI.Properties.Resources.close_icon;
+            this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butHien.Location = new System.Drawing.Point(310, 60);
+            this.butHien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butHien.Name = "butHien";
+            this.butHien.Size = new System.Drawing.Size(157, 22);
+            this.butHien.TabIndex = 19;
+            this.butHien.Text = "Xóa Báo Cáo";
+            this.butHien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butHien.TextOffset = new System.Drawing.Point(3, 0);
+            this.butHien.Click += new System.EventHandler(this.butHien_Click);
+            // 
             // ucMuonTheoTheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -253,5 +279,6 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog errDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog siticoneMessageDialog1;
         private Label labelTongLM;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butHien;
     }
 }
