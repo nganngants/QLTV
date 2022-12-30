@@ -32,7 +32,7 @@ namespace GUI.UserControls
            foreach(TUASACH tuasach in  TuaSachList)
             {
                 string tacgia = "";
-                foreach (TACGIA tg in TuaSachList[i].TACGIAs)
+                foreach (TACGIA tg in tuasach.TACGIAs)
                 {
                     tacgia += tg.TenTacGia + ", ";
                 }

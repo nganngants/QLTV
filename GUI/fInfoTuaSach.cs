@@ -40,7 +40,7 @@ namespace GUI
             {
                 tacgia += tg.TenTacGia + ", ";
             }
-            if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 1,2);
+            if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 2,2);
 
             labelTacGia.Text = tacgia;
         }
