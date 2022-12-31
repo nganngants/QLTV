@@ -37,21 +37,21 @@ namespace GUI.UserControls
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoSachDangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoSachDangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocGiaGrid)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -87,84 +87,6 @@ namespace GUI.UserControls
             // dOCGIABindingSource
             // 
             this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
-            // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Edit.HeaderText = "";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Edit.Width = 6;
-            // 
-            // TongNo
-            // 
-            this.TongNo.HeaderText = "Tổng nợ";
-            this.TongNo.MinimumWidth = 6;
-            this.TongNo.Name = "TongNo";
-            this.TongNo.ReadOnly = true;
-            this.TongNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // NgayHetHan
-            // 
-            this.NgayHetHan.HeaderText = "Ngày hết hạn ";
-            this.NgayHetHan.MinimumWidth = 6;
-            this.NgayHetHan.Name = "NgayHetHan";
-            this.NgayHetHan.ReadOnly = true;
-            this.NgayHetHan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // SoSachDangMuon
-            // 
-            this.SoSachDangMuon.HeaderText = "Sách đang mượn";
-            this.SoSachDangMuon.MinimumWidth = 6;
-            this.SoSachDangMuon.Name = "SoSachDangMuon";
-            this.SoSachDangMuon.ReadOnly = true;
-            this.SoSachDangMuon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // LoaiDocGia
-            // 
-            this.LoaiDocGia.HeaderText = "Loại độc giả";
-            this.LoaiDocGia.MinimumWidth = 6;
-            this.LoaiDocGia.Name = "LoaiDocGia";
-            this.LoaiDocGia.ReadOnly = true;
-            this.LoaiDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TenDocGia
-            // 
-            this.TenDocGia.HeaderText = "Tên độc giả";
-            this.TenDocGia.MinimumWidth = 6;
-            this.TenDocGia.Name = "TenDocGia";
-            this.TenDocGia.ReadOnly = true;
-            this.TenDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // MaDocGia
-            // 
-            this.MaDocGia.HeaderText = "Mã độc giả";
-            this.MaDocGia.MinimumWidth = 6;
-            this.MaDocGia.Name = "MaDocGia";
-            this.MaDocGia.ReadOnly = true;
-            this.MaDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.DataPropertyName = "isChosen";
-            this.isChosen.FalseValue = "0";
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.isChosen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Width = 21;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
             // 
             // DocGiaGrid
             // 
@@ -333,6 +255,85 @@ namespace GUI.UserControls
             this.butRefresh.TabIndex = 9;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.DataPropertyName = "isChosen";
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.isChosen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Visible = false;
+            this.isChosen.Width = 21;
+            // 
+            // MaDocGia
+            // 
+            this.MaDocGia.HeaderText = "Mã độc giả";
+            this.MaDocGia.MinimumWidth = 6;
+            this.MaDocGia.Name = "MaDocGia";
+            this.MaDocGia.ReadOnly = true;
+            this.MaDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TenDocGia
+            // 
+            this.TenDocGia.HeaderText = "Tên độc giả";
+            this.TenDocGia.MinimumWidth = 6;
+            this.TenDocGia.Name = "TenDocGia";
+            this.TenDocGia.ReadOnly = true;
+            this.TenDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // LoaiDocGia
+            // 
+            this.LoaiDocGia.HeaderText = "Loại độc giả";
+            this.LoaiDocGia.MinimumWidth = 6;
+            this.LoaiDocGia.Name = "LoaiDocGia";
+            this.LoaiDocGia.ReadOnly = true;
+            this.LoaiDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // SoSachDangMuon
+            // 
+            this.SoSachDangMuon.HeaderText = "Sách đang mượn";
+            this.SoSachDangMuon.MinimumWidth = 6;
+            this.SoSachDangMuon.Name = "SoSachDangMuon";
+            this.SoSachDangMuon.ReadOnly = true;
+            this.SoSachDangMuon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // NgayHetHan
+            // 
+            this.NgayHetHan.HeaderText = "Ngày hết hạn ";
+            this.NgayHetHan.MinimumWidth = 6;
+            this.NgayHetHan.Name = "NgayHetHan";
+            this.NgayHetHan.ReadOnly = true;
+            this.NgayHetHan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TongNo
+            // 
+            this.TongNo.HeaderText = "Tổng nợ";
+            this.TongNo.MinimumWidth = 6;
+            this.TongNo.Name = "TongNo";
+            this.TongNo.ReadOnly = true;
+            this.TongNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Edit
+            // 
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Edit.HeaderText = "";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Edit.Width = 6;
+            // 
             // ucDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -356,20 +357,20 @@ namespace GUI.UserControls
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
         private BindingSource dOCGIABindingSource;
-        private DataGridViewImageColumn Edit;
-        private DataGridViewTextBoxColumn TongNo;
-        private DataGridViewTextBoxColumn NgayHetHan;
-        private DataGridViewTextBoxColumn SoSachDangMuon;
-        private DataGridViewTextBoxColumn LoaiDocGia;
-        private DataGridViewTextBoxColumn TenDocGia;
-        private DataGridViewTextBoxColumn MaDocGia;
-        private DataGridViewCheckBoxColumn isChosen;
-        private DataGridViewTextBoxColumn id;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView DocGiaGrid;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticonePanel TopPanel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butFind;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtFind;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewCheckBoxColumn isChosen;
+        private DataGridViewTextBoxColumn MaDocGia;
+        private DataGridViewTextBoxColumn TenDocGia;
+        private DataGridViewTextBoxColumn LoaiDocGia;
+        private DataGridViewTextBoxColumn SoSachDangMuon;
+        private DataGridViewTextBoxColumn NgayHetHan;
+        private DataGridViewTextBoxColumn TongNo;
+        private DataGridViewImageColumn Edit;
     }
 }

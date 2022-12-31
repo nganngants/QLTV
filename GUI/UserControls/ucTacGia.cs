@@ -63,37 +63,6 @@ namespace GUI.UserControls
 
         }
 
-        private void butDel_Click(object sender, EventArgs e)
-        {
-            List<int> idDel = new List<int>();
-            foreach (DataGridViewRow row in TacGiaGrid.Rows)
-            {
-                //Console.WriteLine(row.Cells["isChosen"].Value);
-                if (row.Cells["isChosen"].Value == "1")
-                {
-                    idDel.Add((int)row.Cells["id"].Value);
-
-                }
-            }
-            if (idDel.Count == 0) { return; }
-            int cnt = 0;
-            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count + " tác giả?", "Xóa tác giả",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
-            foreach (int id in idDel)
-            {
-            Retry:
-                string error = BUSTacGia.Instance.DelTacGia(id);
-                if (error !="")
-                {
-                    if (MessageBox.Show("Lỗi khi xoá tác giả", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.Retry)
-                        goto Retry;
-                    else continue;
-                }
-                else cnt++;
-            }
-
-            MessageBox.Show("Đã xoá thành công " + cnt + " tác giả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Binding();
-        }
+       
     }
 }
