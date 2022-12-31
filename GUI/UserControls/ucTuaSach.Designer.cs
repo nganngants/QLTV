@@ -88,7 +88,7 @@ namespace GUI.UserControls
             this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butHien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butHien.FillColor = System.Drawing.Color.SlateBlue;
-            this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butHien.ForeColor = System.Drawing.Color.White;
             this.butHien.Image = global::GUI.Properties.Resources.close_icon;
             this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -111,12 +111,12 @@ namespace GUI.UserControls
             this.butFil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butFil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butFil.FillColor = System.Drawing.Color.SlateBlue;
-            this.butFil.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butFil.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFil.ForeColor = System.Drawing.Color.White;
             this.butFil.Image = global::GUI.Properties.Resources.search_icon;
             this.butFil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFil.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFil.Location = new System.Drawing.Point(788, 75);
+            this.butFil.Location = new System.Drawing.Point(788, 83);
             this.butFil.Name = "butFil";
             this.butFil.Size = new System.Drawing.Size(140, 28);
             this.butFil.TabIndex = 17;
@@ -151,12 +151,12 @@ namespace GUI.UserControls
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butFind.FillColor = System.Drawing.Color.SlateBlue;
-            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFind.ForeColor = System.Drawing.Color.White;
             this.butFind.Image = global::GUI.Properties.Resources.search_icon;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(788, 33);
+            this.butFind.Location = new System.Drawing.Point(788, 41);
             this.butFind.Name = "butFind";
             this.butFind.Size = new System.Drawing.Size(140, 28);
             this.butFind.TabIndex = 14;
@@ -182,7 +182,7 @@ namespace GUI.UserControls
             this.txtFind.Location = new System.Drawing.Point(581, 41);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
-            this.txtFind.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtFind.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtFind.PlaceholderText = "Mã, tên, tác giả";
             this.txtFind.SelectedText = "";
             this.txtFind.Size = new System.Drawing.Size(201, 28);
@@ -213,7 +213,7 @@ namespace GUI.UserControls
             this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butDel.FillColor = System.Drawing.Color.SlateBlue;
-            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butDel.ForeColor = System.Drawing.Color.White;
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -236,7 +236,7 @@ namespace GUI.UserControls
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
