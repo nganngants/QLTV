@@ -134,6 +134,7 @@ namespace GUI.UserControls
             // 
             this.dataGrid.AllowUserToAddRows = false;
             this.dataGrid.AllowUserToDeleteRows = false;
+            this.dataGrid.AllowUserToResizeColumns = false;
             this.dataGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
