@@ -438,7 +438,6 @@ namespace GUI.UserControls
             this.TuaSach.MinimumWidth = 6;
             this.TuaSach.Name = "TuaSach";
             this.TuaSach.ReadOnly = true;
-            this.TuaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // NamXB
             // 

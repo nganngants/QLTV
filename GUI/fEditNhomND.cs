@@ -43,7 +43,11 @@ namespace GUI
         private void butSave_Click(object sender, EventArgs e)
         {
             string ten = txtTenNhom.Text;
-
+            if(ten == "")
+            {
+                MessageBox.Show("Tên nhóm người dùng không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             List<String> dsCn = new List<String>();
             bool hasIsDGPre = false;
             bool hasIsDGPost = false;

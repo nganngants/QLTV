@@ -50,7 +50,11 @@ namespace GUI
         {
             string tenDG = txtHoTen.Text;
             int idLDG = (int)comboLoaiDG.SelectedValue;
-
+            if(tenDG == "")
+            {
+                MessageBox.Show("Tên độc giả không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string email = txtEmail.Text;
             string DiaChi = txtDiaChi.Text;
             DateTime NgaySinh = dateNgaySinh.Value.Date;

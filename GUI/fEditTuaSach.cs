@@ -52,6 +52,11 @@ namespace GUI
 
             List<TACGIA> TgList = new List<TACGIA>();
             string TenTuaSach = txtTenTuaSach.Text;
+            if(TenTuaSach == "")
+            {
+                MessageBox.Show("Tên tựa sách không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int TheLoai = Convert.ToInt32(comboTheLoai.SelectedValue);
             THELOAI tl = BUSTheLoai.Instance.GetTheLoai(TheLoai);
             foreach (DataGridViewRow row in TacGiaGrid.Rows)

@@ -27,8 +27,6 @@ namespace GUI
             labelMaNd.Text += nd.MaNguoiDung;
             txtHoTen.Text = nd.TenNguoiDung;
             txtChucVu.Text = nd.ChucVu;
-            txtUsername.Text = nd.TenDangNhap;
-            txtUserpwd.Text = nd.MatKhau;
             var dsNND = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
             foreach (var n in dsNND)
             {
@@ -45,11 +43,15 @@ namespace GUI
             string ten = txtHoTen.Text;
             DateTime ngaysinh = dateNgaySinh.Value;
             string chucvu = txtChucVu.Text;
-            string tendn = txtUsername.Text;
-            string matkhau = txtUserpwd.Text;
+            if(ten == "" )
+            {
+                MessageBox.Show("Tên không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if(ngaysinh > DateTime.Now.Date)
             {
                 MessageBox.Show( "Ngày sinh không hợp lệ","Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             var nd = BUSNguoiDung.Instance.GetNguoiDungById(id);
             string err = BUSNguoiDung.Instance.UpdNguoiDung(id, ten, ngaysinh, chucvu, nd.NHOMNGUOIDUNG.id);
@@ -57,6 +59,17 @@ namespace GUI
             if (err == "")
                 MessageBox.Show("Sửa thông tin thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void butReset_Click(object sender, EventArgs e)
+        {
+            var res = MessageBox.Show("Bạn có chắc muốn reset mật khẩu?", "Reset mật khẩu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(res == DialogResult.Yes) 
+            {
+                BUSNguoiDung.Instance.UpdMK(id, "123");
+                MessageBox.Show("Reset mật khẩu thành công, mật khẩu là 123", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
     }
 }
