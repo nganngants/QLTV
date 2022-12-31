@@ -45,38 +45,7 @@ namespace GUI.UserControls
             Binding(BUSDocGia.Instance.GetAllDocGia());
         }
 
-        private void butDel_Click(object sender, EventArgs e)
-        {
-            List<int> idDel = new List<int>();
-            foreach (DataGridViewRow row in DocGiaGrid.Rows)
-            {
-                //Console.WriteLine(row.Cells["isChosen"].Value);
-                if (row.Cells["isChosen"].Value == "1") 
-                {
-                    idDel.Add((int)row.Cells["ID"].Value);
-                }
-            }
-            if(idDel.Count == 0) { return; }
-            if (MessageBox.Show("Bạn có chắc muốn xoá "+ idDel.Count + " độc giả?", "Xóa độc giả",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
-            int cnt = 0;
-            foreach (int id in idDel)
-            {
-            Retry:
-                string error = BUSDocGia.Instance.DelDocGia(id);
-                if (error != "")
-                {
-                    if (MessageBox.Show(error) == DialogResult.Retry)
-                        goto Retry;
-                    else continue;
-                }
-                else cnt++;
-            }
-            if(cnt!=0)
-                MessageBox.Show("Đã xoá thành công " + cnt + " độc giả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Binding(BUSDocGia.Instance.GetAllDocGia());
-            
-        }
+      
        
         private void DocGiaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -85,7 +54,6 @@ namespace GUI.UserControls
             {
                 return;
             }
-            if (e.ColumnIndex == 1) return;
             if (e.ColumnIndex == DocGiaGrid.Columns["Edit"].Index)
             {
                 var f = new fEditDocGia((Convert.ToInt32(DocGiaGrid.Rows[idx].Cells["id"].Value)));
