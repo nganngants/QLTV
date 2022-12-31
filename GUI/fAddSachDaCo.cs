@@ -105,5 +105,15 @@ namespace GUI
             MessageBox.Show("Thêm phiếu nhập thành công");
             this.Close();
         }
+
+        private void SachGrid_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            TongTien = 0;
+            foreach(DataGridViewRow row in SachGrid.Rows)
+            {
+                TongTien += Convert.ToInt32(row.Cells["ThanhTien"].Value);
+            }
+            labelTongTien.Text = "Tổng tiền: " + TongTien;
+        }
     }
 }

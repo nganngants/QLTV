@@ -32,7 +32,7 @@ namespace GUI.UserControls
         private void PhieuNhapgrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int stt = e.RowIndex;
-          
+            if (stt < 0) return;
             int idPhieu = (int)PhieuNhapgrid.Rows[stt].Cells["SoPhieuNhap"].Value;
             var f = new fInfoPhieuNhap(idPhieu);
             f.ShowDialog();
