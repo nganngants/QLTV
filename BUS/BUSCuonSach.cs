@@ -40,6 +40,7 @@ namespace BUS
            
             return DALSach.Instance.GetSachById((int)cs.idSach);
         }
+
         public string UpdAnCuonSach(string id,int data)
         {
             CUONSACH cs = DALCuonSach.Instance.GetCuonSachByMa(id);
@@ -67,6 +68,10 @@ namespace BUS
         public CUONSACH GetCuonSach(int id)
         {
             return DALCuonSach.Instance.GetCuonSachById(id);
+        }
+        public CUONSACH GetCuonSach(string id)
+        {
+            return DALCuonSach.Instance.GetCuonSachByMa(id);
         }
     }
 

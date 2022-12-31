@@ -62,6 +62,8 @@ namespace GUI.UserControls
                 == DialogResult.No) return;
             foreach (string id in idDel)
             {
+            CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(id);
+                if (cuonsach.DaAn == 1) continue;
             Retry:
                 string error = BUSCuonSach.Instance.UpdAnCuonSach(id,1);
                 if (error != "")
@@ -142,7 +144,9 @@ namespace GUI.UserControls
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (string id in idDel)
             {
-            Retry:
+                CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSach(id);
+                if (cuonsach.DaAn == 0) continue;
+                Retry:
                 string error = BUSCuonSach.Instance.UpdAnCuonSach(id, 0);
                 if (error != "")
                 {

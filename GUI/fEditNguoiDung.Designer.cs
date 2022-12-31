@@ -33,8 +33,7 @@
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.txtUserpwd = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.labelNhomNND = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -43,12 +42,10 @@
             this.txtChucVu = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.txtHoTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.labelMaNd = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.labelNhomNND = new System.Windows.Forms.Label();
+            this.butReset = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,8 +83,7 @@
             this.siticonePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.siticonePanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.siticonePanel1.BorderThickness = 2;
-            this.siticonePanel1.Controls.Add(this.txtUserpwd);
-            this.siticonePanel1.Controls.Add(this.txtUsername);
+            this.siticonePanel1.Controls.Add(this.butReset);
             this.siticonePanel1.Controls.Add(this.labelNhomNND);
             this.siticonePanel1.Controls.Add(this.label3);
             this.siticonePanel1.Controls.Add(this.label5);
@@ -97,8 +93,6 @@
             this.siticonePanel1.Controls.Add(this.txtChucVu);
             this.siticonePanel1.Controls.Add(this.txtHoTen);
             this.siticonePanel1.Controls.Add(this.label4);
-            this.siticonePanel1.Controls.Add(this.label7);
-            this.siticonePanel1.Controls.Add(this.label6);
             this.siticonePanel1.Controls.Add(this.labelMaNd);
             this.siticonePanel1.Controls.Add(this.label2);
             this.siticonePanel1.Location = new System.Drawing.Point(86, 80);
@@ -107,43 +101,17 @@
             this.siticonePanel1.Size = new System.Drawing.Size(696, 650);
             this.siticonePanel1.TabIndex = 12;
             // 
-            // txtUserpwd
+            // labelNhomNND
             // 
-            this.txtUserpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserpwd.DefaultText = "";
-            this.txtUserpwd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUserpwd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUserpwd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserpwd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserpwd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtUserpwd.Location = new System.Drawing.Point(137, 500);
-            this.txtUserpwd.Name = "txtUserpwd";
-            this.txtUserpwd.PasswordChar = '\0';
-            this.txtUserpwd.PlaceholderText = "";
-            this.txtUserpwd.SelectedText = "";
-            this.txtUserpwd.Size = new System.Drawing.Size(427, 40);
-            this.txtUserpwd.TabIndex = 52;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtUsername.Location = new System.Drawing.Point(137, 419);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "";
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(427, 40);
-            this.txtUsername.TabIndex = 50;
+            this.labelNhomNND.AutoSize = true;
+            this.labelNhomNND.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.labelNhomNND.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNhomNND.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelNhomNND.Location = new System.Drawing.Point(133, 260);
+            this.labelNhomNND.Name = "labelNhomNND";
+            this.labelNhomNND.Size = new System.Drawing.Size(165, 24);
+            this.labelNhomNND.TabIndex = 31;
+            this.labelNhomNND.Text = "Nhóm Người Dùng";
             // 
             // label3
             // 
@@ -179,7 +147,7 @@
             this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSave.ForeColor = System.Drawing.Color.White;
             this.butSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butSave.Location = new System.Drawing.Point(273, 571);
+            this.butSave.Location = new System.Drawing.Point(273, 502);
             this.butSave.Name = "butSave";
             this.butSave.Size = new System.Drawing.Size(150, 50);
             this.butSave.TabIndex = 4;
@@ -263,28 +231,6 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Ngày Sinh";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.Location = new System.Drawing.Point(132, 474);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 22);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Mật khẩu";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label6.Location = new System.Drawing.Point(132, 392);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 22);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Tên Đăng Nhập";
-            // 
             // labelMaNd
             // 
             this.labelMaNd.AutoSize = true;
@@ -313,17 +259,22 @@
             this.siticoneDragControl1.TargetControl = this;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // labelNhomNND
+            // butReset
             // 
-            this.labelNhomNND.AutoSize = true;
-            this.labelNhomNND.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.labelNhomNND.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNhomNND.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelNhomNND.Location = new System.Drawing.Point(133, 260);
-            this.labelNhomNND.Name = "labelNhomNND";
-            this.labelNhomNND.Size = new System.Drawing.Size(165, 24);
-            this.labelNhomNND.TabIndex = 31;
-            this.labelNhomNND.Text = "Nhóm Người Dùng";
+            this.butReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butReset.FillColor = System.Drawing.Color.SlateBlue;
+            this.butReset.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butReset.ForeColor = System.Drawing.Color.White;
+            this.butReset.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.butReset.Location = new System.Drawing.Point(273, 412);
+            this.butReset.Name = "butReset";
+            this.butReset.Size = new System.Drawing.Size(150, 50);
+            this.butReset.TabIndex = 51;
+            this.butReset.Text = "Reset mật khẩu";
+            this.butReset.Click += new System.EventHandler(this.butReset_Click);
             // 
             // fEditNguoiDung
             // 
@@ -351,8 +302,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUserpwd;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUsername;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butSave;
@@ -361,11 +310,10 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtChucVu;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtHoTen;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelMaNd;
         private System.Windows.Forms.Label label2;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
         private System.Windows.Forms.Label labelNhomNND;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butReset;
     }
 }

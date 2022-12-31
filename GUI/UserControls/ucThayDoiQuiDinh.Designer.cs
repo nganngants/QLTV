@@ -592,6 +592,7 @@
             this.txtDonGia.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtDonGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtDonGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDonGia.ForeColor = System.Drawing.Color.Black;
             this.txtDonGia.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtDonGia.Location = new System.Drawing.Point(221, 12);
             this.txtDonGia.Name = "txtDonGia";

@@ -70,6 +70,8 @@ namespace GUI.UserControls
             foreach (int id in idDel)
             {
             Retry:
+                SACH sach = BUSSach.Instance.GetSach(id);
+                if (sach.DaAn == 1) continue;
                 string error = BUSSach.Instance.UpdAnSach(id,1);
                 if (error != "")
                 {
@@ -80,7 +82,7 @@ namespace GUI.UserControls
                 else cnt++;
             }
 
-            MessageBox.Show("Đã xoá thành ẩn " + cnt + " sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Đã ẩn thành công " + cnt + " sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Binding(BUSSach.Instance.GetAllSach());
         }
 
@@ -149,6 +151,8 @@ namespace GUI.UserControls
             foreach (int id in idDel)
             {
             Retry:
+                SACH sach = BUSSach.Instance.GetSach(id);
+                if (sach.DaAn == 0) continue;
                 string error = BUSSach.Instance.UpdAnSach(id, 0);
                 if (error != "")
                 {

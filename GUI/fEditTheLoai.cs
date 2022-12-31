@@ -30,6 +30,11 @@ namespace GUI
 
         private void butOK_Click(object sender, EventArgs e)
         {
+            if(txtTen.Text == "")
+            {
+                MessageBox.Show("Tên thể loại không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             bool Error = BUSTheLoai.Instance.UpdTheLoai(theloai.id, txtTen.Text);
             if(Error)
             {

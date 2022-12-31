@@ -25,6 +25,11 @@ namespace GUI
 
         private void butOK_Click(object sender, EventArgs e)
         {
+            if(txtTen.Text == "")
+            {
+                MessageBox.Show("Tên tác giả không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (BUSTacGia.Instance.UpdTacGia(tacgia.id, txtTen.Text))
             {
             

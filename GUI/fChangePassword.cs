@@ -23,6 +23,11 @@ namespace GUI
 
         private void butSave_Click(object sender, EventArgs e)
         {
+            if(txtMKHT.Text == "" || txtRMKM.Text == "" || txtMKM.Text == "")
+            {
+                MessageBox.Show("Chưa điền đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if(txtMKHT.Text != usr.MatKhau)
             {
                 MessageBox.Show("Mật khẩu hiện tại không đúng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

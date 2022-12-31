@@ -92,7 +92,10 @@ namespace GUI.UserControls
                 MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
-            Retry:
+                TUASACH tuasach = BUSTuaSach.Instance.GetTuaSach(id);
+                if (tuasach.DaAn == 1) continue;
+                Retry:
+                
                 string error = BUSTuaSach.Instance.UpdAnTuaSach(id,1);
                 if (error != "")
                 {
@@ -181,7 +184,9 @@ namespace GUI.UserControls
                 MessageBoxIcon.Question) == DialogResult.No) return;
             foreach (int id in idDel)
             {
-            Retry:
+                TUASACH tuasach = BUSTuaSach.Instance.GetTuaSach(id);
+                if (tuasach.DaAn == 0) continue;
+                Retry:
                 string error = BUSTuaSach.Instance.UpdAnTuaSach(id, 0);
                 if (error != "")
                 {
