@@ -32,10 +32,10 @@ namespace DAL
             return QLTVDb.Instance.PHIEUNHAPSACHes.Find(id);
         }
 
-        public PHIEUNHAPSACH GetPhieuByNgayNhap (DateTime ngayNhap)
+        public List<PHIEUNHAPSACH> GetPhieuByNgayNhap (DateTime ngayNhap)
         {
             var res = QLTVDb.Instance.PHIEUNHAPSACHes.AsNoTracking().Where(p => p.NgayNhap == ngayNhap);
-            return (res.Any() ? res.First() : null);
+            return (res.Any() ? res.ToList() : null);
         }
 
         public List<PHIEUNHAPSACH> FindPhieuByNgayNhap(int? ngay, int? thang, int? nam)
@@ -47,7 +47,7 @@ namespace DAL
             return res;
         }
 
-        public bool AddPhieuNhap (DateTime ngayNhap)
+        public int AddPhieuNhap (DateTime ngayNhap)
         {
             try
             {
@@ -59,12 +59,12 @@ namespace DAL
 
                 QLTVDb.Instance.PHIEUNHAPSACHes.Add(phieu);
                 QLTVDb.Instance.SaveChanges();
-                return true;
+                return phieu.SoPhieuNhap;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                return -1;
             }
         }
 

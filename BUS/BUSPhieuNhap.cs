@@ -40,18 +40,7 @@ namespace BUS
         {
             //DateTime NgayNhap = new DateTime(Nam, Thang, Ngay);
             if(DateTime.Now < NgayNhap) { return -1; };
-
-            if (DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap) != null)
-            {
-                PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap);
-                return pn.SoPhieuNhap;
-            }
-            else
-            {
-                DALPhieuNhapSach.Instance.AddPhieuNhap(NgayNhap);
-                PHIEUNHAPSACH pn = DALPhieuNhapSach.Instance.GetPhieuByNgayNhap(NgayNhap);
-                return pn.SoPhieuNhap;
-            }
+            return DALPhieuNhapSach.Instance.AddPhieuNhap(NgayNhap);
             
         }
         public string DelPhieuNhap(int id)
