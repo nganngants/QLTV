@@ -55,7 +55,7 @@ namespace GUI.UserControls
             List<PHIEUNHAPSACH> Res = new List<PHIEUNHAPSACH>();
             foreach(PHIEUNHAPSACH pn in BUSPhieuNhap.Instance.GetAllPhieuNhap())
             {
-                if (pn.SoPhieuNhap.ToString().Contains(pat) || pn.NgayNhap.ToShortTimeString().Contains(pat))
+                if (pn.SoPhieuNhap.ToString().Contains(pat))
                     Res.Add(pn);
             }
             Binding(Res);
