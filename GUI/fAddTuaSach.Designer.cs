@@ -50,6 +50,7 @@
             this.txtTenTuaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).BeginInit();
@@ -101,6 +102,7 @@
             this.mainPanel.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.mainPanel.BorderRadius = 4;
             this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.label4);
             this.mainPanel.Controls.Add(this.TacGiaGrid);
             this.mainPanel.Controls.Add(this.comboTacGia);
             this.mainPanel.Controls.Add(this.butOK);
@@ -177,6 +179,7 @@
             this.TacGiaGrid.ThemeStyle.RowsStyle.Height = 24;
             this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TacGiaGrid.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.TacGiaGrid_RowsRemoved);
             // 
             // TenTacGia
             // 
@@ -197,7 +200,7 @@
             this.comboTacGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTacGia.FormattingEnabled = true;
-            this.comboTacGia.Location = new System.Drawing.Point(148, 432);
+            this.comboTacGia.Location = new System.Drawing.Point(148, 446);
             this.comboTacGia.Name = "comboTacGia";
             this.comboTacGia.Size = new System.Drawing.Size(241, 32);
             this.comboTacGia.TabIndex = 12;
@@ -237,7 +240,7 @@
             this.butAddTacGia.FillColor = System.Drawing.Color.SlateBlue;
             this.butAddTacGia.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAddTacGia.ForeColor = System.Drawing.Color.White;
-            this.butAddTacGia.Location = new System.Drawing.Point(414, 432);
+            this.butAddTacGia.Location = new System.Drawing.Point(414, 446);
             this.butAddTacGia.Name = "butAddTacGia";
             this.butAddTacGia.Size = new System.Drawing.Size(131, 44);
             this.butAddTacGia.TabIndex = 10;
@@ -338,6 +341,16 @@
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(214, 412);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(331, 17);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "*Chọn và nhấn phím Delete để xoá tác giả khỏi danh sách";
+            // 
             // fAddTuaSach
             // 
             this.AcceptButton = this.butOK;
@@ -380,5 +393,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView TacGiaGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Label label4;
     }
 }

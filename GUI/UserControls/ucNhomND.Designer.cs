@@ -132,12 +132,13 @@
             this.NDGrid.AllowUserToResizeColumns = false;
             this.NDGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.NDGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.NDGrid.AutoGenerateColumns = false;
+            this.NDGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,7 +160,7 @@
             this.NDGrid.DataSource = this.nHOMNGUOIDUNGBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -169,11 +170,12 @@
             this.NDGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.NDGrid.Location = new System.Drawing.Point(0, 76);
             this.NDGrid.Name = "NDGrid";
+            this.NDGrid.ReadOnly = true;
             this.NDGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.NDGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.NDGrid.RowHeadersVisible = false;
             this.NDGrid.RowHeadersWidth = 70;
-            this.NDGrid.RowTemplate.Height = 30;
+            this.NDGrid.RowTemplate.Height = 31;
             this.NDGrid.Size = new System.Drawing.Size(770, 548);
             this.NDGrid.TabIndex = 1;
             this.NDGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -189,12 +191,12 @@
             this.NDGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.NDGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.NDGrid.ThemeStyle.HeaderStyle.Height = 35;
-            this.NDGrid.ThemeStyle.ReadOnly = false;
+            this.NDGrid.ThemeStyle.ReadOnly = true;
             this.NDGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.NDGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.NDGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NDGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.NDGrid.ThemeStyle.RowsStyle.Height = 30;
+            this.NDGrid.ThemeStyle.RowsStyle.Height = 31;
             this.NDGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.NDGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.NDGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
@@ -207,6 +209,7 @@
             this.isChosen.IndeterminateValue = "0";
             this.isChosen.MinimumWidth = 6;
             this.isChosen.Name = "isChosen";
+            this.isChosen.ReadOnly = true;
             this.isChosen.TrueValue = "1";
             this.isChosen.Width = 6;
             // 
@@ -244,6 +247,7 @@
             this.nGUOIDUNGsDataGridViewTextBoxColumn.HeaderText = "NGUOIDUNGs";
             this.nGUOIDUNGsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nGUOIDUNGsDataGridViewTextBoxColumn.Name = "nGUOIDUNGsDataGridViewTextBoxColumn";
+            this.nGUOIDUNGsDataGridViewTextBoxColumn.ReadOnly = true;
             this.nGUOIDUNGsDataGridViewTextBoxColumn.Visible = false;
             // 
             // cHUCNANGsDataGridViewTextBoxColumn
@@ -252,6 +256,7 @@
             this.cHUCNANGsDataGridViewTextBoxColumn.HeaderText = "CHUCNANGs";
             this.cHUCNANGsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cHUCNANGsDataGridViewTextBoxColumn.Name = "cHUCNANGsDataGridViewTextBoxColumn";
+            this.cHUCNANGsDataGridViewTextBoxColumn.ReadOnly = true;
             this.cHUCNANGsDataGridViewTextBoxColumn.Visible = false;
             // 
             // Edit

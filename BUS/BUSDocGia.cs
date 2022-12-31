@@ -28,7 +28,7 @@ namespace BUS
         {
             var res = new List<DOCGIA>();
             foreach(DOCGIA docgia in DALDocGia.Instance.GetAllDocGia())
-                if(docgia.NgayHetHan < DateTime.Now.Date)
+                if(docgia.NgayLapThe >= DateTime.Now.Date && docgia.NgayHetHan <= DateTime.Now.Date )
                     res.Add(docgia);
             return res;
         }
