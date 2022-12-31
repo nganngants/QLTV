@@ -15,7 +15,7 @@ namespace DTO
     
     public partial class QLTVDb : DbContext
     {
-
+        
         private static QLTVDb instance;
         public static QLTVDb Instance
         {
