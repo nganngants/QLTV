@@ -65,6 +65,12 @@ namespace GUI
 
         private void butLogin_Click(object sender, EventArgs e)
         {
+            if(textTienThu.Text == "")
+            {
+                MessageBox.Show("Chưa nhập số tiền thu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                return;
+                return;
+            }
             TienThu = Convert.ToInt32(textTienThu.Text);
             //Console.WriteLine("Bf: ",TienThu);
             if (dateNgayLap.Value > DateTime.Now.Date || dateNgayLap.Value.Date < DocGia.NgayLapThe)
