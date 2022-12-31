@@ -32,4 +32,4 @@
 ### Bước 2: Thực thi chương trình
 
 * Cách 1: Biên dịch code trong Visual Studio
-* Cách 2: Cài đặt ứng dụng bằng file cài đặt trong link: https://drive.google.com/drive/folders/1MFOipVRIOhZxAmH-bbpyruxDYeRtq7E6?usp=sharing
+* Cách 2: Cài đặt ứng dụng bằng file cài đặt trong link: https://drive.google.com/drive/folders/1mqi4elBlGAd0hgEGdjsF7njMYkFnpKFP?usp=share_link
