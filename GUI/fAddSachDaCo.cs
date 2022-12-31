@@ -94,8 +94,16 @@ namespace GUI
                 return;
             }
             int pn = BUSPhieuNhap.Instance.AddPhieuNhap(NgayNhap);
-            //Console.WriteLine("Phieu nhap",pn);
-            foreach(DataGridViewRow row in SachGrid.Rows)
+            foreach (DataGridViewRow row in SachGrid.Rows)
+            {
+                int id = Convert.ToInt32(row.Cells["id"].Value);
+                SACH sach = BUSSach.Instance.GetSach(id);
+                if (sach.NamXB > NgayNhap.Year)
+                {
+                    MessageBox.Show("Sách " + sach.MaSach + " có năm xuất bản lớn hơn ngày nhập!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
+                }
+            }
+            foreach (DataGridViewRow row in SachGrid.Rows)
             {
                 int id = Convert.ToInt32(row.Cells["id"].Value);
                 int DonGia = Convert.ToInt32(row.Cells["donGia"].Value);
@@ -111,6 +119,7 @@ namespace GUI
             TongTien = 0;
             foreach(DataGridViewRow row in SachGrid.Rows)
             {
+
                 TongTien += Convert.ToInt32(row.Cells["ThanhTien"].Value);
             }
             labelTongTien.Text = "Tổng tiền: " + TongTien;
