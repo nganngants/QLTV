@@ -131,7 +131,7 @@ namespace GUI
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.ImageList = this.iconList;
-            this.tabControl.ItemSize = new System.Drawing.Size(270, 90);
+            this.tabControl.ItemSize = new System.Drawing.Size(270, 110);
             this.tabControl.Location = new System.Drawing.Point(0, 70);
             this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.Name = "tabControl";
@@ -155,7 +155,7 @@ namespace GUI
             this.tabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.tabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.White;
-            this.tabControl.TabButtonSize = new System.Drawing.Size(270, 90);
+            this.tabControl.TabButtonSize = new System.Drawing.Size(270, 110);
             this.tabControl.TabButtonTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tabControl.TabButtonTextOffset = new System.Drawing.Point(10, 0);
             this.tabControl.TabIndex = 2;
@@ -166,10 +166,10 @@ namespace GUI
             this.tabAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.tabAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tabAccount.ImageIndex = 6;
-            this.tabAccount.Location = new System.Drawing.Point(274, 4);
+            this.tabAccount.Location = new System.Drawing.Point(544, 4);
             this.tabAccount.Margin = new System.Windows.Forms.Padding(0);
             this.tabAccount.Name = "tabAccount";
-            this.tabAccount.Size = new System.Drawing.Size(957, 729);
+            this.tabAccount.Size = new System.Drawing.Size(687, 729);
             this.tabAccount.TabIndex = 0;
             this.tabAccount.Text = "Tài khoản";
             // 

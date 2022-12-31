@@ -194,14 +194,14 @@
             this.txtFind.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(526, 25);
+            this.txtFind.Location = new System.Drawing.Point(446, 25);
             this.txtFind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtFind.PlaceholderText = "Số phiếu";
             this.txtFind.SelectedText = "";
-            this.txtFind.Size = new System.Drawing.Size(156, 26);
+            this.txtFind.Size = new System.Drawing.Size(236, 26);
             this.txtFind.TabIndex = 17;
             // 
             // butRefresh

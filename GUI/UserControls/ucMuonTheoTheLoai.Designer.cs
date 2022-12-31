@@ -65,7 +65,7 @@ namespace GUI.UserControls
             // butHien
             // 
             this.butHien.AutoRoundedCorners = true;
-            this.butHien.BorderRadius = 11;
+            this.butHien.BorderRadius = 10;
             this.butHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -76,10 +76,10 @@ namespace GUI.UserControls
             this.butHien.Image = global::GUI.Properties.Resources.close_icon;
             this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butHien.Location = new System.Drawing.Point(320, 66);
+            this.butHien.Location = new System.Drawing.Point(320, 54);
             this.butHien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butHien.Name = "butHien";
-            this.butHien.Size = new System.Drawing.Size(157, 25);
+            this.butHien.Size = new System.Drawing.Size(157, 23);
             this.butHien.TabIndex = 19;
             this.butHien.Text = "Xóa Báo Cáo";
             this.butHien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -98,7 +98,7 @@ namespace GUI.UserControls
             // butAdd
             // 
             this.butAdd.AutoRoundedCorners = true;
-            this.butAdd.BorderRadius = 11;
+            this.butAdd.BorderRadius = 10;
             this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -109,10 +109,10 @@ namespace GUI.UserControls
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(153, 66);
+            this.butAdd.Location = new System.Drawing.Point(153, 54);
             this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(161, 25);
+            this.butAdd.Size = new System.Drawing.Size(161, 23);
             this.butAdd.TabIndex = 2;
             this.butAdd.Text = "Tạo Báo Cáo";
             this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -125,7 +125,7 @@ namespace GUI.UserControls
             this.dateBC.CustomFormat = "MM/yyyy";
             this.dateBC.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateBC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBC.Location = new System.Drawing.Point(0, 66);
+            this.dateBC.Location = new System.Drawing.Point(0, 54);
             this.dateBC.Name = "dateBC";
             this.dateBC.Size = new System.Drawing.Size(147, 34);
             this.dateBC.TabIndex = 0;

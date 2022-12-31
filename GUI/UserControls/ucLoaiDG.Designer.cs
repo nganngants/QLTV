@@ -72,7 +72,7 @@ namespace GUI.UserControls
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(390, 69);
+            this.butRefresh.Location = new System.Drawing.Point(390, 53);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(82, 66);
@@ -91,7 +91,7 @@ namespace GUI.UserControls
             this.txtTenLoaiDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenLoaiDG.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
             this.txtTenLoaiDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenLoaiDG.Location = new System.Drawing.Point(8, 87);
+            this.txtTenLoaiDG.Location = new System.Drawing.Point(8, 71);
             this.txtTenLoaiDG.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenLoaiDG.Name = "txtTenLoaiDG";
             this.txtTenLoaiDG.PasswordChar = '\0';
@@ -113,7 +113,7 @@ namespace GUI.UserControls
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(195, 87);
+            this.butAdd.Location = new System.Drawing.Point(195, 71);
             this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(189, 28);
