@@ -77,16 +77,12 @@ namespace GUI.UserControls
             Binding(BUSDocGia.Instance.GetAllDocGia());
             
         }
-        private void Sorting(int idx)
-        {
-            this.DocGiaGrid.Sort(this.DocGiaGrid.Columns[idx], ListSortDirection.Ascending);
-        }
+       
         private void DocGiaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
             if (idx == -1)
             {
-                Sorting(e.ColumnIndex);
                 return;
             }
             if (e.ColumnIndex == 1) return;

@@ -48,15 +48,15 @@ namespace GUI.UserControls
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.cUONSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CuonSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.siticoneDataGridView2 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siticoneDataGridView2 = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cUONSACHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CuonSachGrid)).BeginInit();
@@ -91,10 +91,10 @@ namespace GUI.UserControls
             this.butHien.FillColor = System.Drawing.Color.SlateBlue;
             this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
             this.butHien.ForeColor = System.Drawing.Color.White;
-            this.butHien.Image = global::GUI.Properties.Resources.close_icon;
+            this.butHien.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butHien.Location = new System.Drawing.Point(201, 78);
+            this.butHien.Location = new System.Drawing.Point(205, 88);
             this.butHien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butHien.Name = "butHien";
             this.butHien.Size = new System.Drawing.Size(178, 28);
@@ -116,7 +116,7 @@ namespace GUI.UserControls
             this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTinhTrang.ItemHeight = 30;
-            this.comboTinhTrang.Location = new System.Drawing.Point(502, 33);
+            this.comboTinhTrang.Location = new System.Drawing.Point(502, 44);
             this.comboTinhTrang.Name = "comboTinhTrang";
             this.comboTinhTrang.Size = new System.Drawing.Size(201, 36);
             this.comboTinhTrang.TabIndex = 17;
@@ -135,7 +135,7 @@ namespace GUI.UserControls
             this.butTinhTrang.Image = global::GUI.Properties.Resources.search_icon;
             this.butTinhTrang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butTinhTrang.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butTinhTrang.Location = new System.Drawing.Point(709, 33);
+            this.butTinhTrang.Location = new System.Drawing.Point(709, 44);
             this.butTinhTrang.Name = "butTinhTrang";
             this.butTinhTrang.Size = new System.Drawing.Size(129, 28);
             this.butTinhTrang.TabIndex = 16;
@@ -158,7 +158,7 @@ namespace GUI.UserControls
             this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butMaSach.Location = new System.Drawing.Point(709, 78);
+            this.butMaSach.Location = new System.Drawing.Point(709, 89);
             this.butMaSach.Name = "butMaSach";
             this.butMaSach.Size = new System.Drawing.Size(129, 28);
             this.butMaSach.TabIndex = 14;
@@ -196,7 +196,7 @@ namespace GUI.UserControls
             this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Location = new System.Drawing.Point(502, 78);
+            this.txtMaSach.Location = new System.Drawing.Point(502, 89);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
             this.txtMaSach.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -219,7 +219,7 @@ namespace GUI.UserControls
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(2, 77);
+            this.butDel.Location = new System.Drawing.Point(6, 87);
             this.butDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butDel.Name = "butDel";
             this.butDel.Size = new System.Drawing.Size(178, 28);
@@ -302,6 +302,48 @@ namespace GUI.UserControls
             this.CuonSachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.CuonSachGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CuonSachGrid_CellClick);
             this.CuonSachGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CuonSachGrid_CellContentClick);
+            // 
+            // isChosen
+            // 
+            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.isChosen.FalseValue = "0";
+            this.isChosen.HeaderText = "";
+            this.isChosen.IndeterminateValue = "0";
+            this.isChosen.MinimumWidth = 6;
+            this.isChosen.Name = "isChosen";
+            this.isChosen.TrueValue = "1";
+            this.isChosen.Width = 6;
+            // 
+            // MaCuonSach
+            // 
+            this.MaCuonSach.HeaderText = "Mã cuốn sách";
+            this.MaCuonSach.MinimumWidth = 6;
+            this.MaCuonSach.Name = "MaCuonSach";
+            this.MaCuonSach.ReadOnly = true;
+            // 
+            // MaSach
+            // 
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            this.MaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TenSach
+            // 
+            this.TenSach.HeaderText = "Tựa sách";
+            this.TenSach.MinimumWidth = 6;
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            this.TenSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.HeaderText = "Tình trạng";
+            this.TinhTrang.MinimumWidth = 6;
+            this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.ReadOnly = true;
+            this.TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // siticoneDataGridView2
             // 
@@ -395,48 +437,6 @@ namespace GUI.UserControls
             this.SuccDia.Parent = null;
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
             this.SuccDia.Text = null;
-            // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.FalseValue = "0";
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Width = 6;
-            // 
-            // MaCuonSach
-            // 
-            this.MaCuonSach.HeaderText = "Mã cuốn sách";
-            this.MaCuonSach.MinimumWidth = 6;
-            this.MaCuonSach.Name = "MaCuonSach";
-            this.MaCuonSach.ReadOnly = true;
-            // 
-            // MaSach
-            // 
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            this.MaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TenSach
-            // 
-            this.TenSach.HeaderText = "Tựa sách";
-            this.TenSach.MinimumWidth = 6;
-            this.TenSach.Name = "TenSach";
-            this.TenSach.ReadOnly = true;
-            this.TenSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.HeaderText = "Tình trạng";
-            this.TinhTrang.MinimumWidth = 6;
-            this.TinhTrang.Name = "TinhTrang";
-            this.TinhTrang.ReadOnly = true;
-            this.TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ucCuonSach
             // 

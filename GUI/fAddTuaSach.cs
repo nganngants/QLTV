@@ -98,5 +98,10 @@ namespace GUI
             this.Close();
             
         }
+
+        private void TacGiaGrid_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            
+        }
     }
 }

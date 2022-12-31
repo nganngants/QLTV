@@ -47,6 +47,10 @@ namespace GUI
             string chucvu = txtChucVu.Text;
             string tendn = txtUsername.Text;
             string matkhau = txtUserpwd.Text;
+            if(ngaysinh > DateTime.Now.Date)
+            {
+                MessageBox.Show( "Ngày sinh không hợp lệ","Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             var nd = BUSNguoiDung.Instance.GetNguoiDungById(id);
             string err = BUSNguoiDung.Instance.UpdNguoiDung(id, ten, ngaysinh, chucvu, nd.NHOMNGUOIDUNG.id);
 
