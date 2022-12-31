@@ -80,7 +80,7 @@
             this.butFind.Image = global::GUI.Properties.Resources.search_icon;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(724, 79);
+            this.butFind.Location = new System.Drawing.Point(723, 66);
             this.butFind.Name = "butFind";
             this.butFind.Size = new System.Drawing.Size(129, 28);
             this.butFind.TabIndex = 16;
@@ -97,7 +97,7 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(371, 60);
+            this.butRefresh.Location = new System.Drawing.Point(370, 48);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(82, 66);
@@ -118,7 +118,7 @@
             this.txtFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F);
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(539, 78);
+            this.txtFind.Location = new System.Drawing.Point(538, 66);
             this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
@@ -142,7 +142,7 @@
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(192, 79);
+            this.butDel.Location = new System.Drawing.Point(191, 67);
             this.butDel.Name = "butDel";
             this.butDel.Size = new System.Drawing.Size(173, 28);
             this.butDel.TabIndex = 5;
@@ -165,7 +165,7 @@
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(3, 79);
+            this.butAdd.Location = new System.Drawing.Point(2, 67);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(173, 28);
             this.butAdd.TabIndex = 6;

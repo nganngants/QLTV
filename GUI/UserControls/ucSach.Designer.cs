@@ -97,7 +97,7 @@ namespace GUI.UserControls
             this.butHien.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butHien.Location = new System.Drawing.Point(477, 86);
+            this.butHien.Location = new System.Drawing.Point(477, 72);
             this.butHien.Name = "butHien";
             this.butHien.Size = new System.Drawing.Size(143, 28);
             this.butHien.TabIndex = 16;
@@ -126,7 +126,7 @@ namespace GUI.UserControls
             // butTenSach
             // 
             this.butTenSach.AutoRoundedCorners = true;
-            this.butTenSach.BorderRadius = 13;
+            this.butTenSach.BorderRadius = 10;
             this.butTenSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butTenSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -137,9 +137,9 @@ namespace GUI.UserControls
             this.butTenSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butTenSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butTenSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butTenSach.Location = new System.Drawing.Point(977, 80);
+            this.butTenSach.Location = new System.Drawing.Point(977, 72);
             this.butTenSach.Name = "butTenSach";
-            this.butTenSach.Size = new System.Drawing.Size(129, 28);
+            this.butTenSach.Size = new System.Drawing.Size(129, 23);
             this.butTenSach.TabIndex = 14;
             this.butTenSach.Text = "Lọc tình trạng";
             this.butTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -164,7 +164,7 @@ namespace GUI.UserControls
             // butMaSach
             // 
             this.butMaSach.AutoRoundedCorners = true;
-            this.butMaSach.BorderRadius = 13;
+            this.butMaSach.BorderRadius = 10;
             this.butMaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -175,9 +175,9 @@ namespace GUI.UserControls
             this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butMaSach.Location = new System.Drawing.Point(977, 38);
+            this.butMaSach.Location = new System.Drawing.Point(977, 43);
             this.butMaSach.Name = "butMaSach";
-            this.butMaSach.Size = new System.Drawing.Size(129, 28);
+            this.butMaSach.Size = new System.Drawing.Size(129, 23);
             this.butMaSach.TabIndex = 9;
             this.butMaSach.Text = "Tìm kiếm";
             this.butMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -198,7 +198,7 @@ namespace GUI.UserControls
             this.butDel.Image = global::GUI.Properties.Resources.close_icon;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(319, 86);
+            this.butDel.Location = new System.Drawing.Point(319, 72);
             this.butDel.Name = "butDel";
             this.butDel.Size = new System.Drawing.Size(143, 28);
             this.butDel.TabIndex = 3;
@@ -221,7 +221,7 @@ namespace GUI.UserControls
             this.butAddOld.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAddOld.Location = new System.Drawing.Point(159, 86);
+            this.butAddOld.Location = new System.Drawing.Point(159, 72);
             this.butAddOld.Name = "butAddOld";
             this.butAddOld.Size = new System.Drawing.Size(154, 28);
             this.butAddOld.TabIndex = 4;
@@ -244,7 +244,7 @@ namespace GUI.UserControls
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(6, 86);
+            this.butAdd.Location = new System.Drawing.Point(6, 72);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(147, 28);
             this.butAdd.TabIndex = 4;
@@ -256,7 +256,7 @@ namespace GUI.UserControls
             // txtMaSach
             // 
             this.txtMaSach.AutoRoundedCorners = true;
-            this.txtMaSach.BorderRadius = 13;
+            this.txtMaSach.BorderRadius = 10;
             this.txtMaSach.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaSach.DefaultText = "";
             this.txtMaSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -267,14 +267,14 @@ namespace GUI.UserControls
             this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Location = new System.Drawing.Point(770, 38);
+            this.txtMaSach.Location = new System.Drawing.Point(770, 43);
             this.txtMaSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
             this.txtMaSach.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtMaSach.PlaceholderText = "Mã sách";
             this.txtMaSach.SelectedText = "";
-            this.txtMaSach.Size = new System.Drawing.Size(201, 28);
+            this.txtMaSach.Size = new System.Drawing.Size(201, 23);
             this.txtMaSach.TabIndex = 13;
             this.txtMaSach.TextChanged += new System.EventHandler(this.txtMaSach_TextChanged);
             // 

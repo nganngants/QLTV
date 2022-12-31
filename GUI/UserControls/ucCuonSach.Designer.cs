@@ -124,7 +124,7 @@ namespace GUI.UserControls
             // butTinhTrang
             // 
             this.butTinhTrang.AutoRoundedCorners = true;
-            this.butTinhTrang.BorderRadius = 13;
+            this.butTinhTrang.BorderRadius = 11;
             this.butTinhTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butTinhTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butTinhTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -137,7 +137,7 @@ namespace GUI.UserControls
             this.butTinhTrang.ImageOffset = new System.Drawing.Point(3, 0);
             this.butTinhTrang.Location = new System.Drawing.Point(709, 44);
             this.butTinhTrang.Name = "butTinhTrang";
-            this.butTinhTrang.Size = new System.Drawing.Size(129, 28);
+            this.butTinhTrang.Size = new System.Drawing.Size(129, 24);
             this.butTinhTrang.TabIndex = 16;
             this.butTinhTrang.Text = "Lọc tình trạng";
             this.butTinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -147,7 +147,7 @@ namespace GUI.UserControls
             // butMaSach
             // 
             this.butMaSach.AutoRoundedCorners = true;
-            this.butMaSach.BorderRadius = 13;
+            this.butMaSach.BorderRadius = 11;
             this.butMaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -158,9 +158,9 @@ namespace GUI.UserControls
             this.butMaSach.Image = global::GUI.Properties.Resources.search_icon;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butMaSach.Location = new System.Drawing.Point(709, 89);
+            this.butMaSach.Location = new System.Drawing.Point(709, 87);
             this.butMaSach.Name = "butMaSach";
-            this.butMaSach.Size = new System.Drawing.Size(129, 28);
+            this.butMaSach.Size = new System.Drawing.Size(129, 24);
             this.butMaSach.TabIndex = 14;
             this.butMaSach.Text = "Tìm kiếm";
             this.butMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -185,7 +185,7 @@ namespace GUI.UserControls
             // txtMaSach
             // 
             this.txtMaSach.AutoRoundedCorners = true;
-            this.txtMaSach.BorderRadius = 13;
+            this.txtMaSach.BorderRadius = 11;
             this.txtMaSach.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaSach.DefaultText = "";
             this.txtMaSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -196,13 +196,13 @@ namespace GUI.UserControls
             this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Location = new System.Drawing.Point(502, 89);
+            this.txtMaSach.Location = new System.Drawing.Point(502, 87);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
             this.txtMaSach.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtMaSach.PlaceholderText = "Mã, tên ";
             this.txtMaSach.SelectedText = "";
-            this.txtMaSach.Size = new System.Drawing.Size(201, 28);
+            this.txtMaSach.Size = new System.Drawing.Size(201, 24);
             this.txtMaSach.TabIndex = 15;
             // 
             // butDel

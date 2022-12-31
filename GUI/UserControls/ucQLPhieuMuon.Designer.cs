@@ -75,7 +75,7 @@ namespace GUI.UserControls
             // butFil
             // 
             this.butFil.AutoRoundedCorners = true;
-            this.butFil.BorderRadius = 13;
+            this.butFil.BorderRadius = 10;
             this.butFil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -86,9 +86,9 @@ namespace GUI.UserControls
             this.butFil.Image = global::GUI.Properties.Resources.search_icon;
             this.butFil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFil.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFil.Location = new System.Drawing.Point(780, 84);
+            this.butFil.Location = new System.Drawing.Point(780, 77);
             this.butFil.Name = "butFil";
-            this.butFil.Size = new System.Drawing.Size(137, 28);
+            this.butFil.Size = new System.Drawing.Size(142, 23);
             this.butFil.TabIndex = 23;
             this.butFil.Text = "Lọc tình trạng";
             this.butFil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -107,15 +107,15 @@ namespace GUI.UserControls
             this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTinhTrang.ItemHeight = 30;
-            this.comboTinhTrang.Location = new System.Drawing.Point(595, 83);
+            this.comboTinhTrang.Location = new System.Drawing.Point(486, 75);
             this.comboTinhTrang.Name = "comboTinhTrang";
-            this.comboTinhTrang.Size = new System.Drawing.Size(179, 36);
+            this.comboTinhTrang.Size = new System.Drawing.Size(288, 36);
             this.comboTinhTrang.TabIndex = 22;
             // 
             // butFind
             // 
             this.butFind.AutoRoundedCorners = true;
-            this.butFind.BorderRadius = 12;
+            this.butFind.BorderRadius = 10;
             this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -126,9 +126,9 @@ namespace GUI.UserControls
             this.butFind.Image = global::GUI.Properties.Resources.search_icon;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(780, 51);
+            this.butFind.Location = new System.Drawing.Point(780, 48);
             this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(137, 27);
+            this.butFind.Size = new System.Drawing.Size(142, 23);
             this.butFind.TabIndex = 20;
             this.butFind.Text = "Tìm kiếm";
             this.butFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -138,7 +138,7 @@ namespace GUI.UserControls
             // txtFind
             // 
             this.txtFind.AutoRoundedCorners = true;
-            this.txtFind.BorderRadius = 12;
+            this.txtFind.BorderRadius = 10;
             this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.DefaultText = "";
             this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -149,14 +149,14 @@ namespace GUI.UserControls
             this.txtFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(486, 51);
+            this.txtFind.Location = new System.Drawing.Point(486, 48);
             this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtFind.PlaceholderText = "Số phiếu, mã cuốn sách, mã độc giả";
             this.txtFind.SelectedText = "";
-            this.txtFind.Size = new System.Drawing.Size(288, 27);
+            this.txtFind.Size = new System.Drawing.Size(288, 23);
             this.txtFind.TabIndex = 21;
             // 
             // butRefresh
@@ -167,7 +167,7 @@ namespace GUI.UserControls
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(157, 66);
+            this.butRefresh.Location = new System.Drawing.Point(157, 59);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(78, 62);
@@ -188,7 +188,7 @@ namespace GUI.UserControls
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(5, 82);
+            this.butAdd.Location = new System.Drawing.Point(5, 75);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(146, 30);
             this.butAdd.TabIndex = 6;
