@@ -106,7 +106,7 @@
           <Property Name="TenNguoiDung" Type="nvarchar(max)" Nullable="false" />
           <Property Name="NgaySinh" Type="datetime" />
           <Property Name="ChucVu" Type="nvarchar(max)" />
-          <Property Name="TenDangNhap" Type="varchar(max)" Nullable="false" />
+          <Property Name="TenDangNhap" Type="varchar" MaxLength="256" Nullable="false" />
           <Property Name="MatKhau" Type="varchar(max)" Nullable="false" />
           <Property Name="idNhomNguoiDung" Type="int" Nullable="false" />
         </EntityType>
@@ -209,7 +209,7 @@
           <Property Name="idTheLoai" Type="int" Nullable="false" />
           <Property Name="DaAn" Type="int" />
         </EntityType>
-        <Association Name="FK__BCSACHTRA__idCuo__619B8048">
+        <Association Name="FK__BCSACHTRA__idCuo__6383C8BA">
           <End Role="CUONSACH" Type="Self.CUONSACH" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -223,7 +223,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_BCLUOT__idBao__5BE2A6F2">
+        <Association Name="FK__CT_BCLUOT__idBao__5DCAEF64">
           <End Role="BCLUOTMUONTHEOTHELOAI" Type="Self.BCLUOTMUONTHEOTHELOAI" Multiplicity="1" />
           <End Role="CT_BCLUOTMUONTHEOTHELOAI" Type="Self.CT_BCLUOTMUONTHEOTHELOAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -235,7 +235,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_BCLUOT__idThe__5CD6CB2B">
+        <Association Name="FK__CT_BCLUOT__idThe__5EBF139D">
           <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="1" />
           <End Role="CT_BCLUOTMUONTHEOTHELOAI" Type="Self.CT_BCLUOTMUONTHEOTHELOAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -247,7 +247,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_PHIEUN__idSac__48CFD27E">
+        <Association Name="FK__CT_PHIEUN__idSac__4AB81AF0">
           <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
           <End Role="CT_PHIEUNHAP" Type="Self.CT_PHIEUNHAP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -259,7 +259,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_PHIEUN__SoPhi__47DBAE45">
+        <Association Name="FK__CT_PHIEUN__SoPhi__49C3F6B7">
           <End Role="PHIEUNHAPSACH" Type="Self.PHIEUNHAPSACH" Multiplicity="1" />
           <End Role="CT_PHIEUNHAP" Type="Self.CT_PHIEUNHAP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -271,7 +271,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_TACGIA__idTac__36B12243">
+        <Association Name="FK__CT_TACGIA__idTac__37A5467C">
           <End Role="TACGIA" Type="Self.TACGIA" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -285,7 +285,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_TACGIA__idTua__37A5467C">
+        <Association Name="FK__CT_TACGIA__idTua__38996AB5">
           <End Role="TUASACH" Type="Self.TUASACH" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -299,7 +299,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CUONSACH__idSach__4BAC3F29">
+        <Association Name="FK__CUONSACH__idSach__4D94879B">
           <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
           <End Role="CUONSACH" Type="Self.CUONSACH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -311,7 +311,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DOCGIA__idLoaiDo__3C69FB99">
+        <Association Name="FK__DOCGIA__idLoaiDo__3E52440B">
           <End Role="LOAIDOCGIA" Type="Self.LOAIDOCGIA" Multiplicity="1" />
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -323,7 +323,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DOCGIA__idNguoiD__3E52440B">
+        <Association Name="FK__DOCGIA__idNguoiD__403A8C7D">
           <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -335,7 +335,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NGUOIDUNG__idNho__2C3393D0">
+        <Association Name="FK__NGUOIDUNG__idNho__2D27B809">
           <End Role="NHOMNGUOIDUNG" Type="Self.NHOMNGUOIDUNG" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -377,7 +377,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHIEUMUON__idCuo__5165187F">
+        <Association Name="FK__PHIEUMUON__idCuo__534D60F1">
           <End Role="CUONSACH" Type="Self.CUONSACH" Multiplicity="1" />
           <End Role="PHIEUMUONTRA" Type="Self.PHIEUMUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -389,7 +389,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHIEUMUON__idDoc__5070F446">
+        <Association Name="FK__PHIEUMUON__idDoc__52593CB8">
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="1" />
           <End Role="PHIEUMUONTRA" Type="Self.PHIEUMUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -401,7 +401,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHIEUTHU__idDocG__5535A963">
+        <Association Name="FK__PHIEUTHU__idDocG__571DF1D5">
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="1" />
           <End Role="PHIEUTHU" Type="Self.PHIEUTHU" Multiplicity="*" />
           <ReferentialConstraint>
@@ -413,7 +413,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SACH__idTuaSach__412EB0B6">
+        <Association Name="FK__SACH__idTuaSach__4316F928">
           <End Role="TUASACH" Type="Self.TUASACH" Multiplicity="1" />
           <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -425,7 +425,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TUASACH__idTheLo__30F848ED">
+        <Association Name="FK__TUASACH__idTheLo__31EC6D26">
           <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="1" />
           <End Role="TUASACH" Type="Self.TUASACH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -458,47 +458,47 @@
           <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THELOAI" EntityType="Self.THELOAI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TUASACH" EntityType="Self.TUASACH" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__BCSACHTRA__idCuo__619B8048" Association="Self.FK__BCSACHTRA__idCuo__619B8048">
+          <AssociationSet Name="FK__BCSACHTRA__idCuo__6383C8BA" Association="Self.FK__BCSACHTRA__idCuo__6383C8BA">
             <End Role="CUONSACH" EntitySet="CUONSACH" />
             <End Role="BCSACHTRATRE" EntitySet="BCSACHTRATRE" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_BCLUOT__idBao__5BE2A6F2" Association="Self.FK__CT_BCLUOT__idBao__5BE2A6F2">
+          <AssociationSet Name="FK__CT_BCLUOT__idBao__5DCAEF64" Association="Self.FK__CT_BCLUOT__idBao__5DCAEF64">
             <End Role="BCLUOTMUONTHEOTHELOAI" EntitySet="BCLUOTMUONTHEOTHELOAI" />
             <End Role="CT_BCLUOTMUONTHEOTHELOAI" EntitySet="CT_BCLUOTMUONTHEOTHELOAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_BCLUOT__idThe__5CD6CB2B" Association="Self.FK__CT_BCLUOT__idThe__5CD6CB2B">
+          <AssociationSet Name="FK__CT_BCLUOT__idThe__5EBF139D" Association="Self.FK__CT_BCLUOT__idThe__5EBF139D">
             <End Role="THELOAI" EntitySet="THELOAI" />
             <End Role="CT_BCLUOTMUONTHEOTHELOAI" EntitySet="CT_BCLUOTMUONTHEOTHELOAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_PHIEUN__idSac__48CFD27E" Association="Self.FK__CT_PHIEUN__idSac__48CFD27E">
+          <AssociationSet Name="FK__CT_PHIEUN__idSac__4AB81AF0" Association="Self.FK__CT_PHIEUN__idSac__4AB81AF0">
             <End Role="SACH" EntitySet="SACH" />
             <End Role="CT_PHIEUNHAP" EntitySet="CT_PHIEUNHAP" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_PHIEUN__SoPhi__47DBAE45" Association="Self.FK__CT_PHIEUN__SoPhi__47DBAE45">
+          <AssociationSet Name="FK__CT_PHIEUN__SoPhi__49C3F6B7" Association="Self.FK__CT_PHIEUN__SoPhi__49C3F6B7">
             <End Role="PHIEUNHAPSACH" EntitySet="PHIEUNHAPSACH" />
             <End Role="CT_PHIEUNHAP" EntitySet="CT_PHIEUNHAP" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_TACGIA__idTac__36B12243" Association="Self.FK__CT_TACGIA__idTac__36B12243">
+          <AssociationSet Name="FK__CT_TACGIA__idTac__37A5467C" Association="Self.FK__CT_TACGIA__idTac__37A5467C">
             <End Role="TACGIA" EntitySet="TACGIA" />
             <End Role="CT_TACGIA" EntitySet="CT_TACGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_TACGIA__idTua__37A5467C" Association="Self.FK__CT_TACGIA__idTua__37A5467C">
+          <AssociationSet Name="FK__CT_TACGIA__idTua__38996AB5" Association="Self.FK__CT_TACGIA__idTua__38996AB5">
             <End Role="TUASACH" EntitySet="TUASACH" />
             <End Role="CT_TACGIA" EntitySet="CT_TACGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__CUONSACH__idSach__4BAC3F29" Association="Self.FK__CUONSACH__idSach__4BAC3F29">
+          <AssociationSet Name="FK__CUONSACH__idSach__4D94879B" Association="Self.FK__CUONSACH__idSach__4D94879B">
             <End Role="SACH" EntitySet="SACH" />
             <End Role="CUONSACH" EntitySet="CUONSACH" />
           </AssociationSet>
-          <AssociationSet Name="FK__DOCGIA__idLoaiDo__3C69FB99" Association="Self.FK__DOCGIA__idLoaiDo__3C69FB99">
+          <AssociationSet Name="FK__DOCGIA__idLoaiDo__3E52440B" Association="Self.FK__DOCGIA__idLoaiDo__3E52440B">
             <End Role="LOAIDOCGIA" EntitySet="LOAIDOCGIA" />
             <End Role="DOCGIA" EntitySet="DOCGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__DOCGIA__idNguoiD__3E52440B" Association="Self.FK__DOCGIA__idNguoiD__3E52440B">
+          <AssociationSet Name="FK__DOCGIA__idNguoiD__403A8C7D" Association="Self.FK__DOCGIA__idNguoiD__403A8C7D">
             <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
             <End Role="DOCGIA" EntitySet="DOCGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__NGUOIDUNG__idNho__2C3393D0" Association="Self.FK__NGUOIDUNG__idNho__2C3393D0">
+          <AssociationSet Name="FK__NGUOIDUNG__idNho__2D27B809" Association="Self.FK__NGUOIDUNG__idNho__2D27B809">
             <End Role="NHOMNGUOIDUNG" EntitySet="NHOMNGUOIDUNG" />
             <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
           </AssociationSet>
@@ -510,23 +510,23 @@
             <End Role="NHOMNGUOIDUNG" EntitySet="NHOMNGUOIDUNG" />
             <End Role="PHANQUYEN" EntitySet="PHANQUYEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHIEUMUON__idCuo__5165187F" Association="Self.FK__PHIEUMUON__idCuo__5165187F">
+          <AssociationSet Name="FK__PHIEUMUON__idCuo__534D60F1" Association="Self.FK__PHIEUMUON__idCuo__534D60F1">
             <End Role="CUONSACH" EntitySet="CUONSACH" />
             <End Role="PHIEUMUONTRA" EntitySet="PHIEUMUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHIEUMUON__idDoc__5070F446" Association="Self.FK__PHIEUMUON__idDoc__5070F446">
+          <AssociationSet Name="FK__PHIEUMUON__idDoc__52593CB8" Association="Self.FK__PHIEUMUON__idDoc__52593CB8">
             <End Role="DOCGIA" EntitySet="DOCGIA" />
             <End Role="PHIEUMUONTRA" EntitySet="PHIEUMUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHIEUTHU__idDocG__5535A963" Association="Self.FK__PHIEUTHU__idDocG__5535A963">
+          <AssociationSet Name="FK__PHIEUTHU__idDocG__571DF1D5" Association="Self.FK__PHIEUTHU__idDocG__571DF1D5">
             <End Role="DOCGIA" EntitySet="DOCGIA" />
             <End Role="PHIEUTHU" EntitySet="PHIEUTHU" />
           </AssociationSet>
-          <AssociationSet Name="FK__SACH__idTuaSach__412EB0B6" Association="Self.FK__SACH__idTuaSach__412EB0B6">
+          <AssociationSet Name="FK__SACH__idTuaSach__4316F928" Association="Self.FK__SACH__idTuaSach__4316F928">
             <End Role="TUASACH" EntitySet="TUASACH" />
             <End Role="SACH" EntitySet="SACH" />
           </AssociationSet>
-          <AssociationSet Name="FK__TUASACH__idTheLo__30F848ED" Association="Self.FK__TUASACH__idTheLo__30F848ED">
+          <AssociationSet Name="FK__TUASACH__idTheLo__31EC6D26" Association="Self.FK__TUASACH__idTheLo__31EC6D26">
             <End Role="THELOAI" EntitySet="THELOAI" />
             <End Role="TUASACH" EntitySet="TUASACH" />
           </AssociationSet>
@@ -643,7 +643,7 @@
           <Property Name="TenNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgaySinh" Type="DateTime" Precision="3" />
           <Property Name="ChucVu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="TenDangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idNhomNguoiDung" Type="Int32" Nullable="false" />
           <NavigationProperty Name="DOCGIAs" Relationship="Self.FK__DOCGIA__idNguoiD__3E52440B" FromRole="NGUOIDUNG" ToRole="DOCGIA" />

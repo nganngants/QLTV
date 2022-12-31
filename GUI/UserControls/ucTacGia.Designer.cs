@@ -227,6 +227,7 @@
             this.tenTacGiaDataGridViewTextBoxColumn.HeaderText = "Tên tác giả";
             this.tenTacGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenTacGiaDataGridViewTextBoxColumn.Name = "tenTacGiaDataGridViewTextBoxColumn";
+            
             // 
             // ucTacGia
             // 
