@@ -35,12 +35,24 @@ namespace GUI
         {
             string ten = txtHoTen.Text;
             DateTime ngaysinh = dateNgaySinh.Value.Date;
+            if(ngaysinh >DateTime.Now.Date) 
+            {
+                MessageBox.Show("Ngày sinh không hợp lệ", "Lỗi",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
             string chucvu = txtChucVu.Text;
             string tendn = txtUsername.Text;
             string matkhau = txtUserpwd.Text;
             int idNhom = (int)comboNhomND.SelectedValue;
             var nhom = BUSNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhom);
             bool isDG = false;
+            if(ten == "" || matkhau == "" || tendn == "" )
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin", "Lỗi",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             foreach (var cn in nhom.CHUCNANGs)
             {
                 if (cn.TenChucNang == "DG") isDG = true;
