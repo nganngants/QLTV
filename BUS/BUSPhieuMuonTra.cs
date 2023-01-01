@@ -56,7 +56,7 @@ namespace BUS
 
             foreach (PHIEUMUONTRA pmt in dg.PHIEUMUONTRAs)
             {
-                if (pmt.NgayTra == null && NgayMuon < pmt.HanTra)
+                if (pmt.NgayTra == null && NgayMuon > pmt.HanTra)
                     return "Độc giả đang có sách mượn trễ.";
                 if (pmt.NgayTra == null) cnt++;
             }

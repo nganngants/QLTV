@@ -66,12 +66,12 @@ namespace GUI
         {
             if (comboCuonSach.SelectedValue == null)
             {
-                MessageBox.Show("Chưa chọn cuốn sách", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cuốn sách được chọn không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (comboDocGia.SelectedValue == null)
             {
-                MessageBox.Show("Chưa chọn độc giả", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Độc giả được chọn không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
