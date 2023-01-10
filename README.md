@@ -15,7 +15,7 @@
 * Lê Hoài Thương - 21520474
 * Lê Thị Bích Loan - 21521083
 
-## Sử dụng ứng dụng
+## Chạy thử project
 
 ### Yêu cầu để thực thi project
 
@@ -34,3 +34,5 @@
 * Mở solution trong Visual Studio
 * Tải về bằng Nuget nếu VS không tự động tải: Entity Framework 6.4.4, Siticone UI/UX Framework
 * Debug
+
+**Ngoài ra, có thể sử dụng chương trình bằng cách download file installer trong bản release**
