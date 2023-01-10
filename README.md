@@ -31,5 +31,6 @@
 
 ### Bước 2: Thực thi chương trình
 
-* Cách 1: Biên dịch code trong Visual Studio
-* Cách 2: Cài đặt ứng dụng bằng file cài đặt trong link: https://drive.google.com/drive/folders/1mqi4elBlGAd0hgEGdjsF7njMYkFnpKFP?usp=share_link
+* Mở solution trong Visual Studio
+* Tải về bằng Nuget nếu VS không tự động tải: Entity Framework 6.4.4, Siticone UI/UX Framework
+* Debug
