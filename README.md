@@ -4,6 +4,7 @@
 
 * Đây là ứng dụng được sử dụng làm đồ án cuối kì cho môn Nhập môn Công nghệ phần mềm.
 * Ứng dụng sử dụng mô hình 3 lớp, cài đặt giao diện bằng C# Winforms và sử dụng Entity Framework
+* Thông tin chi tiết về project có thể tìm đọc trong file Report.docx
 
 ### Giảng viên hướng dẫn
 
