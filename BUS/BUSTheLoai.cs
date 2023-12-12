@@ -45,7 +45,8 @@ namespace BUS
 
         public bool AddTheLoai (string name)
         {
-            return DALTheLoai.Instance.AddTheLoai(name);
+            var theLoai = new THELOAI { TenTheLoai = name };
+            return DALTheLoai.Instance.AddTheLoai(theLoai);
         }
     }
 }

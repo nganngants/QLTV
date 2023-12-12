@@ -51,7 +51,8 @@ namespace BUS
             if (tenNhom == "Quản Lý") return -1;
             try
             {
-                int id = DALNhomNguoiDung.Instance.AddNhomNguoiDung(tenNhom);
+                var nhomNguoiDung = new NHOMNGUOIDUNG { TenNhomNguoiDung = tenNhom };
+                int id = DALNhomNguoiDung.Instance.AddNhomNguoiDung(nhomNguoiDung);
                 return id;
             }
             

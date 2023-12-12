@@ -41,7 +41,10 @@ namespace BUS
         {
             if (nam > DateTime.Today.Year || (nam == DateTime.Today.Year && thang > DateTime.Today.Month))
                 return "Tháng, năm không hợp lệ";
-            int id = DALBCLuotMuonTheoTheLoai.Instance.AddBaoCao(thang, nam);
+
+            var bcLuotMuonTheoTheLoai = new BCLUOTMUONTHEOTHELOAI { Thang = thang, Nam = nam };
+
+            int id = DALBCLuotMuonTheoTheLoai.Instance.AddBaoCao(bcLuotMuonTheoTheLoai);
             if (id != -1)
             {
                 List<THELOAI> ltl = DALTheLoai.Instance.GetAllTheLoai();
@@ -51,7 +54,7 @@ namespace BUS
                     if (err != "") return err;
                 }
 
-                DALBCLuotMuonTheoTheLoai.Instance.Compute(id);
+              
                 return "";
             }    
             else return "KHông thể lập báo cáo";

@@ -50,7 +50,8 @@ namespace BUS
             foreach (NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
                 if (nd.TenDangNhap == tenDN)
                     return -1;
-            int id = DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, ChucVu, tenDN, MK, NhomNguoiDung);
+            var nguoiDung = new NGUOIDUNG { TenNguoiDung = ten, NgaySinh = NgaySinh, ChucVu = ChucVu, TenDangNhap = tenDN, MatKhau = MK, idNhomNguoiDung = NhomNguoiDung };
+            int id = DALNguoiDung.Instance.AddNguoiDung(nguoiDung);
             return id;
         }
         public NGUOIDUNG GetNguoiDung(string maNguoiDung)

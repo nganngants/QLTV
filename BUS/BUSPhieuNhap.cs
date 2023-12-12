@@ -40,7 +40,8 @@ namespace BUS
         {
             //DateTime NgayNhap = new DateTime(Nam, Thang, Ngay);
             if(DateTime.Now < NgayNhap) { return -1; };
-            return DALPhieuNhapSach.Instance.AddPhieuNhap(NgayNhap);
+            var phieuNhapSach = new PHIEUNHAPSACH { NgayNhap = NgayNhap };
+            return DALPhieuNhapSach.Instance.AddPhieuNhap(phieuNhapSach);
             
         }
         public string DelPhieuNhap(int id)

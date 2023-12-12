@@ -94,9 +94,14 @@ namespace BUS
             var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(idLDG);
             if (ldg == null) return "Loai Doc Gia khong hop le";
 
-            int idND = DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, chucVu, username, userpwd, idNND);
+            var nguoiDung = new NGUOIDUNG { TenNguoiDung = ten, NgaySinh = NgaySinh, ChucVu = chucVu, TenDangNhap = username, MatKhau = userpwd, idNhomNguoiDung = idNND };
+
+            int idND = DALNguoiDung.Instance.AddNguoiDung(nguoiDung);
             if (idND == -1) return "Tên đăng nhập đã tồn tại";
-            if (DALDocGia.Instance.AddDocGia(ten, NgaySinh, DiaChi, Email, NgayLapThe, NgayHetHan, idLDG, 0, idND))
+
+            var docgia = new DOCGIA { TenDocGia = ten, NgaySinh = NgaySinh, DiaChi = DiaChi, Email = Email, NgayLapThe = NgayLapThe, NgayHetHan = NgayHetHan, idLoaiDocGia = idLDG, idNguoiDung = idLDG, TongNoHienTai = 0 };
+
+            if (DALDocGia.Instance.AddDocGia(docgia))
                 return "";
             DALNguoiDung.Instance.DelNguoiDung(idND);
             return "Lỗi khi thêm độc giả";

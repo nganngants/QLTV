@@ -10,6 +10,19 @@ namespace DAL
 {
     public class DALChucNang
     {
+
+        public QLTVDb db;
+
+        public DALChucNang(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALChucNang()
+        {
+            db = new QLTVDb();
+        }
+
         private static DALChucNang instance;
 
         public static DALChucNang Instance
@@ -24,18 +37,33 @@ namespace DAL
 
         public List<CHUCNANG> GetAllChucNang()
         {
-            return QLTVDb.Instance.CHUCNANGs.AsNoTracking().ToList();
+            var dsChucNang = db.CHUCNANGs.Select(s => new
+            {
+                s.id
+
+            }).ToList();
+
+            var chucnangs = new List<CHUCNANG>();
+
+            foreach (var b in dsChucNang)
+            {
+                CHUCNANG chucnang = db.CHUCNANGs.Find(b.id);
+                chucnangs.Add(chucnang);
+            }
+
+            return chucnangs;
         }
 
         public CHUCNANG GetChucNangById (int id)
         {
-            return QLTVDb.Instance.CHUCNANGs.Find(id);
+            CHUCNANG chucNang = db.CHUCNANGs.FirstOrDefault(p => p.id == id);
+            return chucNang;
         }
 
         public CHUCNANG GetChucNangByMa(string ma)
         {
-            var res = QLTVDb.Instance.CHUCNANGs.Where(c => c.MaChucNang == ma);
-            return (res.Any() ? res.First() : null);
+            CHUCNANG chucNang = db.CHUCNANGs.FirstOrDefault(p => p.MaChucNang == ma);
+            return chucNang;
         }
 
         

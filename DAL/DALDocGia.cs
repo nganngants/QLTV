@@ -16,6 +16,17 @@ namespace DAL
 {
     public class DALDocGia
     {
+        public QLTVDb db;
+
+        public DALDocGia(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALDocGia()
+        {
+            db = new QLTVDb();
+        }
         private static DALDocGia instance;
 
         public static DALDocGia Instance 
@@ -40,31 +51,11 @@ namespace DAL
         /// <param name="maLoaiDocGia"></param>
         /// <param name="tongNoHienTai"></param>
         /// <returns></returns>
-        public bool AddDocGia(string tenDocGia, DateTime ngaySinh, string diaChi, string email,
-            DateTime ngayLapThe, DateTime ngayHetHan, int idLoaiDocGia, int tongNoHienTai, int idND)
+        public bool AddDocGia(DOCGIA docGia)
         {
-            try
-            {
-                var obj = new DOCGIA();
-                obj.TenDocGia = tenDocGia;
-                obj.NgaySinh = ngaySinh;
-                obj.DiaChi = diaChi;
-                obj.Email = email;
-                obj.NgayLapThe = ngayLapThe;
-                obj.NgayHetHan = ngayHetHan;
-                obj.idLoaiDocGia = idLoaiDocGia;
-                obj.TongNoHienTai = tongNoHienTai;
-                obj.idNguoiDung = idND;
-                obj.NGUOIDUNG = DALNguoiDung.Instance.GetNguoiDungById(idND);
-                QLTVDb.Instance.DOCGIAs.Add(obj);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
+            db.DOCGIAs.Add(docGia);
+            db.SaveChanges();
+            return true;
         }
 
         /// <summary>
@@ -74,16 +65,14 @@ namespace DAL
         /// <returns></returns>
         public DOCGIA GetDocGiaById (int idDocGia)
         {
-            return QLTVDb.Instance.DOCGIAs.Find(idDocGia);
+            return  db.DOCGIAs.Find(idDocGia);
 
         }
 
         public DOCGIA GetDocGiaByMa (string maDocGia)
         {
-            var res = QLTVDb.Instance.DOCGIAs.AsNoTracking().Where(d => d.MaDocGia == maDocGia);
-            if (res.Any())
-                return res.FirstOrDefault();
-            return null;
+            DOCGIA docGia = db.DOCGIAs.FirstOrDefault(p => p.MaDocGia == maDocGia);
+            return docGia;
         }
         /// <summary>
         /// return a list of all DOCGIA objects
@@ -91,24 +80,21 @@ namespace DAL
         /// <returns>List<DOCGIA></returns>
         public List<DOCGIA> GetAllDocGia()
         {
-            return QLTVDb.Instance.DOCGIAs.AsNoTracking().ToList();
-        }
+            var dsDocGia = db.DOCGIAs.Select(s => new
+            {
+                s.ID
 
-        /// <summary>
-        /// return list of DOCGIA match the input filter
-        /// </summary>
-        /// <param name="maDocGia"></param>
-        /// <param name="tenDocGia"></param>
-        /// <param name="email"></param>
-        /// <param name="maLoaiDocGia"></param>
-        /// <returns></returns>
-        public List<DOCGIA> FindDocGia(string tenDocGia, string email, int? idLoaiDocGia)
-        {
-            var res = QLTVDb.Instance.DOCGIAs.ToList();
-            if (tenDocGia != null) res = res.Where(d => d.TenDocGia == tenDocGia).Select(d => d).ToList();
-            if (email != null) res = res.Where(d => d.Email == email).Select(d => d).ToList();
-            if (idLoaiDocGia != null) res = res.Where(d => d.idLoaiDocGia == idLoaiDocGia).Select(d => d).ToList();
-            return res;
+            }).ToList();
+
+            var docgias = new List<DOCGIA>();
+
+            foreach (var b in dsDocGia)
+            {
+                DOCGIA docGia = db.DOCGIAs.Find(b.ID);
+                docgias.Add(docGia);
+            }
+
+            return docgias;
         }
 
         /// <summary>
@@ -118,7 +104,8 @@ namespace DAL
         /// <returns></returns>
         public DOCGIA FindDocGiaByIdND (int idNguoiDung)
         {
-            return QLTVDb.Instance.DOCGIAs.AsNoTracking().Where(d => d.idNguoiDung == idNguoiDung).First();
+            DOCGIA docGia = db.DOCGIAs.FirstOrDefault(p => p.idNguoiDung == idNguoiDung);
+            return docGia;
         }
 
 
@@ -137,7 +124,7 @@ namespace DAL
                 if (ngayHetHan != null) dg.NgayHetHan = (DateTime)ngayHetHan;
                 if (idLoaiDocGia != null) dg.idLoaiDocGia = (int)idLoaiDocGia;
 
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch
@@ -153,7 +140,7 @@ namespace DAL
                 DOCGIA dg = GetDocGiaById(idDocGia);
                 if (dg == null) return false;
                 dg.TongNoHienTai = tongNoMoi;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true; 
             }
             catch
@@ -168,8 +155,8 @@ namespace DAL
             {
                 DOCGIA dg = GetDocGiaById(idDocGia);
                 if (dg == null) return false;
-                QLTVDb.Instance.DOCGIAs.Remove(dg);
-                QLTVDb.Instance.SaveChanges();
+                db.DOCGIAs.Remove(dg);
+                db.SaveChanges();
                 return true;
             }
             catch
@@ -177,5 +164,7 @@ namespace DAL
                 return false;
             }
         }
+
+
     }
 }

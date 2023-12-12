@@ -3,12 +3,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DAL
 {
     public class DALTacGia
     {
+
+        public QLTVDb db;
+
+        public DALTacGia(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALTacGia()
+        {
+            db = new QLTVDb();
+        }
+
         private static DALTacGia instance;
 
         public static DALTacGia Instance 
@@ -23,12 +37,26 @@ namespace DAL
 
         public List<TACGIA> GetAllTacGia()
         {
-            return QLTVDb.Instance.TACGIAs.AsNoTracking().ToList();
+            var dsTacGia = db.TACGIAs.Select(s => new
+            {
+                s.id
+
+            }).ToList();
+
+            var tacgias = new List<TACGIA>();
+
+            foreach (var b in dsTacGia)
+            {
+                TACGIA tacgia = db.TACGIAs.Find(b.id);
+                tacgias.Add(tacgia);
+            }
+
+            return tacgias;
         }
 
         public TACGIA GetTacGiaById (int id)
         {
-            return QLTVDb.Instance.TACGIAs.Find(id);
+            return db.TACGIAs.Find(id);
         }
 
         /// <summary>
@@ -38,10 +66,8 @@ namespace DAL
         /// <returns></returns>
         public TACGIA GetTacGiaByMa(string maTacGia)
         {
-            var res = QLTVDb.Instance.TACGIAs.AsNoTracking().Where(t => t.MATACGIA == maTacGia);
-            if (res.Any())
-                return res.FirstOrDefault();
-            return null;
+            TACGIA tacgia = db.TACGIAs.FirstOrDefault(p => p.MATACGIA == maTacGia);
+            return tacgia;
         }
 
         /// <summary>
@@ -51,22 +77,13 @@ namespace DAL
         /// <returns></returns>
         public List<TACGIA> FindTacGia(string tenTacGia)
         {
-            return QLTVDb.Instance.TACGIAs.Where(t => t.TenTacGia == tenTacGia).Select(t => t).ToList();
+            return db.TACGIAs.Where(t => t.TenTacGia == tenTacGia).Select(t => t).ToList();
         }
-        public int AddTacGia (string tenTacGia)
+        public int AddTacGia (TACGIA tacgia)
         {
-            try
-            {
-                TACGIA tacGia = new TACGIA { TenTacGia = tenTacGia };
-                QLTVDb.Instance.TACGIAs.Add(tacGia);
-                QLTVDb.Instance.SaveChanges();
-                return tacGia.id;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return -1;
-            }
+            db.TACGIAs.Add(tacgia);
+            db.SaveChanges();
+            return tacgia.id;
         }
 
         public bool UpdTacGia(int id, string tenTacGia)
@@ -76,7 +93,7 @@ namespace DAL
                 TACGIA tacgia = GetTacGiaById(id);
                 if (tacgia == null) return false;
                 tacgia.TenTacGia = tenTacGia;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch
@@ -91,8 +108,8 @@ namespace DAL
             {
                 TACGIA tacgia = GetTacGiaById(id);
                 if (tacgia == null) return false;
-                QLTVDb.Instance.TACGIAs.Remove(tacgia);
-                QLTVDb.Instance.SaveChanges();
+                db.TACGIAs.Remove(tacgia);
+                db.SaveChanges();
                 return true;
             }
             catch

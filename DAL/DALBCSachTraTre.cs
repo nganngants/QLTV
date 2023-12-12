@@ -9,6 +9,17 @@ namespace DAL
 {
     public class DALBCSachTraTre
     {
+        public QLTVDb db;
+
+        public DALBCSachTraTre(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALBCSachTraTre()
+        {
+            db = new QLTVDb();
+        }
         private static DALBCSachTraTre instance;
 
         public static DALBCSachTraTre Instance
@@ -23,46 +34,44 @@ namespace DAL
 
         public List<BCSACHTRATRE> GetAllBaoCao ()
         {
-            return QLTVDb.Instance.BCSACHTRATREs.AsNoTracking().ToList();
+            var dsBaoCao = db.BCSACHTRATREs.Select(s => new
+            {
+                s.idCuonSach
+
+            }).ToList();
+
+            var baocaos = new List<BCSACHTRATRE>();
+
+            foreach (var b in dsBaoCao)
+            {
+                BCSACHTRATRE baocao = db.BCSACHTRATREs.Find(b.idCuonSach);
+                baocaos.Add(baocao);
+            }
+
+            return baocaos;
         }
 
-        public BCSACHTRATRE GetBaoCao(DateTime ngayBaoCao, int idCuonSach)
+        public BCSACHTRATRE GetBaoCao(DateTime Ngay, int idCuonSach)
         {
-            return QLTVDb.Instance.BCSACHTRATREs.Find(new object[] {ngayBaoCao, idCuonSach});
+            BCSACHTRATRE ctbc = db.BCSACHTRATREs.FirstOrDefault(p => p.Ngay == Ngay);
+            return ctbc;
         }
 
         public List<BCSACHTRATRE> FindBaoCaoByDate(DateTime ngayBC)
         {
-            return QLTVDb.Instance.BCSACHTRATREs.AsNoTracking().Where(b => 
-            b.Ngay.Day == ngayBC.Day && b.Ngay.Month == ngayBC.Month && b.Ngay.Year == ngayBC.Year).ToList();
+            return db.BCSACHTRATREs.Where(b => b.Ngay.Date == ngayBC.Date).ToList();
         }
 
         public List<BCSACHTRATRE> FindBaoCaoByCuonSach (int idCuonSach)
         {
-            return QLTVDb.Instance.BCSACHTRATREs.AsNoTracking().Where(b => b.idCuonSach == idCuonSach).ToList();   
+            return db.BCSACHTRATREs.Where(b => b.idCuonSach == idCuonSach).ToList();   
         }
 
-        public bool AddBaoCao(DateTime ngayBC, int idCuonSach, DateTime ngayMuon, int soNgayTre)
+        public bool AddBaoCao(BCSACHTRATRE baocao)
         {
-            try
-            {
-                var bc = new BCSACHTRATRE
-                {
-                    Ngay = ngayBC,
-                    idCuonSach = idCuonSach,
-                    CUONSACH = DALCuonSach.Instance.GetCuonSachById(idCuonSach),
-                    NgayMuon = ngayMuon,
-                    SoNgayTre = soNgayTre
-                };
-                QLTVDb.Instance.BCSACHTRATREs.Add(bc);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
+            db.BCSACHTRATREs.Add(baocao);
+            db.SaveChanges();
+            return true;
         }
 
         public bool DelBaoCao (DateTime ngayBC, int idCuonSach)
@@ -71,13 +80,13 @@ namespace DAL
             {
                 var bc = GetBaoCao(ngayBC, idCuonSach);
                 if (bc == null) return false;
-                QLTVDb.Instance.BCSACHTRATREs.Remove(bc);
-                QLTVDb.Instance.SaveChanges();
+                db.BCSACHTRATREs.Remove(bc);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+            
                 return false;
             }
         }

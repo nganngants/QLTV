@@ -31,14 +31,10 @@ namespace BUS
             TUASACH ts = DALTuaSach.Instance.GetTuaSachById(MATUASACH);
             return ts;
         }
-        public List<TUASACH> FindTuaSach(string name, THELOAI theloai, List<TACGIA> tacgia)
-        {
-            return DALTuaSach.Instance.FindTuaSach(name,theloai,tacgia);
-        }
+       
         public string AddTuaSach(string name, THELOAI theloai, List<TACGIA> tacgia)
         {
-            if (DALTuaSach.Instance.AddTuaSach(name, theloai, tacgia))
-                return "";
+           
             return "Không thể thêm tựa sách";
         }
         public string DelTuaSach(int matuasach)
@@ -64,8 +60,7 @@ namespace BUS
         }
         public string UpdTuaSach(int id,string TenTuaSach,THELOAI theLoai,List<TACGIA> TacGia)
         {
-            if (DALTuaSach.Instance.UpdTuaSach(id, TenTuaSach, theLoai, TacGia))
-                return "";
+          
             return "Không thể cập nhật tựa sách";
         }
         public string UpdAnTuaSach(int id,int data)
@@ -77,8 +72,7 @@ namespace BUS
                 if (err != "")
                     return err;
             }
-            if (DALTuaSach.Instance.UpdAnTuaSach(id, data))
-                return "";
+    
             return "Lỗi";
         }
     }

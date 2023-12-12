@@ -33,7 +33,9 @@ namespace BUS
                 if (pm.CUONSACH.SACH.TUASACH.THELOAI.id == idTL) soLuot++;
             }
 
-            if (DALCT_BCLuotMuonTheoTheLoai.Instance.AddCTBC(id, idTL, soLuot))
+            var ctbc = new CT_BCLUOTMUONTHEOTHELOAI { idBaoCao = id, idTheLoai = idTL, SoLuotMuon = soLuot };
+
+            if (DALCT_BCLuotMuonTheoTheLoai.Instance.AddCTBC(ctbc))
                 return "";
             return "Lỗi";
 

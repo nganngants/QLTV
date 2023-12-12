@@ -27,7 +27,8 @@ namespace BUS
         }
         public int AddTacGia(string name)
         {
-            return (DALTacGia.Instance.AddTacGia(name));
+            TACGIA tacGia = new TACGIA { TenTacGia = name };
+            return (DALTacGia.Instance.AddTacGia(tacGia));
              
         }
         public string DelTacGia(int id)

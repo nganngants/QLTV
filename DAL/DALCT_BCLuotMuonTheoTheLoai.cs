@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,18 @@ namespace DAL
 {
     public class DALCT_BCLuotMuonTheoTheLoai
     {
+        public QLTVDb db;
+
+        public DALCT_BCLuotMuonTheoTheLoai(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALCT_BCLuotMuonTheoTheLoai()
+        {
+            db = new QLTVDb();
+        }
+
         private static DALCT_BCLuotMuonTheoTheLoai instance;
 
         public static DALCT_BCLuotMuonTheoTheLoai Instance
@@ -23,35 +36,34 @@ namespace DAL
 
         public List<CT_BCLUOTMUONTHEOTHELOAI> GetAllCTBC ()
         {
-            return QLTVDb.Instance.CT_BCLUOTMUONTHEOTHELOAI.AsNoTracking().ToList();
+            var dsCTBC = db.CT_BCLUOTMUONTHEOTHELOAI.Select(s => new
+            {
+                s.idBaoCao
+
+            }).ToList();
+
+            var baocaos = new List<CT_BCLUOTMUONTHEOTHELOAI>();
+
+            foreach (var b in dsCTBC)
+            {
+                CT_BCLUOTMUONTHEOTHELOAI baocao = db.CT_BCLUOTMUONTHEOTHELOAI.Find(b.idBaoCao);
+                baocaos.Add(baocao);
+            }
+
+            return baocaos;
         }
 
         public CT_BCLUOTMUONTHEOTHELOAI GetCTBC (int idBC, int idTheLoai)
         {
-            return QLTVDb.Instance.CT_BCLUOTMUONTHEOTHELOAI.Find(new object[] { idBC, idTheLoai });
+            CT_BCLUOTMUONTHEOTHELOAI ctbc = db.CT_BCLUOTMUONTHEOTHELOAI.FirstOrDefault(p => p.idBaoCao == idBC && p.idTheLoai == idTheLoai);
+            return ctbc;
         }
 
-        public bool AddCTBC (int idBC, int idTheLoai, int soLuotMuon)
+        public bool AddCTBC (CT_BCLUOTMUONTHEOTHELOAI ctbc)
         {
-            try
-            {
-                var ct = new CT_BCLUOTMUONTHEOTHELOAI
-                {
-                    idBaoCao = idBC,
-                    BCLUOTMUONTHEOTHELOAI = DALBCLuotMuonTheoTheLoai.Instance.GetBaoCaoById(idBC),
-                    idTheLoai = idTheLoai,
-                    THELOAI = DALTheLoai.Instance.GetTheLoaiById(idTheLoai),
-                    SoLuotMuon = soLuotMuon
-                };
-                QLTVDb.Instance.CT_BCLUOTMUONTHEOTHELOAI.Add(ct);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
+            db.CT_BCLUOTMUONTHEOTHELOAI.Add(ctbc);
+            db.SaveChanges();
+            return true;
         }
 
         public bool UpdCTBC (int idBC, int idTL, int soLuotMuon)
@@ -61,12 +73,12 @@ namespace DAL
                 var ct = GetCTBC(idBC, idTL);
                 if (ct == null) return false;
                 ct.SoLuotMuon = soLuotMuon;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+                
                 return false;
             }
         }
@@ -78,13 +90,13 @@ namespace DAL
                 var ct = GetCTBC(idBC, idTL);
                 if (ct == null) return false;
 
-                QLTVDb.Instance.CT_BCLUOTMUONTHEOTHELOAI.Remove(ct);
-                QLTVDb.Instance.SaveChanges();
+                db.CT_BCLUOTMUONTHEOTHELOAI.Remove(ct);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+             
                 return false;
             }
         }

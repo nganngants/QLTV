@@ -62,7 +62,10 @@ namespace BUS
             }
             if (thamso.SoSachMuonToiDa <= cnt)
                 return "Đã vượt quá số sách được mượn";
-            if (DALPhieuMuonTra.Instance.AddPhieuMuonTra(dg.ID, cs.id, NgayMuon, HanTra))
+
+            var phieuMuonTra = new PHIEUMUONTRA { idDocGia = dg.ID, idCuonSach = cs.id, NgayMuon = NgayMuon, HanTra = HanTra };
+
+            if (DALPhieuMuonTra.Instance.AddPhieuMuonTra(phieuMuonTra))
                 return "";
             return "Không thể thêm phiếu mượn.";
         }

@@ -10,7 +10,21 @@ namespace DAL
 {
     public class DALSach
     {
+
+        public QLTVDb db;
+        
+        public DALSach(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALSach()
+        {
+            db = new QLTVDb();
+        }
+
         private static DALSach instance;
+     
         public static DALSach Instance
         {
             get
@@ -18,31 +32,45 @@ namespace DAL
                 if (instance == null) instance= new DALSach();
                 return instance;
             }
-            set { instance = value; }
+            set => instance = value; 
         }
         public bool UpdAnSach(int id,int data)
         {
-            try
-            {
-                SACH sach = QLTVDb.Instance.SACHes.Find(id);
+                SACH sach = db.SACHes.Find(id);
+                if(sach == null) return false;
+
                 sach.DaAn = data;
-                QLTVDb.Instance.SaveChanges();
+               
+                db.SaveChanges();
                 return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
+            
+          
         }
         public List<SACH> GetAllSach()
         {
-            return QLTVDb.Instance.SACHes.AsNoTracking().ToList();
+            // return db.SACHes.AsNoTracking().ToList();
+            var dsSach = db.SACHes.Select(s => new
+            {
+                s.id
+
+            }).ToList();
+
+            var saches = new List<SACH>();
+
+            foreach (var b in dsSach)
+            {
+                SACH benh = db.SACHes.Find(b.id);
+                saches.Add(benh);
+            }
+
+            return saches;
         }
 
         public SACH GetSachById (int id)
         {
-            return QLTVDb.Instance.SACHes.Find(id);
+            //return QLTVDb.Instance.SACHes.Find(id);
+            SACH sach = db.SACHes.Find(id);
+            return sach;
         }
         /// <summary>
         /// Get SACH by maSach
@@ -51,10 +79,8 @@ namespace DAL
         /// <returns></returns>
         public SACH GetSachByMa (string maSach)
         {
-            var res = QLTVDb.Instance.SACHes.AsNoTracking().Where(s => s.MaSach == maSach);
-            if (res.Any())
-                return res.FirstOrDefault();
-            return null;
+            SACH sach = db.SACHes.FirstOrDefault(p => p.MaSach == maSach);
+            return sach;
         }
         /// <summary>
         /// Find SACHs by filter
@@ -63,14 +89,7 @@ namespace DAL
         /// <param name="namXB"></param>
         /// <param name="nhaXB"></param>
         /// <returns></returns>
-        public List<SACH> FindSach(TUASACH tuaSach, int? namXB, string nhaXB) 
-        {
-            List<SACH> res = GetAllSach();
-            if (tuaSach != null) res = res.Where(s => s.TUASACH == tuaSach).Select(s => s).ToList();
-            if (namXB != null) res = res.Where(s => s.NamXB == namXB).Select(s => s).ToList();
-            if (nhaXB != null) res = res.Where(s => s.NhaXB == nhaXB).Select(s => s).ToList();
-            return res;
-        }
+     
 
         /// <summary>
         /// Add info for new Sach (with soLuong = 0)
@@ -81,29 +100,11 @@ namespace DAL
         /// <param name="namXB"></param>
         /// <param name="nhaXB"></param>
         /// <returns></returns>
-        public int AddSachMoi(TUASACH tuaSach, int donGia, int namXB, string nhaXB)
+        public int AddSachMoi(SACH sach)
         {
-            try
-            {
-                SACH sach = new SACH
-                {
-                    TUASACH = tuaSach,
-                    idTuaSach = tuaSach.id,
-                    SoLuong = 0,
-                    SoLuongConLai = 0,
-                    NamXB = namXB,
-                    DonGia = donGia,
-                    NhaXB = nhaXB
-                };
-                QLTVDb.Instance.SACHes.Add(sach);
-                QLTVDb.Instance.SaveChanges();
-                return sach.id;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return -1;
-            }
+            db.SACHes.Add(sach);
+            db.SaveChanges();
+            return sach.id;
         }
 
         public bool AddSachDaCo (int id, int soLuongThem)
@@ -116,11 +117,7 @@ namespace DAL
                 sach.SoLuongConLai += soLuongThem;
                 sach.DaAn = 0;
                 Console.WriteLine("{0} {1}", id, sach.SoLuong);
-                for (int i = 0; i < soLuongThem; ++i)
-                {
-                    DALCuonSach.Instance.AddCuonSach(sach, 1);
-                }
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch 
@@ -136,24 +133,7 @@ namespace DAL
         /// <param name="namXB"></param>
         /// <param name="nhaXB"></param>
         /// <returns></returns>
-        public bool UpdSach(int id, int? namXB, string nhaXB)
-        {
-            try
-            {
-                SACH sach = GetSachById(id);
-                if (sach == null) return false;
-                if (namXB != null) sach.NamXB = (int)namXB;
-                if (nhaXB != null) sach.NhaXB = nhaXB;
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
-        }
-        
+       
 
         /// <summary>
         /// Deleting a SACH also delete all CUONSACHs belonging to it
@@ -166,18 +146,14 @@ namespace DAL
             {
                 SACH sach = GetSachById(id);
                 if (sach == null) return false;
-                //List<CUONSACH> dsCuonSach = DALCuonSach.Instance.FindCuonSach(sach, null);
-                //foreach (CUONSACH cuonSach in dsCuonSach)
-                //{
-                //    DALCuonSach.Instance.DelCuonSach(cuonSach.MaCuonSach);
-                //}
-                QLTVDb.Instance.SACHes.Remove(sach);
-                QLTVDb.Instance.SaveChanges();
+
+                db.SACHes.Remove(sach);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+              
                 return false;
             }
         }

@@ -9,6 +9,18 @@ namespace DAL
 {
     public class DALPhieuThu
     {
+        public QLTVDb db;
+
+        public DALPhieuThu(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALPhieuThu()
+        {
+            db = new QLTVDb();
+        }
+
         private static DALPhieuThu instance;
 
         public static DALPhieuThu Instance 
@@ -23,21 +35,17 @@ namespace DAL
 
         public List<PHIEUTHU> GetAllPhieuThu ()
         {
-            return QLTVDb.Instance.PHIEUTHUs.AsNoTracking().ToList ();
+            return db.PHIEUTHUs.ToList ();
         }
 
         public PHIEUTHU GetPhieuThuById (int id)
         {
-            return QLTVDb.Instance.PHIEUTHUs.Find(id);
+            return db.PHIEUTHUs.Find(id);
         }
 
         public List <PHIEUTHU> FindPhieuThuByNgay (int? ngay, int? thang, int? nam)
         {
-            List<PHIEUTHU> res = GetAllPhieuThu();
-            if (ngay != null) res = res.Where(p => p.NgayLap.Day == ngay).ToList();
-            if (thang != null) res = res.Where(p => p.NgayLap.Month == thang).ToList();
-            if (nam != null) res = res.Where(p => p.NgayLap.Year == nam).ToList();
-            return res;
+            return db.PHIEUTHUs.Where(i => i.NgayLap.Day == ngay && i.NgayLap.Month == thang && i.NgayLap.Year == nam).ToList();
         }
 
         /// <summary>
@@ -47,29 +55,11 @@ namespace DAL
         /// <param name="soTienThu"></param>
         /// <param name="ngayLap"></param>
         /// <returns></returns>
-        public bool AddPhieuThu (int idDocGia, int soTienThu, DateTime ngayLap)
+        public bool AddPhieuThu (PHIEUTHU phieuThu)
         {
-            try
-            {
-                var phieu = new PHIEUTHU
-                {
-                    idDocGia = idDocGia,
-                    DOCGIA = DALDocGia.Instance.GetDocGiaById(idDocGia),
-                    SoTienThu = soTienThu,
-                    NgayLap = ngayLap
-                };
-                var dg = DALDocGia.Instance.GetDocGiaById(idDocGia);
-                dg.TongNoHienTai -= soTienThu;
-
-                QLTVDb.Instance.PHIEUTHUs.Add(phieu);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
+            db.PHIEUTHUs.Add(phieuThu);
+            db.SaveChanges();
+            return true;
         }
 
         /// <summary>
@@ -86,20 +76,14 @@ namespace DAL
                 var phieu = GetPhieuThuById(soPhieu);
                 if (phieu == null) return false;
 
-                if (soTienThu != null)
-                {
-                    var dg = DALDocGia.Instance.GetDocGiaById((int)phieu.idDocGia);
-                    dg.TongNoHienTai += (int)phieu.SoTienThu - (int)soTienThu;
-                    //Console.WriteLine("DAL: ", soTienThu);
-                    phieu.SoTienThu = (int)soTienThu;
-                }
+               
                 if (ngayLap != null) phieu.NgayLap = ngayLap.Value;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+               
                 return false;
             }
         }
@@ -116,18 +100,19 @@ namespace DAL
                 var phieu = GetPhieuThuById(soPhieu);
                 if (phieu == null) return false;
 
-                var dg = DALDocGia.Instance.GetDocGiaById((int)phieu.idDocGia);
-                dg.TongNoHienTai += phieu.SoTienThu;
+              
 
-                QLTVDb.Instance.PHIEUTHUs.Remove(phieu);
-                QLTVDb.Instance.SaveChanges();
+                db.PHIEUTHUs.Remove(phieu);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+               
                 return false;
             }
         }
+
+
     }
 }

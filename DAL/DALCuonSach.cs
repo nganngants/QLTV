@@ -10,6 +10,18 @@ namespace DAL
 {
     public class DALCuonSach
     {
+        public QLTVDb db;
+
+        public DALCuonSach(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALCuonSach()
+        {
+            db = new QLTVDb();
+        }
+
         private static DALCuonSach instance;
         public static DALCuonSach Instance 
         { 
@@ -24,30 +36,35 @@ namespace DAL
         {
             try
             {
-                CUONSACH cuonsach = QLTVDb.Instance.CUONSACHes.Find(id);
+                CUONSACH cuonsach = db.CUONSACHes.Find(id);
                 SACH sach = cuonsach.SACH;
-                if(data != cuonsach.DaAn)
-                {
-                    if (data == 1) sach.SoLuongConLai--;
-                    if(data == 0) sach.SoLuongConLai++;
-                }
-                if (data == 1) cuonsach.TinhTrang = 2;
-                else 
-                    if(cuonsach.TinhTrang ==2) 
-                    cuonsach.TinhTrang = 1;
-                cuonsach.DaAn = data;
-                QLTVDb.Instance.SaveChanges();
+                
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+              
                 return false;
             }
         }
         public List<CUONSACH> GetAllCuonSach()
         {
-            return QLTVDb.Instance.CUONSACHes.AsNoTracking().ToList();
+            var dsCuonSach = db.CUONSACHes.Select(s => new
+            {
+                s.id
+
+            }).ToList();
+
+            var cuonSaches = new List<CUONSACH>();
+
+            foreach (var b in dsCuonSach)
+            {
+                CUONSACH cuonsach = db.CUONSACHes.Find(b.id);
+                cuonSaches.Add(cuonsach);
+            }
+
+            return cuonSaches;
         }
         /// <summary>
         /// Get CUONSACH by Id
@@ -56,7 +73,7 @@ namespace DAL
         /// <returns></returns>
         public CUONSACH GetCuonSachById (int idCuonSach)
         {
-            return QLTVDb.Instance.CUONSACHes.Find(idCuonSach);
+            return db.CUONSACHes.Find(idCuonSach);
         }
 
         /// <summary>
@@ -66,10 +83,8 @@ namespace DAL
         /// <returns></returns>
         public CUONSACH GetCuonSachByMa(string maCuonSach)
         {
-            var res = QLTVDb.Instance.CUONSACHes.AsNoTracking().Where(c => c.MaCuonSach == maCuonSach);
-            if (res.Any())
-                return res.FirstOrDefault();
-            return null;
+            CUONSACH cuonsach = db.CUONSACHes.FirstOrDefault(p => p.MaCuonSach == maCuonSach);
+            return cuonsach;
         }
 
         /// <summary>
@@ -78,34 +93,13 @@ namespace DAL
         /// <param name="sach"></param>
         /// <param name="tinhTrang"></param>
         /// <returns></returns>
-        public List<CUONSACH> FindCuonSach (SACH sach, int? tinhTrang)
-        {
-            List<CUONSACH> res = GetAllCuonSach();
-            if (sach != null) res = res.Where(c => c.SACH == sach).ToList();
-            if (tinhTrang != null) res = res.Where(c => c.TinhTrang == tinhTrang).ToList();
-            return res;
-        }
 
-        public bool AddCuonSach (SACH sach, int tinhTrang = 0)
+
+        public bool AddCuonSach (CUONSACH cuonSach)
         {
-            try
-            {
-                CUONSACH cuonsach = new CUONSACH
-                {
-                    idSach = sach.id,
-                    SACH = sach,
-                    TinhTrang = tinhTrang,
-                    DaAn = 0
-                };
-                QLTVDb.Instance.CUONSACHes.Add(cuonsach);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
+            db.CUONSACHes.Add(cuonSach);
+            db.SaveChanges();
+            return true;
         }
 
         public bool UpdCuonSach(int idCuonSach, int? tinhTrang)
@@ -115,17 +109,8 @@ namespace DAL
                 CUONSACH cuonsach = GetCuonSachById(idCuonSach);
                 if (cuonsach == null) return false;
                 SACH sach = cuonsach.SACH;
-
-                if (tinhTrang != null) if (tinhTrang == cuonsach.TinhTrang) return false;
-                    else
-                    {
-                        cuonsach.TinhTrang = (int)tinhTrang;
-                        if (tinhTrang == 1) sach.SoLuongConLai++;
-                        else sach.SoLuongConLai--;
-                    }
-                        QLTVDb.Instance.SaveChanges();
-                        return true;
-                    }
+                return true;
+            }
             catch
             {
                 return false;
@@ -138,10 +123,9 @@ namespace DAL
                 var cuonSach = GetCuonSachById(idCuonSach);
                 if (cuonSach == null) return false;
                 var sach = cuonSach.SACH;
-                QLTVDb.Instance.CUONSACHes.Remove(cuonSach);
-                sach.SoLuongConLai--;
-                sach.SoLuong--;
-                QLTVDb.Instance.SaveChanges();
+                db.CUONSACHes.Remove(cuonSach);
+               
+                db.SaveChanges();
                 return true;
             }
             catch
