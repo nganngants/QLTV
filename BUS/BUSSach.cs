@@ -42,6 +42,7 @@ namespace BUS
         }
         public Tuple<string,int> AddSach(int id, int SoLuong, int DonGia, int NamXb, string NhaXB)
         {
+          
             TUASACH ts;
             ts = DALTuaSach.Instance.GetTuaSachById(id);
             if(ts == null)
@@ -51,7 +52,19 @@ namespace BUS
             THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
             if ((int)DateTime.Now.Year - NamXb > thamso.KhoangCachXuatBan || (int)DateTime.Now.Year - NamXb <0)
                 return Tuple.Create("Năm xuất bản không hợp lệ",-1);
-            int idSach = DALSach.Instance.AddSachMoi(ts, DonGia, NamXb, NhaXB);
+
+            SACH sach = new SACH
+            {
+                TUASACH = ts,
+                idTuaSach = ts.id,
+                SoLuong = 0,
+                SoLuongConLai = 0,
+                NamXB = NamXb,
+                DonGia = DonGia,
+                NhaXB = NhaXB
+            };
+
+            int idSach = DALSach.Instance.AddSachMoi(sach);
             if (idSach != -1)
                 return Tuple.Create("",idSach);
             return Tuple.Create("Không thể thêm sách"   , -1)   ;

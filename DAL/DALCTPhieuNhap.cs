@@ -8,8 +8,23 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
+
     public class DALCTPhieuNhap
     {
+
+        public QLTVDb db;
+
+        public DALCTPhieuNhap(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALCTPhieuNhap()
+        {
+            db = new QLTVDb();
+        }
+
+
         private static DALCTPhieuNhap instance;
 
         public static DALCTPhieuNhap Instance 
@@ -24,49 +39,34 @@ namespace DAL
 
         public List<CT_PHIEUNHAP> GetAllCTPhieuNhap ()
         {
-            return QLTVDb.Instance.CT_PHIEUNHAP.AsNoTracking().ToList();
+            var dsCTPhieuNhap = db.CT_PHIEUNHAP.Select(s => new
+            {
+                s.SoPhieuNhap
+
+            }).ToList();
+
+            var phieunhaps = new List<CT_PHIEUNHAP>();
+
+            foreach (var b in dsCTPhieuNhap)
+            {
+                CT_PHIEUNHAP phieunhap = db.CT_PHIEUNHAP.Find(b.SoPhieuNhap);
+                phieunhaps.Add(phieunhap);
+            }
+
+            return phieunhaps;
         }
 
         public CT_PHIEUNHAP GetCT_PHIEUNHAP(int soPhieu, int idSach)
         {
-            return QLTVDb.Instance.CT_PHIEUNHAP.Find(new object[] { soPhieu, idSach });
+            CT_PHIEUNHAP CTPhieuNhap = db.CT_PHIEUNHAP.FirstOrDefault(p => p.SoPhieuNhap == soPhieu);
+            return CTPhieuNhap;
         }
 
-        public bool AddCTPhieuNhap (int soPhieu, int idSach, int donGia, int soLuongNhap)
+        public bool AddCTPhieuNhap (CT_PHIEUNHAP CTPhieuNhap)
         {
-            try
-            {
-                var phieu = DALPhieuNhapSach.Instance.GetPhieuById(soPhieu);
-                var sach = DALSach.Instance.GetSachById(idSach);
-                if (phieu == null || sach == null) return false;
-
-
-                var ct = new CT_PHIEUNHAP
-                {
-                    SoPhieuNhap = soPhieu,
-                    PHIEUNHAPSACH = DALPhieuNhapSach.Instance.GetPhieuById(soPhieu),
-                    idSach = idSach,
-                    SACH = DALSach.Instance.GetSachById(idSach),
-                    DonGia = donGia,
-                    SoLuongNhap = soLuongNhap,
-                    ThanhTien = donGia * soLuongNhap
-                };
-                QLTVDb.Instance.CT_PHIEUNHAP.Add(ct);
-
-                // update tongTien in PhieuNhap
-                DALPhieuNhapSach.Instance.UpdPhieuNhap(soPhieu, null, phieu.TongTien + ct.ThanhTien);
-
-                // Add Sach
-                DALSach.Instance.AddSachDaCo(idSach, soLuongNhap);
-
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
+            db.CT_PHIEUNHAP.Add(CTPhieuNhap);
+            db.SaveChanges();
+            return true;
         }
 
 

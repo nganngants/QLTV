@@ -25,7 +25,7 @@ namespace BUS
             return DALBCSachTraTre.Instance.GetAllBaoCao();
         }
         public string AddBaoCao(DateTime NgayBC)
-        {
+        {   
             if (NgayBC > DateTime.Now) return "Ngày báo cáo không hợp lệ";
             List<PHIEUMUONTRA> lpmt = DALPhieuMuonTra.Instance.FindPhieuMuonTre(NgayBC);
             if (!lpmt.Any()) return "Không có sách trả trễ trong ngày này";
@@ -34,7 +34,16 @@ namespace BUS
                 if(pmt.NgayTra == null)
                 {
                     int SoNgayTraTre = ((TimeSpan)(NgayBC - pmt.HanTra)).Days;
-                     DALBCSachTraTre.Instance.AddBaoCao(NgayBC, (int)pmt.idCuonSach,(DateTime)pmt.NgayMuon,SoNgayTraTre);
+
+                    var baocao = new BCSACHTRATRE
+                    {
+                        Ngay = NgayBC,
+                        idCuonSach = (int)pmt.idCuonSach,
+                        NgayMuon = (DateTime)pmt.NgayMuon,
+                        SoNgayTre = SoNgayTraTre,
+                    };
+
+                     DALBCSachTraTre.Instance.AddBaoCao(baocao);
                 }
             }
             return "";

@@ -38,8 +38,10 @@ namespace BUS
             if (soLuongNhap <= 0) return "Số lượng nhập không hợp lệ";
             if (donGia < 0) return "Đơn giá không hợp lệ";
             THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
-            
-            if (DALCTPhieuNhap.Instance.AddCTPhieuNhap(soPhieu, idSach, donGia, soLuongNhap))
+
+            var phieuNhap = new CT_PHIEUNHAP { SoPhieuNhap = soPhieu, idSach = idSach, DonGia = donGia, SoLuongNhap = soLuongNhap };
+
+            if (DALCTPhieuNhap.Instance.AddCTPhieuNhap(phieuNhap))
                 return "";
             return "Không thể nhập sách này";
         }

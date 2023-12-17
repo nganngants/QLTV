@@ -9,6 +9,17 @@ namespace DAL
 {
     public class DALNhomNguoiDung
     {
+        public QLTVDb db;
+
+        public DALNhomNguoiDung(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALNhomNguoiDung()
+        {
+            db = new QLTVDb();
+        }
         private static DALNhomNguoiDung instance;
 
         public static DALNhomNguoiDung Instance 
@@ -23,37 +34,25 @@ namespace DAL
 
         public List<NHOMNGUOIDUNG> GetAllNhomNguoiDung ()
         {
-            return QLTVDb.Instance.NHOMNGUOIDUNGs.AsNoTracking().ToList ();
+            return db.NHOMNGUOIDUNGs.ToList ();
         }
 
         public NHOMNGUOIDUNG GetNhomNguoiDungById (int id)
         {
-            return QLTVDb.Instance.NHOMNGUOIDUNGs.Find(id);
+            return db.NHOMNGUOIDUNGs.Find(id);
         }
 
         public NHOMNGUOIDUNG GetNhomNguoiDungByMa (string ma)
         {
-            var res = QLTVDb.Instance.NHOMNGUOIDUNGs.AsNoTracking().Where(n => n.MaNhomNguoiDung == ma);
-            return (res.Any() ? res.First() : null);
+            NHOMNGUOIDUNG nhomNguoiDung = db.NHOMNGUOIDUNGs.FirstOrDefault(p => p.MaNhomNguoiDung == ma);
+            return nhomNguoiDung;
         }
 
-        public int AddNhomNguoiDung (string tenNhom)
+        public int AddNhomNguoiDung (NHOMNGUOIDUNG nhomNguoiDung)
         {
-            try
-            {
-                var nhom = new NHOMNGUOIDUNG
-                {
-                    TenNhomNguoiDung = tenNhom
-                };
-                QLTVDb.Instance.NHOMNGUOIDUNGs.Add(nhom);
-                QLTVDb.Instance.SaveChanges();
-                return nhom.id;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine (ex.InnerException.ToString ());
-                return -1;
-            }
+            db.NHOMNGUOIDUNGs.Add(nhomNguoiDung);
+            db.SaveChanges();
+            return nhomNguoiDung.id;
         }
 
         public bool UpdNhomNguoiDung(int id, string tenNhom)
@@ -63,12 +62,12 @@ namespace DAL
                 var nhom = GetNhomNguoiDungById(id);
                 if (nhom == null) return false;
                 nhom.TenNhomNguoiDung = tenNhom;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+               
                 return false;
             }
         }
@@ -86,7 +85,6 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
                 return false;
             }
         }
@@ -106,7 +104,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+              
                 return false;
             }
         }
@@ -116,13 +114,13 @@ namespace DAL
             {
                 var nhom = GetNhomNguoiDungById(id);
                 if (nhom == null) return false;
-                QLTVDb.Instance.NHOMNGUOIDUNGs.Remove(nhom);
-                QLTVDb.Instance.SaveChanges();
+                db.NHOMNGUOIDUNGs.Remove(nhom);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+              
                 return false;
             }
         }

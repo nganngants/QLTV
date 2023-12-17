@@ -9,6 +9,17 @@ namespace DAL
 {
     public class DALLoaiDocGia
     {
+        public  QLTVDb db;
+
+        public DALLoaiDocGia(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALLoaiDocGia()
+        {
+            db = new QLTVDb();
+        }
         private static DALLoaiDocGia instance;
 
         public static DALLoaiDocGia Instance
@@ -27,7 +38,7 @@ namespace DAL
         /// <returns> List <LOAIDOCGIA> </returns>
         public List<LOAIDOCGIA> GetAllLoaiDocGia ()
         {
-            return QLTVDb.Instance.LOAIDOCGIAs.AsNoTracking().ToList();
+            return db.LOAIDOCGIAs.ToList();
         }
 
         /// <summary>
@@ -35,19 +46,11 @@ namespace DAL
         /// </summary>
         /// <param name="tenLoaiDocGia"></param>
         /// <returns></returns>
-        public bool AddLoaiDocGia (string tenLoaiDocGia)
+        public bool AddLoaiDocGia (LOAIDOCGIA loaiDocGia)
         {
-            try
-            {
-                LOAIDOCGIA obj = new LOAIDOCGIA { TenLoaiDocGia = tenLoaiDocGia };
-                QLTVDb.Instance.LOAIDOCGIAs.Add(obj);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            db.LOAIDOCGIAs.Add(loaiDocGia);
+            db.SaveChanges();
+            return true;
         }
         /// <summary>
         /// Get LOAIDOCGIA by input id
@@ -56,7 +59,7 @@ namespace DAL
         /// <returns></returns>
         public LOAIDOCGIA GetLoaiDocGiaById (int id)
         {
-            return QLTVDb.Instance.LOAIDOCGIAs.Find(id);
+            return db.LOAIDOCGIAs.Find(id);
         }
         /// <summary>
         /// return LOAIDOCGIA object match with the input maLoaiDocGia
@@ -65,10 +68,8 @@ namespace DAL
         /// <returns>LOAIDOCGIA</returns>
         public LOAIDOCGIA GetLoaiDocGiaByMa (string maLoaiDocGia)
         {
-            var res = QLTVDb.Instance.LOAIDOCGIAs.AsNoTracking().Where(l => l.MaLoaiDocGia == maLoaiDocGia);
-            if (res.Any())
-                return res.FirstOrDefault();
-            return null;
+            LOAIDOCGIA loaiDocGia = db.LOAIDOCGIAs.FirstOrDefault(p => p.MaLoaiDocGia == maLoaiDocGia);
+            return loaiDocGia;
         }
         
         /// <summary>
@@ -78,7 +79,7 @@ namespace DAL
         /// <returns>List<LOAIDOCGIA></returns>
         public List<LOAIDOCGIA> FindLoaiDocGia(string tenLoaiDocGia)
         {
-            return QLTVDb.Instance.LOAIDOCGIAs.AsNoTracking().Where(i => i.TenLoaiDocGia == tenLoaiDocGia).Select(i => i).ToList();
+            return db.LOAIDOCGIAs.Where(i => i.TenLoaiDocGia == tenLoaiDocGia).ToList();
         }
 
         /// <summary>
@@ -94,7 +95,7 @@ namespace DAL
                 LOAIDOCGIA ldg = GetLoaiDocGiaById(id);
                 if (ldg == null) return false;
                 if (tenLoaiDocGia != null) ldg.TenLoaiDocGia = tenLoaiDocGia;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch
@@ -109,8 +110,8 @@ namespace DAL
             {
                 LOAIDOCGIA ldg = GetLoaiDocGiaById(id);
                 if (ldg == null) return false;
-                QLTVDb.Instance.LOAIDOCGIAs.Remove(ldg);
-                QLTVDb.Instance.SaveChanges();
+                db.LOAIDOCGIAs.Remove(ldg);
+                db.SaveChanges();
                 return true;
             }
             catch

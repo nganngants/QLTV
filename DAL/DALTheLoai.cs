@@ -9,6 +9,18 @@ namespace DAL
 {
     public class DALTheLoai
     {
+        public QLTVDb db;
+
+        public DALTheLoai(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALTheLoai()
+        {
+            db = new QLTVDb();
+        }
+
         private static DALTheLoai instance;
 
         public static DALTheLoai Instance
@@ -23,7 +35,7 @@ namespace DAL
 
         public List<THELOAI> GetAllTheLoai()
         {
-            return QLTVDb.Instance.THELOAIs.AsNoTracking().ToList();
+            return  db.THELOAIs.ToList();
         }
 
         /// <summary>
@@ -33,7 +45,7 @@ namespace DAL
         /// <returns></returns>
         public THELOAI GetTheLoaiById (int id)
         {
-            return QLTVDb.Instance.THELOAIs.Find(id);
+            return db.THELOAIs.Find(id);
         }
 
         /// <summary>
@@ -43,10 +55,8 @@ namespace DAL
         /// <returns></returns>
         public THELOAI GetTheLoaiByMa(string maTheLoai)
         {
-            var res = QLTVDb.Instance.THELOAIs.AsNoTracking().Where(t => t.MaTheLoai == maTheLoai);
-            if (res.Any())
-                return res.FirstOrDefault();
-            return null;
+            THELOAI theLoai = db.THELOAIs.FirstOrDefault(p => p.MaTheLoai == maTheLoai);
+            return theLoai;
         }
 
         /// <summary>
@@ -56,23 +66,14 @@ namespace DAL
         /// <returns></returns>
         public List<THELOAI> FindTheLoai(string tenTheLoai)
         {
-            return QLTVDb.Instance.THELOAIs.AsNoTracking().Where(t => t.TenTheLoai == tenTheLoai).Select(t => t).ToList();
+            return db.THELOAIs.Where(t => t.TenTheLoai == tenTheLoai).Select(t => t).ToList();
         }
 
-        public bool AddTheLoai(string tenTheLoai)
+        public bool AddTheLoai(THELOAI theLoai)
         {
-            try
-            {
-                THELOAI theloai = new THELOAI { TenTheLoai = tenTheLoai };
-                QLTVDb.Instance.THELOAIs.Add(theloai);
-                QLTVDb.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
+            db.THELOAIs.Add(theLoai);
+            db.SaveChanges();
+            return true;
         }
 
         public bool UpdTheLoai(int id, string tenTheLoai)
@@ -82,7 +83,7 @@ namespace DAL
                 var theloai = GetTheLoaiById(id);
                 if (theloai == null) return false;
                 theloai.TenTheLoai = tenTheLoai;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch
@@ -97,8 +98,8 @@ namespace DAL
             {
                 var theloai = GetTheLoaiById(id);
                 if (theloai == null) return false;
-                QLTVDb.Instance.THELOAIs.Remove(theloai);
-                QLTVDb.Instance.SaveChanges();
+                db.THELOAIs.Remove(theloai);
+                db.SaveChanges();
                 return true;
             }
             catch

@@ -10,6 +10,17 @@ namespace DAL
 {
     public class DALPhieuNhapSach
     {
+        public QLTVDb db;
+
+        public DALPhieuNhapSach(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALPhieuNhapSach()
+        {
+            db = new QLTVDb();
+        }
         private static DALPhieuNhapSach instance;
 
         public static DALPhieuNhapSach Instance 
@@ -24,48 +35,24 @@ namespace DAL
 
         public List<PHIEUNHAPSACH> GetAllPhieuNhapSach()
         {
-            return QLTVDb.Instance.PHIEUNHAPSACHes.AsNoTracking().ToList();
+            return db.PHIEUNHAPSACHes.ToList();
         }
 
         public PHIEUNHAPSACH GetPhieuById (int id)
         {
-            return QLTVDb.Instance.PHIEUNHAPSACHes.Find(id);
-        }
-
-        public List<PHIEUNHAPSACH> GetPhieuByNgayNhap (DateTime ngayNhap)
-        {
-            var res = QLTVDb.Instance.PHIEUNHAPSACHes.AsNoTracking().Where(p => p.NgayNhap == ngayNhap);
-            return (res.Any() ? res.ToList() : null);
+            return db.PHIEUNHAPSACHes.Find(id);
         }
 
         public List<PHIEUNHAPSACH> FindPhieuByNgayNhap(int? ngay, int? thang, int? nam)
         {
-            List<PHIEUNHAPSACH> res = GetAllPhieuNhapSach();
-            if (ngay != null) res = res.Where(p => p.NgayNhap.Day == ngay).ToList();
-            if (thang != null) res = res.Where(p => p.NgayNhap.Month == thang).ToList();
-            if (nam != null) res = res.Where(p => p.NgayNhap.Year == nam).ToList();
-            return res;
+            return db.PHIEUNHAPSACHes.Where(i => i.NgayNhap.Day == ngay && i.NgayNhap.Month == thang && i.NgayNhap.Year == nam).ToList();
         }
 
-        public int AddPhieuNhap (DateTime ngayNhap)
+        public int AddPhieuNhap (PHIEUNHAPSACH pheuNhapSach)
         {
-            try
-            {
-                var phieu = new PHIEUNHAPSACH
-                {
-                    NgayNhap = ngayNhap,
-                    TongTien = 0
-                };
-
-                QLTVDb.Instance.PHIEUNHAPSACHes.Add(phieu);
-                QLTVDb.Instance.SaveChanges();
-                return phieu.SoPhieuNhap;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return -1;
-            }
+            db.PHIEUNHAPSACHes.Add(pheuNhapSach);
+            db.SaveChanges();
+            return pheuNhapSach.SoPhieuNhap;
         }
 
 
@@ -73,16 +60,16 @@ namespace DAL
         {
             try
             {
-                PHIEUNHAPSACH phieu = QLTVDb.Instance.PHIEUNHAPSACHes.Find(id);
+                PHIEUNHAPSACH phieu = db.PHIEUNHAPSACHes.Find(id);
                 if (phieu == null) return false;
                 if (ngayNhap != null) phieu.NgayNhap = ngayNhap.Value;
                 if (tongTien != null) phieu.TongTien = tongTien.Value;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+                
                 return false;
             }
         }
@@ -91,15 +78,14 @@ namespace DAL
         {
             try
             {
-                PHIEUNHAPSACH phieu = QLTVDb.Instance.PHIEUNHAPSACHes.Find(id);
+                PHIEUNHAPSACH phieu = db.PHIEUNHAPSACHes.Find(id);
                 if (phieu == null) return false;
-                QLTVDb.Instance.PHIEUNHAPSACHes.Remove(phieu);
-                QLTVDb.Instance.SaveChanges();
+                db.PHIEUNHAPSACHes.Remove(phieu);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
                 return false;
             }
         }

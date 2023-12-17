@@ -9,6 +9,17 @@ namespace DAL
 {
     public class DALNguoiDung
     {
+        public QLTVDb db;
+
+        public DALNguoiDung(QLTVDb dbContext)
+        {
+            this.db = dbContext;
+        }
+
+        public DALNguoiDung()
+        {
+            db = new QLTVDb();
+        }
         private static DALNguoiDung instance;
 
         public static DALNguoiDung Instance
@@ -23,55 +34,31 @@ namespace DAL
 
         public List<NGUOIDUNG> GetAllNguoiDung()
         {
-            return QLTVDb.Instance.NGUOIDUNGs.AsNoTracking().ToList();
+            return db.NGUOIDUNGs.ToList();
         }
 
         public NGUOIDUNG GetNguoiDungById(int id)
         {
-            return QLTVDb.Instance.NGUOIDUNGs.Find(id);
+            return db.NGUOIDUNGs.Find(id);
         }
 
         public NGUOIDUNG GetNguoiDungByMa (string maNguoiDung)
         {
-            var res = QLTVDb.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.MaNguoiDung == maNguoiDung);
-            if (res.Any())
-                return res.FirstOrDefault();
-            return null;
+            NGUOIDUNG nguoiDung = db.NGUOIDUNGs.FirstOrDefault(p => p.MaNguoiDung == maNguoiDung);
+            return nguoiDung;
         }
 
         public NGUOIDUNG GetNguoiDungByUsername (string username)
         {
-            var res = QLTVDb.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.TenDangNhap == username);
-            if (res.Any())
-                return res.FirstOrDefault();
-            return null;
+            NGUOIDUNG nguoiDung = db.NGUOIDUNGs.FirstOrDefault(p => p.TenDangNhap == username);
+            return nguoiDung;
         }
 
-        public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
-                                 string tenDangNhap, string matKhau, int idNhomNguoiDung)
+        public int AddNguoiDung(NGUOIDUNG nguoiDung)
         {
-            
-            try
-            {
-                var nd = new NGUOIDUNG
-                {
-                    TenNguoiDung = tenNguoiDung,
-                    NgaySinh = ngaySinh,
-                    ChucVu = chucVu,
-                    TenDangNhap = tenDangNhap,
-                    MatKhau = matKhau,
-                    idNhomNguoiDung = idNhomNguoiDung,
-                    NHOMNGUOIDUNG = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung)
-                };
-                QLTVDb.Instance.NGUOIDUNGs.Add(nd);
-                QLTVDb.Instance.SaveChanges();
-                return nd.id;
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return -1;
-            }
+            db.NGUOIDUNGs.Add(nguoiDung);
+            db.SaveChanges();
+            return nguoiDung.id;
         }
 
         public bool UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu,
@@ -86,12 +73,12 @@ namespace DAL
                 if (ngaySinh != null) nd.NgaySinh = ngaySinh;
                 if (chucVu != null) nd.ChucVu = chucVu;
                 if (idNhomNguoiDung != null) nd.idNhomNguoiDung = (int)idNhomNguoiDung;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+              
                 return false;
             }
         }
@@ -104,12 +91,12 @@ namespace DAL
                 if (nd == null) return false;
 
                 nd.MatKhau = password;
-                QLTVDb.Instance.SaveChanges();
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+            
                 return false;
             }
         }
@@ -121,20 +108,17 @@ namespace DAL
                 var nd = GetNguoiDungById(id);
                 if (nd == null) return false;
 
-                QLTVDb.Instance.NGUOIDUNGs.Remove(nd);
-                QLTVDb.Instance.SaveChanges();
+                db.NGUOIDUNGs.Remove(nd);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+              
                 return false;
             }
         }
 
-        public List<NGUOIDUNG> getAllNguoiDung()
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
